@@ -27,10 +27,12 @@
 ## Collection & preprocessing
 - **Sources:** signed Công báo PDFs + VBHN consolidations (official),
   ministry portals, static mirrors (each chunk carries source_url +
-  source_type: official-line 45% / mirror 55%; 4/4 sampled mirror chunks match
-  independent sources verbatim (BLDS2015 Dieu2-Khoan2 + Dieu27-Khoan1,
-  BLDS2005 Dieu14-Khoan1, NCN2010 Dieu14-Khoan1 vs TVPL/law-firm excerpts);
-  full mirror-vs-official diff pending TVPL account).
+  source_type: official-line 45% / mirror 55%. Mirror verification: 19/19
+  sampled chunks match independent sources (4 excerpt checks across BLDS2015/
+  2005, NCN2010 vs TVPL/law-firm texts + 15/15 BLDS2015 chunks diffed against
+  the official TVPL full text via authenticated session). Method: diacritic-
+  stripped fuzzy spans (OCR/noise-tolerant). Residual: laws without official
+  cross-check stay flagged `mirror`.
 - **Pipeline:** crawl → text-layer check (scans quarantined) → hierarchy
   parse (flow + line modes) → TOC-dedup (longest) → civil title filter
   (hand-reviewed allowlist) → LLM extraction (few-shot + validators) →
