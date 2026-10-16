@@ -32,7 +32,7 @@ file gốc, không mock.
   Hộ tịch 2014/2026, Nuôi con nuôi 2010, Hòa giải 2026, Tố tụng + Thi hành án
   + Bồi thường + văn bản hướng dẫn).
 - KG: 10.125 dòng trích → **~32k entity + ~18k relation + ~4,3k cạnh dẫn chiếu**.
-- Retrieval cuối: **Hit@1 0,180 • Hit@3 0,351 • Hit@5 0,474 • Điều@5 0,592**;
+- Retrieval cuối: **Hit@1 0,512 • Hit@3 0,682 • Hit@5 0,711 (mặc định lai; xem ablation trong README)**;
   abstain đúng 2/2; dense thuần 0,000.
 - Provenance: official-line/mirror + source từng chunk; audit trùng/rỗng/mồ côi/gold = 0.
 - Provenance: 45% official-line / 55% mirror (lọc official-only được).
@@ -64,3 +64,4 @@ file gốc, không mock.
 - `runs/civil_chunks.jsonl` (kho chunk), `civil_extract.json` (trích),
   `law_data/` (index 8 file), `temporal_graph.json`, `law_bench_*.json`,
   `law_audit.json`, `law_sources.json`, `src/*.py` (toàn bộ pipeline).
+

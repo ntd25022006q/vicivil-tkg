@@ -15,7 +15,7 @@
   (REPLACES/CONSOLIDATES); every chunk inherits law validity.
 - **Benchmark:** 211 câu tình huống (12 tay + 199 sinh, đã lọc rác + duyệt 38 ca
   nghi) + abstain tests (1990 rỗng pool, nội dung 1995 thiếu) + tem reviewed.
-  Eval cuối (n=211): Hit@1 0,180 • Hit@3 0,351 • Hit@5 0,474 • Điều@5 0,592;
+  Eval cuối (n=211): Hit@1 0,512 • Hit@3 0,682 • Hit@5 0,711 (mặc định lai; ablation đầy đủ trong README);
   abstain 2/2.
 - **Versions:** civil_chunks.jsonl, civil_extract.json, law_data/ (8-file
   index), temporal_graph.json, law_audit.json. Snapshots per release;
@@ -43,3 +43,4 @@
 - **Metrics v1:** hybrid retrieval Hit@5 0.636 (11 hand) / 0.554 (166 mixed);
   Dieu@5 0.909; abstain 2/2. Baselines: dense-only 0.000 (fails on
   colloquial queries — the motivating result for hybrid+graph).
+

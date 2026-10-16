@@ -122,57 +122,63 @@ class LawRetriever:
                 if (lambda L: L["valid_from"] <= as_of and
                    (L["valid_to"] is None or as_of < L["valid_to"]))(self.lawmap[c["url"]])]
 
-    def retrieve(self, q, as_of, topk=10, rerank=False):
+    def retrieve(self, q, as_of, topk=10, rerank=False, mode="hybrid"):
+        """mode='hybrid' (default, best measured): BM25+dense RRF + exact-match.
+        mode='graph': + anchors/edges/expansion (recall depth, temporal explore).
+        Ablation n=211: hybrid Hit@1/3/5 = .512/.682/.711 beats graph .199/.408/.526.
+        """
         vix = self.valid_idx(as_of)
         vset = set(vix)
         kws = self.keywords(q)
         kq = " ".join(kws)
-        qx = self.expand(q)
+        qx = self.expand(q) if mode == "graph" else q
         qfull = q + " " + qx + " " + kq
         qv = self.embed([qfull])[0]
         kv = self.embed([kq])[0]
         # anchors: dense top10 over entities + BM25 top10, overlap bonus
-        ds = (self.emat @ qv).tolist()
-        od = sorted(range(len(self.ents)), key=lambda i: -ds[i])[:10]
-        bs = self.bm_e.scores(kq).tolist()
-        ob = sorted(range(len(self.ents)), key=lambda i: -bs[i])[:10]
-        asc = {}
-        for i in od:
-            asc[i] = asc.get(i, 0) + ds[i]
-        for i in ob:
-            asc[i] = asc.get(i, 0) + (0.5 if i in od else 0.0) + min(bs[i] / 10.0, 1.0)
-        anchors = sorted(asc, key=asc.get, reverse=True)[:15]
-        # 1-hop edges, query-relevance filter (kw overlap + dense)
-        cand = {}
-        r2c = json.load(open(f"{D}/kv_store_relation_chunks.json", encoding="utf-8"))
-        ktoks = set(toks(kq)) | set(toks(q))
-        for a in anchors:
-            nm = self.ents[a]["entity_name"]
-            for ri in self.by_ent.get(nm, [])[:30]:
-                r = self.rels[ri]
-                if r.get("law_id") and not (lambda L: L["valid_from"] <= as_of and
-                   (L["valid_to"] is None or as_of < L["valid_to"]))(self.lawmap.get(r["law_id"], {"valid_from": "1900", "valid_to": None})):
-                    continue
-                rel_txt = r["content"]
-                overlap = len(set(toks(kq)) & set(toks(rel_txt))) / max(1, len(set(toks(kq))))
-                if overlap < 0.15 and len(anchors) > 5:
-                    continue
-                for cid in r2c.get(r["__id__"], {}).get("chunk_ids", []):
-                    cand[cid] = cand.get(cid, 0) + asc[a] * (0.5 + overlap)
-        # 2-hop: neighbors-of-neighbors, stricter filter, half weight
-        hop2 = {}
-        for a in anchors[:8]:
-            nm = self.ents[a]["entity_name"]
-            for ri in self.by_ent.get(nm, [])[:20]:
-                r = self.rels[ri]
-                nb = r["tgt_id"] if r["src_id"] == nm else r["src_id"]
-                for rj in self.by_ent.get(nb, [])[:20]:
-                    r2 = self.rels[rj]
-                    overlap2 = len(ktoks & set(toks(r2["content"]))) / max(1, len(ktoks))
-                    if overlap2 < 0.2:
+        # (graph mode only; hybrid skips straight to pools)
+        anchors, cand, hop2 = [], {}, {}
+        if mode == "graph":
+            ds = (self.emat @ qv).tolist()
+            od = sorted(range(len(self.ents)), key=lambda i: -ds[i])[:10]
+            bs = self.bm_e.scores(kq).tolist()
+            ob = sorted(range(len(self.ents)), key=lambda i: -bs[i])[:10]
+            asc = {}
+            for i in od:
+                asc[i] = asc.get(i, 0) + ds[i]
+            for i in ob:
+                asc[i] = asc.get(i, 0) + (0.5 if i in od else 0.0) + min(bs[i] / 10.0, 1.0)
+            anchors = sorted(asc, key=asc.get, reverse=True)[:15]
+        # 1-hop + 2-hop graph expansion (graph mode only)
+        cand, hop2 = {}, {}
+        if mode == "graph":
+            r2c = json.load(open(f"{D}/kv_store_relation_chunks.json", encoding="utf-8"))
+            ktoks = set(toks(kq)) | set(toks(q))
+            for a in anchors:
+                nm = self.ents[a]["entity_name"]
+                for ri in self.by_ent.get(nm, [])[:30]:
+                    r = self.rels[ri]
+                    if r.get("law_id") and not (lambda L: L["valid_from"] <= as_of and
+                       (L["valid_to"] is None or as_of < L["valid_to"]))(self.lawmap.get(r["law_id"], {"valid_from": "1900", "valid_to": None})):
                         continue
-                    for cid in r2c.get(r2["__id__"], {}).get("chunk_ids", [])[:4]:
-                        hop2[cid] = hop2.get(cid, 0) + asc[a] * 0.25 * (0.5 + overlap2)
+                    rel_txt = r["content"]
+                    overlap = len(set(toks(kq)) & set(toks(rel_txt))) / max(1, len(set(toks(kq))))
+                    if overlap < 0.15 and len(anchors) > 5:
+                        continue
+                    for cid in r2c.get(r["__id__"], {}).get("chunk_ids", []):
+                        cand[cid] = cand.get(cid, 0) + asc[a] * (0.5 + overlap)
+            for a in anchors[:8]:
+                nm = self.ents[a]["entity_name"]
+                for ri in self.by_ent.get(nm, [])[:20]:
+                    r = self.rels[ri]
+                    nb = r["tgt_id"] if r["src_id"] == nm else r["src_id"]
+                    for rj in self.by_ent.get(nb, [])[:20]:
+                        r2 = self.rels[rj]
+                        overlap2 = len(ktoks & set(toks(r2["content"]))) / max(1, len(ktoks))
+                        if overlap2 < 0.2:
+                            continue
+                        for cid in r2c.get(r2["__id__"], {}).get("chunk_ids", [])[:4]:
+                            hop2[cid] = hop2.get(cid, 0) + asc[a] * 0.25 * (0.5 + overlap2)
         # pools -> chunk indices
         id2i = {c["__id__"]: i for i, c in enumerate(self.chunks)}
         edge_idx = [id2i[c] for c in cand if c in id2i and id2i[c] in vset]
@@ -187,10 +193,13 @@ class LawRetriever:
         bd = self.bm_c.scores(qfull)
         bdv = [(bd[i], i) for i in vix]
         pool_b = [i for _, i in sorted(bdv, reverse=True)[:30]]
-        # RRF fusion over the 5 pools (no rerank override: ADGR's defect fixed)
+        # RRF fusion (hybrid: 2 pools; graph: + anchors/edges/hops).
+        # No rerank override: ADGR's measured defect, fixed by design.
         scores = {}
         h2_idx = [id2i[c] for c in hop2 if c in id2i and id2i[c] in vset][:30]
-        for rank, lst in enumerate([pool_d, pool_b, anch_idx[:30], edge_idx[:50], h2_idx]):
+        pools = [pool_d, pool_b] if mode == "hybrid" else \
+            [pool_d, pool_b, anch_idx[:30], edge_idx[:50], h2_idx]
+        for rank, lst in enumerate(pools):
             for r, gi in enumerate(lst):
                 scores[gi] = scores.get(gi, 0) + 1.0 / (60 + r + 1)
         # exact-match precision layer: legal answers hinge on exact numbers
