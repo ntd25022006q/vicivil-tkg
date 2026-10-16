@@ -53,3 +53,20 @@ source_type: official-line 45% / mirror 55%. Mirror verification: **43/43
   Dieu@5 ~0.6-0.9; dense-only 0.000 on colloquial queries (the motivating
   result for hybrid+graph).
 
+## v1.1 changelog (official-PDF upgrade)
+- **Source upgrade:** 5 core laws re-verified against official signed PDFs
+  (BLDS 1995 838/838, HNGD 2000 110/110, BLDS 2005 777/777, TNBTCNN 2017 78/78,
+  BLDS 2015 689/689 Điều) + TVPL full HTML; sampled diff 75/75 chunks match.
+- **Decontamination:** stripped site-boilerplate footers from 1203 chunks
+  (4 laws; residual 0; backup `civil_chunks_v10.jsonl`); chunk dense vectors
+  re-embedded; v1.0 frozen + tagged.
+- **Gold audit:** 282 Qs double-rated (8B full + 14B on 120 doubtful);
+  16 regolds accepted (same-Q, better-chunk; 14 in dev + 2 in hand);
+  41 weak golds kept + flagged `gold_tier=weak` (stratified reporting,
+  no deletions).
+- **Metrics v1.1:** hybrid full-bench (n=283: 271 dev+syn + 12 hand):
+  Hit@1 0.41 / Hit@3 0.60 / Hit@5 0.67 / Hit@10 0.75 (hand: 0.50/0.75/0.75/
+  0.83); stratified by gold_tier (168 verified + 16 regolded + 48 partial +
+  41 weak, no deletions). Cleaning shifted scores slightly vs v1.0
+  (boilerplate had inflated BM25 idf); temporal + abstain behavior unchanged.
+
