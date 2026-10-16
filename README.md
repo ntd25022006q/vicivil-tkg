@@ -1,43 +1,81 @@
 # ViCivil-TKG — Vietnamese Civil Law Temporal Knowledge Graph
 
-**📄 Báo cáo tuần (VI): [REPORT_WEEKLY_VI.md](REPORT_WEEKLY_VI.md) | Datasheet: [DATASHEET.md](DATASHEET.md)**
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+[![Release](https://img.shields.io/badge/release-v1.0-blue.svg)](https://github.com/ntd25022006q/vicivil-tkg/releases/tag/v1.0)
+[![Python](https://img.shields.io/badge/python-3.11-blue.svg)](src/)
 
-Kho tri thức đồ thị có thời gian cho luật dân sự Việt Nam ở mức
-Điều/Khoản/Điểm: chunk ID phân cấp, entity/relation type luật, khoảng hiệu lực,
-cạnh kế thừa, benchmark câu hỏi có ngày, abstain test.
+A versioned, article-level knowledge graph of Vietnamese civil law with
+**validity-time tracking**: every chunk carries a hierarchical ID
+(`Law|Article|Clause|Point`), every law carries a validity interval, and
+amendments are explicit edges mined from consolidation preambles — so the
+graph answers *"what did the law say on date X?"*, which flat vector stores
+cannot.
 
-## Số liệu (đo thật, truy được file gốc)
+## Data at a glance
 
-- **10.212 chunk / 17 luật**: BLDS 1995/2005/2015, HN&GĐ 2000/2014/VBHN-2025,
-  Hộ tịch 2014/2026, Nuôi con nuôi 2010, Hòa giải 2026, Tố tụng + Thi hành án
-  + Bồi thường + văn bản hướng dẫn (`data/civil_chunks.jsonl`).
-- **~32k entity + ~18k relation + ~4,3k cạnh dẫn chiếu** (`data/civil_extract.json`).
-- **Retrieval** (mặc định lai BM25+dense+fusion+exact-match, lọc thời gian,
-  n=211): Hit@1 0,512 • Hit@3 0,682 • Hit@5 **0,711** • Hit@10 0,754 •
-  MRR 0,599 • nDCG@10 0,637 • test_Hit@5 0,685 (split dev/test công khai);
-  abstain 2/2.
-- **Ablation cùng index** (phát hiện chính): dense 0,422/0,626/0,673; lai
-  0,512/0,682/0,711; +neo/cạnh đồ thị 0,199/0,408/0,526; full 0,180/0,35/0,474.
-  Tầng đồ thị hại strict-Hit (nhiễu hạng đầu) — nên lai là mặc định, đồ thị là
-  chế độ đào sâu (temporal/abstain/recall sâu).
-- **Ý nghĩa thống kê** (n=270, McNemar + Wilcoxon): lai > dense (Hit@1 p=0,001;
-  Hit@5 p=0,029; RR p≈0) và lai > đồ thị (p≈0 cả hai). Khác biệt là thật, không
-  phải nhiễu (lưu ý: nhánh đồ thị đo trên index cũ hơn — hướng vẫn áp đảo 79–9).
-- **Temporal**: 33 node luật (16 ngoài) + 21 cạnh, trong đó **17 cạnh AMENDS
-  moi từ lời nói đầu VBHN** (kèm ngày ban hành + hiệu lực từng luật sửa đổi);
-  hỏi luật tại ngày + abstain đúng (`data/temporal_graph.json`,
-  `data/amend_candidates.json`).
-- **Provenance**: chunk nào cũng có `source_url + source_type`
-  (official-line/mirror); audit trùng/rỗng/mồ côi/gold = 0 (`data/law_audit.json`).
+| Item | v1.0 |
+|---|---|
+| Law chunks (Điều/Khoản/Điểm) | 10,212 across 17 laws |
+| Entities / relations / citation edges | ~32k / ~18k / ~4.3k |
+| Laws with validity intervals | 17 (+16 external amending laws) |
+| Amendment edges (verified from VBHN preambles) | 17 |
+| Benchmark questions (temporal + abstain tests) | 211 + 12 hand-written |
+| Retrieval (hybrid BM25+dense, default) | Hit@1 0.512 · Hit@5 0.711 · nDCG@10 0.637 |
 
-## Cấu trúc
+Laws: Civil Codes 1995/2005/2015, Marriage & Family 2000/2014/2025-consolidation,
+Civil Status 2014/2026, Adoption 2010, Grassroots Mediation 2026, Civil/Criminal
+Procedure + Enforcement (+ consolidated versions), State Compensation + 2026 amendment.
 
+## Quickstart
+
+```python
+import json
+chunks = [json.loads(l) for l in open("data/civil_chunks.jsonl", encoding="utf-8")]
+print(len(chunks))  # 10212
+
+# Which laws were in force on a date?
+G = json.load(open("data/temporal_graph.json", encoding="utf-8"))
+def in_force(law_id, date):
+    L = {x["law_id"]: x for x in G["laws"]}[law_id]
+    return L["valid_from"] <= date and (L["valid_to"] is None or date < L["valid_to"])
+print([L["law_id"] for L in G["laws"] if L.get("status") != "external-ref" and in_force(L["law_id"], "2010-06-01")])
+# -> ['BLDS2005', 'THADS2008', 'HNGD2000'] (2015+ laws did not exist yet)
 ```
-├── DATASHEET.md / REPORT_WEEKLY_VI.md
-├── data/          # chunks, extraction, temporal graph, benchmark, audit, sources
-└── src/           # pipeline: crawl, chunk, extract, temporal, retrieve, eval
-```
 
-Index vector 8 file + PDFs gốc tái tạo được bằng `src/` (xem DATASHEET mục
-Reproduce). Văn bản luật là public domain (Luật 104/2016/QH13); phần curation
-(schema, ID, benchmark) CC-BY-4.0. **Không phải tư vấn pháp lý.**
+See [`src/`](src/) for the full pipeline (crawl → chunk → extract → temporal →
+retrieve → evaluate) and [`data/`](data/) for the release files with SHA256SUMS.
+
+## Benchmark
+
+211 situational questions with weak golds (disclosed) + 12 hand-written temporal
+probes + abstain tests, stratified dev/test split (`data/bench_split.json`),
+per-config ranks stored (`data/ranks_hybrid.json`), significance tested
+(McNemar + Wilcoxon, all p<0.03). Key ablation on the same index: dense-only
+0.673 → hybrid 0.711 → +graph layers 0.526 @Hit@5.
+
+## Docs
+
+- [`DATASHEET.md`](DATASHEET.md) — motivation, composition, collection,
+  known gaps, license, update protocol.
+- [`docs/PROTOCOL.md`](docs/PROTOCOL.md) — operating rules: audit gates,
+  release checklist, incident casebook.
+- [`docs/weekly-report-vi.md`](docs/weekly-report-vi.md) — weekly log (Vietnamese).
+
+## Citation
+
+See [`CITATION.cff`](CITATION.cff). If you use this dataset, please cite the
+repository and note the version tag.
+
+## License & disclaimer
+
+Curation (schema, IDs, benchmark): **CC-BY-4.0** ([LICENSE](LICENSE)).
+Legal texts are public domain under Vietnam's Law on Access to Information
+(No. 104/2016/QH13). **Not legal advice** — verify against official sources
+before any real-world use.
+
+## Tóm tắt tiếng Việt
+
+Kho tri thức đồ thị có thời gian cho luật dân sự Việt Nam (10.212 chunk mức
+Điều/Khoản/Điểm, 17 luật, khoảng hiệu lực + cạnh sửa đổi verify từ VBHN),
+kèm benchmark 211 câu hỏi có ngày + test từ chối trả lời. Chi tiết xem
+[`docs/weekly-report-vi.md`](docs/weekly-report-vi.md).
