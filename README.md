@@ -20,6 +20,9 @@ cạnh kế thừa, benchmark câu hỏi có ngày, abstain test.
   0,512/0,682/0,711; +neo/cạnh đồ thị 0,199/0,408/0,526; full 0,180/0,35/0,474.
   Tầng đồ thị hại strict-Hit (nhiễu hạng đầu) — nên lai là mặc định, đồ thị là
   chế độ đào sâu (temporal/abstain/recall sâu).
+- **Ý nghĩa thống kê** (n=270, McNemar + Wilcoxon): lai > dense (Hit@1 p=0,001;
+  Hit@5 p=0,029; RR p≈0) và lai > đồ thị (p≈0 cả hai). Khác biệt là thật, không
+  phải nhiễu (lưu ý: nhánh đồ thị đo trên index cũ hơn — hướng vẫn áp đảo 79–9).
 - **Provenance**: chunk nào cũng có `source_url + source_type`
   (official-line/mirror); audit trùng/rỗng/mồ côi/gold = 0 (`data/law_audit.json`).
 
