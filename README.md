@@ -23,6 +23,10 @@ cạnh kế thừa, benchmark câu hỏi có ngày, abstain test.
 - **Ý nghĩa thống kê** (n=270, McNemar + Wilcoxon): lai > dense (Hit@1 p=0,001;
   Hit@5 p=0,029; RR p≈0) và lai > đồ thị (p≈0 cả hai). Khác biệt là thật, không
   phải nhiễu (lưu ý: nhánh đồ thị đo trên index cũ hơn — hướng vẫn áp đảo 79–9).
+- **Temporal**: 33 node luật (16 ngoài) + 21 cạnh, trong đó **17 cạnh AMENDS
+  moi từ lời nói đầu VBHN** (kèm ngày ban hành + hiệu lực từng luật sửa đổi);
+  hỏi luật tại ngày + abstain đúng (`data/temporal_graph.json`,
+  `data/amend_candidates.json`).
 - **Provenance**: chunk nào cũng có `source_url + source_type`
   (official-line/mirror); audit trùng/rỗng/mồ côi/gold = 0 (`data/law_audit.json`).
 

@@ -1,5 +1,5 @@
 """Ablation A/B: dense-only vs +BM25 (no vLLM, no rerank). Fast. Saves ranks."""
-import json, sys
+import json, sys, math
 
 sys.path.insert(0, "/home/devlab1/law_workspace/src")
 from law_adgr import LawRetriever
@@ -9,10 +9,15 @@ W = "/home/devlab1/law_workspace"
 R = f"{W}/runs"
 rt = LawRetriever()
 bench = json.load(open(f"{R}/law_bench_200c.json", encoding="utf-8"))
+split = json.load(open(f"{R}/bench_split.json", encoding="utf-8"))
 qv = rt.embed([b["question"] for b in bench])
 res = {}
+ranks_B = {}
 for mode in ["A-dense", "B-hybrid"]:
-    h1 = h3 = h5 = n = 0
+    h = {1: 0, 3: 0, 5: 0, 10: 0}
+    rr = ndcg = n = 0
+    dh = {1: 0, 3: 0, 5: 0, 10: 0}
+    dn = 0
     for bi, b in enumerate(bench):
         vix = rt.valid_idx(b["as_of"])
         if not vix:
@@ -31,9 +36,23 @@ for mode in ["A-dense", "B-hybrid"]:
         gold = b["gold_ids"][0]
         r0 = ids.index(gold) + 1 if gold in ids else 99
         n += 1
-        h1 += r0 <= 1
-        h3 += r0 <= 3
-        h5 += r0 <= 5
-    res[mode] = (round(h1 / n, 3), round(h3 / n, 3), round(h5 / n, 3), n)
-    print(f"{mode} n={n} Hit@1/3/5={res[mode][0]}/{res[mode][1]}/{res[mode][2]}", flush=True)
+        for k in h:
+            h[k] += r0 <= k
+        if r0 <= 10:
+            rr += 1.0 / r0
+            ndcg += 1.0 / math.log2(r0 + 1)
+        if b["qid"] in split["test"]:
+            dn += 1
+            for k in dh:
+                dh[k] += r0 <= k
+        if mode == "B-hybrid":
+            ranks_B[b["qid"]] = ids
+    res[mode] = {"n": n, **{f"Hit@{k}": round(h[k] / n, 3) for k in [1, 3, 5, 10]},
+                 "MRR": round(rr / n, 3), "nDCG@10": round(ndcg / n, 3),
+                 **{f"test_Hit@{k}": round(dh[k] / max(dn, 1), 3) for k in [1, 3, 5, 10]},
+                 "test_n": dn}
+    print(f"{mode} n={n} " + " ".join(f"Hit@{k}={res[mode][f'Hit@{k}']} " for k in [1, 3, 5, 10]) +
+          f"MRR={res[mode]['MRR']} nDCG={res[mode]['nDCG@10']} test_Hit@5={res[mode]['test_Hit@5']}", flush=True)
 json.dump(res, open(f"{R}/ablation_AB.json", "w", encoding="utf-8"))
+if ranks_B:
+    json.dump(ranks_B, open(f"{R}/ranks_hybrid.json", "w", encoding="utf-8"), ensure_ascii=False)

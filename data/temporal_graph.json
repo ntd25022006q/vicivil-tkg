@@ -135,6 +135,134 @@
    "valid_from": "1996-07-01",
    "valid_to": "2006-01-01",
    "status": "het_hieu_luc"
+  },
+  {
+   "law_id": "EXT-Luật-số-81-2025-QH15",
+   "ten": "Luật số 81/2025/QH15",
+   "so_hieu": "Luật số 81/2025/QH15",
+   "valid_from": "2025-07-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-64-2014-QH13",
+   "ten": "Luật số 64/2014/QH13",
+   "so_hieu": "Luật số 64/2014/QH13",
+   "valid_from": "2015-07-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-23-2018-QH14",
+   "ten": "Luật số 23/2018/QH14",
+   "so_hieu": "Luật số 23/2018/QH14",
+   "valid_from": "2019-07-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-67-2020-QH14",
+   "ten": "Luật số 67/2020/QH14",
+   "so_hieu": "Luật số 67/2020/QH14",
+   "valid_from": "2022-01-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-03-2022-QH15",
+   "ten": "Luật số 03/2022/QH15",
+   "so_hieu": "Luật số 03/2022/QH15",
+   "valid_from": "2022-03-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-31-2024-QH15",
+   "ten": "Luật số 31/2024/QH15",
+   "so_hieu": "Luật số 31/2024/QH15",
+   "valid_from": "2024-08-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-43-2024-QH15",
+   "ten": "Luật số 43/2024/QH15",
+   "so_hieu": "Luật số 43/2024/QH15",
+   "valid_from": "2024-08-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-59-2024-QH15",
+   "ten": "Luật số 59/2024/QH15",
+   "so_hieu": "Luật số 59/2024/QH15",
+   "valid_from": "2026-01-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-84-2025-QH15",
+   "ten": "Luật số 84/2025/QH15",
+   "so_hieu": "Luật số 84/2025/QH15",
+   "valid_from": "2025-07-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-59-2020-QH14",
+   "ten": "Luật số 59/2020/QH14",
+   "so_hieu": "Luật số 59/2020/QH14",
+   "valid_from": "2021-01-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-13-2022-QH15",
+   "ten": "Luật số 13/2022/QH15",
+   "so_hieu": "Luật số 13/2022/QH15",
+   "valid_from": "2023-07-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-19-2023-QH15",
+   "ten": "Luật số 19/2023/QH15",
+   "so_hieu": "Luật số 19/2023/QH15",
+   "valid_from": "2024-07-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-34-2024-QH15",
+   "ten": "Luật số 34/2024/QH15",
+   "so_hieu": "Luật số 34/2024/QH15",
+   "valid_from": "2025-01-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-46-2024-QH15",
+   "ten": "Luật số 46/2024/QH15",
+   "so_hieu": "Luật số 46/2024/QH15",
+   "valid_from": "2025-07-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-85-2025-QH15",
+   "ten": "Luật số 85/2025/QH15",
+   "so_hieu": "Luật số 85/2025/QH15",
+   "valid_from": "2025-07-01",
+   "valid_to": null,
+   "status": "external-ref"
+  },
+  {
+   "law_id": "EXT-Luật-số-142-2025-QH15",
+   "ten": "Luật số 142/2025/QH15",
+   "so_hieu": "Luật số 142/2025/QH15",
+   "valid_from": "2026-03-01",
+   "valid_to": null,
+   "status": "external-ref"
   }
  ],
  "succession": [
@@ -165,6 +293,125 @@
    "relation": "REPLACES",
    "at": "2015-01-01",
    "note": "HN&GĐ 2014 thay the HN&GĐ 2000"
+  },
+  {
+   "src": "EXT-Luật-số-81-2025-QH15",
+   "tgt": "HNGDVBHN2025",
+   "relation": "AMENDS",
+   "at": "2025-07-01",
+   "note": "verified from VBHN preamble (2025-06-24)"
+  },
+  {
+   "src": "EXT-Luật-số-64-2014-QH13",
+   "tgt": "THADSVBHN",
+   "relation": "AMENDS",
+   "at": "2015-07-01",
+   "note": "verified from VBHN preamble (2014-11-25)"
+  },
+  {
+   "src": "EXT-Luật-số-23-2018-QH14",
+   "tgt": "THADSVBHN",
+   "relation": "AMENDS",
+   "at": "2019-07-01",
+   "note": "verified from VBHN preamble (2018-06-12)"
+  },
+  {
+   "src": "EXT-Luật-số-67-2020-QH14",
+   "tgt": "THADSVBHN",
+   "relation": "AMENDS",
+   "at": "2022-01-01",
+   "note": "verified from VBHN preamble (2020-11-13)"
+  },
+  {
+   "src": "EXT-Luật-số-03-2022-QH15",
+   "tgt": "THADSVBHN",
+   "relation": "AMENDS",
+   "at": "2022-03-01",
+   "note": "verified from VBHN preamble (2022-01-11)"
+  },
+  {
+   "src": "EXT-Luật-số-31-2024-QH15",
+   "tgt": "THADSVBHN",
+   "relation": "AMENDS",
+   "at": "2024-08-01",
+   "note": "verified from VBHN preamble (2024-01-18)"
+  },
+  {
+   "src": "EXT-Luật-số-43-2024-QH15",
+   "tgt": "THADSVBHN",
+   "relation": "AMENDS",
+   "at": "2024-08-01",
+   "note": "verified from VBHN preamble (2024-06-29)"
+  },
+  {
+   "src": "EXT-Luật-số-59-2024-QH15",
+   "tgt": "THADSVBHN",
+   "relation": "AMENDS",
+   "at": "2026-01-01",
+   "note": "verified from VBHN preamble (2024-11-30)"
+  },
+  {
+   "src": "EXT-Luật-số-81-2025-QH15",
+   "tgt": "THADSVBHN",
+   "relation": "AMENDS",
+   "at": "2025-07-01",
+   "note": "verified from VBHN preamble (2025-06-24)"
+  },
+  {
+   "src": "EXT-Luật-số-84-2025-QH15",
+   "tgt": "THADSVBHN",
+   "relation": "AMENDS",
+   "at": "2025-07-01",
+   "note": "verified from VBHN preamble (2025-06-25)"
+  },
+  {
+   "src": "EXT-Luật-số-59-2020-QH14",
+   "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+   "relation": "AMENDS",
+   "at": "2021-01-01",
+   "note": "verified from VBHN preamble (2020-06-17)"
+  },
+  {
+   "src": "EXT-Luật-số-13-2022-QH15",
+   "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+   "relation": "AMENDS",
+   "at": "2023-07-01",
+   "note": "verified from VBHN preamble (2022-11-14)"
+  },
+  {
+   "src": "EXT-Luật-số-19-2023-QH15",
+   "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+   "relation": "AMENDS",
+   "at": "2024-07-01",
+   "note": "verified from VBHN preamble (2023-06-20)"
+  },
+  {
+   "src": "EXT-Luật-số-34-2024-QH15",
+   "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+   "relation": "AMENDS",
+   "at": "2025-01-01",
+   "note": "verified from VBHN preamble (2024-06-24)"
+  },
+  {
+   "src": "EXT-Luật-số-46-2024-QH15",
+   "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+   "relation": "AMENDS",
+   "at": "2025-07-01",
+   "note": "verified from VBHN preamble (2024-11-26)"
+  },
+  {
+   "src": "EXT-Luật-số-85-2025-QH15",
+   "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+   "relation": "AMENDS",
+   "at": "2025-07-01",
+   "note": "verified from VBHN preamble (2025-06-25)"
+  },
+  {
+   "src": "EXT-Luật-số-142-2025-QH15",
+   "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+   "relation": "AMENDS",
+   "at": "2026-03-01",
+   "note": "verified from VBHN preamble (2025-12-11)"
   }
  ],
  "chunk_counts": {
