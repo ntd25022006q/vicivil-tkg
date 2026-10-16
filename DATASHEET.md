@@ -11,12 +11,15 @@
 ## Composition
 - **Instances:** ~10.2k chunks (law|dieu|khoan|diem IDs), ~17k entities
   (10 legal types), ~9k relations + deterministic cross-reference edges.
-- **Temporal:** 17 laws with [valid_from, valid_to); 5+ succession edges
-  (REPLACES/CONSOLIDATES); every chunk inherits law validity.
-- **Benchmark:** 211 câu tình huống (12 tay + 199 sinh, đã lọc rác + duyệt 38 ca
-  nghi) + abstain tests (1990 rỗng pool, nội dung 1995 thiếu) + tem reviewed.
-  Eval cuối (n=211): Hit@1 0,512 • Hit@3 0,682 • Hit@5 0,711 (mặc định lai; ablation đầy đủ trong README);
-  abstain 2/2.
+- **Temporal:** 17 laws with [valid_from, valid_to) + 16 external amending laws;
+  21 edges (4 succession + 17 AMENDS mined from VBHN preambles with dates);
+  every chunk inherits law validity; `law_as_of(date)` tested.
+- **Benchmark:** 211 situational questions (12 hand + 199 generated, junk-filtered,
+  38 flagged cases adjudicated) + abstain tests (1990 empty pool + missing-law
+  probes) + review stamps. Final (n=211): Hit@1 0.512 / Hit@3 0.682 /
+  Hit@5 0.711 / MRR 0.599 / nDCG@10 0.637; abstain 2/2; second-rater agreement
+  65% (83% on verified hand); end-to-end QA faithfulness n=30: 20 supported /
+  10 partial / 0 hallucinated.
 - **Versions:** civil_chunks.jsonl, civil_extract.json, law_data/ (8-file
   index), temporal_graph.json, law_audit.json. Snapshots per release;
   amendment deltas between releases (planned).
@@ -42,7 +45,8 @@
   curation (schema, IDs, benchmark) CC-BY-4.0.
 - **Update protocol:** monthly gazette sweep appends new issues; amended
   articles close valid_to + open new edges (never rewrite history).
-- **Metrics v1:** hybrid retrieval Hit@5 0.636 (11 hand) / 0.554 (166 mixed);
-  Dieu@5 0.909; abstain 2/2. Baselines: dense-only 0.000 (fails on
-  colloquial queries — the motivating result for hybrid+graph).
+- **Metrics v1 (final):** hybrid default Hit@5 0.711 (MRR 0.599); ablation
+  dense 0.673 → hybrid 0.711 → +graph 0.526 (graph harms strict-Hit, p≈0);
+  Dieu@5 ~0.6-0.9; dense-only 0.000 on colloquial queries (the motivating
+  result for hybrid+graph).
 
