@@ -52,6 +52,10 @@ probes + abstain tests, stratified dev/test split (`data/bench_split.json`),
 per-config ranks stored (`data/ranks_hybrid.json`), significance tested
 (McNemar + Wilcoxon, all p<0.03). Key ablation on the same index: dense-only
 0.673 → hybrid 0.711 → +graph layers 0.526 @Hit@5.
+Gold review: author-adjudicated 38 flagged cases (keep/fix/drop with reasons) +
+independent qwen3 second-rater over all golds (65% agree, 83% on verified hand
+golds → ~18% truly weak, fixed). End-to-end QA faithfulness (n=30, cited
+answers): 20 supported / 10 partial / **0 hallucinated**.
 
 ## Docs
 

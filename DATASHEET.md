@@ -24,7 +24,9 @@
 ## Collection & preprocessing
 - **Sources:** signed Công báo PDFs + VBHN consolidations (official),
   ministry portals, static mirrors (each chunk carries source_url +
-  source_type: official-line 45% / mirror 55%).
+  source_type: official-line 45% / mirror 55%; 2/2 sampled mirror chunks match
+  independent sources verbatim (BLDS2015 Dieu2-Khoan2 and BLDS2005 Dieu14-Khoan1
+  vs TVPL excerpts); full mirror-vs-official diff pending TVPL account).
 - **Pipeline:** crawl → text-layer check (scans quarantined) → hierarchy
   parse (flow + line modes) → TOC-dedup (longest) → civil title filter
   (hand-reviewed allowlist) → LLM extraction (few-shot + validators) →

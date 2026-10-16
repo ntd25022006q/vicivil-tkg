@@ -1,0 +1,152 @@
+{
+ "CIV001": {
+  "answer": "Theo Điều 27 Khoản 1 Diem a Bộ Luật Dân Sự năm 2015, con đẻ có quyền yêu cầu cơ quan nhà nước có thẩm quyền thay đổi họ từ họ của cha đẻ sang họ của mẹ đẻ hoặc ngược lại.\n\nNguyên văn: \"Thay đổi họ cho con đẻ từ họ của cha đẻ sang họ của mẹ đẻ hoặc ngược lại;\"",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "CIV002": {
+  "answer": "Theo Điều 27 Khoản 1 Luật Bình Đẳng Giới 2005, con đẻ có quyền yêu cầu cơ quan nhà nước có thẩm quyền thay đổi họ từ họ của cha sang họ của mẹ hoặc ngược lại. Không có điều kiện cụ thể nào được đề cập trong đoạn luật trên, chỉ cần cá nhân có yêu cầu chính đáng.\n\nNên câu trả lời là: Con đẻ có thể yêu cầu thay đổi họ từ họ cha sang họ mẹ mà không cần điều kiện cụ thể, chỉ cần yêu cầu chính đáng.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "CIV003": {
+  "answer": "Theo luật Hôn nhân và gia đình năm 2014, Điều 8, Khoản 1, Điểm a: Nam từ đủ 20 tuổi trở lên, nữ từ đủ 18 tuổi trở lên.\n\nNên nam nữ kết hôn phải đủ 20 tuổi đối với nam và 18 tuổi đối với nữ.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "CIV004": {
+  "answer": "Theo Điều 651 Khoản 1 Điểm a Bộ Luật Dân Sự 2015, những người thuộc hàng thừa kế thứ nhất bao gồm: vợ, chồng, cha đẻ, mẹ đẻ, cha nuôi, mẹ nuôi, con đẻ, con nuôi của người chết.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "CIV005": {
+  "answer": "Nguyên tắc bồi thường thiệt hại ngoài hợp đồng không được đề cập cụ thể trong các đoạn luật bạn đã cung cấp. Tuy nhiên, dựa trên các quy định hiện có, ta có thể suy luận ra một số nguyên tắc cơ bản:\n\n1. Người gây thiệt hại phải chịu trách nhiệm bồi thường nếu họ là nguyên nhân chính gây ra thiệt hại (theo Điều 584 Khoản 2 BLDS 2015).\n\n2. Không bồi thường nếu thiệt hại hoàn toàn do lỗi của bên bị thiệt hại hoặc do sự kiện bất khả kháng (theo Điều 584 Khoản 2 BLDS 2015).\n\n3. Mức bồi thường phải phù hợp với quy định của Luật Dân sự (theo Điều 46 Khoản 2 Điểm c TNBTPCNN 2017).\n\n4. Có thể thỏa thuận về việc lựa chọn pháp luật áp dụng cho việc bồi thường (theo Điều 687 Khoản 1 BLDS 2015).\n\nTuy nhiên, để trả lời chính xác câu hỏi này, chúng ta cần tìm hiểu thêm từ các văn bản pháp luật chuyên biệt về vấn đề này.",
+  "verdict": "MOTPHAN",
+  "n_ctx": 5
+ },
+ "CIV006": {
+  "answer": "Theo Điều 81 Khoan 1 của Luật Hôn nhân và Gia đình năm 2014, sau khi ly hôn, cả cha và mẹ đều có nghĩa vụ cấp dưỡng cho con chưa thành niên.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "CIV007": {
+  "answer": "Theo Bộ luật Dân sự 2015, Điều 34, Khoản 5: Cá nhân bị thông tin làm ảnh hưởng xấu đến danh dự, nhân phẩm, uy tín thì ngoài quyền yêu cầu bác bỏ thông tin đó còn có quyền yêu cầu người đưa ra thông tin xin lỗi, cải chính công khai và bồi thường thiệt hại.\n\nĐồng thời, Điều 584, Khoản 1 cũng nêu rõ: Người nào có hành vi xâm phạm tính mạng, sức khỏe, danh dự, nhân phẩm, uy tín, tài sản, quyền, lợi ích hợp pháp khác của người khác mà gây thiệt hại thì phải bồi thường, trừ trường hợp Bộ luật này, luật khác có liên quan quy định khác.\n\nNgoài ra, Điều 379, Khoản 2 cũng đề cập đến nghĩa vụ bồi thường thiệt hại do xâm phạm danh dự, nhân phẩm, uy tín.\n\nCuối cùng, Điều 592, Khoản 1, Điểm a quy định: Thiệt hại do danh dự, nhân phẩm, uy tín bị xâm phạm bao gồm: Chi phí hợp lý để hạn chế, khắc phục thiệt hại.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "CIV008": {
+  "answer": "Theo Điều 55 của Luật Hôn nhân và Gia đình năm 2014, nếu vợ chồng cùng muốn ly hôn và đã thỏa thuận về việc phân chia tài sản cũng như trách nhiệm chăm sóc, nuôi dưỡng con cái (trên cơ sở đảm bảo quyền lợi chính đáng của vợ và con), thì tòa án sẽ công nhận thuận tình ly hôn.\n\nNếu không thỏa thuận được hoặc thỏa thuận nhưng không bảo đảm quyền lợi chính đáng của vợ và con, thì tòa án sẽ giải quyết việc ly hôn theo quy định tại Điều 56 Khoản 1 của Luật Hôn nhân và Gia đình năm 2014.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "CIV009": {
+  "answer": "Theo Điều 33 Khoản 1 của Luật Hôn nhân và gia đình năm 2014, tài sản chung của vợ chồng bao gồm:\n\n- Tài sản do vợ, chồng tạo ra, thu nhập do lao động, hoạt động sản xuất, kinh doanh, hoa lợi, lợi tức phát sinh từ tài sản riêng và thu nhập hợp pháp khác trong thời kỳ hôn nhân, trừ trường hợp được quy định tại khoản 1 Điều 40 của Luật này.\n\n- Tài sản mà vợ chồng được thừa kế chung hoặc được tặng cho chung.\n\n- Quyền sử dụng đất mà vợ, chồng có được sau khi kết hôn là tài sản chung của vợ chồng, trừ trường hợp vợ hoặc chồng được thừa kế riêng, được tặng cho riêng hoặc có được thông qua giao dịch bằng tài sản riêng.\n\nNgoài ra, tài sản khác mà vợ chồng thỏa thuận là tài sản chung cũng thuộc phạm vi này.",
+  "verdict": "MOTPHAN",
+  "n_ctx": 5
+ },
+ "CIV010": {
+  "answer": "Theo Bộ luật dân sự 2015:\n\n- Di chúc miệng có hiệu lực khi đáp ứng các điều kiện như Điều 630 Khoản 5: Người di chúc miệng thể hiện ý chí cuối cùng trước mặt ít nhất hai người làm chứng và ngay sau đó, người làm chứng ghi chép lại, cùng ký tên hoặc điểm chỉ. Đồng thời, trong vòng 5 ngày làm việc, di chúc phải được công chứng viên hoặc cơ quan có thẩm quyền chứng thực xác nhận chữ ký hoặc điểm chỉ của người làm chứng.\n\n- Ngoài ra, theo Điều 629 Khoản 2, sau 3 tháng kể từ thời điểm lập di chúc miệng mà người lập di chúc vẫn còn sống, minh mẫn, sáng suốt thì di chúc miệng sẽ bị hủy bỏ.\n\nNhư vậy, di chúc miệng chỉ có hiệu lực khi đáp ứng đầy đủ các điều kiện trên và chưa bị hủy bỏ theo quy định.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "CIV011": {
+  "answer": "Theo quy định của Bộ luật Dân sự 2015:\n\n- Theo Điều 586 Khoản 2: Nếu người chưa đủ 15 tuổi gây thiệt hại mà còn cha mẹ thì cha mẹ phải bồi thường toàn bộ thiệt hại. Nếu tài sản của cha mẹ không đủ để bồi thường mà con chưa thành niên gây thiệt hại có tài sản riêng thì lấy tài sản đó để bồi thường phần còn thiếu.\n\n- Theo Điều 586 Khoản 3: Nếu người chưa thành niên có người giám hộ thì người giám hộ đó được dùng tài sản của người được giám hộ để bồi thường. Nếu người được giám hộ không có tài sản hoặc không đủ tài sản để bồi thường thì người giám hộ phải bồi thường bằng tài sản của mình.\n\n- Theo Điều 599 Khoản 1: Nếu người chưa đủ 15 tuổi gây thiệt hại trong thời gian trường học trực tiếp quản lý thì trường học phải bồi thường thiệt hại xảy ra.\n\nNhư vậy, tùy thuộc vào từng trường hợp cụ thể, trách nhiệm bồi thường có thể thuộc về cha mẹ, người giám hộ hoặc trường học.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "CIV012": {
+  "answer": "Theo Điều 681 của Bộ luật Dân sự 1995, con nuôi và cha nuôi, mẹ nuôi được thừa kế di sản của nhau và còn được thừa kế di sản theo quy định tại Điều 679 và Điều 680 của Bộ luật này. Trong Điều 679, hàng thừa kế thứ nhất bao gồm: vợ, chồng, cha đẻ, mẹ đẻ, cha nuôi, mẹ nuôi, con đẻ, con nuôi của người chết. \n\nNhư vậy, năm 2000, con nuôi có được thừa kế như con đẻ theo quy định của Bộ luật Dân sự 1995.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "GEN56252": {
+  "answer": "Theo Điều 665 Khoản 5 của Bộ Luật Dân Sự 2005, nếu bạn nhận được một bản di chúc bằng tiếng Anh, bạn cần phải dịch nó sang tiếng Việt. Để đảm bảo tính pháp lý của bản dịch, bản dịch đó phải được công chứng.\n\nNgoài ra, Điều 652 Khoản 1 cũng nêu rõ rằng di chúc phải tuân thủ pháp luật và đạo đức xã hội, do đó việc dịch và công chứng bản di chúc sẽ giúp đảm bảo tính hợp pháp của nó.\n\nCuối cùng, Điều 8 Khoản 1 của Luật Thi Hành Án Dân Sự 2008 cũng xác nhận rằng tiếng nói và chữ viết sử dụng trong việc thi hành án dân sự phải là tiếng Việt, tuy nhiên đương sự có quyền sử dụng tiếng nói và chữ viết của dân tộc mình nhưng phải có người phiên dịch. Điều này càng nhấn mạnh tầm quan trọng của việc dịch di chúc sang tiếng Việt và công chứng nó.",
+  "verdict": "MOTPHAN",
+  "n_ctx": 5
+ },
+ "NEW71666": {
+  "answer": "Theo các điều luật bạn đã cung cấp, việc thu hồi đất của bạn để sung vào quỹ nhà nước có thể xảy ra trong một số trường hợp cụ thể. Tuy nhiên, không có thông tin nào cho thấy việc thu hồi đất có thể diễn ra mà không có sự đồng ý của người sử dụng đất.\n\nĐiều 272 Khoản 4 Bộ luật Dân sự năm 2015 quy định rằng quyền sử dụng đất có quyền bề mặt bị thu hồi theo quy định của Luật đất đai. Điều này có nghĩa là việc thu hồi đất phải tuân thủ quy định của Luật đất đai.\n\nNgoài ra, Điều 36 Khoản 1 Luật Thi hành án dân sự năm 2008 cũng quy định rằng việc thu hồi quyền sử dụng đất phải dựa trên quyết định của tòa án.\n\nTuy nhiên, không có thông tin nào cho thấy việc thu hồi đất có thể diễn ra mà không có sự đồng ý của người sử dụng đất. Nếu bạn cảm thấy rằng quyền lợi của mình bị vi phạm, bạn nên tìm hiểu thêm về quy trình pháp lý và tư vấn từ luật sư chuyên môn.\n\nVì vậy câu trả lời cho câu hỏi của bạn là: Theo các quy định hiện hành, việc thu hồi đất để sung vào quỹ nhà nước cần tuân thủ quy định củ",
+  "verdict": "MOTPHAN",
+  "n_ctx": 5
+ },
+ "GEN53978": {
+  "answer": "Thời hạn để bạn yêu cầu xác nhận quyền thừa kế là 10 năm, kể từ thời điểm mở thừa kế theo Điều 623 Khoản 2 Bộ Luật Dân Sự 2015.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "TOP33026": {
+  "answer": "Theo Điều 140 Khoản 2 Điểm d) Luật Thi hành án dân sự 2008, nếu bạn gặp trở ngại khách quan hoặc sự kiện bất khả kháng (như tình trạng sức khỏe hiện tại của bạn) khiến bạn không thể thực hiện quyền khiếu nại theo đúng thời hạn, thời gian có trở ngại khách quan hoặc sự kiện bất khả kháng sẽ không tính vào thời hạn khiếu nại. \n\nTuy nhiên, bạn cần phải chứng minh rằng tình trạng sức khỏe của bạn là một trở ngại khách quan hoặc sự kiện bất khả kháng và thông báo cho cơ quan có thẩm quyền về tình trạng này.\n\nNgoài ra, Điều 49 Khoản 2 Thông tư 15/2017/TT-NHNN cũng cho phép hoãn giải quyết yêu cầu bồi thường trong trường hợp người yêu cầu bồi thường bị ốm nặng mà chưa thể tự mình tham gia vào quá trình giải quyết yêu cầu bồi thường. Tuy nhiên, điều này chỉ áp dụng cho yêu cầu bồi thường và không chắc chắn rằng nó sẽ áp dụng cho việc khiếu nại của bạn.\n\nVì vậy, bạn nên thông báo cho cơ quan có thẩm quyền về tình trạng sức khỏe của bạn để họ có thể xem xét việc kéo dài thời gian khiếu nại.",
+  "verdict": "MOTPHAN",
+  "n_ctx": 5
+ },
+ "GEN17239": {
+  "answer": "Theo Điều 432 Khoản 3 Bộ luật Dân sự năm 2015, nếu tài sản bạn mua không đạt chất lượng như tiêu chuẩn đã công bố, bạn có quyền yêu cầu bên bán giải quyết. Nếu bên bán không giải quyết thỏa đáng, bạn có quyền hủy bỏ hợp đồng theo Điều 438 Khoản 1 Điểm b Bộ luật Dân sự năm 2015 và yêu cầu bồi thường thiệt hại. Bên bán hàng hóa không bảo đảm chất lượng sẽ phải chịu trách nhiệm bồi thường theo Điều 608 Bộ luật Dân sự năm 2015.\n\nBạn nên liên hệ với bên bán để giải quyết vấn đề này. Nếu không giải quyết được, bạn có thể kiện ra tòa án.",
+  "verdict": "MOTPHAN",
+  "n_ctx": 5
+ },
+ "GEN89661": {
+  "answer": "Theo Điều 99 Khoản 3 Bộ Luật Dân Sự năm 2015, cơ quan nhà nước không chịu trách nhiệm về nghĩa vụ dân sự của doanh nghiệp nhà nước mà mình thành lập, ngoại trừ trường hợp cơ quan nhà nước bảo lãnh cho nghĩa vụ dân sự đó theo quy định của pháp luật.\n\nNên câu trả lời là: Không, cơ quan nhà nước không phải chịu trách nhiệm về nghĩa vụ dân sự của doanh nghiệp nhà nước, trừ trường hợp có bảo lãnh theo quy định của pháp luật. [BLDS2015|Dieu99|Khoan3]",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "GEN87544": {
+  "answer": "Theo Điều 17 của Luật Hôn nhân và Gia đình năm 2014, vợ chồng bình đẳng với nhau, có quyền, nghĩa vụ ngang nhau về mọi mặt trong gia đình, trong việc thực hiện các quyền, nghĩa vụ của công dân được quy định trong Hiến pháp, Luật Hôn nhân và Gia đình và các luật khác có liên quan. (HNGD2014|Dieu17)",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "GEN28619": {
+  "answer": "Giá cả trong hợp đồng được xác định dựa trên thỏa thuận giữa các bên (Điều 431, Khoản 1 BLDS 2005). Nếu không có thỏa thuận về giá, phương pháp xác định giá, thì giá sẽ được xác định dựa trên giá thị trường của hàng hóa, dịch vụ cùng loại tại thời điểm và địa điểm giao kết hợp đồng (Điều 524, Khoản 2 BLDS 2005). Ngoài ra, các bên cũng có thể thỏa thuận áp dụng hệ số trượt giá khi có biến động về giá (Điều 431, Khoản 2 BLDS 2005).",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "NEW38972": {
+  "answer": "Theo Điều 50 Khoản 3 [TNBTCNN2017], nếu văn bản xem xét lại không còn là căn cứ để yêu cầu bồi thường thì Thủ trưởng cơ quan giải quyết bồi thường sẽ ra quyết định đình chỉ giải quyết bồi thường. Do đó, câu hỏi của bạn là đúng.\n\nNgoài ra, Điều 51 Khoản 1 [TNBTCNN2017] cũng đề cập đến việc đình chỉ giải quyết bồi thường trong một số trường hợp cụ thể.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "TOP18069": {
+  "answer": "Theo Điều 36 Khoản 1 của Thông tư 01/2017/TT-TAND, bạn có quyền yêu cầu bồi thường từ tòa án cấp sơ thẩm nếu tòa án này ban đầu tuyên bạn có tội nhưng sau đó bị tòa án cấp trên hủy bỏ và đình chỉ vụ án vì không có chứng cứ phạm tội. \n\nNên câu trả lời là CÓ, bạn có quyền yêu cầu bồi thường từ tòa án cấp sơ thẩm.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "GEN75189": {
+  "answer": "Theo Bộ Luật Dân Sự 2015:\n\n- Bạn cần báo cáo và thông báo ngay cho cơ quan có thẩm quyền về việc sử dụng sai mục đích tài sản được nhà nước giao. \n\n- Đồng thời, tổ chức xã hội của bạn cần dừng ngay hành vi sử dụng sai mục đích tài sản và tiến hành khắc phục hậu quả.\n\n- Nếu tổ chức không tự giác khắc phục, cơ quan nhà nước sẽ tiến hành kiểm tra, giám sát và xử lý theo quy định của pháp luật.\n\nNguồn: Điều 202, Khoản 1 và Khoản 2; Điều 201, Khoản 2; Điều 94, Khoản 3; Điều 499, Khoản 2 - Bộ Luật Dân Sự 2015.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "NEW28139": {
+  "answer": "Theo Điều 13 Khoản 1 của Luật Trách nhiệm bồi thường của Nhà nước năm 2017, bạn có quyền được cơ quan quản lý nhà nước về công tác bồi thường nhà nước, cơ quan trực tiếp quản lý người thi hành công vụ gây thiệt hại hướng dẫn thủ tục yêu cầu bồi thường.\n\nNếu thủ tục bồi thường của bạn vẫn chưa được xử lý, có thể do một trong những nguyên nhân sau:\n\n1. Hồ sơ yêu cầu bồi thường chưa đầy đủ hoặc chưa đáp ứng các yêu cầu theo quy định pháp luật. Bạn cần kiểm tra lại hồ sơ và đảm bảo rằng nó tuân thủ đúng quy định.\n\n2. Cơ quan giải quyết bồi thường chưa nhận được hồ sơ yêu cầu bồi thường từ bạn. Bạn nên liên hệ với cơ quan giải quyết bồi thường để xác nhận tình trạng hồ sơ.\n\n3. Hồ sơ yêu cầu bồi thường đã được nhận nhưng chưa được xử lý kịp thời. Theo Điều 43 Khoản 4 của Luật Trách nhiệm bồi thường của Nhà nước năm 2017, việc thụ lý hồ sơ, không thụ lý hồ sơ và cử người giải quyết bồi thường phải được thông báo bằng văn bản cho người yêu cầu bồi thường. Bạn có thể yêu cầu cơ quan giải quyết ",
+  "verdict": "MOTPHAN",
+  "n_ctx": 5
+ },
+ "GEN95321": {
+  "answer": "Theo Bộ Luật Dân Sự năm 2005, bạn cần phải trả đủ tiền gốc và lãi đúng hạn theo thỏa thuận. Cụ thể:\n\n- Điều 290, Khoản 1: Nghĩa vụ trả tiền phải được thực hiện đầy đủ, đúng thời hạn, đúng địa điểm và phương thức đã thoả thuận. \n\n- Điều 474, Khoản 1: Bên vay tài sản là tiền thì phải trả đủ tiền khi đến hạn.\n\nVì vậy, câu trả lời là: Có, bạn cần phải trả đủ tiền gốc và lãi đúng hạn theo thỏa thuận.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "GEN67567": {
+  "answer": "Theo Bộ luật dân sự 2015:\n\nNếu hợp đồng của bạn đã hết thời gian thỏa thuận để sửa đổi và bên kia không muốn tiếp tục, bạn có thể yêu cầu Tòa án chấm dứt hợp đồng tại một thời điểm xác định (Điều 420, Khoản 3, Điểm a).\n\nNgoài ra, nếu việc chấm dứt hợp đồng sẽ gây thiệt hại lớn hơn so với các chi phí để thực hiện hợp đồng nếu được sửa đổi, bạn cũng có thể yêu cầu Tòa án sửa đổi hợp đồng để cân bằng quyền và lợi ích hợp pháp của các bên do hoàn cảnh thay đổi cơ bản (Điều 420, Khoản 3, Điểm b).\n\nTrong quá trình này, cả hai bên vẫn phải tiếp tục thực hiện nghĩa vụ của mình theo hợp đồng, trừ trường hợp có thỏa thuận khác (Điều 420, Khoản 4).\n\nBạn cũng có thể thỏa thuận sửa đổi hợp đồng với bên kia (Điều 421, Khoản 1), nhưng nếu không thể đạt được thỏa thuận, bạn có thể yêu cầu tòa án can thiệp như đã nêu trên.\n\nTuy nhiên, nếu hợp đồng là hợp đồng thuê mà không có thời hạn thuê cụ thể, mỗi bên có quyền chấm dứt hợp đồng bất cứ lúc nào, nhưng phải thông báo cho",
+  "verdict": "MOTPHAN",
+  "n_ctx": 5
+ },
+ "GEN95669": {
+  "answer": "Theo Bộ luật Dân sự 2015:\n\n- Theo Điều 584 Khoản 1: Bạn có quyền kiện người khác nếu họ có hành vi xâm phạm danh dự, nhân phẩm, uy tín của bạn mà gây thiệt hại.\n\n- Theo Điều 592 Khoản 2: Người chịu trách nhiệm bồi thường phải bồi thường thiệt hại và một khoản tiền khác để bù đắp tổn thất về tinh thần mà bạn gánh chịu.\n\n- Theo Điều 34 Khoản 4: Nếu không xác định được người đã đưa tin ảnh hưởng xấu đến danh dự, nhân phẩm, uy tín của bạn thì bạn có quyền yêu cầu Tòa án tuyên bố thông tin đó là không đúng.\n\nTuy nhiên, để khởi kiện đòi bồi thường, bạn cần có tài liệu, chứng cứ chứng minh quyền, lợi ích hợp pháp của bạn bị xâm phạm (Điều 189 Khoản 5).\n\nNếu bạn cảm thấy buồn và bị tổn thương vì người khác đã nói xấu về bạn trên mạng xã hội, bạn có thể kiện họ nếu bạn có đủ bằng chứng và tài liệu chứng minh rằng họ đã xâm phạm danh dự, nhân phẩm, uy tín của bạn.",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "NEW49913": {
+  "answer": "Theo Điều 45 Khoản 2 HNGĐ 2000, tài sản riêng của con dưới 15 tuổi, con mất năng lực hành vi dân sự thì do cha mẹ quản lý. Trong trường hợp này, con bạn đã mất năng lực hành vi dân sự từ khi mới 14 tuổi, nên tài sản của con bạn sẽ được cha mẹ quản lý. Cha mẹ cũng có thể ủy quyền cho người khác quản lý tài sản riêng của con.",
+  "verdict": "MOTPHAN",
+  "n_ctx": 5
+ },
+ "GEN81461": {
+  "answer": "Theo Điều 122 Khoản 2 HNGD 2014, nếu việc áp dụng pháp luật nước ngoài trong hợp đồng kết hôn của bạn và người nước ngoài đó trái với các nguyên tắc cơ bản được quy định tại Điều 2 của Luật hôn nhân và gia đình, thì pháp luật nước ngoài sẽ không được áp dụng.\n\nĐồng thời, Điều 670 Khoản 1 Bộ luật Dân sự 2015 cũng khẳng định rằng pháp luật nước ngoài không được áp dụng nếu hậu quả của việc áp dụng nó trái với các nguyên tắc cơ bản của pháp luật Việt Nam.\n\nCuối cùng, Điều 126 Khoản 1 HNGD 2014 quy định rằng trong việc kết hôn giữa công dân Việt Nam với người nước ngoài, mỗi bên phải tuân theo pháp luật của nước mình về điều kiện kết hôn. Nếu việc kết hôn được tiến hành tại cơ quan nhà nước có thẩm quyền của Việt Nam, thì người nước ngoài còn phải tuân theo các quy định của Luật hôn nhân và gia đình Việt Nam.\n\nTóm lại, để đảm bảo rằng luật Việt Nam sẽ được ưu tiên áp dụng, bạn cần đảm bảo rằng việc áp dụng pháp luật nước ngoài không vi phạm các nguyên tắc cơ bản của pháp luật Việt Nam. Nếu",
+  "verdict": "CO",
+  "n_ctx": 5
+ },
+ "GEN83381": {
+  "answer": "Theo luật Việt Nam, nếu bạn là người tiêu dùng và mua phải sản phẩm kém chất lượng từ một công ty nước ngoài, bạn có quyền kiện theo luật của Việt Nam. Điều này dựa trên Điều 465 Khoản 1 của Văn bản hợp nhất số 21/VBHN-VPCP:\n\nNgười nước ngoài, cơ quan, tổ chức nước ngoài, tổ chức quốc tế, cơ quan đại diện của tổ chức quốc tế tại Việt Nam có quyền khởi kiện đến Tòa án Việt Nam để yêu cầu bảo vệ quyền và lợi ích hợp pháp của mình khi bị xâm phạm hoặc có tranh chấp.\n\nTuy nhiên, việc kiện đòi bồi thường sẽ tuân theo pháp luật của nước mà người tiêu dùng (tức bạn) có quốc tịch. Trong trường hợp bạn có nhiều quốc tịch, việc xác định năng lực pháp luật tố tụng dân sự và năng lực hành vi tố tụng dân sự sẽ dựa trên Điều 466 Khoản 1 Điểm b của Văn bản hợp nhất số 21/VBHN-VPCP.",
+  "verdict": "MOTPHAN",
+  "n_ctx": 5
+ }
+}
