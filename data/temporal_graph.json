@@ -1,0 +1,187 @@
+{
+ "laws": [
+  {
+   "law_id": "BLDS2005",
+   "ten": "Bo luat Dan su 2005",
+   "so_hieu": "33/2005/QH11",
+   "valid_from": "2006-01-01",
+   "valid_to": "2017-01-01",
+   "status": "het_hieu_luc"
+  },
+  {
+   "law_id": "BLDS2015",
+   "ten": "Bo luat Dan su 2015",
+   "so_hieu": "91/2015/QH13",
+   "valid_from": "2017-01-01",
+   "valid_to": null,
+   "status": "con_hieu_luc"
+  },
+  {
+   "law_id": "HNGD2014",
+   "ten": "Luat Hon nhan va Gia dinh 2014",
+   "so_hieu": "52/2014/QH13",
+   "valid_from": "2015-01-01",
+   "valid_to": null,
+   "status": "con_hieu_luc"
+  },
+  {
+   "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+   "ten": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+   "so_hieu": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+   "valid_from": "2016-07-01",
+   "valid_to": null,
+   "status": "needs_review"
+  },
+  {
+   "law_id": "luat-so-15-2026-qh16-470450",
+   "ten": "luat-so-15-2026-qh16-470450",
+   "so_hieu": "luat-so-15-2026-qh16-470450",
+   "valid_from": "2000-01-01",
+   "valid_to": null,
+   "status": "needs_review"
+  },
+  {
+   "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+   "ten": "Nghị định số 152/2026/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Thi hành án dân sự",
+   "so_hieu": "nghi-dinh-so-152-2026-nd-cp-469524",
+   "valid_from": "2000-01-01",
+   "valid_to": null,
+   "status": "needs_review"
+  },
+  {
+   "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+   "ten": "Thông tư liên tịch số 07/2026/TTLT-VKSNDTC-TANDTC quy định về phối hợp giữa Viện kiểm sát nhân dân và Tòa án nhân dân trong thi hành một số quy định của Bộ luật Tố tụng dân sự",
+   "so_hieu": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+   "valid_from": "2000-01-01",
+   "valid_to": null,
+   "status": "needs_review"
+  },
+  {
+   "law_id": "HNGDVBHN2025",
+   "ten": "VBHN Luat HN&GĐ 2025 (121/VBHN-VPQH)",
+   "so_hieu": "121/VBHN-VPQH",
+   "valid_from": "2025-09-01",
+   "valid_to": null,
+   "status": "con_hieu_luc"
+  },
+  {
+   "law_id": "NCN2010",
+   "ten": "Luat Nuoi con nuoi 2010",
+   "so_hieu": "52/2010/QH12",
+   "valid_from": "2011-01-01",
+   "valid_to": null,
+   "status": "con_hieu_luc"
+  },
+  {
+   "law_id": "HOTICH2014",
+   "ten": "HOTICH2014",
+   "so_hieu": "HOTICH2014",
+   "valid_from": "2016-01-01",
+   "valid_to": null,
+   "status": "needs_review"
+  },
+  {
+   "law_id": "THADS2008",
+   "ten": "Luat Thi hanh an dan su 2008",
+   "so_hieu": "26/2008/QH12",
+   "valid_from": "2009-07-01",
+   "valid_to": null,
+   "status": "con_hieu_luc"
+  },
+  {
+   "law_id": "TNBTCNN2017",
+   "ten": "Luat TNBTCNN 2017",
+   "so_hieu": "10/2017/QH14",
+   "valid_from": "2018-07-01",
+   "valid_to": null,
+   "status": "con_hieu_luc"
+  },
+  {
+   "law_id": "HNGD2000",
+   "ten": "Luat HN&GĐ 2000",
+   "so_hieu": "22/2000/QH10",
+   "valid_from": "2001-01-01",
+   "valid_to": "2015-01-01",
+   "status": "het_hieu_luc"
+  },
+  {
+   "law_id": "HOAGIAI2026",
+   "ten": "Luat Hoa giai o co so 2026",
+   "so_hieu": "16/2026/QH16",
+   "valid_from": "2026-07-01",
+   "valid_to": null,
+   "status": "con_hieu_luc"
+  },
+  {
+   "law_id": "HOTICH2026",
+   "ten": "Luat Ho tich 2026",
+   "so_hieu": "03/2026/QH16",
+   "valid_from": "2026-07-01",
+   "valid_to": null,
+   "status": "con_hieu_luc"
+  },
+  {
+   "law_id": "THADSVBHN",
+   "ten": "VBHN THADS 10/VBHN-VPQH 2025",
+   "so_hieu": "10/VBHN-VPQH",
+   "valid_from": "2025-02-01",
+   "valid_to": null,
+   "status": "con_hieu_luc"
+  },
+  {
+   "law_id": "BLDS1995",
+   "ten": "Bo luat Dan su 1995",
+   "so_hieu": "44-L/CTN",
+   "valid_from": "1996-07-01",
+   "valid_to": "2006-01-01",
+   "status": "het_hieu_luc"
+  }
+ ],
+ "succession": [
+  {
+   "src": "BLDS2005",
+   "tgt": "BLDS1995",
+   "relation": "REPLACES",
+   "at": "2006-01-01",
+   "note": "BLDS 2005 thay the BLDS 1995"
+  },
+  {
+   "src": "BLDS2015",
+   "tgt": "BLDS2005",
+   "relation": "REPLACES",
+   "at": "2017-01-01",
+   "note": "BLDS 2015 thay the BLDS 2005"
+  },
+  {
+   "src": "HNGDVBHN2025",
+   "tgt": "HNGD2014",
+   "relation": "CONSOLIDATES",
+   "at": "2025-09-01",
+   "note": "VBHN 2025 hop nhat HN&GĐ 2014 + sua doi (thieu Dieu 132-133 ban goc)"
+  },
+  {
+   "src": "HNGD2014",
+   "tgt": "HNGD2000",
+   "relation": "REPLACES",
+   "at": "2015-01-01",
+   "note": "HN&GĐ 2014 thay the HN&GĐ 2000"
+  }
+ ],
+ "chunk_counts": {
+  "BLDS2015": 1838,
+  "BLDS2005": 780,
+  "HNGD2014": 393
+ },
+ "tests": {
+  "2010-06-01": [
+   "BLDS2005"
+  ],
+  "2020-06-01": [
+   "BLDS2015",
+   "HNGD2014"
+  ],
+  "2000-01-01": [
+   "BLDS1995"
+  ]
+ }
+}

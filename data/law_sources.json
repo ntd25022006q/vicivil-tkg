@@ -1,0 +1,87 @@
+{
+ "BLDS2015": [
+  "https://ketoananpha.vn/bo-luat-dan-su-2015",
+  "mirror",
+  "2026-10-15"
+ ],
+ "BLDS2005": [
+  "https://thegioiluat.vn/phap-luat/bo-luat-dan-su-2005/",
+  "mirror",
+  "2026-10-15"
+ ],
+ "BLDS1995": [
+  "https://hethongphapluat.com/bo-luat-dan-su-1995/",
+  "mirror",
+  "2026-10-15"
+ ],
+ "HNGD2014": [
+  "mirror (origin unrecorded, v1 gap)",
+  "mirror",
+  "2026-10-15"
+ ],
+ "HNGDVBHN2025": [
+  "https://cdn.thuvienphapluat.vn/uploads/Hoidapphapluat/2025/LTN/thang9/121-vbhn-vpqh.pdf",
+  "semi-official",
+  "2026-10-15"
+ ],
+ "HOTICH2014": [
+  "https://vietnamembassy-usa.org/.../luat_ho_tich_nam_2014.docx",
+  "official-copy",
+  "2026-10-15"
+ ],
+ "NCN2010": [
+  "https://datafiles.chinhphu.vn/cpp/files/vbpq/2010/08/100706_l52qh.doc",
+  "official",
+  "2026-10-15"
+ ],
+ "THADSVBHN": [
+  "https://portalmedia.moj.gov.vn/api/v1/files/luat-hop-nhat-thads-20260422000228-2ad01319-019db0fe49e97adbbbb836c9338402b1.pdf",
+  "official",
+  "2026-10-15"
+ ],
+ "THADS2008": [
+  "https://hethongphapluat.com/luat-thi-hanh-an-dan-su-2008/",
+  "mirror",
+  "2026-10-15"
+ ],
+ "TNBTCNN2017": [
+  "https://hethongphapluat.com/luat-trach-nhiem-boi-thuong-cua-nha-nuoc-2017/",
+  "mirror",
+  "2026-10-15"
+ ],
+ "HNGD2000": [
+  "https://hethongphapluat.com/luat-hon-nhan-va-gia-dinh-2000/",
+  "mirror",
+  "2026-10-15"
+ ],
+ "HOAGIAI2026": [
+  "congbao signed PDF 470451",
+  "official",
+  "2026-10-15"
+ ],
+ "HOTICH2026": [
+  "congbao signed PDF 469530",
+  "official",
+  "2026-10-15"
+ ],
+ "van-ban-hop-nhat-so-21-vbhn-vpqh-468974": [
+  "congbao PDF (VBHN TTDS)",
+  "official",
+  "2026-10-15"
+ ],
+ "luat-so-15-2026-qh16-470450": [
+  "congbao PDF (TNBTCNN amend)",
+  "official",
+  "2026-10-15"
+ ],
+ "nghi-dinh-so-152-2026-nd-cp-469524": [
+  "congbao PDF (THADS guide)",
+  "official",
+  "2026-10-15"
+ ],
+ "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106": [
+  "congbao PDF (TTDS coordination)",
+  "official",
+  "2026-10-15"
+ ]
+}
