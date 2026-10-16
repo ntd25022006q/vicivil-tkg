@@ -12,8 +12,10 @@ cạnh kế thừa, benchmark câu hỏi có ngày, abstain test.
   Hộ tịch 2014/2026, Nuôi con nuôi 2010, Hòa giải 2026, Tố tụng + Thi hành án
   + Bồi thường + văn bản hướng dẫn (`data/civil_chunks.jsonl`).
 - **~32k entity + ~18k relation + ~4,3k cạnh dẫn chiếu** (`data/civil_extract.json`).
-- **Retrieval** (mặc định lai BM25+dense+fusion+exact-match, lọc thời gian):
-  Hit@1 0,512 • Hit@3 0,682 • Hit@5 **0,711** • Điều@5 ~0,8 (n=211); abstain 2/2.
+- **Retrieval** (mặc định lai BM25+dense+fusion+exact-match, lọc thời gian,
+  n=211): Hit@1 0,512 • Hit@3 0,682 • Hit@5 **0,711** • Hit@10 0,754 •
+  MRR 0,599 • nDCG@10 0,637 • test_Hit@5 0,685 (split dev/test công khai);
+  abstain 2/2.
 - **Ablation cùng index** (phát hiện chính): dense 0,422/0,626/0,673; lai
   0,512/0,682/0,711; +neo/cạnh đồ thị 0,199/0,408/0,526; full 0,180/0,35/0,474.
   Tầng đồ thị hại strict-Hit (nhiễu hạng đầu) — nên lai là mặc định, đồ thị là
