@@ -18,13 +18,19 @@
   from the signed PDF (1.896 chunks: Dieu or Dieus|M u{0..k}).
 - **Extraction:** 11.268 chunk rows with entities/relations/deterministic
   DIEN-DACHIEU refs extracted on the decontaminated text (qwen25-awq,
-  temp 0, few-shot + validators; ~4% rows failed 3x validation → kept refs
-  only, disclosed).
-- **Index (8-file ADGR-style):** 14.066 entities (10 legal types) / 20.271
-  relations incl. chunk-chunk DIEN-DACHIEU edges / 439 cross-version
-  successor edges mined by embedding similarity (sim ≥ 0.90, p 0.80-0.90
-  band retained for manual review only) / chunk + entity + relation dense
-  matrices (768-d, embeddinggemma:300m, L2-normed).
+  temp 0, few-shot + validators). 9 previously-failed chunks (stub-carrying
+  paragraphs) were rescued with qwen3:14b via Ollama — engine heterogeneity
+  for those 9 rows is recorded on the row (`engine` field); extraction now
+  covers 11.268/11.268 rows with zero failed chunks (0% vs the 4% disclosed
+  in v1.2).
+- **Index (8-file ADGR-style):** 14.068 entities (10 legal types) / 20.275
+  relations incl. chunk-chunk DIEN-DACHIEU edges (+439 cross-version
+  successor edges appended separately, totalling 20.714 relation rows)
+  mined by embedding similarity (sim ≥ 0.90, p 0.80-0.90 band retained for
+  manual review only) / chunk + entity + relation dense matrices (768-d,
+  embeddinggemma:300m, L2-normed). Index content mirrors chunk text with a
+  disclosed [:3000] char cap for BM25/representation — full text stays in
+  `civil_chunks.jsonl`.
 - **Temporal:** 17 laws [valid_from, valid_to) + 16 external amending laws;
   21 edges (4 succession + 17 AMENDS) with dates; chunks inherit law
   validity; abstain tested (1990 empty-pool + missing-law probes).
@@ -83,7 +89,18 @@
 - `SHA256SUMS` regenerated for v1.2.
 
 ## Known gaps (disclosed)
-- ~4% of chunks have empty LLM extractions (validators, 3x) — refs kept.
+- ~500 item-level chunks have empty LLM extractions (mostly short BLDS
+  1995 numbered items; validators reject generic 1-word names) — refs kept;
+  disclosed per-law histogram in `law_audit.json` (computed, reproducible).
+- Near-duplicate copies across laws (557 groups, 1.164 chunks — e.g. the
+  same article text preserved verbatim by a 2005 successor, or VBHN
+  consolidations): measured impact is small — only 10/281 benchmark
+  questions show a top-5 duplicate collision, and temporal filtering
+  already prevents most crowding. A retrieval-time duplicate-collapse
+  experiment was REJECTED: the retriever's internal ordering depends on
+  the requested top-k, so extending-and-truncating outside the retriever
+  distorts ranks (Hit@1 fell to 0.0 in probe). Numbers below therefore use
+  the unmodified hybrid retriever.
 - Missing articles as in v1.0 (BLDS 1995 2/838 pre-PDF-era gaps, HNGD2000
   3/110, THADS-VBHN 5/190, VBHN-21 Điều 497) — measured and documented.
 - Graph-mode retrieval still trails hybrid on strict Hit (known from v1.0
@@ -91,6 +108,9 @@
   numbers are reported so no one average hides them.
 - Expert review (50 Qs) and HuggingFace mirror still pending; GitHub PAT
   rotation pending (outreach-level risk accepted by owner).
+- Bench has 1 duplicated question text across two qids (CIV001/CIV002,
+  both verified) — counted in all averages, disclosed here to avoid
+  hidden double weighting.
 
 ## Uses, distribution, maintenance
 - **License:** legal texts public domain (Luật 104/2016/QH13, Luật
@@ -99,6 +119,14 @@
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.2.2:** full-scale cross-artifact audit (zero id-set drift across
+  chunk/extract/vdb/kv files; matrix rows == data rows everywhere; gold
+  0 broken; 439 cross edges all resolvable). 9 failed3x chunk extractions
+  rescued (engine noted per-row) and the 8-file index rebuilt from the
+  complete extraction — re-eval reproduced v1.2 metrics exactly
+  (0.452/0.658/0.726/0.794, MRR 0.569). Duplicate-crowding measured
+  (10/281 top-5 collisions) — retrieval-time dedup rejected as
+  rank-distorting; index content [:3000] cap disclosed.
 - **v1.2:** BLDS 1995 rebuilt at clause level from signed PDF; second
   decontamination round (409 Công-bao page headers, 3 dup IDs, 1 M u-remap
   fix in lineage injection); full re-extraction on clean text (11.268 rows)
