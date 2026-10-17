@@ -41,6 +41,56 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
+### Per-law size table (chunk counts, v1.2.3)
+
+| law_id | chunks | law_id | chunks |
+|---|---:|---|---:|
+| van-ban-hop-nhat-so-21 (BLTTHS-VBHN, official PDF) | 1.979 | TNBTCNN-2017 (official mirror) | 505 |
+| BLDS 1995 (clause-level, official PDF) | 1.890 | HNGD 2014 (Hôn nhân gia đình) | 393 |
+| BLDS 2015 (official mirror) | 1.838 | HNGD-VBHN 2025 | 392 |
+| BLDS 2005 (official mirror) | 780 | Hộ tịch 2014 (official copy) | 266 |
+| THADS-VBHN (MOJ official file) | 758 | HNGD 2000 (mirror) | 239 |
+| THA dân sự 2008 (mirror) | 721 | NCN 2010 (gov .doc) | 208 |
+| ND 152/2026-ND-CP (official PDF) | 665 | HOAGIAI2026 (công báo PDF) | 175 |
+| Luật số 15/2026/QH16 (công báo PDF) | 151 | Hộ tịch 2026 (công báo PDF) | 172 |
+| TT liên tịch 07/2026 (công báo PDF) | 135 | | |
+
+## Data fields (schema)
+
+`data/civil_chunks.jsonl` — one JSON object per line, 11.267 rows:
+
+| field | type | meaning |
+|---|---|---|
+| `chunk_id` | str | hierarchical ID `Law\|Dieu[\|Khoan[\|Diem[\|Muc]]]` (unique key) |
+| `law_id` | str | corpus law identifier used by the temporal graph |
+| `dieu` / `khoan` / `diem` / `muc` | str | article/clause/point/item part numbers |
+| `tieu_de` | str | article heading as in the official text |
+| `content` | str | decontaminated chunk text (full text, mirror includes same) |
+| `chars` | int | len(content), schema-normalized |
+| `source_url` | str | URL of the used source page (Cong-bao or TVPL mirror) |
+| `source_type` | str | `official` / `mirror` / `official-copy` / `semi` |
+| `fetched` | date | crawl date of the source page |
+| `valid_from` / `valid_to` | date | law inheritance of `[from, to)` validity |
+| `cleaned_v11` | bool | footer/header decontamination flag |
+| `muc` | str | item part for BLDS 1995 clause-level rows |
+
+`benchmark/law_bench_*.json` — 281 question objects in two files:
+
+| field | type | meaning |
+|---|---|---|
+| `qid` | str | question id (CIV-prefix) |
+| `question` | str | situational natural-language question |
+| `as_of` | date | the "what did law say then" date used for temporal filtering |
+| `gold_ids` | list[str] | gold chunk ids referencing `civil_chunks.jsonl` |
+| `gold_tier` | str | `verified` / `regolded` / `author-verified` |
+| `regolded_from` | list[str] | original gold before re-anchoring (when tier=regolded) |
+| `hint`, `reviewed` | str | adjudication trail (rater notes, reviewer pass) |
+
+`index/` — dense matrices store `embedding_dim: 768`, a base64 `matrix`
+(float32, row-major, L2-normed) and a parallel `data` list of
+`{__id__, content[, src_id, tgt_id, ...]}` rows; the three `kv_store_*.json`
+map object ids to their referenced `chunk_ids`.
+
 ## Metrics (v1.2.3, hybrid retriever + rerank, temporal-filtered)
 - Full bench n=281: Hit@1 0.452 / Hit@3 0.658 / Hit@5 0.726 / Hit@10 0.794
   / MRR 0.568. Re-evaluated on the sanitized v1.2.3 index and confirmed

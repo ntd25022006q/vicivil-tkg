@@ -3,6 +3,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 ![Release](https://img.shields.io/badge/release-v1.2.3-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
+[![HuggingFace Dataset](https://img.shields.io/badge/HF-dataset-yellow.svg)](https://huggingface.co/datasets/datbazuka2502/vicivil-tkg)
 
 A versioned, article-level knowledge graph of Vietnamese civil law with
 **validity-time tracking**: every chunk carries a hierarchical ID

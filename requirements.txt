@@ -1,0 +1,5 @@
+numpy>=1.26
+pypdf>=4.0
+olefile>=0.46
+requests>=2.31
+huggingface_hub>=0.36
