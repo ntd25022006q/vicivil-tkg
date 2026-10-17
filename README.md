@@ -15,11 +15,9 @@ cannot.
 ## Interactive artifacts
 
 - **Temporal graph explorer** - single-file, no build step:
-  [`docs/graph/explorer.html`](docs/graph/explorer.html). Open it directly in
-  your browser via the CDN link
-  <https://cdn.jsdelivr.net/gh/ntd25022006q/vicivil-tkg@main/docs/graph/explorer.html>
-  (or clone the repo / fetch the raw file and open locally - GitHub renders
-  raw HTML as source). A time slider
+  [`docs/graph/explorer.html`](docs/graph/explorer.html), served live at
+  <https://ntd25022006q.github.io/vicivil-tkg/graph/explorer.html>.
+  A time slider
   (1996-2026) drives the "as-of" view: laws in force are rendered bright,
   expired/future ones dimmed; gold `REPLACES` edges show the succession spine
   (BLDS 1995 -> 2005 -> 2015), dashed edges show amendments mined from
