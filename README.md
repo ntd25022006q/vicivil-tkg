@@ -12,6 +12,17 @@ amendments are explicit edges mined from consolidation preambles - so the
 graph answers *"what did the law say on date X?"*, which flat vector stores
 cannot.
 
+## Interactive artifacts
+
+- **Temporal graph explorer** - single-file, no build step:
+  [`docs/graph/explorer.html`](docs/graph/explorer.html). A time slider
+  (1996-2026) drives the "as-of" view: laws in force are rendered bright,
+  expired/future ones dimmed; gold `REPLACES` edges show the succession spine
+  (BLDS 1995 -> 2005 -> 2015), dashed edges show amendments mined from
+  consolidation preambles; node size encodes chunk counts. Fun with the
+  **Play timeline** button - the same validity-window logic the retrieval
+  index uses at query time.
+
 ## Repository layout
 
 | folder | content |
