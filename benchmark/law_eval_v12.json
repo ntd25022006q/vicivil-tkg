@@ -6,7 +6,7 @@
   "5": 0.726,
   "10": 0.794
  },
- "mrr": 0.569,
+ "mrr": 0.5684,
  "strat": {
   "verified": {
    "n": 245,
@@ -1263,13 +1263,13 @@
   },
   {
    "qid": "GEN45337",
-   "rank": 2,
+   "rank": 3,
    "top": [
+    "HOTICH2014|Dieu4|Khoan8",
     "HOTICH2014|Dieu16|Khoan3",
     "BLDS2015|Dieu26|Khoan2",
     "NCN2010|Dieu3|Khoan7",
-    "BLDS2015|Dieu29|Khoan2",
-    "HOTICH2014|Dieu16|Khoan1"
+    "BLDS2015|Dieu29|Khoan2"
    ]
   },
   {
@@ -2160,7 +2160,7 @@
     "TNBTCNN2017|Dieu73|Khoan2|Diemc",
     "TNBTCNN2017|Dieu73|Khoan2|Diemi",
     "TNBTCNN2017|Dieu73|Khoan2|Diema",
-    "TNBTCNN2017|Dieu73|Khoan2|Dieml"
+    "TNBTCNN2017|Dieu73|Khoan2|Diemb"
    ]
   },
   {
