@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://gexf.net/1.3" xmlns:viz="http://gexf.net/1.3/viz" version="1.3">
+  <meta lastmodifieddate="2026-10-18">
+    <creator>ViCivil-TKG v1.2.3</creator>
+    <description>Khung tri thức thời gian của 17 văn bản luật dân sự Việt Nam
+(1996-2026) + 16 luật sửa đổi bên ngoài; 21 cạnh thay thế / hợp nhất / sửa đổi.
+Nguồn và rà soát: https://github.com/ntd25022006q/vicivil-tkg</description>
+  </meta>
+  <graph defaultedgetype="directed" mode="dynamic" timeformat="date">
+    <attributes class="node">
+      <attribute id="status" title="status" type="string"/>
+      <attribute id="so_hieu" title="so_hieu" type="string"/>
+      <attribute id="chunks" title="chunks" type="integer"/>
+      <attribute id="cites" title="cites" type="integer"/>
+      <attribute id="cat" title="cat" type="string"/>
+      <attribute id="from" title="from" type="string"/>
+      <attribute id="to" title="to" type="string"/>
+    </attributes>
+    <attributes class="edge">
+      <attribute id="relation" title="relation" type="string"/>
+      <attribute id="at" title="at" type="string"/>
+      <attribute id="note" title="note" type="string"/>
+    </attributes>
+    <nodes>
+  <node id="BLDS1995" label="Bộ luật Dân sự 1995">
+    <viz:position x="-2000" y="-250" z="0"/>
+    <viz:color r="0.9568627450980393" g="0.6352941176470588" b="0.22745098039215686"/>
+    <viz:size value="46"/>
+    <start>1996-07-01</start>
+    <end>2006-01-01</end>
+    <attvalues>
+      <attvalue for="status" value="het_hieu_luc"/>
+      <attvalue for="so_hieu" value="44-L/CTN"/>
+      <attvalue for="chunks" value="1890"/>
+      <attvalue for="cites" value="157"/>
+      <attvalue for="cat" value="Dòng BLDS"/>
+      <attvalue for="from" value="1996-07-01"/>
+      <attvalue for="to" value="2006-01-01"/>
+    </attvalues>
+  </node>
+  <node id="BLDS2005" label="Bộ luật Dân sự 2005">
+    <viz:position x="-1220" y="-220" z="0"/>
+    <viz:color r="0.9568627450980393" g="0.6352941176470588" b="0.22745098039215686"/>
+    <viz:size value="37.74"/>
+    <start>2006-01-01</start>
+    <end>2017-01-01</end>
+    <attvalues>
+      <attvalue for="status" value="het_hieu_luc"/>
+      <attvalue for="so_hieu" value="33/2005/QH11"/>
+      <attvalue for="chunks" value="780"/>
+      <attvalue for="cites" value="114"/>
+      <attvalue for="cat" value="Dòng BLDS"/>
+      <attvalue for="from" value="2006-01-01"/>
+      <attvalue for="to" value="2017-01-01"/>
+    </attvalues>
+  </node>
+  <node id="BLDS2015" label="Bộ luật Dân sự 2015 (91/2015/QH13)">
+    <viz:position x="-362" y="-190" z="0"/>
+    <viz:color r="0.9568627450980393" g="0.6352941176470588" b="0.22745098039215686"/>
+    <viz:size value="46"/>
+    <start>2017-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="con_hieu_luc"/>
+      <attvalue for="so_hieu" value="91/2015/QH13"/>
+      <attvalue for="chunks" value="1838"/>
+      <attvalue for="cites" value="145"/>
+      <attvalue for="cat" value="Dòng BLDS"/>
+      <attvalue for="from" value="2017-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="HNGD2000" label="Luật Hôn nhân và gia đình 2000">
+    <viz:position x="-1610" y="-155" z="0"/>
+    <viz:color r="0.8156862745098039" g="0.36470588235294116" b="0.611764705882353"/>
+    <viz:size value="27.14"/>
+    <start>2001-01-01</start>
+    <end>2015-01-01</end>
+    <attvalues>
+      <attvalue for="status" value="het_hieu_luc"/>
+      <attvalue for="so_hieu" value="22/2000/QH10"/>
+      <attvalue for="chunks" value="239"/>
+      <attvalue for="cites" value="38"/>
+      <attvalue for="cat" value="Gia đình"/>
+      <attvalue for="from" value="2001-01-01"/>
+      <attvalue for="to" value="2015-01-01"/>
+    </attvalues>
+  </node>
+  <node id="HNGD2014" label="Luật Hôn nhân và gia đình 2014">
+    <viz:position x="-518" y="-125" z="0"/>
+    <viz:color r="0.8156862745098039" g="0.36470588235294116" b="0.611764705882353"/>
+    <viz:size value="30.85"/>
+    <start>2015-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="con_hieu_luc"/>
+      <attvalue for="so_hieu" value="52/2014/QH13"/>
+      <attvalue for="chunks" value="393"/>
+      <attvalue for="cites" value="67"/>
+      <attvalue for="cat" value="Gia đình"/>
+      <attvalue for="from" value="2015-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="HNGDVBHN2025" label="Luật HN&amp;GĐ (VBHN 121/2025)">
+    <viz:position x="262" y="-95" z="0"/>
+    <viz:color r="0.8156862745098039" g="0.36470588235294116" b="0.611764705882353"/>
+    <viz:size value="30.83"/>
+    <start>2025-09-01</start>
+    <attvalues>
+      <attvalue for="status" value="con_hieu_luc"/>
+      <attvalue for="so_hieu" value="121/VBHN-VPQH"/>
+      <attvalue for="chunks" value="392"/>
+      <attvalue for="cites" value="77"/>
+      <attvalue for="cat" value="Gia đình"/>
+      <attvalue for="from" value="2025-09-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="HOTICH2014" label="Luật Hộ tịch 2014">
+    <viz:position x="-440" y="-60" z="0"/>
+    <viz:color r="0.5568627450980392" g="0.43529411764705883" b="0.7803921568627451"/>
+    <viz:size value="27.86"/>
+    <start>2016-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="needs_review"/>
+      <attvalue for="so_hieu" value="HOTICH2014"/>
+      <attvalue for="chunks" value="266"/>
+      <attvalue for="cites" value="25"/>
+      <attvalue for="cat" value="Hộ tịch"/>
+      <attvalue for="from" value="2016-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="HOTICH2026" label="Luật Hộ tịch (VBHN 03/2026)">
+    <viz:position x="340" y="-30" z="0"/>
+    <viz:color r="0.5568627450980392" g="0.43529411764705883" b="0.7803921568627451"/>
+    <viz:size value="25.15"/>
+    <start>2026-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="con_hieu_luc"/>
+      <attvalue for="so_hieu" value="03/2026/QH16"/>
+      <attvalue for="chunks" value="172"/>
+      <attvalue for="cites" value="18"/>
+      <attvalue for="cat" value="Hộ tịch"/>
+      <attvalue for="from" value="2026-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="TNBTCNN2017" label="Luật TNBT của Nhà nước 2017">
+    <viz:position x="-284" y="35" z="0"/>
+    <viz:color r="0.2980392156862745" g="0.6235294117647059" b="0.7450980392156863"/>
+    <viz:size value="33.1"/>
+    <start>2018-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="con_hieu_luc"/>
+      <attvalue for="so_hieu" value="10/2017/QH14"/>
+      <attvalue for="chunks" value="505"/>
+      <attvalue for="cites" value="99"/>
+      <attvalue for="cat" value="Bồi thường nhà nước"/>
+      <attvalue for="from" value="2018-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="luat-so-15-2026-qh16-470450" label="Luật 15/2026/QH16 (sửa Luật TNBT-NN)">
+    <viz:position x="340" y="65" z="0"/>
+    <viz:color r="0.2980392156862745" g="0.6235294117647059" b="0.7450980392156863"/>
+    <viz:size value="24.44"/>
+    <start>2026-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="needs_review"/>
+      <attvalue for="so_hieu" value="luat-so-15-2026-qh16-470450"/>
+      <attvalue for="chunks" value="151"/>
+      <attvalue for="cites" value="68"/>
+      <attvalue for="cat" value="Bồi thường nhà nước"/>
+      <attvalue for="from" value="2026-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="van-ban-hop-nhat-so-21-vbhn-vpqh-468974" label="Bộ luật Tố tụng dân sự (VBHN 21/2025)">
+    <viz:position x="-440" y="130" z="0"/>
+    <viz:color r="0.3411764705882353" g="0.6549019607843137" b="0.45098039215686275"/>
+    <viz:size value="46"/>
+    <start>2016-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="needs_review"/>
+      <attvalue for="so_hieu" value="van-ban-hop-nhat-so-21-vbhn-vpqh-468974"/>
+      <attvalue for="chunks" value="1979"/>
+      <attvalue for="cites" value="415"/>
+      <attvalue for="cat" value="Tố tụng dân sự"/>
+      <attvalue for="from" value="2016-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106" label="TT liên tịch 07/2026 VKSNDTC-TANDTC">
+    <viz:position x="340" y="160" z="0"/>
+    <viz:color r="0.3411764705882353" g="0.6549019607843137" b="0.45098039215686275"/>
+    <viz:size value="23.88"/>
+    <start>2026-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="needs_review"/>
+      <attvalue for="so_hieu" value="thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"/>
+      <attvalue for="chunks" value="135"/>
+      <attvalue for="cites" value="83"/>
+      <attvalue for="cat" value="Tố tụng dân sự"/>
+      <attvalue for="from" value="2026-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="THADS2008" label="Luật Thi hành án dân sự 2008">
+    <viz:position x="-986" y="225" z="0"/>
+    <viz:color r="0.6901960784313725" g="0.33725490196078434" b="0.21176470588235294"/>
+    <viz:size value="36.82"/>
+    <start>2009-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="con_hieu_luc"/>
+      <attvalue for="so_hieu" value="26/2008/QH12"/>
+      <attvalue for="chunks" value="721"/>
+      <attvalue for="cites" value="65"/>
+      <attvalue for="cat" value="Thi hành án dân sự"/>
+      <attvalue for="from" value="2009-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="THADSVBHN" label="Luật THADS (VBHN 10/2025)">
+    <viz:position x="262" y="255" z="0"/>
+    <viz:color r="0.6901960784313725" g="0.33725490196078434" b="0.21176470588235294"/>
+    <viz:size value="37.4"/>
+    <start>2025-02-01</start>
+    <attvalues>
+      <attvalue for="status" value="con_hieu_luc"/>
+      <attvalue for="so_hieu" value="10/VBHN-VPQH"/>
+      <attvalue for="chunks" value="758"/>
+      <attvalue for="cites" value="156"/>
+      <attvalue for="cat" value="Thi hành án dân sự"/>
+      <attvalue for="from" value="2025-02-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="nghi-dinh-so-152-2026-nd-cp-469524" label="Nghị định 152/2026 (thi hành THADS)">
+    <viz:position x="340" y="285" z="0"/>
+    <viz:color r="0.6901960784313725" g="0.33725490196078434" b="0.21176470588235294"/>
+    <viz:size value="35.92"/>
+    <start>2026-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="needs_review"/>
+      <attvalue for="so_hieu" value="nghi-dinh-so-152-2026-nd-cp-469524"/>
+      <attvalue for="chunks" value="665"/>
+      <attvalue for="cites" value="243"/>
+      <attvalue for="cat" value="Thi hành án dân sự"/>
+      <attvalue for="from" value="2026-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="NCN2010" label="Luật Nuôi con nuôi 2010">
+    <viz:position x="-830" y="320" z="0"/>
+    <viz:color r="0.4980392156862745" g="0.5490196078431373" b="0.5529411764705883"/>
+    <viz:size value="26.26"/>
+    <start>2011-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="con_hieu_luc"/>
+      <attvalue for="so_hieu" value="52/2010/QH12"/>
+      <attvalue for="chunks" value="208"/>
+      <attvalue for="cites" value="27"/>
+      <attvalue for="cat" value="Khác"/>
+      <attvalue for="from" value="2011-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="HOAGIAI2026" label="Luật Hòa giải, đối thoại tại cơ sở 2026">
+    <viz:position x="340" y="350" z="0"/>
+    <viz:color r="0.4980392156862745" g="0.5490196078431373" b="0.5529411764705883"/>
+    <viz:size value="25.24"/>
+    <start>2026-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="con_hieu_luc"/>
+      <attvalue for="so_hieu" value="16/2026/QH16"/>
+      <attvalue for="chunks" value="175"/>
+      <attvalue for="cites" value="44"/>
+      <attvalue for="cat" value="Khác"/>
+      <attvalue for="from" value="2026-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-64-2014-QH13" label="Luật số 64/2014/QH13">
+    <viz:position x="-518" y="415" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2015-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 64/2014/QH13"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2015-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-23-2018-QH14" label="Luật số 23/2018/QH14">
+    <viz:position x="-206" y="445" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2019-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 23/2018/QH14"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2019-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-59-2020-QH14" label="Luật số 59/2020/QH14">
+    <viz:position x="-50" y="475" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2021-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 59/2020/QH14"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2021-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-67-2020-QH14" label="Luật số 67/2020/QH14">
+    <viz:position x="28" y="415" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2022-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 67/2020/QH14"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2022-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-03-2022-QH15" label="Luật số 03/2022/QH15">
+    <viz:position x="28" y="445" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2022-03-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 03/2022/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2022-03-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-13-2022-QH15" label="Luật số 13/2022/QH15">
+    <viz:position x="106" y="475" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2023-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 13/2022/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2023-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-19-2023-QH15" label="Luật số 19/2023/QH15">
+    <viz:position x="184" y="415" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2024-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 19/2023/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2024-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-31-2024-QH15" label="Luật số 31/2024/QH15">
+    <viz:position x="184" y="445" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2024-08-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 31/2024/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2024-08-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-43-2024-QH15" label="Luật số 43/2024/QH15">
+    <viz:position x="184" y="475" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2024-08-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 43/2024/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2024-08-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-34-2024-QH15" label="Luật số 34/2024/QH15">
+    <viz:position x="262" y="415" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2025-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 34/2024/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2025-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-81-2025-QH15" label="Luật số 81/2025/QH15">
+    <viz:position x="262" y="445" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2025-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 81/2025/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2025-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-84-2025-QH15" label="Luật số 84/2025/QH15">
+    <viz:position x="262" y="475" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2025-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 84/2025/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2025-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-46-2024-QH15" label="Luật số 46/2024/QH15">
+    <viz:position x="262" y="415" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2025-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 46/2024/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2025-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-85-2025-QH15" label="Luật số 85/2025/QH15">
+    <viz:position x="262" y="445" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2025-07-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 85/2025/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2025-07-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-59-2024-QH15" label="Luật số 59/2024/QH15">
+    <viz:position x="340" y="475" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2026-01-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 59/2024/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2026-01-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+  <node id="EXT-Luật-số-142-2025-QH15" label="Luật số 142/2025/QH15">
+    <viz:position x="340" y="415" z="0"/>
+    <viz:color r="0.6039215686274509" g="0.6274509803921569" b="0.6509803921568628"/>
+    <viz:size value="8.0"/>
+    <start>2026-03-01</start>
+    <attvalues>
+      <attvalue for="status" value="external-ref"/>
+      <attvalue for="so_hieu" value="Luật số 142/2025/QH15"/>
+      <attvalue for="chunks" value="0"/>
+      <attvalue for="cites" value="0"/>
+      <attvalue for="cat" value="Sửa đổi bên ngoài"/>
+      <attvalue for="from" value="2026-03-01"/>
+      <attvalue for="to" value=""/>
+    </attvalues>
+  </node>
+    </nodes>
+    <edges>
+  <edge id="e0" source="BLDS2005" target="BLDS1995" weight="1">
+    <start>2006-01-01</start>
+    <attvalues>
+      <attvalue for="relation" value="REPLACES"/>
+      <attvalue for="at" value="2006-01-01"/>
+      <attvalue for="note" value="BLDS 2005 thay thế BLDS 1995"/>
+    </attvalues>
+  </edge>
+  <edge id="e1" source="BLDS2015" target="BLDS2005" weight="1">
+    <start>2017-01-01</start>
+    <attvalues>
+      <attvalue for="relation" value="REPLACES"/>
+      <attvalue for="at" value="2017-01-01"/>
+      <attvalue for="note" value="BLDS 2015 thay thế BLDS 2005"/>
+    </attvalues>
+  </edge>
+  <edge id="e2" source="HNGDVBHN2025" target="HNGD2014" weight="1">
+    <start>2025-09-01</start>
+    <attvalues>
+      <attvalue for="relation" value="CONSOLIDATES"/>
+      <attvalue for="at" value="2025-09-01"/>
+      <attvalue for="note" value="VBHN 2025 hợp nhất HN&amp;GĐ 2014 + sửa đổi (thiếu Điều 132-133 bản gốc)"/>
+    </attvalues>
+  </edge>
+  <edge id="e3" source="HNGD2014" target="HNGD2000" weight="1">
+    <start>2015-01-01</start>
+    <attvalues>
+      <attvalue for="relation" value="REPLACES"/>
+      <attvalue for="at" value="2015-01-01"/>
+      <attvalue for="note" value="HN&amp;GĐ 2014 thay thế HN&amp;GĐ 2000"/>
+    </attvalues>
+  </edge>
+  <edge id="e4" source="EXT-Luật-số-81-2025-QH15" target="HNGDVBHN2025" weight="1">
+    <start>2025-07-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2025-07-01"/>
+      <attvalue for="note" value="kiểm chứng từ preamble VBHN (24-06-2025)"/>
+    </attvalues>
+  </edge>
+  <edge id="e5" source="EXT-Luật-số-64-2014-QH13" target="THADSVBHN" weight="1">
+    <start>2015-07-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2015-07-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2014-11-25)"/>
+    </attvalues>
+  </edge>
+  <edge id="e6" source="EXT-Luật-số-23-2018-QH14" target="THADSVBHN" weight="1">
+    <start>2019-07-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2019-07-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2018-06-12)"/>
+    </attvalues>
+  </edge>
+  <edge id="e7" source="EXT-Luật-số-67-2020-QH14" target="THADSVBHN" weight="1">
+    <start>2022-01-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2022-01-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2020-11-13)"/>
+    </attvalues>
+  </edge>
+  <edge id="e8" source="EXT-Luật-số-03-2022-QH15" target="THADSVBHN" weight="1">
+    <start>2022-03-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2022-03-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2022-01-11)"/>
+    </attvalues>
+  </edge>
+  <edge id="e9" source="EXT-Luật-số-31-2024-QH15" target="THADSVBHN" weight="1">
+    <start>2024-08-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2024-08-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2024-01-18)"/>
+    </attvalues>
+  </edge>
+  <edge id="e10" source="EXT-Luật-số-43-2024-QH15" target="THADSVBHN" weight="1">
+    <start>2024-08-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2024-08-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2024-06-29)"/>
+    </attvalues>
+  </edge>
+  <edge id="e11" source="EXT-Luật-số-59-2024-QH15" target="THADSVBHN" weight="1">
+    <start>2026-01-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2026-01-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2024-11-30)"/>
+    </attvalues>
+  </edge>
+  <edge id="e12" source="EXT-Luật-số-81-2025-QH15" target="THADSVBHN" weight="1">
+    <start>2025-07-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2025-07-01"/>
+      <attvalue for="note" value="kiểm chứng từ preamble VBHN (24-06-2025)"/>
+    </attvalues>
+  </edge>
+  <edge id="e13" source="EXT-Luật-số-84-2025-QH15" target="THADSVBHN" weight="1">
+    <start>2025-07-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2025-07-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2025-06-25)"/>
+    </attvalues>
+  </edge>
+  <edge id="e14" source="EXT-Luật-số-59-2020-QH14" target="van-ban-hop-nhat-so-21-vbhn-vpqh-468974" weight="1">
+    <start>2021-01-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2021-01-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2020-06-17)"/>
+    </attvalues>
+  </edge>
+  <edge id="e15" source="EXT-Luật-số-13-2022-QH15" target="van-ban-hop-nhat-so-21-vbhn-vpqh-468974" weight="1">
+    <start>2023-07-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2023-07-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2022-11-14)"/>
+    </attvalues>
+  </edge>
+  <edge id="e16" source="EXT-Luật-số-19-2023-QH15" target="van-ban-hop-nhat-so-21-vbhn-vpqh-468974" weight="1">
+    <start>2024-07-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2024-07-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2023-06-20)"/>
+    </attvalues>
+  </edge>
+  <edge id="e17" source="EXT-Luật-số-34-2024-QH15" target="van-ban-hop-nhat-so-21-vbhn-vpqh-468974" weight="1">
+    <start>2025-01-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2025-01-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2024-06-24)"/>
+    </attvalues>
+  </edge>
+  <edge id="e18" source="EXT-Luật-số-46-2024-QH15" target="van-ban-hop-nhat-so-21-vbhn-vpqh-468974" weight="1">
+    <start>2025-07-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2025-07-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2024-11-26)"/>
+    </attvalues>
+  </edge>
+  <edge id="e19" source="EXT-Luật-số-85-2025-QH15" target="van-ban-hop-nhat-so-21-vbhn-vpqh-468974" weight="1">
+    <start>2025-07-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2025-07-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2025-06-25)"/>
+    </attvalues>
+  </edge>
+  <edge id="e20" source="EXT-Luật-số-142-2025-QH15" target="van-ban-hop-nhat-so-21-vbhn-vpqh-468974" weight="1">
+    <start>2026-03-01</start>
+    <attvalues>
+      <attvalue for="relation" value="AMENDS"/>
+      <attvalue for="at" value="2026-03-01"/>
+      <attvalue for="note" value="verified from VBHN preamble (2025-12-11)"/>
+    </attvalues>
+  </edge>
+    </edges>
+  </graph>
+</gexf>

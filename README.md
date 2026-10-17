@@ -16,7 +16,12 @@ cannot.
 
 - **Temporal graph explorer** - single-file, no build step:
   [`docs/graph/explorer.html`](docs/graph/explorer.html), served live at
-  <https://ntd25022006q.github.io/vicivil-tkg/graph/explorer.html>.
+  <https://ntd25022006q.github.io/vicivil-tkg/graph/explorer.html>
+  (Apache-2.0 ECharts; as-of time slider 1996-2026, dimmed past, hidden
+  future, gold `REPLACES` succession spine, dashed amendment edges).
+  The same law-level graph ships as an **open GEXF 1.3 dynamic file** -
+  [`docs/graph/law_graph.gexf`](docs/graph/law_graph.gexf) - which opens
+  directly in Gephi or Gephi-Lite for any other analysis workflow.
   A time slider
   (1996-2026) drives the "as-of" view: laws in force are rendered bright,
   expired/future ones dimmed; gold `REPLACES` edges show the succession spine

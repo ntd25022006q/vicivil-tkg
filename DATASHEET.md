@@ -210,8 +210,9 @@ map object ids to their referenced `chunk_ids`.
   (f) one residual split roman numeral ("Chương XXX VII" from a scraped
   page boundary) normalized to "Chương XXXVII" corpus-wide and its index
   row re-embedded; (g) HF + GitHub trees regenerated and revisioned
-  together with a 40-entry signed manifest covering data, benchmark, index,
-  provenance, the interactive temporal graph explorer (`docs/graph/`),
+  together with a 41-entry signed manifest covering data, benchmark, index,
+  provenance, the interactive temporal graph explorer
+  (`docs/graph/explorer.html` + open GEXF `docs/graph/law_graph.gexf`),
   and the five official source PDFs.
 - **v1.2.2:** full-scale cross-artifact audit (zero id-set drift across
   chunk/extract/vdb/kv files; matrix rows == data rows everywhere; gold
