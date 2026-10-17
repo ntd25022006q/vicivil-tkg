@@ -76,6 +76,7 @@
   build, so `cite_edges.json` doubles as ground truth for them.
 
 ## Artifacts in this release
+- Public HF mirror (v1.2.2): https://huggingface.co/datasets/datbazuka2502/vicivil-tkg
 - `data/civil_chunks.jsonl` (11.268 rows), `civil_chunks_v10.jsonl`
   (frozen v1.0 backup), `civil_extract.json` (clean extraction), 6 index
   files (`vdb_chunks / vdb_entities / vdb_relationships` +
