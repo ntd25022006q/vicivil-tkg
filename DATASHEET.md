@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.2.3)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.2.4)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.2.3)
+## Composition (v1.2.4)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.2.3)
+### Per-law size table (chunk counts, v1.2.4)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -91,7 +91,8 @@
 `{__id__, content[, src_id, tgt_id, ...]}` rows; the three `kv_store_*.json`
 map object ids to their referenced `chunk_ids`.
 
-## Metrics (v1.2.3, hybrid retriever + rerank, temporal-filtered)
+## Metrics (measured on the v1.2.3 index; numbers carried to v1.2.4 —
+  hygiene-only strip of 12 invisible codepoints, no content change)
 - Full bench n=281: Hit@1 0.452 / Hit@3 0.658 / Hit@5 0.726 / Hit@10 0.794
   / MRR 0.568. Re-evaluated on the sanitized v1.2.3 index and confirmed
   unchanged vs v1.2 (same numbers whenever rounded to 3 decimals).
@@ -108,7 +109,7 @@ map object ids to their referenced `chunk_ids`.
 
 ## Collection & preprocessing
 - **Sources:** signed Cong-bao PDFs (5 core laws re-verified numerically
-  perfect: 838/838, 110/110, 777/777, 78/78, 689/689 Dien) + TVPL official
+  perfect: 838/838, 110/110, 777/777, 78/78, 689/689 Điều) + TVPL official
   HTML for 24/24 sampled chunks; mirror pages remain for laws without
   official equivalents and stay `mirror`-flagged.
 - **Decontamination (three rounds):** v1.1 stripped boilerplate footers
@@ -193,6 +194,18 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.2.4:** hygiene release, zero content change. (a) The last 12
+  invisible left-to-right-mark (U+200E) control characters — previously
+  recorded as a pending post-release sync item — are now stripped at the
+  source of both mirrors from all four affected files
+  (data/civil_chunks.jsonl, data/civil_chunks_v10.jsonl,
+  index/kv_store_text_chunks.json, index/vdb_chunks.json); all four parses
+  re-verified; (b) one typographic slip in "Collection & preprocessing"
+  ("Dien)" → "Điều)"); (c) explorer label-overlap fix (ECharts
+  labelLayout.hideOverlap) and regenerated docs/graph/explorer.html;
+  (d) both mirrors regenerated; retrieval metrics not re-run (the strip
+  touches 12 invisible codepoints only; v1.2.3 numbers reported above
+  remain the reference measurement).
 - **v1.2.3:** root-cause sanitization pass. (a) Rebuilt 2 NCN2010 chunks
   from the official government .doc via a full piece-table parser (the
   source file itself carries damaged piece records that had leaked binary

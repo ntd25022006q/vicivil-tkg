@@ -72,7 +72,8 @@ function buildSeries(){
           itemStyle:{color:n.color,opacity:on?1:0.28,borderColor:(on&&n.status!=='đã hết hiệu lực')?'#ffffff':'#4a4f57',borderWidth:on?2:1},
           label:{show:!n.ext,position:n.x>=27?'left':'right',formatter:n.name,fontSize:11,color:on?'#ecf0f4':'#5f6873',
             backgroundColor:'rgba(14,18,22,.78)',padding:[3,6],borderRadius:4,
-            borderColor:'#303a45',borderWidth:1}};
+            borderColor:'#303a45',borderWidth:1},
+          labelLayout:{hideOverlap:true}};
       });
     nodesByCat.push(items);
   });
