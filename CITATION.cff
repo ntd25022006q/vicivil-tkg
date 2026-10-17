@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 title: "ViCivil-TKG: Vietnamese Civil Law Temporal Knowledge Graph"
-version: 1.0.0
-date-released: 2026-10-16
+version: 1.2.3
+date-released: 2026-10-17
 authors:
   - family-names: "Nguyen"
     given-names: "Tien Ha"
@@ -15,5 +15,7 @@ keywords:
   - legal-information-retrieval
   - civil-law
 abstract: "Article/clause/point-level knowledge graph of Vietnamese civil law
-  with validity intervals, verified amendment edges, and a temporal QA
-  benchmark (211 questions + abstain tests)."
+  (17 corpus laws, 11,267 chunks, 14,099 entity nodes, 20,311 relation rows)
+  with validity intervals, verified amendment and succession edges, and a
+  stratified temporal QA benchmark (281 questions incl. 4-tier hard-upsampling
+  and abstain tests)."

@@ -11,18 +11,18 @@
   adjudicated, not expert-verified.
 
 ## Composition (v1.2.3)
-- **Chunks:** 11.268 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
+- **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
   `cleaned_v11=true` footer-strip flag. BLDS 1995 re-parsed to clause level
   from the signed PDF (1.896 chunks: Dieu or Dieu|Muc{0..k}).
-- **Extraction:** 11.268 chunk rows with entities/relations/deterministic
+- **Extraction:** 11.267 chunk rows with entities/relations/deterministic
   DAN-CHIEU refs extracted on the decontaminated text (qwen25-awq,
   temp 0, few-shot + validators). 97 chunks were later re-extracted with
   qwen3:14b via Ollama (9 stub-rescues in v1.2.2, then 94 rows whose
   stored text or extraction contained residual corruption) — engine
   heterogeneity for those rows is recorded per-row (`engine` field);
-  extraction covers 11.268/11.268 rows with zero failed chunks.
+  extraction covers 11.267/11.267 rows with zero failed chunks.
 - **Index (8-file ADGR-style):** 14.099 entities (10 legal types) / 20.311
   relations incl. chunk-chunk DAN-CHIEU edges (+439 cross-version
   successor edges appended separately, totalling 20.750 relation rows)
@@ -86,7 +86,7 @@
 
 ## Artifacts in this release
 - Public HF mirror (v1.2.3): https://huggingface.co/datasets/datbazuka2502/vicivil-tkg
-- `data/civil_chunks.jsonl` (11.268 rows), `civil_chunks_v10.jsonl`
+- `data/civil_chunks.jsonl` (11.267 rows), `civil_chunks_v10.jsonl`
   (frozen v1.0 backup), `civil_extract.json` (clean extraction), 6 index
   files (`vdb_chunks / vdb_entities / vdb_relationships` +
   3 kv stores), `temporal_graph.json`.
@@ -120,8 +120,10 @@
   government .doc (its own piece-table is damaged); they were rebuilt from
   the same official file's clean piece-table run and the cleaned text was
   verified against the surrounding articles before release.
-- Missing articles as in v1.0 (BLDS 1995 2/838 pre-PDF-era gaps, HNGD2000
-  3/110, THADS-VBHN 5/190, VBHN-21 Dieu 497) — measured and documented.
+- Remaining article-numbering gaps (final v1.2.3 measurement in
+  `law_audit.json`): HNGD2000 3/110, THADS-VBHN 5/190, VBHN-21 Dieu 497,
+  Law 15/2026 44 items (gazette law still awaiting consolidated text);
+  BLDS 1995 has zero gaps left since its v1.2 clause-level rebuild.
 - Graph-mode retrieval still trails hybrid on strict Hit (known from v1.0
   ablation); 32 regolded questions are hard restatements — stratified
   numbers are reported so no one average hides them.
@@ -147,13 +149,19 @@
   debris into the corpus); (b) replaced 1 source emoji with "[!] "; (c)
   re-extracted 94 rows whose output contained stray CJK/PUA glyphs (the
   extraction engine occasionally emitted isolated Chinese tokens) with
-  qwen3:14b/Ollama — per-row engine field kept; (d) index rebuilt
+  qwen3:14b/Ollama — per-row engine field kept; (d) one header-only stub
+  chunk (VBHN-21 Dieu 151, 17 chars) removed from every store and 2.307
+  rows had a non-integer `chars` field normalized to int; index rebuilt
   (14.099 ent / 20.311 rel + 439 lineage = 20.750 rows) with same-gold
   anchor sets; re-eval unchanged (0.452/0.658/0.726/0.794, MRR 0.568);
   (e) 12-section pre-release audit green: zero weird-character groups
   across all released files, zero id-set drift across the 4 stores, gold
-  281/0 broken, extraction 11.268/11.268 done, zero secret patterns;
-  (f) HF + GitHub trees regenerated and revisioned together.
+  281/0 broken, extraction 11.267/11.267 done, zero secret patterns;
+  (f) one residual split roman numeral ("Chương XXX VII" from a scraped
+  page boundary) normalized to "Chương XXXVII" corpus-wide and its index
+  row re-embedded; (g) HF + GitHub trees regenerated and revisioned
+  together with a 39-entry signed manifest covering data, benchmark, index,
+  provenance, and the five official source PDFs.
 - **v1.2.2:** full-scale cross-artifact audit (zero id-set drift across
   chunk/extract/vdb/kv files; matrix rows == data rows everywhere; gold
   0 broken; 439 cross edges all resolvable). 9 failed3x chunk extractions

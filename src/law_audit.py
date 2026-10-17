@@ -25,8 +25,8 @@ for law, lst in by_law.items():
             gaps[law] = g
 rep["numbering_gaps"] = gaps
 # 3. empty/short
-rep["empty"] = sum(1 for r in rows if r["chars"] < 20)
-short = [(r["chunk_id"], r["chars"]) for r in rows if 20 <= r["chars"] < 60]
+rep["empty"] = sum(1 for r in rows if int(r["chars"]) < 20)
+short = [(r["chunk_id"], int(r["chars"])) for r in rows if 20 <= int(r["chars"]) < 60]
 rep["short_n"] = len(short)
 # 4. temporal: every chunk law has entry; succession targets exist
 G = json.load(open(f"{R}/temporal_graph.json", encoding="utf-8"))
