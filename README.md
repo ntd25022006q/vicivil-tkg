@@ -15,7 +15,7 @@ cannot.
 
 | folder | content |
 |---|---|
-| `data/` | 11,268 chunk rows at article/clause/point granularity (17 laws, 1993-2026), each with `source_url` + `source_type` + decontamination flags; frozen v1.0 backup; LLM extraction covering all 11,268 rows |
+| `data/` | 11,267 chunk rows at article/clause/point granularity (17 laws, 1996-2026), each with `source_url` + `source_type` + decontamination flags; frozen v1.0 backup; LLM extraction covering all 11,267 rows |
 | `benchmark/` | 281 situational questions with gold chunk IDs and `gold_tier` (245 verified / 32 regolded / 4 author-verified; 1 documented drop), per-question rank file, double-rater and regold trail, 50-question expert review package |
 | `index/` | 8-file ADGR-style retrieval index: dense 768-d matrices (embeddinggemma:300m) for 14,099 entities and 20,750 relation rows (20,311 in-corpus incl. deterministic DAN-CHIEU edges + 439 cross-version successor edges at similarity >= 0.90), plus entity/relation-to-chunk kv maps |
 | `provenance/` | temporal graph (17 law validity windows + 21 amendment/succession edges), 1,506 intra-law cross-reference edges, lineage candidates (0.80-0.90 similarity band retained for audit only), source audit, ablation + significance + faithfulness artifacts, authoritative index stats, SHA256SUMS |
@@ -31,7 +31,7 @@ the HF card cover attribution.
   (838/838, 110/110, 777/777, 78/78, 689/689 articles); the corrupted
   NCN2010 government `.doc` piece-table was re-parsed and the 2 affected
   chunks rebuilt from the same official file.
-- Extraction: 11,268/11,268 rows done, zero failed chunks; 94 rows whose
+- Extraction: 11,267/11,267 rows done, zero failed chunks; 94 rows whose
   stored output contained stray non-Vietnamese glyphs were re-extracted
   (per-row `engine` field records the model used).
 - Character hygiene gate: zero CJK/Hangul/PUA glyphs across every released

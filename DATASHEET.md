@@ -172,7 +172,8 @@
   rank-distorting; index content [:3000] cap disclosed.
 - **v1.2:** BLDS 1995 rebuilt at clause level from signed PDF; second
   decontamination round (409 Cong-bao page headers, 3 dup IDs, 1 Muc-remap
-  fix in lineage injection); full re-extraction on clean text (11.268 rows)
+  fix in lineage injection); full re-extraction on clean text (11.268 rows
+  as shipped at v1.2)
   + index rebuild (14.066 ent / 20.271 rel + 439 lineage edges); gold
   archive finalized — no weak/partial tiers: 245 verified + 32 regolded +
   4 author-verified + 1 documented drop; eval frozen at Hit@1 0.452 /
