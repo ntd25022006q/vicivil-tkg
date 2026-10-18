@@ -1,121 +1,246 @@
 <!DOCTYPE html>
 <html lang="vi"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ViCivil-TKG — Khung tri thức thời gian của luật dân sự Việt Nam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<title>ViCivil-TKG — Dòng thời gian luật dân sự Việt Nam</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <style>
-:root{--bg:#0e1216;--panel:#151b22;--line:#242c36;--txt:#e7e9ec;--mut:#98a2ad;--acc:#f4a23a}
+:root{--bg:#0b0f14;--panel:rgba(21,27,34,.82);--glass:rgba(28,36,45,.66);--line:#232c37;
+  --txt:#e8ecf1;--mut:#94a0ac;--acc:#f4a23a;--gold:#ffd166;--blue:#8ab4ff;--green:#7fd18a;
+  --mono:'JetBrains Mono',ui-monospace,monospace}
 *{box-sizing:border-box}
-body{font-family:system-ui,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;margin:0;background:var(--bg);color:var(--txt)}
-header{border-bottom:1px solid var(--line);background:var(--panel);padding:10px 18px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-h1{font-size:15px;margin:0;font-weight:600;letter-spacing:.2px}
-h1 small{display:block;font-weight:400;color:var(--mut);font-size:11px;margin-top:2px}
-#ctrl{margin-left:auto;display:flex;gap:10px;align-items:center}
-button{background:#1d242e;color:var(--txt);border:1px solid #333d4a;padding:7px 14px;border-radius:8px;cursor:pointer;font-size:12.5px}
-button:hover{background:#242d38}
-#year{min-width:56px;text-align:center;font-variant-numeric:tabular-nums;font-size:15px}
-input[type=range]{width:360px;accent-color:var(--acc)}
-main{padding:8px 10px 4px}
-#chart{width:100%;height:76vh;min-height:540px}
-footer{border-top:1px solid var(--line);background:var(--panel);color:var(--mut);font-size:12px;padding:8px 18px;display:flex;gap:16px;flex-wrap:wrap}
-footer a{color:#8ab4ff;text-decoration:none}
-footer a:hover{text-decoration:underline}
-.tip{position:fixed;pointer-events:none;background:#1a2027;border:1px solid #313c49;border-radius:10px;padding:10px 12px;font-size:12.5px;max-width:340px;box-shadow:0 8px 24px rgba(0,0,0,.45);opacity:0;transition:opacity .12s;z-index:9}
-.tip b{color:#fff}
-.tip .sub{color:#aab4bf;display:block;margin-top:3px;font-size:11.5px}
+html,body{margin:0}
+body{font-family:Inter,system-ui,'Segoe UI',Roboto,sans-serif;color:var(--txt);
+  background:radial-gradient(1100px 500px at 12% -8%,rgba(244,162,58,.09),transparent 60%),
+             radial-gradient(900px 480px at 88% 112%,rgba(138,180,255,.07),transparent 55%),var(--bg);
+  font-kerning:normal;text-rendering:optimizeLegibility}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+header{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:var(--panel);
+  border-bottom:1px solid var(--line);padding:12px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .logo{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+  background:linear-gradient(135deg,#f4a23a,#ffd166);box-shadow:0 4px 18px rgba(244,162,58,.35)}
+.brand .logo svg{width:20px;height:20px}
+.brand h1{font-size:15.5px;margin:0;font-weight:700;letter-spacing:.2px}
+.brand small{display:block;color:var(--mut);font-weight:500;font-size:11px;margin-top:2px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--glass);border:1px solid var(--line);border-radius:99px;
+  padding:5px 12px;font-size:11.5px;color:#cdd6de;display:flex;align-items:center;gap:6px}
+.chip b{color:#fff;font-weight:600;font-variant-numeric:tabular-nums}
+.chip i{width:7px;height:7px;border-radius:99px;display:inline-block}
+.top-links{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.badge{font:500 10.5px var(--mono);color:#0b0f14;background:linear-gradient(135deg,#f4a23a,#ffd166);
+  border-radius:6px;padding:4px 8px;letter-spacing:.4px}
+#bar{padding:10px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);background:rgba(15,20,26,.55);backdrop-filter:blur(8px);
+  position:sticky;top:58px;z-index:19}
+button{background:#1b222c;color:var(--txt);border:1px solid #2f3a47;padding:8px 14px;
+  border-radius:9px;cursor:pointer;font-size:12.5px;font-family:Inter,sans-serif;
+  transition:.15s}
+button:hover{background:#232c38;border-color:#3b4756}
+button.primary{background:linear-gradient(135deg,#f4a23a,#ffb84d);color:#14100a;border:0;
+  font-weight:600;box-shadow:0 3px 14px rgba(244,162,58,.28)}
+button.primary:hover{filter:brightness(1.08)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.playwrap{display:flex;align-items:center;gap:7px}
+select{background:#1b222c;color:var(--txt);border:1px solid #2f3a47;border-radius:8px;
+  padding:7px 9px;font-size:12px;font-family:Inter,sans-serif;cursor:pointer}
+#yearbig{font:600 17px var(--mono);color:var(--acc);min-width:52px;text-align:center}
+.readout{font-size:11.5px;color:var(--mut)}
+.readout b{color:#dfe6ec}
+input[type=range]{width:min(340px,34vw);accent-color:var(--acc);cursor:pointer}
+.toggles{display:flex;gap:6px;flex-wrap:wrap}
+.tg{font-size:11px;border-radius:99px;border:1px solid #2f3a47;background:#171d25;
+  color:#aab6c0;padding:5px 11px;cursor:pointer;user-select:none;transition:.15s}
+.tg.on{color:#121922;font-weight:600}
+.tg.on[data-k=ext]{background:#9aa0a6}.tg.on[data-k=rep]{background:var(--gold)}
+.tg.on[data-k=amd]{background:var(--blue)}
+.searchwrap{position:relative;margin-left:auto}
+#search{background:#131a22;border:1px solid #2f3a47;color:var(--txt);padding:7px 30px 7px 30px;
+  border-radius:9px;font-size:12.5px;width:225px;font-family:Inter,sans-serif}
+#search::placeholder{color:#5f6b77}
+.searchwrap svg{position:absolute;left:9px;top:9px;color:#5f6b77}
+datalist{color-scheme:dark}
+main{position:relative;display:flex}
+#chart{width:100%;height:74vh;min-height:540px;flex:1}
+#drawer{width:0;transition:width .22s ease;overflow:hidden;background:rgba(17,22,28,.94);
+  border-left:1px solid var(--line);position:relative}
+#drawer.open{width:352px;overflow-y:auto}
+#drawer .inner{width:352px;padding:18px 18px 26px}
+#dclose{position:absolute;top:10px;right:10px;background:transparent;border:0;color:#93a0ad;font-size:18px}
+.dname{font-size:15.5px;font-weight:700;line-height:1.35;margin:2px 40px 10px 0}
+.dlane{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:#c7d0d9;
+  background:var(--glass);border:1px solid var(--line);border-radius:99px;padding:4px 10px;margin-bottom:12px}
+.dlane i{width:8px;height:8px;border-radius:2px;display:inline-block}
+.drow{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;padding:7px 0;border-bottom:1px solid #1d2530}
+.drow span:first-child{color:var(--mut)}
+.drow span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.dnote{font-size:12px;color:#9aa6b2;margin-top:12px;line-height:1.5}
+.dsec{margin-top:16px;font-size:11px;text-transform:uppercase;letter-spacing:1.1px;color:#6e7a86;font-weight:600}
+.relrow{display:flex;align-items:center;gap:9px;font-size:12px;padding:7px 8px;border-radius:8px;
+  cursor:pointer;border:1px solid transparent}
+.relrow:hover{background:#1a212a;border-color:#2b3541}
+.relrow .rdot{width:7px;height:7px;border-radius:99px;flex:none}
+.relrow .rlab{flex:1;line-height:1.35}
+.relrow .rdate{color:#7d8894;font:500 10.5px var(--mono)}
+.reltag{font-size:10px;padding:2px 7px;border-radius:5px;font-weight:600}
+.reltag.REPLACES{background:rgba(255,209,102,.16);color:var(--gold)}
+.reltag.AMENDS{background:rgba(138,180,255,.14);color:var(--blue)}
+.reltag.CONSOLIDATES{background:rgba(127,209,138,.14);color:var(--green)}
+.adjbar{padding:0 20px;display:flex;gap:7px;flex-wrap:wrap;border-bottom:1px solid var(--line);
+  background:rgba(13,17,23,.5)}
+.lchip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:#c3ccd5;background:#151b22;
+  border:1px solid #26303b;border-radius:99px;padding:5px 12px 5px 9px;cursor:pointer;
+  transition:.15s;user-select:none}
+.lchip.off{opacity:.38;filter:grayscale(.8)}
+.lchip i{width:9px;height:9px;border-radius:3px;display:inline-block}
+footer{border-top:1px solid var(--line);background:rgba(15,20,26,.6);color:var(--mut);
+  font-size:12px;padding:10px 20px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.tip{position:fixed;pointer-events:none;background:rgba(19,25,32,.96);border:1px solid #354050;
+  border-radius:11px;padding:11px 13px;font-size:12.5px;max-width:360px;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);opacity:0;transition:opacity .13s;z-index:30;line-height:1.45}
+.tip b{color:#fff}.tip .sub{color:#a5b0bc;display:block;margin-top:3px;font-size:11.5px}
+.tip .live{color:var(--green);font-weight:600}
+.tip .dead{color:#8d99a5}
+.tip .edgehead{font-weight:700;color:var(--gold)}
+@media (max-width:1120px){#drawer.open{position:fixed;right:0;top:0;bottom:0;width:min(352px,92vw);z-index:40}}
 </style></head><body>
 <header>
-<h1>ViCivil-TKG · Khung tri thức thời gian<small>17 văn bản luật dân sự (1996–2026) · 21 cạnh thay thế / hợp nhất / sửa đổi · 16 luật sửa đổi bên ngoài</small></h1>
-<div id="ctrl">
-<button id="play">Chạy dòng thời gian</button>
-<span id="year">2026</span>
-<input id="slider" type="range" min="1996" max="2026" value="2026" step="1" aria-label="Chọn thời điểm">
-</div>
+  <div class="brand">
+    <div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#221a08" stroke-width="2.4" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><circle cx="7" cy="12" r="2.6" fill="#221a08"/><circle cx="13" cy="12" r="2.2"/><circle cx="18.5" cy="12" r="1.8" fill="#221a08"/></svg></div>
+    <h1>ViCivil-TKG<small>Khung tri thức thời gian của luật dân sự Việt Nam</small></h1>
+  </div>
+  <div class="chips">
+    <span class="chip"><i style="background:#f4a23a"></i><b id="st-laws">17</b> văn bản luật</span>
+    <span class="chip"><i style="background:#ffd166"></i><b id="st-edges">21</b> cạnh kế thừa</span>
+    <span class="chip"><i style="background:#8ab4ff"></i><b id="st-chunks">11.267</b> chunk</span>
+    <span class="chip"><i style="background:#7fd18a"></i><b id="st-gold">281</b> câu hỏi gold</span>
+  </div>
+  <div class="top-links">
+    <span class="badge">v1.2.4</span>
+    <a href="https://github.com/ntd25022006q/vicivil-tkg" target="_blank">GitHub</a>
+    <a href="law_graph.gexf" download>Tải GEXF (Gephi)</a>
+  </div>
 </header>
-<main><div id="chart"></div></main>
+<div id="bar">
+  <span class="playwrap">
+    <button class="primary" id="play">▶ Chạy dòng thời gian</button>
+    <select id="speed" title="Tốc độ chạy"><option value="650">1× chậm</option><option value="330">2× nhanh</option></select>
+  </span>
+  <span id="yearbig">2026</span>
+  <input id="slider" type="range" min="1996" max="2026" value="2026" step="1" aria-label="Chọn thời điểm">
+  <span class="readout">Đang hiệu lực: <b id="ncur">0</b> văn bản · hãy kéo slider hoặc click vào một luật</span>
+  <span class="toggles">
+    <span class="tg on" data-k="ext">Sửa đổi bên ngoài</span>
+    <span class="tg on" data-k="rep">Cạnh thay thế</span>
+    <span class="tg on" data-k="amd">Cạnh sửa đổi</span>
+  </span>
+  <span class="searchwrap">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16.2" y2="16.2"/></svg>
+    <input id="search" list="laws" placeholder="Tìm một luật → Enter" autocomplete="off">
+    <datalist id="laws"></datalist>
+  </span>
+  <button id="shot" title="Tải ảnh PNG của đồ thị">Tải PNG</button>
+</div>
+<div id="lanebar" class="adjbar"></div>
+<main>
+  <div id="chart"></div>
+  <aside id="drawer" aria-label="Chi tiết văn bản"><div class="inner" id="dbody"></div></aside>
+</main>
 <footer>
-<span>Dữ liệu mở: <a href="law_graph.gexf" download>law_graph.gexf</a> (GEXF 1.3 — mở trực tiếp bằng Gephi hoặc Gephi-Lite)</span>
-<span>Render: Apache ECharts (mã nguồn mở)</span>
-<span>Nguồn: <a href="https://github.com/ntd25022006q/vicivil-tkg">github.com/ntd25022006q/vicivil-tkg</a></span>
+  <span>Dữ liệu mở <a href="law_graph.gexf" download>law_graph.gexf</a> — GEXF 1.3 động, mở bằng Gephi/Gephi-Lite</span>
+  <span>Hiển thị bằng Apache ECharts (Apache-2.0)</span>
+  <span>Nguồn công báo chính thức · <a href="https://github.com/ntd25022006q/vicivil-tkg">vicivil-tkg</a> · thẻ dữ liệu v1.2.4</span>
 </footer>
 <div class="tip" id="tip"></div>
 <script>
-const D={"nodes": [{"id": "BLDS2005", "name": "Bộ luật Dân sự 2005", "full": "Bo luat Dan su 2005", "sym": "33/2005/QH11", "from": "2006-01-01", "to": "2017-01-01", "status": "đã hết hiệu lực", "cat": "Dòng BLDS", "color": "#f4a23a", "chunks": 780, "cites": 114, "x": 10, "y": -0.16499999999999998, "ext": false}, {"id": "BLDS2015", "name": "Bộ luật Dân sự 2015", "full": "Bo luat Dan su 2015", "sym": "91/2015/QH13", "from": "2017-01-01", "to": "", "status": "đang có hiệu lực", "cat": "Dòng BLDS", "color": "#f4a23a", "chunks": 1838, "cites": 145, "x": 21, "y": -0.02999999999999997, "ext": false}, {"id": "HNGD2014", "name": "Luật HN&GĐ 2014", "full": "Luat Hon nhan va Gia dinh 2014", "sym": "52/2014/QH13", "from": "2015-01-01", "to": "", "status": "đang có hiệu lực", "cat": "Gia đình", "color": "#d05d9c", "chunks": 393, "cites": 67, "x": 19, "y": 0.835, "ext": false}, {"id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "name": "BLTTHDS (VBHN 21/2025)", "full": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "sym": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "from": "2016-07-01", "to": "", "status": "cần kiểm tra lại", "cat": "Tố tụng dân sự", "color": "#57a773", "chunks": 1979, "cites": 415, "x": 20, "y": 3.7, "ext": false}, {"id": "luat-so-15-2026-qh16-470450", "name": "Luật 15/2026 (sửa TNBT-NN)", "full": "luat-so-15-2026-qh16-470450", "sym": "luat-so-15-2026-qh16-470450", "from": "2026-01-01", "to": "", "status": "cần kiểm tra lại", "cat": "Bồi thường nhà nước", "color": "#4c9fbe", "chunks": 151, "cites": 68, "x": 30, "y": 2.835, "ext": false}, {"id": "nghi-dinh-so-152-2026-nd-cp-469524", "name": "NĐ 152/2026 (thi hành THADS)", "full": "Nghị định số 152/2026/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Thi hành án dân sự", "sym": "nghi-dinh-so-152-2026-nd-cp-469524", "from": "2026-01-01", "to": "", "status": "cần kiểm tra lại", "cat": "Thi hành án dân sự", "color": "#b05636", "chunks": 665, "cites": 243, "x": 30, "y": 4.97, "ext": false}, {"id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106", "name": "TT liên tịch 07/2026", "full": "Thông tư liên tịch số 07/2026/TTLT-VKSNDTC-TANDTC quy định về phối hợp giữa Viện kiểm sát nhân dân và Tòa án nhân dân trong thi hành một số quy định của Bộ luật Tố tụng dân sự", "sym": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106", "from": "2026-01-01", "to": "", "status": "cần kiểm tra lại", "cat": "Tố tụng dân sự", "color": "#57a773", "chunks": 135, "cites": 83, "x": 30, "y": 3.835, "ext": false}, {"id": "HNGDVBHN2025", "name": "Luật HN&GĐ (VBHN 2025)", "full": "VBHN Luat HN&GĐ 2025 (121/VBHN-VPQH)", "sym": "121/VBHN-VPQH", "from": "2025-09-01", "to": "", "status": "đang có hiệu lực", "cat": "Gia đình", "color": "#d05d9c", "chunks": 392, "cites": 77, "x": 29, "y": 0.97, "ext": false}, {"id": "NCN2010", "name": "Luật Nuôi con nuôi 2010", "full": "Luat Nuoi con nuoi 2010", "sym": "52/2010/QH12", "from": "2011-01-01", "to": "", "status": "đang có hiệu lực", "cat": "Khác", "color": "#7f8c8d", "chunks": 208, "cites": 27, "x": 15, "y": 5.7, "ext": false}, {"id": "HOTICH2014", "name": "Luật Hộ tịch 2014", "full": "HOTICH2014", "sym": "HOTICH2014", "from": "2016-01-01", "to": "", "status": "cần kiểm tra lại", "cat": "Hộ tịch", "color": "#8e6fc7", "chunks": 266, "cites": 25, "x": 20, "y": 1.7, "ext": false}, {"id": "THADS2008", "name": "Luật THADS 2008", "full": "Luat Thi hanh an dan su 2008", "sym": "26/2008/QH12", "from": "2009-07-01", "to": "", "status": "đang có hiệu lực", "cat": "Thi hành án dân sự", "color": "#b05636", "chunks": 721, "cites": 65, "x": 13, "y": 4.7, "ext": false}, {"id": "TNBTCNN2017", "name": "Luật TNBT-NN 2017", "full": "Luat TNBTCNN 2017", "sym": "10/2017/QH14", "from": "2018-07-01", "to": "", "status": "đang có hiệu lực", "cat": "Bồi thường nhà nước", "color": "#4c9fbe", "chunks": 505, "cites": 99, "x": 22, "y": 2.7, "ext": false}, {"id": "HNGD2000", "name": "Luật HN&GĐ 2000", "full": "Luat HN&GĐ 2000", "sym": "22/2000/QH10", "from": "2001-01-01", "to": "2015-01-01", "status": "đã hết hiệu lực", "cat": "Gia đình", "color": "#d05d9c", "chunks": 239, "cites": 38, "x": 5, "y": 0.7, "ext": false}, {"id": "HOAGIAI2026", "name": "Luật Hòa giải tại cơ sở 2026", "full": "Luat Hoa giai o co so 2026", "sym": "16/2026/QH16", "from": "2026-07-01", "to": "", "status": "đang có hiệu lực", "cat": "Khác", "color": "#7f8c8d", "chunks": 175, "cites": 44, "x": 30, "y": 5.835, "ext": false}, {"id": "HOTICH2026", "name": "Luật Hộ tịch (VBHN 2026)", "full": "Luat Ho tich 2026", "sym": "03/2026/QH16", "from": "2026-07-01", "to": "", "status": "đang có hiệu lực", "cat": "Hộ tịch", "color": "#8e6fc7", "chunks": 172, "cites": 18, "x": 30, "y": 1.8349999999999997, "ext": false}, {"id": "THADSVBHN", "name": "Luật THADS (VBHN 2025)", "full": "VBHN THADS 10/VBHN-VPQH 2025", "sym": "10/VBHN-VPQH", "from": "2025-02-01", "to": "", "status": "đang có hiệu lực", "cat": "Thi hành án dân sự", "color": "#b05636", "chunks": 758, "cites": 156, "x": 29, "y": 4.835, "ext": false}, {"id": "BLDS1995", "name": "Bộ luật Dân sự 1995", "full": "Bo luat Dan su 1995", "sym": "44-L/CTN", "from": "1996-07-01", "to": "2006-01-01", "status": "đã hết hiệu lực", "cat": "Dòng BLDS", "color": "#f4a23a", "chunks": 1890, "cites": 157, "x": 0, "y": -0.3, "ext": false}, {"id": "EXT-Luật-số-81-2025-QH15", "name": "Luật số 81/2025/QH15", "full": "Luật số 81/2025/QH15", "sym": "Luật số 81/2025/QH15", "from": "2025-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 29, "y": 6.835, "ext": true}, {"id": "EXT-Luật-số-64-2014-QH13", "name": "Luật số 64/2014/QH13", "full": "Luật số 64/2014/QH13", "sym": "Luật số 64/2014/QH13", "from": "2015-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 19, "y": 6.7, "ext": true}, {"id": "EXT-Luật-số-23-2018-QH14", "name": "Luật số 23/2018/QH14", "full": "Luật số 23/2018/QH14", "sym": "Luật số 23/2018/QH14", "from": "2019-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 23, "y": 6.835, "ext": true}, {"id": "EXT-Luật-số-67-2020-QH14", "name": "Luật số 67/2020/QH14", "full": "Luật số 67/2020/QH14", "sym": "Luật số 67/2020/QH14", "from": "2022-01-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 26, "y": 6.7, "ext": true}, {"id": "EXT-Luật-số-03-2022-QH15", "name": "Luật số 03/2022/QH15", "full": "Luật số 03/2022/QH15", "sym": "Luật số 03/2022/QH15", "from": "2022-03-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 26, "y": 6.835, "ext": true}, {"id": "EXT-Luật-số-31-2024-QH15", "name": "Luật số 31/2024/QH15", "full": "Luật số 31/2024/QH15", "sym": "Luật số 31/2024/QH15", "from": "2024-08-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 28, "y": 6.835, "ext": true}, {"id": "EXT-Luật-số-43-2024-QH15", "name": "Luật số 43/2024/QH15", "full": "Luật số 43/2024/QH15", "sym": "Luật số 43/2024/QH15", "from": "2024-08-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 28, "y": 6.97, "ext": true}, {"id": "EXT-Luật-số-59-2024-QH15", "name": "Luật số 59/2024/QH15", "full": "Luật số 59/2024/QH15", "sym": "Luật số 59/2024/QH15", "from": "2026-01-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 30, "y": 6.97, "ext": true}, {"id": "EXT-Luật-số-84-2025-QH15", "name": "Luật số 84/2025/QH15", "full": "Luật số 84/2025/QH15", "sym": "Luật số 84/2025/QH15", "from": "2025-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 29, "y": 6.97, "ext": true}, {"id": "EXT-Luật-số-59-2020-QH14", "name": "Luật số 59/2020/QH14", "full": "Luật số 59/2020/QH14", "sym": "Luật số 59/2020/QH14", "from": "2021-01-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 25, "y": 6.97, "ext": true}, {"id": "EXT-Luật-số-13-2022-QH15", "name": "Luật số 13/2022/QH15", "full": "Luật số 13/2022/QH15", "sym": "Luật số 13/2022/QH15", "from": "2023-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 27, "y": 6.97, "ext": true}, {"id": "EXT-Luật-số-19-2023-QH15", "name": "Luật số 19/2023/QH15", "full": "Luật số 19/2023/QH15", "sym": "Luật số 19/2023/QH15", "from": "2024-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 28, "y": 6.7, "ext": true}, {"id": "EXT-Luật-số-34-2024-QH15", "name": "Luật số 34/2024/QH15", "full": "Luật số 34/2024/QH15", "sym": "Luật số 34/2024/QH15", "from": "2025-01-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 29, "y": 6.7, "ext": true}, {"id": "EXT-Luật-số-46-2024-QH15", "name": "Luật số 46/2024/QH15", "full": "Luật số 46/2024/QH15", "sym": "Luật số 46/2024/QH15", "from": "2025-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 29, "y": 6.7, "ext": true}, {"id": "EXT-Luật-số-85-2025-QH15", "name": "Luật số 85/2025/QH15", "full": "Luật số 85/2025/QH15", "sym": "Luật số 85/2025/QH15", "from": "2025-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 29, "y": 6.835, "ext": true}, {"id": "EXT-Luật-số-142-2025-QH15", "name": "Luật số 142/2025/QH15", "full": "Luật số 142/2025/QH15", "sym": "Luật số 142/2025/QH15", "from": "2026-03-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 30, "y": 6.7, "ext": true}], "edges": [{"src": "BLDS2005", "tgt": "BLDS1995", "rel": "REPLACES", "relvie": "thay thế", "at": "2006-01-01", "sname": "Bộ luật Dân sự 2005", "tname": "Bộ luật Dân sự 1995", "sx": 10, "sy": -0.16499999999999998, "tx": 0, "ty": -0.3, "note": "BLDS 2005 thay thế BLDS 1995"}, {"src": "BLDS2015", "tgt": "BLDS2005", "rel": "REPLACES", "relvie": "thay thế", "at": "2017-01-01", "sname": "Bộ luật Dân sự 2015", "tname": "Bộ luật Dân sự 2005", "sx": 21, "sy": -0.02999999999999997, "tx": 10, "ty": -0.16499999999999998, "note": "BLDS 2015 thay thế BLDS 2005"}, {"src": "HNGDVBHN2025", "tgt": "HNGD2014", "rel": "CONSOLIDATES", "relvie": "hợp nhất", "at": "2025-09-01", "sname": "Luật HN&GĐ (VBHN 2025)", "tname": "Luật HN&GĐ 2014", "sx": 29, "sy": 0.97, "tx": 19, "ty": 0.835, "note": "VBHN 2025 hợp nhất HN&GĐ 2014 và các sửa đổi (thiếu Điều 132-133 bản gốc)"}, {"src": "HNGD2014", "tgt": "HNGD2000", "rel": "REPLACES", "relvie": "thay thế", "at": "2015-01-01", "sname": "Luật HN&GĐ 2014", "tname": "Luật HN&GĐ 2000", "sx": 19, "sy": 0.835, "tx": 5, "ty": 0.7, "note": "HN&GĐ 2014 thay thế HN&GĐ 2000"}, {"src": "EXT-Luật-số-81-2025-QH15", "tgt": "HNGDVBHN2025", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-07-01", "sname": "Luật số 81/2025/QH15", "tname": "Luật HN&GĐ (VBHN 2025)", "sx": 29, "sy": 6.835, "tx": 29, "ty": 0.97, "note": "kiểm chứng từ tiền văn (preamble) VBHN (24-06-2025)"}, {"src": "EXT-Luật-số-64-2014-QH13", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2015-07-01", "sname": "Luật số 64/2014/QH13", "tname": "Luật THADS (VBHN 2025)", "sx": 19, "sy": 6.7, "tx": 29, "ty": 4.835, "note": "verified from VBHN preamble (2014-11-25)"}, {"src": "EXT-Luật-số-23-2018-QH14", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2019-07-01", "sname": "Luật số 23/2018/QH14", "tname": "Luật THADS (VBHN 2025)", "sx": 23, "sy": 6.835, "tx": 29, "ty": 4.835, "note": "verified from VBHN preamble (2018-06-12)"}, {"src": "EXT-Luật-số-67-2020-QH14", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2022-01-01", "sname": "Luật số 67/2020/QH14", "tname": "Luật THADS (VBHN 2025)", "sx": 26, "sy": 6.7, "tx": 29, "ty": 4.835, "note": "verified from VBHN preamble (2020-11-13)"}, {"src": "EXT-Luật-số-03-2022-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2022-03-01", "sname": "Luật số 03/2022/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 26, "sy": 6.835, "tx": 29, "ty": 4.835, "note": "verified from VBHN preamble (2022-01-11)"}, {"src": "EXT-Luật-số-31-2024-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2024-08-01", "sname": "Luật số 31/2024/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 28, "sy": 6.835, "tx": 29, "ty": 4.835, "note": "verified from VBHN preamble (2024-01-18)"}, {"src": "EXT-Luật-số-43-2024-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2024-08-01", "sname": "Luật số 43/2024/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 28, "sy": 6.97, "tx": 29, "ty": 4.835, "note": "verified from VBHN preamble (2024-06-29)"}, {"src": "EXT-Luật-số-59-2024-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2026-01-01", "sname": "Luật số 59/2024/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 30, "sy": 6.97, "tx": 29, "ty": 4.835, "note": "verified from VBHN preamble (2024-11-30)"}, {"src": "EXT-Luật-số-81-2025-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-07-01", "sname": "Luật số 81/2025/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 29, "sy": 6.835, "tx": 29, "ty": 4.835, "note": "kiểm chứng từ tiền văn (preamble) VBHN (24-06-2025)"}, {"src": "EXT-Luật-số-84-2025-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-07-01", "sname": "Luật số 84/2025/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 29, "sy": 6.97, "tx": 29, "ty": 4.835, "note": "verified from VBHN preamble (2025-06-25)"}, {"src": "EXT-Luật-số-59-2020-QH14", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2021-01-01", "sname": "Luật số 59/2020/QH14", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 25, "sy": 6.97, "tx": 20, "ty": 3.7, "note": "verified from VBHN preamble (2020-06-17)"}, {"src": "EXT-Luật-số-13-2022-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2023-07-01", "sname": "Luật số 13/2022/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 27, "sy": 6.97, "tx": 20, "ty": 3.7, "note": "verified from VBHN preamble (2022-11-14)"}, {"src": "EXT-Luật-số-19-2023-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2024-07-01", "sname": "Luật số 19/2023/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 28, "sy": 6.7, "tx": 20, "ty": 3.7, "note": "verified from VBHN preamble (2023-06-20)"}, {"src": "EXT-Luật-số-34-2024-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-01-01", "sname": "Luật số 34/2024/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 29, "sy": 6.7, "tx": 20, "ty": 3.7, "note": "verified from VBHN preamble (2024-06-24)"}, {"src": "EXT-Luật-số-46-2024-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-07-01", "sname": "Luật số 46/2024/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 29, "sy": 6.7, "tx": 20, "ty": 3.7, "note": "verified from VBHN preamble (2024-11-26)"}, {"src": "EXT-Luật-số-85-2025-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-07-01", "sname": "Luật số 85/2025/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 29, "sy": 6.835, "tx": 20, "ty": 3.7, "note": "verified from VBHN preamble (2025-06-25)"}, {"src": "EXT-Luật-số-142-2025-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2026-03-01", "sname": "Luật số 142/2025/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 30, "sy": 6.7, "tx": 20, "ty": 3.7, "note": "verified from VBHN preamble (2025-12-11)"}], "lanes": ["Dòng BLDS", "Gia đình", "Hộ tịch", "Bồi thường nhà nước", "Tố tụng dân sự", "Thi hành án dân sự", "Khác", "Sửa đổi bên ngoài"], "relvie": {"REPLACES": "thay thế", "CONSOLIDATES": "hợp nhất", "AMENDS": "sửa đổi"}};
+const D={"nodes": [{"id": "BLDS2005", "name": "Bộ luật Dân sự 2005", "full": "Bo luat Dan su 2005", "sym": "33/2005/QH11", "from": "2006-01-01", "to": "2017-01-01", "status": "đã hết hiệu lực", "cat": "Dòng BLDS", "color": "#f4a23a", "chunks": 780, "cites": 114, "x": 10, "y": 0.0, "ext": false}, {"id": "BLDS2015", "name": "Bộ luật Dân sự 2015", "full": "Bo luat Dan su 2015", "sym": "91/2015/QH13", "from": "2017-01-01", "to": "", "status": "đang có hiệu lực", "cat": "Dòng BLDS", "color": "#f4a23a", "chunks": 1838, "cites": 145, "x": 21, "y": 0.3825, "ext": false}, {"id": "HNGD2014", "name": "Luật HN&GĐ 2014", "full": "Luat Hon nhan va Gia dinh 2014", "sym": "52/2014/QH13", "from": "2015-01-01", "to": "", "status": "đang có hiệu lực", "cat": "Gia đình", "color": "#d05d9c", "chunks": 393, "cites": 67, "x": 19, "y": 1.0, "ext": false}, {"id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "name": "BLTTHDS (VBHN 21/2025)", "full": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "sym": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "from": "2016-07-01", "to": "", "status": "cần kiểm tra lại", "cat": "Tố tụng dân sự", "color": "#57a773", "chunks": 1979, "cites": 415, "x": 20, "y": 3.6175, "ext": false}, {"id": "luat-so-15-2026-qh16-470450", "name": "Luật 15/2026 (sửa TNBT-NN)", "full": "luat-so-15-2026-qh16-470450", "sym": "luat-so-15-2026-qh16-470450", "from": "2026-01-01", "to": "", "status": "cần kiểm tra lại", "cat": "Bồi thường nhà nước", "color": "#4c9fbe", "chunks": 151, "cites": 68, "x": 30, "y": 3.0, "ext": false}, {"id": "nghi-dinh-so-152-2026-nd-cp-469524", "name": "NĐ 152/2026 (thi hành THADS)", "full": "Nghị định số 152/2026/NĐ-CP quy định chi tiết một số điều và biện pháp thi hành Luật Thi hành án dân sự", "sym": "nghi-dinh-so-152-2026-nd-cp-469524", "from": "2026-01-01", "to": "", "status": "cần kiểm tra lại", "cat": "Thi hành án dân sự", "color": "#b05636", "chunks": 665, "cites": 243, "x": 30, "y": 5.3825, "ext": false}, {"id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106", "name": "TT liên tịch 07/2026", "full": "Thông tư liên tịch số 07/2026/TTLT-VKSNDTC-TANDTC quy định về phối hợp giữa Viện kiểm sát nhân dân và Tòa án nhân dân trong thi hành một số quy định của Bộ luật Tố tụng dân sự", "sym": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106", "from": "2026-01-01", "to": "", "status": "cần kiểm tra lại", "cat": "Tố tụng dân sự", "color": "#57a773", "chunks": 135, "cites": 83, "x": 30, "y": 4.0, "ext": false}, {"id": "HNGDVBHN2025", "name": "Luật HN&GĐ (VBHN 2025)", "full": "VBHN Luat HN&GĐ 2025 (121/VBHN-VPQH)", "sym": "121/VBHN-VPQH", "from": "2025-09-01", "to": "", "status": "đang có hiệu lực", "cat": "Gia đình", "color": "#d05d9c", "chunks": 392, "cites": 77, "x": 29, "y": 1.3825, "ext": false}, {"id": "NCN2010", "name": "Luật Nuôi con nuôi 2010", "full": "Luat Nuoi con nuoi 2010", "sym": "52/2010/QH12", "from": "2011-01-01", "to": "", "status": "đang có hiệu lực", "cat": "Khác", "color": "#7f8c8d", "chunks": 208, "cites": 27, "x": 15, "y": 5.6175, "ext": false}, {"id": "HOTICH2014", "name": "Luật Hộ tịch 2014", "full": "HOTICH2014", "sym": "HOTICH2014", "from": "2016-01-01", "to": "", "status": "cần kiểm tra lại", "cat": "Hộ tịch", "color": "#8e6fc7", "chunks": 266, "cites": 25, "x": 20, "y": 1.6175, "ext": false}, {"id": "THADS2008", "name": "Luật THADS 2008", "full": "Luat Thi hanh an dan su 2008", "sym": "26/2008/QH12", "from": "2009-07-01", "to": "", "status": "đang có hiệu lực", "cat": "Thi hành án dân sự", "color": "#b05636", "chunks": 721, "cites": 65, "x": 13, "y": 4.6175, "ext": false}, {"id": "TNBTCNN2017", "name": "Luật TNBT-NN 2017", "full": "Luat TNBTCNN 2017", "sym": "10/2017/QH14", "from": "2018-07-01", "to": "", "status": "đang có hiệu lực", "cat": "Bồi thường nhà nước", "color": "#4c9fbe", "chunks": 505, "cites": 99, "x": 22, "y": 2.6175, "ext": false}, {"id": "HNGD2000", "name": "Luật HN&GĐ 2000", "full": "Luat HN&GĐ 2000", "sym": "22/2000/QH10", "from": "2001-01-01", "to": "2015-01-01", "status": "đã hết hiệu lực", "cat": "Gia đình", "color": "#d05d9c", "chunks": 239, "cites": 38, "x": 5, "y": 0.6174999999999999, "ext": false}, {"id": "HOAGIAI2026", "name": "Luật Hòa giải tại cơ sở 2026", "full": "Luat Hoa giai o co so 2026", "sym": "16/2026/QH16", "from": "2026-07-01", "to": "", "status": "đang có hiệu lực", "cat": "Khác", "color": "#7f8c8d", "chunks": 175, "cites": 44, "x": 30, "y": 6.0, "ext": false}, {"id": "HOTICH2026", "name": "Luật Hộ tịch (VBHN 2026)", "full": "Luat Ho tich 2026", "sym": "03/2026/QH16", "from": "2026-07-01", "to": "", "status": "đang có hiệu lực", "cat": "Hộ tịch", "color": "#8e6fc7", "chunks": 172, "cites": 18, "x": 30, "y": 2.0, "ext": false}, {"id": "THADSVBHN", "name": "Luật THADS (VBHN 2025)", "full": "VBHN THADS 10/VBHN-VPQH 2025", "sym": "10/VBHN-VPQH", "from": "2025-02-01", "to": "", "status": "đang có hiệu lực", "cat": "Thi hành án dân sự", "color": "#b05636", "chunks": 758, "cites": 156, "x": 29, "y": 5.0, "ext": false}, {"id": "BLDS1995", "name": "Bộ luật Dân sự 1995", "full": "Bo luat Dan su 1995", "sym": "44-L/CTN", "from": "1996-07-01", "to": "2006-01-01", "status": "đã hết hiệu lực", "cat": "Dòng BLDS", "color": "#f4a23a", "chunks": 1890, "cites": 157, "x": 0, "y": -0.3825, "ext": false}, {"id": "EXT-Luật-số-81-2025-QH15", "name": "Luật số 81/2025/QH15", "full": "Luật số 81/2025/QH15", "sym": "Luật số 81/2025/QH15", "from": "2025-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 29, "y": 7.0, "ext": true}, {"id": "EXT-Luật-số-64-2014-QH13", "name": "Luật số 64/2014/QH13", "full": "Luật số 64/2014/QH13", "sym": "Luật số 64/2014/QH13", "from": "2015-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 19, "y": 6.6175, "ext": true}, {"id": "EXT-Luật-số-23-2018-QH14", "name": "Luật số 23/2018/QH14", "full": "Luật số 23/2018/QH14", "sym": "Luật số 23/2018/QH14", "from": "2019-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 23, "y": 7.0, "ext": true}, {"id": "EXT-Luật-số-67-2020-QH14", "name": "Luật số 67/2020/QH14", "full": "Luật số 67/2020/QH14", "sym": "Luật số 67/2020/QH14", "from": "2022-01-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 26, "y": 6.6175, "ext": true}, {"id": "EXT-Luật-số-03-2022-QH15", "name": "Luật số 03/2022/QH15", "full": "Luật số 03/2022/QH15", "sym": "Luật số 03/2022/QH15", "from": "2022-03-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 26, "y": 7.0, "ext": true}, {"id": "EXT-Luật-số-31-2024-QH15", "name": "Luật số 31/2024/QH15", "full": "Luật số 31/2024/QH15", "sym": "Luật số 31/2024/QH15", "from": "2024-08-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 28, "y": 7.0, "ext": true}, {"id": "EXT-Luật-số-43-2024-QH15", "name": "Luật số 43/2024/QH15", "full": "Luật số 43/2024/QH15", "sym": "Luật số 43/2024/QH15", "from": "2024-08-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 28, "y": 7.3825, "ext": true}, {"id": "EXT-Luật-số-59-2024-QH15", "name": "Luật số 59/2024/QH15", "full": "Luật số 59/2024/QH15", "sym": "Luật số 59/2024/QH15", "from": "2026-01-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 30, "y": 7.3825, "ext": true}, {"id": "EXT-Luật-số-84-2025-QH15", "name": "Luật số 84/2025/QH15", "full": "Luật số 84/2025/QH15", "sym": "Luật số 84/2025/QH15", "from": "2025-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 29, "y": 7.3825, "ext": true}, {"id": "EXT-Luật-số-59-2020-QH14", "name": "Luật số 59/2020/QH14", "full": "Luật số 59/2020/QH14", "sym": "Luật số 59/2020/QH14", "from": "2021-01-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 25, "y": 7.3825, "ext": true}, {"id": "EXT-Luật-số-13-2022-QH15", "name": "Luật số 13/2022/QH15", "full": "Luật số 13/2022/QH15", "sym": "Luật số 13/2022/QH15", "from": "2023-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 27, "y": 7.3825, "ext": true}, {"id": "EXT-Luật-số-19-2023-QH15", "name": "Luật số 19/2023/QH15", "full": "Luật số 19/2023/QH15", "sym": "Luật số 19/2023/QH15", "from": "2024-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 28, "y": 6.6175, "ext": true}, {"id": "EXT-Luật-số-34-2024-QH15", "name": "Luật số 34/2024/QH15", "full": "Luật số 34/2024/QH15", "sym": "Luật số 34/2024/QH15", "from": "2025-01-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 29, "y": 6.6175, "ext": true}, {"id": "EXT-Luật-số-46-2024-QH15", "name": "Luật số 46/2024/QH15", "full": "Luật số 46/2024/QH15", "sym": "Luật số 46/2024/QH15", "from": "2025-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 29, "y": 6.6175, "ext": true}, {"id": "EXT-Luật-số-85-2025-QH15", "name": "Luật số 85/2025/QH15", "full": "Luật số 85/2025/QH15", "sym": "Luật số 85/2025/QH15", "from": "2025-07-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 29, "y": 7.0, "ext": true}, {"id": "EXT-Luật-số-142-2025-QH15", "name": "Luật số 142/2025/QH15", "full": "Luật số 142/2025/QH15", "sym": "Luật số 142/2025/QH15", "from": "2026-03-01", "to": "", "status": "external-ref", "cat": "Sửa đổi bên ngoài", "color": "#9aa0a6", "chunks": 0, "cites": 0, "x": 30, "y": 6.6175, "ext": true}], "edges": [{"src": "BLDS2005", "tgt": "BLDS1995", "rel": "REPLACES", "relvie": "thay thế", "at": "2006-01-01", "sname": "Bộ luật Dân sự 2005", "tname": "Bộ luật Dân sự 1995", "sx": 10, "sy": 0.0, "tx": 0, "ty": -0.3825, "note": "BLDS 2005 thay thế BLDS 1995"}, {"src": "BLDS2015", "tgt": "BLDS2005", "rel": "REPLACES", "relvie": "thay thế", "at": "2017-01-01", "sname": "Bộ luật Dân sự 2015", "tname": "Bộ luật Dân sự 2005", "sx": 21, "sy": 0.3825, "tx": 10, "ty": 0.0, "note": "BLDS 2015 thay thế BLDS 2005"}, {"src": "HNGDVBHN2025", "tgt": "HNGD2014", "rel": "CONSOLIDATES", "relvie": "hợp nhất", "at": "2025-09-01", "sname": "Luật HN&GĐ (VBHN 2025)", "tname": "Luật HN&GĐ 2014", "sx": 29, "sy": 1.3825, "tx": 19, "ty": 1.0, "note": "VBHN 2025 hợp nhất HN&GĐ 2014 và các sửa đổi (thiếu Điều 132-133 bản gốc)"}, {"src": "HNGD2014", "tgt": "HNGD2000", "rel": "REPLACES", "relvie": "thay thế", "at": "2015-01-01", "sname": "Luật HN&GĐ 2014", "tname": "Luật HN&GĐ 2000", "sx": 19, "sy": 1.0, "tx": 5, "ty": 0.6174999999999999, "note": "HN&GĐ 2014 thay thế HN&GĐ 2000"}, {"src": "EXT-Luật-số-81-2025-QH15", "tgt": "HNGDVBHN2025", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-07-01", "sname": "Luật số 81/2025/QH15", "tname": "Luật HN&GĐ (VBHN 2025)", "sx": 29, "sy": 7.0, "tx": 29, "ty": 1.3825, "note": "kiểm chứng từ tiền văn (preamble) VBHN (24-06-2025)"}, {"src": "EXT-Luật-số-64-2014-QH13", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2015-07-01", "sname": "Luật số 64/2014/QH13", "tname": "Luật THADS (VBHN 2025)", "sx": 19, "sy": 6.6175, "tx": 29, "ty": 5.0, "note": "verified from VBHN preamble (2014-11-25)"}, {"src": "EXT-Luật-số-23-2018-QH14", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2019-07-01", "sname": "Luật số 23/2018/QH14", "tname": "Luật THADS (VBHN 2025)", "sx": 23, "sy": 7.0, "tx": 29, "ty": 5.0, "note": "verified from VBHN preamble (2018-06-12)"}, {"src": "EXT-Luật-số-67-2020-QH14", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2022-01-01", "sname": "Luật số 67/2020/QH14", "tname": "Luật THADS (VBHN 2025)", "sx": 26, "sy": 6.6175, "tx": 29, "ty": 5.0, "note": "verified from VBHN preamble (2020-11-13)"}, {"src": "EXT-Luật-số-03-2022-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2022-03-01", "sname": "Luật số 03/2022/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 26, "sy": 7.0, "tx": 29, "ty": 5.0, "note": "verified from VBHN preamble (2022-01-11)"}, {"src": "EXT-Luật-số-31-2024-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2024-08-01", "sname": "Luật số 31/2024/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 28, "sy": 7.0, "tx": 29, "ty": 5.0, "note": "verified from VBHN preamble (2024-01-18)"}, {"src": "EXT-Luật-số-43-2024-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2024-08-01", "sname": "Luật số 43/2024/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 28, "sy": 7.3825, "tx": 29, "ty": 5.0, "note": "verified from VBHN preamble (2024-06-29)"}, {"src": "EXT-Luật-số-59-2024-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2026-01-01", "sname": "Luật số 59/2024/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 30, "sy": 7.3825, "tx": 29, "ty": 5.0, "note": "verified from VBHN preamble (2024-11-30)"}, {"src": "EXT-Luật-số-81-2025-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-07-01", "sname": "Luật số 81/2025/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 29, "sy": 7.0, "tx": 29, "ty": 5.0, "note": "kiểm chứng từ tiền văn (preamble) VBHN (24-06-2025)"}, {"src": "EXT-Luật-số-84-2025-QH15", "tgt": "THADSVBHN", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-07-01", "sname": "Luật số 84/2025/QH15", "tname": "Luật THADS (VBHN 2025)", "sx": 29, "sy": 7.3825, "tx": 29, "ty": 5.0, "note": "verified from VBHN preamble (2025-06-25)"}, {"src": "EXT-Luật-số-59-2020-QH14", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2021-01-01", "sname": "Luật số 59/2020/QH14", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 25, "sy": 7.3825, "tx": 20, "ty": 3.6175, "note": "verified from VBHN preamble (2020-06-17)"}, {"src": "EXT-Luật-số-13-2022-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2023-07-01", "sname": "Luật số 13/2022/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 27, "sy": 7.3825, "tx": 20, "ty": 3.6175, "note": "verified from VBHN preamble (2022-11-14)"}, {"src": "EXT-Luật-số-19-2023-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2024-07-01", "sname": "Luật số 19/2023/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 28, "sy": 6.6175, "tx": 20, "ty": 3.6175, "note": "verified from VBHN preamble (2023-06-20)"}, {"src": "EXT-Luật-số-34-2024-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-01-01", "sname": "Luật số 34/2024/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 29, "sy": 6.6175, "tx": 20, "ty": 3.6175, "note": "verified from VBHN preamble (2024-06-24)"}, {"src": "EXT-Luật-số-46-2024-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-07-01", "sname": "Luật số 46/2024/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 29, "sy": 6.6175, "tx": 20, "ty": 3.6175, "note": "verified from VBHN preamble (2024-11-26)"}, {"src": "EXT-Luật-số-85-2025-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2025-07-01", "sname": "Luật số 85/2025/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 29, "sy": 7.0, "tx": 20, "ty": 3.6175, "note": "verified from VBHN preamble (2025-06-25)"}, {"src": "EXT-Luật-số-142-2025-QH15", "tgt": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974", "rel": "AMENDS", "relvie": "sửa đổi", "at": "2026-03-01", "sname": "Luật số 142/2025/QH15", "tname": "BLTTHDS (VBHN 21/2025)", "sx": 30, "sy": 6.6175, "tx": 20, "ty": 3.6175, "note": "verified from VBHN preamble (2025-12-11)"}], "lanes": ["Dòng BLDS", "Gia đình", "Hộ tịch", "Bồi thường nhà nước", "Tố tụng dân sự", "Thi hành án dân sự", "Khác", "Sửa đổi bên ngoài"], "relvie": {"REPLACES": "thay thế", "CONSOLIDATES": "hợp nhất", "AMENDS": "sửa đổi"}, "yearMin": 1996, "yearMax": 2026, "stats": {"laws": 17, "edges": 21, "chunks": 11267, "gold": 281, "ext": 16}};
 const chart=echarts.init(document.getElementById('chart'),null,{renderer:'canvas'});
-let cur=2026,timer=null;
 const byId={};D.nodes.forEach(n=>byId[n.id]=n);
-const laneIndex={};D.lanes.forEach((c,i)=>laneIndex[c]=i);
-function active(n,y){const f=+n.from.slice(0,4),t=n.to?+n.to.slice(0,4):9999;return y>=f&&y<t}
+const adj={};D.edges.forEach(e=>{(adj[e.src]=adj[e.src]||[]).push(e.tgt);(adj[e.tgt]=adj[e.tgt]||[]).push(e.src)});
+const state={cur:2026,focus:null,ext:true,rep:true,amd:true,timer:null,speed:650,lane:{}};
+D.lanes.forEach(function(c){state.lane[c]=true});
+const TIP=document.getElementById('tip');
 function dt(iso){return iso?iso.split('-').reverse().join('/'):''}
+function active(n,y){const f=+n.from.slice(0,4),t=n.to?+n.to.slice(0,4):9999;return y>=f&&y<t}
+function fit(){return D.nodes.filter(n=>n.x<=state.cur-(D.yearMin-1996))}
+function inNeigh(id){return !state.focus||id===state.focus||adj[state.focus].includes(id)||id===state.focus}
 function fmtNode(p){
-  const n=byId[p.data.id],on=active(n,cur);
-  const f=dt(n.from),t=n.to?dt(n.to):'nay';
+  const n=byId[p.data.id],on=active(n,state.cur),f=dt(n.from),t=n.to?dt(n.to):'nay';
   let h='<b>'+n.full+'</b>';
   if(n.sym&&n.sym!==n.name)h+='<div class="sub">Số hiệu: '+n.sym+'</div>';
-  h+='<div class="sub">Hiệu lực: '+f+' → '+t+'</div><div class="sub">Trạng thái: '+n.status+'</div>';
-  h+='<div class="sub">'+(on?('<b style="color:#7fd18a">Đang có hiệu lực tại '+cur+'</b>'):'Ngoài hiệu lực tại '+cur)+'</div>';
+  h+='<div class="sub">Hiệu lực: '+f+' → '+t+'</div>';
+  h+='<div class="sub">'+(on?'<span class="live">Đang hiệu lực tại '+state.cur+'</span>':'<span class="dead">Ngoài hiệu lực tại '+state.cur+'</span>')+'</div>';
   if(n.chunks)h+='<div class="sub">'+n.chunks+' chunk · '+n.cites+' dẫn chiếu nội bộ</div>';
+  h+='<div class="sub" style="color:#7d8894">Click để mở khung chi tiết</div>';
   return h;
 }
 function fmtEdge(p){
   const e=p.data;
-  return '<b>'+D.relvie[e.rel]+'</b><div class="sub">'+dt(e.at)+' · '+e.sname+' → '+e.tname+'</div><div class="sub">'+(e.note||'')+'</div>';
+  return '<span class="edgehead">'+D.relvie[e.rel]+'</span><div class="sub">'+dt(e.at)+' · '+e.sname+' → '+e.tname+'</div><div class="sub">'+(e.note||'')+'</div>';
 }
 function buildSeries(){
-  const nodesByCat=[];
-  D.lanes.forEach(function(cat){
-    const items=D.nodes.filter(function(n){return n.cat===cat&&(n.x<=cur-1996)})
-      .map(function(n){
-        const on=active(n,cur);
-        return {name:n.name,id:n.id,value:[n.x,n.y],
-          symbolSize:n.chunks?Math.min(46,14+Math.sqrt(n.chunks)*0.85):9,
-          itemStyle:{color:n.color,opacity:on?1:0.28,borderColor:(on&&n.status!=='đã hết hiệu lực')?'#ffffff':'#4a4f57',borderWidth:on?2:1},
-          label:{show:!n.ext,position:n.x>=27?'left':'right',formatter:n.name,fontSize:11,color:on?'#ecf0f4':'#5f6873',
-            backgroundColor:'rgba(14,18,22,.78)',padding:[3,6],borderRadius:4,
-            borderColor:'#303a45',borderWidth:1},
-          labelLayout:{hideOverlap:true}};
-      });
-    nodesByCat.push(items);
+  const map={};
+  const items=fit().filter(function(n){return state.lane[n.cat]&&(!n.ext||state.ext)}).map(function(n){
+    const on=active(n,state.cur),foc=inNeigh(n.id);
+    return {name:n.name,id:n.id,value:[n.x,n.y],
+      symbolSize:n.chunks?Math.min(46,14+Math.sqrt(n.chunks)*0.85):9,
+      itemStyle:{color:n.color,opacity:focusDim()?(on?0.36:0.14):(on?1:0.28),
+        borderColor:(on&&n.status!=='đã hết hiệu lực')?'#ffffff':'#4a4f57',borderWidth:focusDim()?1:(on?2:1)},
+      label:{show:!n.ext,position:n.x>=27?'left':'right',formatter:n.name,fontSize:11,
+        color:focusDim()?'#5d6873':(on?'#ecf0f4':'#5f6873'),
+        backgroundColor:'rgba(14,18,22,.78)',padding:[3,6],borderRadius:4,
+        borderColor:'#303a45',borderWidth:1},
+      labelLayout:{hideOverlap:true}};
   });
-  const edgeLive=[],edgeFuture=[];
+  items.forEach(function(d,i){map[d.id]={si:0,di:i}});
+  if(xToday()<999){
+    items.markLine={symbol:'none',silent:true,label:{show:true,position:'end',formatter:'Hôm nay',
+      color:'#66d9e8',fontSize:10.5},lineStyle:{color:'rgba(102,217,232,.55)',type:'solid',width:1},data:[{xAxis:xToday()}]};
+  }
+  const live=[],future=[];
   D.edges.forEach(function(e){
     const born=[+byId[e.src].from.slice(0,4),+byId[e.tgt].from.slice(0,4)];
-    if(born[0]>cur||born[1]>cur)return;
-    const live=(+e.at.slice(0,4))<=cur;
-    const pot={coords:[[e.sx,e.sy],[e.tx,e.ty]],src:e.src,tgt:e.tgt,rel:e.rel,relvie:e.relvie,at:e.at,
-      sname:e.sname,tname:e.tname,note:e.note};
-    if(live){
-      edgeLive.push(Object.assign(pot,{lineStyle:{width:e.rel==='REPLACES'?3:1.6,
+    const kindOk=e.rel==='REPLACES'?state.rep:state.amd;
+    if(born[0]>state.cur||born[1]>state.cur||!kindOk)return;
+    if(!map[e.src]||!map[e.tgt])return;
+    const liveOk=(+e.at.slice(0,4))<=state.cur;
+    const inc=!state.focus||e.src===state.focus||e.tgt===state.focus;
+    const base={coords:[[e.sx,e.sy],[e.tx,e.ty]],src:e.src,tgt:e.tgt,rel:e.rel,relvie:e.relvie,
+      at:e.at,sname:e.sname,tname:e.tname,note:e.note};
+    if(liveOk){
+      live.push(Object.assign(base,{lineStyle:{width:e.rel==='REPLACES'?3:1.6,
         type:e.rel==='REPLACES'?'solid':'dashed',
         color:e.rel==='REPLACES'?'#ffd166':'#8ab4ff',
-        opacity:e.rel==='REPLACES'?1:0.8,curveness:0.18},
+        opacity:inc?(e.rel==='REPLACES'?1:0.8):(0.1),curveness:0.18},
         symbol:['none','arrow'],symbolSize:9}));
     } else {
-      edgeFuture.push(Object.assign(pot,{lineStyle:{width:1,type:e.rel==='REPLACES'?'solid':'dashed',
+      future.push(Object.assign(base,{lineStyle:{width:1,type:e.rel==='REPLACES'?'solid':'dashed',
         color:'#5b6774',opacity:0.2,curveness:0.18},symbol:['none','arrow'],symbolSize:7}));
     }
   });
-  const series=[];
-  D.lanes.forEach(function(cat,li){
-    series.push({name:cat,type:'scatter',data:nodesByCat[li],
-      z:li===0?3:4});
-  });
-  series.push({name:'Cạnh thời gian',type:'lines',coordinateSystem:'cartesian2d',xAxisIndex:0,yAxisIndex:0,data:edgeLive,z:2,silent:false});
-  series.push({name:'Hướng tương lai',type:'lines',coordinateSystem:'cartesian2d',xAxisIndex:0,yAxisIndex:0,data:edgeFuture,z:1,silent:true});
+  const series=[{name:'Văn bản',type:'scatter',data:items,z:4}];
+  series.push({name:'Cạnh thời gian',type:'lines',coordinateSystem:'cartesian2d',xAxisIndex:0,yAxisIndex:0,data:live,z:2});
+  series.push({name:'Hướng tương lai',type:'lines',coordinateSystem:'cartesian2d',xAxisIndex:0,yAxisIndex:0,data:future,z:1,silent:true});
   return series;
 }
+function focusDim(){return !!state.focus}
 function render(){
+  const shown=fit().filter(function(n){return !n.ext&&active(n,state.cur)}).length;
+  document.getElementById('ncur').textContent=shown;
   chart.setOption({
     backgroundColor:'transparent',
-    title:{text:String(cur),left:12,top:10,textStyle:{fontSize:30,color:'#8f9aa6',fontWeight:600}},
+    title:{text:String(state.cur),left:14,top:12,textStyle:{fontSize:32,color:'#87929e',fontWeight:600,fontFamily:'JetBrains Mono, monospace'}},
     grid:{left:150,right:64,top:56,bottom:66},
-    legend:{top:18,textStyle:{color:'#c9d1d8',fontSize:11.5},itemWidth:12,itemHeight:10,
-      icon:'circle',borderWidth:0,data:D.lanes},
-    xAxis:{type:'value',min:0,max:30,interval:5,axisLabel:{formatter:function(v){return Math.round(v)+1996},
+    xAxis:{type:'value',min:0,max:31,interval:5,axisLabel:{formatter:function(v){return Math.round(v)+1996},
       color:'#98a2ad',fontSize:11},splitLine:{show:true,lineStyle:{color:'rgba(255,255,255,.045)'}},
       axisLine:{show:true,lineStyle:{color:'#242c36'}}},
-    yAxis:{type:'category',data:D.lanes,boundaryGap:false,axisLabel:{show:true,color:'#aab4bf',fontSize:11.5,
-      margin:12},splitLine:{show:true,lineStyle:{color:'rgba(255,255,255,.04)'}},axisLine:{show:false},axisTick:{show:false}},
+    yAxis:{type:'value',min:-1,max:D.lanes.length,interval:1,axisLabel:{show:true,color:'#aab4bf',
+      fontSize:11.5,margin:14,formatter:function(v){var i=Math.round(v);
+        return (Math.abs(v-i)<0.02&&i>=0&&i<D.lanes.length)?D.lanes[i]:''}},
+      splitLine:{show:true,lineStyle:{color:'rgba(255,255,255,.04)'}},axisLine:{show:false},axisTick:{show:false}},
     dataZoom:[{type:'inside',xAxisIndex:0,start:0,end:100,zoomOnMouseWheel:true},
       {type:'slider',xAxisIndex:0,bottom:12,height:24,start:0,end:100,
         labelFormatter:'',textStyle:{color:'#6b7684'},
@@ -126,28 +251,122 @@ function render(){
       extraCssText:'box-shadow:none;'},
     series:buildSeries()},true);
 }
-const TIP=document.getElementById('tip');
-function showTip(html,x,y){
-  TIP.innerHTML=html;TIP.style.opacity=1;
-  const w=TIP.offsetWidth,hh=TIP.offsetHeight;
-  TIP.style.left=(x+14+w>window.innerWidth?x-14-w:x+14)+'px';
-  TIP.style.top=(y+14)+'px';
+function xToday(){const d=new Date();const y=d.getFullYear();if(y<D.yearMin||y>D.yearMax)return 999;
+  const day=(Date.UTC(y,d.getMonth(),d.getDate())-Date.UTC(y,0,1))/86400000;
+  return (y-1996)+day/365*1.0}
+function stopPlay(){if(state.timer){clearInterval(state.timer);state.timer=null;
+  document.getElementById('play').textContent='▶ Chạy dòng thời gian'}}
+function setYear(y,fromSlider){
+  state.cur=y;document.getElementById('yearbig').textContent=y;
+  if(!fromSlider)document.getElementById('slider').value=y;render();
 }
+document.getElementById('slider').addEventListener('input',function(e){stopPlay();setYear(+e.target.value,true)});
+document.getElementById('play').addEventListener('click',function(){
+  if(state.timer){stopPlay();return}
+  let y=D.yearMin-1;this.textContent='⏸ Tạm dừng';
+  state.timer=setInterval(function(){y++;if(y>D.yearMax){stopPlay();return}setYear(y)},state.speed);
+});
+document.getElementById('speed').addEventListener('change',function(e){
+  state.speed=+e.target.value;if(state.timer){stopPlay();render();
+  document.getElementById('play').click()}});
+function showTip(html,x,y){TIP.innerHTML=html;TIP.style.opacity=1;
+  const w=TIP.offsetWidth,hh=TIP.offsetHeight;
+  TIP.style.left=(x+14+w>innerWidth?x-14-w:x+14)+'px';TIP.style.top=Math.min(y+14,innerHeight-hh-12)+'px'}
 function hideTip(){TIP.style.opacity=0}
+const TGL={};
+document.querySelectorAll('.tg').forEach(function(t){
+  TGL[t.getAttribute('data-k')]=true;
+  t.addEventListener('click',function(){
+    const k=this.getAttribute('data-k');TGL[k]=!TGL[k];this.classList.toggle('on',TGL[k]);
+    state.ext=TGL.ext;state.amd=TGL.amd;state.rep=TGL.rep;stopPlay();render();
+  });
+});
+const laneBar=document.getElementById('lanebar');
+D.lanes.forEach(function(cat){
+  const dot=D.nodes.find(n=>n.cat===cat).color;
+  const chip=document.createElement('span');
+  chip.className='lchip on';chip.setAttribute('data-cat',cat);
+  chip.innerHTML='<i style="background:'+dot+'"></i>'+cat;
+  chip.title=cat+' — click để ẩn/hiện nhóm luật';
+  chip.addEventListener('click',function(){
+    state.lane[cat]=!state.lane[cat];
+    this.classList.toggle('off',!state.lane[cat]);stopPlay();render();
+  });
+  laneBar.appendChild(chip);
+});
 chart.on('mousemove',function(p){
   if(p.seriesType==='scatter')showTip(fmtNode(p),p.event.offsetX,p.event.offsetY);
   else if(p.seriesType==='lines')showTip(fmtEdge(p),p.event.offsetX,p.event.offsetY);
 });
 chart.on('mouseout',hideTip);
-document.getElementById('slider').addEventListener('input',function(e){
-  if(timer){clearInterval(timer);timer=null;document.getElementById('play').textContent='Chạy dòng thời gian'}
-  cur=+e.target.value;document.getElementById('year').textContent=cur;render();
+function openDrawer(n){
+  const r=document.getElementById('drawer');r.classList.add('open');
+  setTimeout(function(){chart.resize()},240);
+  let h='<button id="dclose" title="Đóng">✕</button>';
+  h+='<div class="dname">'+n.full+'</div>';
+  h+='<div class="dlane"><i style="background:'+n.color+'"></i>'+n.cat+'</div>';
+  h+='<div class="drow"><span>Số hiệu văn bản</span><span>'+(n.sym||'—')+'</span></div>';
+  h+='<div class="drow"><span>Hiệu lực</span><span>'+dt(n.from)+' → '+(n.to?dt(n.to):'nay')+'</span></div>';
+  h+='<div class="drow"><span>Trạng thái</span><span>'+n.status+'</span></div>';
+  if(n.chunks)h+='<div class="drow"><span>Chunk · dẫn chiếu</span><span>'+n.chunks.toLocaleString('vi-VN')+' · '+n.cites+'</span></div>';
+  const rg=adj[n.id]||[];
+  const rels=D.edges.filter(e=>e.src===n.id||e.tgt===n.id);
+  if(rels.length){h+='<div class="dsec">Liên hệ succession ('+rels.length+')</div>';
+    rels.forEach(function(e){
+      const other=e.src===n.id?e.tname:e.sname;
+      const oid=e.src===n.id?e.tgt:e.src;
+      const col=byId[oid]?byId[oid].color:'#7f8c8d';
+      h+='<div class="relrow" data-go="'+oid+'"><span class="rdot" style="background:'+col+'"></span>'+
+         '<span class="rlab"><span class="reltag '+e.rel+'">'+D.relvie[e.rel]+'</span> '+other+'</span>'+
+         '<span class="rdate">'+dt(e.at)+'</span></div>';
+    });}
+  h+='<div class="dnote">'+(n.cat==='Sửa đổi bên ngoài'?'Văn bản sửa đổi bên ngoài — không đóng góp chunk vào corpus, giữ để minh họa dòng sửa đổi.':'Dữ liệu mở chunk thuộc pháp điển ViCivil-TKG; dẫn chiếu nội bộ đếm từ provenance/cite_edges.json.')+'</div>';
+  const b=document.getElementById('dbody');b.innerHTML=h;
+  document.getElementById('dclose').onclick=function(){closeDrawer()};
+  b.querySelectorAll('.relrow').forEach(function(row){
+    row.addEventListener('click',function(){const id=this.getAttribute('data-go');state.focus=id;
+      document.getElementById('search').value=byId[id].name;openDrawer(byId[id]);render();});
+  });
+}
+function closeDrawer(){document.getElementById('drawer').classList.remove('open');
+  state.focus=null;render();setTimeout(function(){chart.resize()},240)}
+chart.on('click',function(p){
+  if(p.seriesType==='scatter'){const n=byId[p.data.id];state.focus=n.id;
+    document.getElementById('search').value=n.name;openDrawer(n);render();}
+  else if(p.seriesType==='lines'){const n=byId[p.data.src];state.focus=n.id;
+    document.getElementById('search').value=n.name;openDrawer(n);render();}
 });
-document.getElementById('play').addEventListener('click',function(){
-  if(timer){clearInterval(timer);timer=null;this.textContent='Chạy dòng thời gian';return}
-  let y=1995;timer=setInterval(function(){y+=1;cur=y;document.getElementById('year').textContent=y;document.getElementById('slider').value=y;render();
-    if(y>=2026){clearInterval(timer);timer=null;document.getElementById('play').textContent='Chạy dòng thời gian'}},650);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer()});
+const dl=document.getElementById('laws');
+D.nodes.slice().sort((a,b)=>a.name.localeCompare(b.name,'vi')).forEach(function(n){
+  const o=document.createElement('option');o.value=n.name;dl.appendChild(o)});
+document.getElementById('search').addEventListener('change',function(e){
+  const q=e.target.value.trim().toLowerCase();
+  const n=D.nodes.find(x=>x.name.toLowerCase()===q)||D.nodes.find(x=>x.name.toLowerCase().indexOf(q)>=0);
+  if(n){state.focus=n.id;openDrawer(n);render();
+    const m=mapPos[n.id];if(m)chart.dispatchAction({type:'showTip',seriesIndex:m.si,dataIndex:m.di});
+  } else {closeDrawer()}
+});
+let mapPos={};
+const _origRender=render;
+render=function(){_origRender();mapPos={};
+  const o=chart.getOption();
+  D.lanes.forEach(function(cat,si){
+    const s=o.series[si];if(!s||!s.data)return;
+    s.data.forEach(function(d,i){if(d.id)mapPos[d.id]={si:si,di:i}});
+  });
+};
+document.getElementById('shot').addEventListener('click',function(){
+  const a=document.createElement('a');
+  a.download='vicivil-tkg-'+document.getElementById('yearbig').textContent+'.png';
+  a.href=chart.getDataURL({type:'png',pixelRatio:2,backgroundColor:'#0b0f14'});
+  a.click();
 });
 window.addEventListener('resize',function(){chart.resize()});
+const S=D.stats;
+document.getElementById('st-laws').textContent=S.laws;
+document.getElementById('st-edges').textContent=S.edges;
+document.getElementById('st-chunks').textContent=S.chunks.toLocaleString('vi-VN');
+document.getElementById('st-gold').textContent=S.gold.toLocaleString('vi-VN');
 render();
 </script></body></html>
