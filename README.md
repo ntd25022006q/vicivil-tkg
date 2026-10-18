@@ -1,7 +1,7 @@
 # ViCivil-TKG - Vietnamese Civil Law Temporal Knowledge Graph
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-![Release](https://img.shields.io/badge/release-v1.2.3-blue.svg)
+![Release](https://img.shields.io/badge/release-v1.2.5-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
 [![HuggingFace Dataset](https://img.shields.io/badge/HF-dataset-yellow.svg)](https://huggingface.co/datasets/datbazuka2502/vicivil-tkg)
 
@@ -17,18 +17,15 @@ cannot.
 - **Temporal graph explorer** - single-file, no build step:
   [`docs/graph/explorer.html`](docs/graph/explorer.html), served live at
   <https://ntd25022006q.github.io/vicivil-tkg/graph/explorer.html>
-  (Apache-2.0 ECharts; as-of time slider 1996-2026, dimmed past, hidden
-  future, gold `REPLACES` succession spine, dashed amendment edges).
+  (Cytoscape.js 3.30.2; lane-grouped layout, as-of time slider 1996-2026,
+  replaced laws dimmed, future laws hidden, gold `REPLACES` succession
+  spine, dashed amendment edges, per-law provenance drawer).
   The same law-level graph ships as an **open GEXF 1.3 dynamic file** -
   [`docs/graph/law_graph.gexf`](docs/graph/law_graph.gexf) - which opens
-  directly in Gephi or Gephi-Lite for any other analysis workflow.
-  A time slider
-  (1996-2026) drives the "as-of" view: laws in force are rendered bright,
-  expired/future ones dimmed; gold `REPLACES` edges show the succession spine
-  (BLDS 1995 -> 2005 -> 2015), dashed edges show amendments mined from
-  consolidation preambles; node size encodes chunk counts. Fun with the
-  **Play timeline** button - the same validity-window logic the retrieval
-  index uses at query time.
+  directly in Gephi or Gephi-Lite for any other analysis workflow, and as
+  an explicit **Vega-Lite 5.21.0 timeline**
+  ([`docs/graph/law_timeline.vl.json`](docs/graph/law_timeline.vl.json))
+  rendered by Vega/vega-embed in the same page.
 
 ## Repository layout
 
@@ -44,7 +41,7 @@ A byte-level mirror of the four data folders is published on HuggingFace:
 with configs + loading snippets). `CITATION.cff` and the BibTeX block in
 the HF card cover attribution.
 
-## Quality gates in v1.2.3
+## Quality gates in v1.2.5
 
 - Official-source fidelity: 5 signed Cong-bao PDFs re-verified digit-by-digit
   (838/838, 110/110, 777/777, 78/78, 689/689 articles); the corrupted

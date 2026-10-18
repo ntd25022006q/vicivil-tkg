@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.2.4)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.2.5)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.2.4)
+## Composition (v1.2.5)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.2.4)
+### Per-law size table (chunk counts, v1.2.5)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,27 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.2.5:** visualization release, zero content change (no data/index/
+  benchmark edits; retrieval metrics above remain the frozen v1.2
+  measurement). The interactive release viewer is rebuilt on dedicated
+  open-source graph tooling in place of the general-purpose chart
+  library: the temporal successor network
+  (`docs/graph/explorer.html`) now runs on **Cytoscape.js 3.30.2** with
+  (a) lane-grouped layout (10 law families along a vertical axis) using a
+  collision-free pixel-packing pass computed offline in the generator,
+  (b) a time-travel slider (1996→2026) that hides future laws, dims
+  replaced ones and recounts "in force" live, (c) short statutory labels
+  on external amending laws (just the number/year, e.g. "59/2020"), and
+  (d) a provenance drawer per node (validity, chunk/citation counts,
+  succession chip, citation list). The timeline tab
+  (`docs/graph/law_timeline.vl.json`) is an explicit **Vega-Lite 5.21.0**
+  spec (temporal Gantt with successor edges and an "today" marker,
+  palette-matched to the network). Both plus the open GEXF 1.3 export
+  are covered by the manifest, which grows from 41 to **42 entries**.
+  "Sync/pull" wording along the whole pipeline was audited: every step
+  is a full checkout or full upload plus manifest verification — no
+  remote-side partial merge is ever relied on. A 12-statute glyph/
+  secret/JSON sweep runs green across both mirrors.
 - **v1.2.4:** hygiene release, zero content change. (a) The last 12
   invisible left-to-right-mark (U+200E) control characters — previously
   recorded as a pending post-release sync item — are now stripped at the

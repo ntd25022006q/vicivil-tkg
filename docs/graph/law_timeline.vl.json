@@ -1,0 +1,957 @@
+{
+ "spec": {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "ViCivil-TKG — phổ thời gian hiệu lực của 17 văn bản luật dân sự (1996-2026) và 21 cạnh kế thừa",
+  "width": 820,
+  "height": 470,
+  "background": "#0b0f14",
+  "config": {
+   "font": "Inter",
+   "axis": {
+    "labelColor": "#aab4bf",
+    "titleColor": "#93a0ac",
+    "gridColor": "rgba(255,255,255,.05)",
+    "domainColor": "#33404d"
+   },
+   "legend": {
+    "labelColor": "#c3ccd5",
+    "titleColor": "#93a0ac"
+   },
+   "tooltip": {
+    "theme": "dark"
+   }
+  },
+  "layer": [
+   {
+    "mark": {
+     "type": "bar",
+     "opacity": 0.92,
+     "cornerRadius": 3,
+     "height": 11
+    },
+    "encoding": {
+     "x": {
+      "field": "s",
+      "type": "temporal",
+      "scale": {
+       "domain": [
+        "1995-01-01",
+        "2027-02-01"
+       ]
+      },
+      "axis": {
+       "title": "Năm hiệu lực",
+       "format": "%Y",
+       "grid": true,
+       "tickMinStep": {
+        "interval": "year",
+        "step": 5
+       }
+      }
+     },
+     "x2": {
+      "field": "e"
+     },
+     "y": {
+      "field": "name",
+      "type": "nominal",
+      "scale": {
+       "domain": [
+        "Bộ luật Dân sự 2005",
+        "Bộ luật Dân sự 2015",
+        "Bộ luật Dân sự 1995",
+        "Luật HN&GĐ 2014",
+        "Luật HN&GĐ (VBHN 2025)",
+        "Luật HN&GĐ 2000",
+        "81/2025",
+        "Luật Hộ tịch 2014",
+        "Luật Hộ tịch (VBHN 2026)",
+        "Luật 15/2026 (sửa TNBT-NN)",
+        "Luật TNBT-NN 2017",
+        "BLTTHDS (VBHN 21/2025)",
+        "19/2023",
+        "34/2024",
+        "46/2024",
+        "85/2025",
+        "142/2025",
+        "TT liên tịch 07/2026",
+        "59/2020",
+        "13/2022",
+        "59/2024",
+        "NĐ 152/2026 (thi hành THADS)",
+        "Luật THADS 2008",
+        "Luật THADS (VBHN 2025)",
+        "64/2014",
+        "23/2018",
+        "67/2020",
+        "03/2022",
+        "31/2024",
+        "43/2024",
+        "84/2025",
+        "Luật Nuôi con nuôi 2010",
+        "Luật Hòa giải tại cơ sở 2026"
+       ]
+      },
+      "axis": {
+       "title": null,
+       "labelFontSize": 9.5,
+       "labelLimit": 210,
+       "grid": true,
+       "tick": false,
+       "domain": false
+      }
+     },
+     "color": {
+      "field": "cat",
+      "type": "nominal",
+      "scale": {
+       "domain": [
+        "Dòng BLDS",
+        "Gia đình",
+        "Hộ tịch",
+        "Bồi thường nhà nước",
+        "Tố tụng dân sự",
+        "Thi hành án dân sự",
+        "Khác"
+       ],
+       "range": [
+        "#f4a23a",
+        "#d05d9c",
+        "#8e6fc7",
+        "#4c9fbe",
+        "#57a773",
+        "#b05636",
+        "#7f8c8d"
+       ]
+      },
+      "legend": {
+       "title": "Nhóm văn bản"
+      }
+     }
+    }
+   },
+   {
+    "mark": {
+     "type": "rule",
+     "opacity": 0.9
+    },
+    "data": {
+     "name": "links"
+    },
+    "encoding": {
+     "x": {
+      "field": "at",
+      "type": "temporal",
+      "scale": {
+       "domain": [
+        "1995-01-01",
+        "2027-02-01"
+       ]
+      }
+     },
+     "x2": {
+      "field": "at"
+     },
+     "y": {
+      "field": "name",
+      "type": "nominal",
+      "scale": {
+       "domain": [
+        "Bộ luật Dân sự 2005",
+        "Bộ luật Dân sự 2015",
+        "Bộ luật Dân sự 1995",
+        "Luật HN&GĐ 2014",
+        "Luật HN&GĐ (VBHN 2025)",
+        "Luật HN&GĐ 2000",
+        "81/2025",
+        "Luật Hộ tịch 2014",
+        "Luật Hộ tịch (VBHN 2026)",
+        "Luật 15/2026 (sửa TNBT-NN)",
+        "Luật TNBT-NN 2017",
+        "BLTTHDS (VBHN 21/2025)",
+        "19/2023",
+        "34/2024",
+        "46/2024",
+        "85/2025",
+        "142/2025",
+        "TT liên tịch 07/2026",
+        "59/2020",
+        "13/2022",
+        "59/2024",
+        "NĐ 152/2026 (thi hành THADS)",
+        "Luật THADS 2008",
+        "Luật THADS (VBHN 2025)",
+        "64/2014",
+        "23/2018",
+        "67/2020",
+        "03/2022",
+        "31/2024",
+        "43/2024",
+        "84/2025",
+        "Luật Nuôi con nuôi 2010",
+        "Luật Hòa giải tại cơ sở 2026"
+       ]
+      }
+     },
+     "y2": {
+      "field": "name2"
+     },
+     "color": {
+      "value": "#ffd166"
+     },
+     "size": {
+      "value": 2.4
+     },
+     "opacity": {
+      "value": 0.95
+     }
+    }
+   },
+   {
+    "mark": {
+     "type": "rule",
+     "strokeDash": [
+      4,
+      3
+     ],
+     "opacity": 0.95
+    },
+    "encoding": {
+     "x": {
+      "value": "2026-10-18",
+      "type": "temporal",
+      "scale": {
+       "domain": [
+        "1995-01-01",
+        "2027-02-01"
+       ]
+      }
+     },
+     "x2": {
+      "value": "2026-10-18"
+     },
+     "y": {
+      "value": "Bộ luật Dân sự 2005",
+      "type": "nominal",
+      "scale": {
+       "domain": [
+        "Bộ luật Dân sự 2005",
+        "Bộ luật Dân sự 2015",
+        "Bộ luật Dân sự 1995",
+        "Luật HN&GĐ 2014",
+        "Luật HN&GĐ (VBHN 2025)",
+        "Luật HN&GĐ 2000",
+        "81/2025",
+        "Luật Hộ tịch 2014",
+        "Luật Hộ tịch (VBHN 2026)",
+        "Luật 15/2026 (sửa TNBT-NN)",
+        "Luật TNBT-NN 2017",
+        "BLTTHDS (VBHN 21/2025)",
+        "19/2023",
+        "34/2024",
+        "46/2024",
+        "85/2025",
+        "142/2025",
+        "TT liên tịch 07/2026",
+        "59/2020",
+        "13/2022",
+        "59/2024",
+        "NĐ 152/2026 (thi hành THADS)",
+        "Luật THADS 2008",
+        "Luật THADS (VBHN 2025)",
+        "64/2014",
+        "23/2018",
+        "67/2020",
+        "03/2022",
+        "31/2024",
+        "43/2024",
+        "84/2025",
+        "Luật Nuôi con nuôi 2010",
+        "Luật Hòa giải tại cơ sở 2026"
+       ]
+      }
+     },
+     "y2": {
+      "value": "Luật Hòa giải tại cơ sở 2026"
+     },
+     "color": {
+      "value": "#66d9e8"
+     },
+     "size": {
+      "value": 1.6
+     }
+    }
+   },
+   {
+    "mark": {
+     "type": "point",
+     "opacity": 1,
+     "size": 60,
+     "filled": true
+    },
+    "encoding": {
+     "x": {
+      "field": "s",
+      "type": "temporal",
+      "scale": {
+       "domain": [
+        "1995-01-01",
+        "2027-02-01"
+       ]
+      }
+     },
+     "y": {
+      "field": "name",
+      "type": "nominal",
+      "scale": {
+       "domain": [
+        "Bộ luật Dân sự 2005",
+        "Bộ luật Dân sự 2015",
+        "Bộ luật Dân sự 1995",
+        "Luật HN&GĐ 2014",
+        "Luật HN&GĐ (VBHN 2025)",
+        "Luật HN&GĐ 2000",
+        "81/2025",
+        "Luật Hộ tịch 2014",
+        "Luật Hộ tịch (VBHN 2026)",
+        "Luật 15/2026 (sửa TNBT-NN)",
+        "Luật TNBT-NN 2017",
+        "BLTTHDS (VBHN 21/2025)",
+        "19/2023",
+        "34/2024",
+        "46/2024",
+        "85/2025",
+        "142/2025",
+        "TT liên tịch 07/2026",
+        "59/2020",
+        "13/2022",
+        "59/2024",
+        "NĐ 152/2026 (thi hành THADS)",
+        "Luật THADS 2008",
+        "Luật THADS (VBHN 2025)",
+        "64/2014",
+        "23/2018",
+        "67/2020",
+        "03/2022",
+        "31/2024",
+        "43/2024",
+        "84/2025",
+        "Luật Nuôi con nuôi 2010",
+        "Luật Hòa giải tại cơ sở 2026"
+       ]
+      }
+     },
+     "color": {
+      "field": "cat",
+      "type": "nominal",
+      "scale": {
+       "domain": [
+        "Dòng BLDS",
+        "Gia đình",
+        "Hộ tịch",
+        "Bồi thường nhà nước",
+        "Tố tụng dân sự",
+        "Thi hành án dân sự",
+        "Khác"
+       ],
+       "range": [
+        "#f4a23a",
+        "#d05d9c",
+        "#8e6fc7",
+        "#4c9fbe",
+        "#57a773",
+        "#b05636",
+        "#7f8c8d"
+       ]
+      },
+      "legend": null
+     }
+    }
+   }
+  ],
+  "data": {
+   "values": [
+    {
+     "id": "BLDS2005",
+     "name": "Bộ luật Dân sự 2005",
+     "cat": "Dòng BLDS",
+     "color": "#f4a23a",
+     "status": "đã hết hiệu lực",
+     "sym": "33/2005/QH11",
+     "s": "2006-01-01",
+     "e": "2017-01-01T00:00:00",
+     "row": 0,
+     "chunks": 780,
+     "cites": 114
+    },
+    {
+     "id": "BLDS2015",
+     "name": "Bộ luật Dân sự 2015",
+     "cat": "Dòng BLDS",
+     "color": "#f4a23a",
+     "status": "đang có hiệu lực",
+     "sym": "91/2015/QH13",
+     "s": "2017-01-01",
+     "e": "2026-12-31",
+     "row": 1,
+     "chunks": 1838,
+     "cites": 145
+    },
+    {
+     "id": "HNGD2014",
+     "name": "Luật HN&GĐ 2014",
+     "cat": "Gia đình",
+     "color": "#d05d9c",
+     "status": "đang có hiệu lực",
+     "sym": "52/2014/QH13",
+     "s": "2015-01-01",
+     "e": "2026-12-31",
+     "row": 3,
+     "chunks": 393,
+     "cites": 67
+    },
+    {
+     "id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+     "name": "BLTTHDS (VBHN 21/2025)",
+     "cat": "Tố tụng dân sự",
+     "color": "#57a773",
+     "status": "cần kiểm tra lại",
+     "sym": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+     "s": "2016-07-01",
+     "e": "2026-12-31",
+     "row": 11,
+     "chunks": 1979,
+     "cites": 415
+    },
+    {
+     "id": "luat-so-15-2026-qh16-470450",
+     "name": "Luật 15/2026 (sửa TNBT-NN)",
+     "cat": "Bồi thường nhà nước",
+     "color": "#4c9fbe",
+     "status": "cần kiểm tra lại",
+     "sym": "luat-so-15-2026-qh16-470450",
+     "s": "2026-01-01",
+     "e": "2026-12-31",
+     "row": 9,
+     "chunks": 151,
+     "cites": 68
+    },
+    {
+     "id": "nghi-dinh-so-152-2026-nd-cp-469524",
+     "name": "NĐ 152/2026 (thi hành THADS)",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "cần kiểm tra lại",
+     "sym": "nghi-dinh-so-152-2026-nd-cp-469524",
+     "s": "2026-01-01",
+     "e": "2026-12-31",
+     "row": 21,
+     "chunks": 665,
+     "cites": 243
+    },
+    {
+     "id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+     "name": "TT liên tịch 07/2026",
+     "cat": "Tố tụng dân sự",
+     "color": "#57a773",
+     "status": "cần kiểm tra lại",
+     "sym": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+     "s": "2026-01-01",
+     "e": "2026-12-31",
+     "row": 17,
+     "chunks": 135,
+     "cites": 83
+    },
+    {
+     "id": "HNGDVBHN2025",
+     "name": "Luật HN&GĐ (VBHN 2025)",
+     "cat": "Gia đình",
+     "color": "#d05d9c",
+     "status": "đang có hiệu lực",
+     "sym": "121/VBHN-VPQH",
+     "s": "2025-09-01",
+     "e": "2026-12-31",
+     "row": 4,
+     "chunks": 392,
+     "cites": 77
+    },
+    {
+     "id": "NCN2010",
+     "name": "Luật Nuôi con nuôi 2010",
+     "cat": "Khác",
+     "color": "#7f8c8d",
+     "status": "đang có hiệu lực",
+     "sym": "52/2010/QH12",
+     "s": "2011-01-01",
+     "e": "2026-12-31",
+     "row": 31,
+     "chunks": 208,
+     "cites": 27
+    },
+    {
+     "id": "HOTICH2014",
+     "name": "Luật Hộ tịch 2014",
+     "cat": "Hộ tịch",
+     "color": "#8e6fc7",
+     "status": "cần kiểm tra lại",
+     "sym": "HOTICH2014",
+     "s": "2016-01-01",
+     "e": "2026-12-31",
+     "row": 7,
+     "chunks": 266,
+     "cites": 25
+    },
+    {
+     "id": "THADS2008",
+     "name": "Luật THADS 2008",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "đang có hiệu lực",
+     "sym": "26/2008/QH12",
+     "s": "2009-07-01",
+     "e": "2026-12-31",
+     "row": 22,
+     "chunks": 721,
+     "cites": 65
+    },
+    {
+     "id": "TNBTCNN2017",
+     "name": "Luật TNBT-NN 2017",
+     "cat": "Bồi thường nhà nước",
+     "color": "#4c9fbe",
+     "status": "đang có hiệu lực",
+     "sym": "10/2017/QH14",
+     "s": "2018-07-01",
+     "e": "2026-12-31",
+     "row": 10,
+     "chunks": 505,
+     "cites": 99
+    },
+    {
+     "id": "HNGD2000",
+     "name": "Luật HN&GĐ 2000",
+     "cat": "Gia đình",
+     "color": "#d05d9c",
+     "status": "đã hết hiệu lực",
+     "sym": "22/2000/QH10",
+     "s": "2001-01-01",
+     "e": "2015-01-01T00:00:00",
+     "row": 5,
+     "chunks": 239,
+     "cites": 38
+    },
+    {
+     "id": "HOAGIAI2026",
+     "name": "Luật Hòa giải tại cơ sở 2026",
+     "cat": "Khác",
+     "color": "#7f8c8d",
+     "status": "đang có hiệu lực",
+     "sym": "16/2026/QH16",
+     "s": "2026-07-01",
+     "e": "2026-12-31",
+     "row": 32,
+     "chunks": 175,
+     "cites": 44
+    },
+    {
+     "id": "HOTICH2026",
+     "name": "Luật Hộ tịch (VBHN 2026)",
+     "cat": "Hộ tịch",
+     "color": "#8e6fc7",
+     "status": "đang có hiệu lực",
+     "sym": "03/2026/QH16",
+     "s": "2026-07-01",
+     "e": "2026-12-31",
+     "row": 8,
+     "chunks": 172,
+     "cites": 18
+    },
+    {
+     "id": "THADSVBHN",
+     "name": "Luật THADS (VBHN 2025)",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "đang có hiệu lực",
+     "sym": "10/VBHN-VPQH",
+     "s": "2025-02-01",
+     "e": "2026-12-31",
+     "row": 23,
+     "chunks": 758,
+     "cites": 156
+    },
+    {
+     "id": "BLDS1995",
+     "name": "Bộ luật Dân sự 1995",
+     "cat": "Dòng BLDS",
+     "color": "#f4a23a",
+     "status": "đã hết hiệu lực",
+     "sym": "44-L/CTN",
+     "s": "1996-07-01",
+     "e": "2006-01-01T00:00:00",
+     "row": 2,
+     "chunks": 1890,
+     "cites": 157
+    },
+    {
+     "id": "EXT-Luật-số-81-2025-QH15",
+     "name": "81/2025",
+     "cat": "Gia đình",
+     "color": "#d05d9c",
+     "status": "external-ref",
+     "sym": "Luật số 81/2025/QH15",
+     "s": "2025-07-01",
+     "e": "2026-12-31",
+     "row": 6,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-64-2014-QH13",
+     "name": "64/2014",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "external-ref",
+     "sym": "Luật số 64/2014/QH13",
+     "s": "2015-07-01",
+     "e": "2026-12-31",
+     "row": 24,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-23-2018-QH14",
+     "name": "23/2018",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "external-ref",
+     "sym": "Luật số 23/2018/QH14",
+     "s": "2019-07-01",
+     "e": "2026-12-31",
+     "row": 25,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-67-2020-QH14",
+     "name": "67/2020",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "external-ref",
+     "sym": "Luật số 67/2020/QH14",
+     "s": "2022-01-01",
+     "e": "2026-12-31",
+     "row": 26,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-03-2022-QH15",
+     "name": "03/2022",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "external-ref",
+     "sym": "Luật số 03/2022/QH15",
+     "s": "2022-03-01",
+     "e": "2026-12-31",
+     "row": 27,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-31-2024-QH15",
+     "name": "31/2024",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "external-ref",
+     "sym": "Luật số 31/2024/QH15",
+     "s": "2024-08-01",
+     "e": "2026-12-31",
+     "row": 28,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-43-2024-QH15",
+     "name": "43/2024",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "external-ref",
+     "sym": "Luật số 43/2024/QH15",
+     "s": "2024-08-01",
+     "e": "2026-12-31",
+     "row": 29,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-59-2024-QH15",
+     "name": "59/2024",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "external-ref",
+     "sym": "Luật số 59/2024/QH15",
+     "s": "2026-01-01",
+     "e": "2026-12-31",
+     "row": 20,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-84-2025-QH15",
+     "name": "84/2025",
+     "cat": "Thi hành án dân sự",
+     "color": "#b05636",
+     "status": "external-ref",
+     "sym": "Luật số 84/2025/QH15",
+     "s": "2025-07-01",
+     "e": "2026-12-31",
+     "row": 30,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-59-2020-QH14",
+     "name": "59/2020",
+     "cat": "Tố tụng dân sự",
+     "color": "#57a773",
+     "status": "external-ref",
+     "sym": "Luật số 59/2020/QH14",
+     "s": "2021-01-01",
+     "e": "2026-12-31",
+     "row": 18,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-13-2022-QH15",
+     "name": "13/2022",
+     "cat": "Tố tụng dân sự",
+     "color": "#57a773",
+     "status": "external-ref",
+     "sym": "Luật số 13/2022/QH15",
+     "s": "2023-07-01",
+     "e": "2026-12-31",
+     "row": 19,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-19-2023-QH15",
+     "name": "19/2023",
+     "cat": "Tố tụng dân sự",
+     "color": "#57a773",
+     "status": "external-ref",
+     "sym": "Luật số 19/2023/QH15",
+     "s": "2024-07-01",
+     "e": "2026-12-31",
+     "row": 12,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-34-2024-QH15",
+     "name": "34/2024",
+     "cat": "Tố tụng dân sự",
+     "color": "#57a773",
+     "status": "external-ref",
+     "sym": "Luật số 34/2024/QH15",
+     "s": "2025-01-01",
+     "e": "2026-12-31",
+     "row": 13,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-46-2024-QH15",
+     "name": "46/2024",
+     "cat": "Tố tụng dân sự",
+     "color": "#57a773",
+     "status": "external-ref",
+     "sym": "Luật số 46/2024/QH15",
+     "s": "2025-07-01",
+     "e": "2026-12-31",
+     "row": 14,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-85-2025-QH15",
+     "name": "85/2025",
+     "cat": "Tố tụng dân sự",
+     "color": "#57a773",
+     "status": "external-ref",
+     "sym": "Luật số 85/2025/QH15",
+     "s": "2025-07-01",
+     "e": "2026-12-31",
+     "row": 15,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "EXT-Luật-số-142-2025-QH15",
+     "name": "142/2025",
+     "cat": "Tố tụng dân sự",
+     "color": "#57a773",
+     "status": "external-ref",
+     "sym": "Luật số 142/2025/QH15",
+     "s": "2026-03-01",
+     "e": "2026-12-31",
+     "row": 16,
+     "chunks": 0,
+     "cites": 0
+    }
+   ]
+  },
+  "datasets": {
+   "links": [
+    {
+     "relvie": "thay thế",
+     "rel": "REPLACES",
+     "at": "2006-01-01",
+     "name": "Bộ luật Dân sự 2005",
+     "name2": "Bộ luật Dân sự 1995"
+    },
+    {
+     "relvie": "thay thế",
+     "rel": "REPLACES",
+     "at": "2017-01-01",
+     "name": "Bộ luật Dân sự 2015",
+     "name2": "Bộ luật Dân sự 2005"
+    },
+    {
+     "relvie": "hợp nhất",
+     "rel": "CONSOLIDATES",
+     "at": "2025-09-01",
+     "name": "Luật HN&GĐ (VBHN 2025)",
+     "name2": "Luật HN&GĐ 2014"
+    },
+    {
+     "relvie": "thay thế",
+     "rel": "REPLACES",
+     "at": "2015-01-01",
+     "name": "Luật HN&GĐ 2014",
+     "name2": "Luật HN&GĐ 2000"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2025-07-01",
+     "name": "81/2025",
+     "name2": "Luật HN&GĐ (VBHN 2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2015-07-01",
+     "name": "64/2014",
+     "name2": "Luật THADS (VBHN 2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2019-07-01",
+     "name": "23/2018",
+     "name2": "Luật THADS (VBHN 2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2022-01-01",
+     "name": "67/2020",
+     "name2": "Luật THADS (VBHN 2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2022-03-01",
+     "name": "03/2022",
+     "name2": "Luật THADS (VBHN 2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2024-08-01",
+     "name": "31/2024",
+     "name2": "Luật THADS (VBHN 2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2024-08-01",
+     "name": "43/2024",
+     "name2": "Luật THADS (VBHN 2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2026-01-01",
+     "name": "59/2024",
+     "name2": "Luật THADS (VBHN 2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2025-07-01",
+     "name": "81/2025",
+     "name2": "Luật THADS (VBHN 2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2025-07-01",
+     "name": "84/2025",
+     "name2": "Luật THADS (VBHN 2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2021-01-01",
+     "name": "59/2020",
+     "name2": "BLTTHDS (VBHN 21/2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2023-07-01",
+     "name": "13/2022",
+     "name2": "BLTTHDS (VBHN 21/2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2024-07-01",
+     "name": "19/2023",
+     "name2": "BLTTHDS (VBHN 21/2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2025-01-01",
+     "name": "34/2024",
+     "name2": "BLTTHDS (VBHN 21/2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2025-07-01",
+     "name": "46/2024",
+     "name2": "BLTTHDS (VBHN 21/2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2025-07-01",
+     "name": "85/2025",
+     "name2": "BLTTHDS (VBHN 21/2025)"
+    },
+    {
+     "relvie": "sửa đổi",
+     "rel": "AMENDS",
+     "at": "2026-03-01",
+     "name": "142/2025",
+     "name2": "BLTTHDS (VBHN 21/2025)"
+    }
+   ]
+  }
+ }
+}
