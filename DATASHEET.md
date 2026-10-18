@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.3.1)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.3.2)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.3.1)
+## Composition (v1.3.2)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.3.1)
+### Per-law size table (chunk counts, v1.3.2)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,19 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.3.2:** diagnosability release, zero content change (no
+  data/index/benchmark edits; retrieval metrics above remain the frozen
+  v1.2 measurement). The same field report that motivated v1.3.1
+  (blank network tab on a machine where the libraries could not be
+  loaded) had remained silent because a mid-script failure stopped the
+  page before the error banner was ever built. The viewer now renders
+  an immediate red error banner from the global error handler (with
+  the failing message, position and the last completed init step),
+  and shows a dismissible corner pill with the self-test state
+  (G6/vega loaded, graph initialized, init step) so any environment
+  issue can be read directly off the page without devtools. Manifest
+  unchanged at **46 entries**; the 12-statute sweep runs green on both
+  mirrors.
 - **v1.3.1:** packaging-hardening release, zero content change (no
   data/index/benchmark edits; retrieval metrics above remain the frozen
   v1.2 measurement). All four JavaScript engine files (AntV G6 5.1.1,
