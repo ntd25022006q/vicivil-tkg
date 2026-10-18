@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.3.0)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.3.1)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.3.0)
+## Composition (v1.3.1)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.3.0)
+### Per-law size table (chunk counts, v1.3.1)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,25 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.3.1:** packaging-hardening release, zero content change (no
+  data/index/benchmark edits; retrieval metrics above remain the frozen
+  v1.2 measurement). All four JavaScript engine files (AntV G6 5.1.1,
+  Vega 5.30.0, Vega-Lite 5.21.0, vega-embed 6.26.0 - all MIT) are now
+  **vendored next to the viewer** (`docs/graph/*.min.js`) instead of
+  being fetched from a CDN at view time: the release viewer and its
+  libraries form one self-contained folder that works on any network
+  (a user in the wild was getting a blank network tab and a "0 text"
+  readout whenever jsdelivr was unreachable). Two companion hardening
+  fixes: the "in force" readout now ships the correct build-time value
+  in the static HTML (14 at the initial 2026 view) so it is never
+  misleading while libraries load, and a visible red error banner is
+  rendered if graph initialization ever fails. Manifest grows from 42
+  to **46 entries** (4 vendored libraries); the 12-statute sweep runs
+  green on both mirrors with the same byte-equality policy. The
+  character-hygiene gate is unchanged for all data/index/benchmark
+  content; the vendored third-party library files ship verbatim (their
+  internal locale strings are disclosed alongside the rest of the
+  manifest).
 - **v1.3.0:** viewer-engine migration release, zero content change (no
   data/index/benchmark edits; retrieval metrics above remain the frozen
   v1.2 measurement). The succession-network tab is re-implemented on
