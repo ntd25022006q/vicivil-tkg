@@ -1,7 +1,7 @@
 # ViCivil-TKG - Vietnamese Civil Law Temporal Knowledge Graph
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-![Release](https://img.shields.io/badge/release-v1.2.7-blue.svg)
+![Release](https://img.shields.io/badge/release-v1.3.0-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
 [![HuggingFace Dataset](https://img.shields.io/badge/HF-dataset-yellow.svg)](https://huggingface.co/datasets/datbazuka2502/vicivil-tkg)
 
@@ -17,7 +17,7 @@ cannot.
 - **Temporal graph explorer** - single-file, no build step:
   [`docs/graph/explorer.html`](docs/graph/explorer.html), served live at
   <https://ntd25022006q.github.io/vicivil-tkg/graph/explorer.html>
-  (Cytoscape.js 3.30.2; lane-grouped layout, as-of time slider 1996-2026,
+  (AntV G6 5.1.1; lane-grouped layout, as-of time slider 1996-2026,
   replaced laws dimmed, future laws hidden, gold `REPLACES` succession
   spine, dashed amendment edges, per-law provenance drawer).
   The same law-level graph ships as an **open GEXF 1.3 dynamic file** -
@@ -41,7 +41,7 @@ A byte-level mirror of the four data folders is published on HuggingFace:
 with configs + loading snippets). `CITATION.cff` and the BibTeX block in
 the HF card cover attribution.
 
-## Quality gates in v1.2.5/v1.2.7
+## Quality gates in v1.2.5/v1.3.0
 
 - Official-source fidelity: 5 signed Cong-bao PDFs re-verified digit-by-digit
   (838/838, 110/110, 777/777, 78/78, 689/689 articles); the corrupted
@@ -60,6 +60,13 @@ the HF card cover attribution.
 - Reproduced metrics on the sanitized index, n=281: Hit@1 0.452 /
   Hit@3 0.658 / Hit@5 0.726 / Hit@10 0.794 / MRR 0.568 - identical to the
   v1.2.2 release numbers, so all published comparisons stay valid.
+- v1.3.0 engine migration: the succession network now runs on AntV G6
+  5.1.1 (built-in dark theme, hover-activate, grid backdrop, minimap,
+  tooltips); a fix for a pre-existing v1.2.5-1.2.7 bug is disclosed - the
+  time-travel slider now genuinely hides future laws as promised (the
+  2012 probe shows exactly the 4 then-active laws bright with all later
+  laws ghosted out, while the readout counts are unchanged because they
+  never depended on the broken visibility).
 - v1.2.7 interaction polish: every released law - including the
   amending (EXT) acts - responds to hover focus, tooltip and the
   provenance drawer; a synthetic hover probe verifies 88 of 90 canvas

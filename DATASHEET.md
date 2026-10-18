@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.2.7)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.3.0)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.2.7)
+## Composition (v1.3.0)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.2.7)
+### Per-law size table (chunk counts, v1.3.0)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,26 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.3.0:** viewer-engine migration release, zero content change (no
+  data/index/benchmark edits; retrieval metrics above remain the frozen
+  v1.2 measurement). The succession-network tab is re-implemented on
+  **AntV G6 5.1.1** (MIT) in place of Cytoscape.js 3.30.2, gaining the
+  library's built-in dark theme, hover-activate highlighting, grid
+  backdrop, minimap and formatted tooltips; the head chrome (year axis,
+  lane stems, cap ticks, today line) is re-drawn as G6 elements. Two
+  regressions found during the migration are fixed and shipped here:
+  (a) switching tabs no longer blanks the canvas (the timeline tab now
+  overlays the network instead of hiding it, and the network is
+  element-level, not dependency-level, kept interactive), and
+  (b) disclosure of a pre-existing bug present since v1.2.5 that is
+  corrected in this release: the time-travel slider dimmed replaced
+  laws correctly but never actually hid future laws (an off-by-yearMin
+  term in the visibility rule), so from now on the promised future-hidden
+  behavior is real; the "in force" readout counts were computed from
+  the validity windows and were always correct. Canvas PNG export now
+  uses G6's full-graph (mode:"overall") render with the chart
+  background. Manifest unchanged at **42 entries**; the 12-statute
+  sweep runs green on both mirrors.
 - **v1.2.7:** interaction-and-axis polish release, zero content change
   (no data/index/benchmark edits; retrieval metrics above remain the
   frozen v1.2 measurement). Hovering any law now focuses its succession
