@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.3.2)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.4.0)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.3.2)
+## Composition (v1.4.0)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.3.2)
+### Per-law size table (chunk counts, v1.4.0)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,25 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.4.0:** single-artifact release, zero content change (no
+  data/index/benchmark edits; retrieval metrics above remain the frozen
+  v1.2 measurement). The viewer becomes one fully self-contained file:
+  all four libraries (AntV G6 5.1.1, Vega 5.30.0, Vega-Lite 5.21.0,
+  vega-embed 6.26.0 - all MIT) are inlined into `explorer.html`
+  (~2.3 MB), so the artifact cannot lose its dependencies however it
+  is copied, emailed or opened from disk; the vendored `.min.js` files
+  remain in `docs/graph/` for provenance. The release also fixes the
+  latent correctness bug behind every "blank canvas in the wild"
+  report: the opening state application ran while G6's first render
+  was still in flight, so every element-state update was dropped with
+  an unhandled internal rejection (54 failed calls on this build;
+  silent in earlier versions). The graph now draws only after the
+  library reports ready - time-travel, counting and zoom state land on
+  the first frame (a 2012 probe shows exactly 4 laws in force with all
+  later laws ghosted, zero JS errors). A loading skeleton covers the
+  canvas while libraries initialize, and promise rejections are now
+  captured into the visible error banner as well. Manifest unchanged
+  at **46 entries**; the 12-statute sweep runs green on both mirrors.
 - **v1.3.2:** diagnosability release, zero content change (no
   data/index/benchmark edits; retrieval metrics above remain the frozen
   v1.2 measurement). The same field report that motivated v1.3.1
