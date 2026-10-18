@@ -123,7 +123,7 @@ footer .frow{max-width:1440px;margin:0 auto;padding:9px 22px;display:flex;gap:16
       <b id="st-gold">281</b> câu hỏi gold
     </span>
     <div class="top-links">
-      <span class="ver">v1.2.6</span>
+      <span class="ver">v1.2.7</span>
       <a href="https://github.com/ntd25022006q/vicivil-tkg" target="_blank">GitHub</a>
       <a href="law_graph.gexf" download>GEXF cho Gephi</a>
     </div>
@@ -157,7 +157,7 @@ footer .frow{max-width:1440px;margin:0 auto;padding:9px 22px;display:flex;gap:16
   <aside id="drawer" aria-label="Chi tiết văn bản"><div class="inner" id="dbody"></div></aside>
 </main>
 <footer><div class="frow">
-  <span>Thẻ dữ liệu v1.2.6</span><span>·</span>
+  <span>Thẻ dữ liệu v1.2.7</span><span>·</span>
   <span>Nguồn công báo chính thức</span><span>·</span>
   <span><a href="law_graph.gexf" download>GEXF 1.3 cho Gephi</a></span><span>·</span>
   <span><a href="law_timeline.vl.json" download>spec Vega-Lite</a></span><span>·</span>
@@ -187,10 +187,19 @@ for(let gy=1996;gy<=2026;gy+=5){
   if(Math.abs(gy-1996-30.797)<1.2)continue;
   el.push({group:'nodes',data:{id:'grid'+gy,hh:RGBH},
     position:{x:X0+(gy-1996)*PX,y:RGMID},classes:'gridv',grabbable:false,selectable:false});
+  el.push({group:'nodes',data:{id:'gcap'+gy,hh:12},
+    position:{x:X0+(gy-1996)*PX,y:RGTOP+6},classes:'gridcap',grabbable:false,selectable:false});
 }
 el.push({group:'nodes',data:{id:'todayline',hh:RGBH},
   position:{x:X0+30.797*PX,y:RGMID},classes:'gridv todayline',grabbable:false,selectable:false});
+el.push({group:'nodes',data:{id:'tcap',hh:16},
+  position:{x:X0+30.797*PX,y:RGTOP+8},classes:'gridcap todaycap',grabbable:false,selectable:false});
 const MAXW=Math.max.apply(null,D.nodes.map(function(n){return X0+n.x*PX+(n.dx||0)}));
+D.lanes.forEach(function(cat,i){
+  el.push({group:'nodes',data:{id:'stem'+i,hh:1.4,sw:(MAXW+90)-(X0-64)},
+    position:{x:((X0-64)+(MAXW+90))/2,y:Y0+[0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0][i]*PY},classes:'lanestem',
+    grabbable:false,selectable:false});
+});
 el.push({group:'nodes',data:{id:'grdl',hh:2},position:{x:X0-96,y:RGMID-20},classes:'guardv',
   grabbable:false,selectable:false});
 el.push({group:'nodes',data:{id:'grdr',hh:2},position:{x:MAXW+70,y:RGMID+20},classes:'guardv',
@@ -220,7 +229,7 @@ el.push({group:'nodes',data:{id:'ticktoday',label:'Hôm nay'},
   grabbable:false,selectable:false});
 D.lanes.forEach(function(cat,i){
   el.push({group:'nodes',data:{id:'lane'+i,label:cat},
-    position:{x:X0-70,y:Y0+[0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0][i]*PY},classes:'lane',grabbable:false,selectable:false});
+    position:{x:X0-64,y:Y0+[0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0][i]*PY},classes:'lane',grabbable:false,selectable:false});
 });
 let cy=null;
 try{
@@ -232,7 +241,7 @@ window.__step='A-created';
 cy.style([
   {selector:'node',style:{'label':'data(label)','background-color':'data(color)',
     'width':'data(size)','height':'data(size)','font-size':10,'color':'#e6eaf0','text-valign':'bottom',
-    'font-family':'"Be Vietnam Pro"','text-halign':'center','text-margin-y':-6,'text-wrap':'wrap','text-max-width':96,
+    'font-family':'"Be Vietnam Pro"','text-halign':'center','text-margin-y':-6,'text-wrap':'wrap','text-max-width':88,
     'text-background-color':'rgba(10,13,18,.85)',
     'text-background-opacity':1,'text-background-padding':3,'text-background-shape':'roundrectangle',
     'border-width':1.5,'border-color':'rgba(230,238,247,.55)','overlay-padding':3,'min-zoomed-font-size':7}},
@@ -241,7 +250,7 @@ cy.style([
   {selector:'node.hidden',style:{'display':'none'}},
   {selector:'node.dim',style:{'opacity':0.14,'color':'#4a525c','border-width':1}},
   {selector:'node.gridv',style:{'label':'','width':1,'height':'data(hh)','shape':'rectangle',
-    'background-color':'rgba(230,238,247,.035)','border-width':0,'font-size':0}},
+    'background-color':'rgba(230,238,247,.075)','border-width':0,'font-size':0}},
   {selector:'node.todayline',style:{'background-color':'rgba(111,211,224,.22)'}},
   {selector:'node.guardv',style:{'label':'','width':1,'height':1,'background-color':'transparent','border-width':0,'font-size':0}},
   {selector:'node.tick',style:{'label':'data(label)','background-color':'transparent','border-width':0,
@@ -253,12 +262,18 @@ cy.style([
     'text-margin-x':0,'text-background-opacity':0,'width':2,'height':2,'font-weight':'500'}},
   {selector:'edge',style:{'curve-style':'bezier','width':1.4,'target-arrow-shape':'triangle',
     'target-arrow-color':'#62778c','line-color':'#62778c','line-style':'dashed',
-    'control-point-distances':['0%'],'control-point-weights':0.5,
+    'control-point-distances':['-14%'],'control-point-weights':0.5,
     'line-opacity':0.75,'target-arrow-opacity':0.75,'overlay-padding':4}},
-  {selector:'edge.ev-rep',style:{'width':2.6,'line-color':'#d9a441','target-arrow-color':'#d9a441','line-style':'solid','line-opacity':1}},
+  {selector:'edge.ev-rep',style:{'width':2.6,'line-color':'#d9a441','target-arrow-color':'#d9a441','line-style':'solid','control-point-distances':['0%'],'line-opacity':1}},
   {selector:'edge.ev-fut',style:{'line-color':'#5b6774','target-arrow-color':'#5b6774','width':1,'line-opacity':0.2,'target-arrow-opacity':0.2}},
   {selector:'edge.dim',style:{'line-opacity':0.08,'target-arrow-opacity':0.08}},
-  {selector:'edge.hidden',style:{'display':'none'}}
+  {selector:'edge.hidden',style:{'display':'none'}},
+  {selector:'node.lanestem',style:{'label':'','shape':'rectangle','width':'data(sw)','height':'data(hh)','background-color':'rgba(230,238,247,.05)','border-width':0,'font-size':0}},
+  {selector:'node.gridcap',style:{'label':'','shape':'rectangle','width':5,'height':'data(hh)','background-color':'rgba(230,238,247,.25)','border-width':0,'font-size':0}},
+  {selector:'node.todaycap',style:{'background-color':'rgba(111,211,224,.5)'}},
+  {selector:'node.fadehl',style:{'opacity':0.16}},
+  {selector:'edge.fadehl',style:{'line-opacity':0.07,'target-arrow-opacity':0.07}},
+  {selector:'node.hlfocus',style:{'border-width':2.5,'border-color':'rgba(217,164,65,.95)'}}
 ]);
 function fit(){return D.nodes.filter(function(n){return n.x<=state.cur-(D.yearMin-1996)})}
 function inNeigh(id){return !state.focus||id===state.focus||(adj[state.focus]||[]).includes(id)}
@@ -308,9 +323,13 @@ function showTip(html,x,y){TIP.innerHTML=html;TIP.style.opacity=1;
   const w=TIP.offsetWidth,hh=TIP.offsetHeight;
   TIP.style.left=(x+14+w>innerWidth?x-14-w:x+14)+'px';TIP.style.top=Math.min(y+14,innerHeight-hh-12)+'px'}
 function hideTip(){TIP.style.opacity=0}
-cy.on('mouseover','node.in',function(e){
-  const p=e.renderedPosition||e.cyEvent?null:null;
-  const ce=e.target,b=ce.boundingBox();
+function hlfOn(n){const nb=n.closedNeighborhood();
+  cy.batch(function(){cy.elements().removeClass('hlfocus fadehl');
+    nb.addClass('hlfocus');cy.elements().not(nb).addClass('fadehl')})}
+function hlfOff(){cy.batch(function(){cy.elements().removeClass('hlfocus fadehl')})}
+cy.on('mouseover','node',function(e){
+  const ce=e.target;if(!byId[ce.id()])return;
+  hlfOn(ce);const b=ce.boundingBox();
   showTip(fmtTipNode(byId[ce.id()]),(b.x1+b.x2)/2,b.y2);
 });
 cy.on('mouseover','edge',function(e){
@@ -318,9 +337,10 @@ cy.on('mouseover','edge',function(e){
   const r=e.target.renderedBoundingBox();
   showTip(fmtTipEdge(Object.assign({},d,{rel:d.rel})),(r.x1+r.x2)/2,r.y1);
 });
-cy.on('mouseout',function(e){hideTip()});
-cy.on('tap','node.in',function(e){
-  const n=byId[e.target.id()];
+cy.on('mouseout',function(e){hlfOff();hideTip()});
+cy.on('tap','node',function(e){
+  const ce=e.target;if(!byId[ce.id()])return;
+  const n=byId[ce.id()];
   state.focus=n.id;document.getElementById('search').value=n.name;
   openDrawer(n);renderCy();
 });

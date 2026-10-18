@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.2.6)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.2.7)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.2.6)
+## Composition (v1.2.7)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.2.6)
+### Per-law size table (chunk counts, v1.2.7)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,17 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.2.7:** interaction-and-axis polish release, zero content change
+  (no data/index/benchmark edits; retrieval metrics above remain the
+  frozen v1.2 measurement). Hovering any law now focuses its succession
+  neighborhood and dims everything else, restored cleanly on mouse-out;
+  amending (EXT) laws are now reachable for tooltips and the provenance
+  drawer exactly like ordinary laws (previously EXT nodes were inert on
+  hover/tap); the year guides gain top cap ticks and faint per-lane
+  band stems for structural reading; amendment edges render as gentle
+  arcs while succession lines stay straight through the time columns;
+  the top-left lane-title/older-label overlap is removed. Manifest
+  unchanged at **42 entries**; 12-statute sweep green on both mirrors.
 - **v1.2.6:** visual-refresh release, zero content change (no data/index/
   benchmark edits; retrieval metrics above remain the frozen v1.2
   measurement). The viewer's interface is rebuilt to publication-grade
