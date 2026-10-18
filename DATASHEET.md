@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.2.5)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.2.6)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.2.5)
+## Composition (v1.2.6)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.2.5)
+### Per-law size table (chunk counts, v1.2.6)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,22 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.2.6:** visual-refresh release, zero content change (no data/index/
+  benchmark edits; retrieval metrics above remain the frozen v1.2
+  measurement). The viewer's interface is rebuilt to publication-grade
+  typography: Google-Fonts **Be Vietnam Pro** (body) + **IBM Plex Mono**
+  (figures), flat "consultation ledger" palette, a slim masthead with a
+  vector brand mark, an inverse-contrast year seal, a single transport
+  bar (slider / play / 1x-2x speed), edge-type toggles and family chips
+  regrouped on the lane bar, and library names removed from the tab
+  captions ("Mạng kế thừa" / "Phổ thời gian"). Inside the canvas, the
+  offline label packing is upgraded to a near-full Cartesian lattice
+  with vertical-priority ordering (resolving rare pixel-exact
+  collisions between 2024-2025 amending-law labels), edge-of-canvas
+  guard nodes protect border labels from clipping, vertical time guides
+  are drawn behind the nodes, and the Vega-Lite timeline is re-themed
+  to the same palette. Manifest unchanged at **42 entries**; a
+  12-statute glyph/secret/JSON sweep runs green across both mirrors.
 - **v1.2.5:** visualization release, zero content change (no data/index/
   benchmark edits; retrieval metrics above remain the frozen v1.2
   measurement). The interactive release viewer is rebuilt on dedicated
