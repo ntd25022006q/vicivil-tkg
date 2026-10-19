@@ -217,7 +217,7 @@ footer .frow{max-width:1440px;margin:0 auto;padding:9px 22px;display:flex;gap:16
       <b id="st-gold">281</b> câu hỏi gold
     </span>
     <div class="top-links">
-      <span class="ver">v1.5.0</span>
+      <span class="ver">v1.5.1</span>
       <a href="https://github.com/ntd25022006q/vicivil-tkg" target="_blank">GitHub</a>
       <a href="law_graph.gexf" download>GEXF cho Gephi</a>
     </div>
@@ -251,11 +251,10 @@ footer .frow{max-width:1440px;margin:0 auto;padding:9px 22px;display:flex;gap:16
   <aside id="drawer" aria-label="Chi tiết văn bản"><div class="inner" id="dbody"></div></aside>
 </main>
 <footer><div class="frow">
-  <span>Thẻ dữ liệu v1.5.0</span><span>·</span>
+  <span>Thẻ dữ liệu v1.5.1</span><span>·</span>
   <span>Nguồn công báo chính thức</span><span>·</span>
   <span><a href="law_graph.gexf" download>GEXF 1.3 cho Gephi</a></span><span>·</span>
-  <span><a href="law_timeline.vl.json" download>spec Vega-Lite</a></span><span>·</span>
-  <span>đồ thị: AntV G6 — đều mã nguồn mở</span>
+  <span><a href="law_timeline.vl.json" download>spec Vega-Lite</a></span>
 </div></footer>
 <div class="tip" id="tip"></div>
 <script>
@@ -336,8 +335,8 @@ var edgesG6=D.edges.map(function(e,i){
       startArrowFill:rep?'#d9a441':'#62778c'}};
 });
 function g6data(){
-  return {nodes:chromeNodes.concat(nodesG6.map(function(n){return {id:n.id,data:{kind:'law',
-    full:n.full,name:n.name,sym:n.sym,ext:n.ext,fy:n.fromY,dy:n.deadY,ch:n.chunks,ci:n.cites,f:n.from,t:n.to,cat:n.cat,color:n.color},
+  return {nodes:chromeNodes.concat(nodesG6.map(function(n){var d=n.data;return {id:n.id,data:{kind:'law',
+    full:d.full,name:d.name,sym:d.sym,ext:d.ext,fy:d.fromY,dy:d.deadY,ch:d.chunks,ci:d.cites,f:d.from,t:d.to,cat:d.cat,color:d.color},
     style:n.style}})),edges:edgesG6};
 }
 var G6G=null;var G6READY=false;

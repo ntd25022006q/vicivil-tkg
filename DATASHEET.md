@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.0)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.1)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.5.0)
+## Composition (v1.5.1)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.5.0)
+### Per-law size table (chunk counts, v1.5.1)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,16 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.5.1:** fixes the hover tooltip. Each statute is handed to G6
+  wrapped as `{id, data, style}`, and the viewer's own mapper read the
+  law's fields off the wrapper instead of the wrapped record, so every
+  tooltip for a statute rendered empty values ("undefined" and
+  "undefined -> undefined"). The mapping now reads the record it wraps;
+  a hover on Bộ luật Dân sự 1995 shows its number 44-L/CTN, its
+  effective period 1996-07-01 to 2006-01-01 and its 890 chunks. The
+  footer's library-branding line is removed as well - the viewer no
+  longer advertises its own stack. Zero content change; manifest stays
+  at **47 entries**.
 - **v1.5.0:** the viewer now uses the open-source libraries through their
   documented APIs only. Every custom on-page diagnostic that earlier
   releases added - the loading mask, the corner status pill and the red
