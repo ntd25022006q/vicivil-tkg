@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.4.0)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.4.1)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.4.0)
+## Composition (v1.4.1)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.4.0)
+### Per-law size table (chunk counts, v1.4.1)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,23 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.4.1:** fixes the reported viewer stall. The external web-font
+  stylesheet was a render-blocking resource: on a network that drops or
+  black-holes `fonts.googleapis.com`, the browser blocks document parsing
+  on that request, the viewer script never executes, and the page sits on
+  "Đang nạp thư viбn đồ thị…" with no error to show. The stylesheet is now
+  loaded non-blocking (`media="print"` + `onload`), the standard pattern
+  for optional web fonts, so the viewer renders from its own inlined code
+  regardless of font availability; fonts are cosmetic only. Verified by
+  replaying the failure offline: with the font request held open
+  indefinitely, v1.4.0 never left `document.readyState = "loading"`
+  (parser blocked in `<head>`, zero scripts executed) while v1.4.1 draws
+  the full graph with 0 JS errors. The initialisation sequence now also
+  follows the library's documented contract - all element-state updates
+  happen after the promise returned by `graph.render()` resolves - and an
+  error watcher installed *before* the vendored libraries runs, so a
+  library that fails to parse can no longer fail silently. Zero content
+  change; manifest stays at **46 entries**.
 - **v1.4.0:** single-artifact release, zero content change (no
   data/index/benchmark edits; retrieval metrics above remain the frozen
   v1.2 measurement). The viewer becomes one fully self-contained file:
