@@ -1,7 +1,7 @@
 # ViCivil-TKG - Vietnamese Civil Law Temporal Knowledge Graph
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-![Release](https://img.shields.io/badge/release-v1.4.1-blue.svg)
+![Release](https://img.shields.io/badge/release-v1.4.2-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
 [![HuggingFace Dataset](https://img.shields.io/badge/HF-dataset-yellow.svg)](https://huggingface.co/datasets/datbazuka2502/vicivil-tkg)
 
@@ -41,7 +41,7 @@ A byte-level mirror of the four data folders is published on HuggingFace:
 with configs + loading snippets). `CITATION.cff` and the BibTeX block in
 the HF card cover attribution.
 
-## Quality gates in v1.2.5/v1.4.1
+## Quality gates in v1.2.5/v1.4.2
 
 - Official-source fidelity: 5 signed Cong-bao PDFs re-verified digit-by-digit
   (838/838, 110/110, 777/777, 78/78, 689/689 articles); the corrupted
@@ -75,6 +75,11 @@ the HF card cover attribution.
   banner (message + position + last init step) and a dismissible
   corner pill reports the self-test state (G6/vega loaded, graph
   initialized) - no silent blank pages remain.
+- v1.4.2 Chrome compatibility: the app script's top-level `const chrome`
+  collided with Google Chrome's built-in `window.chrome`, an early
+  `SyntaxError` that prevented the whole viewer from running. All
+  top-level bindings are now audited against browser globals, and a
+  regression probe emulates a non-configurable `window.chrome`.
 - v1.4.1 blocking-font fix: the optional Google-Fonts stylesheet no
   longer blocks document parsing (non-blocking `media="print"` pattern),
   and init follows G6's documented `render()` promise contract with an

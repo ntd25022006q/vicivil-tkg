@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.4.1)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.4.2)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.4.1)
+## Composition (v1.4.2)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.4.1)
+### Per-law size table (chunk counts, v1.4.2)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,21 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.4.2:** fixes the viewer in the Google Chrome browser. The app
+  script declared a top-level `const chrome` - the decorative background
+  elements - and Google Chrome exposes a global, non-removable
+  `window.chrome`. A `const` declaration colliding with such a global is
+  an early `SyntaxError` for the entire script block, so nothing in the
+  viewer ever ran and the page stalled on its loading mask. Every
+  top-level binding in the app script was audited against the globals
+  browsers define; this was the only collision. It is renamed
+  (`chromeNodes`), and the two shadowed helper functions that were being
+  silently overridden later in the same script were removed. Regression
+  coverage now runs against a build that defines a non-configurable
+  `window.chrome` before the app script, exactly as Chrome does: the
+  previous build fails that probe with the reported message, this build
+  renders the full graph with 0 JS errors. Zero content change; manifest
+  stays at **46 entries**.
 - **v1.4.1:** fixes the reported viewer stall. The external web-font
   stylesheet was a render-blocking resource: on a network that drops or
   black-holes `fonts.googleapis.com`, the browser blocks document parsing
