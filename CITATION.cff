@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "ViCivil-TKG: Vietnamese Civil Law Temporal Knowledge Graph"
-version: 1.5.1
+version: 1.5.2
 date-released: 2026-10-18
 authors:
   - family-names: "Nguyen"

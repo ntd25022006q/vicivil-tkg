@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.1)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.2)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.5.1)
+## Composition (v1.5.2)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.5.1)
+### Per-law size table (chunk counts, v1.5.2)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,16 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.5.2:** adds `docs/REPORT.md`, a full A-to-Z report with eleven
+  figures captured from the running artifact, covering the chunking and
+  labelling scheme, the three index layers, the knowledge graph, temporal
+  updates, retrieval evaluation, the difficulties met and five concrete
+  improvements. Fixes the detail drawer: as a flex item it was being
+  shrunk to a single pixel by the graph container, so the panel was
+  present in the DOM but invisible on screen; it now keeps its width and
+  the graph refits when it opens or closes. Manifest grows 47 -> 60
+  entries to cover the report, its figures and the operating protocol.
+  Zero content change.
 - **v1.5.1:** fixes the hover tooltip. Each statute is handed to G6
   wrapped as `{id, data, style}`, and the viewer's own mapper read the
   law's fields off the wrapper instead of the wrapped record, so every

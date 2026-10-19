@@ -164,11 +164,11 @@ datalist{color-scheme:dark}
 #tabbar{max-width:1440px;margin:0 auto;padding:8px 14px 0;display:flex;gap:18px;
   border-bottom:1px solid var(--line)}
 main{position:relative;display:flex}
-#viewwrap{flex:1;position:relative;height:78vh;min-height:560px}
+#viewwrap{flex:1 1 auto;position:relative;height:78vh;min-height:560px;min-width:0}
 #cy{position:absolute;inset:0}
 #tl{position:absolute;inset:0;background:#0a0d12;z-index:5;display:none;align-items:center;justify-content:center}
 #tl .vega-bind{color:#93a0ac}
-#drawer{width:0;transition:width .22s ease;overflow:hidden;background:rgba(17,22,28,.94);
+#drawer{width:0;flex:0 0 auto;transition:width .22s ease;overflow:hidden;background:rgba(17,22,28,.94);
   border-left:1px solid var(--line);position:relative}
 #drawer.open{width:352px;overflow-y:auto}
 #drawer .inner{width:352px;padding:18px 18px 26px}
@@ -217,7 +217,7 @@ footer .frow{max-width:1440px;margin:0 auto;padding:9px 22px;display:flex;gap:16
       <b id="st-gold">281</b> câu hỏi gold
     </span>
     <div class="top-links">
-      <span class="ver">v1.5.1</span>
+      <span class="ver">v1.5.2</span>
       <a href="https://github.com/ntd25022006q/vicivil-tkg" target="_blank">GitHub</a>
       <a href="law_graph.gexf" download>GEXF cho Gephi</a>
     </div>
@@ -251,7 +251,7 @@ footer .frow{max-width:1440px;margin:0 auto;padding:9px 22px;display:flex;gap:16
   <aside id="drawer" aria-label="Chi tiết văn bản"><div class="inner" id="dbody"></div></aside>
 </main>
 <footer><div class="frow">
-  <span>Thẻ dữ liệu v1.5.1</span><span>·</span>
+  <span>Thẻ dữ liệu v1.5.2</span><span>·</span>
   <span>Nguồn công báo chính thức</span><span>·</span>
   <span><a href="law_graph.gexf" download>GEXF 1.3 cho Gephi</a></span><span>·</span>
   <span><a href="law_timeline.vl.json" download>spec Vega-Lite</a></span>
@@ -455,13 +455,14 @@ function openDrawer(n){
   h+='<div class="dnote">'+(n.ext?'Văn bản sửa đổi bên ngoài — không đóng góp chunk vào corpus, giữ để minh họa dòng sửa đổi.':'Dữ liệu mở chunk thuộc pháp điển ViCivil-TKG; dẫn chiếu nội bộ đếm từ provenance/cite_edges.json.')+'</div>';
   const b=document.getElementById('dbody');b.innerHTML=h;
   document.getElementById('dclose').onclick=function(){closeDrawer()};
+  setTimeout(g6fix,260);
   b.querySelectorAll('.relrow').forEach(function(row){
     row.addEventListener('click',function(){const id=this.getAttribute('data-go');state.focus=id;
       document.getElementById('search').value=byId[id].name;openDrawer(byId[id]);renderCy();});
   });
 }
 function closeDrawer(){document.getElementById('drawer').classList.remove('open');
-  state.focus=null;renderCy()}
+  state.focus=null;renderCy();setTimeout(g6fix,260)}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer()});
 // ---- Controls ----
 function stopPlay(){if(state.timer){clearInterval(state.timer);state.timer=null;
