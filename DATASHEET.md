@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.4.2)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.0)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.4.2)
+## Composition (v1.5.0)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.4.2)
+### Per-law size table (chunk counts, v1.5.0)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,22 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.5.0:** the viewer now uses the open-source libraries through their
+  documented APIs only. Every custom on-page diagnostic that earlier
+  releases added - the loading mask, the corner status pill and the red
+  error banner - has been removed, so the page contains nothing but the
+  data and its controls; state changes follow the promise returned by
+  `graph.render()`, which is the library's own contract. Errors go to the
+  browser console as normal. To keep releases honest after the Chrome
+  incident, the browser checks were moved out of the page and into the
+  pre-release gate, which loads the artifact in bundled Chromium and in
+  the real Chrome and Edge binaries installed on the build machine and
+  fails the release on any error or missing canvas. A
+  `THIRD-PARTY-NOTICES.md` records the four vendored libraries, their
+  versions and licenses (G6 5.1.1 MIT; Vega 5.30.0, Vega-Lite 5.21.0,
+  vega-embed 6.26.0 BSD-3-Clause), plus the two optional OFL web fonts.
+  Manifest grows 46 -> 47 entries for the new notices file; zero content
+  change otherwise.
 - **v1.4.2:** fixes the viewer in the Google Chrome browser. The app
   script declared a top-level `const chrome` - the decorative background
   elements - and Google Chrome exposes a global, non-removable
