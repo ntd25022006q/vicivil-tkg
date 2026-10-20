@@ -7,3 +7,4 @@
 *.toc
 docs/report/report.pdf
 rel125.md
+runs/chunk_delta.jsonl
