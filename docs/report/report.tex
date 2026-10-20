@@ -27,10 +27,14 @@
 \usepackage{amsmath}
 \usepackage[hidelinks]{hyperref}
 \usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\definecolor{gold}{HTML}{B8860B}
+\definecolor{ink}{HTML}{1F3A52}
+\definecolor{muted}{HTML}{5A6570}
 
 \graphicspath{{figures/}}
 \XeTeXlinebreaklocale "vi"
-\captionsvietnamese{%
+\addto\captionsvietnamese{%
   \renewcommand{\listfigurename}{Danh mục hình}%
   \renewcommand{\listtablename}{Danh mục bảng}%
   \renewcommand{\tablename}{Bảng}%
@@ -76,34 +80,17 @@
 \vspace{0.3cm}
 {\large Khung tri thức thời gian của luật dân sự Việt Nam:\par}
 {\large dữ liệu mở, đồ thị có chiều thời gian và trình xem tra cứu pháp lý\par}
-\vspace{0.5cm}
+\vspace{0.45cm}
+{\color{ink}\rule{\linewidth}{0.9pt}\par}
+\vspace{0.35cm}
+{\footnotesize\color{muted}ViCivil-TKG \quad$\cdot$\quad phiên bản dữ liệu v1.6.0 \quad$\cdot$\quad tháng 10 năm 2026\par}
+\vspace{0.75cm}
 \end{center}
 
-\noindent
-\begin{tabular}{@{}p{4.2cm}p{10.4cm}@{}}
-\textbf{Mã đề tài} & \underline{\hspace{9.8cm}} \\[0.3cm]
-\textbf{Người thực hiện} & \underline{\hspace{9.8cm}} \\[0.3cm]
-\textbf{Đơn vị công tác} & \underline{\hspace{9.8cm}} \\[0.3cm]
-\textbf{Người hướng dẫn} & \underline{\hspace{9.8cm}} \\[0.3cm]
-\textbf{Thời gian thực hiện} & \underline{\hspace{9.8cm}} \\[0.3cm]
-\end{tabular}
-
-\vspace{0.3cm}
-\noindent
-\begin{tabular}{@{}p{4.2cm}p{10.4cm}@{}}
-\textbf{Kho mã nguồn} & \texttt{github.com/ntd25022006q/vicivil-tkg} \\
-\textbf{Gương phát hành} & \texttt{huggingface.co/datasets/datbazuka2502/vicivil-tkg} \\
-\textbf{Trang xem trực tuyến} & \texttt{ntd25022006q.github.io/vicivil-tkg/graph/explorer.html} \\
-\textbf{Phiên bản dữ liệu} & v1.6.0 (ngày 20/10/2026) \\
-\end{tabular}
-
-\vspace{0.4cm}
-\noindent{\footnotesize Mọi hình trong báo cáo này là ảnh chụp trực tiếp từ trang xem đang chạy
-hoặc biểu đồ vẽ từ tệp kết quả trong kho. Mọi con số đều lấy từ tệp dữ liệu và có thể mở
-kiểm tra trực tiếp.}
-
 % ======================= TOM TAT =======================
-\chapter*{TÓM TẮT}
+\vspace{0.5cm}
+{\large\bfseries\color{ink}TÓM TẮT\par}
+\vspace{0.25cm}
 \addcontentsline{toc}{chapter}{Tóm tắt}
 
 Luật dân sự Việt Nam không tồn tại trong một bản duy nhất. Bộ luật Dân sự 1995 bị thay bằng
@@ -115,23 +102,27 @@ còn có hiệu lực}.
 Công trình này xây dựng một bộ dữ liệu mở trả lời được câu hỏi đó. Từ sáu tệp PDF công báo
 chính thức, bộ luật được cắt thành 11.267 đoạn văn bản theo cấu trúc pháp lý (Điều --- Khoản ---
 Điểm), mỗi đoạn mang một mã ổn định để dùng lại được. Trên nền đó, dựng một đồ thị tri thức
-gồm 33 văn bản và 21 quan hệ có nhãn, mỗi văn bản có khoảng hiệu lực; xây bộ 281 câu hỏi có
-đáp án để đo chất lượng truy hồi; và dựng một trang xem để người đọc tự kiểm chứng bằng mắt.
+gồm 33 văn bản và 21 quan hệ có nhãn, mỗi văn bản có khoảng hiệu lực; xuất đồ thị ra định dạng
+RDF và JSON-LD để nạp vào kho tri thức chuẩn; lập chỉ mục 10.215 đơn vị điều khoản để tra cứu
+được ở mức Điều; xây bộ 281 câu hỏi có đáp án để đo chất lượng truy hồi; và dựng một trang xem để
+người đọc tự kiểm chứng bằng mắt.
 
 Kết quả đo trên 281 câu hỏi: tỉ lệ tìm đúng trong lần thứ nhất là 0,452; trong ba lần là
 0,658; trong năm lần là 0,726; trong mười lần là 0,794; độ tin cậy tổng hợp là 0,569. Trên
-245 câu đã được tác giả xác minh, tỉ lệ tìm đúng trong lần thứ nhất là 0,502. Báo cáo cũng chỉ
-ra rõ những phần còn thiếu: dữ liệu chưa xuất ở định dạng RDF/JSON-LD, đồ thị mới dừng ở cấp văn
-bản, và một phần chênh lệch điểm số là do chính thang đo chấm điểm chưa chấp nhận nhiều đáp án
-đúng tương đương.
+245 câu đã được tác giả xác minh, tỉ lệ tìm đúng trong lần thứ nhất là 0,502. Bộ kết quả được
+đo lại theo ba cách chấm để tách phần sai của thang đo khỏi phần sai của hệ thống. Ba việc còn
+lại đều cần GPU: ván lại nhóm câu hỏi chưa xác minh được, số hoá các văn bản còn ở dạng ảnh, và
+bổ sung văn bản chưa có trong kho.
 
 \textbf{Từ khóa:} luật dân sự; tri thức thời gian; dữ liệu mở; tra cứu pháp lý; truy hồi thông tin;
 mã hoá văn bản; đồ thị tri thức.
 
 \setcounter{tocdepth}{2}
-\setlength{\cftbeforesecskip}{1.5pt}
+\setlength{\cftbeforesecskip}{0.5pt}
+\begingroup\footnotesize
 \tableofcontents
-\clearpage
+\endgroup
+\vspace{10pt}
 \listoffigures
 \vspace{6pt}
 \listoftables
@@ -504,6 +495,7 @@ Thư viện vẽ chạy sai trên một số trình duyệt & trang trắng, kh�
 \end{table}
 
 \section{Những gì đã làm thêm và những gì còn lại}
+\enlargethispage{2\baselineskip}
 Bốn hạn chế được nêu ở các phiên bản trước đã được xử lý trong phiên bản này, đều bằng công
 cụ mở và không cần GPU:
 
@@ -520,23 +512,19 @@ ghi phần delta và hợp nhất vào kho, chỉ cần mã hoá cho phần mớ
 thử chạy trên máy tính toán và tách được chunk mới mà không dùng GPU.
 \end{itemize}
 
-Còn lại, và đều cần GPU nên chưa làm được trong phiên này:
-\begin{enumerate}
-\item Ván lại nhóm 32 câu hỏi bằng mô hình chấm điểm (cần suy luận).
-\item Số hoá các văn bản còn ở dạng ảnh (cần OCR).
-\item Bổ sung văn bản chưa có trong kho.
-\end{enumerate}
+Ba việc còn lại đều cần GPU: ván lại 32 câu hỏi bằng mô hình chấm điểm, số hoá văn bản dạng ảnh, và bổ sung văn bản mới.
 \chapter{Kết luận}
 Công trình đã dựng được một bộ dữ liệu mở cho luật dân sự Việt Nam có chiều thời gian, gồm
 11.267 chunk đã gán mã, một đồ thị tri thức 33 văn bản với 21 quan hệ có nhãn, một bộ 281 câu hỏi
 có đáp án kèm kết quả đo công khai, và một trình xem một tệp chạy được offline. Chất lượng truy
 hồi đạt Hit@5 = 0,726 trên toàn bộ tập và 0,731 trên tập 245 câu đã xác minh.
 
-Phần còn thiếu đã được nêu rõ và có hướng xử lý: chưa xuất định dạng RDF/JSON-LD và chưa cấp DOI;
-đồ thị mới dừng ở cấp văn bản; và phần chênh lệch điểm số còn phần lớn do thang đo chấm
-chưa chấp nhận nhiều đáp án tương đương. Hướng ưu tiên ngắn hạn là xuất RDF/JSON-LD và đưa đoạn
-văn bản lên đồ thị, vì hai việc này trả lời trực tiếp các câu hỏi mà một người đọc đặt ra khi
-kiểm tra tính đúng đắn của bộ dữ liệu.
+Ở phiên bản này, bốn việc được nêu là hạn chế ở các phiên bản trước đã làm xong: đồ thị được
+xuất thêm ra RDF và JSON-LD, có chỉ mục 10.215 đơn vị điều khoản để tra cứu ở mức Điều, thang đo
+được đo lại theo ba cách để tách lỗi của phép chấm khỏi lỗi của hệ thống, và có pipeline tăng dần
+để thêm văn bản mới mà không chạy lại toàn bộ. Phần còn lại đã được nêu rõ: chưa cấp DOI cho từng
+phiên bản, cần số hoá các văn bản còn ở dạng ảnh, và cần một mô hình chấm điểm để ván lại nhóm
+câu hỏi chưa xác minh được. Ba việc sau cùng đều cần GPU, nên được ghi lại thay vì làm dở.
 
 % ======================= TAI LIEU THAM KHAO =======================
 \addcontentsline{toc}{chapter}{Tài liệu tham khảo}
@@ -561,7 +549,7 @@ kiểm tra tính đúng đắn của bộ dữ liệu.
 \midrule
 Chia file bộ luật thành các chunk & Chương 2 & 11.267 chunk theo Điều/Khoản/Điểm, mã ổn định \\
 Lưu trữ thành cơ sở dữ liệu các chunk có nhãn & Chương 2 & Ba tầng chỉ mục: tra theo mã, theo nghĩa, theo quan hệ \\
-Chia sẻ chunk và node & Chương 4 & GEXF 1.3 mở bằng Gephi, mã chunk dùng chung được --- còn thiếu RDF và DOI \\
+Chia sẻ chunk và node & Chương 4 & GEXF 1.3 mở bằng Gephi, RDF và JSON-LD cho kho tri thức chuẩn, mã chunk dùng chung được --- còn thiếu DOI \\
 Xây dựng đồ thị tri thức & Chương 3 & 33 nút, 21 cạnh có nhãn và mốc thời gian \\
 Cập nhật theo đồ thị động & Chương 3 & Thanh thời gian: năm 2012 có 4 luật, năm 2026 có 14 luật \\
 Cập nhật thời gian & Chương 3 & Mỗi luật có khoảng hiệu lực; tự kiểm ở ba mốc thời gian \\
@@ -600,7 +588,7 @@ Nêu khó khăn và đề xuất cải tiến & Chương 6 & Sáu khó khăn, n�
 \toprule
 \textbf{Kiểm tra} & \textbf{Kết quả} \\
 \midrule
-Mã SHA-256 của mọi tệp & 84/84 khớp; hai gương giống nhau (trừ README vì chính sách khác nhau) \\
+Mã SHA-256 của mọi tệp & 123/123 khớp; hai gương giống nhau (trừ README vì chính sách khác nhau) \\
 Quét chữ ẩn, khoá bí mật & Không phát hiện \\
 Mọi tệp JSON/JSONL/GEXF mở được & Có \\
 Chạy trên Chrome thật và Edge thật & Không có lỗi JavaScript \\

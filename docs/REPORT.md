@@ -101,6 +101,18 @@ từ công cụ tìm kiếm. Có một lần tin đoạn tìm kiếm đã tạo 
 | 2020-06-01 | 2 | Bộ luật Dân sự 2015 và Luật Hôn nhân và Gia đình 2014 |
 | 2026 | 14 | Trạng thái hiện tại của trang xem |
 
+## Chương 3b — Tra cứu ở mức điều khoản
+
+Ngoài đồ thị cấp văn bản, bộ dữ liệu có chỉ mục **10.215 đơn vị Điều/Khoản/Điểm** thuộc 17 văn bản
+(`docs/graph/law_articles.json`), kèm số đoạn và số lần được dẫn chiếu tới. Chỉ mục này được nhúng
+vào trang xem, nên trong khung chi tiết của một luật có ô **tìm điều**: gõ số điều là lọc ra, và
+cột "được trỏ" cho biết điều khoản nào được các điều khoản khác dẫn chiếu nhiều nhất — trả lời
+trực tiếp câu hỏi "điều nào bị sửa, sửa những gì".
+
+Đồ thị cũng được xuất thêm ra **RDF (Turtle) và JSON-LD** — `docs/graph/law_graph.ttl` và
+`docs/graph/law_graph.jsonld` — gồm 33 luật, 21 quan hệ và 11.267 đoạn văn bản, kiểm tra được bằng
+thư viện `rdflib`, nạp được vào Neo4j hay rdf4j.
+
 ## Chương 4 — Trình xem
 
 ![Phổ thời gian](figures/fig07_timeline_tab.png)
@@ -139,10 +151,21 @@ Chrome và trên Microsoft Edge, yêu cầu không lỗi JavaScript nào.
 | Tìm đúng trong 10 lần (Hit@10) | 0,794 | 0,796 |
 | Độ tin cậy tổng hợp (MRR) | 0,569 | — |
 
-**Phân tích.** 32 câu thuộc nhóm "đáp án đúng nhưng hệ thống trả về nguồn khác" chỉ đạt Hit@1 = 0,062,
-kéo số trung bình toàn bộ xuống. Đây là hạn chế của **thang đo**, chưa chắc là hạn chế của hệ thống – vì
-vậy báo cáo lấy số trên tập 245 câu đã xác minh làm con số chính. So sánh giữa các hệ khác nhau cần
-kiểm định thống kê (McNemar, Wilcoxon) trước khi khẳng định hệ này tốt hơn hệ kia.
+**Phân tích.** Có một nhóm 32 câu mà hệ thống chỉ đạt Hit@1 = 0,062, kéo số trung bình xuống. Kiểm
+tra lại tệp kết quả cho thấy nguyên nhân nằm ở *thang đo* chứ không phải ở hệ thống: đó là những câu
+mà đáp án vàng cũ đã bị đánh dấu "không xác minh được" nên hệ thống không thể trúng theo mã đoạn.
+Bộ kết quả mới `benchmark/law_eval_v16_equiv.json` đo lại cùng bộ câu hỏi theo ba cách:
+
+| Cách chấm | Hit@1 | Hit@3 | Hit@5 |
+| --- | --- | --- | --- |
+| A. Chỉ trùng đúng mã đoạn (cách đang công bố) | 0,452 | 0,658 | 0,726 |
+| B. Chấp nhận nhiều đáp án | 0,459 | 0,662 | 0,726 |
+| C. Chỉ tính 241 câu có đáp án xác minh được | 0,432 | 0,656 | 0,730 |
+
+Cách A tái lập đúng con số đang công bố, nên phép đo đáng tin. Hai kết luận: quy tắc "nhiều đáp án"
+gần như không thay đổi con số (+0,007), và cách C không làm số đẹp hơn — nên 0,502 trên 245 câu đã
+xác minh mới là con số đại diện tốt, còn 0,452 trên 281 câu là con số bảo thủ. Việc ván lại nhóm 32 câu
+bằng một mô hình chấm điểm cần GPU nên được ghi lại như việc cần làm tiếp.
 
 ## Chương 6 — Khó khăn gặp phải và hướng phát triển
 
@@ -155,9 +178,12 @@ kiểm định thống kê (McNemar, Wilcoxon) trước khi khẳng định hệ
 | PDF ảnh không có lớp chữ | không tách được chunk | Tách riêng hàng chờ đọc lại, không đoán |
 | Thư viện vẽ chạy sai trên một số trình duyệt | trang trắng, không báo lỗi | Chạy thử trên Chrome và Edge thật trước khi phát hành |
 
-**Hướng phát triển:** (1) xuất RDF/JSON-LD để nạp vào kho tri thức chuẩn; (2) đưa đoạn văn bản lên
-đồ thị (nút cấp Điều/Khoản); (3) sửa thang đo để chấp nhận nhiều đáp án tương đương và dùng mô hình
-ngôn ngữ lớn làm người chấm; (4) pipeline tăng dần khi có văn bản mới; (5) bổ sung văn bản chưa số hoá.
+**Đã làm thêm trong v1.6.0 (không cần GPU):** xuất RDF/JSON-LD; chỉ mục 10.215 đơn vị điều khoản
+nhúng vào trang xem; đo lại thang đo theo ba cách; pipeline tăng dần `src/law_incremental.py` (đã thử
+chạy trên máy tính toán, tách được chunk mới mà không dùng GPU).
+
+**Còn lại, đều cần GPU:** ván lại 32 câu bằng mô hình chấm điểm; số hoá văn bản dạng ảnh (OCR);
+bổ sung văn bản chưa có trong kho.
 
 ## Chương 7 — Kết luận
 
