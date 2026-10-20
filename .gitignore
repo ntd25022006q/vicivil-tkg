@@ -1,7 +1,8 @@
-__pycache__/
-*.pyc
-*.pyo
-.ipynb_checkpoints/
+# LaTeX build artefacts
+*.aux
+*.lof
 *.log
-.DS_Store
-Thumbs.db
+*.lot
+*.out
+*.toc
+docs/report/report.pdf
