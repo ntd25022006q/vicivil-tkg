@@ -27,6 +27,10 @@ cannot.
   ([`docs/graph/law_timeline.vl.json`](docs/graph/law_timeline.vl.json))
   rendered by Vega/vega-embed in the same page.
 
+- **Project report** - typeset with XeLaTeX, 23 pages:
+  [`docs/report/ViCivil-TKG_bao-cao.pdf`](docs/report/ViCivil-TKG_bao-cao.pdf),
+  source [`docs/report/report.tex`](docs/report/report.tex).
+
 ## Repository layout
 
 | folder | content |
@@ -82,7 +86,7 @@ the HF card cover attribution.
   an incremental pipeline for adding new statutes; the report is
   retypeset with no blank page.
 - v1.5.5 research-report layout: the report is typeset as a standard
-  25-page research report (title page, abstract and keywords, contents,
+  23-page research report (title page, abstract and keywords, contents,
   lists of figures and tables, seven chapters, references, appendices) and
   every figure is a screenshot of the running viewer or a chart drawn from
   the committed data files; the hand-built illustrations are removed.
@@ -97,7 +101,7 @@ the HF card cover attribution.
   illustrations are screenshots taken from the committed files, with a
   caption and an appendix naming the tool and the source for every
   figure; the prose is simplified for a general reader.
-- v1.5.2 report + drawer fix: `docs/REPORT.md` documents the whole
+- v1.5.2 report + drawer fix: the report documents the whole
   pipeline with figures taken from the running artifact; the detail
   drawer was being flex-shrunk to 1 px and was therefore invisible,
   and the graph now refits when it opens. Manifest 47 -> 60 entries.

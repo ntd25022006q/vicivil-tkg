@@ -194,6 +194,10 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.6.2:** the report is delivered as a single typeset PDF built from
+  `docs/report/report.tex`; the intermediate Markdown copy and the Word
+  version are removed, so the LaTeX source is the only thing to edit and
+  the PDF the only thing to read. 23 pages, no empty page.
 - **v1.6.0:** four of the limitations listed in earlier versions are
   closed, all with open-source tooling and without using the GPU. The
   knowledge graph is now exported as RDF/JSON-LD
@@ -213,7 +217,7 @@ map object ids to their referenced `chunk_ids`.
   chunk delta without touching the GPU. The report is retypeset (25
   pages) and no page is left blank. Zero change to the data itself.
 - **v1.5.5:** the report is rewritten as a standard research report
-  (25 pages, A4, Times New Roman, XeLaTeX): title page with the fields a
+  (23 pages, A4, Times New Roman, XeLaTeX): title page with the fields a
   submission needs, abstract with keywords, table of contents, list of
   figures, list of tables, seven chapters, references and three
   appendices. The hand-built illustrations are dropped; every figure is
@@ -242,7 +246,7 @@ map object ids to their referenced `chunk_ids`.
   all eleven figures with the tool and the source file for each. The
   wording is simplified for a non-specialist reader. Manifest grows 60 ->
   62 entries (two Mermaid sources); zero content change.
-- **v1.5.2:** adds `docs/REPORT.md`, a full A-to-Z report with eleven
+- **v1.5.2:** adds the report, a full A-to-Z write-up with eleven
   figures captured from the running artifact, covering the chunking and
   labelling scheme, the three index layers, the knowledge graph, temporal
   updates, retrieval evaluation, the difficulties met and five concrete
