@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.4)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.5)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.5.4)
+## Composition (v1.5.5)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.5.4)
+### Per-law size table (chunk counts, v1.5.5)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,16 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.5.5:** the report is rewritten as a standard research report
+  (25 pages, A4, Times New Roman, XeLaTeX): title page with the fields a
+  submission needs, abstract with keywords, table of contents, list of
+  figures, list of tables, seven chapters, references and three
+  appendices. The hand-built illustrations are dropped; every figure is
+  now either a screenshot of the running viewer or a chart rendered from
+  the committed data files. The two evaluation charts are redrawn with a
+  print layout (white background, serif type) so they read well on paper.
+  Manifest 84 -> 78 entries after removing the superseded illustrations.
+  Zero content change.
 - **v1.5.4:** the report is now also published as a typeset PDF
   (`docs/report/ViCivil-TKG_bao-cao.pdf`, 13 pages, A4), built from
   `docs/report/report.tex` with XeLaTeX; the source is kept so the

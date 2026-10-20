@@ -1,280 +1,305 @@
 % !TeX program = xelatex
-%% Báo cáo ViCivil-TKG - bản PDF chuyên nghiệp
-%% Biên dịch: xelatex report.tex (2 lần) ; font: Arial/Consolas (hỗ trợ đầy đủ dấu tiếng Việt)
-\documentclass[11pt,a4paper]{article}
+%% Báo cáo NCKH - ViCivil-TKG
+%% Bien dich: xelatex report.tex (2 lan) | Font: Times New Roman (day du dau tieng Viet)
+\documentclass[12pt,a4paper]{report}
 
 \usepackage{fontspec}
-\setmainfont{Arial}
+\setmainfont{Times New Roman}
 \setsansfont{Arial}
-\setmonofont{Consolas}[Scale=0.92]
+\setmonofont{Consolas}[Scale=0.9]
 \usepackage{polyglossia}
 \setdefaultlanguage{vietnamese}
 
-\usepackage[top=2.4cm,bottom=2.2cm,left=2.4cm,right=2.4cm]{geometry}
-\usepackage{xcolor}
-\usepackage{graphicx}
+\usepackage[left=3cm,right=2cm,top=2.2cm,bottom=2.2cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{setspace}\setstretch{1.3}
+\usepackage{indentfirst}
+\usepackage{caption}
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{longtable}
-\usepackage{caption}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
-\usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
-\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
 \usepackage[most]{tcolorbox}
 
 \graphicspath{{figures/}}
+\XeTeXlinebreaklocale "vi"
+\captionsvietnamese{%
+  \renewcommand{\listfigurename}{Danh mục hình}%
+  \renewcommand{\listtablename}{Danh mục bảng}%
+  \renewcommand{\tablename}{Bảng}%
+  \renewcommand{\figurename}{Hình}%
+}
 
-\definecolor{gold}{HTML}{B8860B}
-\definecolor{ink}{HTML}{1F3A52}
-\definecolor{muted}{HTML}{5A6570}
-\definecolor{rule}{HTML}{D8DEE6}
-\definecolor{panel}{HTML}{F4F6F8}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{2pt}
 
-\captionsetup{font=small,labelfont={bf,color=ink},labelsep=period,skip=6pt}
-\captionsetup[table]{position=top}
+\captionsetup{font=small,labelfont=bf,labelsep=period,skip=6pt}
+\captionsetup[table]{position=top,skip=4pt}
+\captionsetup[figure]{position=bottom,skip=6pt}
 
-\titleformat{\section}{\Large\bfseries\color{ink}}{\thesection}{0.7em}{}
-\titleformat{\subsection}{\large\bfseries\color{ink}}{\thesubsection}{0.6em}{}
-\titlespacing*{\section}{0pt}{18pt}{8pt}
-\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}{Chương \thechapter}{0.6ex}{\titlerule\vspace{0.8ex}}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.7em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.7em}{}
+\titlespacing*{\chapter}{0pt}{-30pt}{18pt}
 
 \pagestyle{fancy}
 \fancyhf{}
 \setlength{\headheight}{15pt}
-\fancyhead[L]{\footnotesize\color{muted}ViCivil-TKG --- Báo cáo kỹ thuật v1.5.4}
-\fancyhead[R]{\footnotesize\color{muted}\thepage}
+\fancyhead[L]{\footnotesize ViCivil-TKG --- Báo cáo nghiên cứu}
+\fancyhead[R]{\footnotesize \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\headrule}{\hbox to\headwidth{\color{rule}\leaders\hrule height \headrulewidth\hfill}}
 
-\setlist[itemize]{leftmargin=1.3em,itemsep=2pt,topsep=3pt}
-\setlist[enumerate]{leftmargin=1.6em,itemsep=2pt,topsep=3pt}
-\renewcommand{\arraystretch}{1.22}
+\setlist[itemize]{leftmargin=1.5em,itemsep=2pt,topsep=4pt}
+\setlist[enumerate]{leftmargin=1.8em,itemsep=2pt,topsep=4pt}
+\renewcommand{\arraystretch}{1.25}
 
-\newtcolorbox{keybox}[1][]{colback=panel,colframe=rule,boxrule=0.5pt,arc=2pt,
-  left=6pt,right=6pt,top=5pt,bottom=5pt,#1}
-\newcommand{\src}[1]{\textcolor{muted}{\footnotesize Nguồn: #1}}
+\newtcolorbox{keybox}[1][]{colback=black!2,colframe=black!25,boxrule=0.4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,#1}
 
 \begin{document}
 
-% ============================== TRANG BÌA ==============================
+% ======================= TRANG BIA =======================
 \begin{titlepage}
 \centering
-\vspace*{1.2cm}
-{\color{gold}\rule{\linewidth}{1.2pt}}\\[6pt]
-{\footnotesize\color{muted}\MakeUppercase{Báo cáo kỹ thuật --- phiên bản dữ liệu v1.5.4}}\\[10pt]
-{\Huge\bfseries\color{ink} ViCivil-TKG\par}
-\vspace{6pt}
-{\Large Khung tri thức thời gian của luật dân sự Việt Nam\par}
-\vspace{4pt}
-{\large\color{gold} Dữ liệu mở, đồ thị có chiều thời gian và trình xem mở}\par
+\vspace*{0.6cm}
+{\large\bfseries BÁO CÁO NGHIÊN CỨU\par}
+\vspace{0.3cm}
+{\normalsize ĐỀ TÀI\par}
 \vspace{1.2cm}
-{\color{gold}\rule{0.55\linewidth}{0.8pt}}\\[14pt]
 
-\begin{minipage}{0.86\linewidth}\centering\small
-\begin{tabular}{@{}ll@{}}
-\toprule
-Văn bản luật trong kho & 17 văn bản (kèm 16 văn bản sửa đổi bên ngoài) \\
-Đoạn văn bản cắt nhỏ (chunk) & 11.267 \\
-Văn bản trong đồ thị / quan hệ & 33 / 21 \\
-Câu hỏi kiểm tra & 281 \\
-Phần mềm dùng & 4 thư viện mở, không CDN, không cần cài đặt \\
-\bottomrule
+{\LARGE\bfseries KHUNG TRI THỨC THỜI GIAN\\ CỦA LUẬT DÂN SỰ VIỆT NAM\par}
+\vspace{0.5cm}
+{\large\large (ViCivil-TKG): dữ liệu mở, đồ thị có chiều thời gian\\ và trình xem tra cứu pháp lý\par}
+
+\vspace{1.4cm}
+\begin{tabular}{@{}p{4.4cm}p{9.2cm}@{}}
+\textbf{Mã đề tài} & \underline{\hspace{8.6cm}} \\[0.45cm]
+\textbf{Người thực hiện} & \underline{\hspace{8.6cm}} \\[0.45cm]
+\textbf{Đơn vị công tác} & \underline{\hspace{8.6cm}} \\[0.45cm]
+\textbf{Người hướng dẫn} & \underline{\hspace{8.6cm}} \\[0.45cm]
+\textbf{Thời gian thực hiện} & \underline{\hspace{8.6cm}} \\[0.45cm]
 \end{tabular}
-\end{minipage}
 
 \vfill
-\begin{minipage}{0.86\linewidth}\small
-\begin{tabular}{@{}ll@{}}
-\toprule
-Kho mã & \texttt{github.com/ntd25022006q/vicivil-tkg} \\
-Gương phát hành & \texttt{huggingface.co/datasets/datbazuka2502/vicivil-tkg} \\
-Trang xem trực tuyến & \texttt{ntd25022006q.github.io/vicivil-tkg/graph/explorer.html} \\
-Ngày lập & 20/10/2026 \\
-\bottomrule
+\begin{tabular}{@{}p{4.4cm}p{9.2cm}@{}}
+\textbf{Kho mã nguồn} & \texttt{github.com/ntd25022006q/vicivil-tkg} \\
+\textbf{Gương phát hành} & \texttt{huggingface.co/datasets/datbazuka2502/vicivil-tkg} \\
+\textbf{Trang xem trực tuyến} & \texttt{ntd25022006q.github.io/vicivil-tkg/graph/explorer.html} \\
+\textbf{Phiên bản dữ liệu} & v1.5.5 \quad (ngày 20/10/2026) \\
 \end{tabular}
-\end{minipage}
 
-\vspace{1cm}
-{\footnotesize\color{muted}
-Mọi hình trong báo cáo này là ảnh chụp từ trang đang chạy, ảnh chụp nguyên văn từ tệp trong kho,
-hoặc sơ đồ vẽ bằng công cụ Mermaid (mã nguồn nằm trong kho). Mọi con số đều lấy từ tệp dữ liệu
-và có thể mở kiểm tra trực tiếp.}
+\vspace{0.8cm}
+{\footnotesize Mọi hình trong báo cáo này là ảnh chụp trực tiếp từ trang xem đang chạy
+hoặc biểu đồ vẽ từ tệp kết quả trong kho. Mọi con số đều lấy từ tệp dữ liệu và
+có thể mở kiểm tra trực tiếp.}
 \end{titlepage}
 
-% ============================== TÓM TẮT ==============================
-\section*{Tóm tắt}
-\addcontentsline{toc}{section}{Tóm tắt}
+% ======================= TOM TAT =======================
+\chapter*{TÓM TẮT}
+\addcontentsline{toc}{chapter}{Tóm tắt}
 
-Luật dân sự Việt Nam không có một bản duy nhất: Bộ luật Dân sự 1995 bị thay bằng bản 2005,
-bản 2005 bị thay bằng bản 2015, và các luật chuyên ngành hôn nhân gia đình, tố tụng, thừa tụng
-liên tục sửa đổi lẫn nhau. Khi tra cứu, câu hỏi đầu tiên không phải ``điều khoản nào nói về
-điều này'' mà là \emph{vào thời điểm đó, điều khoản nào còn có hiệu lực}.
+Luật dân sự Việt Nam không tồn tại trong một bản duy nhất. Bộ luật Dân sự 1995 bị thay bằng
+bản 2005, bản 2005 bị thay bằng bản 2015; các luật chuyên ngành hôn nhân và gia đình, tố tụng,
+thừa tụng liên tục sửa đổi lẫn nhau. Vì vậy, khi tra cứu một vấn đề pháp lý, câu hỏi đầu tiên
+không phải là ``điều khoản nào nói về điều này'' mà là \emph{vào thời điểm đó, điều khoản nào
+còn có hiệu lực}.
 
-Công trình này dựng một bộ dữ liệu trả lời được câu hỏi đó, gồm bốn phần: kho 11.267 đoạn
-văn bản đã cắt nhỏ và gán mã ổn định; đồ thị tri thức 33 văn bản với 21 quan hệ có mốc thời gian;
-bộ 281 câu hỏi để đo chất lượng truy hồi; và một trang xem để kiểm chứng bằng mắt. Trang xem chạy
-được hoàn toàn khi mất mạng, không cần cài đặt.
+Công trình này xây dựng một bộ dữ liệu mở trả lời được câu hỏi đó. Từ sáu tệp PDF công báo
+chính thức, bộ luật được cắt thành 11.267 đoạn văn bản theo cấu trúc pháp lý (Điều --- Khoản ---
+Điểm), mỗi đoạn mang một mã ổn định để dùng lại được. Trên nền đó, dựng một đồ thị tri thức
+gồm 33 văn bản và 21 quan hệ có nhãn, mỗi văn bản có khoảng hiệu lực; xây bộ 281 câu hỏi có
+đáp án để đo chất lượng truy hồi; và dựng một trang xem để người đọc tự kiểm chứng bằng mắt.
 
-Kết quả đo trên 281 câu hỏi có đáp án: tỉ lệ tìm đúng trong 1 lần là 0,452; trong 3 lần là 0,658;
-trong 5 lần là 0,726; trong 10 lần là 0,794; độ tin cậy tổng hợp 0,569. Trên 245 câu đã được tác
-giả xác minh, tỉ lệ tìm đúng trong 1 lần là 0,502.
+Kết quả đo trên 281 câu hỏi: tỉ lệ tìm đúng trong lần thứ nhất là 0,452; trong ba lần là
+0,658; trong năm lần là 0,726; trong mười lần là 0,794; độ tin cậy tổng hợp là 0,569. Trên
+245 câu đã được tác giả xác minh, tỉ lệ tìm đúng trong lần thứ nhất là 0,502. Báo cáo cũng chỉ
+ra rõ những phần còn thiếu: dữ liệu chưa xuất ở định dạng RDF/JSON-LD, đồ thị mới dừng ở cấp văn
+bản, và một phần chênh lệch điểm số là do chính thang đo chấm điểm chưa chấp nhận nhiều đáp án
+đúng tương đương.
+
+\textbf{Từ khóa:} luật dân sự; tri thức thời gian; dữ liệu mở; tra cứu pháp lý; truy hồi thông tin;
+mã hoá văn bản; đồ thị tri thức.
 
 \tableofcontents
 \clearpage
+\listoffigures
+\addcontentsline{toc}{section}{Danh mục hình}
+\listoftables
+\addcontentsline{toc}{section}{Danh mục bảng}
+\clearpage
 
-% ============================== 1 ==============================
-\section{Đặt vấn đề}
+% ======================= CHUONG 1 =======================
+\chapter{Đặt vấn đề và mục tiêu}
 
-Luật dân sự Việt Nam có hiệu lực theo thời gian. Mỗi văn bản có một khoảng thời gian
-``từ ngày nào đến ngày nào có hiệu lực'', và các văn bản nối với nhau bằng quan hệ thay thế
-hoặc sửa đổi. Một câu hỏi tra cứu pháp lý thường mang theo thời điểm: ``tại thời điểm T, quy định
-này còn hiệu lực không?''. Muốn trả lời, người ta cần dữ liệu ở dạng có chiều thời gian, chứ
-không phải một danh sách văn bản phẳng.
+\section{Bối cảnh}
+Luật dân sự Việt Nam có hiệu lực theo thời gian. Mỗi văn bản chỉ có hiệu lực trong một khoảng
+thời gian, và các văn bản nối với nhau bằng quan hệ thay thế hoặc sửa đổi. Một văn bản hợp nhất
+(VBHN) có thể nhập gộp hàng chục văn bản đã hết hiệu lực. Một câu hỏi tra cứu pháp lý thường
+mang theo thời điểm, và câu trả lời phụ thuộc vào việc người tra cứu có đang nhìn đúng phiên bản
+luật hay không.
 
-Báo cáo này mô tả bộ dữ liệu ViCivil-TKG: cách xây dựng, cách kiểm chứng, kết quả đo, và
-những điểm còn thiếu cùng đề xuất bổ sung.
+Dữ liệu luật hiện có trên mạng phần lớn ở dạng văn bản phẳng theo từng văn bản, thiếu ba
+thứ mà một hệ thống tra cứu nghiêm túc cần có: (i) các đoạn văn bản nhỏ đủ để trích dẫn chính
+xác; (ii) quan hệ giữa các văn bản theo thời gian; (iii) cơ chế đo chất lượng để biết hệ thống
+có thực sự tìm đúng hay không.
+
+\section{Mục tiêu và nội dung}
+Mục tiêu của công trình là dựng một bộ dữ liệu mở có đủ ba thứ trên, kèm một trình xem để
+kiểm chứng bằng mắt. Các nội dung chính gồm: quy trình xây dựng dữ liệu; cách cắt chunk và
+gán mã; ba tầng lưu trữ; đồ thị tri thức có chiều thời gian; kết quả đánh giá truy hồi; và
+những hạn chế còn tồn tại cùng hướng khắc phục.
+
+\section{Phương pháp và công cụ}
+\begin{itemize}
+\item Dữ liệu được thu thập từ công báo chính thức, xử lý bằng Python.
+\item Chunk được cắt theo cấu trúc pháp lý và gán mã phân cấp ổn định.
+\item Mỗi chunk được mã hoá thành vectơ 768 chiều, phục vụ tra cứu theo nghĩa.
+\item Quan hệ giữa các văn bản được trích từ chính văn bản gốc (lời nói đầu của văn bản hợp
+nhất), không dựa vào đoạn trích từ công cụ tìm kiếm.
+\item Đồ thị và trình xem dựng bằng hai thư viện mở chuyên dụng: \textbf{AntV G6 5.1.1} cho đồ
+thị và \textbf{Vega-Lite 5.21.0} cho biểu đồ; cả hai đều được nhúng trực tiếp vào một tệp HTML
+nên trang xem chạy được cả khi không có mạng.
+\item Chất lượng được đo bằng bộ 281 câu hỏi có đáp án, chấm theo Hit@k và MRR.
+\end{itemize}
 
 \begin{keybox}
-\textbf{Quy ước dùng trong báo cáo.} Văn bản luật được gọi tắt là \emph{luật}. Đoạn văn bản
-nhỏ dùng để tra cứu được gọi là \emph{chunk} và mang một mã duy nhất. Số liệu trong báo cáo luôn
-lấy từ tệp trong kho và có thể mở kiểm tra.
+\textbf{Quy ước trình bày.} Văn bản luật được gọi tắt là \emph{luật}. Đoạn văn bản nhỏ dùng để
+trích dẫn được gọi là \emph{chunk} và mang một mã duy nhất. Số liệu trong báo cáo luôn lấy từ
+tệp trong kho và có thể mở kiểm tra.
 \end{keybox}
 
-% ============================== 2 ==============================
-\section{Dữ liệu dùng và quy trình từ A đến Z}
+\section{Đóng góp chính}
+\begin{enumerate}
+\item Bộ dữ liệu 11.267 chunk đã gán mã, tái sử dụng được nhờ mã ổn định.
+\item Đồ thị tri thức 33 văn bản, 21 quan hệ, có chiều thời gian và tự kiểm ở ba mốc thời gian.
+\item Bộ 281 câu hỏi có đáp án kèm cơ chế chia tầng độ tin cậy, và kết quả đo công khai.
+\item Trình xem một tệp HTML, chạy offline, xuất được ảnh PNG và dữ liệu GEXF để mở bằng Gephi.
+\end{enumerate}
 
-\subsection{Nguồn}
+% ======================= CHUONG 2 =======================
+\chapter{Dữ liệu và quy trình xây dựng}
 
+\section{Nguồn dữ liệu}
 Sáu tệp PDF chính thức được lấy từ công báo: Bộ luật Dân sự 1995, 2005, 2015; Luật Hôn nhân và
 Gia đình 2014; Luật Tố tụng 2017; Nghị định 152/2026. Mỗi tệp lưu kèm đường dẫn nguồn, loại nguồn
-(\textit{mirror}, \textit{official}, \textit{semi-official}) và ngày lấy trong
-\texttt{provenance/law\_sources.json}.
+(\textit{mirror}, \textit{official}, \textit{semi-official}) và ngày lấy, trong
+\texttt{provenance/law\_sources.json}. Các tệp PDF ảnh không có lớp chữ được tách riêng vào hàng
+chờ đọc lại (OCR), không đoán nội dung.
 
-\subsection{Quy trình}
+\section{Các bước xây dựng}
+Mỗi bước dưới đây có một tệp đầu ra kiểm chứng được trong kho.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{fig01_quy-trinh.png}
-\caption{Dải nhìn tổng quan quy trình từ A đến Z. Vẽ bằng công cụ Mermaid; mã nguồn sơ đồ
-nằm trong kho tại \texttt{docs/report/diagrams/pipeline.mmd}. Chi tiết từng bước và tệp đầu ra
-ở Bảng \ref{tab:steps}.}
-\label{fig:pipeline}
-\end{figure}
-
-\begin{table}[htbp]
+\begin{table}[H]
 \centering\small
-\caption{Các bước xây dựng và tệp chứng minh cho từng bước.}
+\caption{Các bước xây dựng và tệp đầu ra kiểm chứng cho từng bước.}
 \label{tab:steps}
-\begin{tabular}{@{}cp{6.3cm}p{6.3cm}r@{}}
+\begin{tabular}{@{}cp{6.2cm}p{6.3cm}r@{}}
 \toprule
-\textbf{Bước} & \textbf{Nội dung} & \textbf{Tệp đầu ra} & \textbf{Số lượng} \\
+\textbf{Bước} & \textbf{Nội dung} & \textbf{Tệp đầu ra} & \textbf{Kết quả} \\
 \midrule
 A & Lấy PDF công báo, lưu nguồn và ngày lấy & \texttt{provenance/law\_sources.json} & 6 tệp \\
 B & Phân biệt PDF chữ và PDF ảnh; ảnh vào hàng chờ OCR & \texttt{sources\_raw/} & --- \\
 C & Cắt nhỏ theo Điều --- Khoản --- Điểm, gán mã & \texttt{data/civil\_chunks.jsonl} & 11.267 chunk \\
-D & Lọc luật dân sự, chặn chunk rỗng / trùng mã / luật mồ côi & \texttt{provenance/law\_audit.json} & 0 lỗi \\
-E & Mã hoá mỗi chunk thành 768 con số & \texttt{index/vdb\_chunks.json} & 11.267 vector \\
-F & Rút thực thể và quan hệ giữa các chunk & \texttt{index/kv\_store\_*.json} & 3 kho \\
-G & Gán khoảng hiệu lực cho từng luật, dựng chuỗi kế thừa & \texttt{provenance/temporal\_graph.json} & 33 luật \\
+D & Lọc luật dân sự, chặn chunk rỗng, trùng mã, luật mồ côi & \texttt{provenance/law\_audit.json} & 0 lỗi \\
+E & Mã hoá mỗi chunk thành vectơ 768 chiều & \texttt{index/vdb\_chunks.json} & 11.267 vectơ \\
+F & Rút thực thể và quan hệ giữa các chunk & \texttt{index/kv\_store\_*.json} & 3 kho chỉ mục \\
+G & Gán khoảng hiệu lực, dựng chuỗi kế thừa & \texttt{provenance/temporal\_graph.json} & 33 luật \\
 H & Làm câu hỏi có đáp án và chấm điểm hệ thống & \texttt{benchmark/law\_eval\_v12.json} & 281 câu \\
-I & Xuất đồ thị GEXF và dựng trang xem & \texttt{docs/graph/} & 1 trang \\
-J & Băm mã SHA-256, đồng bộ hai gương, đóng thẻ phiên bản & \texttt{SHA256SUMS} & 62 tệp \\
+I & Xuất đồ thị GEXF và dựng trang xem & \texttt{docs/graph/} & 1 trang xem \\
+J & Băm mã SHA-256, đồng bộ hai gương, đóng thẻ phiên bản & \texttt{SHA256SUMS} & 84 tệp \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Mỗi bước đều có một tệp đầu ra kiểm chứng được:
-
-% ============================== 3 ==============================
-\section{Chia nhỏ văn bản và gán mã}
-
+\section{Cắt chunk và gán mã}
 Chunk là đơn vị trích dẫn nhỏ nhất mà luật dân sự dùng để quy định nghĩa vụ, tức là
-Điều --- Khoản --- Điểm. Mỗi chunk mang một mã ổn định, ví dụ \texttt{BLDS2015|Dieu27|Khoan1|Diema}.
+Điều --- Khoản --- Điểm. Mỗi chunk mang một mã ổn định theo cấu trúc đó, ví dụ
+\texttt{BLDS2015|Dieu27|Khoan1|Diema}.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{fig03_chunk_sample.png}
-\caption{Chunk đầu tiên trong tệp \texttt{data/civil\_chunks.jsonl}. Nội dung lấy nguyên văn từ
-tệp gốc trong kho, chỉ xếp lại thụt lề cho dễ đọc.}
-\label{fig:chunk}
-\end{figure}
-
-\begin{table}[htbp]
+\begin{table}[H]
 \centering\small
-\caption{Các trường của một chunk.}
-\label{tab:chunkfields}
-\begin{tabular}{@{}llp{8.6cm}@{}}
+\caption{Các trường của một chunk đã gán nhãn.}
+\label{tab:chunk}
+\begin{tabular}{@{}lp{3.2cm}p{8.4cm}@{}}
 \toprule
 \textbf{Trường} & \textbf{Ví dụ} & \textbf{Ý nghĩa} \\
 \midrule
-\texttt{chunk\_id} & \texttt{BLDS2015|Dieu1} & Mã duy nhất của chunk \\
-\texttt{law\_id} & \texttt{BLDS2015} & Mã của văn bản chứa chunk \\
+\texttt{chunk\_id} & \texttt{BLDS2015|Dieu1} & Mã duy nhất, dùng làm khoá cho mọi chỉ mục \\
+\texttt{law\_id} & \texttt{BLDS2015} & Mã văn bản chứa chunk \\
 \texttt{dieu}, \texttt{khoan}, \texttt{diem} & \texttt{"27"}, \texttt{"1"}, \texttt{"a"} & Vị trí trong cấu trúc luật \\
 \texttt{tieu\_de} & Phạm vi điều chỉnh & Tiêu đề của đoạn \\
 \texttt{content} & (văn bản) & Nội dung đoạn \\
 \texttt{chars} & \texttt{306} & Độ dài đoạn \\
-\texttt{source\_url} & ketoananpha.vn/... & Nơi lấy nội dung \\
+\texttt{source\_url} & ketoananpha.vn/\ldots & Nơi lấy nội dung \\
 \texttt{source\_type} & \texttt{mirror} & Loại nguồn \\
 \texttt{fetched} & \texttt{2026-10-15} & Ngày lấy \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Ba lý do mã phải bám theo cấu trúc pháp lý: (i) \emph{ổn định} --- nếu mã đổi sau mỗi lần chạy lại,
-toàn bộ 11.267 vector và mọi cạnh dẫn chiếu đã tính phải làm lại; (ii) \emph{trích dẫn chính xác}
---- giữ nguyên ranh giới Điểm a/b/c giúp trích đủ ý, không thiếu không thừa; (iii) \emph{chia sẻ được}
---- người khác dùng chung mã này để nối vào tập dữ liệu của họ mà không phải chia lại dữ liệu.
+Ba lý do mã phải bám theo cấu trúc pháp lý. Thứ nhất là \emph{ổn định}: nếu mã đổi sau mỗi lần
+chạy lại, toàn bộ 11.267 vectơ và mọi cạnh dẫn chiếu đã tính phải làm lại. Thứ hai là
+\emph{trích dẫn chính xác}: giữ nguyên ranh giới Điểm a/b/c giúp trích đủ ý, không thiếu không
+thừa. Thứ ba là \emph{chia sẻ được}: người khác dùng chung mã này để nối vào tập dữ liệu của
+họ mà không phải chia lại dữ liệu.
 
-% ============================== 4 ==============================
-\section{Ba nơi lưu trữ trên cùng một bộ dữ liệu}
+\section{Ba tầng lưu trữ}
+Cùng một tập 11.267 chunk được lập chỉ mục theo ba cách để tra cứu khác nhau.
 
-Cùng 11.267 chunk được lập chỉ mục theo ba cách để tra cứu khác nhau.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{fig04_ba-tang-luu-tru.png}
-\caption{Sơ đồ ba tầng lưu trữ. Vẽ bằng Mermaid; mã nguồn tại
-\texttt{docs/report/diagrams/index-layers.mmd}.}
-\label{fig:layers}
-\end{figure}
-
-\begin{table}[htbp]
+\begin{table}[H]
 \centering\small
 \caption{Ba tầng chỉ mục trên cùng một bộ dữ liệu.}
 \label{tab:layers}
-\begin{tabular}{@{}cp{2.6cm}p{5.1cm}p{4.0cm}@{}}
+\begin{tabular}{@{}clp{5.0cm}p{4.6cm}@{}}
 \toprule
 \textbf{Tầng} & \textbf{Số mục} & \textbf{Lưu gì} & \textbf{Dùng để làm gì} \\
 \midrule
 1 & 11.267 / 14.538 / 20.311 & Tra theo mã chunk, theo tên thực thể, theo quan hệ & Tra chính xác: đoạn nào, tên gì \\
-2 & 11.267 vector 768 chiều & Mã hoá của từng chunk & Tra nghĩa: câu hỏi $\rightarrow$ chunk gần nhất \\
+2 & 11.267 vectơ 768 chiều & Mã hoá của từng chunk & Tra nghĩa: câu hỏi $\rightarrow$ chunk gần nhất \\
 3 & 33 luật, 21 quan hệ & Đồ thị tri thức có chiều thời gian & Tra theo quan hệ và theo thời điểm \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Điểm cần nói thẳng: đây là JSON kèm kho vectơ phẳng, chưa phải cơ sở dữ liệu quan hệ đầy đủ
-(xem mục \ref{sec:kho}).
+Điểm cần nói thẳng: đây là JSON kèm kho vectơ phẳng, chưa phải cơ sở dữ liệu quan hệ đầy đủ.
 
-% ============================== 5 ==============================
-\section{Đồ thị tri thức}
+\section{Phân bố dữ liệu}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig11_phan-bo-chunk.png}
+\caption{Số chunk mở theo từng văn bản. Biểu đồ vẽ bằng Vega-Lite từ tệp
+\texttt{data/civil\_chunks.jsonl} trong kho.}
+\label{fig:dist}
+\end{figure}
+
+Bốn văn bản chiếm hơn một nửa số chunk. Do đó không thể dùng một quy tắc cắt chunk duy nhất cho
+toàn bộ kho; các luật chuyên ngành có cấu trúc và độ dài đoạn khác hẳn bộ luật dân sự.
+
+% ======================= CHUONG 3 =======================
+\chapter{Đồ thị tri thức và chiều thời gian}
+
+\section{Cấu trúc đồ thị}
 Đồ thị chứa các văn bản luật (33 nút) và các quan hệ giữa chúng (21 cạnh). Mỗi nút mang
 khoảng hiệu lực, số hiệu văn bản, số chunk và số lần được dẫn chiếu.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{fig05_graph_2026.png}
 \caption{Trạng thái đồ thị tại năm 2026: 14 văn bản còn hiệu lực, các luật đã hết hiệu lực được làm mờ.}
 \label{fig:g2026}
 \end{figure}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering\small
-\caption{Các loại quan hệ trong đồ thị.}
+\caption{Các loại quan hệ giữa các văn bản trong đồ thị.}
 \label{tab:relations}
 \begin{tabular}{@{}lrl@{}}
 \toprule
@@ -287,29 +312,27 @@ CONSOLIDATES & 1 & Hợp nhất \\
 \end{tabular}
 \end{table}
 
-Quan hệ sửa đổi chỉ được nhận khi đọc được từ lời nói đầu của văn bản hợp nhất, không tin
-vào đoạn trích từ công cụ tìm kiếm. Có một lần tin đoạn tìm kiếm đã tạo ra 142 cạnh sai; sau đó
+Quan hệ sửa đổi chỉ được nhận khi đọc được từ lời nói đầu của văn bản hợp nhất, không tin vào
+đoạn trích từ công cụ tìm kiếm. Có một lần tin đoạn tìm kiếm đã tạo ra 142 cạnh sai; sau đó
 toàn bộ quan hệ được dựng lại từ văn bản gốc.
 
-% ============================== 6 ==============================
-\section{Cập nhật theo đồ thị động và theo thời gian}
+\section{Cập nhật theo thời gian}
+Đồ thị có chiều thời gian. Kéo thanh thời gian là toàn bộ đồ thị tính lại trạng thái, chứ không
+phải hai bản vẽ khác nhau.
 
-Đồ thị này có chiều thời gian. Kéo thanh thời gian là toàn bộ đồ thị tính lại trạng thái, chứ
-không phải hai bản vẽ khác nhau.
-
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{fig06_graph_2012.png}
-\caption{Cùng đồ thị, tại thời điểm năm 2012: chỉ 4 văn bản còn hiệu lực, các luật chưa tới
-hạn bị làm mờ.}
+\caption{Cùng đồ thị, tại thời điểm năm 2012: chỉ 4 văn bản còn hiệu lực, các luật chưa tới hạn
+được làm mờ.}
 \label{fig:g2012}
 \end{figure}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering\small
 \caption{Kết quả truy vấn ``tại thời điểm T, luật nào còn hiệu lực''.}
 \label{tab:temporal}
-\begin{tabular}{@{}llp{9.6cm}@{}}
+\begin{tabular}{@{}llp{8.6cm}@{}}
 \toprule
 \textbf{Mốc thời gian} & \textbf{Số luật còn hiệu lực} & \textbf{Kiểm tra tự động trong dữ liệu} \\
 \midrule
@@ -321,30 +344,31 @@ hạn bị làm mờ.}
 \end{tabular}
 \end{table}
 
-% ============================== 7 ==============================
-\section{Trình xem}
+% ======================= CHUONG 4 =======================
+\chapter{Trình xem}
 
-Trang xem có hai phần. Phần \emph{Mạng kế thừa} vẽ bằng thư viện AntV G6, có thanh thời gian,
-tìm kiếm theo tên, khung chi tiết và nút xuất ảnh PNG. Phần \emph{Phổ thời gian} vẽ bằng Vega-Lite
-từ một tệp spec công khai, ai cũng dùng lại được.
+\section{Chức năng}
+Trang xem gồm hai phần. Phần \emph{Mạng kế thừa} vẽ đồ thị với thanh thời gian, ô tìm kiếm
+theo tên, chip bật tắt theo nhóm luật, khung chi tiết và nút xuất ảnh PNG. Phần \emph{Phổ thời
+gian} dựng dải thời gian hiệu lực của từng văn bản.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{fig07_timeline_tab.png}
-\caption{Phổ thời gian: dải thời gian hiệu lực của từng văn bản, dựng bằng Vega-Lite từ tệp
-spec \texttt{law\_timeline.vl.json} có trong kho.}
+\caption{Phổ thời gian: dải thời gian hiệu lực của từng văn bản, dựng bằng Vega-Lite từ tệp spec
+công khai \texttt{law\_timeline.vl.json} có trong kho.}
 \label{fig:timeline}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{fig08_tooltip.png}
-\caption{Rê chuột vào một luật: số hiệu, khoảng hiệu lực, số chunk và số lần dẫn chiếu;
-đồng thời chuỗi kế thừa của luật đó được làm sáng, các phần tử khác mờ đi.}
+\caption{Rê chuột vào một luật: số hiệu, khoảng hiệu lực, số chunk và số lần dẫn chiếu; đồng thời
+chuỗi kế thừa của luật đó được làm sáng, các phần tử khác mờ đi.}
 \label{fig:tooltip}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{fig09_drawer.png}
 \caption{Khung chi tiết: ví dụ Bộ luật Dân sự 2015 --- số hiệu 91/2015/QH13, có hiệu lực từ
@@ -352,23 +376,47 @@ spec \texttt{law\_timeline.vl.json} có trong kho.}
 \label{fig:drawer}
 \end{figure}
 
-Trang xem được viết thành một tệp HTML duy nhất, nhúng sẵn cả bốn thư viện, nên chạy được khi
-mất mạng và mở trực tiếp từ ổ đĩa.
+\section{Kiến trúc kỹ thuật}
+\begin{table}[H]
+\centering\small
+\caption{Các thành phần phần mềm dùng trong trình xem.}
+\label{tab:stack}
+\begin{tabular}{@{}llp{5.6cm}@{}}
+\toprule
+\textbf{Vai trò} & \textbf{Thành phần} & \textbf{Ghi chú} \\
+\midrule
+Vẽ đồ thị & AntV G6 5.1.1 (MIT) & behaviors kéo/zoom/phóng to khi rê chuột; plugin minimap, tooltip, lưới nền \\
+Vẽ biểu đồ & Vega-Lite 5.21.0 (BSD-3) & dùng cho phổ thời gian; spec công khai \\
+Nhúng biểu đồ & vega-embed 6.26.0 (BSD-3) & nạp spec vào trang \\
+Trao đổi đồ thị & GEXF 1.3 & mở được bằng Gephi và Gephi-Lite \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-% ============================== 8 ==============================
-\section{Thử nghiệm}
+Trang xem được viết thành \emph{một tệp HTML duy nhất}, nhúng sẵn cả bốn thư viện, nên chạy
+được khi mất mạng và mở trực tiếp từ ổ đĩa. Trước khi phát hành, trang được kiểm tra trên
+Chromium, trên đúng trình duyệt Google Chrome và trên Microsoft Edge, yêu cầu không có lỗi
+JavaScript nào.
 
-\begin{figure}[htbp]
+% ======================= CHUONG 5 =======================
+\chapter{Thử nghiệm và đánh giá}
+
+\section{Bộ kiểm tra}
+Bộ kiểm tra gồm 281 câu hỏi có đáp án; ngày hỏi phải nằm trong khoảng hiệu lực của văn bản
+chứa đáp án. Câu hỏi sinh bằng mô hình ngôn ngữ phải qua bước lọc và được duyệt mẫu thủ công;
+tỉ lệ câu bị loại được công bố.
+
+\section{Kết quả}
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.92\textwidth]{fig10_eval.png}
-\caption{Kết quả truy hồi trên 281 câu hỏi có đáp án. Biểu đồ vẽ bằng Vega-Lite từ đúng tệp
-kết quả \texttt{benchmark/law\_eval\_v12.json}.}
+\includegraphics[width=0.98\textwidth]{fig10_ket-qua-truy-hoi.png}
+\caption{Kết quả truy hồi trên 281 câu hỏi có đáp án. Biểu đồ vẽ bằng Vega-Lite từ tệp
+\texttt{benchmark/law\_eval\_v12.json} trong kho.}
 \label{fig:eval}
 \end{figure}
 
-Bộ kiểm tra gồm 281 câu hỏi; ngày hỏi phải nằm trong khoảng hiệu lực của văn bản chứa đáp án.
-
-\begin{table}[htbp]
+\begin{table}[H]
 \centering\small
 \caption{Kết quả truy hồi theo hai cách chia tập câu hỏi.}
 \label{tab:eval}
@@ -385,51 +433,21 @@ Tìm đúng trong 10 lần (Hit@10) & 0,794 & 0,796 \\
 \end{tabular}
 \end{table}
 
+\section{Phân tích}
 Điểm đáng nói thẳng: 32 câu thuộc nhóm ``đáp án đúng nhưng hệ thống trả về nguồn khác'' chỉ đạt
 Hit@1 = 0,062, kéo số trung bình toàn bộ xuống. Đây là hạn chế của \emph{thang đo}, chưa chắc là
 hạn chế của hệ thống. Vì vậy báo cáo này lấy số trên tập 245 câu đã xác minh làm con số chính,
-nhóm còn lại để riêng.
+nhóm còn lại để riêng. Việc so sánh giữa các hệ khác nhau cần kiểm định thống kê (McNemar,
+Wilcoxon) trước khi khẳng định hệ này tốt hơn hệ kia.
 
-% ============================== 9 ==============================
-\section{Phân bố dữ liệu}
+% ======================= CHUONG 6 =======================
+\chapter{Khó khăn gặp phải và hướng phát triển}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.95\textwidth]{fig11_chunk_distribution.png}
-\caption{Số chunk mở theo từng văn bản. Biểu đồ vẽ bằng Vega-Lite từ đúng tệp
-\texttt{data/civil\_chunks.jsonl}.}
-\label{fig:dist}
-\end{figure}
-
-Bốn văn bản chiếm hơn một nửa số chunk. Do đó không thể dùng một quy tắc cắt chunk duy nhất cho
-toàn bộ kho; các luật chuyên ngành có cấu trúc và độ dài đoạn khác hẳn bộ luật dân sự.
-
-% ============================== 10 ==============================
-\section{Chia sẻ cho người khác}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{fig12_gexf.png}
-\caption{40 dòng đầu của tệp \texttt{docs/graph/law\_graph.gexf} (tệp có 696 dòng).
-Ảnh chụp nguyên văn từ tệp gốc trong kho.}
-\label{fig:gexf}
-\end{figure}
-
-Đồ thị được xuất ra định dạng GEXF 1.3 ở chế độ \textit{dynamic}, nên khi mở bằng Gephi hoặc
-Gephi-Lite, người nhận có được đồ thị kèm trục thời gian và mọi thuộc tính (số hiệu, số chunk,
-số lần dẫn chiếu). Phần chưa làm: chưa xuất định dạng RDF/JSON-LD để nạp vào kho tri thức chuẩn,
-và chưa cấp mã DOI cho từng phiên bản.
-
-% ============================== 11 ==============================
-\section*{Khó khăn gặp phải và đề xuất cải tiến}
-\label{sec:kho}
-\addcontentsline{toc}{section}{Khó khăn gặp phải và đề xuất cải tiến}
-
-\begin{table}[htbp]
+\begin{table}[H]
 \centering\small
-\caption{Những khó khăn đã gặp và cách xử lý.}
+\caption{Những khó khăn đã gặp và cách đã xử lý.}
 \label{tab:issues}
-\begin{tabular}{@{}p{6.0cm}p{5.4cm}p{4.4cm}@{}}
+\begin{tabular}{@{}p{5.6cm}p{5.0cm}p{5.4cm}@{}}
 \toprule
 \textbf{Khó khăn} & \textbf{Biểu hiện} & \textbf{Đã xử lý thế nào} \\
 \midrule
@@ -437,112 +455,110 @@ Tin đoạn trích tìm kiếm làm nhiễu quan hệ & 142 cạnh sửa đổi 
 Ngày hỏi nằm ngoài thời gian hiệu lực & 48 câu hỏi không dùng được & Kiểm tra ngày hỏi trước khi nhận câu \\
 Ghi đè làm mất dữ liệu đã trích & mất khoảng 2.900 dòng & Bắt buộc sao lưu trước khi ghi đè \\
 Hệ thống trả nguồn khác với đáp án đúng & 32 câu chỉ đạt 0,062 & Công bố đúng số thay vì làm đẹp con số \\
-PDF ảnh không có lớp chữ & không tách được chunk & Tách riêng hàng chờ đọc lại (OCR), không đoán \\
+PDF ảnh không có lớp chữ & không tách được chunk & Tách riêng hàng chờ đọc lại, không đoán \\
 Thư viện vẽ chạy sai trên một số trình duyệt & trang trắng, không báo lỗi & Chạy thử trên Chrome và Edge thật trước khi phát hành \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Đề xuất làm tiếp, theo thứ tự giá trị:}
+\section{Hướng phát triển}
 \begin{enumerate}
-\item Xuất định dạng RDF/JSON-LD để nạp vào kho tri thức chuẩn (Neo4j, rdf4j). Cấu trúc quan hệ
-đã sẵn có nên công việc này không tốn nhiều.
-\item Đưa đoạn văn bản lên đồ thị (nút cấp Điều/Khoản nối vào luật) để trả lời trực tiếp câu hỏi
-kiểu ``điều nào bị sửa, sửa những gì''.
-\item Sửa thang đo: chấp nhận nhiều đáp án đúng về mặt pháp lý, và dùng một mô hình ngôn ngữ lớn
-làm người chấm cho nhóm câu có nguồn khác.
-\item Khi có văn bản mới, chỉ tính toán phần mới (chunk và vector của phần mới) thay vì chạy lại toàn bộ.
-\item Bổ sung văn bản chưa số hóa: 4 câu hỏi chưa đạt trọn vẹn có liên quan đến vấn đề này.
+\item \textbf{Xuất định dạng RDF/JSON-LD} để nạp vào kho tri thức chuẩn (Neo4j, rdf4j). Cấu trúc
+quan hệ đã sẵn có nên công việc này không tốn nhiều.
+\item \textbf{Đưa đoạn văn bản lên đồ thị} (nút cấp Điều/Khoản nối vào luật) để trả lời trực
+tiếp câu hỏi kiểu ``điều nào bị sửa, sửa những gì''.
+\item \textbf{Sửa thang đo}: chấp nhận nhiều đáp án đúng về mặt pháp lý, và dùng một mô hình
+ngôn ngữ lớn làm người chấm cho nhóm câu có nguồn khác.
+\item \textbf{Pipeline tăng dần}: khi có văn bản mới, chỉ tính toán phần mới thay vì chạy lại toàn bộ.
+\item \textbf{Bổ sung văn bản chưa số hóa}: 4 câu hỏi chưa đạt trọn vẹn có liên quan đến vấn đề này.
 \end{enumerate}
 
-% ============================== 12 ==============================
-\section{Kiểm tra lại trước khi phát hành}
+% ======================= CHUONG 7 =======================
+\chapter{Kết luận}
+Công trình đã dựng được một bộ dữ liệu mở cho luật dân sự Việt Nam có chiều thời gian, gồm
+11.267 chunk đã gán mã, một đồ thị tri thức 33 văn bản với 21 quan hệ có nhãn, một bộ 281 câu hỏi
+có đáp án kèm kết quả đo công khai, và một trình xem một tệp chạy được offline. Chất lượng truy
+hồi đạt Hit@5 = 0,726 trên toàn bộ tập và 0,731 trên tập 245 câu đã xác minh.
 
-\begin{table}[htbp]
+Phần còn thiếu đã được nêu rõ và có hướng xử lý: chưa xuất định dạng RDF/JSON-LD và chưa cấp DOI;
+đồ thị mới dừng ở cấp văn bản; và phần chênh lệch điểm số còn phần lớn do thang đo chấm
+chưa chấp nhận nhiều đáp án tương đương. Hướng ưu tiên ngắn hạn là xuất RDF/JSON-LD và đưa đoạn
+văn bản lên đồ thị, vì hai việc này trả lời trực tiếp các câu hỏi mà một người đọc đặt ra khi
+kiểm tra tính đúng đắn của bộ dữ liệu.
+
+% ======================= TAI LIEU THAM KHAO =======================
+\chapter*{Tài liệu tham khảo}
+\addcontentsline{toc}{chapter}{Tài liệu tham khảo}
+\begin{thebibliography}{99}
+\bibitem{g6} AntV G6 5.1.1 (MIT License). \texttt{github.com/antvis/G6}.
+\bibitem{vega} Vega 5.30.0, Vega-Lite 5.21.0, vega-embed 6.26.0 (BSD-3-Clause).
+\texttt{github.com/vega}.
+\bibitem{gexf} GEXF 1.3 --- định dạng trao đổi đồ thị mở của Gephi. \texttt{gexf.net}.
+\bibitem{ollama} Ollama --- công cụ chạy mô hình ngôn ngữ cục bộ. \texttt{ollama.com}.
+\bibitem{repo} Kho dữ liệu ViCivil-TKG. \texttt{github.com/ntd25022006q/vicivil-tkg}.
+\bibitem{protocol} PROTOCOL --- quy tắc vận hành bộ dữ liệu ViCivil-TKG.
+\texttt{github.com/ntd25022006q/vicivil-tkg/blob/main/docs/PROTOCOL.md}.
+\end{thebibliography}
+
+% ======================= PHU LUC =======================
+\appendix
+\chapter{Bản đáp án cho yêu cầu của đề tài}
+\begin{table}[H]
+\centering\small
+\caption{Đối chiếu từng yêu cầu với phần tương ứng trong báo cáo.}
+\label{tab:reqmap}
+\begin{tabular}{@{}p{6.2cm}p{1.6cm}p{7.8cm}@{}}
+\toprule
+\textbf{Yêu cầu} & \textbf{Mục} & \textbf{Kết quả} \\
+\midrule
+Chia file bộ luật thành các chunk & Chương 2 & 11.267 chunk theo Điều/Khoản/Điểm, mã ổn định \\
+Lưu trữ thành cơ sở dữ liệu các chunk có nhãn & Chương 2 & Ba tầng chỉ mục: tra theo mã, theo nghĩa, theo quan hệ \\
+Chia sẻ chunk và node & Chương 4 & GEXF 1.3 mở bằng Gephi, mã chunk dùng chung được --- còn thiếu RDF và DOI \\
+Xây dựng đồ thị tri thức & Chương 3 & 33 nút, 21 cạnh có nhãn và mốc thời gian \\
+Cập nhật theo đồ thị động & Chương 3 & Thanh thời gian: năm 2012 có 4 luật, năm 2026 có 14 luật \\
+Cập nhật thời gian & Chương 3 & Mỗi luật có khoảng hiệu lực; tự kiểm ở ba mốc thời gian \\
+Nêu khó khăn và đề xuất cải tiến & Chương 6 & Sáu khó khăn, năm đề xuất cụ thể \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\chapter{Nguồn của từng hình trong báo cáo}
+\begin{table}[H]
+\centering\small
+\caption{Cách tạo ra từng hình và tệp dữ liệu tương ứng.}
+\label{tab:figsrc}
+\begin{tabular}{@{}clp{4.6cm}p{5.2cm}@{}}
+\toprule
+\textbf{Hình} & \textbf{Nội dung} & \textbf{Cách tạo} & \textbf{Nguồn} \\
+\midrule
+\ref{fig:dist} & Số chunk theo văn bản & Biểu đồ Vega-Lite & \texttt{data/civil\_chunks.jsonl} \\
+\ref{fig:g2026} & Đồ thị năm 2026 & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
+\ref{fig:g2012} & Đồ thị năm 2012 & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
+\ref{fig:timeline} & Phổ thời gian & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
+\ref{fig:tooltip} & Thẻ tin khi rê chuột & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
+\ref{fig:drawer} & Khung chi tiết & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
+\ref{fig:eval} & Kết quả truy hồi & Biểu đồ Vega-Lite & \texttt{benchmark/law\_eval\_v12.json} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\chapter{Kiểm tra trước khi phát hành}
+\begin{table}[H]
 \centering\small
 \caption{Các kiểm tra thực hiện trước khi phát hành.}
 \label{tab:checks}
-\begin{tabular}{@{}p{7.2cm}p{8.4cm}@{}}
+\begin{tabular}{@{}p{7.0cm}p{8.6cm}@{}}
 \toprule
 \textbf{Kiểm tra} & \textbf{Kết quả} \\
 \midrule
-Mã SHA-256 của mọi tệp & 62/62 khớp; hai gương giống nhau (trừ README vì chính sách khác nhau) \\
+Mã SHA-256 của mọi tệp & 84/84 khớp; hai gương giống nhau (trừ README vì chính sách khác nhau) \\
 Quét chữ ẩn, khoá bí mật & Không phát hiện \\
 Mọi tệp JSON/JSONL/GEXF mở được & Có \\
 Chạy trên Chrome thật và Edge thật & Không có lỗi JavaScript \\
 Trang xem chạy khi mất mạng & Có (không cần CDN) \\
-Truy vấn thời gian tự kiểm & Đúng ở cả 3 mốc 2000, 2010, 2020 \\
+Truy vấn thời gian tự kiểm & Đúng ở cả ba mốc 2000, 2010, 2020 \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-% ============================== PHỤ LỤC ==============================
-\clearpage
-\appendix
-\section{Bản đồ yêu cầu}
-
-\begin{table}[htbp]
-\centering\small
-\caption{Đối chiếu từng yêu cầu với phần tương ứng trong báo cáo.}
-\label{tab:reqmap}
-\begin{tabular}{@{}p{6.4cm}p{1.4cm}p{8.0cm}@{}}
-\toprule
-\textbf{Yêu cầu} & \textbf{Mục} & \textbf{Kết quả} \\
-\midrule
-Chia file bộ luật thành các chunk & \ref{sec:kho} & 11.267 chunk theo Điều/Khoản/Điểm, mã ổn định \\
-Lưu trữ thành cơ sở dữ liệu các chunk có nhãn & \ref{tab:layers} & 3 tầng chỉ mục: tra theo mã, tra theo nghĩa, tra theo quan hệ \\
-Chia sẻ chunk và node & \ref{fig:gexf} & GEXF 1.3 mở bằng Gephi, mã chunk dùng chung được --- còn thiếu RDF và DOI \\
-Xây dựng đồ thị tri thức theo cách người ta làm & \ref{tab:relations} & 33 nút, 21 cạnh có nhãn và mốc thời gian --- nút mới ở cấp luật \\
-Cập nhật hướng theo đồ thị động & \ref{fig:g2012} & Thanh thời gian: 2012 có 4 luật, 2026 có 14 luật \\
-Cập nhật thời gian & \ref{tab:temporal} & Mỗi luật có khoảng hiệu lực; tự kiểm ở 3 mốc thời gian \\
-Nêu khó khăn và đề xuất cải tiến & \ref{sec:kho} & 6 khó khăn, 5 đề xuất cụ thể \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{Cách làm ra từng hình}
-
-\begin{table}[htbp]
-\centering\small
-\caption{Công cụ và nguồn của từng hình trong báo cáo.}
-\label{tab:figsrc}
-\begin{tabular}{@{}clp{4.4cm}p{5.4cm}@{}}
-\toprule
-\textbf{Hình} & \textbf{Nội dung} & \textbf{Công cụ} & \textbf{Nguồn} \\
-\midrule
-\ref{fig:pipeline} & Quy trình A $\rightarrow$ Z & Mermaid 12.2.0 & \texttt{docs/report/diagrams/pipeline.mmd} \\
-\ref{fig:chunk} & 14 chunk đầu tiên & Chụp từ trình duyệt & \texttt{data/civil\_chunks.jsonl} \\
-\ref{fig:layers} & Ba tầng lưu trữ & Mermaid 12.2.0 & \texttt{docs/report/diagrams/index-layers.mmd} \\
-\ref{fig:g2026} & Đồ thị năm 2026 & Chụp từ trình duyệt & \texttt{docs/graph/explorer.html} \\
-\ref{fig:g2012} & Đồ thị năm 2012 & Chụp từ trình duyệt & \texttt{docs/graph/explorer.html} \\
-\ref{fig:timeline} & Phổ thời gian & Chụp từ trình duyệt & \texttt{docs/graph/explorer.html} \\
-\ref{fig:tooltip} & Thẻ tin khi rê chuột & Chụp từ trình duyệt & \texttt{docs/graph/explorer.html} \\
-\ref{fig:drawer} & Khung chi tiết & Chụp từ trình duyệt & \texttt{docs/graph/explorer.html} \\
-\ref{fig:eval} & Kết quả truy hồi & Vega-Lite 5.21.0 & \texttt{benchmark/law\_eval\_v12.json} \\
-\ref{fig:dist} & Chunk theo văn bản & Vega-Lite 5.21.0 & \texttt{data/civil\_chunks.jsonl} \\
-\ref{fig:gexf} & 40 dòng đầu tệp GEXF & Chụp từ trình duyệt & \texttt{docs/graph/law\_graph.gexf} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{Các thành phần dùng trong báo cáo}
-
-\begin{itemize}
-\item \textbf{AntV G6 5.1.1} (MIT) --- vẽ đồ thị kế thừa.
-\item \textbf{Vega-Lite 5.21.0} và \textbf{Vega 5.30.0} (BSD-3-Clause) --- vẽ phổ thời gian và các biểu đồ.
-\item \textbf{vega-embed 6.26.0} (BSD-3-Clause) --- nhúng biểu đồ Vega-Lite vào trang.
-\item \textbf{Mermaid 12.2.0} (MIT) --- vẽ hai sơ đồ trong báo cáo này.
-\item \textbf{GEXF 1.3} --- định dạng trao đổi đồ thị mở của Gephi.
-\item \textbf{MiKTeX / XeLaTeX} --- dàn trang báo cáo này.
-\end{itemize}
-
-\begin{thebibliography}{9}
-\bibitem{g6} AntV G6 5.1.1 (MIT). \texttt{github.com/antvis/G6}.
-\bibitem{vega} Vega 5.30.0, Vega-Lite 5.21.0, vega-embed 6.26.0 (BSD-3-Clause).
-\texttt{github.com/vega}.
-\bibitem{gexf} GEXF 1.3 --- định dạng đồ thị mở của Gephi. \texttt{gexf.net}.
-\bibitem{mermaid} Mermaid 12.2.0 (MIT). \texttt{mermaid.js.org}.
-\bibitem{repo} Kho dữ liệu ViCivil-TKG v1.5.4. \texttt{github.com/ntd25022006q/vicivil-tkg}.
-\end{thebibliography}
 
 \end{document}

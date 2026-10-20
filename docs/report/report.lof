@@ -1,0 +1,17 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Số chunk mở theo từng văn bản. Biểu đồ vẽ bằng Vega-Lite từ tệp \texttt {data/civil\_chunks.jsonl} trong kho.}}{10}{figure.caption.8}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Trạng thái đồ thị tại năm 2026: 14 văn bản còn hiệu lực, các luật đã hết hiệu lực được làm mờ.}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Cùng đồ thị, tại thời điểm năm 2012: chỉ 4 văn bản còn hiệu lực, các luật chưa tới hạn được làm mờ.}}{12}{figure.caption.11}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Phổ thời gian: dải thời gian hiệu lực của từng văn bản, dựng bằng Vega-Lite từ tệp spec công khai \texttt {law\_timeline.vl.json} có trong kho.}}{13}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Rê chuột vào một luật: số hiệu, khoảng hiệu lực, số chunk và số lần dẫn chiếu; đồng thời chuỗi kế thừa của luật đó được làm sáng, các phần tử khác mờ đi.}}{14}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Khung chi tiết: ví dụ Bộ luật Dân sự 2015 --- số hiệu 91/2015/QH13, có hiệu lực từ 01/01/2017 đến nay, 1.838 chunk, 145 lần dẫn chiếu, và quan hệ thay thế với Bộ luật Dân sự 2005.}}{14}{figure.caption.15}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Kết quả truy hồi trên 281 câu hỏi có đáp án. Biểu đồ vẽ bằng Vega-Lite từ tệp \texttt {benchmark/law\_eval\_v12.json} trong kho.}}{16}{figure.caption.17}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
