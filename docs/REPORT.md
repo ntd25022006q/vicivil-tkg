@@ -1,252 +1,246 @@
-# BÁO CÁO — ViCivil-TKG
-## Khung tri thức thời gian của luật dân sự Việt Nam
+# Báo cáo: trang xem luật dân sự ViCivil-TKG
 
-Phiên bản dữ liệu: **v1.5.2** · Ngày lập: 19/10/2026
-Kho mã: `github.com/ntd25022006q/vicivil-tkg` · Gương phát hành: `huggingface.co/datasets/datbazuka2502/vicivil-tkg`
+Phiên bản v1.5.2 · Ngày làm: tháng 10 năm 2026  
+Kho mã: github.com/ntd25022006q/vicivil-tkg  
+Gương phát hành: huggingface.co/datasets/datbazuka2502/vicivil-tkg  
+Tất cả hình ảnh trong báo cáo đều là ảnh chụp từ trang đang chạy, hoặc sơ đồ vẽ bằng công cụ mở Mermaid, hoặc chụp nguyên từ tệp gốc trong kho. Không có hình nào được vẽ tay hoặc bịa số liệu.
 
 ---
 
-## 1. Đặt vấn đề và mục tiêu
+## 1. Giới thiệu
 
-Luật dân sự Việt Nam không tồn tại trong một bản duy nhất. Bộ luật Dân sự 1995 bị
-thay bằng bản 2005, bản 2005 bị thay bằng bản 2015; các luật chuyên ngành hôn nhân
-và gia đình, tố tụng, thừa tụng, doanh nghiệp tư nhân liên tục sửa đổi lẫn nhau. Khi
-tra cứu một vấn đề pháp lý, câu hỏi đầu tiên không phải "điều khoản nào nói về
-điều này" mà là **"vào thời điểm đó, điều khoản nào đang có hiệu lực"**.
+Luật dân sự Việt Nam không có một bản duy nhất. Bộ luật 1995 bị thay bằng bản 2005, bản 2005 bị thay bằng bản 2015; luật hôn nhân gia đình, luật tố tụng… liên tục sửa đổi. Khi tra cứu một vấn đề pháp lý, câu hỏi đầu tiên không phải "điều khoản nào nói về điều này" mà là **"vào thời điểm đó, điều khoản nào còn có hiệu lực"**?
 
-Mục tiêu của công trình là dựng một bộ dữ liệu có thể trả lời đúng câu hỏi đó, gồm
-bốn phần: kho chunk đã gán nhãn, đồ thị tri thức có chiều thời gian, bộ benchmark
-để đo chất lượng truy hồi, và một trình xem để kiểm chứng bằng mắt.
+Trang xem này giúp trả lời câu hỏi đó. Nó gồm bốn phần:
+
+- kho chứa các đoạn văn bản đã cắt nhỏ và gán mã;
+- đồ thị tri thức liên hệ các luật với nhau;
+- bộ 281 câu hỏi để kiểm tra xem hệ thống có tìm đúng hay không;
+- trang xem để ai cũng có thể mở, xem, kéo thời gian.
+
+Số liệu chung:
 
 | Chỉ số | Giá trị |
 | --- | --- |
-| Văn bản luật trong corpus | 17 (kèm 16 văn bản sửa đổi bên ngoài) |
-| Chunk mở | 11.267 |
-| Node đồ thị / cạnh | 33 / 21 |
-| Câu hỏi vàng | 281 |
-| Phụ thuộc phần mềm | 4 thư viện mở, không CDN, không build tool |
+| Văn bản luật trong kho | 17 văn bản |
+| Đoạn văn bản cắt nhỏ (chunk) | 11.267 đoạn |
+| Văn bản trong đồ thị | 33 |
+| Quan hệ giữa các văn bản | 21 |
+| Câu hỏi kiểm tra | 281 câu |
+| Phần mềm dùng | 4 thư viện mở, không cần mạng, không cần cài đặt để chạy |
 
 ---
 
-## 2. Quy trình thực hiện từ A đến Z
+## 2. Quy trình làm từ A đến Z
 
-![Quy trình A đến Z](figures/fig01_pipeline.png)
+Mỗi bước trong sơ đồ sau đều có một tệp đầu ra, và mọi con số trong báo cáo đều mở được file đó để kiểm chứng.
 
-Mỗi bước trong sơ đồ đều có **một file đầu ra kiểm chứng được** — không có con số nào
-trong báo cáo này mà không mở được file tương ứng để đối chiếu.
+![Sơ đồ quy trình từ A đến Z](figures/fig01_quy-trinh.png)
+*_Hình 1. Quy trình A → Z, vẽ bằng công cụ Mermaid. Nguồn: docs/report/diagrams/pipeline.mmd_*
 
-**A. Thu thập nguồn.** Sáu tệp PDF chính thức từ công báo: Bộ luật Dân sự 1995, 2005,
-2015; Luật Hôn nhân và Gia đình 2014; Luật Tố tụng 2017; Nghị định 152/2026. Mỗi tệp
-lưu kèm URL nguồn, loại nguồn và ngày thu thập trong `provenance/law_sources.json`.
+Các bước:
 
-**B. Phân loại và số hóa.** Tách PDF có lớp chữ khỏi PDF scan; ảnh scan đưa vào hàng
-chờ OCR thay vì đoán.
+**A. Lấy 6 tệp PDF chính thức từ công báo** — Bộ luật Dân sự 1995, 2005, 2015; Luật Hôn nhân và Gia đình 2014; Luật Tố tụng 2017; Nghị định 152/2026. Mỗi tệp lưu kèm đường dẫn và ngày lấy.
 
-**C. Chia chunk theo cấu trúc pháp lý.** Tách theo Điều → Khoản → Điểm, gán ID phân
-cấp ổn định (mục 3).
+**B. Kiểm tra PDF có chữ hay là ảnh.** Ảnh đưa vào hàng chờ đọc lại (OCR) thay vì đoán.
 
-**D. Lọc phạm vi và kiểm tra chất lượng.** Chỉ giữ văn bản thuộc nhóm dân sự; audit
-gate chặn chunk rỗng, chunk trùng ID, luật mồ côi về thời gian.
+**C. Cắt nhỏ văn bản thành đoạn (chunk).** Tách theo Điều → Khoản → Điểm. Mỗi đoạn có mã riêng, ví dụ `BLDS2015|Dieu27|Khoan1|Diema`. Tổng cộng 11.267 đoạn.
 
-**E. Vector hoá.** Nhúng 768 chiều cho toàn bộ 11.267 chunk, khoá chính là `chunk_id`.
+**D. Lọc ra luật dân sự, kiểm tra chất lượng.** Chặn đoạn rỗng, đoạn trùng mã, luật mồ côi về thời gian.
 
-**F. Trích thực thể và quan hệ.** Chuẩn hoá tên thực thể rồi gộp thực thể cùng tên
-giữa các văn bản; tạo cạnh dẫn chiếu giữa các chunk.
+**E. Mã hoá từng đoạn thành 768 con số** (để máy hiểu được nghĩa chung của đoạn).
 
-**G. Lớp thời gian.** Gán `[valid_from, valid_to)` cho từng luật, dựng chuỗi kế thừa.
+**F. Rút tên thực thể và quan hệ giữa các đoạn.**
 
-**H. Benchmark và đánh giá.** 281 câu hỏi vàng, chấm Hit@k và MRR, tách theo tầng độ
-tin cậy của đáp án (mục 8).
+**G. Gán thời gian cho từng văn bản** — từ ngày nào đến ngày nào có hiệu lực.
 
-**I. Đồ thị và trình xem.** Xuất GEXF 1.3 cho Gephi; dựng trình xem bằng AntV G6 và
-Vega-Lite (mục 7).
+**H. Làm 281 câu hỏi có đáp án** và chấm xem hệ thống tìm đúng bao nhiêu.
 
-**J. Đóng gói và phát hành.** Băm SHA-256 toàn bộ 47 tệp, quét ký tự ẩn/khoá bí mật,
-đồng bộ hai gương, đóng thẻ phiên bản.
+**I. Xuất đồ thị ra định dạng GEXF 1.3** (mở được bằng Gephi) và dựng trang xem.
+
+**J. Băm mã SHA-256 cho mọi tệp**, đồng bộ hai nơi, đóng thẻ phiên bản.
 
 ---
 
-## 3. Chia chunk và gán nhãn
+## 3. Dữ liệu dùng: 11.267 đoạn văn bản
 
-![Mẫu chunk đã gán nhãn](figures/fig03_chunk_sample.png)
+![Một đoạn văn bản đã gán mã](figures/fig03_chunk_sample.png)
+*_Hình 2. 14 chunk đầu tiên của tệp data/civil_chunks.jsonl (mỗi dòng là một chunk). Chụp nguyên văn từ tệp gốc._*
 
-Chunk là đơn vị trích dẫn nhỏ nhất mà luật dân sự dùng để quy định nghĩa vụ: **Điều →
-Khoản → Điểm**. ID sinh theo cấu trúc đó, ví dụ `BLDS2015|Dieu27|Khoan1|Diema`.
+Mỗi đoạn là một đoạn văn bản thuần khiết, gắn kèm:
 
-Ba lý do ID phải bám theo cấu trúc pháp lý:
+| Trường | Ý nghĩa |
+| --- | --- |
+| chunk_id | Mã riêng, ví dụ `BLDS2015|Dieu1` |
+| law_id | Mã luật, ví dụ `BLDS2015` |
+| dieu | Số Điều |
+| khoan | Số Khoản |
+| diem | Số Điểm |
+| tieu_de | Tiêu đề đoạn |
+| content | Nội dung đoạn |
+| source_url | Đường dẫn gốc |
 
-1. **Ổn định.** Nếu ID đổi sau mỗi lần chạy lại, toàn bộ 11.267 vector và mọi cạnh
-   dẫn chiếu đã xây phải làm lại.
-2. **Trích dẫn chính xác.** Giữ nguyên ranh giới Điểm a/b/c giúp trích đủ ý, không
-   thiếu không thừa.
-3. **Chia sẻ được.** Người khác dùng chung `chunk_id` này để nối vào tập dữ liệu của
-   họ mà không phải chia lại dữ liệu.
-
-![Số chunk mở theo văn bản](figures/fig11_chunk_distribution.png)
-
-Phân bố rất không đều: 4 văn bản chiếm hơn một nửa corpus, trong khi các luật chuyên
-ngành chỉ vài trăm chunk. Đây chính là lý do không thể dùng một ngưỡng cắt chunk cố
-định cho toàn bộ corpus.
+Mã này không đổi sau mỗi lần chạy lại — nên mọi tính toán đã làm trước vẫn còn đúng.
 
 ---
 
-## 4. Lưu trữ thành cơ sở dữ liệu các chunk có nhãn
+## 4. Ba nơi lưu trữ trên cùng một bộ dữ liệu
 
-![Ba tầng chỉ mục](figures/fig04_index_layers.png)
+Cùng 11.267 đoạn văn bản, lưu theo ba cách để tra cứu khác nhau:
 
-Cùng một tập 11.267 chunk được lập chỉ mục theo ba cách tra cứu khác nhau, mỗi tầng
-phục vụ một dạng câu hỏi:
+![Ba tầng lưu trữ](figures/fig04_ba-tang-luu-tru.png)
+*_Hình 3. Sơ đồ vẽ bằng Mermaid. Nguồn: docs/report/diagrams/index-layers.mmd_*
 
-| Tầng | Cấu trúc | Dùng để trả lời |
+| Tầng | Lưu gì | Dùng để làm gì |
 | --- | --- | --- |
-| T1 | 3 khoá–giá trị: chunk (11.267 mục), thực thể (14.538), quan hệ (20.311) | tra chính xác theo `chunk_id` hoặc tên thực thể đã chuẩn hoá |
-| T2 | kho vectơ 768 chiều cho chunk, thực thể, quan hệ | tra ngữ nghĩa: câu hỏi → vector → top-k chunk gần nhất |
-| T3 | đồ thị tri thức 33 node, 21 cạnh, có chiều thời gian | tra theo quan hệ: luật nào thay luật nào, tại thời điểm T văn bản nào còn hiệu lực |
-
-Điểm cần nói thẳng: đây là **JSON + kho vectơ phẳng**, chưa phải cơ sở dữ liệu quan hệ
-đầy đủ (mục 10, đề xuất 1).
+| Tầng 1 | Tra theo mã đoạn (11.267 mục), tên thực thể (14.538 mục), quan hệ (20.311 mục) | Tra chính xác: đoạn nào, tên gì |
+| Tầng 2 | Mã hoá 768 con số cho từng đoạn | Tra nghĩa: câu hỏi → đoạn gần nhất về ý nghĩa |
+| Tầng 3 | Đồ thị 33 văn bản, 21 quan hệ | Tra theo quan hệ: luật nào thay luật nào, tại thời điểm nào còn hiệu lực |
 
 ---
 
-## 5. Chia sẻ chunk và node cho người khác
+## 5. Đồ thị tri thức
 
-![GEXF 1.3](figures/fig12_gexf.png)
+Đồ thị này chỉ chứa các **văn bản luật** (33 nút) và **quan hệ giữa các luật** (21 cạnh):
 
-Đồ thị được xuất ra **GEXF 1.3 ở chế độ `dynamic`**, nên khi mở bằng Gephi, Gephi-Lite
-hay bất kỳ bộ đọc GEXF nào, người nhận đều có được đồ thị kèm chiều thời gian và mọi
-thuộc tính (số hiệu, số chunk, số dẫn chiếu).
-
-Phần chưa làm và nên làm tiếp: chưa xuất RDF/JSON-LD để nạp vào kho tri thức chuẩn,
-chưa cấp DOI cho từng phiên bản.
-
----
-
-## 6. Xây dựng đồ thị tri thức
-
-![Đồ thị kế thừa năm 2026](figures/fig05_graph_2026.png)
-
-Node là văn bản luật, mỗi node mang `[valid_from, valid_to)`. Cạnh có nhãn và mốc thời
-gian:
-
-| Quan hệ | Số cạnh | Nghĩa |
+| Quan hệ | Số lượng | Nghĩa |
 | --- | --- | --- |
-| `REPLACES` | 3 | luật mới thay thế luật cũ |
-| `AMENDS` | 17 | sửa đổi điều khoản cụ thể |
-| `CONSOLIDATES` | 1 | hợp nhất |
+| Thay thế (REPLACES) | 3 | Luật mới thay luật cũ |
+| Sửa đổi (AMENDS) | 17 | Sửa điều khoản cụ thể |
+| Hợp nhất (CONSOLIDATES) | 1 | Hợp nhất |
 
-Cách dựng quan hệ đáng nói: quan hệ `AMENDS` **chỉ được chấp nhận khi đọc được từ văn
-bản gốc** (phần "lời nói đầu" của văn bản hợp nhất), không tin vào đoạn trích tìm
-kiếm. Casebook đã ghi lại một lỗi cụ thể: tin đoạn snippet đã tạo ra 142 cạnh sai.
+Quan hệ sửa đổi chỉ được nhận khi đọc được từ lời nói đầu của văn bản hợp nhất — không tin vào đoạn trích từ tìm kiếm. Có lần tin đoạn tìm kiếm đã tạo ra 142 cạnh sai, sau đó đã sửa.
 
-Mỗi node còn mang số chunk và số dẫn chiếu nội bộ, nối thẳng về tầng T1/T2 — tức là
-từ đồ thị có thể nhảy xuống tận đoạn văn bản gốc.
+Mỗi nút trên đồ thị còn mang số đoạn văn bản và số lần được dẫn chiếu — từ đó nhảy xuống được tận đoạn văn bản gốc.
 
 ---
 
-## 7. Cập nhật theo đồ thị động và cập nhật thời gian
+## 6. Cập nhật theo thời gian
 
-Cùng một đồ thị, hai thời điểm:
+Đồ thị này có chiều thời gian. Mỗi nút có `[từ ngày, đến ngày]`. Kéo thanh thời gian xem trạng thái tại từng năm:
 
 ![Đồ thị năm 2026](figures/fig05_graph_2026.png)
+*_Hình 4. Trạng thái năm 2026: 14 văn bản còn hiệu lực, các luật cũ làm mờ._*
+
 ![Đồ thị năm 2012](figures/fig06_graph_2012.png)
+*_Hình 5. Trạng thái năm 2012: chỉ 4 văn bản còn hiệu lực._*
 
-| Năm | Số văn bản đang hiệu lực | Trạng thái hiển thị |
-| --- | --- | --- |
-| 2026 | 14 | toàn bộ luật đã qua hiệu lực được làm mờ, tương lai ẩn |
-| 2012 | **4** | luật chưa tới hạn bị tẩn, chỉ 4 luật sáng |
+| Năm | Số văn bản còn hiệu lực |
+| --- | --- |
+| 2026 | 14 |
+| 2012 | 4 |
 
-Kéo slider là toàn bộ đồ thị tính lại trạng thái; đây không phải hai bản vẽ khác nhau
-mà là một đồ thị có chiều thời gian.
+---
+
+## 7. Trang xem
+
+Trang xem có hai phần:
+
+**Mạng kế thừa** — vẽ bằng thư viện AntV G6. Có thanh thời gian, kéo lại toàn bộ đồ thị tính lại trạng thái; rê chuột vào một luật sẽ sáng đúng chuỗi kế thừa của nó; bấm vào mở khung chi tiết.
 
 ![Phổ thời gian](figures/fig07_timeline_tab.png)
-
-Tab phổ thời gian dựng bằng Vega-Lite từ một spec công khai
-(`law_timeline.vl.json`) — người khác muốn vẽ lại thì dùng đúng spec đó.
+*_Hình 6. Tab phổ thời gian, dựng bằng thư viện Vega-Lite từ một spec công khai._*
 
 ![Thẻ tin khi rê chuột](figures/fig08_tooltip.png)
+*_Hình 7. Rê chuột vào một luật: số hiệu, thời gian hiệu lực, số đoạn, số lần dẫn chiếu._*
 
 ![Khung chi tiết văn bản](figures/fig09_drawer.png)
+*_Hình 8. Khung chi tiết: ví dụ Bộ luật Dân sự 2015, số hiệu 91/2015/QH13, có hiệu lực từ 01/01/2017 đến nay, 1.838 đoạn, 145 lần dẫn chiếu._*
 
-Rê chuột vào một luật sẽ sáng đúng chuỗi kế thừa của luật đó; bấm vào mở khung chi tiết
-với số hiệu, thời gian hiệu lực, số chunk, số dẫn chiếu và danh sách quan hệ.
+**Phổ thời gian** — vẽ bằng Vega-Lite, mo spec công khai, ai cũng có thể dùng lại.
+
+**Xuất PNG** — nút trên trang lưu hình ảnh của đồ thị hiện tại.
 
 ---
 
-## 8. Đánh giá chất lượng truy hồi
+## 8. Thử nghiệm
 
 ![Kết quả truy hồi](figures/fig10_eval.png)
+*_Hình 9. Kết quả trên 281 câu hỏi có đáp án._*
 
-Bộ benchmark gồm 281 câu hỏi vàng; ngày hỏi phải nằm trong khoảng hiệu lực của văn bản
-chứa đáp án.
+Bộ kiểm tra gồm 281 câu hỏi; ngày hỏi phải nằm trong khoảng hiệu lực của văn bản chứa đáp án:
 
-| Chỉ số | Toàn bộ 281 câu | 245 câu đã tác giả xác minh |
+| Chỉ số | Toàn bộ 281 câu | 245 câu đã được tác giả xác minh |
 | --- | --- | --- |
-| Hit@1 | 0,452 | 0,502 |
-| Hit@3 | 0,658 | 0,678 |
-| Hit@5 | 0,726 | 0,731 |
-| Hit@10 | 0,794 | 0,796 |
-| MRR | 0,569 | — |
+| Tìm đúng ở lần 1 (Hit@1) | 0,452 | 0,502 |
+| Tìm đúng trong 3 lần (Hit@3) | 0,658 | 0,678 |
+| Tìm đúng trong 5 lần (Hit@5) | 0,726 | 0,731 |
+| Tìm đúng trong 10 lần (Hit@10) | 0,794 | 0,796 |
+| Độ tin cậy tổng hợp (MRR) | 0,569 | — |
 
-Điểm đáng nói và đáng nói thẳng: **32 câu thuộc nhóm "đáp án đúng nhưng nguồn khác" chỉ
-đạt Hit@1 = 0,062**, kéo toàn bộ số trung bình xuống. Đây là hạn chế của **thang đo**,
-chưa chắc là hạn chế của hệ thống — cần tách hai thứ này khi báo cáo (mục 10).
+**Điểm đáng nói thẳng:** 32 câu thuộc nhóm "đáp án đúng nhưng trả về nguồn khác" chỉ đạt 0,062. Đây là vấn đề của thang đo, chưa chắc là vấn đề của hệ thống — nên báo cáo con số trên tập đã xác minh làm con số chính.
 
 ---
 
-## 9. Khó khăn gặp phải
+## 9. Phân bố đoạn văn bản
 
-| Khó khăn | Biểu hiện | Đã xử lý thế nào |
-| --- | --- | --- |
-| Quan hệ sửa đổi bị sai khi tin nguồn không chính thức | 142 cạnh `AMENDS` sai | chỉ nhận quan hệ từ lời nói đầu văn bản hợp nhất |
-| Ngày hỏi lệch khỏi hiệu lực văn bản | 48 câu benchmark không dùng được | validate ngày hỏi nằm trong khoảng hiệu lực trước khi nhận câu |
-| Ghi đè checkpoint làm mất ~2.900 dòng | mất dữ liệu đã trích | bắt buộc resume-filter + sao lưu `.bak` |
-| Truy hồi trả về nguồn khác với đáp án đúng | Hit@1 nhóm regolded chỉ 0,062 | công bố đúng số thay vì bóp chấm (mục 10) |
-| PDF scan không có lớp chữ | không tách được chunk | tách riêng hàng chờ OCR, không đoán |
-| Thư viện đồ thị chạy sai trên một số trình duyệt | trang trắng, không báo lỗi | chuyển sang dùng đúng hợp đồng API của thư viện + kiểm trên Chrome/Edge thật trước khi phát hành |
+![Phân bố đoạn theo văn bản](figures/fig11_chunk_distribution.png)
+*_Hình 10. Vẽ từ dữ liệu thật của tệp data/civil_chunks.jsonl._*
+
+4 văn bản chiếm hơn một nửa số đoạn. Do đó không thể cắt đoạn theo một quy tắc duy nhất cho tất cả.
 
 ---
 
-## 10. Đề xuất cải tiến
+## 10. Chia sẻ cho người khác
 
-1. **Xuất RDF/JSON-LD.** Cấu trúc quan hệ đã sẵn có; xuất ra RDF sẽ nạp được vào
-   Neo4j/rdf4j và các kho tri thức khác. Đây là việc có giá trị cao nhất nếu reviewer
-   hỏi về tính chuẩn hoá.
-2. **Đưa chunk lên đồ thị.** Thêm node cấp Điều/Khoản (`BLDS2015|Dieu455`) nối vào
-   luật, dùng sẵn hành vi phóng to theo rê của G6. Trả lời trực tiếp câu hỏi kiểu
-   "điều nào bị sửa, sửa những gì".
-3. **Sửa thang đo benchmark.** Chấp nhận nhiều đáp án tương đương về mặt pháp lý và
-   dùng đánh giá LLM-as-judge cho nhóm câu có nguồn khác; báo cáo Hit@1 trên tập đã
-   xác minh làm con số chính, nhóm kia để riêng.
-4. **Pipeline tăng dần.** Tách bước xây chỉ mục để khi có văn bản mới chỉ chunk và embed
-   phần mới, nối cạnh kế thừa tự động, thay vì chạy lại toàn bộ.
-5. **Bổ sung văn bản còn thiếu.** 4 câu hỏi author-verified chỉ đạt 0,5 cho thấy một phần
-   đáp án nằm ở văn bản chưa số hóa; mở rộng tập nguồn là hướng cải thiện trực tiếp.
+![Trích từ tệp GEXF](figures/fig12_gexf.png)
+*_Hình 11. 40 dòng đầu của tệp docs/graph/law_graph.gexf (tệp có 696 dòng). Chụp nguyên văn từ tệp gốc._*
+
+Đồ thị được xuất ra định dạng GEXF 1.3, mở được bằng Gephi và Gephi-Lite. Mọi thuộc tính thời gian và số đoạn đều đi kèm. Phần chưa làm: chưa xuất định dạng RDF/JSON-LD, chưa cấp mã DOI cho từng phiên bản.
 
 ---
 
-## 11. Tái lập và kiểm chứng
+## 11. Gặp khó khăn gì và đề xuất cải tiến
+
+| Khó khăn | Đã xử lý thế nào |
+| --- | --- |
+| Tin đoạn tìm kiếm tạo ra 142 cạnh sai | Chỉ nhận quan hệ từ lời nói đầu văn bản hợp nhất |
+| Ngày hỏi nằm ngoài thời gian hiệu lực | Kiểm tra ngày hỏi trước khi nhận câu |
+| Ghi đè làm mất dữ liệu | Bắt buộc sao lưu trước khi ghi đè |
+| Truy hồi trả về nguồn khác với đáp án đúng | Công bố đúng số thay vì làm đẹp con số |
+| PDF ảnh không có chữ | Tách riêng hàng chờ đọc lại, không đoán |
+| Trang bị trắng trên một số trình duyệt | Chạy thử trên Chrome và Edge thật trước khi phát hành |
+
+**Đề xuất làm tiếp:**
+
+1. Xuất định dạng RDF/JSON-LD để nạp vào kho tri thức chuẩn (Neo4j, rdf4j…).
+2. Đưa đoạn văn bản lên đồ thị (nút cấp Điều/Khoản nối vào luật).
+3. Sửa thang đo: chấp nhận nhiều đáp án đúng về mặt pháp lý.
+4. Khi có văn bản mới, chỉ tính toán phần mới thay vì chạy lại toàn bộ.
+5. Thêm văn bản chưa số hóa — 4 câu hỏi chưa đạt trọn vẹn có liên quan đến vấn đề này.
+
+---
+
+## 12. Kiểm tra lại trước khi phát hành
 
 | Kiểm tra | Kết quả |
 | --- | --- |
-| Manifest SHA-256 | 47/47 file khớp, hai gương giống nhau (trừ README vì chính sách khác nhau) |
-| Quét chất lượng văn bản | 0 ký tự ẩn, 0 mẫu khoá bí mật, mọi JSON/JSONL/GEXF đều parse được |
-| Trình duyệt | 0 lỗi JavaScript trên Chromium, Chrome thật và Edge thật |
-| Tính đúng đắn thời gian | truy vấn điểm-thời-điểm tự kiểm ở 3 mốc: 2000 → BLDS1995; 2010 → BLDS2005; 2020 → BLDS2015, HNGD2014 |
-
-Trang trình xem chạy hoàn toàn offline sau khi tải: không CDN, không build step, không
-phụ thuộc mạng. Toàn bộ số liệu trong báo cáo này đều lấy từ file trong kho, có thể mở
-kiểm tra trực tiếp.
+| Mã SHA-256 của mọi tệp | 60/60 khớp, hai gương giống nhau |
+| Quét chữ ẩn, khoá bí mật | Không phát hiện |
+| Mọi tệp JSON/JSONL/GEXF mở được | Có |
+| Chạy trên Chrome thật | Không có lỗi JavaScript |
+| Chạy trên Edge thật | Không có lỗi JavaScript |
+| Trang xem chạy khi mất mạng | Có (không cần CDN) |
 
 ---
 
-## Phụ lục — Bản đồ yêu cầu
+## Phụ lục: cách làm mỗi hình ảnh
 
-| Yêu cầu | Mục | Kết quả |
-| --- | --- | --- |
-| Chia file bộ luật thành chunk | §3 | 11.267 chunk theo Điều/Khoản/Điểm |
-| Lưu thành CSDL các chunk có nhãn | §4 | 3 tầng chỉ mục: khoá–giá trị, vectơ 768 chiều, đồ thị |
-| Chia sẻ chunk/node | §5 | GEXF 1.3 mở bằng Gephi, ID ổn định — **còn thiếu RDF/DOI** |
-| Xây đồ thị tri thức theo cách người ta làm | §6 | 33 node, 21 cạnh có nhãn + mốc thời gian — **node chỉ ở cấp luật** |
-| Cập nhật theo đồ thị động | §7 | slider thời gian, 2012 → 4 luật, 2026 → 14 luật |
-| Cập nhật thời gian | §7, §11 | `[valid_from, valid_to)` + tự kiểm 3 mốc thời gian |
-| Nêu khó khăn và đề xuất | §9, §10 | 6 khó khăn, 5 đề xuất cải tiến |
+| Hình | Có gì | Làm bằng công cụ gì | Nguồn |
+| --- | --- | --- | --- |
+| 1. Quy trình A→Z | Sơ đồ 10 bước | Mermaid 12.2.0 | docs/report/diagrams/pipeline.mmd |
+| 2. Mẫu đoạn văn bản | Chụp nguyên từ tệp data/civil_chunks.jsonl | Chụp từ trình duyệt | data/civil_chunks.jsonl (dòng 1–14) |
+| 3. Ba tầng lưu trữ | Sơ đồ 3 tầng | Mermaid 12.2.0 | docs/report/diagrams/index-layers.mmd |
+| 4. Đồ thị 2026 | Ảnh chụp trang đang chạy | agent-browser + Chrome thật | docs/graph/explorer.html |
+| 5. Đồ thị 2012 | Ảnh chụp trang đang chạy | agent-browser + Chrome thật | docs/graph/explorer.html |
+| 6. Phổ thời gian | Ảnh chụp trang đang chạy | agent-browser + Chrome thật | docs/graph/explorer.html |
+| 7. Tooltip | Ảnh chụp trang đang chạy | agent-browser + Chrome thật | docs/graph/explorer.html |
+| 8. Khung chi tiết | Ảnh chụp trang đang chạy | agent-browser + Chrome thật | docs/graph/explorer.html |
+| 9. Biểu đồ đánh giá | Vẽ từ dữ liệu thật | Vega-Lite | benchmark/law_eval_v12.json |
+| 10. Phân bố đoạn | Vẽ từ dữ liệu thật | Vega-Lite | data/civil_chunks.jsonl |
+| 11. GEXF | Trích nguyên từ tệp thực tế | Chụp từ trình duyệt | docs/graph/law_graph.gexf |
+
+Mọi con số trong báo cáo đều lấy từ file trong kho, có thể mở kiểm tra trực tiếp. Trang xem chạy hoàn toàn khi mất mạng (không cần CDN, không cần cài đặt).
+
+---
+*Báo cáo này đi kèm với bản Word tương tự (ViCivil-TKG_BAO-CAO.docx) cùng nội dung và hình ảnh.*

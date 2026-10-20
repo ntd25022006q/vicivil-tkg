@@ -1,0 +1,18 @@
+%% Ba tầng lưu trữ trên cùng một bộ 11.267 chunk.
+%% Vẽ bằng Mermaid: https://mermaid.js.org
+%% Ngày vẽ: 19/10/2026
+flowchart TD
+    S["11.267 chunk đã gán mã<br/>(data/civil_chunks.jsonl)"]
+
+    S --> T1["Tầng 1 — tra bằng đúng mã<br/>chunk: 11.267 mục<br/>thực thể: 14.538 mục<br/>quan hệ: 20.311 mục"]
+    S --> T2["Tầng 2 — tra theo nghĩa<br/>vector 768 chiều cho từng chunk<br/>câu hỏi → vector → chunk gần nhất"]
+    S --> T3["Tầng 3 — tra theo quan hệ và thời gian<br/>33 văn bản, 21 quan hệ"]
+
+    T1 --> U1["Hỏi: 'đoạn nào trong BLDS2015 nói về quyền của con đẻ'"]
+    T2 --> U2["Hỏi: 'con đẻ có quyền gì với cha mẹ'"]
+    T3 --> U3["Hỏi: 'năm 2012 văn bản nào còn hiệu lực'"]
+
+    style S fill:#1f3a52,color:#ffffff,stroke:#1f3a52
+    style T1 fill:#eef4fa,stroke:#3f6ea8
+    style T2 fill:#fdf5e6,stroke:#c9a227
+    style T3 fill:#eef7f0,stroke:#4f8f5f

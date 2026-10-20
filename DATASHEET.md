@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.2)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.3)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.5.2)
+## Composition (v1.5.3)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.5.2)
+### Per-law size table (chunk counts, v1.5.3)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,16 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.5.3:** the report is rebuilt around verifiable images. The two
+  hand-drawn illustrations are replaced: the pipeline and the index
+  layers are now diagrams drawn with Mermaid, with their source files
+  kept in `docs/report/diagrams/` so anyone can re-render them, and the
+  chunk and GEXF illustrations are screenshots taken verbatim from the
+  committed files themselves. Every figure states in its caption what it
+  is and how it was produced, and the report carries an appendix listing
+  all eleven figures with the tool and the source file for each. The
+  wording is simplified for a non-specialist reader. Manifest grows 60 ->
+  62 entries (two Mermaid sources); zero content change.
 - **v1.5.2:** adds `docs/REPORT.md`, a full A-to-Z report with eleven
   figures captured from the running artifact, covering the chunking and
   labelling scheme, the three index layers, the knowledge graph, temporal
