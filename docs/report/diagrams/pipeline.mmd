@@ -1,14 +1,18 @@
-%% Sơ đồ quy trình xây dựng ViCivil-TKG.
-%% Vẽ bằng Mermaid: https://mermaid.js.org  (render: mmdc hoặc mermaid.live)
-%% Ngày vẽ: 19/10/2026 — mọi số liệu trong sơ đồ lấy từ tệp trong kho.
-flowchart TD
-    A["A. Lấy 6 file PDF chính thức<br/>từ công báo"] --> B["B. Kiểm tra PDF có chữ hay là ảnh<br/>ảnh thì đưa sang hàng chờ OCR"]
-    B --> C["C. Cắt nhỏ văn bản thành chunk<br/>theo Điều - Khoản - Điểm<br/>tổng 11.267 chunk"]
-    C --> D["D. Lọc ra phần luật dân sự<br/>kiểm tra chunk rỗng, trùng mã"]
-    D --> E["E. Mã hoá mỗi chunk thành vector 768 số"]
-    E --> F["F. Rút thực thể và quan hệ giữa các chunk"]
-    F --> G["G. Gán thời gian cho từng văn bản<br/>từ ngày nào đến ngày nào"]
-    G --> H["H. Làm bộ 281 câu hỏi có đáp án<br/>và chấm điểm hệ thống"]
-    H --> I["I. Xuất đồ thị GEXF<br/>dựng trang xem"]
-    I --> J["J. Băm SHA-256 mọi tệp<br/>đăng lên 2 nơi"]
-    B -.-> X["PDF ảnh: chờ OCR"]
+%% Sơ đồ quy trình xây dựng ViCivil-TKG - dải nhìn tổng quan.
+%% Vẽ bằng Mermaid: https://mermaid.js.org  (render: mermaid.live hoặc mmdc)
+%% Ngày vẽ: 20/10/2026 - chi tiết từng bước nằm trong bảng báo cáo.
+flowchart LR
+    A["A<br/>Thu thập PDF"] --> B["B<br/>Phân loại<br/>chữ / ảnh"] --> C["C<br/>Cắt chunk<br/>11.267"] --> D["D<br/>Lọc và<br/>kiểm tra"] --> E["E<br/>Mã hoá<br/>768 chiều"]
+    E --> F["F<br/>Trích thực thể<br/>và quan hệ"] --> G["G<br/>Gán thời gian"] --> H["H<br/>281 câu hỏi<br/>có đáp án"] --> I["I<br/>Đồ thị GEXF<br/>+ trang xem"] --> J["J<br/>Băm mã<br/>phát hành"]
+
+    style A fill:#fdf5e6,stroke:#c9a227
+    style B fill:#fdf5e6,stroke:#c9a227
+    style C fill:#fdf5e6,stroke:#c9a227
+    style D fill:#fdf5e6,stroke:#c9a227
+    style E fill:#fdf5e6,stroke:#c9a227
+    style F fill:#fdf5e6,stroke:#c9a227
+    style G fill:#fdf5e6,stroke:#c9a227
+    style H fill:#fdf5e6,stroke:#c9a227
+    style I fill:#fdf5e6,stroke:#c9a227
+    style J fill:#fdf5e6,stroke:#c9a227
+    linkStyle default stroke:#55606c,stroke-width:1.2px

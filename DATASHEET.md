@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.3)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.4)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.5.3)
+## Composition (v1.5.4)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.5.3)
+### Per-law size table (chunk counts, v1.5.4)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,16 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.5.4:** the report is now also published as a typeset PDF
+  (`docs/report/ViCivil-TKG_bao-cao.pdf`, 13 pages, A4), built from
+  `docs/report/report.tex` with XeLaTeX; the source is kept so the
+  document can be rebuilt or edited. The workflow scripts that were
+  running only on the GPU machine are synced into
+  `tools/lab-scripts/` with a README explaining what each one did, so
+  the whole process is reviewable and not just the published subset.
+  A byte-level comparison confirms the 36 published pipeline scripts are
+  identical to the copies on the GPU machine - there is no divergence
+  between the two. Manifest grows 62 -> 83 entries. Zero content change.
 - **v1.5.3:** the report is rebuilt around verifiable images. The two
   hand-drawn illustrations are replaced: the pipeline and the index
   layers are now diagrams drawn with Mermaid, with their source files

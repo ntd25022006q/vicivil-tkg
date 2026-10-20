@@ -1,7 +1,7 @@
 # ViCivil-TKG - Vietnamese Civil Law Temporal Knowledge Graph
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-![Release](https://img.shields.io/badge/release-v1.5.3-blue.svg)
+![Release](https://img.shields.io/badge/release-v1.5.4-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
 [![HuggingFace Dataset](https://img.shields.io/badge/HF-dataset-yellow.svg)](https://huggingface.co/datasets/datbazuka2502/vicivil-tkg)
 
@@ -41,7 +41,7 @@ A byte-level mirror of the four data folders is published on HuggingFace:
 with configs + loading snippets). `CITATION.cff` and the BibTeX block in
 the HF card cover attribution.
 
-## Quality gates in v1.2.5/v1.5.3
+## Quality gates in v1.2.5/v1.5.4
 
 - Official-source fidelity: 5 signed Cong-bao PDFs re-verified digit-by-digit
   (838/838, 110/110, 777/777, 78/78, 689/689 articles); the corrupted
@@ -75,6 +75,11 @@ the HF card cover attribution.
   banner (message + position + last init step) and a dismissible
   corner pill reports the self-test state (G6/vega loaded, graph
   initialized) - no silent blank pages remain.
+- v1.5.4 typeset report and full process history: the report is
+  published as a 13-page LaTeX PDF with its source kept, and the
+  workflow scripts that only existed on the GPU machine are synced into
+  `tools/lab-scripts/`; a byte-level check confirms the 36 published
+  scripts are identical to the GPU copies. Manifest 62 -> 83 entries.
 - v1.5.3 verifiable figures: the report's diagrams are drawn with
   Mermaid (sources kept in `docs/report/diagrams/`) and its data
   illustrations are screenshots taken from the committed files, with a
