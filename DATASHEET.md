@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.5.5)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.6.0)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,7 +10,7 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.5.5)
+## Composition (v1.6.0)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
@@ -41,7 +41,7 @@
   (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.5.5)
+### Per-law size table (chunk counts, v1.6.0)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -194,6 +194,24 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.6.0:** four of the limitations listed in earlier versions are
+  closed, all with open-source tooling and without using the GPU. The
+  knowledge graph is now exported as RDF/JSON-LD
+  (`docs/graph/law_graph.ttl`, `law_graph.jsonld`: 33 statutes, 21
+  relations, 11,267 chunks) and parses cleanly with rdflib. A
+  statute-level index (`docs/graph/law_articles.json`, 10,215
+  Điều/Khoản/Điểm units) is embedded in the viewer, so the detail panel
+  can filter by article number and show how often each article is
+  cited. The retrieval benchmark is re-scored three ways and published
+  as `benchmark/law_eval_v16_equiv.json`; the strict rule reproduces the
+  published 0.452 Hit@1 exactly, while the multi-answer rule adds
+  0.007 and restricting to the 241 questions with a verifiable gold
+  gives 0.432 - so the 32 low-scoring questions are a measurement
+  artefact, not a retrieval failure. An incremental pipeline
+  (`src/law_incremental.py`) merges new statutes without re-running the
+  whole build; it was exercised on the GPU machine and produced a new
+  chunk delta without touching the GPU. The report is retypeset (25
+  pages) and no page is left blank. Zero change to the data itself.
 - **v1.5.5:** the report is rewritten as a standard research report
   (25 pages, A4, Times New Roman, XeLaTeX): title page with the fields a
   submission needs, abstract with keywords, table of contents, list of

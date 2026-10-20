@@ -1,7 +1,7 @@
 # ViCivil-TKG - Vietnamese Civil Law Temporal Knowledge Graph
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-![Release](https://img.shields.io/badge/release-v1.5.5-blue.svg)
+![Release](https://img.shields.io/badge/release-v1.6.0-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
 [![HuggingFace Dataset](https://img.shields.io/badge/HF-dataset-yellow.svg)](https://huggingface.co/datasets/datbazuka2502/vicivil-tkg)
 
@@ -41,7 +41,7 @@ A byte-level mirror of the four data folders is published on HuggingFace:
 with configs + loading snippets). `CITATION.cff` and the BibTeX block in
 the HF card cover attribution.
 
-## Quality gates in v1.2.5/v1.5.5
+## Quality gates in v1.2.5/v1.6.0
 
 - Official-source fidelity: 5 signed Cong-bao PDFs re-verified digit-by-digit
   (838/838, 110/110, 777/777, 78/78, 689/689 articles); the corrupted
@@ -75,6 +75,12 @@ the HF card cover attribution.
   banner (message + position + last init step) and a dismissible
   corner pill reports the self-test state (G6/vega loaded, graph
   initialized) - no silent blank pages remain.
+- v1.6.0 closes four open limitations without the GPU: RDF/JSON-LD
+  export of the knowledge graph (checked with rdflib), a statute-level
+  article index embedded in the viewer, the retrieval benchmark
+  re-scored under three rules and published alongside the original, and
+  an incremental pipeline for adding new statutes; the report is
+  retypeset with no blank page.
 - v1.5.5 research-report layout: the report is typeset as a standard
   25-page research report (title page, abstract and keywords, contents,
   lists of figures and tables, seven chapters, references, appendices) and

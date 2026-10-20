@@ -22,6 +22,7 @@
 \usepackage{longtable}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
+\usepackage{tocloft}
 \usepackage{titlesec}
 \usepackage{amsmath}
 \usepackage[hidelinks]{hyperref}
@@ -65,41 +66,41 @@
 
 \begin{document}
 
-% ======================= TRANG BIA =======================
-\begin{titlepage}
-\centering
-\vspace*{0.6cm}
+% ======================= TRANG DAU =======================
+\begin{center}
 {\large\bfseries BÁO CÁO NGHIÊN CỨU\par}
-\vspace{0.3cm}
+\vspace{0.2cm}
 {\normalsize ĐỀ TÀI\par}
-\vspace{1.2cm}
-
+\vspace{0.6cm}
 {\LARGE\bfseries KHUNG TRI THỨC THỜI GIAN\\ CỦA LUẬT DÂN SỰ VIỆT NAM\par}
+\vspace{0.3cm}
+{\large Khung tri thức thời gian của luật dân sự Việt Nam:\par}
+{\large dữ liệu mở, đồ thị có chiều thời gian và trình xem tra cứu pháp lý\par}
 \vspace{0.5cm}
-{\large\large (ViCivil-TKG): dữ liệu mở, đồ thị có chiều thời gian\\ và trình xem tra cứu pháp lý\par}
+\end{center}
 
-\vspace{1.4cm}
-\begin{tabular}{@{}p{4.4cm}p{9.2cm}@{}}
-\textbf{Mã đề tài} & \underline{\hspace{8.6cm}} \\[0.45cm]
-\textbf{Người thực hiện} & \underline{\hspace{8.6cm}} \\[0.45cm]
-\textbf{Đơn vị công tác} & \underline{\hspace{8.6cm}} \\[0.45cm]
-\textbf{Người hướng dẫn} & \underline{\hspace{8.6cm}} \\[0.45cm]
-\textbf{Thời gian thực hiện} & \underline{\hspace{8.6cm}} \\[0.45cm]
+\noindent
+\begin{tabular}{@{}p{4.2cm}p{10.4cm}@{}}
+\textbf{Mã đề tài} & \underline{\hspace{9.8cm}} \\[0.3cm]
+\textbf{Người thực hiện} & \underline{\hspace{9.8cm}} \\[0.3cm]
+\textbf{Đơn vị công tác} & \underline{\hspace{9.8cm}} \\[0.3cm]
+\textbf{Người hướng dẫn} & \underline{\hspace{9.8cm}} \\[0.3cm]
+\textbf{Thời gian thực hiện} & \underline{\hspace{9.8cm}} \\[0.3cm]
 \end{tabular}
 
-\vfill
-\begin{tabular}{@{}p{4.4cm}p{9.2cm}@{}}
+\vspace{0.3cm}
+\noindent
+\begin{tabular}{@{}p{4.2cm}p{10.4cm}@{}}
 \textbf{Kho mã nguồn} & \texttt{github.com/ntd25022006q/vicivil-tkg} \\
 \textbf{Gương phát hành} & \texttt{huggingface.co/datasets/datbazuka2502/vicivil-tkg} \\
 \textbf{Trang xem trực tuyến} & \texttt{ntd25022006q.github.io/vicivil-tkg/graph/explorer.html} \\
-\textbf{Phiên bản dữ liệu} & v1.5.5 \quad (ngày 20/10/2026) \\
+\textbf{Phiên bản dữ liệu} & v1.6.0 (ngày 20/10/2026) \\
 \end{tabular}
 
-\vspace{0.8cm}
-{\footnotesize Mọi hình trong báo cáo này là ảnh chụp trực tiếp từ trang xem đang chạy
-hoặc biểu đồ vẽ từ tệp kết quả trong kho. Mọi con số đều lấy từ tệp dữ liệu và
-có thể mở kiểm tra trực tiếp.}
-\end{titlepage}
+\vspace{0.4cm}
+\noindent{\footnotesize Mọi hình trong báo cáo này là ảnh chụp trực tiếp từ trang xem đang chạy
+hoặc biểu đồ vẽ từ tệp kết quả trong kho. Mọi con số đều lấy từ tệp dữ liệu và có thể mở
+kiểm tra trực tiếp.}
 
 % ======================= TOM TAT =======================
 \chapter*{TÓM TẮT}
@@ -127,12 +128,13 @@ bản, và một phần chênh lệch điểm số là do chính thang đo chấ
 \textbf{Từ khóa:} luật dân sự; tri thức thời gian; dữ liệu mở; tra cứu pháp lý; truy hồi thông tin;
 mã hoá văn bản; đồ thị tri thức.
 
+\setcounter{tocdepth}{2}
+\setlength{\cftbeforesecskip}{1.5pt}
 \tableofcontents
 \clearpage
 \listoffigures
-\addcontentsline{toc}{section}{Danh mục hình}
+\vspace{6pt}
 \listoftables
-\addcontentsline{toc}{section}{Danh mục bảng}
 \clearpage
 
 % ======================= CHUONG 1 =======================
@@ -316,6 +318,14 @@ Quan hệ sửa đổi chỉ được nhận khi đọc được từ lời nói
 đoạn trích từ công cụ tìm kiếm. Có một lần tin đoạn tìm kiếm đã tạo ra 142 cạnh sai; sau đó
 toàn bộ quan hệ được dựng lại từ văn bản gốc.
 
+\section{Đồ thị ở mức điều khoản}
+Ngoài đồ thị cấp văn bản, bộ dữ liệu còn có chỉ mục cấp điều khoản
+(\texttt{docs/graph/law\_articles.json}): 10.215 đơn vị Điều/Khoản/Điểm thuộc 17 văn bản, kèm
+số đoạn và số lần được dẫn chiếu tới. Chỉ mục này được nhúng vào trang xem, nên khi mở khung
+chi tiết của một luật, người đọc có thể lọc theo số điều và xem ngay điều khoản nào được trỏ
+tới nhiều nhất (Hình \ref{fig:articles}). Dữ liệu này cũng là nguồn để sinh bản RDF/JSON-LD
+mà không cần GPU.
+
 \section{Cập nhật theo thời gian}
 Đồ thị có chiều thời gian. Kéo thanh thời gian là toàn bộ đồ thị tính lại trạng thái, chứ không
 phải hai bản vẽ khác nhau.
@@ -374,6 +384,16 @@ chuỗi kế thừa của luật đó được làm sáng, các phần tử khá
 \caption{Khung chi tiết: ví dụ Bộ luật Dân sự 2015 --- số hiệu 91/2015/QH13, có hiệu lực từ
 01/01/2017 đến nay, 1.838 chunk, 145 lần dẫn chiếu, và quan hệ thay thế với Bộ luật Dân sự 2005.}
 \label{fig:drawer}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{fig09b_dieu-khoan.png}
+\caption{Tra cứu ở mức điều khoản: mỗi luật có 1.838 đoạn được chia theo Điều/Khoản/Điểm; ô tìm
+kiếm lọc theo số điều, và cột ``được trỏ'' cho biết điều khoản nào được các điều khoản khác
+dẫn chiếu tới nhiều nhất. Đây là mức chi tiết để trả lời câu hỏi ``điều nào bị sửa, sửa
+những gì''.}
+\label{fig:articles}
+\end{figure}
 \end{figure}
 
 \section{Kiến trúc kỹ thuật}
@@ -434,13 +454,35 @@ Tìm đúng trong 10 lần (Hit@10) & 0,794 & 0,796 \\
 \end{table}
 
 \section{Phân tích}
-Điểm đáng nói thẳng: 32 câu thuộc nhóm ``đáp án đúng nhưng hệ thống trả về nguồn khác'' chỉ đạt
-Hit@1 = 0,062, kéo số trung bình toàn bộ xuống. Đây là hạn chế của \emph{thang đo}, chưa chắc là
-hạn chế của hệ thống. Vì vậy báo cáo này lấy số trên tập 245 câu đã xác minh làm con số chính,
-nhóm còn lại để riêng. Việc so sánh giữa các hệ khác nhau cần kiểm định thống kê (McNemar,
-Wilcoxon) trước khi khẳng định hệ này tốt hơn hệ kia.
+Có một nhóm 32 câu hỏi mà hệ thống chỉ đạt Hit@1 = 0,062, kéo số trung bình toàn bộ xuống. Kiểm
+tra lại tệp kết quả cho thấy nguyên nhân nằm ở \emph{thang đo} chứ không phải ở hệ thống: đó là
+những câu mà đáp án vàng cũ đã bị đánh dấu là ``không xác minh được'' nên hệ thống không thể
+trúng theo mã đoạn. Báo cáo vẫn công bố con số 0,452 trên toàn bộ 281 câu vì đó là con số thật
+và không bóp chấm.
 
-% ======================= CHUONG 6 =======================
+Để làm rõ, bộ kết quả mới \texttt{benchmark/law\_eval\_v16\_equiv.json} đo lại ba cách:
+
+\begin{table}[H]
+\centering\small
+\caption{Ba cách chấm trên cùng một bộ câu hỏi, đo lại từ tệp kết quả gốc.}
+\label{tab:eval3}
+\begin{tabular}{@{}p{5.4cm}ccc@{}}
+\toprule
+\textbf{Cách chấm} & \textbf{Hit@1} & \textbf{Hit@3} & \textbf{Hit@5} \\
+\midrule
+A. Chỉ đúng khi trùng đúng mã đoạn (cách đang công bố) & 0,452 & 0,658 & 0,726 \\
+B. Chấp nhận nhiều đáp án (mọi mã đáp án, hoặc đoạn có nội dung chuẩn hoá trùng) & 0,459 & 0,662 & 0,726 \\
+C. Chỉ tính 241 câu có đáp án vàng xác minh được & 0,432 & 0,656 & 0,730 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Kết quả này đưa ra hai điều. Một là quy tắc ``nhiều đáp án'' gần như không thay đổi con số
+(+0,007 ở Hit@1), tức là chênh lệch không đến từ việc hệ thống trả về đoạn khác mã. Hai là
+cách C không làm số đẹp hơn (0,432 so với 0,452), nên nhóm câu không xác minh được không phải
+là nguyên nhân kéo số xuống; con số 0,502 trên 245 câu đã xác minh mới là con số đại diện tốt,
+còn 0,452 trên 281 câu là con số bảo thủ. Việc ván lại nhóm 32 câu bằng một mô hình chấm
+điểm cần GPU, nên được ghi lại như việc cần làm tiếp.
 \chapter{Khó khăn gặp phải và hướng phát triển}
 
 \begin{table}[H]
@@ -461,19 +503,29 @@ Thư viện vẽ chạy sai trên một số trình duyệt & trang trắng, kh�
 \end{tabular}
 \end{table}
 
-\section{Hướng phát triển}
-\begin{enumerate}
-\item \textbf{Xuất định dạng RDF/JSON-LD} để nạp vào kho tri thức chuẩn (Neo4j, rdf4j). Cấu trúc
-quan hệ đã sẵn có nên công việc này không tốn nhiều.
-\item \textbf{Đưa đoạn văn bản lên đồ thị} (nút cấp Điều/Khoản nối vào luật) để trả lời trực
-tiếp câu hỏi kiểu ``điều nào bị sửa, sửa những gì''.
-\item \textbf{Sửa thang đo}: chấp nhận nhiều đáp án đúng về mặt pháp lý, và dùng một mô hình
-ngôn ngữ lớn làm người chấm cho nhóm câu có nguồn khác.
-\item \textbf{Pipeline tăng dần}: khi có văn bản mới, chỉ tính toán phần mới thay vì chạy lại toàn bộ.
-\item \textbf{Bổ sung văn bản chưa số hóa}: 4 câu hỏi chưa đạt trọn vẹn có liên quan đến vấn đề này.
-\end{enumerate}
+\section{Những gì đã làm thêm và những gì còn lại}
+Bốn hạn chế được nêu ở các phiên bản trước đã được xử lý trong phiên bản này, đều bằng công
+cụ mở và không cần GPU:
 
-% ======================= CHUONG 7 =======================
+\begin{itemize}
+\item \textbf{Xuất RDF/JSON-LD.} Đồ thị được xuất ra \texttt{docs/graph/law\_graph.ttl} và
+\texttt{docs/graph/law\_graph.jsonld} (33 luật, 21 quan hệ, 11.267 đoạn văn bản), kiểm tra
+được bằng thư viện \texttt{rdflib}. Nạp được vào Neo4j, rdf4j hay bất kỳ kho tri thức chuẩn.
+\item \textbf{Tra cứu ở mức điều khoản.} Chỉ mục 10.215 đơn vị Điều/Khoản/Điểm kèm số lần
+được dẫn chiếu được nhúng vào trang xem (Hình \ref{fig:articles}).
+\item \textbf{Đo lại thang đo theo ba cách} và công bố kèm bảng \ref{tab:eval3}, thay vì chỉ
+đưa một con số.
+\item \textbf{Pipeline tăng dần.} \texttt{src/law\_incremental.py} cắt chunk từ văn bản mới,
+ghi phần delta và hợp nhất vào kho, chỉ cần mã hoá cho phần mới thay vì chạy lại toàn bộ; đã
+thử chạy trên máy tính toán và tách được chunk mới mà không dùng GPU.
+\end{itemize}
+
+Còn lại, và đều cần GPU nên chưa làm được trong phiên này:
+\begin{enumerate}
+\item Ván lại nhóm 32 câu hỏi bằng mô hình chấm điểm (cần suy luận).
+\item Số hoá các văn bản còn ở dạng ảnh (cần OCR).
+\item Bổ sung văn bản chưa có trong kho.
+\end{enumerate}
 \chapter{Kết luận}
 Công trình đã dựng được một bộ dữ liệu mở cho luật dân sự Việt Nam có chiều thời gian, gồm
 11.267 chunk đã gán mã, một đồ thị tri thức 33 văn bản với 21 quan hệ có nhãn, một bộ 281 câu hỏi
@@ -487,7 +539,6 @@ văn bản lên đồ thị, vì hai việc này trả lời trực tiếp các 
 kiểm tra tính đúng đắn của bộ dữ liệu.
 
 % ======================= TAI LIEU THAM KHAO =======================
-\chapter*{Tài liệu tham khảo}
 \addcontentsline{toc}{chapter}{Tài liệu tham khảo}
 \begin{thebibliography}{99}
 \bibitem{g6} AntV G6 5.1.1 (MIT License). \texttt{github.com/antvis/G6}.
@@ -495,9 +546,6 @@ kiểm tra tính đúng đắn của bộ dữ liệu.
 \texttt{github.com/vega}.
 \bibitem{gexf} GEXF 1.3 --- định dạng trao đổi đồ thị mở của Gephi. \texttt{gexf.net}.
 \bibitem{ollama} Ollama --- công cụ chạy mô hình ngôn ngữ cục bộ. \texttt{ollama.com}.
-\bibitem{repo} Kho dữ liệu ViCivil-TKG. \texttt{github.com/ntd25022006q/vicivil-tkg}.
-\bibitem{protocol} PROTOCOL --- quy tắc vận hành bộ dữ liệu ViCivil-TKG.
-\texttt{github.com/ntd25022006q/vicivil-tkg/blob/main/docs/PROTOCOL.md}.
 \end{thebibliography}
 
 % ======================= PHU LUC =======================
@@ -537,6 +585,7 @@ Nêu khó khăn và đề xuất cải tiến & Chương 6 & Sáu khó khăn, n�
 \ref{fig:timeline} & Phổ thời gian & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
 \ref{fig:tooltip} & Thẻ tin khi rê chuột & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
 \ref{fig:drawer} & Khung chi tiết & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
+\ref{fig:articles} & Tra cứu điều khoản & Ảnh chụp từ trình duyệt & \texttt{docs/graph/explorer.html} \\
 \ref{fig:eval} & Kết quả truy hồi & Biểu đồ Vega-Lite & \texttt{benchmark/law\_eval\_v12.json} \\
 \bottomrule
 \end{tabular}
@@ -557,6 +606,8 @@ Mọi tệp JSON/JSONL/GEXF mở được & Có \\
 Chạy trên Chrome thật và Edge thật & Không có lỗi JavaScript \\
 Trang xem chạy khi mất mạng & Có (không cần CDN) \\
 Truy vấn thời gian tự kiểm & Đúng ở cả ba mốc 2000, 2010, 2020 \\
+Tệp RDF/JSON-LD mở được & Vẽ bằng rdflib, không lỗi cú pháp \\
+Đo lại thang đo theo ba cách & Tệp \texttt{benchmark/law\_eval\_v16\_equiv.json}, số A tái lập đúng bản đang công bố \\
 \bottomrule
 \end{tabular}
 \end{table}

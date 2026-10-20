@@ -1,0 +1,27 @@
+{
+ "n_questions_scored": 281,
+ "rule_A_strict_id": "chi dung khi top-k chua DUNG mot ID dap an vang",
+ "rule_B_multi_answer": "dung khi top-k co bat ky ID dap an vang, hoac co chunk khac ma noi dung chuan hoa giong het dap an vang",
+ "A_strict_id": {
+  "hit@1": 0.452,
+  "hit@3": 0.6584,
+  "hit@5": 0.726,
+  "hit@10": 0.726
+ },
+ "B_multi_answer": {
+  "hit@1": 0.4591,
+  "hit@3": 0.6619,
+  "hit@5": 0.726,
+  "hit@10": 0.726
+ },
+ "questions_recovered_at_10": 0,
+ "recovered_examples": [],
+ "C_only_questions_with_a_verified_gold": {
+  "n_questions": 241,
+  "excluded_questions_without_verifiable_gold": 40,
+  "hit@1": 0.4315,
+  "hit@3": 0.6556,
+  "hit@5": 0.7303,
+  "note": "chi cham nhung cau co dap an vang xac minh duoc; nhom bi danh dau 'khong xac minh duoc' duoc tach ra va cong bo rieng"
+ }
+}
