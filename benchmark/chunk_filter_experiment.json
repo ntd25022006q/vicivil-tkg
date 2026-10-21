@@ -1,0 +1,59 @@
+{
+ "question": "loc bo doan chat luong thap co lam diem truy hoi tot hon khong?",
+ "short_chunks_under_120_chars": 2107,
+ "duplicate_chunks": 720,
+ "variants": {
+  "A. goc (11.267 doan)": {
+   "n_chunks": 11267,
+   "hit_at_k": {
+    "1": 0.4021,
+    "3": 0.6584,
+    "5": 0.7295,
+    "10": 0.8185
+   },
+   "mrr": 0.5449,
+   "hit_at_k_verified_only": {
+    "1": 0.3776,
+    "3": 0.6307,
+    "5": 0.7054,
+    "10": 0.8091
+   },
+   "seconds": 67.0
+  },
+  "B. bo doan < 120 ky tu": {
+   "n_chunks": 9160,
+   "hit_at_k": {
+    "1": 0.4021,
+    "3": 0.6477,
+    "5": 0.726,
+    "10": 0.8149
+   },
+   "mrr": 0.5415,
+   "hit_at_k_verified_only": {
+    "1": 0.3817,
+    "3": 0.6183,
+    "5": 0.7054,
+    "10": 0.805
+   },
+   "seconds": 62.1
+  },
+  "C. bo doan trung + < 120 ky tu": {
+   "n_chunks": 8688,
+   "hit_at_k": {
+    "1": 0.4093,
+    "3": 0.6228,
+    "5": 0.6975,
+    "10": 0.7865
+   },
+   "mrr": 0.5333,
+   "hit_at_k_verified_only": {
+    "1": 0.3817,
+    "3": 0.6017,
+    "5": 0.6846,
+    "10": 0.7842
+   },
+   "seconds": 46.9
+  }
+ },
+ "note": "cung phep cham voi law_eval_repro.py (BM25 + vector da luu + RRF), khong can GPU"
+}

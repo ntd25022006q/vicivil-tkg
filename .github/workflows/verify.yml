@@ -1,0 +1,63 @@
+name: verify
+
+# Kiem tra du lieu va tai lap ket qua - chay tren moi lan push.
+# Khong dung GPU, khong dung secret, khong dung mo hinh: chi doc file trong kho.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cai phu thuoc
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Tai lap ket qua truy hoi (khong can GPU)
+        run: python src/law_eval_repro.py
+
+      - name: Do chat luong du lieu chunk
+        run: python src/law_quality.py
+
+      - name: Xuat va kiem chung do thi tri thuc (RDF / JSON-LD)
+        run: |
+          python src/law_rdf_export.py
+          python src/law_rdf_verify.py
+
+      - name: Lap chi muc dieu khoan
+        run: python src/law_articles_index.py
+
+      - name: Dung trang xem tu ma nguon
+        run: python src/lawg6.py
+
+      - name: Quet chat luong va kiem tra manifest
+        run: |
+          python tools/law_sweep.py .
+          python tools/law_manifest.py . SHA256SUMS.check gh
+          if ! diff -q SHA256SUMS SHA256SUMS.check; then
+            echo "::error::Manifest khong khop voi thu muc hien tai - chay: python tools/law_manifest.py . SHA256SUMS gh"
+            exit 1
+          fi
+          echo "Manifest khop."
+
+      - name: Kiem tra khac biet khong mong doi
+        run: |
+          git diff --exit-code -- docs/graph/explorer.html docs/graph/law_graph.ttl \
+            docs/graph/law_graph.jsonld docs/graph/law_articles.json \
+            benchmark/law_eval_repro.json provenance/chunk_quality.json \
+            provenance/rdf_verify.json || {
+            echo "::error::Ket qua tai lap khac voi ket qua da commit - hay commit lai ket qua do."
+            exit 1
+          }
+          echo "Ket qua tai lap trung khop voi ket qua da commit."

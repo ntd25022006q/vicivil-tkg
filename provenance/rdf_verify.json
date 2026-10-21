@@ -1,0 +1,36 @@
+{
+ "triples_turtle": 56772,
+ "triples_after_adding_jsonld": 57002,
+ "queries": {
+  "văn bản nào thay thế BLDS1995": {
+   "n_rows": 1,
+   "sample": [
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/BLDS2005'), rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/BLDS1995'))"
+   ]
+  },
+  "văn bản nào còn hiệu lực tại 2026-06-01": {
+   "n_rows": 56,
+   "sample": [
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/BLDS2015'), rdflib.term.Literal('Bộ luật Dân sự 2015'), rdflib.term.Literal('2017-01-01', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#date')), None)",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/BLDS2015'), rdflib.term.Literal('Bộ luật Dân sự 2015', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.Literal('2017-01-01', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#date')), None)",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/EXT-Lu_t-s_-03-2022-QH15'), rdflib.term.Literal('03/2022'), rdflib.term.Literal('2022-03-01', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#date')), None)",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/EXT-Lu_t-s_-03-2022-QH15'), rdflib.term.Literal('03/2022', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.Literal('2022-03-01', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#date')), None)",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/EXT-Lu_t-s_-13-2022-QH15'), rdflib.term.Literal('13/2022'), rdflib.term.Literal('2023-07-01', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#date')), None)",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/EXT-Lu_t-s_-13-2022-QH15'), rdflib.term.Literal('13/2022', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.Literal('2023-07-01', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#date')), None)",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/EXT-Lu_t-s_-142-2025-QH15'), rdflib.term.Literal('142/2025'), rdflib.term.Literal('2026-03-01', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#date')), None)",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/EXT-Lu_t-s_-142-2025-QH15'), rdflib.term.Literal('142/2025', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#string')), rdflib.term.Literal('2026-03-01', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#date')), None)"
+   ]
+  },
+  "đoạn văn bản thuộc văn bản nào (mẫu)": {
+   "n_rows": 5,
+   "sample": [
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/chunk/BLDS2015_Dieu1'), rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/BLDS2015'))",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/chunk/BLDS2015_Dieu2_Khoan1'), rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/BLDS2015'))",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/chunk/BLDS2015_Dieu2_Khoan2'), rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/BLDS2015'))",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/chunk/BLDS2015_Dieu3_Khoan1'), rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/BLDS2015'))",
+    "(rdflib.term.URIRef('https://w3id.org/vicivil-tkg/chunk/BLDS2015_Dieu3_Khoan2'), rdflib.term.URIRef('https://w3id.org/vicivil-tkg/law/BLDS2015'))"
+   ]
+  }
+ },
+ "note": "nap duoc vao kho RDF va tra loi duoc bang SPARQL; khong can GPU hay may chu khac"
+}

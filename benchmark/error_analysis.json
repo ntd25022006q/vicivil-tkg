@@ -1,0 +1,54 @@
+{
+ "n_questions": 281,
+ "n_hit_at_10": 230,
+ "n_miss_at_10": 51,
+ "rank_histogram": {
+  "1": 113,
+  "2": 50,
+  "3": 22,
+  "4": 10,
+  "5": 10,
+  "6": 6,
+  "7": 6,
+  "8": 4,
+  "9": 3,
+  "10": 6
+ },
+ "miss_reasons": {
+  "3. cung van ban, khac doan": 24,
+  "2. dap an co nhung khong vao top-10": 27
+ },
+ "example_qids": {
+  "1": [],
+  "2": [
+   "GEN67362",
+   "GEN52565",
+   "GEN86368",
+   "GEN42951",
+   "GEN33568",
+   "GEN56666",
+   "GEN29347",
+   "GEN56474",
+   "GEN78263",
+   "GEN94813",
+   "GEN77738",
+   "GEN75189"
+  ],
+  "3": [
+   "GEN45559",
+   "GEN72269",
+   "GEN15475",
+   "GEN30174",
+   "GEN87544",
+   "GEN83381",
+   "GEN37861",
+   "GEN71796",
+   "GEN71065",
+   "GEN17239",
+   "GEN99167",
+   "GEN91337"
+  ],
+  "4": []
+ },
+ "note": "phan loai cac cau khong co dap an trong top-10 cua phép cham tai lap (khong GPU)"
+}

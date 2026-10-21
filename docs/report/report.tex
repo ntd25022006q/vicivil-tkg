@@ -504,6 +504,52 @@ chứ không phải của bộ dữ liệu.
 Trên 241 câu có đáp án vàng đã được xác minh, phép tái lập cho Hit@1 = 0,378, Hit@3 = 0,631,
 Hit@5 = 0,705, Hit@10 = 0,809 và MRR = 0,521.
 
+\section{Phân tích lỗi: 51 câu hỏi không tìm thấy đáp án}
+Bộ kết quả tái lập cho phép soi từng câu, vì vậy có thể phân loại nguyên nhân thay vì
+đoán. Trong 281 câu, 230 câu có đáp án vàng nằm trong 10 kết quả đầu và 51 câu không có.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{fig12_vi-tri-dap-an.png}
+\caption{Vị trí của đáp án vàng trong kết quả trả về. Biểu đồ vẽ bằng Vega-Lite từ tệp
+\texttt{benchmark/error\_analysis.json} (sinh bằng \texttt{src/law\_error\_analysis.py}).}
+\label{fig:rank}
+\end{figure}
+
+Hình \ref{fig:rank} cho thấy phần lớn đáp án nằm ngay ở những vị trí đầu: 113 câu ở vị trí
+thứ nhất, 50 câu ở vị trí thứ hai và 22 câu ở vị trí thứ ba. Đây chính là lý do một bước
+xếp lại bằng mô hình ngôn ngữ (cần GPU) có thể nâng được chỉ số Hit@1: nhiều câu đã có đáp án
+đúng nhưng lại bị đẩy xuống.
+
+Với 51 câu không tìm thấy, phân loại nguyên nhân cho: 27 câu có đáp án vàng trong kho nhưng
+không được trả về (lỗi của bộ truy hồi), và 24 câu trả về đúng văn bản nhưng ở một đoạn khác
+(có 4 câu trong số đó có đoạn cùng Điều-Khoản nằm trong kết quả).
+
+Hai thí nghiệm đã chạy để biết có nên sửa dữ liệu hay không (tệp
+\texttt{benchmark/chunk\_filter\_experiment.json} và
+\texttt{benchmark/granularity\_probe.json}):
+
+\begin{table}[H]
+\centering\small
+\caption{Thử lọc bỏ đoạn văn bản chất lượng thấp, rồi chấm lại.}
+\label{tab:filter}
+\begin{tabular}{@{}p{5.6cm}rrrr@{}}
+\toprule
+\textbf{Bản dữ liệu} & \textbf{Số đoạn} & \textbf{Hit@1} & \textbf{Hit@3} & \textbf{Hit@10} \\
+\midrule
+Giữ nguyên & 11.267 & 0,402 & 0,658 & 0,818 \\
+Bỏ đoạn dưới 120 ký tự & 9.160 & 0,402 & 0,648 & 0,815 \\
+Bỏ thêm đoạn trùng nội dung & 8.688 & 0,409 & 0,623 & 0,787 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Kết quả này khửng định một niềm tin sai lẫn: \emph{6,4\% đoạn trùng nội dung không phải rác}.
+Chúng là cùng một điều khoản ở những bản luật khác nhau, và nhiều câu hỏi có đáp án nằm ở bản
+đó --- bỏ đi thì chất lượng giảm (Hit@10 từ 0,818 xuống 0,787). Vì vậy bộ dữ liệu được giữ
+nguyên, và điểm sửa phải nằm ở chỗ khác: mã hoá lại đoạn văn bản kèm ngữ cảnh (tên luật,
+tên điều khoản) và bổ sung một bước xếp lại --- hai việc đều cần GPU.
+
 \section{Phân tích}
 Có một nhóm 32 câu hỏi mà hệ thống chỉ đạt Hit@1 = 0,062, kéo số trung bình toàn bộ xuống. Kiểm
 tra lại tệp kết quả cho thấy nguyên nhân nằm ở \emph{thang đo} chứ không phải ở hệ thống: đó là
@@ -570,6 +616,15 @@ cụ mở và không cần GPU:
 \item \textbf{Pipeline tăng dần.} \texttt{src/law\_incremental.py} cắt chunk từ văn bản mới,
 ghi phần delta và hợp nhất vào kho, chỉ cần mã hoá cho phần mới thay vì chạy lại toàn bộ; đã
 thử chạy trên máy tính toán và tách được chunk mới mà không dùng GPU.
+\item \textbf{Phân tích lỗi truy hồi} bằng dữ liệu thật: 51 câu không tìm thấy đáp án được
+phân loại thành 27 lỗi truy hồi và 24 lỗi khác đoạn; đồng thời thử lọc đoạn văn bản và kết luận
+rằng không nên gộp hay bỏ đoạn trùng (Hình \ref{fig:rank}, Bảng \ref{tab:filter}).
+\item \textbf{Đồ thị RDF đã được nạp thật và trả lời được câu hỏi} bằng SPARQL
+(\texttt{src/law\_rdf\_verify.py}, 56.772 bộ ba): hỏi văn bản nào thay thế văn bản nào, văn bản
+nào còn hiệu lực tại một mốc thời gian, đoạn nào thuộc văn bản nào.
+\item \textbf{Kiểm tra tự động.} Tệp \texttt{.github/workflows/verify.yml} chạy lại toàn bộ
+phép chấm, đo chất lượng dữ liệu, xuất và nạp đồ thị RDF, dựng lại trang xem từ mã nguồn, kiểm
+tra manifest và so kết quả với bản đã commit --- mỗi lần push, không cần GPU.
 \end{itemize}
 
 Ba việc còn lại đều cần GPU: ván lại 32 câu hỏi bằng mô hình chấm điểm, số hoá văn bản dạng ảnh, và bổ sung văn bản mới.
@@ -658,6 +713,9 @@ Tệp RDF/JSON-LD mở được & Vẽ bằng rdflib, không lỗi cú pháp \\
 Đo lại thang đo theo ba cách & Tệp \texttt{benchmark/law\_eval\_v16\_equiv.json}, số A tái lập đúng bản đang công bố \\
 Kết quả tái lập từ kho & Chạy \texttt{bash tools/reproduce.sh}: Hit@1 = 0,402, Hit@10 = 0,818, giống nhau giữa máy có và không có numpy \\
 Đo chất lượng đoạn văn bản & 0 đoạn rỗng, 18,7\% đoạn dưới 120 ký tự, 6,4\% trùng nội dung \\
+Phân tích lỗi truy hồi & 51 câu không có đáp án được phân loại: 27 lỗi truy hồi, 24 lỗi khác đoạn \\
+Đồ thị RDF nạp được thật & 56.772 bộ ba, trả lời được câu hỏi SPARQL \\
+Kiểm tra tự động mỗi lần push & Tệp .github/workflows/verify.yml chạy lại phép chấm và so với bản đã commit \\
 Tệp RDF/JSON-LD mở được & Vẽ bằng rdflib, không lỗi cú pháp \\
 \bottomrule
 \end{tabular}

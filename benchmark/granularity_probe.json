@@ -1,0 +1,45 @@
+{
+ "n_miss_at_10": 51,
+ "n_sibling_in_top10": 4,
+ "n_sibling_same_law": 4,
+ "n_sibling_other_law": 0,
+ "conclusion": "Neu phan lon so cau bi truot co 'anh em' (cung Dieu-Khoan) cua dap an vang xuat hien trong top-10, thi gop cac doan o cap Khoan se sua duoc nhung cau do ma KHONG can GPU (chi can ma hoa lai mot lan bang ollama khi may ranh).",
+ "examples": [
+  {
+   "qid": "GEN72269",
+   "sibling_found": "BLDS2015|Dieu681|Khoan2|Diema",
+   "same_law": true,
+   "gold_law": [
+    "BLDS2015"
+   ],
+   "sibling_law": "BLDS2015"
+  },
+  {
+   "qid": "GEN78263",
+   "sibling_found": "BLDS2015|Dieu308|Khoan1|Diemc",
+   "same_law": true,
+   "gold_law": [
+    "BLDS2015"
+   ],
+   "sibling_law": "BLDS2015"
+  },
+  {
+   "qid": "NEW15696",
+   "sibling_found": "THADSVBHN|Dieu106|Khoan2|Diemd",
+   "same_law": true,
+   "gold_law": [
+    "THADSVBHN"
+   ],
+   "sibling_law": "THADSVBHN"
+  },
+  {
+   "qid": "TOP41254",
+   "sibling_found": "HOTICH2026|Dieu25|Khoan1|Diemg",
+   "same_law": true,
+   "gold_law": [
+    "HOTICH2026"
+   ],
+   "sibling_law": "HOTICH2026"
+  }
+ ]
+}

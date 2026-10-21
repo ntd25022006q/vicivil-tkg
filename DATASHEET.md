@@ -194,6 +194,23 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.8.0:** the remaining weaknesses are now measured rather than
+  guessed. `src/law_error_analysis.py` classifies the 51 questions whose
+  answer does not appear in the top ten: 27 are retrieval misses and 24
+  return the right statute under a different article. Two experiments
+  settle the obvious fixes: dropping the 18,7% of chunks shorter than 120
+  characters changes nothing, and dropping the 6,4% duplicated chunks
+  makes the result worse (Hit@10 falls from 0,818 to 0,787) - the
+  duplicates are the same article under different statute versions, which
+  is exactly what several questions ask for. The duplicates are
+  therefore kept. `src/law_rdf_verify.py` loads the RDF and JSON-LD
+  exports into an RDF store and answers SPARQL questions about
+  succession, validity and containment (56,772 triples). The viewer
+  generator and the verification tools now live in the repository, and
+  `.github/workflows/verify.yml` re-runs the evaluation, the corpus
+  measurement, the RDF export and the viewer build on every push, then
+  compares the outcome with what is committed. The report is re-typeset
+  at 27 pages with the error analysis and the filtering experiment.
 - **v1.7.0:** the evaluation is now reproducible from the repository
   alone. `src/law_eval_repro.py` recomputes the whole run from the files
   that are published here: BM25 in plain Python over

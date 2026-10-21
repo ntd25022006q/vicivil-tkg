@@ -9,3 +9,4 @@
 # Cac buoc can GPU (tai lai vector, ván lai dap an bang LLM) duoc mo ta
 # trong docs/report/report.tex, muc "Tai lap va kiem chung".
 numpy>=1.24
+rdflib>=7.0        # chi dung de kiem chung file RDF/JSON-LD

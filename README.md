@@ -27,13 +27,18 @@ cannot.
   ([`docs/graph/law_timeline.vl.json`](docs/graph/law_timeline.vl.json))
   rendered by Vega/vega-embed in the same page.
 
+- **Automatic checks on every push** - `.github/workflows/verify.yml`
+  re-runs the evaluation, measures the corpus, exports and loads the RDF
+  graph, rebuilds the viewer from source and compares the outcome with
+  what is committed. No GPU and no secrets.
+
 - **Reproduce the evaluation without a GPU** - `bash tools/reproduce.sh`
   recomputes the retrieval benchmark from the published files (BM25 in
   plain Python + the stored vectors, fused with RRF) and re-measures the
   corpus. Needs only Python 3.9+; numpy is optional and yields the same
   numbers.
 
-- **Project report** - typeset with XeLaTeX, 25 pages:
+- **Project report** - typeset with XeLaTeX, 27 pages:
   [`docs/report/ViCivil-TKG_bao-cao.pdf`](docs/report/ViCivil-TKG_bao-cao.pdf),
   source [`docs/report/report.tex`](docs/report/report.tex).
 
