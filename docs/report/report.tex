@@ -263,6 +263,33 @@ Cùng một tập 11.267 chunk được lập chỉ mục theo ba cách để tr
 
 Điểm cần nói thẳng: đây là JSON kèm kho vectơ phẳng, chưa phải cơ sở dữ liệu quan hệ đầy đủ.
 
+\section{Độ dài và chất lượng đoạn văn bản}
+Vì đoạn được cắt ở cấp Điều --- Khoản --- Điểm nên độ dài trung vị chỉ 226 ký tự. Bảng dưới
+đo trực tiếp trên 11.267 đoạn (tệp \texttt{provenance/chunk\_quality.json}, sinh bằng
+\texttt{src/law\_quality.py}).
+
+\begin{table}[H]
+\centering\small
+\caption{Đo chất lượng đoạn văn bản.}
+\label{tab:quality}
+\begin{tabular}{@{}p{7.4cm}rc@{}}
+\toprule
+\textbf{Chỉ số} & \textbf{Số lượng} & \textbf{Tỉ lệ} \\
+\midrule
+Đoạn rỗng & 0 & 0,00\% \\
+Đoạn rất ngắn (dưới 120 ký tự) & 2.107 & 18,7\% \\
+Trùng nội dung sau chuẩn hoá & 720 & 6,39\% \\
+Trùng nguyên văn & 630 & 5,59\% \\
+Thiếu tiêu đề & 2 & 0,02\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Độ dài: ngắn nhất 1 ký tự, phân vị 25 là 138, trung vị 226, phân vị 75 là 331, phân vị 95 là
+635, dài nhất 5.556, trung bình 270. Hai nhóm cần lưu ý khi dùng bộ dữ liệu này làm nền: đoạn
+rất ngắn (điều khoản rỗng hoặc quy định rất ngắn, 18,7\%) và đoạn trùng nội dung (6,4\% --
+phần lớn do các bản văn bản hợp nhất lặp lại điều khoản của bản cũ).
+
 \section{Phân bố dữ liệu}
 
 \begin{figure}[H]
@@ -444,6 +471,39 @@ Tìm đúng trong 10 lần (Hit@10) & 0,794 & 0,796 \\
 \end{tabular}
 \end{table}
 
+\section{Kết quả tái lập được, không cần GPU}
+Ngoài bộ kết quả đã công bố, toàn bộ phép chấm được viết lại để \emph{chạy lại được từ các
+tệp trong kho}: BM25 tính lại bằng Python thuần từ \texttt{data/civil\_chunks.jsonl}, phần
+vector dùng luôn vector đã lưu sẵn (\texttt{index/vdb\_chunks.json} cho 11.267 đoạn và
+\texttt{benchmark/question\_vectors.json} cho 281 câu hỏi), hai phần gộp bằng RRF. Không cần
+GPU, không cần mô hình, không cần mạng --- chạy bằng
+\texttt{bash tools/reproduce.sh} là có kết quả (numpy chỉ dùng để nhanh hơn; điểm được làm
+tròn trước khi xếp hạng nên hai cách chạy cho kết quả giống hệt).
+
+\begin{table}[H]
+\centering\small
+\caption{Kết quả tái lập được từ kho, so với bộ kết quả đã công bố.}
+\label{tab:repro}
+\begin{tabular}{@{}p{5.2cm}cccc@{}}
+\toprule
+\textbf{Phép chấm} & \textbf{Hit@1} & \textbf{Hit@3} & \textbf{Hit@5} & \textbf{Hit@10} \\
+\midrule
+Đã công bố (có bước xếp lại bằng mô hình, cần GPU) & 0,452 & 0,658 & 0,726 & 0,794 \\
+Tái lập từ kho (không cần GPU) & 0,402 & 0,658 & 0,730 & 0,818 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Hai dòng này nói đúng hai điều. Một là phần lớn kết quả nằm ở phần không cần mô hình: các
+chỉ số giữa 3 và 10 lần gần như trùng nhau, và Hit@10 của phép tái lập còn cao hơn (0,818 so
+với 0,794) vì không có bước xếp lại kéo bốn mươi vị trí đầu về phía trước. Hai là chỉ số
+Hit@1 thấp hơn 0,05 là do bước xếp lại bằng mô hình ngôn ngữ (Qwen3-Reranker-0.6B) chưa
+chạy lại được trong phép tái lập, vì bước đó cần GPU. Đây là hạn chế rõ ràng của phép tái lập
+chứ không phải của bộ dữ liệu.
+
+Trên 241 câu có đáp án vàng đã được xác minh, phép tái lập cho Hit@1 = 0,378, Hit@3 = 0,631,
+Hit@5 = 0,705, Hit@10 = 0,809 và MRR = 0,521.
+
 \section{Phân tích}
 Có một nhóm 32 câu hỏi mà hệ thống chỉ đạt Hit@1 = 0,062, kéo số trung bình toàn bộ xuống. Kiểm
 tra lại tệp kết quả cho thấy nguyên nhân nằm ở \emph{thang đo} chứ không phải ở hệ thống: đó là
@@ -596,6 +656,9 @@ Trang xem chạy khi mất mạng & Có (không cần CDN) \\
 Truy vấn thời gian tự kiểm & Đúng ở cả ba mốc 2000, 2010, 2020 \\
 Tệp RDF/JSON-LD mở được & Vẽ bằng rdflib, không lỗi cú pháp \\
 Đo lại thang đo theo ba cách & Tệp \texttt{benchmark/law\_eval\_v16\_equiv.json}, số A tái lập đúng bản đang công bố \\
+Kết quả tái lập từ kho & Chạy \texttt{bash tools/reproduce.sh}: Hit@1 = 0,402, Hit@10 = 0,818, giống nhau giữa máy có và không có numpy \\
+Đo chất lượng đoạn văn bản & 0 đoạn rỗng, 18,7\% đoạn dưới 120 ký tự, 6,4\% trùng nội dung \\
+Tệp RDF/JSON-LD mở được & Vẽ bằng rdflib, không lỗi cú pháp \\
 \bottomrule
 \end{tabular}
 \end{table}

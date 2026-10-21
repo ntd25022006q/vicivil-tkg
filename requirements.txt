@@ -1,5 +1,11 @@
-numpy>=1.26
-pypdf>=4.0
-olefile>=0.46
-requests>=2.31
-huggingface_hub>=0.36
+# ViCivil-TKG - phu thuoc de tai lap va cham lai ket qua
+#
+# Phan "cham lai" (src/law_eval_repro.py) chi dung Python thuan + numpy:
+#   - BM25 tinh lai tu data/civil_chunks.jsonl
+#   - dense dung vector da luu san (index/vdb_chunks.json + benchmark/question_vectors.json)
+#   - gop bang RRF
+# => KHONG can GPU, KHONG can model, KHONG can mang.
+#
+# Cac buoc can GPU (tai lai vector, ván lai dap an bang LLM) duoc mo ta
+# trong docs/report/report.tex, muc "Tai lap va kiem chung".
+numpy>=1.24

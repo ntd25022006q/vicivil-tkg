@@ -15,7 +15,7 @@ Cau truc:
 """
 import io, json, os, datetime
 
-R = r"C:\Users\ntd25\Downloads\OpenCode\law_release"
+R = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 OUT = os.path.join(R, "docs", "graph")
 GEN = datetime.date.today().isoformat()
 

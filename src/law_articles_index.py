@@ -1,6 +1,6 @@
 import io, json, os, collections
 
-R = r"C:\Users\ntd25\Downloads\OpenCode\law_release"
+R = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 
 # ---- chunk theo dieu/khoan
 arts = collections.defaultdict(lambda: {"chunks": [], "chars": 0, "in": 0, "out": 0})

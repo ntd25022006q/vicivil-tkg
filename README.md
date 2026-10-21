@@ -27,7 +27,13 @@ cannot.
   ([`docs/graph/law_timeline.vl.json`](docs/graph/law_timeline.vl.json))
   rendered by Vega/vega-embed in the same page.
 
-- **Project report** - typeset with XeLaTeX, 23 pages:
+- **Reproduce the evaluation without a GPU** - `bash tools/reproduce.sh`
+  recomputes the retrieval benchmark from the published files (BM25 in
+  plain Python + the stored vectors, fused with RRF) and re-measures the
+  corpus. Needs only Python 3.9+; numpy is optional and yields the same
+  numbers.
+
+- **Project report** - typeset with XeLaTeX, 25 pages:
   [`docs/report/ViCivil-TKG_bao-cao.pdf`](docs/report/ViCivil-TKG_bao-cao.pdf),
   source [`docs/report/report.tex`](docs/report/report.tex).
 

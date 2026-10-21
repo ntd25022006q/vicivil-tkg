@@ -194,6 +194,23 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.7.0:** the evaluation is now reproducible from the repository
+  alone. `src/law_eval_repro.py` recomputes the whole run from the files
+  that are published here: BM25 in plain Python over
+  `data/civil_chunks.jsonl`, the dense part from the vectors already
+  stored (`index/vdb_chunks.json` and the new
+  `benchmark/question_vectors.json`), fused with RRF. No GPU, no model,
+  no network - `bash tools/reproduce.sh` runs it on a bare Python 3.9
+  (numpy is optional and gives the identical result, because scores are
+  rounded before ranking). The reproducible run yields Hit@1 = 0,402,
+  Hit@3 = 0,658, Hit@5 = 0,730, Hit@10 = 0,818, MRR = 0,545 on the 281
+  questions, and on the 241 questions with a verified gold Hit@10 =
+  0,809 - the previously unverifiable Hit@10 is now a number anyone can
+  recompute. `src/law_quality.py` measures the corpus itself
+  (`provenance/chunk_quality.json`): 0 empty chunks, 18,7% shorter than
+  120 characters, 6,4% duplicated after normalisation, median length
+  226 characters. Manifest 122 -> 136 entries, now also covering the
+  pipeline sources, the tools and `requirements.txt`.
 - **v1.6.2:** the report is delivered as a single typeset PDF built from
   `docs/report/report.tex`; the intermediate Markdown copy and the Word
   version are removed, so the LaTeX source is the only thing to edit and

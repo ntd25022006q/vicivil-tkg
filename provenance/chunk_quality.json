@@ -1,0 +1,54 @@
+{
+ "n_chunks": 11267,
+ "n_laws": 17,
+ "length_chars": {
+  "min": 20,
+  "p25": 138,
+  "median": 226,
+  "p75": 331,
+  "p95": 635,
+  "max": 5556,
+  "mean": 270.3
+ },
+ "empty_content": {
+  "count": 0,
+  "percent": 0.0
+ },
+ "very_short_under_120_chars": {
+  "count": 2107,
+  "percent": 18.7
+ },
+ "duplicate_normalised_content": {
+  "count": 720,
+  "percent": 6.39,
+  "distinct_contents": 10547
+ },
+ "duplicate_exact_content": {
+  "count": 630,
+  "percent": 5.59
+ },
+ "missing_title": {
+  "count": 2,
+  "percent": 0.02
+ },
+ "chunks_per_law": {
+  "van-ban-hop-nhat-so-21-vbhn-vpqh-468974": 1979,
+  "BLDS1995": 1890,
+  "BLDS2015": 1838,
+  "BLDS2005": 780,
+  "THADSVBHN": 758,
+  "THADS2008": 721,
+  "nghi-dinh-so-152-2026-nd-cp-469524": 665,
+  "TNBTCNN2017": 505,
+  "HNGD2014": 393,
+  "HNGDVBHN2025": 392,
+  "HOTICH2014": 266,
+  "HNGD2000": 239,
+  "NCN2010": 208,
+  "HOAGIAI2026": 175,
+  "HOTICH2026": 172,
+  "luat-so-15-2026-qh16-470450": 151,
+  "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106": 135
+ },
+ "interpretation": "Chunk duoc cat o cap Dieu-Khoan-Diem nen do dai trung viet chi 226 ky tu; 18,7% doan duoi 120 ky tu la dieu khoan rong hoac quy dinh rat ngan, va 6,4% co noi dung trung nhau (5,6% trung nguyen van ban) - khi dung nguon nay lam nen thi nen loai cac doan do, hoac dung chung mot ban cho ca nhom van ban."
+}
