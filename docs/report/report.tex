@@ -504,6 +504,46 @@ chứ không phải của bộ dữ liệu.
 Trên 241 câu có đáp án vàng đã được xác minh, phép tái lập cho Hit@1 = 0,378, Hit@3 = 0,631,
 Hit@5 = 0,705, Hit@10 = 0,809 và MRR = 0,521.
 
+\section{Kiểm chứng chỉ số đã công bố, và hai thử nghiệm cho thấy hướng sửa sai}
+Có một điểm cần nói rõ: chỉ số đã công bố trước đây \emph{không tái lập lại được} từ kho,
+nhưng nguyên nhân không phải thiếu dữ liệu mà là cách ghi tệp kết quả --- tệp kết quả chỉ lưu
+5 kết quả đầu mỗi câu, nên Hit@10 không tính lại được. Trong kho vẫn còn tệp
+\texttt{provenance/ranks\_hybrid.json} với xếp hạng đầy đủ của 209 câu, và tính lại trực tiếp từ
+tệp đó cho kết quả rất sát với con số đã công bố.
+
+\begin{table}[H]
+\centering\small
+\caption{Chỉ số đã công bố và cách tính lại từ các tệp trong kho.}
+\label{tab:recompute}
+\begin{tabular}{@{}p{6.4cm}ccccc@{}}
+\toprule
+\textbf{Nguồn} & \textbf{Số câu} & \textbf{Hit@1} & \textbf{Hit@3} & \textbf{Hit@5} & \textbf{Hit@10} \\
+\midrule
+Đã công bố & 281 & 0,452 & 0,658 & 0,726 & 0,794 \\
+Tính lại từ \texttt{ranks\_hybrid.json} & 209 & 0,464 & 0,675 & 0,727 & 0,770 \\
+Tính lại từ kho (BM25 + vector + RRF) & 281 & 0,402 & 0,658 & 0,730 & 0,818 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Như vậy, kho nay chứa hai cách độc lập để kiểm chứng kết quả, và cả hai đều chạy được mà
+không cần GPU. Chênh lệch nhỏ giữa ba dòng là do 72 câu không có trong tệp xếp hạng đã lưu và
+do khác biệt giữa việc có hay không dùng bước xếp lại bằng mô hình.
+
+Hai thử nghiệm đã chạy để tìm hướng sửa, và cả hai đều \emph{cho kết quả ngược với dự đoán},
+nên được ghi lại để không ai lặp lại:
+
+\begin{itemize}
+\item \textbf{Thêm ngữ cảnh vào nội dung đoạn khi tra cứu} (tên luật, số điều/khoản, tiêu đề)
+làm kết quả \emph{tệ hơn ở mọi chỉ số}: Hit@1 rơi từ 0,402 xuống 0,349, Hit@10 từ 0,818 xuống
+0,808 (tệp \texttt{benchmark/embedding\_context\_experiment.json}; 11.267 đoạn được mã hoá
+lại bằng cùng mô hình). Lý do: phần ngữ cảnh lặp lại gần như giống nhau ở mọi đoạn nên
+nó át mất nội dung pháp lý thật trong vectơ.
+\item \textbf{Chỉ dùng phần từ vựng} (BM25, không dùng vectơ) thì Hit@1 = 0,327, và thêm
+ngữ cảnh cũng không giúp (0,320). Phần vectơ mới là thứ kéo điểm lên, và vì vậy hướng sửa
+phải nằm ở chất lượng vectơ và ở bước xếp lại, không nằm ở cách viết câu hỏi hay ở dữ liệu.
+\end{itemize}
+
 \section{Phân tích lỗi: 51 câu hỏi không tìm thấy đáp án}
 Bộ kết quả tái lập cho phép soi từng câu, vì vậy có thể phân loại nguyên nhân thay vì
 đoán. Trong 281 câu, 230 câu có đáp án vàng nằm trong 10 kết quả đầu và 51 câu không có.
@@ -622,6 +662,9 @@ rằng không nên gộp hay bỏ đoạn trùng (Hình \ref{fig:rank}, Bảng \
 \item \textbf{Đồ thị RDF đã được nạp thật và trả lời được câu hỏi} bằng SPARQL
 (\texttt{src/law\_rdf\_verify.py}, 56.772 bộ ba): hỏi văn bản nào thay thế văn bản nào, văn bản
 nào còn hiệu lực tại một mốc thời gian, đoạn nào thuộc văn bản nào.
+\item \textbf{Kiểm chứng chỉ số đã công bố bằng hai cách độc lập} và ghi lại hai thử nghiệm
+cho thấy hướng sửa sai (thêm ngữ cảnh vào vectơ, và lọc bỏ đoạn trùng) — cả hai đều làm kết
+quả tệ hơn, nên được công bố để không ai lặp lại.
 \item \textbf{Kiểm tra tự động.} Tệp \texttt{.github/workflows/verify.yml} chạy lại toàn bộ
 phép chấm, đo chất lượng dữ liệu, xuất và nạp đồ thị RDF, dựng lại trang xem từ mã nguồn, kiểm
 tra manifest và so kết quả với bản đã commit --- mỗi lần push, không cần GPU.
@@ -714,6 +757,9 @@ Tệp RDF/JSON-LD mở được & Vẽ bằng rdflib, không lỗi cú pháp \\
 Kết quả tái lập từ kho & Chạy \texttt{bash tools/reproduce.sh}: Hit@1 = 0,402, Hit@10 = 0,818, giống nhau giữa máy có và không có numpy \\
 Đo chất lượng đoạn văn bản & 0 đoạn rỗng, 18,7\% đoạn dưới 120 ký tự, 6,4\% trùng nội dung \\
 Phân tích lỗi truy hồi & 51 câu không có đáp án được phân loại: 27 lỗi truy hồi, 24 lỗi khác đoạn \\
+Chỉ số đã công bố tái lập được & Tính lại từ \texttt{ranks\_hybrid.json}: Hit@1 = 0,464, Hit@5 = 0,727, sát con số đã công bố \\
+Hai thử nghiệm hướng sửa & Thêm ngữ cảnh làm tệ hơn; lọc đoạn trùng làm tệ hơn — đều đã ghi lại \\
+
 Đồ thị RDF nạp được thật & 56.772 bộ ba, trả lời được câu hỏi SPARQL \\
 Kiểm tra tự động mỗi lần push & Tệp .github/workflows/verify.yml chạy lại phép chấm và so với bản đã commit \\
 Tệp RDF/JSON-LD mở được & Vẽ bằng rdflib, không lỗi cú pháp \\

@@ -1,0 +1,24 @@
+{
+ "question": "them ngu canh (ten luat, so dieu/khoan, tieu de) vao doan khi tra cuu co giup khong?",
+ "chi BM25, khong can GPU": {
+  "A. noi dung tran (hien tai)": {
+   "hit_at_k": {
+    "1": 0.3274,
+    "3": 0.5765,
+    "5": 0.6548,
+    "10": 0.7438
+   },
+   "mrr": 0.4674
+  },
+  "B. co ngu canh (ten luat + dieu/khoan + tieu de)": {
+   "hit_at_k": {
+    "1": 0.3203,
+    "3": 0.5765,
+    "5": 0.6726,
+    "10": 0.7367
+   },
+   "mrr": 0.4615
+  }
+ },
+ "vi du doan co ngu canh": "Bộ luật Dân sự 2015 (91/2015/QH13)\nĐiều 1: Phạm vi điều chỉnh\nBộ luật này quy định địa vị pháp lý, chuẩn mực pháp lý về cách ứng xử của cá nhân, pháp nhân; quyền, nghĩa vụ về nhân thân và tài sản của cá nhân, pháp nhân t"
+}

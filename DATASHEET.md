@@ -194,6 +194,21 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.8.1:** the published numbers are now verifiable in two
+  independent ways, both from the repository and both without a GPU:
+  recomputed from the stored ranking (`provenance/ranks_hybrid.json`,
+  209 questions: Hit@1 = 0,464, Hit@5 = 0,727, close to the published
+  figures) and recomputed from scratch (BM25 + stored vectors + RRF,
+  281 questions: Hit@1 = 0,402, Hit@10 = 0,818). The earlier statement
+  that the result was not reproducible turned out to be a fact about how
+  the result file was written, not a lack of data. Two experiments are
+  published because both contradict the obvious guess: re-embedding the
+  11,267 chunks with context (statute name, article number, title) makes
+  every measure worse - Hit@1 falls from 0,402 to 0,349 - and dropping
+  the duplicated chunks also makes it worse. The duplicated chunks are
+  the same article under different statute versions, which is what many
+  questions ask for, so the corpus is kept as it is. The report is
+  re-typeset at 28 pages.
 - **v1.8.0:** the remaining weaknesses are now measured rather than
   guessed. `src/law_error_analysis.py` classifies the 51 questions whose
   answer does not appear in the top ten: 27 are retrieval misses and 24

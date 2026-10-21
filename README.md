@@ -38,7 +38,7 @@ cannot.
   corpus. Needs only Python 3.9+; numpy is optional and yields the same
   numbers.
 
-- **Project report** - typeset with XeLaTeX, 27 pages:
+- **Project report** - typeset with XeLaTeX, 28 pages:
   [`docs/report/ViCivil-TKG_bao-cao.pdf`](docs/report/ViCivil-TKG_bao-cao.pdf),
   source [`docs/report/report.tex`](docs/report/report.tex).
 

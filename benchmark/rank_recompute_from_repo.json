@@ -1,0 +1,13 @@
+{
+ "source": "provenance/ranks_hybrid.json",
+ "n_questions_covered": 209,
+ "n_questions_not_covered": 72,
+ "hit_at_k": {
+  "1": 0.4641,
+  "3": 0.6746,
+  "5": 0.7273,
+  "10": 0.7703
+ },
+ "mrr": 0.5739,
+ "note": "tinh lai truc tiep tu xep hang da luu trong kho; khong can GPU, khong can mo hinh"
+}

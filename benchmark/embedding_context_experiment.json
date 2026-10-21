@@ -1,0 +1,24 @@
+{
+ "question": "ma hoa lai doan van ban kem ngu canh co giup truy hoi tot hon khong?",
+ "note": "cung phiep cham BM25 + dense + RRF; khong can GPU de cham",
+ "variants": {
+  "A. vector hien tai (noi dung tran)": {
+   "hit_at_k": {
+    "1": 0.4021,
+    "3": 0.6584,
+    "5": 0.7295,
+    "10": 0.8185
+   },
+   "mrr": 0.5449
+  },
+  "B. vector moi (kem ngu canh)": {
+   "hit_at_k": {
+    "1": 0.3488,
+    "3": 0.6121,
+    "5": 0.7189,
+    "10": 0.8078
+   },
+   "mrr": 0.5045
+  }
+ }
+}
