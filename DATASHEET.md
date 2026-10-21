@@ -194,6 +194,18 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
+- **v1.9.0:** the retrieval pipeline is finished with the step that
+  was still missing, a cross-encoder reranking pass
+  (BAAI/bge-reranker-v2-m3). Reranking the 30 best candidates of each
+  question took 149 seconds on one A30 GPU and improves every measure:
+  Hit@1 from 0,402 to 0,445, Hit@3 from 0,658 to 0,708, Hit@5 from
+  0,730 to 0,787, Hit@10 from 0,818 to 0,868 and MRR from 0,545 to
+  0,594 - better than the figures published before. The reranked
+  ranking is stored in `benchmark/rerank_result.json`, so
+  `src/law_rerank_verify.py` recomputes those numbers from the
+  repository without a GPU, without the model and without a network.
+  The order of work is now: the corpus is optimised on the 17 statutes
+  first, and only then widened. Manifest 154 -> 156 entries.
 - **v1.8.1:** the published numbers are now verifiable in two
   independent ways, both from the repository and both without a GPU:
   recomputed from the stored ranking (`provenance/ranks_hybrid.json`,

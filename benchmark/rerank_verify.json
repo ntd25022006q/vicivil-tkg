@@ -1,0 +1,13 @@
+{
+ "source": "benchmark/rerank_result.json",
+ "model_used_for_rerank": "BAAI/bge-reranker-v2-m3",
+ "n_questions": 281,
+ "hit_at_k": {
+  "1": 0.4448,
+  "3": 0.7082,
+  "5": 0.7865,
+  "10": 0.8683
+ },
+ "mrr": 0.591,
+ "note": "tinh lai truc tiep tu xep hang da luu; khong can GPU, khong can mo hinh"
+}

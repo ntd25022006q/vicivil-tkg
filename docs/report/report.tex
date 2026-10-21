@@ -504,6 +504,32 @@ chứ không phải của bộ dữ liệu.
 Trên 241 câu có đáp án vàng đã được xác minh, phép tái lập cho Hit@1 = 0,378, Hit@3 = 0,631,
 Hit@5 = 0,705, Hit@10 = 0,809 và MRR = 0,521.
 
+\section{Bước xếp lại bằng mô hình: cải thiện rõ ở mọi chỉ số}
+Bước cuối cùng trong bộ truy hồi là xếp lại: một mô hình đọc cặp (câu hỏi, đoạn văn bản)
+rồi chấm lại 30 ứng viên đầu. Việc này cần GPU và mô hình đa ngôn ngữ, ở đây là
+\textbf{BAAI/bge-reranker-v2-m3}. Chạy trên một GPU A30 mất 149 giây cho 8.430 cặp.
+
+\begin{table}[H]
+\centering\small
+\caption{Kết quả trước và sau bước xếp lại (281 câu hỏi).}
+\label{tab:rerank}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Phép chấm} & \textbf{Hit@1} & \textbf{Hit@3} & \textbf{Hit@5} & \textbf{Hit@10} & \textbf{MRR} \\
+\midrule
+Từ vựng + vectơ (không xếp lại) & 0,402 & 0,658 & 0,730 & 0,818 & 0,545 \\
+Có xếp lại bằng mô hình & \textbf{0,445} & \textbf{0,708} & \textbf{0,787} & \textbf{0,868} & \textbf{0,594} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Mọi chỉ số đều tăng, nhiều nhất ở Hit@5 và Hit@10 (khoảng 5 điểm phần trăm), và kết quả này
+\emph{vượt} con số từng công bố trước đó. Xếp lại là bước đáng giá nhất còn lại, và nó là
+một bước có thể chạy lại được: xếp hạng sau khi xếp lại được lưu trong
+\texttt{benchmark/rerank\_result.json}, nên
+\texttt{src/law\_rerank\_verify.py} tính lại được các chỉ số trên mà không cần GPU, không cần
+mô hình, không cần mạng.
+
 \section{Kiểm chứng chỉ số đã công bố, và hai thử nghiệm cho thấy hướng sửa sai}
 Có một điểm cần nói rõ: chỉ số đã công bố trước đây \emph{không tái lập lại được} từ kho,
 nhưng nguyên nhân không phải thiếu dữ liệu mà là cách ghi tệp kết quả --- tệp kết quả chỉ lưu
@@ -665,6 +691,9 @@ nào còn hiệu lực tại một mốc thời gian, đoạn nào thuộc văn 
 \item \textbf{Kiểm chứng chỉ số đã công bố bằng hai cách độc lập} và ghi lại hai thử nghiệm
 cho thấy hướng sửa sai (thêm ngữ cảnh vào vectơ, và lọc bỏ đoạn trùng) — cả hai đều làm kết
 quả tệ hơn, nên được công bố để không ai lặp lại.
+\item \textbf{Bước xếp lại bằng mô hình đã chạy và được lưu lại} (BAAI/bge-reranker-v2-m3,
+149 giây trên một GPU A30): Hit@1 tăng từ 0,402 lên 0,445, Hit@10 từ 0,818 lên 0,868, và kết quả
+được lưu nên người khác kiểm chứng lại được mà không cần GPU.
 \item \textbf{Kiểm tra tự động.} Tệp \texttt{.github/workflows/verify.yml} chạy lại toàn bộ
 phép chấm, đo chất lượng dữ liệu, xuất và nạp đồ thị RDF, dựng lại trang xem từ mã nguồn, kiểm
 tra manifest và so kết quả với bản đã commit --- mỗi lần push, không cần GPU.
@@ -758,6 +787,7 @@ Kết quả tái lập từ kho & Chạy \texttt{bash tools/reproduce.sh}: Hit@1
 Đo chất lượng đoạn văn bản & 0 đoạn rỗng, 18,7\% đoạn dưới 120 ký tự, 6,4\% trùng nội dung \\
 Phân tích lỗi truy hồi & 51 câu không có đáp án được phân loại: 27 lỗi truy hồi, 24 lỗi khác đoạn \\
 Chỉ số đã công bố tái lập được & Tính lại từ \texttt{ranks\_hybrid.json}: Hit@1 = 0,464, Hit@5 = 0,727, sát con số đã công bố \\
+Chỉ số sau khi xếp lại tái lập được & Tính lại từ \texttt{rerank\_result.json}: Hit@1 = 0,445, Hit@5 = 0,787, Hit@10 = 0,868 \\
 Hai thử nghiệm hướng sửa & Thêm ngữ cảnh làm tệ hơn; lọc đoạn trùng làm tệ hơn — đều đã ghi lại \\
 
 Đồ thị RDF nạp được thật & 56.772 bộ ba, trả lời được câu hỏi SPARQL \\
