@@ -1,0 +1,557 @@
+{
+ "model": "qwen2.5:14b",
+ "n_checked_pairs": 80,
+ "n_agreement": 71,
+ "agreement_rate": 0.8875,
+ "rule": "mot doan chi duoc giu la dap an khi ca hai vong kiem chung deu xac nhan",
+ "decisions": {
+  "GEN21948": {
+   "question": "Di chúc được coi là hợp pháp cần những điều kiện gì?",
+   "accepted_round1": [
+    "BLDS2005|Dieu652|Khoan1",
+    "BLDS1995|Dieu655|Muc1",
+    "BLDS2015|Dieu630|Khoan1|Diemb"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2005|Dieu652|Khoan1",
+    "BLDS1995|Dieu655|Muc1"
+   ],
+   "old_gold": [
+    "BLDS2005|Dieu652|Khoan1"
+   ]
+  },
+  "GEN30064": {
+   "question": "Hôn nhân được khôi phục thì quan hệ tài sản giải quyết thế nào?",
+   "accepted_round1": [
+    "HNGDVBHN2025|Dieu67|Khoan2|Diema",
+    "HNGD2014|Dieu67|Khoan2|Diema"
+   ],
+   "accepted_both_rounds": [
+    "HNGDVBHN2025|Dieu67|Khoan2|Diema",
+    "HNGD2014|Dieu67|Khoan2|Diema"
+   ],
+   "old_gold": [
+    "HNGD2014|Dieu67|Khoan2|Diema"
+   ]
+  },
+  "GEN31043": {
+   "question": "Trẻ sinh ra sống được 23 tiếng thì có phải khai sinh và khai tử không?",
+   "accepted_round1": [
+    "BLDS2015|Dieu30|Khoan3"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu30|Khoan3"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu30|Khoan3"
+   ]
+  },
+  "GEN33898": {
+   "question": "Việc xác định cá nhân bị hạn chế năng lực hành vi dân sự tại Việt Nam theo pháp luật nào?",
+   "accepted_round1": [
+    "BLDS2015|Dieu674|Khoan3",
+    "BLDS2005|Dieu763|Khoan1"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu674|Khoan3",
+    "BLDS2005|Dieu763|Khoan1"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu674|Khoan3"
+   ]
+  },
+  "GEN39298": {
+   "question": "Người phân chia di sản được hưởng thù lao trong trường hợp nào?",
+   "accepted_round1": [
+    "BLDS2015|Dieu657|Khoan3",
+    "BLDS1995|Dieu685|Muc3",
+    "BLDS2005|Dieu682|Khoan1"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu657|Khoan3",
+    "BLDS1995|Dieu685|Muc3",
+    "BLDS2005|Dieu682|Khoan1"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu657|Khoan3"
+   ]
+  },
+  "GEN42748": {
+   "question": "Nghĩa vụ liên quan đến tài sản riêng đã nhập vào tài sản chung được thực hiện bằng tài sản nào?",
+   "accepted_round1": [
+    "HNGD2014|Dieu46|Khoan3",
+    "HNGDVBHN2025|Dieu46|Khoan3"
+   ],
+   "accepted_both_rounds": [
+    "HNGD2014|Dieu46|Khoan3",
+    "HNGDVBHN2025|Dieu46|Khoan3"
+   ],
+   "old_gold": [
+    "HNGD2014|Dieu46|Khoan3"
+   ]
+  },
+  "GEN44390": {
+   "question": "Người làm công việc không ủy quyền mà cố ý gây thiệt hại thì phải làm gì?",
+   "accepted_round1": [
+    "BLDS2015|Dieu577|Khoan1",
+    "BLDS2005|Dieu597|Khoan1",
+    "BLDS2015|Dieu577|Khoan2"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu577|Khoan1",
+    "BLDS2005|Dieu597|Khoan1"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu577|Khoan1"
+   ]
+  },
+  "GEN45559": {
+   "question": "Nếu tôi đơn phương chấm dứt hợp đồng gia công thì có được trả tiền công không?",
+   "accepted_round1": [
+    "BLDS2015|Dieu551|Khoan2",
+    "BLDS2005|Dieu556|Khoan1",
+    "BLDS1995|Dieu559|Muc1"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu551|Khoan2",
+    "BLDS2005|Dieu556|Khoan1",
+    "BLDS1995|Dieu559|Muc1"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu428|Khoan3"
+   ]
+  },
+  "GEN51429": {
+   "question": "Bên có nghĩa vụ có được hoãn thực hiện nghĩa vụ không, cần điều kiện gì?",
+   "accepted_round1": [
+    "BLDS2015|Dieu354|Khoan2",
+    "BLDS2005|Dieu287|Khoan1",
+    "BLDS2015|Dieu411|Khoan1"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu354|Khoan2",
+    "BLDS2005|Dieu287|Khoan1",
+    "BLDS2015|Dieu411|Khoan1"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu354|Khoan2"
+   ]
+  },
+  "GEN53892": {
+   "question": "Bên nhận thông tin bí mật khi giao kết hợp đồng có trách nhiệm gì?",
+   "accepted_round1": [
+    "BLDS2015|Dieu387|Khoan2"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu387|Khoan2"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu387|Khoan2"
+   ]
+  },
+  "GEN59266": {
+   "question": "Năng lực pháp luật dân sự của người nước ngoài tại Việt Nam xác định thế nào?",
+   "accepted_round1": [
+    "BLDS2005|Dieu761|Khoan1",
+    "BLDS2005|Dieu762|Khoan1",
+    "BLDS2005|Dieu765|Khoan1"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2005|Dieu761|Khoan1",
+    "BLDS2005|Dieu762|Khoan1"
+   ],
+   "old_gold": [
+    "BLDS2005|Dieu761|Khoan1"
+   ]
+  },
+  "GEN63901": {
+   "question": "Hợp đồng hợp tác là sự thỏa thuận về việc gì giữa các cá nhân, pháp nhân?",
+   "accepted_round1": [
+    "BLDS2015|Dieu504|Khoan1"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu504|Khoan1"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu504|Khoan1"
+   ]
+  },
+  "GEN69784": {
+   "question": "Ranh giới bất động sản liền kề xác định thế nào, có được tự ý lấn chiếm thay đổi không?",
+   "accepted_round1": [
+    "BLDS2015|Dieu175|Khoan1",
+    "BLDS2005|Dieu265|Khoan1",
+    "BLDS1995|Dieu270|Muc1",
+    "BLDS1995|Dieu270|Muc3"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu175|Khoan1",
+    "BLDS2005|Dieu265|Khoan1",
+    "BLDS1995|Dieu270|Muc1",
+    "BLDS1995|Dieu270|Muc3"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu175|Khoan1"
+   ]
+  },
+  "GEN70985": {
+   "question": "Hợp đồng trao đổi tài sản được hiểu như thế nào?",
+   "accepted_round1": [
+    "BLDS2015|Dieu455|Khoan1",
+    "BLDS2005|Dieu463|Khoan1"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu455|Khoan1",
+    "BLDS2005|Dieu463|Khoan1"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu455|Khoan1"
+   ]
+  },
+  "GEN78202": {
+   "question": "Người giám sát việc giám hộ có quyền yêu cầu thay đổi người giám hộ không?",
+   "accepted_round1": [
+    "BLDS2015|Dieu51|Khoan4|Diemc"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu51|Khoan4|Diemc"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu51|Khoan4|Diemc"
+   ]
+  },
+  "GEN98662": {
+   "question": "Cha mẹ có nghĩa vụ và quyền gì trong việc giáo dục, chăm lo cho con?",
+   "accepted_round1": [
+    "HNGD2014|Dieu72|Khoan1",
+    "HNGDVBHN2025|Dieu72|Khoan1",
+    "HNGD2000|Dieu37|Khoan1",
+    "HNGD2000|Dieu34|Khoan1"
+   ],
+   "accepted_both_rounds": [
+    "HNGD2014|Dieu72|Khoan1",
+    "HNGDVBHN2025|Dieu72|Khoan1",
+    "HNGD2000|Dieu37|Khoan1",
+    "HNGD2000|Dieu34|Khoan1"
+   ],
+   "old_gold": [
+    "HNGD2014|Dieu72|Khoan1"
+   ]
+  },
+  "GEN99286": {
+   "question": "Việc thành lập, hoạt động và chấm dứt pháp nhân thương mại thực hiện theo quy định của văn bản nào?",
+   "accepted_round1": [
+    "BLDS2015|Dieu75|Khoan3"
+   ],
+   "accepted_both_rounds": [
+    "BLDS2015|Dieu75|Khoan3"
+   ],
+   "old_gold": [
+    "BLDS2015|Dieu75|Khoan3"
+   ]
+  },
+  "NEW15696": {
+   "question": "Ai làm thủ tục đăng ký chuyển quyền sở hữu cho người mua tài sản để trừ vào tiền thi hành án?",
+   "accepted_round1": [
+    "THADSVBHN|Dieu106|Khoan2|Diemb",
+    "THADS2008|Dieu106|Khoan2"
+   ],
+   "accepted_both_rounds": [
+    "THADSVBHN|Dieu106|Khoan2|Diemb",
+    "THADS2008|Dieu106|Khoan2"
+   ],
+   "old_gold": [
+    "THADSVBHN|Dieu106|Khoan2|Diemđ"
+   ]
+  },
+  "NEW22714": {
+   "question": "Tổ chức con nuôi nước ngoài tại Việt Nam có quyền thuê trụ sở không?",
+   "accepted_round1": [
+    "NCN2010|Dieu43|Khoan2|Diemđ"
+   ],
+   "accepted_both_rounds": [
+    "NCN2010|Dieu43|Khoan2|Diemđ"
+   ],
+   "old_gold": [
+    "NCN2010|Dieu43|Khoan2|Diemđ"
+   ]
+  },
+  "NEW23120": {
+   "question": "Thỏa thuận chia tài sản chung vợ chồng phải lập thành hình thức gì, công chứng khi nào?",
+   "accepted_round1": [
+    "HNGD2014|Dieu38|Khoan2",
+    "HNGDVBHN2025|Dieu38|Khoan2"
+   ],
+   "accepted_both_rounds": [
+    "HNGD2014|Dieu38|Khoan2",
+    "HNGDVBHN2025|Dieu38|Khoan2"
+   ],
+   "old_gold": [
+    "HNGDVBHN2025|Dieu38|Khoan2"
+   ]
+  },
+  "NEW28139": {
+   "question": "Chính phủ có nhiệm vụ gì về quản lý và chuyển đổi số trong bồi thường nhà nước?",
+   "accepted_round1": [
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diemd",
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diema"
+   ],
+   "accepted_both_rounds": [
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diemd",
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diema"
+   ],
+   "old_gold": [
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diemd"
+   ]
+  },
+  "NEW57952": {
+   "question": "Khi đăng ký hộ tịch được cấp mấy bản chính trích lục, trừ trường hợp nào?",
+   "accepted_round1": [
+    "HOTICH2014|Dieu62|Khoan1"
+   ],
+   "accepted_both_rounds": [
+    "HOTICH2014|Dieu62|Khoan1"
+   ],
+   "old_gold": [
+    "HOTICH2014|Dieu62|Khoan1"
+   ]
+  },
+  "NEW69151": {
+   "question": "Việc rà soát tổ hòa giải hàng năm do ai chủ trì, phối hợp với ai?",
+   "accepted_round1": [
+    "HOAGIAI2026|Dieu15|Khoan3"
+   ],
+   "accepted_both_rounds": [
+    "HOAGIAI2026|Dieu15|Khoan3"
+   ],
+   "old_gold": [
+    "HOAGIAI2026|Dieu15|Khoan3"
+   ]
+  },
+  "NEW82981": {
+   "question": "Kể tên các biện pháp bảo đảm và cưỡng chế thi hành án?",
+   "accepted_round1": [
+    "THADSVBHN|Dieu66|Khoan3|Diemb",
+    "THADS2008|Dieu66|Khoan3|Diemb",
+    "THADSVBHN|Dieu66|Khoan3|Diemc",
+    "THADS2008|Dieu66|Khoan3|Diemc"
+   ],
+   "accepted_both_rounds": [
+    "THADSVBHN|Dieu66|Khoan3|Diemb",
+    "THADS2008|Dieu66|Khoan3|Diemb"
+   ],
+   "old_gold": [
+    "THADS2008|Dieu20|Khoan5"
+   ]
+  },
+  "NEW93215": {
+   "question": "Chế độ thống kê, báo cáo thi hành án thực hiện theo quy định của pháp luật và hướng dẫn của cơ quan nào?",
+   "accepted_round1": [
+    "THADS2008|Dieu16|Khoan4",
+    "THADS2008|Dieu15|Khoan2",
+    "THADSVBHN|Dieu14|Khoan1|Diemd"
+   ],
+   "accepted_both_rounds": [
+    "THADS2008|Dieu16|Khoan4",
+    "THADS2008|Dieu15|Khoan2",
+    "THADSVBHN|Dieu14|Khoan1|Diemd"
+   ],
+   "old_gold": [
+    "THADS2008|Dieu16|Khoan4"
+   ]
+  },
+  "NEW99436": {
+   "question": "Việc xây dựng cơ sở dữ liệu hộ tịch phải bảo đảm những yêu cầu gì?",
+   "accepted_round1": [
+    "HOTICH2026|Dieu24|Khoan2",
+    "HOTICH2026|Dieu24|Khoan3",
+    "HOTICH2026|Dieu26|Khoan5"
+   ],
+   "accepted_both_rounds": [
+    "HOTICH2026|Dieu24|Khoan2"
+   ],
+   "old_gold": [
+    "HOTICH2026|Dieu24|Khoan2"
+   ]
+  },
+  "TOP15416": {
+   "question": "Sau quyết định đình chỉ giải quyết bồi thường có được yêu cầu giải quyết lại không?",
+   "accepted_round1": [
+    "TNBTCNN2017|Dieu51|Khoan2"
+   ],
+   "accepted_both_rounds": [
+    "TNBTCNN2017|Dieu51|Khoan2"
+   ],
+   "old_gold": [
+    "TNBTCNN2017|Dieu51|Khoan2"
+   ]
+  },
+  "TOP27031": {
+   "question": "Việc thu thập chứng cứ vụ án dân sự thực hiện theo quy định nào?",
+   "accepted_round1": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu23|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu23|Khoan2"
+   ],
+   "accepted_both_rounds": [],
+   "old_gold": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu28|Khoan1"
+   ]
+  },
+  "TOP27902": {
+   "question": "Người thân của người tố cáo chống tham nhũng gồm những ai?",
+   "accepted_round1": [
+    "luat-so-15-2026-qh16-470450|Dieu1|Khoan10"
+   ],
+   "accepted_both_rounds": [
+    "luat-so-15-2026-qh16-470450|Dieu1|Khoan10"
+   ],
+   "old_gold": [
+    "luat-so-15-2026-qh16-470450|Dieu1|Khoan10"
+   ]
+  },
+  "TOP35023": {
+   "question": "Hội đồng tiêu hủy vật chứng tài sản làm việc thế nào về số lượng và thời hạn?",
+   "accepted_round1": [
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu40|Khoan1"
+   ],
+   "accepted_both_rounds": [
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu40|Khoan1"
+   ],
+   "old_gold": [
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu40|Khoan1"
+   ]
+  },
+  "TOP41254": {
+   "question": "Thông tin trong cơ sở dữ liệu hộ tịch gồm những gì?",
+   "accepted_round1": [
+    "HOTICH2026|Dieu25|Khoan1|Diemo",
+    "HOTICH2026|Dieu25|Khoan1|Diemn"
+   ],
+   "accepted_both_rounds": [
+    "HOTICH2026|Dieu25|Khoan1|Diemo",
+    "HOTICH2026|Dieu25|Khoan1|Diemn"
+   ],
+   "old_gold": [
+    "HOTICH2026|Dieu25|Khoan1|Diemn"
+   ]
+  },
+  "TOP43156": {
+   "question": "Tổ chức con nuôi nước ngoài có nghĩa vụ gì với trẻ khuyết tật nhiễm HIV?",
+   "accepted_round1": [],
+   "accepted_both_rounds": [],
+   "old_gold": [
+    "NCN2010|Dieu43|Khoan2|Diemc"
+   ]
+  },
+  "TOP53044": {
+   "question": "Tòa án có nhiệm vụ gì với kiến nghị yêu cầu của cơ quan thi hành án dân sự?",
+   "accepted_round1": [
+    "THADSVBHN|Dieu170|Khoan3|Diemđ",
+    "THADSVBHN|Dieu170|Khoan1|Diemd"
+   ],
+   "accepted_both_rounds": [
+    "THADSVBHN|Dieu170|Khoan3|Diemđ",
+    "THADSVBHN|Dieu170|Khoan1|Diemd"
+   ],
+   "old_gold": [
+    "THADSVBHN|Dieu170|Khoan4|Diemd"
+   ]
+  },
+  "TOP59991": {
+   "question": "Cha mẹ quản lý tài sản con dưới 15 tuổi có quyền gì, có phải tính đến nguyện vọng của con từ 9 tuổi không?",
+   "accepted_round1": [
+    "HNGD2014|Dieu77|Khoan1",
+    "HNGDVBHN2025|Dieu77|Khoan1"
+   ],
+   "accepted_both_rounds": [
+    "HNGD2014|Dieu77|Khoan1",
+    "HNGDVBHN2025|Dieu77|Khoan1"
+   ],
+   "old_gold": [
+    "HNGD2000|Dieu46|Khoan1"
+   ]
+  },
+  "TOP62589": {
+   "question": "Thông tin hộ tịch trong cơ sở dữ liệu được xác lập từ nguồn nào?",
+   "accepted_round1": [
+    "HOTICH2026|Dieu25|Khoan2|Diemc",
+    "HOTICH2026|Dieu25|Khoan2|Diemb"
+   ],
+   "accepted_both_rounds": [
+    "HOTICH2026|Dieu25|Khoan2|Diemc",
+    "HOTICH2026|Dieu25|Khoan2|Diemb"
+   ],
+   "old_gold": [
+    "HOTICH2026|Dieu25|Khoan2|Diemc"
+   ]
+  },
+  "TOP81485": {
+   "question": "Người có thẩm quyền giải quyết khiếu nại có quyền yêu cầu cung cấp thông tin tài liệu không?",
+   "accepted_round1": [
+    "THADSVBHN|Dieu145|Khoan1|Diema",
+    "THADS2008|Dieu145|Khoan1|Diema"
+   ],
+   "accepted_both_rounds": [
+    "THADSVBHN|Dieu145|Khoan1|Diema",
+    "THADS2008|Dieu145|Khoan1|Diema"
+   ],
+   "old_gold": [
+    "THADS2008|Dieu145|Khoan1|Diema"
+   ]
+  },
+  "TOP81552": {
+   "question": "Ủy ban nhân dân cấp tỉnh có những nhiệm vụ gì về bồi thường nhà nước tại địa phương?",
+   "accepted_round1": [
+    "TNBTCNN2017|Dieu73|Khoan3|Diemd",
+    "TNBTCNN2017|Dieu73|Khoan3|Diema",
+    "TNBTCNN2017|Dieu73|Khoan3|Diemđ"
+   ],
+   "accepted_both_rounds": [
+    "TNBTCNN2017|Dieu73|Khoan3|Diemd",
+    "TNBTCNN2017|Dieu73|Khoan3|Diema",
+    "TNBTCNN2017|Dieu73|Khoan3|Diemđ"
+   ],
+   "old_gold": [
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan3|Diemb"
+   ]
+  },
+  "TOP86087": {
+   "question": "Quyết định giải quyết khiếu nại của Thẩm phán được gửi cho ai?",
+   "accepted_round1": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu13|Khoan3"
+   ],
+   "accepted_both_rounds": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu13|Khoan3"
+   ],
+   "old_gold": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu13|Khoan3"
+   ]
+  },
+  "TOP91913": {
+   "question": "Việc xác định dân tộc của con nuôi thực hiện theo quy định nào?",
+   "accepted_round1": [
+    "HNGD2000|Dieu75|Khoan2",
+    "BLDS2015|Dieu29|Khoan2"
+   ],
+   "accepted_both_rounds": [
+    "HNGD2000|Dieu75|Khoan2",
+    "BLDS2015|Dieu29|Khoan2"
+   ],
+   "old_gold": [
+    "HNGD2000|Dieu75|Khoan2"
+   ]
+  },
+  "TOP95375": {
+   "question": "Tòa án tống đạt văn bản tố tụng cho cơ quan tổ chức nước ngoài có văn phòng đại diện bằng những phương thức nào?",
+   "accepted_round1": [
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu474|Khoan1|Diemđ"
+   ],
+   "accepted_both_rounds": [
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu474|Khoan1|Diemđ"
+   ],
+   "old_gold": [
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu474|Khoan1|Diemđ"
+   ]
+  }
+ }
+}

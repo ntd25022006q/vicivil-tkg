@@ -1,0 +1,884 @@
+{
+ "n_questions_with_verified_gold": 279,
+ "n_questions_unverifiable": 2,
+ "unverifiable_qids": [
+  "TOP27031",
+  "TOP43156"
+ ],
+ "n_regolded_by_two_round_llm_judge": 38,
+ "judge_model": "qwen2.5:14b",
+ "judge_agreement_rate": 0.8875,
+ "rule": "cau chi con lai khi ca hai vong kiem chung cua LLM judge deu xac nhan doan do tra loi dung; cac doan duoc giu la dap an chinh la cac ban khac nhau cua cung dieu khoan",
+ "gold": {
+  "GEN70985": [
+   "BLDS2015|Dieu455|Khoan1",
+   "BLDS2005|Dieu463|Khoan1"
+  ],
+  "GEN62121": [
+   "BLDS2015|Dieu320|Khoan7"
+  ],
+  "GEN45559": [
+   "BLDS2015|Dieu551|Khoan2",
+   "BLDS2005|Dieu556|Khoan1",
+   "BLDS1995|Dieu559|Muc1"
+  ],
+  "GEN85381": [
+   "BLDS2015|Dieu672|Khoan1"
+  ],
+  "GEN28924": [
+   "BLDS2015|Dieu420|Khoan1|Diemd"
+  ],
+  "GEN69550": [
+   "BLDS2015|Dieu72|Khoan2"
+  ],
+  "GEN67567": [
+   "BLDS2015|Dieu420|Khoan3|Diema"
+  ],
+  "GEN53214": [
+   "BLDS2015|Dieu651|Khoan1|Diemc"
+  ],
+  "GEN25779": [
+   "BLDS2015|Dieu477|Khoan2|Diemb"
+  ],
+  "GEN89703": [
+   "BLDS2015|Dieu101|Khoan2"
+  ],
+  "GEN90443": [
+   "BLDS2015|Dieu455|Khoan2"
+  ],
+  "GEN14471": [
+   "BLDS2015|Dieu229|Khoan1"
+  ],
+  "GEN51489": [
+   "BLDS2015|Dieu318|Khoan2"
+  ],
+  "GEN79344": [
+   "BLDS2015|Dieu540|Khoan4"
+  ],
+  "GEN53978": [
+   "BLDS2015|Dieu623|Khoan2"
+  ],
+  "GEN72269": [
+   "BLDS2015|Dieu681|Khoan2|Diemc"
+  ],
+  "GEN13629": [
+   "BLDS2015|Dieu539|Khoan4"
+  ],
+  "GEN96905": [
+   "BLDS2015|Dieu466|Khoan1"
+  ],
+  "GEN15475": [
+   "BLDS2015|Dieu407|Khoan1"
+  ],
+  "GEN49584": [
+   "BLDS2015|Dieu546|Khoan2"
+  ],
+  "GEN34985": [
+   "BLDS2015|Dieu6|Khoan2"
+  ],
+  "GEN56131": [
+   "BLDS2015|Dieu225|Khoan2|Diema"
+  ],
+  "GEN91745": [
+   "BLDS2015|Dieu34|Khoan2"
+  ],
+  "GEN18358": [
+   "BLDS2015|Dieu28|Khoan1|Diemg"
+  ],
+  "GEN70295": [
+   "BLDS2015|Dieu146|Khoan1|Diemc"
+  ],
+  "GEN82789": [
+   "BLDS2015|Dieu558|Khoan3"
+  ],
+  "GEN89661": [
+   "BLDS2015|Dieu99|Khoan3"
+  ],
+  "GEN90903": [
+   "BLDS2015|Dieu502|Khoan1"
+  ],
+  "GEN44743": [
+   "BLDS2015|Dieu29|Khoan3|Diemb"
+  ],
+  "GEN79721": [
+   "BLDS2015|Dieu27|Khoan1|Diemb"
+  ],
+  "GEN95535": [
+   "BLDS2005|Dieu274|Khoan1"
+  ],
+  "GEN73628": [
+   "BLDS2005|Dieu105|Khoan1"
+  ],
+  "GEN30174": [
+   "BLDS2005|Dieu623|Khoan1"
+  ],
+  "GEN62886": [
+   "BLDS2005|Dieu423|Khoan1"
+  ],
+  "GEN71934": [
+   "BLDS2005|Dieu768|Khoan1"
+  ],
+  "GEN38275": [
+   "BLDS2005|Dieu637|Khoan1"
+  ],
+  "GEN13335": [
+   "BLDS2005|Dieu508|Khoan1"
+  ],
+  "GEN59266": [
+   "BLDS2005|Dieu761|Khoan1",
+   "BLDS2005|Dieu762|Khoan1"
+  ],
+  "GEN66436": [
+   "BLDS2005|Dieu75|Khoan1"
+  ],
+  "GEN67544": [
+   "BLDS2005|Dieu310|Khoan1"
+  ],
+  "GEN95147": [
+   "BLDS2005|Dieu309|Khoan1"
+  ],
+  "GEN54013": [
+   "BLDS2005|Dieu710|Khoan1"
+  ],
+  "GEN57254": [
+   "BLDS2005|Dieu667|Khoan1"
+  ],
+  "GEN67362": [
+   "BLDS2005|Dieu479|Khoan1"
+  ],
+  "GEN10962": [
+   "BLDS2005|Dieu425|Khoan1"
+  ],
+  "GEN97280": [
+   "BLDS2005|Dieu88|Khoan1"
+  ],
+  "GEN83997": [
+   "BLDS2005|Dieu120|Khoan1"
+  ],
+  "GEN86204": [
+   "BLDS2005|Dieu262|Khoan1"
+  ],
+  "GEN34245": [
+   "BLDS2005|Dieu407|Khoan1"
+  ],
+  "GEN46743": [
+   "BLDS2005|Dieu614|Khoan1"
+  ],
+  "GEN18692": [
+   "BLDS2005|Dieu444|Khoan1"
+  ],
+  "GEN87629": [
+   "BLDS2005|Dieu763|Khoan1"
+  ],
+  "GEN95321": [
+   "BLDS2005|Dieu290|Khoan1"
+  ],
+  "GEN52565": [
+   "BLDS2005|Dieu309|Khoan1"
+  ],
+  "GEN48222": [
+   "BLDS2005|Dieu666|Khoan1"
+  ],
+  "GEN19616": [
+   "BLDS2005|Dieu100|Khoan1"
+  ],
+  "GEN79204": [
+   "BLDS2005|Dieu555|Khoan1"
+  ],
+  "GEN28619": [
+   "BLDS2005|Dieu524|Khoan1"
+  ],
+  "GEN40699": [
+   "BLDS2005|Dieu107|Khoan1"
+  ],
+  "GEN25840": [
+   "BLDS2005|Dieu757|Khoan1"
+  ],
+  "GEN86368": [
+   "BLDS2005|Dieu438|Khoan1"
+  ],
+  "GEN93786": [
+   "BLDS2005|Dieu103|Khoan1"
+  ],
+  "GEN29504": [
+   "BLDS2005|Dieu349|Khoan2"
+  ],
+  "GEN85482": [
+   "BLDS2005|Dieu160"
+  ],
+  "GEN64020": [
+   "BLDS2005|Dieu216|Khoan1"
+  ],
+  "GEN59549": [
+   "BLDS2005|Dieu647|Khoan1"
+  ],
+  "GEN79482": [
+   "BLDS2005|Dieu295|Khoan1"
+  ],
+  "GEN90810": [
+   "BLDS2005|Dieu73|Khoan1"
+  ],
+  "GEN67578": [
+   "HNGD2014|Dieu60|Khoan2"
+  ],
+  "GEN57365": [
+   "HNGD2014|Dieu76|Khoan3"
+  ],
+  "GEN27762": [
+   "HNGD2014|Dieu84|Khoan1"
+  ],
+  "GEN42951": [
+   "NCN2010|Dieu37|Khoan3"
+  ],
+  "GEN33568": [
+   "HNGD2014|Dieu24|Khoan2"
+  ],
+  "GEN50764": [
+   "HNGD2014|Dieu73|Khoan4"
+  ],
+  "GEN42748": [
+   "HNGD2014|Dieu46|Khoan3",
+   "HNGDVBHN2025|Dieu46|Khoan3"
+  ],
+  "GEN95410": [
+   "HNGD2014|Dieu122|Khoan2"
+  ],
+  "GEN56666": [
+   "HNGD2014|Dieu38|Khoan2"
+  ],
+  "GEN57395": [
+   "HNGD2014|Dieu24|Khoan3"
+  ],
+  "GEN35982": [
+   "HNGD2014|Dieu2|Khoan4"
+  ],
+  "GEN82529": [
+   "HNGD2014|Dieu104|Khoan1"
+  ],
+  "GEN87544": [
+   "HNGD2014|Dieu3|Khoan3"
+  ],
+  "GEN37968": [
+   "HNGD2014|Dieu8|Khoan1|Diemb"
+  ],
+  "GEN54339": [
+   "HNGD2014|Dieu97|Khoan3"
+  ],
+  "GEN52098": [
+   "HNGD2014|Dieu98|Khoan5"
+  ],
+  "GEN72530": [
+   "HNGD2014|Dieu119|Khoan3"
+  ],
+  "GEN88877": [
+   "HNGD2014|Dieu95|Khoan3|Diemd"
+  ],
+  "GEN39029": [
+   "HNGD2014|Dieu26|Khoan1"
+  ],
+  "GEN53768": [
+   "HNGD2014|Dieu101|Khoan1"
+  ],
+  "GEN69613": [
+   "HNGD2014|Dieu73|Khoan2"
+  ],
+  "GEN63901": [
+   "BLDS2015|Dieu504|Khoan1"
+  ],
+  "GEN52760": [
+   "BLDS2015|Dieu647|Khoan2"
+  ],
+  "GEN99286": [
+   "BLDS2015|Dieu75|Khoan3"
+  ],
+  "GEN29347": [
+   "BLDS2005|Dieu285|Khoan1"
+  ],
+  "GEN83381": [
+   "BLDS2015|Dieu683|Khoan2|Diemđ"
+  ],
+  "GEN69784": [
+   "BLDS2015|Dieu175|Khoan1",
+   "BLDS2005|Dieu265|Khoan1",
+   "BLDS1995|Dieu270|Muc1",
+   "BLDS1995|Dieu270|Muc3"
+  ],
+  "GEN31043": [
+   "BLDS2015|Dieu30|Khoan3"
+  ],
+  "GEN70440": [
+   "BLDS2015|Dieu94|Khoan2"
+  ],
+  "GEN26434": [
+   "BLDS2015|Dieu581|Khoan1"
+  ],
+  "GEN88524": [
+   "BLDS2015|Dieu476|Khoan1"
+  ],
+  "GEN78202": [
+   "BLDS2015|Dieu51|Khoan4|Diemc"
+  ],
+  "GEN37861": [
+   "BLDS2015|Dieu411|Khoan2"
+  ],
+  "GEN21948": [
+   "BLDS2005|Dieu652|Khoan1",
+   "BLDS1995|Dieu655|Muc1"
+  ],
+  "GEN97250": [
+   "BLDS2015|Dieu73|Khoan2|Diemb"
+  ],
+  "GEN66553": [
+   "BLDS2015|Dieu575|Khoan2"
+  ],
+  "GEN56474": [
+   "BLDS2015|Dieu131|Khoan1"
+  ],
+  "GEN78263": [
+   "BLDS2015|Dieu308|Khoan1|Diemb"
+  ],
+  "GEN76727": [
+   "BLDS2015|Dieu630|Khoan3"
+  ],
+  "GEN71410": [
+   "BLDS2015|Dieu303|Khoan1|Diemc"
+  ],
+  "GEN97275": [
+   "BLDS2005|Dieu612|Khoan1"
+  ],
+  "GEN71796": [
+   "BLDS2015|Dieu9|Khoan2"
+  ],
+  "GEN95669": [
+   "BLDS2015|Dieu361|Khoan3"
+  ],
+  "GEN45337": [
+   "BLDS2015|Dieu26|Khoan2"
+  ],
+  "GEN25918": [
+   "HNGD2014|Dieu50|Khoan1|Diema"
+  ],
+  "GEN48268": [
+   "BLDS2005|Dieu592|Khoan1"
+  ],
+  "GEN94813": [
+   "BLDS2005|Dieu137|Khoan1"
+  ],
+  "GEN16359": [
+   "BLDS2015|Dieu328|Khoan2"
+  ],
+  "GEN85560": [
+   "BLDS2005|Dieu580|Khoan1"
+  ],
+  "GEN33898": [
+   "BLDS2015|Dieu674|Khoan3",
+   "BLDS2005|Dieu763|Khoan1"
+  ],
+  "GEN52151": [
+   "BLDS2005|Dieu753|Khoan1"
+  ],
+  "GEN58372": [
+   "BLDS2005|Dieu429|Khoan1"
+  ],
+  "GEN77738": [
+   "BLDS2005|Dieu751|Khoan1"
+  ],
+  "GEN71065": [
+   "BLDS2015|Dieu200|Khoan2"
+  ],
+  "GEN45293": [
+   "BLDS2015|Dieu442|Khoan2"
+  ],
+  "GEN30064": [
+   "HNGDVBHN2025|Dieu67|Khoan2|Diema",
+   "HNGD2014|Dieu67|Khoan2|Diema"
+  ],
+  "GEN20094": [
+   "BLDS2005|Dieu482|Khoan1"
+  ],
+  "GEN61247": [
+   "BLDS2015|Dieu406|Khoan3"
+  ],
+  "GEN75189": [
+   "BLDS2015|Dieu499|Khoan2"
+  ],
+  "GEN17239": [
+   "BLDS2015|Dieu438|Khoan1|Diemb"
+  ],
+  "GEN71067": [
+   "BLDS2015|Dieu320|Khoan1"
+  ],
+  "GEN91088": [
+   "BLDS2015|Dieu639|Khoan2"
+  ],
+  "GEN56252": [
+   "BLDS2005|Dieu672|Khoan1"
+  ],
+  "GEN99167": [
+   "BLDS2005|Dieu2|Khoan1"
+  ],
+  "GEN47787": [
+   "BLDS2005|Dieu590|Khoan1"
+  ],
+  "GEN84647": [
+   "BLDS2015|Dieu241|Khoan3"
+  ],
+  "GEN60238": [
+   "BLDS2015|Dieu218|Khoan3"
+  ],
+  "GEN95837": [
+   "BLDS2015|Dieu70|Khoan1"
+  ],
+  "GEN52611": [
+   "BLDS2005|Dieu605|Khoan1"
+  ],
+  "GEN98662": [
+   "HNGD2014|Dieu72|Khoan1",
+   "HNGDVBHN2025|Dieu72|Khoan1",
+   "HNGD2000|Dieu37|Khoan1",
+   "HNGD2000|Dieu34|Khoan1"
+  ],
+  "GEN51429": [
+   "BLDS2015|Dieu354|Khoan2",
+   "BLDS2005|Dieu287|Khoan1",
+   "BLDS2015|Dieu411|Khoan1"
+  ],
+  "GEN31914": [
+   "BLDS2015|Dieu434|Khoan2"
+  ],
+  "GEN81336": [
+   "NCN2010|Dieu24|Khoan4"
+  ],
+  "GEN59944": [
+   "BLDS2015|Dieu510|Khoan2"
+  ],
+  "GEN95074": [
+   "BLDS2015|Dieu466|Khoan5|Diemb"
+  ],
+  "GEN81461": [
+   "BLDS2015|Dieu670|Khoan1|Diema"
+  ],
+  "GEN48308": [
+   "BLDS2015|Dieu420|Khoan1|Diemđ"
+  ],
+  "GEN56550": [
+   "HNGD2014|Dieu95|Khoan2|Diema"
+  ],
+  "GEN91337": [
+   "BLDS2015|Dieu153|Khoan1"
+  ],
+  "GEN11904": [
+   "BLDS2005|Dieu446"
+  ],
+  "GEN90604": [
+   "BLDS2015|Dieu434|Khoan3"
+  ],
+  "GEN75894": [
+   "BLDS2015|Dieu320|Khoan7"
+  ],
+  "GEN46407": [
+   "BLDS2015|Dieu406|Khoan2"
+  ],
+  "GEN11923": [
+   "BLDS2005|Dieu528|Khoan1"
+  ],
+  "GEN44390": [
+   "BLDS2015|Dieu577|Khoan1",
+   "BLDS2005|Dieu597|Khoan1"
+  ],
+  "GEN39298": [
+   "BLDS2015|Dieu657|Khoan3",
+   "BLDS1995|Dieu685|Muc3",
+   "BLDS2005|Dieu682|Khoan1"
+  ],
+  "GEN55424": [
+   "BLDS2015|Dieu288|Khoan4"
+  ],
+  "GEN94343": [
+   "BLDS2015|Dieu535|Khoan4"
+  ],
+  "GEN53892": [
+   "BLDS2015|Dieu387|Khoan2"
+  ],
+  "GEN11580": [
+   "BLDS2015|Dieu217|Khoan1"
+  ],
+  "GEN39897": [
+   "BLDS2015|Dieu264|Khoan2"
+  ],
+  "GEN93396": [
+   "BLDS2005|Dieu300|Khoan1"
+  ],
+  "GEN74272": [
+   "BLDS2015|Dieu688|Khoan1|Diemb"
+  ],
+  "GEN45218": [
+   "BLDS2015|Dieu496|Khoan3"
+  ],
+  "NEW69151": [
+   "HOAGIAI2026|Dieu15|Khoan3"
+  ],
+  "NEW21840": [
+   "HOAGIAI2026|Dieu14|Khoan1|Diemc"
+  ],
+  "NEW64501": [
+   "HOAGIAI2026|Dieu29|Khoan1"
+  ],
+  "NEW14208": [
+   "HOTICH2014|Dieu30|Khoan1"
+  ],
+  "NEW83864": [
+   "HOTICH2014|Dieu52|Khoan2"
+  ],
+  "NEW90326": [
+   "HOTICH2014|Dieu70|Khoan3"
+  ],
+  "NEW57952": [
+   "HOTICH2014|Dieu62|Khoan1"
+  ],
+  "NEW83995": [
+   "HOTICH2014|Dieu69|Khoan2"
+  ],
+  "NEW28534": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu482|Khoan2|Diema"
+  ],
+  "NEW87268": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu210|Khoan2|Diemb"
+  ],
+  "NEW53084": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu91|Khoan3"
+  ],
+  "NEW21414": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu73|Khoan1|Diemb"
+  ],
+  "NEW91442": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu69|Khoan2"
+  ],
+  "NEW84407": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu27|Khoan1"
+  ],
+  "NEW45231": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu16|Khoan2"
+  ],
+  "NEW98861": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu6|Khoan3|Diemc"
+  ],
+  "NEW17468": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu37|Khoan2"
+  ],
+  "NEW70231": [
+   "THADSVBHN|Dieu57|Khoan1|Diemb"
+  ],
+  "NEW15696": [
+   "THADSVBHN|Dieu106|Khoan2|Diemb",
+   "THADS2008|Dieu106|Khoan2"
+  ],
+  "NEW75514": [
+   "THADSVBHN|Dieu21|Khoan5|Diema"
+  ],
+  "NEW71666": [
+   "THADSVBHN|Dieu36|Khoan2|Diemd"
+  ],
+  "NEW20421": [
+   "THADS2008|Dieu34|Khoan1|Diema"
+  ],
+  "NEW82981": [
+   "THADSVBHN|Dieu66|Khoan3|Diemb",
+   "THADS2008|Dieu66|Khoan3|Diemb"
+  ],
+  "NEW93215": [
+   "THADS2008|Dieu16|Khoan4",
+   "THADS2008|Dieu15|Khoan2",
+   "THADSVBHN|Dieu14|Khoan1|Diemd"
+  ],
+  "NEW50275": [
+   "THADS2008|Dieu132|Khoan1"
+  ],
+  "NEW46465": [
+   "TNBTCNN2017|Dieu13|Khoan1|Dieme"
+  ],
+  "NEW75006": [
+   "TNBTCNN2017|Dieu31|Khoan1"
+  ],
+  "NEW38972": [
+   "TNBTCNN2017|Dieu50|Khoan3"
+  ],
+  "NEW39093": [
+   "TNBTCNN2017|Dieu46|Khoan6|Diema"
+  ],
+  "NEW61903": [
+   "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diemc"
+  ],
+  "NEW28139": [
+   "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diemd",
+   "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diema"
+  ],
+  "NEW23120": [
+   "HNGD2014|Dieu38|Khoan2",
+   "HNGDVBHN2025|Dieu38|Khoan2"
+  ],
+  "NEW91253": [
+   "HNGDVBHN2025|Dieu3|Khoan18"
+  ],
+  "NEW22714": [
+   "NCN2010|Dieu43|Khoan2|Diemđ"
+  ],
+  "NEW17446": [
+   "NCN2010|Dieu49|Khoan1|Diema"
+  ],
+  "NEW35143": [
+   "NCN2010|Dieu14|Khoan2|Diemd"
+  ],
+  "NEW57186": [
+   "NCN2010|Dieu43|Khoan1|Diemd"
+  ],
+  "NEW59911": [
+   "NCN2010|Dieu25|Khoan3"
+  ],
+  "NEW26614": [
+   "HOTICH2026|Dieu8|Khoan2|Diemb"
+  ],
+  "NEW95746": [
+   "HOTICH2026|Dieu17|Khoan1|Diemd"
+  ],
+  "NEW99436": [
+   "HOTICH2026|Dieu24|Khoan2"
+  ],
+  "NEW75990": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu42|Khoan9"
+  ],
+  "NEW21932": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu50|Khoan1"
+  ],
+  "NEW96729": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu21|Khoan1"
+  ],
+  "NEW49913": [
+   "HNGD2000|Dieu45|Khoan2"
+  ],
+  "NEW90253": [
+   "HNGD2000|Dieu69|Khoan5"
+  ],
+  "NEW53217": [
+   "HNGD2000|Dieu43|Khoan1"
+  ],
+  "TOP25047": [
+   "HOAGIAI2026|Dieu24|Khoan1"
+  ],
+  "TOP52869": [
+   "HOAGIAI2026|Dieu18|Khoan8"
+  ],
+  "TOP33735": [
+   "HOAGIAI2026|Dieu24|Khoan2"
+  ],
+  "TOP65619": [
+   "HOAGIAI2026|Dieu12|Khoan9"
+  ],
+  "TOP28886": [
+   "HOAGIAI2026|Dieu3|Khoan1|Diema"
+  ],
+  "TOP14097": [
+   "HOAGIAI2026|Dieu9|Khoan5"
+  ],
+  "TOP89133": [
+   "HOTICH2014|Dieu15|Khoan1"
+  ],
+  "TOP42625": [
+   "HOTICH2014|Dieu29|Khoan2"
+  ],
+  "TOP61006": [
+   "HOTICH2014|Dieu47|Khoan2"
+  ],
+  "TOP68536": [
+   "HOTICH2014|Dieu61|Khoan1"
+  ],
+  "TOP95375": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu474|Khoan1|Diemđ"
+  ],
+  "TOP77430": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu324|Khoan3"
+  ],
+  "TOP89044": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu25|Khoan1"
+  ],
+  "TOP89101": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu8|Khoan3"
+  ],
+  "TOP26509": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu26|Khoan2"
+  ],
+  "TOP92479": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu37|Khoan3"
+  ],
+  "TOP86087": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu13|Khoan3"
+  ],
+  "TOP40623": [
+   "THADSVBHN|Dieu44|Khoan4|Diemđ"
+  ],
+  "TOP50371": [
+   "THADSVBHN|Dieu35|Khoan2|Diemc"
+  ],
+  "TOP23504": [
+   "THADSVBHN|Dieu173|Khoan6"
+  ],
+  "TOP53044": [
+   "THADSVBHN|Dieu170|Khoan3|Diemđ",
+   "THADSVBHN|Dieu170|Khoan1|Diemd"
+  ],
+  "TOP76535": [
+   "THADSVBHN|Dieu176|Khoan2"
+  ],
+  "TOP67853": [
+   "THADS2008|Dieu48|Khoan1|Diema"
+  ],
+  "TOP81485": [
+   "THADSVBHN|Dieu145|Khoan1|Diema",
+   "THADS2008|Dieu145|Khoan1|Diema"
+  ],
+  "TOP25718": [
+   "THADS2008|Dieu35|Khoan1|Diemc"
+  ],
+  "TOP58739": [
+   "THADS2008|Dieu130|Khoan1|Diema"
+  ],
+  "TOP33026": [
+   "THADS2008|Dieu140|Khoan2|Diemd"
+  ],
+  "TOP46606": [
+   "TNBTCNN2017|Dieu29|Khoan1|Diemb"
+  ],
+  "TOP18069": [
+   "TNBTCNN2017|Dieu36|Khoan1|Diemđ"
+  ],
+  "TOP15416": [
+   "TNBTCNN2017|Dieu51|Khoan2"
+  ],
+  "TOP10527": [
+   "TNBTCNN2017|Dieu37|Khoan7"
+  ],
+  "TOP81552": [
+   "TNBTCNN2017|Dieu73|Khoan3|Diemd",
+   "TNBTCNN2017|Dieu73|Khoan3|Diema",
+   "TNBTCNN2017|Dieu73|Khoan3|Diemđ"
+  ],
+  "TOP27902": [
+   "luat-so-15-2026-qh16-470450|Dieu1|Khoan10"
+  ],
+  "TOP25608": [
+   "luat-so-15-2026-qh16-470450|Dieu47|Khoan1|Diemb"
+  ],
+  "TOP84201": [
+   "HNGDVBHN2025|Dieu26|Khoan2"
+  ],
+  "TOP58788": [
+   "HNGDVBHN2025|Dieu122|Khoan1"
+  ],
+  "TOP84342": [
+   "HNGDVBHN2025|Dieu87|Khoan2|Diemb"
+  ],
+  "TOP27523": [
+   "HNGDVBHN2025|Dieu76|Khoan4"
+  ],
+  "TOP35966": [
+   "NCN2010|Dieu24|Khoan1"
+  ],
+  "TOP55876": [
+   "NCN2010|Dieu12|Khoan2"
+  ],
+  "TOP28658": [
+   "BLDS2015|Dieu28|Khoan2"
+  ],
+  "TOP97603": [
+   "NCN2010|Dieu22|Khoan1"
+  ],
+  "TOP62589": [
+   "HOTICH2026|Dieu25|Khoan2|Diemc",
+   "HOTICH2026|Dieu25|Khoan2|Diemb"
+  ],
+  "TOP69002": [
+   "HOTICH2026|Dieu4|Khoan2|Diemg"
+  ],
+  "TOP55435": [
+   "HOTICH2026|Dieu4|Khoan2|Diemđ"
+  ],
+  "TOP10475": [
+   "HOTICH2026|Dieu19|Khoan2|Diemđ"
+  ],
+  "TOP19744": [
+   "HOTICH2026|Dieu8|Khoan4"
+  ],
+  "TOP41254": [
+   "HOTICH2026|Dieu25|Khoan1|Diemo",
+   "HOTICH2026|Dieu25|Khoan1|Diemn"
+  ],
+  "TOP45624": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu62|Khoan1"
+  ],
+  "TOP68085": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu27|Khoan1|Diema"
+  ],
+  "TOP35023": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu40|Khoan1"
+  ],
+  "TOP36790": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu55|Khoan3"
+  ],
+  "TOP60751": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan8"
+  ],
+  "TOP91913": [
+   "HNGD2000|Dieu75|Khoan2",
+   "BLDS2015|Dieu29|Khoan2"
+  ],
+  "TOP44737": [
+   "HNGD2000|Dieu83|Khoan2"
+  ],
+  "TOP59991": [
+   "HNGD2014|Dieu77|Khoan1",
+   "HNGDVBHN2025|Dieu77|Khoan1"
+  ],
+  "TOP89237": [
+   "HNGD2000|Dieu106|Khoan1"
+  ],
+  "TOP25307": [
+   "HNGD2000|Dieu31|Khoan3"
+  ],
+  "CIV001": [
+   "BLDS2015|Dieu27|Khoan1|Diema"
+  ],
+  "CIV002": [
+   "BLDS2005|Dieu27|Khoan1"
+  ],
+  "CIV003": [
+   "HNGD2014|Dieu8|Khoan1|Diema"
+  ],
+  "CIV004": [
+   "BLDS2015|Dieu651|Khoan1|Diema"
+  ],
+  "CIV005": [
+   "BLDS2015|Dieu584|Khoan1"
+  ],
+  "CIV006": [
+   "HNGD2014|Dieu81|Khoan1"
+  ],
+  "CIV007": [
+   "BLDS2015|Dieu34|Khoan5"
+  ],
+  "CIV008": [
+   "HNGD2014|Dieu55"
+  ],
+  "CIV009": [
+   "HNGD2014|Dieu33|Khoan1"
+  ],
+  "CIV010": [
+   "BLDS2015|Dieu629|Khoan1"
+  ],
+  "CIV011": [
+   "BLDS2015|Dieu586|Khoan2"
+  ],
+  "CIV012": [
+   "BLDS1995|Dieu679|Muc1"
+  ]
+ }
+}
