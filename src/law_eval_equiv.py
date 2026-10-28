@@ -16,9 +16,10 @@ Cach cham:
 
 Khong can GPU, khong can mo hinh: chi so sanh chuoi van ban da chuan hoa.
 """
-import io, json, os, re, unicodedata, collections
+import io, json, os, re, sys, unicodedata, collections
 
-R = r"C:\Users\ntd25\Downloads\OpenCode\law_release"
+R = sys.argv[1] if len(sys.argv) > 1 else \
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root (src/ is one level down)
 B = os.path.join(R, "benchmark")
 
 def norm(s):

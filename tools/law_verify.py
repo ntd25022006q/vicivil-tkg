@@ -2,12 +2,15 @@ import hashlib
 import io
 import os
 import sys
+import tempfile
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 from huggingface_hub import snapshot_download
 
+_dest = sys.argv[1] if len(sys.argv) > 1 else \
+    os.path.join(tempfile.gettempdir(), "vicivil_tkg_hubverify")
 p = snapshot_download("datbazuka2502/vicivil-tkg", repo_type="dataset",
-                      local_dir=r"C:\Users\ntd25\AppData\Local\Temp\opencode\hubverify")
+                      local_dir=_dest)
 mf = {}
 for line in open(os.path.join(p, "SHA256SUMS"), encoding="utf-8"):
     h, rel = line.strip().split("  ", 1)
