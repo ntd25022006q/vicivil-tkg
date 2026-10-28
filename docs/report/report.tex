@@ -103,7 +103,7 @@ Luật dân sự Việt Nam không tồn tại trong một bản duy nhất: B�
 
 Công trình này xây dựng một bộ dữ liệu mở ViCivil-TKG giải quyết trực tiếp khoảng trống đó. Từ các tệp PDF công báo chính thức, 17 văn bản luật dân sự (1996--2026) được cắt thành 11.267 đoạn văn bản (chunk) theo cấu trúc Điều~--- Khoản~--- Điểm, mỗi đoạn mang một mã phân cấp ổn định và khoảng hiệu lực kế thừa từ văn bản cha. Trên nền corpus, công trình dựng một đồ thị tri thức thời gian gồm 33 văn bản và 21 cạnh kế thừa/sửa đổi được khai thác từ phần mở đầu văn bản hợp nhất, xuất ra cả ba định dạng RDF/Turtle, JSON-LD và GEXF; lập chỉ mục truy hồi ba tầng gồm 14.099 thực thể và 20.311 hàng quan hệ với vector 768 chiều; xây bộ benchmark 281 câu hỏi tình huống có đáp án được kiểm chứng ba vòng; và kèm một trình xem đồ thị dạng HTML chạy ngoại tuyến để người đọc tự kiểm chứng bằng mắt.
 
-Chất lượng truy hồi được đo trên 281 câu hỏi: Hit@1 = 0,452; Hit@3 = 0,658; Hit@5 = 0,726; Hit@10 = 0,794; MRR = 0,569. Trên nhóm 245 câu đã xác minh, Hit@1 đạt 0,502. Khi bổ sung bước xếp lại (rerank) bằng BAAI/bge-reranker-v2-m3, Hit@10 tăng lên 0,868 và mọi cải thiện đều có ý nghĩa thống kê (Wilcoxon $p<0{,}001$). Toàn bộ dữ liệu, mã nguồn, chỉ số và báo cáo được công bố công khai; kết quả tái lập được mà không cần GPU.
+Chất lượng truy hồi được đo trên 281 câu hỏi: Hit@1 = 0,452; Hit@3 = 0,658; Hit@5 = 0,726; Hit@10 = 0,794; MRR = 0,569. Trên nhóm 245 câu đã xác minh, Hit@1 đạt 0,502. Khi bổ sung bước xếp lại (rerank) bằng BAAI/bge-reranker-v2-m3, Hit@10 tăng lên 0,868 và mọi cải thiện đều có ý nghĩa thống kê (Wilcoxon $p<0{,}001$). Bổ sung tiếp lớp \emph{lọc ràng buộc thời gian} (TCR) khai thác khoảng hiệu lực của đồ thị, Hit@1 tăng từ 0,409 lên 0,530 khi không rerank và từ 0,445 lên 0,609 khi có rerank (Wilcoxon $p<2\\times10^{-15}$). Toàn bộ dữ liệu, mã nguồn, chỉ số và báo cáo được công bố công khai; kết quả tái lập được mà không cần GPU.
 
 \vspace{0.3cm}
 \noindent\textbf{Từ khóa:} luật dân sự Việt Nam; đồ thị tri thức thời gian; dữ liệu mở; truy hồi thông tin; benchmark tiếng Việt; retrieval-augmented generation.
@@ -119,7 +119,7 @@ Vietnamese civil law does not exist as a single static text: the 1995 Civil Code
 
 This work presents ViCivil-TKG, an open dataset that answers such questions. From official gazette PDFs, 17 Vietnamese civil-law statutes (1996--2026) are split into 11,267 text chunks along the Article---Clause---Point hierarchy, each carrying a stable identifier and a validity window inherited from its parent law. On top of the corpus, the project builds a temporal knowledge graph of 33 laws and 21 succession/amendment edges mined from consolidation preambles (exported as RDF/Turtle, JSON-LD and GEXF), a three-tier retrieval index of 14,099 entities and 20,311 relation rows with 768-dimensional vectors, a 281-question situational benchmark with a three-round verified gold chain, and an offline single-file graph explorer.
 
-On the 281 questions, retrieval reaches Hit@1 = 0.452, Hit@3 = 0.658, Hit@5 = 0.726, Hit@10 = 0.794 and MRR = 0.569; on the 245 verified questions Hit@1 rises to 0.502. Adding a BAAI/bge-reranker-v2-m3 reranking step lifts Hit@10 to 0.868, with all improvements statistically significant (Wilcoxon $p<0.001$). All data, code, metrics and this report are released publicly; the results are reproducible without a GPU.
+On the 281 questions, retrieval reaches Hit@1 = 0.452, Hit@3 = 0.658, Hit@5 = 0.726, Hit@10 = 0.794 and MRR = 0.569; on the 245 verified questions Hit@1 rises to 0.502. Adding a BAAI/bge-reranker-v2-m3 reranking step lifts Hit@10 to 0.868, with all improvements statistically significant (Wilcoxon $p<0.001$). A temporal-constraint filtering (TCR) layer built on the graph's validity windows further raises Hit@1 from 0.409 to 0.530 without reranking and from 0.445 to 0.609 with reranking (Wilcoxon $p<2\\times10^{-15}$). All data, code, metrics and this report are released publicly; the results are reproducible without a GPU.
 \end{english}
 
 \vspace{0.3cm}
@@ -158,7 +158,7 @@ ViCivil-TKG lấp khoảng trống trên bằng năm sản phẩm đi liền nha
 
 \section{Cấu trúc báo cáo}
 
-Chương~\ref{ch:data} trình bày nguồn dữ liệu, quy trình xây dựng corpus, kiến trúc chỉ mục và đồ thị thời gian. Chương~\ref{ch:kq} mô tả thiết kế benchmark và kết quả đo lường, bao gồm phân tầng chất lượng, bước rerank và kiểm định thống kê. Chương~\ref{ch:congbo} giới thiệu sản phẩm công bố và cơ chế tái lập. Chương~\ref{ch:ketluan} thảo luận hạn chế và kết luận.
+Chương~\ref{ch:data} trình bày nguồn dữ liệu, quy trình xây dựng corpus, kiến trúc chỉ mục và đồ thị thời gian. Chương~\ref{ch:kq} mô tả thiết kế benchmark và kết quả đo lường, bao gồm phân tầng chất lượng, bước rerank, lọc ràng buộc thời gian và kiểm định thống kê. Chương~\ref{ch:congbo} giới thiệu sản phẩm công bố và cơ chế tái lập. Chương~\ref{ch:ketluan} thảo luận hạn chế và kết luận.
 
 % ======================= CHƯƠNG 2 =======================
 \chapter{Dữ liệu và phương pháp}\label{ch:data}
@@ -280,6 +280,31 @@ Ba phép thử thống kê kèm theo xác nhận các khoảng tăng không ph�
 
 Ngoài ra, bộ chỉ số được đo lại theo hai luật chấm khác (chấm nghiêm theo đúng mã, và chấm khoan dung cho đáp án trùng nội dung chuẩn hoá) cho kết quả gần nhau (Hit@1 = 0,452 so với 0,459), cho thấy thang đo không nhạy cảm với cách định nghĩa ``đúng''~--- một thuộc tính quan trọng khi bộ benchmark được dùng chấm các hệ thống khác.
 
+\section{Lọc ràng buộc thời gian (TCR)}\label{sec:tcr}
+
+Trước khi đo lường, benchmark được rà soát một lỗi mốc thời gian có thật: 28/281 câu bị gán \texttt{as\_of} trước khi luật chứa đáp án có hiệu lực~--- 23 câu sinh từ các văn bản năm 2026 nhưng mang \texttt{as\_of} = 2024, 5 câu có đáp án thuộc văn bản đã hết hạn trước mốc hỏi. Ở trạng thái đó, \emph{mọi} hệ truy hồi tôn trọng ràng buộc thời gian đều không thể tìm đúng, nên các mốc này được sửa về đúng giai đoạn hiệu lực của luật chứa đáp án; toàn bộ 28 thay đổi được công bố kèm lý do trong \texttt{benchmark/as\_of\_fixes.json}. Sau sửa lỗi, 100\% đáp án còn hiệu lực tại \texttt{as\_of} của câu hỏi.
+
+Trên nền đó, lớp lọc ràng buộc thời gian (\textsc{TCR}) vận hành đúng như thiết kế đồ thị hứa: loại mọi ứng viên thuộc văn bản \emph{không còn hiệu lực} tại \texttt{as\_of} (văn bản không rõ hiệu lực được giữ lại), sau đó giữ nguyên thứ hạng gộp RRF của phần còn lại. \texttt{as\_of} được xem là một phần của truy vấn~--- đúng định vị ``hỏi luật tại thời điểm X'' của hệ temporal KG~--- chứ không phải thông tin rò rỉ từ đáp án. Bảng~\ref{tab:tcr} đo cả bốn cấu hình trong cùng một đợt chạy để so sánh trực tiếp: TCR tăng Hit@1 từ 0,409 lên 0,530 trên truy hồi lai và từ 0,445 lên 0,609 trên nền có rerank; cả hai khoảng tăng đều có $p < 2\\times10^{-15}$ (Wilcoxon trên nghịch đảo hạng, $n = 281$).
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Tác động của lọc ràng buộc thời gian (TCR) trên 281 câu, đo trong cùng một đợt chạy để các hàng so sánh trực tiếp được với nhau.}
+\label{tab:tcr}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}} l c c c c}
+\toprule
+Cấu hình & Hit@1 & Hit@5 & Hit@10 & MRR \\
+\midrule
+Truy hồi lai (nền) & 0,409 & 0,729 & 0,819 & 0,554 \\
+\quad + TCR & \textbf{0,530} & \textbf{0,811} & \textbf{0,879} & \textbf{0,659} \\
+La + rerank (nền) & 0,445 & 0,787 & 0,868 & 0,591 \\
+\quad + TCR & \textbf{0,609} & \textbf{0,843} & 0,868 & \textbf{0,706} \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+Hai phép ablation đi kèm cho biết giới hạn của phương pháp. Bổ sung điểm \emph{tươi mới} cho phiên bản luật mới nhất trong dòng kế thừa làm \emph{giảm} kết quả, vì bộ benchmark cố tình chứa câu hỏi nhắm đúng văn bản cũ còn hiệu lực tại mốc hỏi~--- xác nhận rằng ràng buộc thời gian đúng nghĩa là \emph{lọc theo khoảng hiệu lực}, không phải thiên vị văn bản mới. Tăng hạng theo đồ thị trích dẫn giữa các điều (SGB) ở mức trung tính (Wilcoxon $p = 0{,}11$): tại quy mô 1.506 cạnh, khối lượng lan truyền chưa đủ đổi thứ hạng, được ghi nhận là hướng mở khi corpus mở rộng. Toàn bộ số liệu thô của đợt đo nằm trong \texttt{benchmark/tcr\_sgb\_result.json}, tái lập được không cần GPU.
+
 \section{Phân tích lỗi}\label{sec:errors}
 
 51/281 câu không có đáp án đúng trong top-10 được xem xét từng câu. Ba nguyên nhân chính: (i) \emph{trùng lặp điều luật giữa các văn bản}~--- nội dung điều được giữ nguyên chữ qua các thế hệ, làm các phiên bản khác năm chiếm chỗ trong top-5 (ảnh hưởng 10/281 câu, đã đo lường; lọc trùng tại thời điểm truy hồi bị loại vì làm méo hạng); (ii) \emph{khoảng trống trích xuất} ở một số văn bản còn thiếu điều con (đo trong \texttt{provenance/law\_audit.json}); (iii) \emph{câu hỏi ghép nhiều ý} cần gộp thông tin từ nhiều điều. Ba nhóm nguyên nhân này tương ứng ba hướng cải thiện đã nêu trong phần hạn chế.
@@ -315,9 +340,9 @@ Công trình công bố bốn hạn chế chính một cách tường minh. (1) 
 
 \section{Kết luận}\label{sec:conclusion}
 
-ViCivil-TKG cho thấy câu hỏi pháp lý mang mốc thời gian~--- dạng câu hỏi quan trọng nhất mà ít được hỗ trợ nhất trong dữ liệu pháp lý tiếng Việt~--- có thể được giải quyết trọn vẹn bằng dữ liệu mở: corpus phân cấp 11.267 chunk gắn khoảng hiệu lực, đồ thị 33 văn bản/21 cạnh kế thừa xuất chuẩn RDF, chỉ mục ba tầng 14.099 thực thể, benchmark 281 câu có chuỗi kiểm chứng ba vòng, và bộ chỉ số truy hồi công khai cùng ba luật chấm. Với Hit@5 = 0,726 (0,796 trên nhóm verified) và Hit@10 = 0,868 khi có rerank, bộ dữ liệu đạt mức đủ dùng làm nền cho hệ RAG pháp lý, đồng thời công bố cả điểm yếu lẫn nguyên nhân để người kế tiếp bắt đầu từ đúng chỗ.
+ViCivil-TKG cho thấy câu hỏi pháp lý mang mốc thời gian~--- dạng câu hỏi quan trọng nhất mà ít được hỗ trợ nhất trong dữ liệu pháp lý tiếng Việt~--- có thể được giải quyết trọn vẹn bằng dữ liệu mở: corpus phân cấp 11.267 chunk gắn khoảng hiệu lực, đồ thị 33 văn bản/21 cạnh kế thừa xuất chuẩn RDF, chỉ mục ba tầng 14.099 thực thể, benchmark 281 câu có chuỗi kiểm chứng ba vòng, và bộ chỉ số truy hồi công khai cùng ba luật chấm. Với Hit@5 = 0,726 (0,796 trên nhóm verified), Hit@10 = 0,868 khi có rerank và Hit@1 = 0,609 khi kết hợp rerank với lọc ràng buộc thời gian, bộ dữ liệu đạt mức đủ dùng làm nền cho hệ RAG pháp lý, đồng thời công bố cả điểm yếu lẫn nguyên nhân để người kế tiếp bắt đầu từ đúng chỗ.
 
-Hướng phát triển tiếp theo theo thứ tự ưu tiên: hoàn tất phúc khảo chuyên gia cho nhóm đáp án chưa xác minh; lấp khoảng trống trích xuất còn lại được liệt kê trong kiểm toán; thử nghiệm lọc trùng lặp phiên bản ở tầng rerank (nơi việc làm méo hạng có thể kiểm soát); và mở rộng khung temporal KG sang lĩnh vực luật hình sự và hành chính.
+Hướng phát triển tiếp theo theo thứ tự ưu tiên: hoàn tất phúc khảo chuyên gia cho nhóm đáp án chưa xác minh; lấp khoảng trống trích xuất còn lại được liệt kê trong kiểm toán; thử nghiệm lọc trùng lặp phiên bản ở tầng rerank (nơi việc làm méo hạng có thể kiểm soát); mở rộng khung temporal KG sang lĩnh vực luật hình sự và hành chính; và đánh giá lại điểm tăng của lan truyền theo đồ thị trích dẫn khi corpus lớn hơn.
 
 % ======================= TÀI LIỆU THAM KHẢO =======================
 \begin{thebibliography}{9}

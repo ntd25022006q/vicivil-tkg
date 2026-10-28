@@ -27,6 +27,19 @@ Retrieval (hybrid BM25 + dense, RRF fusion, temporal filter, frozen `v1.2.3` sco
 245 verified questions). Adding `BAAI/bge-reranker-v2-m3` over 30 candidates lifts
 **Hit@10 to 0.868** (MRR 0.594); all deltas significant (Wilcoxon *p* < 0.001, `provenance/significance.json`).
 
+**Temporal-Constraint Reranking (TCR)** — the graph's validity windows participate directly in
+retrieval: candidates whose law is not in force at the question's `as_of` are dropped before
+ranking. On the repaired benchmark this lifts **Hit@1 0.409 → 0.530** over the hybrid baseline
+and **0.445 → 0.609** over the reranked baseline (MRR 0.554 → 0.659 and 0.591 → 0.706; Wilcoxon
+*p* < 10⁻¹⁵ both; raw numbers + ablations in `benchmark/tcr_sgb_result.json`). Disclosed
+ablations: a recency bias toward the newest law version *hurts* (questions deliberately target
+older in-force versions); citation-graph boosting is neutral at 1,506 edges.
+
+`as_of` repair (transparent): 28/281 questions carried a date before their gold law took effect
+(23 × 2026-era statutes with a default 2024 date; 5 × stale HNGD 2000 gold). Dates were moved
+into the gold law's validity era — full audit trail in `benchmark/as_of_fixes.json`; after
+repair **100% of golds are in force at their `as_of`**.
+
 ## Interactive artifacts
 
 - **Temporal graph explorer** — single self-contained file, no build step, works offline:
@@ -62,7 +75,7 @@ bench  = load_dataset("datbazuka2502/vicivil-tkg", "benchmark")["train"]   # 281
 | folder | content |
 |---|---|
 | `data/` | 11,267 chunk rows at article/clause/point granularity (`chunk_id`, `law_id`, validity window, source URL/type, cleaned flags); frozen v10 backup; decontaminated LLM extraction |
-| `benchmark/` | 281 situational questions with gold chunk IDs + `gold_tier`, per-question ranks, two-rater + regold audit trail, 50-item expert review package |
+| `benchmark/` | 281 situational questions with gold chunk IDs + `gold_tier`, per-question ranks, two-rater + regold audit trail, as-of repair log (`as_of_fixes.json`), TCR experiment (`tcr_sgb_result.json`), 50-item expert review package |
 | `index/` | dense 768-d matrices (`embeddinggemma-300m`, L2-normed) for entities/relations + kv chunk maps (ADGR-style LawRetriever format) |
 | `provenance/` | temporal graph (33 law windows, 21 edges), 1,506 CITE edges, lineage candidates with similarity bands, source audit, ablation + significance + faithfulness artifacts |
 | `sources_official/` | 5 signed gazette PDFs (BLDS 1995/2005/2015, HNGD 2000, TNBTCNN 2017) used to verify the corpus |

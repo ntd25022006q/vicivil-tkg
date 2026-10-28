@@ -1,0 +1,276 @@
+{
+ "fixed_at": "2026-10-28 21:43:28",
+ "n_fixed": 28,
+ "fixes": [
+  {
+   "qid": "NEW84407",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "NEW45231",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "NEW98861",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "NEW17468",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "NEW61903",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "luat-so-15-2026-qh16-470450"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "NEW28139",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "luat-so-15-2026-qh16-470450"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "NEW75990",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "nghi-dinh-so-152-2026-nd-cp-469524"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "NEW21932",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "nghi-dinh-so-152-2026-nd-cp-469524"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "NEW96729",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "nghi-dinh-so-152-2026-nd-cp-469524"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP89044",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP89101",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP26509",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP27031",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP92479",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP86087",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP81552",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "luat-so-15-2026-qh16-470450"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP27902",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "luat-so-15-2026-qh16-470450"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP25608",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "luat-so-15-2026-qh16-470450"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP45624",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "nghi-dinh-so-152-2026-nd-cp-469524"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP68085",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "nghi-dinh-so-152-2026-nd-cp-469524"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP35023",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "nghi-dinh-so-152-2026-nd-cp-469524"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP36790",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "nghi-dinh-so-152-2026-nd-cp-469524"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP60751",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2026-07-01",
+   "gold_laws": [
+    "nghi-dinh-so-152-2026-nd-cp-469524"
+   ],
+   "reason": "gold law valid_from > old as_of (future-law question)"
+  },
+  {
+   "qid": "TOP91913",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2008-06-01",
+   "gold_laws": [],
+   "reason": "stale gold: law expired before as_of; as_of moved to mid-era of the gold law"
+  },
+  {
+   "qid": "TOP44737",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2008-06-01",
+   "gold_laws": [],
+   "reason": "stale gold: law expired before as_of; as_of moved to mid-era of the gold law"
+  },
+  {
+   "qid": "TOP59991",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2008-06-01",
+   "gold_laws": [],
+   "reason": "stale gold: law expired before as_of; as_of moved to mid-era of the gold law"
+  },
+  {
+   "qid": "TOP89237",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2008-06-01",
+   "gold_laws": [],
+   "reason": "stale gold: law expired before as_of; as_of moved to mid-era of the gold law"
+  },
+  {
+   "qid": "TOP25307",
+   "file": "law_bench_200c.json",
+   "old_as_of": "2024-06-01",
+   "new_as_of": "2008-06-01",
+   "gold_laws": [],
+   "reason": "stale gold: law expired before as_of; as_of moved to mid-era of the gold law"
+  }
+ ]
+}
