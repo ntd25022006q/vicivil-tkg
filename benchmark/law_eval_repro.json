@@ -1,6 +1,6 @@
 {
  "note": "cham lai tu cac tep trong kho: BM25 (Python thuan) + dense (vector da luu) + RRF. Khong can GPU, khong can mo hinh, khong can mang.",
- "engine": "python-thuan",
+ "engine": "numpy",
  "n_questions": 281,
  "n_questions_with_verified_gold": 241,
  "hit_at_k_all": {
@@ -2226,7 +2226,7 @@
     0.02748,
     0.026767,
     0.026598,
-    0.025098,
+    0.025238,
     0.024186,
     0.02277
    ]

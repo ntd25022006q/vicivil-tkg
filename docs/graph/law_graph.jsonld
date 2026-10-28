@@ -74,7 +74,7 @@
  "@id": "vicivil:dataset",
  "@type": "vicivil:Dataset",
  "dct:title": "Khung tri thuc thoi gian cua luat dan su Viet Nam",
- "dct:created": "2026-10-21",
+ "dct:created": "2026-10-28",
  "dct:license": "https://creativecommons.org/licenses/by/4.0/",
  "vicivil:graph": [
   {
