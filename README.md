@@ -1,170 +1,97 @@
-# ViCivil-TKG - Vietnamese Civil Law Temporal Knowledge Graph
+# ViCivil-TKG — Vietnamese Civil Law Temporal Knowledge Graph
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 ![Release](https://img.shields.io/badge/release-v1.6.0-blue.svg)
-![Python](https://img.shields.io/badge/python-3.11-blue.svg)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+![Benchmark](https://img.shields.io/badge/benchmark-281_QA-green.svg)
 [![HuggingFace Dataset](https://img.shields.io/badge/HF-dataset-yellow.svg)](https://huggingface.co/datasets/datbazuka2502/vicivil-tkg)
 
-A versioned, article-level knowledge graph of Vietnamese civil law with
-**validity-time tracking**: every chunk carries a hierarchical ID
-(`Law|Article|Clause|Point`), every law carries a validity interval, and
-amendments are explicit edges mined from consolidation preambles - so the
-graph answers *"what did the law say on date X?"*, which flat vector stores
-cannot.
+A versioned, article-level temporal knowledge graph of Vietnamese civil law.
+Every chunk carries a hierarchical ID (`Law|Dieu|Khoan|Diem`), every law carries
+a validity interval, and succession/amendment relations are explicit edges mined
+from official consolidation preambles — so the graph answers *"what did the law
+say on date X?"*, which flat per-document corpora cannot.
+
+## Key numbers (v1.6.0, all measured and released)
+
+| Artifact | Size |
+|---|---|
+| Corpus chunks (Điều/Khoản/Điểm, 17 statutes 1996–2026) | **11,267** |
+| Temporal graph (nodes / succession + amendment edges) | **33 laws / 21 edges** |
+| Article-level units (`law_articles.json`) | **10,215** |
+| Retrieval index (entities / in-corpus relation rows, 768-d vectors) | **14,099 / 20,311** |
+| Benchmark (situational QA with gold chunk IDs) | **281** = 245 verified + 32 regolded + 4 author-verified |
+
+Retrieval (hybrid BM25 + dense, RRF fusion, temporal filter, frozen `v1.2.3` scoring):
+**Hit@1 0.452 · Hit@3 0.658 · Hit@5 0.726 · Hit@10 0.794 · MRR 0.569** (Hit@1 0.502 on the
+245 verified questions). Adding `BAAI/bge-reranker-v2-m3` over 30 candidates lifts
+**Hit@10 to 0.868** (MRR 0.594); all deltas significant (Wilcoxon *p* < 0.001, `provenance/significance.json`).
 
 ## Interactive artifacts
 
-- **Temporal graph explorer** - single-file, no build step:
-  [`docs/graph/explorer.html`](docs/graph/explorer.html), served live at
+- **Temporal graph explorer** — single self-contained file, no build step, works offline:
+  [`docs/graph/explorer.html`](docs/graph/explorer.html), live at
   <https://ntd25022006q.github.io/vicivil-tkg/graph/explorer.html>
-  (AntV G6 5.1.1; lane-grouped layout, as-of time slider 1996-2026,
-  replaced laws dimmed, future laws hidden, gold `REPLACES` succession
-  spine, dashed amendment edges, per-law provenance drawer).
-  The same law-level graph ships as an **open GEXF 1.3 dynamic file** -
-  [`docs/graph/law_graph.gexf`](docs/graph/law_graph.gexf) - which opens
-  directly in Gephi or Gephi-Lite for any other analysis workflow, and as
-  an explicit **Vega-Lite 5.21.0 timeline**
-  ([`docs/graph/law_timeline.vl.json`](docs/graph/law_timeline.vl.json))
-  rendered by Vega/vega-embed in the same page.
+  (AntV G6 5.1.1; as-of time slider 1996–2026, REPLACES succession spine, dashed
+  amendment edges, per-law provenance drawer; timeline tab driven by
+  [`docs/graph/law_timeline.vl.json`](docs/graph/law_timeline.vl.json), Vega-Lite 5.21).
+- **Report** (Vietnamese, LaTeX, 16 pp.): [`docs/report/ViCivil-TKG_bao-cao.pdf`](docs/report/ViCivil-TKG_bao-cao.pdf), source [`docs/report/report.tex`](docs/report/report.tex).
+- **CI**: `.github/workflows/verify.yml` re-runs the evaluation, re-measures the corpus,
+  exports and validates the RDF graph, and rebuilds the viewer on every push — no GPU, no secrets.
 
-- **Automatic checks on every push** - `.github/workflows/verify.yml`
-  re-runs the evaluation, measures the corpus, exports and loads the RDF
-  graph, rebuilds the viewer from source and compares the outcome with
-  what is committed. No GPU and no secrets.
+## Reproduce without a GPU
 
-- **Reproduce the evaluation without a GPU** - `bash tools/reproduce.sh`
-  recomputes the retrieval benchmark from the published files (BM25 in
-  plain Python + the stored vectors, fused with RRF) and re-measures the
-  corpus. Needs only Python 3.9+; numpy is optional and yields the same
-  numbers.
+```bash
+git clone https://github.com/ntd25022006q/vicivil-tkg
+cd vicivil-tkg
+bash tools/reproduce.sh   # recomputes the benchmark from released files (BM25 in pure Python + stored vectors + RRF)
+```
 
-- **Project report** - typeset with XeLaTeX, 29 pages:
-  [`docs/report/ViCivil-TKG_bao-cao.pdf`](docs/report/ViCivil-TKG_bao-cao.pdf),
-  source [`docs/report/report.tex`](docs/report/report.tex).
+Same numbers as the table above; numpy optional. Verify integrity with `sha256sum -c SHA256SUMS`.
+
+## Load the data
+
+```python
+from datasets import load_dataset
+corpus = load_dataset("datbazuka2502/vicivil-tkg", "corpus")["train"]      # 11,267 rows
+bench  = load_dataset("datbazuka2502/vicivil-tkg", "benchmark")["train"]   # 281 rows
+```
 
 ## Repository layout
 
 | folder | content |
 |---|---|
-| `data/` | 11,267 chunk rows at article/clause/point granularity (17 laws, 1996-2026), each with `source_url` + `source_type` + decontamination flags; frozen v1.0 backup; LLM extraction covering all 11,267 rows |
-| `benchmark/` | 281 situational questions with gold chunk IDs and `gold_tier` (245 verified / 32 regolded / 4 author-verified; 1 documented drop), per-question rank file, double-rater and regold trail, 50-question expert review package |
-| `index/` | 8-file ADGR-style retrieval index: dense 768-d matrices (embeddinggemma:300m) for 14,099 entities and 20,750 relation rows (20,311 in-corpus incl. deterministic DAN-CHIEU edges + 439 cross-version successor edges at similarity >= 0.90), plus entity/relation-to-chunk kv maps |
-| `provenance/` | temporal graph (17 law validity windows + 21 amendment/succession edges), 1,506 intra-law cross-reference edges, lineage candidates (0.80-0.90 similarity band retained for audit only), source audit, ablation + significance + faithfulness artifacts, authoritative index stats, SHA256SUMS |
+| `data/` | 11,267 chunk rows at article/clause/point granularity (`chunk_id`, `law_id`, validity window, source URL/type, cleaned flags); frozen v10 backup; decontaminated LLM extraction |
+| `benchmark/` | 281 situational questions with gold chunk IDs + `gold_tier`, per-question ranks, two-rater + regold audit trail, 50-item expert review package |
+| `index/` | dense 768-d matrices (`embeddinggemma-300m`, L2-normed) for entities/relations + kv chunk maps (ADGR-style LawRetriever format) |
+| `provenance/` | temporal graph (33 law windows, 21 edges), 1,506 CITE edges, lineage candidates with similarity bands, source audit, ablation + significance + faithfulness artifacts |
+| `sources_official/` | 5 signed gazette PDFs (BLDS 1995/2005/2015, HNGD 2000, TNBTCNN 2017) used to verify the corpus |
+| `src/`, `tools/` | full pipeline source (crawl → chunk → KG → index → eval → export) + reproducibility scripts |
+| `docs/` | explorer, RDF/JSON-LD/GEXF exports, NCKH report (TeX + PDF) |
 
-A byte-level mirror of the four data folders is published on HuggingFace:
-<https://huggingface.co/datasets/datbazuka2502/vicivil-tkg> (dataset card
-with configs + loading snippets). `CITATION.cff` and the BibTeX block in
-the HF card cover attribution.
+## Known limitations (disclosed, not hidden)
 
-## Quality gates in v1.2.5/v1.6.0
+- 36/281 gold answers (32 regolded + 4 author-verified) not yet independently expert-reviewed;
+  a ready-made 50-item review package ships in `benchmark/review_package_50.md`.
+- ~500 item-level chunks have empty extraction text (numbered-item granularity); remaining
+  article-numbering gaps are measured in `provenance/law_audit.json`.
+- 603 near-duplicate chunk groups (identical statutory wording across law versions); measured
+  top-5 collision impact on 10/281 questions; retrieval-time dedup rejected as rank-distorting.
+- Vietnamese source frame only (English mirror planned). Not legal advice.
 
-- Official-source fidelity: 5 signed Cong-bao PDFs re-verified digit-by-digit
-  (838/838, 110/110, 777/777, 78/78, 689/689 articles); the corrupted
-  NCN2010 government `.doc` piece-table was re-parsed and the 2 affected
-  chunks rebuilt from the same official file.
-- Extraction: 11,267/11,267 rows done, zero failed chunks; 94 rows whose
-  stored output contained stray non-Vietnamese glyphs were re-extracted
-  (per-row `engine` field records the model used).
-- Character hygiene gate: zero CJK/Hangul/PUA glyphs across every released
-  file (12-section audit).
-- Index/text coherence: kv mirrors and dense-matrix token content equal
-  chunk text 1:1 (with the disclosed 3,000-character representation cap).
-- Gold audit trail: two-rater passes (8B full bench + 14B on 120
-  doubtfuls), 16 re-anchors with `regolded_from` provenance, author
-  adjudication for the remaining tiers.
-- Reproduced metrics on the sanitized index, n=281: Hit@1 0.452 /
-  Hit@3 0.658 / Hit@5 0.726 / Hit@10 0.794 / MRR 0.568 - identical to the
-  v1.2.2 release numbers, so all published comparisons stay valid.
-- v1.3.0 engine migration: the succession network now runs on AntV G6
-  5.1.1 (built-in dark theme, hover-activate, grid backdrop, minimap,
-  tooltips); a fix for a pre-existing v1.2.5-1.2.7 bug is disclosed - the
-  time-travel slider now genuinely hides future laws as promised (the
-  2012 probe shows exactly the 4 then-active laws bright with all later
-  laws ghosted out, while the readout counts are unchanged because they
-  never depended on the broken visibility).
-- v1.3.1 packaging hardening: all 4 viewer JavaScript engines
-  (AntV G6, Vega, Vega-Lite, vega-embed) are vendored beside the
-  viewer so the artifact needs no CDN; a field report of a blank tab
-  behind CDNs reproducible only in restricted networks is closed.
-- v1.3.2 diagnosability: any init failure now paints an immediate red
-  banner (message + position + last init step) and a dismissible
-  corner pill reports the self-test state (G6/vega loaded, graph
-  initialized) - no silent blank pages remain.
-- v1.6.0 closes four open limitations without the GPU: RDF/JSON-LD
-  export of the knowledge graph (checked with rdflib), a statute-level
-  article index embedded in the viewer, the retrieval benchmark
-  re-scored under three rules and published alongside the original, and
-  an incremental pipeline for adding new statutes; the report is
-  retypeset with no blank page.
-- v1.5.5 research-report layout: the report is typeset as a standard
-  23-page research report (title page, abstract and keywords, contents,
-  lists of figures and tables, seven chapters, references, appendices) and
-  every figure is a screenshot of the running viewer or a chart drawn from
-  the committed data files; the hand-built illustrations are removed.
-  Manifest 84 -> 78 entries.
-- v1.5.4 typeset report and full process history: the report is
-  published as a 13-page LaTeX PDF with its source kept, and the
-  workflow scripts that only existed on the GPU machine are synced into
-  `tools/lab-scripts/`; a byte-level check confirms the 36 published
-  scripts are identical to the GPU copies. Manifest 62 -> 83 entries.
-- v1.5.3 verifiable figures: the report's diagrams are drawn with
-  Mermaid (sources kept in `docs/report/diagrams/`) and its data
-  illustrations are screenshots taken from the committed files, with a
-  caption and an appendix naming the tool and the source for every
-  figure; the prose is simplified for a general reader.
-- v1.5.2 report + drawer fix: the report documents the whole
-  pipeline with figures taken from the running artifact; the detail
-  drawer was being flex-shrunk to 1 px and was therefore invisible,
-  and the graph now refits when it opens. Manifest 47 -> 60 entries.
-- v1.5.1 tooltip fix: the statute-to-G6 mapper read fields off the
-  wrapper instead of the wrapped record, so statute hover cards rendered
-  `undefined`; the mapping now reads the record. Footer library
-  branding removed.
-- v1.5.0 libraries-only UI: the custom loading mask, status pill and
-  error banner are gone; the viewer drives G6/Vega through their
-  documented APIs (`graph.render()` promise, `toDataURL()`,
-  `vegaEmbed()`). Browser verification moved into the pre-release gate,
-  which runs the artifact in bundled Chromium plus the real Chrome and
-  Edge binaries. `THIRD-PARTY-NOTICES.md` lists every dependency, version
-  and license.
-- v1.4.2 Chrome compatibility: the app script's top-level `const chrome`
-  collided with Google Chrome's built-in `window.chrome`, an early
-  `SyntaxError` that prevented the whole viewer from running. All
-  top-level bindings are now audited against browser globals, and a
-  regression probe emulates a non-configurable `window.chrome`.
-- v1.4.1 blocking-font fix: the optional Google-Fonts stylesheet no
-  longer blocks document parsing (non-blocking `media="print"` pattern),
-  and init follows G6's documented `render()` promise contract with an
-  error watcher installed before the vendored libraries - the viewer
-  renders with 0 JS errors even when the font request never answers.
-- v1.4.0 single-artifact + first-frame correctness: the viewer inlines
-  all four libraries so it cannot lose dependencies; the opening state
-  application now waits for the library's ready signal, fixing a latent
-  race that silently dropped every initial element-state update (the
-  reported blank-canvas-in-the-wild class of failures).
-- v1.2.7 interaction polish: every released law - including the
-  amending (EXT) acts - responds to hover focus, tooltip and the
-  provenance drawer; a synthetic hover probe verifies 88 of 90 canvas
-  elements dim around the hovered law and fully restore on mouse-out,
-  with zero JS errors on the build-time placeholder guard.
-- v1.2.6 visual refresh: publication typography (Be Vietnam Pro + IBM
-  Plex Mono), flat ledger palette and condensed single-bar controls; the
-  offline label packing is upgraded to a near-full Cartesian lattice with
-  vertical-priority ordering - build-time check reports zero pixel-exact
-  collisions and zero temporal drift beyond the time columns, and the
-  generator's placeholder guard runs clean before each release.
+## Citation
 
-## Metrics context
+Legal texts are public domain (Luật 104/2016/QH13; Luật 64/2025/QH15); the curation
+(schema, IDs, benchmark) is CC-BY-4.0. See [`CITATION.cff`](CITATION.cff):
 
-| tier | n | Hit@1 | Hit@3 | Hit@5 | Hit@10 |
-|---|---|---|---|---|---|
-| all | 281 | 0.452 | 0.658 | 0.726 | 0.794 |
-| verified | 245 | 0.502 | 0.678 | 0.731 | 0.796 |
-| regolded (hard restatements) | 32 | 0.062 | 0.531 | 0.719 | 0.812 |
-| author-verified | 4 | 0.500 | 0.500 | 0.500 | 0.500 |
+```bibtex
+@misc{viciviltkg2026,
+  title  = {ViCivil-TKG: A Temporal Knowledge Graph and Benchmark for Vietnamese Civil Law Retrieval},
+  author = {ntd25022006q},
+  year   = {2026},
+  url    = {https://github.com/ntd25022006q/vicivil-tkg}
+}
+```
 
-## License
-
-Legal texts are public domain under Vietnamese law (Luat 104/2016/QH13,
-Luat 64/2025/QH15). Curation artifacts (schema, IDs, benchmark, provenance)
-are CC-BY-4.0 - see `LICENSE` and `CITATION.cff`.
+Issues: <https://github.com/ntd25022006q/vicivil-tkg/issues> · Dataset discussions:
+<https://huggingface.co/datasets/datbazuka2502/vicivil-tkg/discussions>

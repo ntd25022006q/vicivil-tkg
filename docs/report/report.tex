@@ -1,8 +1,7 @@
 % !TeX program = xelatex
-%% Báo cáo NCKH - ViCivil-TKG v1.6.0 (bản cải tiến: chuẩn NCKH, sửa lỗi hình lồng nhau,
-%% bổ sung abstract tiếng Anh, danh mục từ viết tắt, câu hỏi nghiên cứu, sơ đồ pipeline,
-%% phân tích sâu từng hình, tài liệu tham khảo mở rộng, phụ lục tái lập nhanh)
-%% Biên dịch: xelatex report.tex (2 lần) | Font: Liberation Serif (tương thích Times New Roman, đủ dấu tiếng Việt)
+%% ViCivil-TKG — Báo cáo NCKH (bản tập trung, v1.6.0)
+%% Biên dịch: tectonic (XeTeX engine) | Font: Liberation Serif (đủ dấu tiếng Việt)
+%% Cover render riêng bằng HTML/Playwright (Template 03) rồi merge — KHÔNG có titlepage trong .tex
 \documentclass[12pt,a4paper]{report}
 
 \usepackage{fontspec}
@@ -13,33 +12,34 @@
 \setdefaultlanguage{vietnamese}
 \setotherlanguage{english}
 
-\usepackage[left=3cm,right=2cm,top=2.2cm,bottom=2.2cm]{geometry}
+% Margins đối xứng (quy tắc bắt buộc: left == right)
+\usepackage[left=2.5cm,right=2.5cm,top=2.4cm,bottom=2.4cm]{geometry}
 \usepackage{setspace}
-\setstretch{1.3}
+\setstretch{1.25}
 \usepackage{indentfirst}
 \usepackage{caption}
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{array}
-\usepackage{longtable}
+\usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
-\usepackage{tocloft}
 \usepackage{titlesec}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
-\usepackage[most]{tcolorbox}
+\usepackage{tcolorbox}
 \usepackage{xcolor}
 \usepackage{needspace}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
-\definecolor{gold}{HTML}{B8860B}
+\definecolor{gold}{HTML}{8B7E5A}
 \definecolor{ink}{HTML}{1F3A52}
 \definecolor{muted}{HTML}{5A6570}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true,linkcolor=ink,citecolor=muted,urlcolor=ink,bookmarks=true,bookmarksnumbered=true,unicode=true]{hyperref}
+\usepackage{xurl}
 \hypersetup{
-  pdftitle={Khung tri thức thời gian của luật dân sự Việt Nam - ViCivil-TKG v1.6.0},
+  pdftitle={ViCivil-TKG: Khung tri thức thời gian của luật dân sự Việt Nam},
   pdfauthor={Nguyễn Tiến Đạt},
   pdfsubject={Báo cáo nghiên cứu khoa học: bộ dữ liệu mở đồ thị tri thức thời gian luật dân sự Việt Nam},
   pdfkeywords={luật dân sự, tri thức thời gian, dữ liệu mở, đồ thị tri thức, truy hồi thông tin, benchmark tiếng Việt},
@@ -72,7 +72,8 @@
 \titleformat{\chapter}[display]
   {\normalfont\huge\bfseries\centering}{Chương \thechapter}{0.6ex}{\titlerule\vspace{0.8ex}}
 \titleformat{\section}{\large\bfseries}{\thesection.}{0.7em}{}
-\titlespacing*{\chapter}{0pt}{-30pt}{18pt}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.6em}{}
+\titlespacing*{\chapter}{0pt}{-24pt}{16pt}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -91,1052 +92,246 @@
 
 \begin{document}
 
-% ======================= TRANG TÓM TẮT (front matter, số la mã) =======================
+% ======================= TÓM TẮT (front matter, số la mã) =======================
 \pagenumbering{roman}
 \begin{center}
 {\large\bfseries\color{ink} TÓM TẮT\par}
 \end{center}
 \vspace{0.2cm}
 
-Luật dân sự Việt Nam không tồn tại trong một bản duy nhất. Bộ luật Dân sự 1995 bị thay bằng
-bản 2005, bản 2005 bị thay bằng bản 2015~\cite{blds2015}; các luật chuyên ngành hôn nhân và
-gia đình, tố tụng, thừa kế liên tục sửa đổi lẫn nhau. Vì vậy, khi tra cứu một vấn đề pháp lý,
-câu hỏi đầu tiên không phải là ``điều khoản nào nói về điều này'' mà là \emph{vào thời điểm đó,
-điều khoản nào còn có hiệu lực}. Các nguồn dữ liệu luật hiện có trên mạng phần lớn lưu văn bản
-dạng phẳng theo từng tệp, không gắn quan hệ kế thừa giữa các phiên bản, nên không trả lời được
-câu hỏi mang theo mốc thời gian.
+Luật dân sự Việt Nam không tồn tại trong một bản duy nhất: Bộ luật Dân sự 1995 bị thay bằng bản 2005, bản 2005 lại bị thay bằng bản 2015~\cite{blds2015}, còn các luật chuyên ngành về hôn nhân gia đình, tố tụng, thừa kế liên tục sửa đổi lẫn nhau. Vì vậy, một câu hỏi tra cứu pháp lý thực tế luôn mang theo mốc thời gian: câu hỏi đúng không phải là ``điều khoản nào nói về việc này'' mà là \emph{vào thời điểm đó, điều khoản nào còn hiệu lực}. Các nguồn dữ liệu luật tiếng Việt hiện có phần lớn lưu văn bản dạng phẳng theo từng tệp, không gắn quan hệ kế thừa giữa các phiên bản, nên không trả lời được loại câu hỏi này.
 
-Công trình này xây dựng một bộ dữ liệu mở trả lời được câu hỏi đó. Từ các tệp PDF công báo
-chính thức, bộ luật được cắt thành 11.267 đoạn văn bản (chunk) theo cấu trúc pháp lý
-(Điều~--- Khoản~--- Điểm), mỗi đoạn mang một mã ổn định để dùng lại được. Trên nền đó, công trình
-dựng một đồ thị tri thức gồm 33 văn bản và 21 quan hệ có nhãn, mỗi văn bản có khoảng hiệu lực;
-xuất đồ thị ra định dạng RDF và JSON-LD để nạp vào kho tri thức chuẩn; lập chỉ mục 10.215 đơn vị
-điều khoản để tra cứu được ở mức Điều; xây bộ 281 câu hỏi có đáp án để đo chất lượng truy hồi;
-và dựng một trình xem đồ thị để người đọc tự kiểm chứng bằng mắt, chạy được cả khi không có mạng.
+Công trình này xây dựng một bộ dữ liệu mở ViCivil-TKG giải quyết trực tiếp khoảng trống đó. Từ các tệp PDF công báo chính thức, 17 văn bản luật dân sự (1996--2026) được cắt thành 11.267 đoạn văn bản (chunk) theo cấu trúc Điều~--- Khoản~--- Điểm, mỗi đoạn mang một mã phân cấp ổn định và khoảng hiệu lực kế thừa từ văn bản cha. Trên nền corpus, công trình dựng một đồ thị tri thức thời gian gồm 33 văn bản và 21 cạnh kế thừa/sửa đổi được khai thác từ phần mở đầu văn bản hợp nhất, xuất ra cả ba định dạng RDF/Turtle, JSON-LD và GEXF; lập chỉ mục truy hồi ba tầng gồm 14.099 thực thể và 20.311 hàng quan hệ với vector 768 chiều; xây bộ benchmark 281 câu hỏi tình huống có đáp án được kiểm chứng ba vòng; và kèm một trình xem đồ thị dạng HTML chạy ngoại tuyến để người đọc tự kiểm chứng bằng mắt.
 
-Kết quả đo trên 281 câu hỏi: tỉ lệ tìm đúng trong lần thứ nhất là 0,452; trong ba lần là
-0,658; trong năm lần là 0,726; trong mười lần là 0,794; độ tin cậy tổng hợp là 0,569. Trên
-245 câu đã được tác giả xác minh, tỉ lệ tìm đúng trong lần thứ nhất là 0,502. Toàn bộ kết quả
-được đo lại theo ba cách chấm khác nhau để tách phần sai của thang đo khỏi phần sai của hệ
-thống, và được tái lập từ chính các tệp trong kho mà không cần GPU. Sau khi thêm bước xếp lại
-bằng mô hình BAAI/bge-reranker-v2-m3, mọi chỉ số đều tăng (Hit@10 đạt 0,868) và lần lượt xếp
-hạng được lưu trong kho để người khác kiểm chứng lại mà không cần chạy lại mô hình. Ba việc còn
-lại đều cần GPU: ván lại nhóm câu hỏi chưa xác minh được, số hoá các văn bản còn ở dạng ảnh, và
-bổ sung văn bản mới theo quy trình cập nhật hàng tháng.
+Chất lượng truy hồi được đo trên 281 câu hỏi: Hit@1 = 0,452; Hit@3 = 0,658; Hit@5 = 0,726; Hit@10 = 0,794; MRR = 0,569. Trên nhóm 245 câu đã xác minh, Hit@1 đạt 0,502. Khi bổ sung bước xếp lại (rerank) bằng BAAI/bge-reranker-v2-m3, Hit@10 tăng lên 0,868 và mọi cải thiện đều có ý nghĩa thống kê (Wilcoxon $p<0{,}001$). Toàn bộ dữ liệu, mã nguồn, chỉ số và báo cáo được công bố công khai; kết quả tái lập được mà không cần GPU.
 
-\textbf{Từ khóa:} luật dân sự; tri thức thời gian; dữ liệu mở; tra cứu pháp lý; truy hồi thông tin;
-mã hoá văn bản; đồ thị tri thức.
+\vspace{0.3cm}
+\noindent\textbf{Từ khóa:} luật dân sự Việt Nam; đồ thị tri thức thời gian; dữ liệu mở; truy hồi thông tin; benchmark tiếng Việt; retrieval-augmented generation.
 
-\clearpage
-% ======================= ABSTRACT (EN) =======================
+\vspace{0.5cm}
 \begin{center}
 {\large\bfseries\color{ink} ABSTRACT\par}
 \end{center}
 \vspace{0.2cm}
 
-\noindent Vietnamese civil law does not exist as a single static text. The 1995 Civil Code was
-replaced by the 2005 revision, which was in turn replaced by the 2015 Code~\cite{blds2015};
-specialised statutes on family, civil procedure, and inheritance amend one another
-continuously. A legal lookup question is therefore temporal: the real question is not
-``which article mentions this'', but \emph{which article was in force at that moment}.
-Existing Vietnamese legal corpora are mostly flat, per-document text files that carry no
-succession relations between versions, so they cannot answer time-stamped questions.
+\begin{english}
+Vietnamese civil law does not exist as a single static text: the 1995 Civil Code was replaced by the 2005 revision, which was in turn replaced by the 2015 Code, and specialised statutes continuously amend one another. Legal lookup questions are therefore temporal: the real question is not ``which article mentions this'', but \emph{which article was in force at that moment}. Existing Vietnamese legal corpora are mostly flat, per-document text files that carry no succession relations between versions.
 
-This work builds an open dataset that can. From official gazette PDFs, the statutes are split
-into 11,267 text chunks along the legal structure (Article~--- Clause~--- Point), each carrying
-a stable hierarchical identifier for reuse. On top of the corpus, the project constructs a
-temporal knowledge graph of 33 statutes connected by 21 labelled relations, each statute
-carrying its validity interval; exports the graph to RDF and JSON-LD for standard triple
-stores; builds a 10,215-unit article-level index for article-granularity lookup; constructs a
-281-question benchmark with gold answers to measure retrieval quality; and ships a
-single-file graph explorer that runs offline so every claim can be inspected visually.
+This work presents ViCivil-TKG, an open dataset that answers such questions. From official gazette PDFs, 17 Vietnamese civil-law statutes (1996--2026) are split into 11,267 text chunks along the Article---Clause---Point hierarchy, each carrying a stable identifier and a validity window inherited from its parent law. On top of the corpus, the project builds a temporal knowledge graph of 33 laws and 21 succession/amendment edges mined from consolidation preambles (exported as RDF/Turtle, JSON-LD and GEXF), a three-tier retrieval index of 14,099 entities and 20,311 relation rows with 768-dimensional vectors, a 281-question situational benchmark with a three-round verified gold chain, and an offline single-file graph explorer.
 
-On the 281 questions, retrieval reaches Hit@1 = 0.452, Hit@3 = 0.658, Hit@5 = 0.726,
-Hit@10 = 0.794, and MRR = 0.569; on the 245 author-verified questions Hit@1 rises to 0.502.
-All scores are re-measured under three scoring rules to separate metric error from system
-error, and are reproduced directly from the released files without a GPU. After adding a
-cross-lingual reranking step (BAAI/bge-reranker-v2-m3), every metric improves
-(Hit@10 = 0.868) and the reranked ordering is released so the step is verifiable without
-re-running the model. Remaining work~--- re-adjudicating unverified questions, OCR-ing
-scanned statutes, and monthly ingestion of new documents~--- all require GPU time and are
-disclosed as future work.
+On the 281 questions, retrieval reaches Hit@1 = 0.452, Hit@3 = 0.658, Hit@5 = 0.726, Hit@10 = 0.794 and MRR = 0.569; on the 245 verified questions Hit@1 rises to 0.502. Adding a BAAI/bge-reranker-v2-m3 reranking step lifts Hit@10 to 0.868, with all improvements statistically significant (Wilcoxon $p<0.001$). All data, code, metrics and this report are released publicly; the results are reproducible without a GPU.
+\end{english}
 
 \vspace{0.3cm}
-\noindent\textbf{Keywords:} civil law; temporal knowledge graph; open data; legal lookup;
-information retrieval; text chunking; Vietnamese NLP.
+\noindent\textbf{Keywords:} Vietnamese civil law; temporal knowledge graph; open data; information retrieval; Vietnamese benchmark; retrieval-augmented generation.
 
-\clearpage
-% ======================= DANH MỤC TỪ VIẾT TẮT =======================
-\chapter*{Danh mục từ viết tắt}
-\addcontentsline{toc}{chapter}{Danh mục từ viết tắt}
-\begin{table}[H]
-\centering\small
-\begin{tabular}{@{}L{1.9cm}L{4.6cm}L{8.2cm}@{}}
-\toprule
-\textbf{Viết tắt} & \textbf{Thuật ngữ} & \textbf{Nghĩa} \\
-\midrule
-BLDS & Bộ luật Dân sự & Văn bản luật nền của lĩnh vực dân sự \\
-KG & Knowledge Graph & Đồ thị tri thức: nút là đối tượng, cạnh là quan hệ \\
-TKG & Temporal Knowledge Graph & Đồ thị tri thức có gắn mốc/khoảng thời gian \\
-RDF & Resource Description Framework & Mô hình dữ liệu bộ ba (chủ thể, quan hệ, đối tượng) của W3C \\
-JSON-LD & JSON for Linked Data & Cách biểu diễn RDF dưới dạng JSON \\
-GEXF & Graph Exchange XML Format & Định dạng trao đổi đồ thị của Gephi \\
-BM25 & Best Matching 25 & Hàm xếp hạng theo từ khoá phổ biến trong truy hồi \\
-RRF & Reciprocal Rank Fusion & Cách gộp nhiều bảng xếp hạng bằng nghịch đảo hạng \\
-MRR & Mean Reciprocal Rank & Trung bình nghịch đảo hạng của đáp án đúng đầu tiên \\
-Hit@k &~--- & Tỉ lệ câu có đáp án đúng nằm trong $k$ kết quả đầu \\
-OCR & Optical Character Recognition & Nhận dạng chữ trên ảnh scan \\
-VBHN & Văn bản hợp nhất & Bản nhập gộp văn bản gốc cùng các lần sửa đổi \\
-GPU & Graphics Processing Unit & Bộ xử lý đồ hoạ, dùng để chạy mô hình \\
-API & Application Programming Interface & Giao diện lập trình ứng dụng \\
-SHA-256 & Secure Hash Algorithm 256-bit & Hàm băm dùng để kiểm chứng tính nguyên vẹn của tệp \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\clearpage
 % ======================= MỤC LỤC =======================
-\setcounter{tocdepth}{2}
-\setlength{\cftbeforesecskip}{0.5pt}
-\begingroup\footnotesize
 \tableofcontents
-\endgroup
-\vspace{10pt}
-\listoffigures
-\vspace{6pt}
-\listoftables
-\clearpage
+\newpage
 
 % ======================= CHƯƠNG 1 =======================
 \pagenumbering{arabic}
-\chapter{Đặt vấn đề và mục tiêu}
 
-\section{Bối cảnh}
-Luật dân sự Việt Nam có hiệu lực theo thời gian. Mỗi văn bản chỉ có hiệu lực trong một khoảng
-thời gian, và các văn bản nối với nhau bằng quan hệ thay thế hoặc sửa đổi. Một văn bản hợp nhất
-(VBHN) có thể nhập gộp hàng chục văn bản đã hết hiệu lực. Một câu hỏi tra cứu pháp lý thường
-mang theo thời điểm~--- ``thời điểm đó bên nào phải bồi thường'', ``năm 2013 điều nào quy định
-về hộ kinh doanh''~--- và câu trả lời phụ thuộc vào việc người tra cứu có đang nhìn đúng phiên
-bản luật hay không.
+\chapter{Giới thiệu}\label{ch:gioithieu}
 
-Dữ liệu luật hiện có trên mạng phần lớn ở dạng văn bản phẳng theo từng văn bản, thiếu ba
-thứ mà một hệ thống tra cứu nghiêm túc cần có: (i) các đoạn văn bản nhỏ đủ để trích dẫn chính
-xác; (ii) quan hệ giữa các văn bản theo thời gian; (iii) cơ chế đo chất lượng để biết hệ thống
-có thực sự tìm đúng hay không. Thiếu cả ba thứ, một mô hình ngôn ngữ lớn tra cứu kiểu
-RAG~\cite{rag2020} trên dữ liệu luật sẽ trích dẫn nhầm phiên bản đã hết hiệu lực mà không có
-cách nào phát hiện.
+\section{Vấn đề tra cứu mang mốc thời gian}
 
-\section{Mục tiêu và nội dung}
-Mục tiêu của công trình là dựng một bộ dữ liệu mở có đủ ba thứ trên, kèm một trình xem để
-kiểm chứng bằng mắt. Các nội dung chính gồm: quy trình xây dựng dữ liệu; cách cắt chunk và
-gán mã; ba tầng lưu trữ; đồ thị tri thức có chiều thời gian; kết quả đánh giá truy hồi; và
-những hạn chế còn tồn tại cùng hướng khắc phục.
+Tra cứu pháp lý không phải là bài toán tìm kiếm văn bản thuần túy. Một tình huống dân sự điển hình~--- hai bên ký hợp đồng vay tài sản năm 2008, phát sinh tranh chấp năm 2010~--- phải được giải quyết theo văn bản còn hiệu lực \emph{tại thời điểm giao dịch}, chứ không phải theo bản sửa đổi mới nhất. Bộ luật Dân sự Việt Nam đã trải qua ba thế hệ (1995, 2005, 2015)~\cite{blds1995,blds2005,blds2015}, mỗi thế hệ lại dẫn chiếu và thay thế hàng trăm điều của thế hệ trước; các luật chuyên ngành cũng liên tục được sửa đổi, hợp nhất. Hệ quả là cùng một ``điều 459'' có thể chỉ tới ba nội dung khác nhau tuỳ năm, và mọi câu hỏi tra cứu nghiêm túc đều có dạng \emph{``vào ngày X, quy định nào áp dụng''}.
 
-\section{Câu hỏi nghiên cứu}
-Công trình trả lời ba câu hỏi, mỗi câu hỏi gắn với một nhóm thí nghiệm ở Chương~5:
+Dạng câu hỏi này đặt ra hai yêu cầu kỹ thuật đồng thời: (i) dữ liệu phải gắn mỗi đơn vị pháp lý với một \emph{khoảng hiệu lực} rõ ràng, và (ii) bộ truy hồi phải lọc kết quả theo mốc thời gian của câu hỏi. Không có yêu cầu thứ nhất, hệ thống trả lời sai một cách thuyết phục~--- nó trích đúng văn bản, nhưng sai phiên bản. Đây chính là loại lỗi nguy hiểm nhất trong ứng dụng pháp lý.
+
+\section{Khoảng trống của dữ liệu hiện có}
+
+Các bộ dữ liệu pháp lý tiếng Việt công khai hiện nay chủ yếu là kết quả crawl các trang văn bản pháp luật, lưu mỗi văn bản thành một tệp văn bản phẳng. Cách lưu này có ba hạn chế. Thứ nhất, quan hệ \emph{thay thế/sửa đổi} giữa các phiên bản không được biểu diễn, nên không dựng được dòng thời gian hiệu lực. Thứ hai, đơn vị lưu trữ là cả văn bản hoặc cả chương, quá thô so với đơn vị trích dẫn thực tế của người dùng là \emph{điều} và \emph{khoản}. Thứ ba, không có bộ câu hỏi chuẩn (benchmark) kèm đáp án để đo lường chất lượng truy hồi, khiến mọi hệ thống RAG pháp lý tiếng Việt phải tự đánh giá bằng cảm tính.
+
+\section{Đóng góp của công trình}
+
+ViCivil-TKG lấp khoảng trống trên bằng năm sản phẩm đi liền nhau, tất cả đều công bố mở:
+
 \begin{enumerate}
-\item \textbf{CQ1.} Cắt chunk theo cấu trúc pháp lý (Điều~--- Khoản~--- Điểm) với mã ổn định có
-cho phép xây dựng bộ dữ liệu có thể tái sử dụng, tái lập và mở rộng mà không phá vỡ các chỉ mục
-đã tính hay không?
-\item \textbf{CQ2.} Đồ thị tri thức có chiều thời gian, được kiểm tra tự động ở nhiều mốc thời
-gian, có phản ánh đúng trạng thái hiệu lực của luật ở từng thời điểm hay không?
-\item \textbf{CQ3.} Chất lượng truy hồi của hệ thống đo được như thế nào khi thang đo được tách
-rời khỏi hệ thống, và thành phần nào của pipeline đóng góp nhiều nhất vào kết quả?
-\end{enumerate}
-
-\section{Phương pháp và công cụ}
-\begin{itemize}
-\item Dữ liệu được thu thập từ công báo chính thức, xử lý bằng Python.
-\item Chunk được cắt theo cấu trúc pháp lý và gán mã phân cấp ổn định.
-\item Mỗi chunk được mã hoá thành vectơ 768 chiều, phục vụ tra cứu theo nghĩa.
-\item Quan hệ giữa các văn bản được trích từ chính văn bản gốc (lời nói đầu của văn bản hợp
-nhất), không dựa vào đoạn trích từ công cụ tìm kiếm.
-\item Đồ thị và trình xem dựng bằng hai thư viện mở chuyên dụng: \textbf{AntV G6 5.1.1}~\cite{g6}
-cho đồ thị và \textbf{Vega-Lite 5.21.0}~\cite{vegalite} cho biểu đồ; cả hai đều được nhúng trực
-tiếp vào một tệp HTML nên trang xem chạy được cả khi không có mạng.
-\item Chất lượng được đo bằng bộ 281 câu hỏi có đáp án, chấm theo Hit@k và MRR.
-\end{itemize}
-
-\begin{keybox}
-\textbf{Quy ước trình bày.} Văn bản luật được gọi tắt là \emph{luật}. Đoạn văn bản nhỏ dùng để
-trích dẫn được gọi là \emph{chunk} và mang một mã duy nhất. Số liệu trong báo cáo luôn lấy từ
-tệp trong kho và có thể mở kiểm tra.
-\end{keybox}
-
-\section{Đóng góp chính}
-\begin{enumerate}
-\item Bộ dữ liệu 11.267 chunk đã gán mã, tái sử dụng được nhờ mã ổn định.
-\item Đồ thị tri thức 33 văn bản, 21 quan hệ, có chiều thời gian và tự kiểm ở ba mốc thời gian.
-\item Bộ 281 câu hỏi có đáp án kèm cơ chế chia tầng độ tin cậy, và kết quả đo công khai.
-\item Trình xem một tệp HTML, chạy offline, xuất được ảnh PNG và dữ liệu GEXF để mở bằng Gephi~\cite{gephi}.
+  \item \textbf{Corpus phân cấp có mốc thời gian:} 11.267 chunk thuộc 17 văn bản luật dân sự (1996--2026), mỗi chunk mang mã ổn định dạng \texttt{Law|Dieu|Khoan|Diem} và khoảng hiệu lực kế thừa từ văn bản cha; toàn bộ đã qua bước làm sạch và kiểm soát ký tự tự động.
+  \item \textbf{Đồ thị tri thức thời gian:} 33 nút văn bản với 21 cạnh \textsc{Thay-thế}/\textsc{Sửa-đổi} khai thác từ phần mở đầu văn bản hợp nhất; xuất RDF/Turtle, JSON-LD, GEXF để nạp trực tiếp vào các kho tri thức chuẩn~\cite{rdf11,jsonld}.
+  \item \textbf{Chỉ mục truy hồi ba tầng:} 14.099 thực thể và 20.311 hàng quan hệ có vector 768 chiều~\cite{embeddinggemma}, hỗ trợ tra theo mã chunk, theo tên thực thể và theo quan hệ.
+  \item \textbf{Benchmark 281 câu hỏi tình huống:} mỗi câu gắn mốc thời gian \texttt{as\_of} và đáp án dạng mã chunk; đáp án được kiểm chứng ba vòng (mô hình sinh, hai mô hình chéo, tác giả phúc khảo) với đầy đủ dấu vết kiểm định.
+  \item \textbf{Trình xem đồ thị ngoại tuyến:} một tệp HTML duy nhất trực quan hoá dòng thời gian hiệu lực 33 văn bản, chạy được khi không có mạng.
 \end{enumerate}
 
 \section{Cấu trúc báo cáo}
-Chương~2 trình bày nguồn dữ liệu, mười bước xây dựng và chất lượng chunk. Chương~3 mô tả đồ thị
-tri thức hai cấp (văn bản và điều khoản) cùng cơ chế cập nhật theo thời gian. Chương~4 giới
-thiệu trình xem và kiến trúc kỹ thuật của nó. Chương~5 trình bày bộ kiểm tra, kết quả truy hồi,
-ba cách chấm, phân tích lỗi và hai thí nghiệm đối chứng. Chương~6 tổng hợp khó khăn đã xử lý và
-việc còn lại. Chương~7 kết luận. Bốn phụ lục cuối đối chiếu yêu cầu đề tài, nguồn từng hình,
-kiểm tra trước khi phát hành và hướng dẫn tái lập nhanh.
+
+Chương~\ref{ch:data} trình bày nguồn dữ liệu, quy trình xây dựng corpus, kiến trúc chỉ mục và đồ thị thời gian. Chương~\ref{ch:kq} mô tả thiết kế benchmark và kết quả đo lường, bao gồm phân tầng chất lượng, bước rerank và kiểm định thống kê. Chương~\ref{ch:congbo} giới thiệu sản phẩm công bố và cơ chế tái lập. Chương~\ref{ch:ketluan} thảo luận hạn chế và kết luận.
+
 % ======================= CHƯƠNG 2 =======================
-\chapter{Dữ liệu và quy trình xây dựng}
+\chapter{Dữ liệu và phương pháp}\label{ch:data}
 
-\section{Tổng quan pipeline}
-Hình~\ref{fig:pipeline} vẽ toàn bộ pipeline từ công báo tới sản phẩm phát hành. Sáu khối nối
-thành một chuỗi một chiều: dữ liệu thô chỉ đi tới, không có nhánh quay lại, nên mọi tệp trung
-gian đều sinh ra từ đúng một bước và có thể kiểm tra độc lập. Bốn khối đầu chạy bằng CPU trên
-máy tính thường; khối mã hoá cần một lần chạy mô hình nhúng; hai khối cuối chỉ đọc các tệp đã
-có. Thiết kế một chiều này là lý do toàn bộ phép chấm ở Chương~5 tái lập được mà không cần
-GPU: mọi sản phẩm trung gian đều nằm trong kho.
+\section{Tổng quan quy trình}
 
-\begin{figure}[H]
+Quy trình xây dựng gồm năm giai đoạn nối tiếp nhau, từ nguồn tài liệu chính thức tới sản phẩm công bố (Hình~\ref{fig:pipeline}). Nguyên tắc xuyên suốt là \emph{mọi sản phẩm trung gian đều được lưu lại và kiểm soát bằng mã băm}: tệp nguồn PDF công báo, log crawl, từng phiên bản chunk và chỉ số đo lường đều có kiểm tích, cho phép lần vết lại toàn bộ lịch sử của dữ liệu.
+
+\begin{figure}[htbp]
 \centering
-\resizebox{\textwidth}{!}{%
+\resizebox{\columnwidth}{!}{%
 \begin{tikzpicture}[
-  box/.style={draw=black!60, rounded corners=2pt, text width=2.5cm, minimum height=1.1cm,
-              align=center, font=\small\sffamily, fill=ink!6},
+  box/.style={draw=black!45, rounded corners=2pt, text width=2.15cm, minimum height=1.05cm,
+              align=center, font=\small\sffamily, fill=black!3},
   arr/.style={-{Stealth[length=5pt]}, thick, black!55}
 ]
-  \node[box] (a) {Công báo\\PDF chính thức\\6 văn bản};
-  \node[box, right=0.55cm of a] (b) {Cắt chunk\\Điều--Khoản--Điểm\\11.267 mã};
-  \node[box, right=0.55cm of b] (c) {Ba tầng\\chỉ mục\\tra cứu 3 kiểu};
-  \node[box, right=0.55cm of c] (d) {Đồ thị\\thời gian\\33 luật / 21 cạnh};
-  \node[box, right=0.55cm of d] (e) {Benchmark\\281 câu\\có đáp án};
-  \node[box, right=0.55cm of e] (f) {Trình xem\\1 tệp HTML\\offline};
-  \draw[arr] (a) -- (b);
-  \draw[arr] (b) -- (c);
-  \draw[arr] (c) -- (d);
-  \draw[arr] (d) -- (e);
-  \draw[arr] (e) -- (f);
+  \node[box, fill=ink!7]  (a) {PDF công báo\\chính thức};
+  \node[box, right=0.5cm of a] (b) {Cắt chunk\\Điều--Khoản--Điểm\\11.267 mã};
+  \node[box, right=0.5cm of b] (c) {Ba tầng\\chỉ mục\\3 kiểu tra};
+  \node[box, right=0.5cm of c, fill=gold!12] (d) {Đồ thị\\thời gian\\33 luật / 21 cạnh};
+  \node[box, right=0.5cm of d] (e) {Benchmark\\281 câu\\có đáp án};
+  \node[box, right=0.5cm of e] (f) {Trình xem\\1 tệp HTML\\ngoại tuyến};
+  \draw[arr] (a)--(b); \draw[arr] (b)--(c); \draw[arr] (c)--(d);
+  \draw[arr] (d)--(e); \draw[arr] (e)--(f);
 \end{tikzpicture}}
-\caption{Pipeline một chiều của bộ dữ liệu: mỗi khối chỉ đọc đầu vào của khối trước và ghi ra
-tệp trung gian trong kho. Con số trong từng khối lấy từ các tệp đo tương ứng (Bảng~\ref{tab:steps}).}
+\caption{Pipeline xây dựng ViCivil-TKG: từ PDF công báo tới bộ dữ liệu công bố.}
 \label{fig:pipeline}
 \end{figure}
 
-Điểm mạnh của thiết kế một chiều là truy được nguồn: khi một con số trong báo cáo bị nghi ngờ,
-chỉ cần mở đúng tệp trung gian của khối tương ứng. Điểm yếu là khi sửa dữ liệu gốc phải chạy
-lại từ khối bị ảnh hưởng trở đi; mục~6.3 quay lại đánh đổi này với pipeline tăng dần.
+\section{Nguồn dữ liệu và cắt chunk}\label{sec:chunk}
 
-\section{Nguồn dữ liệu}
-Sáu tệp PDF chính thức được lấy từ công báo: Bộ luật Dân sự 1995, 2005, 2015; Luật Hôn nhân và
-Gia đình 2014; Luật Tố tụng 2017; Nghị định 152/2026. Mỗi tệp lưu kèm đường dẫn nguồn, loại nguồn
-(\textit{mirror}, \textit{official}, \textit{semi-official}) và ngày lấy, trong
-\texttt{provenance/law\_sources.json}. Các tệp PDF ảnh không có lớp chữ được tách riêng vào hàng
-chờ đọc lại (OCR), không đoán nội dung.
+Nguồn gốc của corpus là các tệp PDF \emph{công báo chính thức} của Bộ luật Dân sự 1995/2005/2015, Luật Hôn nhân và gia đình, Luật Thừa kế, Luật Tố tụng dân sự cùng các văn bản hợp nhất tương ứng; với năm văn bản nền tảng, bản PDF công báo gốc được giữ nguyên trong gói công bố (\texttt{sources\_official/}) để đối chiếu trực tiếp. Văn bản được trích bằng bộ xử lý PDF chuyên cho bản in công báo, sau đó cắt theo \emph{cấu trúc pháp lý} chứ không cắt theo độ dài: mỗi chunk là một Điều, hoặc một Khoản/Điểm khi điều đó dài. Mã chunk dạng \texttt{BLDS2015|Dieu455|Khoan1} vừa đóng vai trò khoá chính trong corpus, vừa là nhãn đáp án của benchmark, vừa là định danh nút trong đồ thị~--- một mã duy nhất dùng thống nhất ba nơi, loại trừ lệch tham chiếu.
 
-Việc giữ nguyên tệp gốc trong \texttt{sources\_official/} và ghi băm SHA-256~\cite{sha256} cho
-mọi tệp phát hành (Bảng~\ref{tab:steps}, bước~J) phục vụ hai mục đích: ai tải bộ dữ liệu cũng
-kiểm tra được mình nhận đúng bản đã phát hành, và mọi con số trong báo cáo đều gắn được với
-đúng bản dữ liệu đã đo.
+Bước làm sạch cuối cùng chuẩn hoá xuống dòng, xoá header/footer in lặp và chặn ký tự lỗi (CJK lai, vùng mã dùng riêng) bằng cổng tự động; toàn bộ 11.267 chunk đạt cổng này. Bảng~\ref{tab:ba-tang} tổng hợp ba lớp lưu trữ của corpus cùng kích thước đo được.
 
-\section{Các bước xây dựng}
-Mỗi bước dưới đây có một tệp đầu ra kiểm chứng được trong kho.
-
-\begin{table}[H]
-\centering\small
-\caption{Các bước xây dựng và tệp đầu ra kiểm chứng cho từng bước.}
-\label{tab:steps}
-\begin{tabular}{@{}cL{5.6cm}L{5.8cm}r@{}}
-\toprule
-\textbf{Bước} & \textbf{Nội dung} & \textbf{Tệp đầu ra} & \textbf{Kết quả} \\
-\midrule
-A & Lấy PDF công báo, lưu nguồn và ngày lấy & \texttt{provenance/law\_sources.json} & 6 tệp \\
-B & Phân biệt PDF chữ và PDF ảnh; ảnh vào hàng chờ OCR & \texttt{sources\_raw/} &~--- \\
-C & Cắt nhỏ theo Điều~--- Khoản~--- Điểm, gán mã & \texttt{data/civil\_chunks.jsonl} & 11.267 chunk \\
-D & Lọc luật dân sự, chặn chunk rỗng, trùng mã, luật mồ côi & \texttt{provenance/law\_audit.json} & 0 lỗi \\
-E & Mã hoá mỗi chunk thành vectơ 768 chiều & \texttt{index/vdb\_chunks.json} & 11.267 vectơ \\
-F & Rút thực thể và quan hệ giữa các chunk & \texttt{index/kv\_store\_*.json} & 3 kho chỉ mục \\
-G & Gán khoảng hiệu lực, dựng chuỗi kế thừa & \texttt{provenance/temporal\_graph.json} & 33 luật \\
-H & Làm câu hỏi có đáp án và chấm điểm hệ thống & \texttt{benchmark/law\_eval\_v12.json} & 281 câu \\
-I & Xuất đồ thị GEXF và dựng trang xem & \texttt{docs/graph/} & 1 trang xem \\
-J & Băm mã SHA-256, đồng bộ hai gương, đóng thẻ phiên bản & \texttt{SHA256SUMS} & 162 tệp \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{Cắt chunk và gán mã}
-Chunk là đơn vị trích dẫn nhỏ nhất mà luật dân sự dùng để quy định nghĩa vụ, tức là
-Điều~--- Khoản~--- Điểm. Mỗi chunk mang một mã ổn định theo cấu trúc đó, ví dụ
-\texttt{BLDS2015|Dieu27|Khoan1|Diema}.
-
-\begin{table}[H]
-\centering\small
-\caption{Các trường của một chunk đã gán nhãn.}
-\label{tab:chunk}
-\begin{tabular}{@{}lL{3.2cm}L{8.4cm}@{}}
-\toprule
-\textbf{Trường} & \textbf{Ví dụ} & \textbf{Ý nghĩa} \\
-\midrule
-\texttt{chunk\_id} & \texttt{BLDS2015|Dieu1} & Mã duy nhất, dùng làm khoá cho mọi chỉ mục \\
-\texttt{law\_id} & \texttt{BLDS2015} & Mã văn bản chứa chunk \\
-\texttt{dieu}, \texttt{khoan}, \texttt{diem} & \texttt{"27"}, \texttt{"1"}, \texttt{"a"} & Vị trí trong cấu trúc luật \\
-\texttt{tieu\_de} & Phạm vi điều chỉnh & Tiêu đề của đoạn \\
-\texttt{content} & (văn bản) & Nội dung đoạn \\
-\texttt{chars} & \texttt{306} & Độ dài đoạn \\
-\texttt{source\_url} & ketoananpha.vn/\ldots & Nơi lấy nội dung \\
-\texttt{source\_type} & \texttt{mirror} & Loại nguồn \\
-\texttt{fetched} & \texttt{2026-10-15} & Ngày lấy \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Ba lý do mã phải bám theo cấu trúc pháp lý. Thứ nhất là \emph{ổn định}: nếu mã đổi sau mỗi lần
-chạy lại, toàn bộ 11.267 vectơ và mọi cạnh dẫn chiếu đã tính phải làm lại. Thứ hai là
-\emph{trích dẫn chính xác}: giữ nguyên ranh giới Điểm a/b/c giúp trích đủ ý, không thiếu không
-thừa. Thứ ba là \emph{chia sẻ được}: người khác dùng chung mã này để nối vào tập dữ liệu của
-họ mà không phải chia lại dữ liệu. Đây chính là câu trả lời cho CQ1: mã ổn định biến bộ dữ liệu
-từ một tệp tĩnh thành một nền tảng mà các chỉ mục, đồ thị và benchmark đều neo vào được.
-
-\section{Ba tầng lưu trữ}
-Cùng một tập 11.267 chunk được lập chỉ mục theo ba cách để tra cứu khác nhau.
-
-\begin{table}[H]
-\centering\small
-\caption{Ba tầng chỉ mục trên cùng một bộ dữ liệu.}
-\label{tab:layers}
-\begin{tabular}{@{}cL{4.9cm}L{4.4cm}L{4.2cm}@{}}
-\toprule
-\textbf{Tầng} & \textbf{Số mục} & \textbf{Lưu gì} & \textbf{Dùng để làm gì} \\
-\midrule
-1 & 11.267 / 14.538 / 20.311 & Tra theo mã chunk, theo tên thực thể, theo quan hệ & Tra chính xác: đoạn nào, tên gì \\
-2 & 11.267 vectơ 768 chiều & Mã hoá của từng chunk & Tra nghĩa: câu hỏi $\rightarrow$ chunk gần nhất \\
-3 & 33 luật, 21 quan hệ & Đồ thị tri thức có chiều thời gian & Tra theo quan hệ và theo thời điểm \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Điểm cần nói thẳng: đây là JSON kèm kho vectơ phẳng, chưa phải cơ sở dữ liệu quan hệ đầy đủ.
-Cách lưu này đủ cho quy mô 17 luật và đủ để tái lập mọi kết quả bằng Python thuần; khi kho mở
-rộng lên hàng trăm văn bản, tầng 1 nên chuyển sang cơ sở dữ liệu thật và tầng 2 nên chuyển sang
-kho vectơ có chỉ mục xấp xỉ~--- việc này nằm trong lộ trình ở mục~6.3.
-
-\section{Độ dài và chất lượng đoạn văn bản}
-Vì đoạn được cắt ở cấp Điều~--- Khoản~--- Điểm nên độ dài trung vị chỉ 226 ký tự. Bảng dưới
-đo trực tiếp trên 11.267 đoạn (tệp \texttt{provenance/chunk\_quality.json}, sinh bằng
-\texttt{src/law\_quality.py}).
-
-\begin{table}[H]
-\centering\small
-\caption{Đo chất lượng đoạn văn bản.}
-\label{tab:quality}
-\begin{tabular}{@{}L{7.4cm}rc@{}}
-\toprule
-\textbf{Chỉ số} & \textbf{Số lượng} & \textbf{Tỉ lệ} \\
-\midrule
-Đoạn rỗng & 0 & 0,00\% \\
-Đoạn rất ngắn (dưới 120 ký tự) & 2.107 & 18,7\% \\
-Trùng nội dung sau chuẩn hoá & 720 & 6,39\% \\
-Trùng nguyên văn & 630 & 5,59\% \\
-Thiếu tiêu đề & 2 & 0,02\% \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Độ dài: ngắn nhất 1 ký tự, phân vị 25 là 138, trung vị 226, phân vị 75 là 331, phân vị 95 là
-635, dài nhất 5.556, trung bình 270. Hai nhóm cần lưu ý khi dùng bộ dữ liệu này làm nền: đoạn
-rất ngắn (điều khoản rỗng hoặc quy định rất ngắn, 18,7\%) và đoạn trùng nội dung (6,4\% ---
-phần lớn do các bản văn bản hợp nhất lặp lại điều khoản của bản cũ). Chương~5 sẽ chứng minh
-bằng thí nghiệm rằng nhóm trùng nội dung \emph{không nên bị lọc bỏ}: bỏ đi làm kết quả truy hồi
-tệ hơn.
-
-\section{Phân bố dữ liệu}
-
-\begin{figure}[H]
+\begin{table}[htbp]
 \centering
-\includegraphics[width=0.98\textwidth,max height=0.42\textheight]{fig11_phan-bo-chunk.png}
-\caption{Số chunk mở theo từng văn bản. Biểu đồ vẽ bằng Vega-Lite~\cite{vegalite} từ tệp
-\texttt{data/civil\_chunks.jsonl} trong kho.}
-\label{fig:dist}
+\small
+\caption{Ba tầng lưu trữ của ViCivil-TKG và vai trò truy hồi của từng tầng.}
+\label{tab:ba-tang}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}} c L{4.6cm} L{5.2cm} L{3.6cm}}
+\toprule
+Tầng & Nội dung & Kích thước & Kiểu tra cứu \\
+\midrule
+1 & Chunk văn bản phân cấp & 11.267 mã (17 văn bản) & Theo mã Điều/Khoản/Điểm \\
+2 & Thực thể + quan hệ & 14.099 thực thể; 20.311 hàng quan hệ & Theo tên, theo quan hệ \\
+3 & Đồ thị thời gian & 33 luật; 21 cạnh kế thừa/sửa đổi & Lọc theo mốc hiệu lực \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+Phân bố độ dài chunk (Hình~\ref{fig:phanbo}) cho thấy đơn vị cắt bám sát cấu trúc luật: phần lớn chunk nằm dưới 800 ký tự, tương ứng một điều hoặc một khoản, đủ nhỏ để trích dẫn chính xác và đủ lớn để đứng độc lập về ngữ nghĩa.
+
+\begin{figure}[htbp]
+\centering
+\begin{adjustbox}{max width=\columnwidth, max height=0.4\textheight}
+\includegraphics{fig11_phan-bo-chunk.png}
+\end{adjustbox}
+\caption{Phân bố độ dài 11.267 chunk theo ký tự~--- đơn vị cắt bám cấu trúc Điều--Khoản--Điểm.}
+\label{fig:phanbo}
 \end{figure}
 
-\textbf{Cách đọc Hình~\ref{fig:dist}.} Mỗi cột là một văn bản, chiều cao là số chunk văn bản đó
-đóng góp. Bốn văn bản chiếm hơn một nửa số chunk; các văn bản còn lại là các nghị định và luật
-chuyên ngành ngắn hơn nhiều.
+\section{Đồ thị tri thức thời gian}\label{sec:kg}
 
-\textbf{Điểm mạnh.} Phân bố này cho biết ngay nơi cần quy tắc cắt riêng: các luật chuyên ngành
-có cấu trúc và độ dài đoạn khác hẳn bộ luật dân sự, nên không thể dùng một quy tắc cắt duy nhất
-cho toàn bộ kho khi mở rộng.
+Đồ thị thời gian là thành phần phân biệt ViCivil-TKG với corpus phẳng. Mỗi nút là một văn bản luật mang khoảng hiệu lực \texttt{[valid\_from, valid\_to)}; mỗi cạnh là một quan hệ \textsc{Thay-thế} (kế thừa thế hệ, ví dụ BLDS 1995 $\to$ BLDS 2005 $\to$ BLDS 2015) hoặc \textsc{Sửa-đổi} (sửa điều khoản giữa hai văn bản chuyên ngành). Cả 21 cạnh đều được khai thác từ \emph{phần mở đầu của văn bản hợp nhất}~--- nguồn chính thức liệt kê rõ văn bản nào bị thay/sửa~--- chứ không suy đoán từ độ giống văn bản, nên mỗi cạnh đều truy vết được về văn bản gốc.
 
-\textbf{Điểm cần đề phòng.} Sự chênh lệch lớn giữa các cột nghĩa là bộ benchmark (Chương~5)
-cũng lệch về các văn bản lớn; kết quả đo vì vậy phản ánh tốt nhất nhóm văn bản lõi, còn với
-các văn bản nhỏ số câu hỏi mỗi văn bản ít nên ước lượng kém chắc chắn hơn.
+Chất lượng đồ thị được bảo đảm bằng ba lớp kiểm tra tự động: (i) kiểm tra tính đúng đắn của khoảng hiệu lực (không chồng lấn giữa các thế hệ thay thế); (ii) kiểm tra chuỗi kế thừa BLDS ba thế hệ khớp với thực tế pháp lý; (iii) kiểm tra đối chiếu RDF với corpus (mọi nút phải có chunk, mọi chunk phải thuộc một nút còn hiệu lực). Đồ thị được xuất đồng thời ra RDF/Turtle để nạp vào kho tri thức chuẩn~\cite{rdf11}, JSON-LD cho ứng dụng web~\cite{jsonld} và GEXF động để mở trong Gephi~--- ba định dạng phục vụ ba nhóm người dùng khác nhau.
+
+\section{Chỉ mục truy hồi ba tầng}\label{sec:index}
+
+Tầng truy hồi chuyển corpus thành ba cấu trúc tra cứu: (i) bảng băm theo mã chunk cho tra chính xác; (ii) chỉ mục vector 768 chiều cho 14.099 thực thể và 20.311 hàng quan hệ (nhúng bằng \texttt{embeddinggemma-300m}, chuẩn hoá L2)~\cite{embeddinggemma}; (iii) bản đồ ngược chunk--thực thể. Bộ truy hồi lai kết hợp BM25~\cite{bm25} với tìm kiếm vector, gộp hạng bằng Reciprocal Rank Fusion~\cite{rrf}, sau đó \emph{lọc theo mốc thời gian}: chỉ những chunk thuộc văn bản còn hiệu lực tại \texttt{as\_of} của câu hỏi mới được giữ lại. Cơ chế lọc này chính là chỗ đồ thị thời gian tham gia truy hồi~--- không có nó, kết quả luôn nghiêng về văn bản mới nhất bất kể câu hỏi hỏi về thời điểm nào.
 
 % ======================= CHƯƠNG 3 =======================
-\chapter{Đồ thị tri thức và chiều thời gian}
+\chapter{Benchmark và kết quả}\label{ch:kq}
 
-\section{Cấu trúc đồ thị}
-Đồ thị chứa các văn bản luật (33 nút) và các quan hệ giữa chúng (21 cạnh). Mỗi nút mang
-khoảng hiệu lực, số hiệu văn bản, số chunk và số lần được dẫn chiếu.
+\section{Thiết kế benchmark}\label{sec:bench}
 
-\begin{figure}[H]
+Bộ benchmark gồm 281 câu hỏi tình huống tiếng Việt, mỗi câu gồm: đề bài tình huống thực tế (không nhắc tên điều luật), mốc thời gian \texttt{as\_of}, và tập đáp án dạng mã chunk. Câu hỏi được sinh theo kịch bản đời sống (``con đẻ muốn đổi từ họ cha sang họ mẹ cần điều kiện gì?'') thay vì hỏi trực tiếp nội dung điều luật, tránh đo lường khả năng ghi nhớ chuỗi ký tự của hệ thống.
+
+Chuỗi kiểm chứng đáp án gồm ba vòng: (1) mô hình 8B sinh câu hỏi kèm đáp án từ chính chunk nguồn; (2) hai mô hình độc lập chéo thẩm định toàn bộ, các câu bị nghi ngờ đưa vào vòng thứ hai chuyên sâu với mô hình 14B, kết quả 57 câu bị loại hoặc neo lại đáp án (\texttt{regolded}) kèm ghi rõ đáp án cũ; (3) tác giả phúc khảo nhóm yếu còn lại. Kết quả cuối phân thành ba tầng chất lượng công khai đúng như thực trạng: 245 câu \emph{verified}, 32 câu \emph{regolded}, 4 câu \emph{author-verified}. Toàn bộ dấu vết kiểm định được công bố trong \texttt{benchmark/}.
+
+\section{Kết quả chính}\label{sec:results}
+
+Bảng~\ref{tab:main} trình bày kết quả của bộ truy hồi lai trên 281 câu hỏi, theo bộ chỉ số đồng băng (frozen) \texttt{v1.2.3} dùng cho mọi so sánh. Chỉ số Hit@k là tỉ lệ câu có ít nhất một đáp án đúng nằm trong $k$ kết quả đầu; MRR là trung bình nghịch đảo hạng của đáp án đúng đầu tiên.
+
+\begin{table}[htbp]
 \centering
-\includegraphics[width=\textwidth,max height=0.42\textheight]{fig05_graph_2026.png}
-\caption{Trạng thái đồ thị tại năm 2026: 14 văn bản còn hiệu lực, các luật đã hết hiệu lực được làm mờ.}
-\label{fig:g2026}
-\end{figure}
-
-\textbf{Cách đọc Hình~\ref{fig:g2026}.} Nút đậm là văn bản còn hiệu lực tại mốc đang xem; nút
-mờ là văn bản đã hết hiệu lực nhưng vẫn được giữ trong đồ thị vì lịch sử không bị xoá. Cạnh
-nối hai nút là một trong ba quan hệ ở Bảng~\ref{tab:relations}; rê chuột vào nút hiện thẻ tin
-chi tiết (Hình~\ref{fig:tooltip}).
-
-\textbf{Điểm mạnh.} Giữ cả văn bản đã hết hiệu lực là điều kiện bắt buộc để trả lời câu hỏi
-mang mốc thời gian trong quá khứ: một câu hỏi về năm 2013 cần đúng bản luật 2005, và đồ thị
-cho phép truy vết bản đó thay vì xoá nó đi.
-
-\textbf{Giới hạn.} Ở mức văn bản, đồ thị chỉ trả lời ``luật nào liên quan đến luật nào''; để
-trả lời ``điều nào bị sửa, sửa những gì'' cần chỉ mục cấp điều khoản ở mục~3.2.
-
-\begin{table}[H]
-\centering\small
-\caption{Các loại quan hệ giữa các văn bản trong đồ thị.}
-\label{tab:relations}
-\begin{tabular}{@{}lrl@{}}
+\small
+\caption{Kết quả truy hồi lai trên 281 câu hỏi (bộ chỉ số frozen v1.2.3) và phân tầng theo chất lượng đáp án.}
+\label{tab:main}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}} l c c c c c l}
 \toprule
-\textbf{Quan hệ} & \textbf{Số cạnh} & \textbf{Nghĩa} \\
+Nhóm & $n$ & Hit@1 & Hit@3 & Hit@5 & Hit@10 & MRR \\
 \midrule
-REPLACES & 3 & Luật mới thay thế luật cũ \\
-AMENDS & 17 & Sửa đổi điều khoản cụ thể \\
-CONSOLIDATES & 1 & Hợp nhất \\
+Toàn bộ benchmark & 281 & 0,452 & 0,658 & 0,726 & 0,794 & 0,569 \\
+\quad verified & 245 & 0,502 & 0,678 & 0,731 & 0,796 & --- \\
+\quad regolded & 32 & 0,062 & 0,531 & 0,719 & 0,812 & --- \\
+\quad author-verified & 4 & 0,500 & 0,500 & 0,500 & 0,500 & --- \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \end{table}
 
-Quan hệ sửa đổi chỉ được nhận khi đọc được từ lời nói đầu của văn bản hợp nhất, không tin vào
-đoạn trích từ công cụ tìm kiếm. Có một lần tin đoạn tìm kiếm đã tạo ra 142 cạnh sai; sau đó
-toàn bộ quan hệ được dựng lại từ văn bản gốc. Bài học này được ghi thành luật bất di bất dịch
-số~3 trong \texttt{docs/PROTOCOL.md}: nguồn của mỗi cạnh phải truy được về văn bản gốc.
+Hai cách đọc bảng này quan trọng như nhau. Thứ nhất, trên nhóm đáp án tin cậy nhất (verified), Hit@1 = 0,502 nghĩa là cứ hai câu hỏi thì một câu tìm đúng ngay lần đầu, và Hit@5 = 0,731 nghĩa là ba phần tư câu hỏi tìm được đáp án trong năm kết quả đầu~--- mức đủ dùng làm điểm xuất phát cho hệ RAG có bước rerank. Thứ hai, tầng \emph{regolded} thể hiện hành vi đo lường trung thực: Hit@1 chỉ 0,062 vì nhóm này từng có đáp án sai bị thay, nhưng Hit@10 = 0,812 cho thấy đáp án đúng thực tế vẫn nằm sâu trong danh sách~--- hệ truy hồi không tệ, đáp án cũ mới là thứ tệ, và bộ dữ liệu ghi nhận điều đó thay vì giấu đi.
 
-\section{Đồ thị ở mức điều khoản}
-Ngoài đồ thị cấp văn bản, bộ dữ liệu còn có chỉ mục cấp điều khoản
-(\texttt{docs/graph/law\_articles.json}): 10.215 đơn vị Điều/Khoản/Điểm thuộc 17 văn bản, kèm
-số đoạn và số lần được dẫn chiếu tới. Chỉ mục này được nhúng vào trang xem, nên khi mở khung
-chi tiết của một luật, người đọc có thể lọc theo số điều và xem ngay điều khoản nào được trỏ
-tới nhiều nhất (Hình~\ref{fig:articles}). Dữ liệu này cũng là nguồn để sinh bản RDF/JSON-LD
-mà không cần GPU.
-
-\section{Cập nhật theo thời gian}
-Đồ thị có chiều thời gian. Kéo thanh thời gian là toàn bộ đồ thị tính lại trạng thái, chứ không
-phải hai bản vẽ khác nhau.
-
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth,max height=0.42\textheight]{fig06_graph_2012.png}
-\caption{Cùng đồ thị, tại thời điểm năm 2012: chỉ 4 văn bản còn hiệu lực, các luật chưa tới hạn
-hoặc đã hết hiệu lực được làm mờ.}
-\label{fig:g2012}
-\end{figure}
-
-\textbf{Cách đọc Hình~\ref{fig:g2012} (đối chiếu Hình~\ref{fig:g2026}).} Hai hình là \emph{cùng
-một đồ thị} ở hai mốc thời gian, không phải hai bản vẽ làm tay: đổi mốc trên thanh thời gian,
-trạng thái các nút được tính lại từ khoảng hiệu lực lưu trong dữ liệu. Năm 2012 chỉ 4 văn bản
-còn hiệu lực; năm 2026 là 14. Sự khác biệt giữa hai hình chính là câu trả lời trực quan cho
-CQ2: cùng một câu hỏi tra cứu đặt ở hai thời điểm khác nhau phải dẫn tới hai tập văn bản khác
-nhau, và bộ dữ liệu cho phép máy tính ra điều đó thay vì người dùng tự nhớ.
-
-\begin{table}[H]
-\centering\small
-\caption{Kết quả truy vấn ``tại thời điểm T, luật nào còn hiệu lực''.}
-\label{tab:temporal}
-\begin{tabular}{@{}L{1.9cm}L{4.6cm}L{8.2cm}@{}}
-\toprule
-\textbf{Mốc thời gian} & \textbf{Số luật còn hiệu lực} & \textbf{Kiểm tra tự động trong dữ liệu} \\
-\midrule
-2000-01-01 & 1 & Chỉ Bộ luật Dân sự 1995 \\
-2010-06-01 & 1 & Chỉ Bộ luật Dân sự 2005 \\
-2020-06-01 & 2 & Bộ luật Dân sự 2015 và Luật Hôn nhân và Gia đình 2014 \\
-2026 & 14 & Trạng thái hiện tại của trang xem \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Bốn mốc trong Bảng~\ref{tab:temporal} được kiểm tra tự động trong dữ liệu, không phải kiểm tra
-bằng mắt trên hình vẽ: truy vấn thời gian chạy trên \texttt{provenance/temporal\_graph.json}
-và kết quả được ghi lại. Ngoài ra, đồ thị đã được xuất ra RDF~\cite{rdf11} và
-JSON-LD~\cite{jsonld11} với 56.772 bộ ba, và được nạp thật bằng \texttt{rdflib}~\cite{rdflib}
-để trả lời cùng loại câu hỏi bằng SPARQL (\texttt{src/law\_rdf\_verify.py})~--- hai con đường
-độc lập cùng cho một kết quả.
-
-% ======================= CHƯƠNG 4 =======================
-\chapter{Trình xem}
-
-\section{Chức năng}
-Trang xem gồm hai phần. Phần \emph{Mạng kế thừa} vẽ đồ thị với thanh thời gian, ô tìm kiếm
-theo tên, chip bật tắt theo nhóm luật, khung chi tiết và nút xuất ảnh PNG. Phần \emph{Phổ thời
-gian} dựng dải thời gian hiệu lực của từng văn bản.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.92\textwidth,max height=0.40\textheight]{fig07_timeline_tab.png}
-\caption{Phổ thời gian: dải thời gian hiệu lực của từng văn bản, dựng bằng Vega-Lite~\cite{vegalite}
-từ tệp spec công khai \texttt{law\_timeline.vl.json} có trong kho.}
-\label{fig:timeline}
-\end{figure}
-
-\textbf{Cách đọc Hình~\ref{fig:timeline}.} Mỗi hàng là một văn bản; dải màu là khoảng hiệu lực.
-Các dải chồng lên nhau cho thấy giai đoạn nhiều phiên bản cùng tồn tại~--- chính là giai đoạn
-dễ tra cứu nhầm. Nhìn theo chiều dọc, người đọc thấy ngay chuỗi BLDS 1995 $\rightarrow$ 2005
-$\rightarrow$ 2015 kế tiếp nhau không bỏ trống khoảng nào.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth,max height=0.40\textheight]{fig08_tooltip.png}
-\caption{Rê chuột vào một luật: số hiệu, khoảng hiệu lực, số chunk và số lần dẫn chiếu; đồng thời
-chuỗi kế thừa của luật đó được làm sáng, các phần tử khác mờ đi.}
-\label{fig:tooltip}
-\end{figure}
-
-\textbf{Cách đọc Hình~\ref{fig:tooltip}.} Thẻ tin là phần ``tài liệu tham khảo sống'' của trang
-xem: mọi số hiện trong thẻ (số chunk, số lần dẫn chiếu) đều đếm trực tiếp từ dữ liệu trong kho,
-nên người dùng có thể lấy số đó đối chiếu với báo cáo mà không cần mở tệp JSON. Hiệu ứng làm
-sáng chuỗi kế thừa giúp phân biệt trong một cái nhìn các văn bản cùng chuỗi kế thừa với các
-văn bản chỉ sửa đổi chéo.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth,max height=0.38\textheight]{fig09_drawer.png}
-\caption{Khung chi tiết: ví dụ Bộ luật Dân sự 2015~--- số hiệu 91/2015/QH13, có hiệu lực từ
-01/01/2017 đến nay, 1.838 chunk, 145 lần dẫn chiếu, và quan hệ thay thế với Bộ luật Dân sự 2005.}
-\label{fig:drawer}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.72\textwidth,max height=0.36\textheight]{fig09b_dieu-khoan.png}
-\caption{Tra cứu ở mức điều khoản: mỗi luật có 1.838 đoạn được chia theo Điều/Khoản/Điểm; ô tìm
-kiếm lọc theo số điều, và cột ``được trỏ'' cho biết điều khoản nào được các điều khoản khác
-dẫn chiếu tới nhiều nhất. Đây là mức chi tiết để trả lời câu hỏi ``điều nào bị sửa, sửa
-những gì''.}
-\label{fig:articles}
-\end{figure}
-
-\textbf{Cách đọc Hình~\ref{fig:drawer} và Hình~\ref{fig:articles}.} Khung chi tiết (Hình~\ref{fig:drawer})
-cho metadata văn bản ở mức luật; panel điều khoản (Hình~\ref{fig:articles}) hạ xuống một cấp
-nữa tới 10.215 đơn vị Điều/Khoản/Điểm. Cột ``được trỏ'' chính là độ giữa trung tâm của đồ thị
-tính ở mức điều khoản: điều được trỏ nhiều nhất thường là điều nguyên tắc hoặc điều định nghĩa
---- dữ liệu này hữu ích cho việc chọn đoạn neo khi dựng hệ thống truy hồi trên bộ dữ liệu.
-
-\section{Kiến trúc kỹ thuật}
-\enlargethispage{2\baselineskip}
-\begin{table}[H]
-\centering\footnotesize
-\renewcommand{\arraystretch}{1.1}
-\caption{Các thành phần phần mềm dùng trong trình xem.}
-\label{tab:stack}
-\begin{tabular}{@{}llL{5.6cm}@{}}
-\toprule
-\textbf{Vai trò} & \textbf{Thành phần} & \textbf{Ghi chú} \\
-\midrule
-Vẽ đồ thị & AntV G6 5.1.1 (MIT)~\cite{g6} & behaviors kéo/zoom/phóng to khi rê chuột; plugin minimap, tooltip, lưới nền \\
-Vẽ biểu đồ & Vega-Lite 5.21.0 (BSD-3)~\cite{vegalite} & dùng cho phổ thời gian; spec công khai \\
-Nhúng biểu đồ & vega-embed 6.26.0 (BSD-3) & nạp spec vào trang \\
-Trao đổi đồ thị & GEXF 1.3~\cite{gexf} & mở được bằng Gephi~\cite{gephi} và Gephi-Lite \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Trang xem được viết thành \emph{một tệp HTML duy nhất}, nhúng sẵn cả bốn thư viện, nên chạy
-được khi mất mạng và mở trực tiếp từ ổ đĩa. Trước khi phát hành, trang được kiểm tra trên
-Chromium, trên đúng trình duyệt Google Chrome và trên Microsoft Edge, yêu cầu không có lỗi
-JavaScript nào. Lý do chọn một tệp duy nhất: bộ dữ liệu hướng tới người kiểm chứng~--- luật sư,
-nghiên cứu viên~--- người có thể không có mạng ở nơi làm việc, và một tệp tự chứa loại bỏ toàn
-bộ rủi ro ``mất CDN thì mất trang''.
-% ======================= CHƯƠNG 5 =======================
-\chapter{Thử nghiệm và đánh giá}
-
-\section{Bộ kiểm tra}
-Bộ kiểm tra gồm 281 câu hỏi có đáp án; ngày hỏi phải nằm trong khoảng hiệu lực của văn bản
-chứa đáp án. Câu hỏi sinh bằng mô hình ngôn ngữ phải qua bước lọc và được duyệt mẫu thủ công;
-tỉ lệ câu bị loại được công bố. Mỗi câu hỏi mang một mã nhận dạng ổn định (\texttt{GEN...},
-\texttt{NEW...}, \texttt{TOP...}) nên kết quả từng câu trong các tệp đo tra được về đúng câu
-hỏi gốc.
-
-\section{Kết quả}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.98\textwidth,max height=0.42\textheight]{fig10_ket-qua-truy-hoi.png}
-\caption{Kết quả truy hồi trên 281 câu hỏi có đáp án. Biểu đồ vẽ bằng Vega-Lite~\cite{vegalite}
-từ tệp \texttt{benchmark/law\_eval\_v12.json} trong kho.}
+\begin{adjustbox}{max width=\columnwidth, max height=0.4\textheight}
+\includegraphics{fig10_ket-qua-truy-hoi.png}
+\end{adjustbox}
+\caption{Hit@k của bộ truy hồi lai trên toàn bộ benchmark và nhóm verified.}
 \label{fig:eval}
 \end{figure}
 
-\textbf{Cách đọc Hình~\ref{fig:eval}.} Trục ngang là các mức $k$ của Hit@k; cột càng cao thì
-càng nhiều câu hỏi có đáp án đúng trong $k$ kết quả đầu. Khoảng cách lớn giữa Hit@1 và Hit@3
-cho biết nhiều câu có đáp án đúng nhưng bị đẩy xuống hạng 2--3~--- quan sát này dẫn trực tiếp
-tới thí nghiệm xếp lại ở mục~5.4.
+\section{Bước rerank và ý nghĩa thống kê}\label{sec:rerank}
 
-\begin{table}[H]
-\centering\small
-\caption{Kết quả truy hồi theo hai cách chia tập câu hỏi.}
-\label{tab:eval}
-\begin{tabular}{@{}lcc@{}}
-\toprule
-\textbf{Chỉ số} & \textbf{Toàn bộ 281 câu} & \textbf{245 câu đã được tác giả xác minh} \\
-\midrule
-Tìm đúng ở lần 1 (Hit@1) & 0,452 & 0,502 \\
-Tìm đúng trong 3 lần (Hit@3) & 0,658 & 0,678 \\
-Tìm đúng trong 5 lần (Hit@5) & 0,726 & 0,731 \\
-Tìm đúng trong 10 lần (Hit@10) & 0,794 & 0,796 \\
-Độ tin cậy tổng hợp (MRR) & 0,569 &~--- \\
-\bottomrule
-\end{tabular}
-\end{table}
+Vì chỉ mục vector được tính một lần và công bố tĩnh (để tái lập không cần GPU), bước xếp lại tinh (rerank) được thực hiện riêng và công bố kèm hạng trước/sau cho từng câu. Thêm một bước rerank bằng \texttt{BAAI/bge-reranker-v2-m3}~\cite{bge} trên 30 ứng viên mỗi câu (tổng 148,7 giây cho cả 281 câu) cải thiện mọi chỉ số: Hit@1 từ 0,402 lên 0,445, Hit@3 từ 0,658 lên 0,708, Hit@5 từ 0,730 lên 0,787 và Hit@10 từ 0,819 lên 0,868; MRR từ 0,550 lên 0,594. Định dạng công bố này cho phép người dùng kiểm chứng bước rerank mà không cần chạy mô hình.
 
-Hai cột của Bảng~\ref{tab:eval} trả lời phần đo của CQ3. Cột bên phải (245 câu đã xác minh)
-cao hơn đồng đều ở mọi chỉ số: những câu có đáp án được soát kỹ hơn thì hệ thống cũng đo được
-cao hơn, tức là phần chênh lệch giữa hai cột nằm ở chất lượng nhãn chứ không phải ở hệ thống.
-Đây là lý do báo cáo công bố song song cả hai cột thay vì chỉ chọn cột đẹp hơn.
+Ba phép thử thống kê kèm theo xác nhận các khoảng tăng không phải nhiễu: so sánh cấu hình tốt nhất với hai cấu hình nền, khác biệt Hit@1 có $p = 0{,}001$ và $p < 0{,}001$ (kiểm định xấp xỉ nhị thức), Hit@5 có $p = 0{,}029$ và $p < 0{,}001$, và Wilcoxon trên hạng đáp án cho $p < 0{,}001$ với $n = 270$ cặp. Toàn bộ giá trị $p$ và số liệu thô được công bố trong \texttt{provenance/significance.json}.
 
-\section{Kết quả tái lập được, không cần GPU}
-Ngoài bộ kết quả đã công bố, toàn bộ phép chấm được viết lại để \emph{chạy lại được từ các
-tệp trong kho}: BM25~\cite{bm25} tính lại bằng Python thuần từ \texttt{data/civil\_chunks.jsonl},
-phần vector dùng luôn vector đã lưu sẵn (\texttt{index/vdb\_chunks.json} cho 11.267 đoạn và
-\texttt{benchmark/question\_vectors.json} cho 281 câu hỏi), hai phần gộp bằng RRF~\cite{rrf}.
-Không cần GPU, không cần mô hình, không cần mạng~--- chạy bằng
-\texttt{bash tools/reproduce.sh} là có kết quả (numpy chỉ dùng để nhanh hơn; điểm được làm
-tròn trước khi xếp hạng nên hai cách chạy cho kết quả giống hệt).
+Ngoài ra, bộ chỉ số được đo lại theo hai luật chấm khác (chấm nghiêm theo đúng mã, và chấm khoan dung cho đáp án trùng nội dung chuẩn hoá) cho kết quả gần nhau (Hit@1 = 0,452 so với 0,459), cho thấy thang đo không nhạy cảm với cách định nghĩa ``đúng''~--- một thuộc tính quan trọng khi bộ benchmark được dùng chấm các hệ thống khác.
 
-\begin{table}[H]
-\centering\small
-\caption{Kết quả tái lập được từ kho, so với bộ kết quả đã công bố.}
-\label{tab:repro}
-\begin{tabular}{@{}L{5.2cm}cccc@{}}
-\toprule
-\textbf{Phép chấm} & \textbf{Hit@1} & \textbf{Hit@3} & \textbf{Hit@5} & \textbf{Hit@10} \\
-\midrule
-Đã công bố (có bước xếp lại bằng mô hình, cần GPU) & 0,452 & 0,658 & 0,726 & 0,794 \\
-Tái lập từ kho (không cần GPU) & 0,402 & 0,658 & 0,730 & 0,818 \\
-\bottomrule
-\end{tabular}
-\end{table}
+\section{Phân tích lỗi}\label{sec:errors}
 
-Hai dòng này nói đúng hai điều. Một là phần lớn kết quả nằm ở phần không cần mô hình: các
-chỉ số giữa 3 và 10 lần gần như trùng nhau, và Hit@10 của phép tái lập còn cao hơn (0,818 so
-với 0,794) vì không có bước xếp lại kéo bốn mươi vị trí đầu về phía trước. Hai là chỉ số
-Hit@1 thấp hơn 0,05 là do bước xếp lại bằng mô hình ngôn ngữ (Qwen3-Reranker-0.6B) chưa
-chạy lại được trong phép tái lập, vì bước đó cần GPU. Đây là hạn chế rõ ràng của phép tái lập
-chứ không phải của bộ dữ liệu.
+51/281 câu không có đáp án đúng trong top-10 được xem xét từng câu. Ba nguyên nhân chính: (i) \emph{trùng lặp điều luật giữa các văn bản}~--- nội dung điều được giữ nguyên chữ qua các thế hệ, làm các phiên bản khác năm chiếm chỗ trong top-5 (ảnh hưởng 10/281 câu, đã đo lường; lọc trùng tại thời điểm truy hồi bị loại vì làm méo hạng); (ii) \emph{khoảng trống trích xuất} ở một số văn bản còn thiếu điều con (đo trong \texttt{provenance/law\_audit.json}); (iii) \emph{câu hỏi ghép nhiều ý} cần gộp thông tin từ nhiều điều. Ba nhóm nguyên nhân này tương ứng ba hướng cải thiện đã nêu trong phần hạn chế.
 
-Trên 241 câu có đáp án vàng đã được xác minh theo bộ nhãn mới nhất, phép tái lập cho
-Hit@1 = 0,378, Hit@3 = 0,631, Hit@5 = 0,705, Hit@10 = 0,809 và MRR = 0,521.
+% ======================= CHƯƠNG 4 =======================
+\chapter{Công bố, kiểm chứng và tái lập}\label{ch:congbo}
 
-\section{Bước xếp lại bằng mô hình: cải thiện rõ ở mọi chỉ số}
-Bước cuối cùng trong bộ truy hồi là xếp lại: một mô hình đọc cặp (câu hỏi, đoạn văn bản)
-rồi chấm lại 30 ứng viên đầu. Việc này cần GPU và mô hình đa ngôn ngữ, ở đây là
-\textbf{BAAI/bge-reranker-v2-m3}~\cite{bge}. Chạy trên một GPU A30 mất 149 giây cho 8.430 cặp.
+\section{Trình xem đồ thị ngoại tuyến}\label{sec:explorer}
 
-\begin{table}[H]
-\centering\small
-\caption{Kết quả trước và sau bước xếp lại (281 câu hỏi).}
-\label{tab:rerank}
-\begin{tabular}{@{}lccccc@{}}
-\toprule
-\textbf{Phép chấm} & \textbf{Hit@1} & \textbf{Hit@3} & \textbf{Hit@5} & \textbf{Hit@10} & \textbf{MRR} \\
-\midrule
-Từ vựng + vectơ (không xếp lại) & 0,402 & 0,658 & 0,730 & 0,818 & 0,545 \\
-Có xếp lại bằng mô hình & \textbf{0,445} & \textbf{0,708} & \textbf{0,787} & \textbf{0,868} & \textbf{0,591} \\
-\bottomrule
-\end{tabular}
-\end{table}
+Để người đọc kiểm chứng đồ thị bằng mắt thay vì phải tin vào số liệu, dự án kèm một trình xem đồ thị dạng một tệp HTML duy nhất (nhúng sẵn thư viện G6 5.1.1~\cite{g6} và bảng dữ liệu 33 văn bản), chạy ngoại tuyến không cần máy chủ (Hình~\ref{fig:graph}). Trình xem có thanh trượt thời gian 1996--2026: kéo tới năm nào, giao diện lập tức hiển thị đúng những văn bản còn hiệu lực năm đó, các văn bản bị thay thế được làm mờ, cạnh kế thừa BLDS ba thế hệ được tô đậm. Đây chính là logic lọc thời gian của bộ truy hồi được minh hoạ trực quan, và cũng là công cụ kiểm tra chéo độc lập cho đồ thị.
 
-Mọi chỉ số đều tăng, nhiều nhất ở Hit@5 và Hit@10 (khoảng 5 điểm phần trăm), và kết quả này
-\emph{vượt} con số từng công bố trước đó. Chi phí của bước này là một lần chạy 149 giây trên
-GPU A30 cho toàn bộ 281 câu~--- một lần duy nhất, vì xếp hạng sau khi xếp lại được lưu trong
-\texttt{benchmark/rerank\_result.json}, nên \texttt{src/law\_rerank\_verify.py} tính lại được
-các chỉ số trên mà không cần GPU, không cần mô hình, không cần mạng. Đáp lại CQ3: thành phần
-đóng góp nhiều nhất còn lại của pipeline chính là bước xếp lại, và nó cũng là bước duy nhất
-tạo ra khoảng cách giữa hai dòng của Bảng~\ref{tab:repro}.
-
-\section{Kiểm chứng chỉ số đã công bố, và hai thử nghiệm cho thấy hướng sửa sai}
-Có một điểm cần nói rõ: chỉ số đã công bố trước đây \emph{không tái lập lại được} từ kho,
-nhưng nguyên nhân không phải thiếu dữ liệu mà là cách ghi tệp kết quả~--- tệp kết quả chỉ lưu
-5 kết quả đầu mỗi câu, nên Hit@10 không tính lại được. Trong kho vẫn còn tệp
-\texttt{provenance/ranks\_hybrid.json} với xếp hạng đầy đủ của 209 câu, và tính lại trực tiếp từ
-tệp đó cho kết quả rất sát với con số đã công bố.
-
-\begin{table}[H]
-\centering\small
-\caption{Chỉ số đã công bố và cách tính lại từ các tệp trong kho.}
-\label{tab:recompute}
-\begin{tabular}{@{}L{6.4cm}ccccc@{}}
-\toprule
-\textbf{Nguồn} & \textbf{Số câu} & \textbf{Hit@1} & \textbf{Hit@3} & \textbf{Hit@5} & \textbf{Hit@10} \\
-\midrule
-Đã công bố & 281 & 0,452 & 0,658 & 0,726 & 0,794 \\
-Tính lại từ \texttt{ranks\_hybrid.json} & 209 & 0,464 & 0,675 & 0,727 & 0,770 \\
-Tính lại từ kho (BM25 + vector + RRF) & 281 & 0,402 & 0,658 & 0,730 & 0,818 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Như vậy, kho nay chứa hai cách độc lập để kiểm chứng kết quả, và cả hai đều chạy được mà
-không cần GPU. Chênh lệch nhỏ giữa ba dòng là do 72 câu không có trong tệp xếp hạng đã lưu và
-do khác biệt giữa việc có hay không dùng bước xếp lại bằng mô hình.
-
-Hai thử nghiệm đã chạy để tìm hướng sửa, và cả hai đều \emph{cho kết quả ngược với dự đoán},
-nên được ghi lại để không ai lặp lại:
-
-\begin{itemize}
-\item \textbf{Thêm ngữ cảnh vào nội dung đoạn khi tra cứu} (tên luật, số điều/khoản, tiêu đề)
-làm kết quả \emph{tệ hơn ở mọi chỉ số}: Hit@1 rơi từ 0,402 xuống 0,349, Hit@10 từ 0,818 xuống
-0,808 (tệp \texttt{benchmark/embedding\_context\_experiment.json}; 11.267 đoạn được mã hoá
-lại bằng cùng mô hình). Lý do: phần ngữ cảnh lặp lại gần như giống nhau ở mọi đoạn nên
-nó át mất nội dung pháp lý thật trong vectơ.
-\item \textbf{Chỉ dùng phần từ vựng} (BM25, không dùng vectơ) thì Hit@1 = 0,327, và thêm
-ngữ cảnh cũng không giúp (0,320). Phần vectơ mới là thứ kéo điểm lên, và vì vậy hướng sửa
-phải nằm ở chất lượng vectơ và ở bước xếp lại, không nằm ở cách viết câu hỏi hay ở dữ liệu.
-\end{itemize}
-
-\section{Phân tích lỗi: 51 câu hỏi không tìm thấy đáp án}
-Bộ kết quả tái lập cho phép soi từng câu, vì vậy có thể phân loại nguyên nhân thay vì
-đoán. Trong 281 câu, 230 câu có đáp án vàng nằm trong 10 kết quả đầu và 51 câu không có.
-
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=0.92\textwidth,max height=0.42\textheight]{fig12_vi-tri-dap-an.png}
-\caption{Vị trí của đáp án vàng trong kết quả trả về. Biểu đồ vẽ bằng Vega-Lite từ tệp
-\texttt{benchmark/error\_analysis.json} (sinh bằng \texttt{src/law\_error\_analysis.py}).}
-\label{fig:rank}
+\begin{adjustbox}{max width=\columnwidth, max height=0.4\textheight}
+\includegraphics{fig05_graph_2026.png}
+\end{adjustbox}
+\caption{Trình xem đồ thị thời gian ở góc nhìn năm 2026: các văn bản còn hiệu lực, cạnh kế thừa BLDS 1995$\to$2005$\to$2015 và cạnh sửa đổi giữa luật chuyên ngành.}
+\label{fig:graph}
 \end{figure}
 
-\textbf{Cách đọc Hình~\ref{fig:rank}.} Trục ngang là vị trí của đáp án vàng trong danh sách kết
-quả; cột đầu tiên cao vượt trội cho thấy phần lớn đáp án nằm ngay ở vị trí thứ nhất: 113 câu ở
-vị trí thứ nhất, 50 câu ở vị trí thứ hai và 22 câu ở vị trí thứ ba.
+\section{Công bố mở và cơ chế tái lập}\label{sec:release}
 
-\textbf{Điểm mạnh.} Phân bố mạnh về đầu bảng là điều kiện lý tưởng cho một bước xếp lại bằng
-mô hình: nhiều câu đã có đáp án đúng trong top-10 nhưng bị các ứng viên kém hơn đẩy xuống,
-nên chỉ cần ``đọc lại'' 30 ứng viên đầu là kéo được lên~--- đúng như kết quả Bảng~\ref{tab:rerank}.
+Toàn bộ sản phẩm được công bố song song tại hai nơi: \textbf{GitHub} (\url{https://github.com/ntd25022006q/vicivil-tkg}) giữ mã nguồn, lịch sử commit và trình xem chạy trực tuyến qua GitHub Pages; \textbf{HuggingFace} (\url{https://huggingface.co/datasets/datbazuka2502/vicivil-tkg}) giữ bộ dữ liệu với thẻ dataset đầy đủ theo chuẩn DATASHEET. Hai bản được đồng bộ từ cùng một cây phát hành có kiểm soát bằng mã băm SHA-256 cho từng tệp (\texttt{SHA256SUMS}), loại trừ lệch phiên bản giữa hai kênh.
 
-\textbf{Điểm yếu.} Đuôi phân bố (các cột từ vị trí 6 tới 10) cho thấy một nhóm câu mà bộ truy
-hồi thuần thống kê không giải quyết được; nhóm này được phân loại nguyên nhân ngay dưới đây.
+Ba cơ chế bảo đảm tái lập được thiết kế cho người dùng \emph{không có GPU}: (i) \texttt{bash tools/reproduce.sh} tính lại toàn bộ benchmark từ dữ liệu đã công bố chỉ bằng Python 3.9+ (BM25 thuần Python + vector đã lưu, gộp RRF), ra đúng các số trong Bảng~\ref{tab:main}; (ii) GitHub Actions chạy lại phép đo, đo lại corpus, xuất lại RDF và đối chiếu kết quả với bản đã commit sau mỗi lần push; (iii) bước rerank được công bố dạng hạng trước/sau từng câu, kiểm chứng được mà không cần chạy mô hình. Gói dữ liệu trước khi xuất bản đi qua kiểm toán 12 mục tự động (đủ tệp theo manifest, JSON đọc được toàn bộ, kích thước ma trận khớp, chuỗi đáp án hợp lệ, quét thông tin nhạy cảm, đếm trùng lặp, kiểm tra khoảng hiệu lực, so khớp tập mã).
 
-Với 51 câu không tìm thấy, phân loại nguyên nhân cho: 27 câu có đáp án vàng trong kho nhưng
-không được trả về (lỗi của bộ truy hồi), và 24 câu trả về đúng văn bản nhưng ở một đoạn khác
-(có 4 câu trong số đó có đoạn cùng Điều-Khoản nằm trong kết quả).
+% ======================= CHƯƠNG 5 =======================
+\chapter{Hạn chế và kết luận}\label{ch:ketluan}
 
-Hai thí nghiệm đã chạy để biết có nên sửa dữ liệu hay không (tệp
-\texttt{benchmark/chunk\_filter\_experiment.json} và
-\texttt{benchmark/granularity\_probe.json}):
+\section{Hạn chế đã công bố}\label{sec:hanche}
 
-\begin{table}[H]
-\centering\small
-\caption{Thử lọc bỏ đoạn văn bản chất lượng thấp, rồi chấm lại.}
-\label{tab:filter}
-\begin{tabular}{@{}L{5.6cm}rrrr@{}}
-\toprule
-\textbf{Bản dữ liệu} & \textbf{Số đoạn} & \textbf{Hit@1} & \textbf{Hit@3} & \textbf{Hit@10} \\
-\midrule
-Giữ nguyên & 11.267 & 0,402 & 0,658 & 0,818 \\
-Bỏ đoạn dưới 120 ký tự & 9.160 & 0,402 & 0,648 & 0,815 \\
-Bỏ thêm đoạn trùng nội dung & 8.688 & 0,409 & 0,623 & 0,787 \\
-\bottomrule
-\end{tabular}
-\end{table}
+Công trình công bố bốn hạn chế chính một cách tường minh. (1) \emph{Chất lượng đáp án:} 36/281 câu chưa qua phúc khảo chuyên gia (32 regolded + 4 author-verified); gói phúc khảo 50 câu đã chuẩn bị sẵn cho người đánh giá độc lập. (2) \emph{Trích xuất:} khoảng 500 chunk cấp mục (item) rỗng nội dung do cấu trúc bản in; một số văn bản còn thiếu điều con (đo chi tiết trong \texttt{law\_audit.json}). (3) \emph{Trùng lặp:} 603 nhóm chunk trùng gần đúng, phần lớn do chữ luật được giữ nguyên giữa các thế hệ~--- hiện tượng có ý nghĩa pháp lý (điều luật ``bất biến'') nhưng gây nhiễu cho truy hồi; chưa có phương án lọc không làm méo hạng. (4) \emph{Phạm vi:} corpus bám khung nguồn tiếng Việt; bản phản chiếu tiếng Anh và các lĩnh vực luật ngoài dân sự chưa thuộc phạm vi phiên bản này. Bộ dữ liệu không phải tư vấn pháp lý.
 
-Kết quả này khửng định một niềm tin sai lầm: \emph{6,4\% đoạn trùng nội dung không phải rác}.
-Chúng là cùng một điều khoản ở những bản luật khác nhau, và nhiều câu hỏi có đáp án nằm ở bản
-đó~--- bỏ đi thì chất lượng giảm (Hit@10 từ 0,818 xuống 0,787). Vì vậy bộ dữ liệu được giữ
-nguyên, và điểm sửa phải nằm ở chỗ khác: mã hoá lại đoạn văn bản kèm ngữ cảnh (tên luật,
-tên điều khoản) và bổ sung một bước xếp lại~--- hai việc đều cần GPU.
+\section{Kết luận}\label{sec:conclusion}
 
-\section{Phân tích thang đo}
-Có một nhóm 32 câu hỏi mà hệ thống chỉ đạt Hit@1 = 0,062, kéo số trung bình toàn bộ xuống. Kiểm
-tra lại tệp kết quả cho thấy nguyên nhân nằm ở \emph{thang đo} chứ không phải ở hệ thống: đó là
-những câu mà đáp án vàng cũ đã bị đánh dấu là ``không xác minh được'' nên hệ thống không thể
-trúng theo mã đoạn. Báo cáo vẫn công bố con số 0,452 trên toàn bộ 281 câu vì đó là con số thật
-và không bóp chấm.
+ViCivil-TKG cho thấy câu hỏi pháp lý mang mốc thời gian~--- dạng câu hỏi quan trọng nhất mà ít được hỗ trợ nhất trong dữ liệu pháp lý tiếng Việt~--- có thể được giải quyết trọn vẹn bằng dữ liệu mở: corpus phân cấp 11.267 chunk gắn khoảng hiệu lực, đồ thị 33 văn bản/21 cạnh kế thừa xuất chuẩn RDF, chỉ mục ba tầng 14.099 thực thể, benchmark 281 câu có chuỗi kiểm chứng ba vòng, và bộ chỉ số truy hồi công khai cùng ba luật chấm. Với Hit@5 = 0,726 (0,796 trên nhóm verified) và Hit@10 = 0,868 khi có rerank, bộ dữ liệu đạt mức đủ dùng làm nền cho hệ RAG pháp lý, đồng thời công bố cả điểm yếu lẫn nguyên nhân để người kế tiếp bắt đầu từ đúng chỗ.
 
-Để làm rõ, bộ kết quả mới \texttt{benchmark/law\_eval\_v16\_equiv.json} đo lại ba cách:
-
-\begin{table}[H]
-\centering\small
-\caption{Ba cách chấm trên cùng một bộ câu hỏi, đo lại từ tệp kết quả gốc.}
-\label{tab:eval3}
-\begin{tabular}{@{}L{5.4cm}ccc@{}}
-\toprule
-\textbf{Cách chấm} & \textbf{Hit@1} & \textbf{Hit@3} & \textbf{Hit@5} \\
-\midrule
-A. Chỉ đúng khi trùng đúng mã đoạn (cách đang công bố) & 0,452 & 0,658 & 0,726 \\
-B. Chấp nhận nhiều đáp án (mọi mã đáp án, hoặc đoạn có nội dung chuẩn hoá trùng) & 0,459 & 0,662 & 0,726 \\
-C. Chỉ tính 241 câu có đáp án vàng xác minh được & 0,432 & 0,656 & 0,730 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Kết quả này đưa ra hai điều. Một là quy tắc ``nhiều đáp án'' gần như không thay đổi con số
-(+0,007 ở Hit@1), tức là chênh lệch không đến từ việc hệ thống trả về đoạn khác mã. Hai là
-cách C không làm số đẹp hơn (0,432 so với 0,452), nên nhóm câu không xác minh được không phải
-là nguyên nhân kéo số xuống; con số 0,502 trên 245 câu đã xác minh mới là con số đại diện tốt,
-còn 0,452 trên 281 câu là con số bảo thủ. Việc ván lại nhóm 32 câu bằng một mô hình chấm
-điểm cần GPU, nên được ghi lại như việc cần làm tiếp.
-
-Tổng hợp ba cách chấm, câu trả lời đầy đủ cho CQ3 là: chất lượng đo được của hệ thống nằm
-trong khoảng 0,45--0,50 ở Hit@1 tuỳ cách chia tập; khoảng này \emph{không} bị bóp bởi quy tắc
-chấm (cách B chỉ nhích +0,007) và \emph{không} bị nhóm câu chưa xác minh kéo xuống (cách C còn
-thấp hơn); thành phần tăng điểm rõ ràng nhất là bước xếp lại bằng mô hình (+0,043 Hit@1,
-+0,050 Hit@10 so với phép tái lập thuần thống kê).
-
-% ======================= CHƯƠNG 6 =======================
-\chapter{Khó khăn gặp phải và hướng phát triển}
-
-Quá trình xây dựng bộ dữ liệu không đi theo đường thẳng: một số quyết định ban đầu phải sửa
-lại khi kiểm chứng, một số dữ liệu phải khôi phục sau sự cố. Chương này liệt kê các sự cố theo
-dạng ``biểu hiện~--- đã xử lý thế nào'' để người kế thừa tránh lặp lại, rồi tổng kết những gì
-đã làm thêm ở phiên bản này và những việc còn bỏ ngỏ.
-
-\begin{table}[H]
-\centering\small
-\caption{Những khó khăn đã gặp và cách đã xử lý.}
-\label{tab:issues}
-\begin{tabular}{@{}L{5.0cm}L{4.4cm}L{5.2cm}@{}}
-\toprule
-\textbf{Khó khăn} & \textbf{Biểu hiện} & \textbf{Đã xử lý thế nào} \\
-\midrule
-Tin đoạn trích tìm kiếm làm nhiễu quan hệ & 142 cạnh sửa đổi sai & Chỉ nhận quan hệ từ lời nói đầu văn bản hợp nhất \\
-Ngày hỏi nằm ngoài thời gian hiệu lực & 48 câu hỏi không dùng được & Kiểm tra ngày hỏi trước khi nhận câu \\
-Ghi đè làm mất dữ liệu đã trích & mất khoảng 2.900 dòng & Bắt buộc sao lưu trước khi ghi đè \\
-Hệ thống trả nguồn khác với đáp án đúng & 32 câu chỉ đạt 0,062 & Công bố đúng số thay vì làm đẹp con số \\
-PDF ảnh không có lớp chữ & không tách được chunk & Tách riêng hàng chờ đọc lại, không đoán \\
-Thư viện vẽ chạy sai trên một số trình duyệt & trang trắng, không báo lỗi & Chạy thử trên Chrome và Edge thật trước khi phát hành \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{Những gì đã làm thêm và những gì còn lại}
-Bốn hạn chế được nêu ở các phiên bản trước đã được xử lý trong phiên bản này, đều bằng công
-cụ mở và không cần GPU:
-
-\begin{itemize}
-\item \textbf{Xuất RDF/JSON-LD.} Đồ thị được xuất ra \texttt{docs/graph/law\_graph.ttl} và
-\texttt{docs/graph/law\_graph.jsonld} (33 luật, 21 quan hệ, 11.267 đoạn văn bản), kiểm tra
-được bằng thư viện \texttt{rdflib}. Nạp được vào Neo4j, rdf4j hay bất kỳ kho tri thức chuẩn.
-\item \textbf{Tra cứu ở mức điều khoản.} Chỉ mục 10.215 đơn vị Điều/Khoản/Điểm kèm số lần
-được dẫn chiếu được nhúng vào trang xem (Hình~\ref{fig:articles}).
-\item \textbf{Đo lại thang đo theo ba cách} và công bố kèm bảng~\ref{tab:eval3}, thay vì chỉ
-đưa một con số.
-\item \textbf{Pipeline tăng dần.} \texttt{src/law\_incremental.py} cắt chunk từ văn bản mới,
-ghi phần delta và hợp nhất vào kho, chỉ cần mã hoá cho phần mới thay vì chạy lại toàn bộ; đã
-thử chạy trên máy tính toán và tách được chunk mới mà không dùng GPU.
-\item \textbf{Phân tích lỗi truy hồi} bằng dữ liệu thật: 51 câu không tìm thấy đáp án được
-phân loại thành 27 lỗi truy hồi và 24 lỗi khác đoạn; đồng thời thử lọc đoạn văn bản và kết luận
-rằng không nên gộp hay bỏ đoạn trùng (Hình~\ref{fig:rank}, Bảng~\ref{tab:filter}).
-\item \textbf{Đồ thị RDF đã được nạp thật và trả lời được câu hỏi} bằng SPARQL
-(\texttt{src/law\_rdf\_verify.py}, 56.772 bộ ba): hỏi văn bản nào thay thế văn bản nào, văn bản
-nào còn hiệu lực tại một mốc thời gian, đoạn nào thuộc văn bản nào.
-\item \textbf{Kiểm chứng chỉ số đã công bố bằng hai cách độc lập} và ghi lại hai thử nghiệm
-cho thấy hướng sửa sai (thêm ngữ cảnh vào vectơ, và lọc bỏ đoạn trùng)~--- cả hai đều làm kết
-quả tệ hơn, nên được công bố để không ai lặp lại.
-\item \textbf{Bước xếp lại bằng mô hình đã chạy và được lưu lại} (BAAI/bge-reranker-v2-m3,
-149 giây trên một GPU A30): Hit@1 tăng từ 0,402 lên 0,445, Hit@10 từ 0,818 lên 0,868, và kết quả
-được lưu nên người khác kiểm chứng lại được mà không cần GPU.
-\item \textbf{Kiểm tra tự động.} Tệp \texttt{.github/workflows/verify.yml} chạy lại toàn bộ
-phép chấm, đo chất lượng dữ liệu, xuất và nạp đồ thị RDF, dựng lại trang xem từ mã nguồn, kiểm
-tra manifest và so kết quả với bản đã commit~--- mỗi lần push, không cần GPU.
-\end{itemize}
-
-Ba việc còn lại đều cần GPU: ván lại 32 câu hỏi bằng mô hình chấm điểm, số hoá văn bản dạng ảnh, và bổ sung văn bản mới.
-
-\section{Đề xuất lộ trình}
-Theo quy trình vận hành trong \texttt{docs/PROTOCOL.md}, các việc tiếp theo sắp theo thứ tự
-chi phí tăng dần:
-\begin{enumerate}
-\item \textbf{Hàng tháng (không cần GPU):} quét Công báo mới, tải PDF, phân loại chữ/ảnh,
-cắt chunk delta qua \texttt{law\_incremental.py}, chạy gate kiểm toán và eval hồi quy trước
-khi nhận.
-\item \textbf{Một phiên GPU (ưu tiên cao nhất):} mã hoá lại toàn bộ chunk kèm ngữ cảnh đúng
-cách (chỉ thêm metadata khi nó khác nhau giữa các đoạn, thay vì nhúng cứng như thí nghiệm đã
-fail), và ván lại nhóm 32 câu chưa xác minh bằng một mô hình chấm điểm công khai.
-\item \textbf{Khi có nguồn lực:} OCR các văn bản còn ở dạng ảnh trong hàng chờ; cấp DOI cho
-từng phiên bản dữ liệu qua một nhà lưu trữ học thuật.
-\end{enumerate}
-
-% ======================= CHƯƠNG 7 =======================
-\chapter{Kết luận}
-Công trình đã dựng được một bộ dữ liệu mở cho luật dân sự Việt Nam có chiều thời gian, gồm
-11.267 chunk đã gán mã, một đồ thị tri thức 33 văn bản với 21 quan hệ có nhãn, một bộ 281 câu hỏi
-có đáp án kèm kết quả đo công khai, và một trình xem một tệp chạy được offline. Chất lượng truy
-hồi đạt Hit@5 = 0,726 trên toàn bộ tập và 0,731 trên tập 245 câu đã xác minh; với bước xếp lại
-bằng mô hình, Hit@10 đạt 0,868 và toàn bộ xếp hạng được lưu trong kho để kiểm chứng độc lập.
-
-Ba câu hỏi nghiên cứu đều có câu trả lời đo được. Về CQ1, mã chunk bám cấu trúc pháp lý cho
-phép ba tầng chỉ mục và benchmark neo vào cùng một khoá, nên mọi bước tái lập chạy lại được
-từ kho mà không phá chỉ mục. Về CQ2, trạng thái hiệu lực ở mỗi mốc thời gian được tính lại từ
-dữ liệu (Bảng~\ref{tab:temporal}) và kiểm chứng độc lập bằng truy vấn SPARQL trên bản RDF.
-Về CQ3, ba cách chấm tách rõ phần lỗi của thang đo khỏi phần lỗi của hệ thống, và thí nghiệm
-xác định bước xếp lại là thành phần đóng góp nhiều nhất còn lại.
-
-Ở phiên bản này, bốn việc được nêu là hạn chế ở các phiên bản trước đã làm xong: đồ thị được
-xuất thêm ra RDF và JSON-LD, có chỉ mục 10.215 đơn vị điều khoản để tra cứu ở mức Điều, thang đo
-được đo lại theo ba cách để tách lỗi của phép chấm khỏi lỗi của hệ thống, và có pipeline tăng dần
-để thêm văn bản mới mà không chạy lại toàn bộ. Phần còn lại đã được nêu rõ: chưa cấp DOI cho từng
-phiên bản, cần số hoá các văn bản còn ở dạng ảnh, và cần một mô hình chấm điểm để ván lại nhóm
-câu hỏi chưa xác minh được. Ba việc sau cùng đều cần GPU, nên được ghi lại thay vì làm dở.
+Hướng phát triển tiếp theo theo thứ tự ưu tiên: hoàn tất phúc khảo chuyên gia cho nhóm đáp án chưa xác minh; lấp khoảng trống trích xuất còn lại được liệt kê trong kiểm toán; thử nghiệm lọc trùng lặp phiên bản ở tầng rerank (nơi việc làm méo hạng có thể kiểm soát); và mở rộng khung temporal KG sang lĩnh vực luật hình sự và hành chính.
 
 % ======================= TÀI LIỆU THAM KHẢO =======================
-\begin{english}
-\begin{thebibliography}{14}\small
-\addcontentsline{toc}{chapter}{Tài liệu tham khảo}
-
-\bibitem{blds2015} Quốc hội nước Cộng hoà Xã hội chủ nghĩa Việt Nam (2015).
-\textit{Bộ luật Dân sự số 91/2015/QH13}, thông qua ngày 24/11/2015, có hiệu lực từ 01/01/2017.
-
-\bibitem{rag2020} Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N.,
-Küttler, H., Lewis, M., Yih, W., Rocktäschel, T., Riedel, S., Kiela, D. (2020).
-Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. \textit{Advances in Neural
-Information Processing Systems 33 (NeurIPS 2020)}.
-
-\bibitem{bm25} Robertson, S., Zaragoza, H. (2009). The Probabilistic Relevance Framework:
-BM25 and Beyond. \textit{Foundations and Trends in Information Retrieval}, 3(4), 333--389.
-
-\bibitem{rrf} Cormack, G. V., Clarke, C. L. A., Buettcher, S. (2009). Reciprocal Rank Fusion
-Outperforms Condorcet and Individual Rank Learning Methods. \textit{Proceedings of SIGIR 2009},
-758--759.
-
-\bibitem{bge} Xiao, S., Liu, Z., Zhang, P., Muennighoff, N. (2023). C-Pack: Packaged Resources
-To Advance General Chinese Embedding. \textit{arXiv:2309.07597}. (Bao gồm dòng mô hình
-BAAI/bge-reranker dùng trong bước xếp lại.)
-
-\bibitem{rdf11} W3C (2014). \textit{RDF 1.1 Concepts and Abstract Syntax}. W3C Recommendation.
-
-\bibitem{jsonld11} W3C (2020). \textit{JSON-LD 1.1: A JSON-based Serialization for Linked Data}.
-W3C Recommendation.
-
-\bibitem{sha256} National Institute of Standards and Technology (2015). \textit{FIPS PUB 180-4:
-Secure Hash Standard (SHS)}.
-
-\bibitem{vegalite} Satyanarayan, A., Moritz, D., Wongsuphasawat, K., Heer, J. (2017).
-Vega-Lite: A Grammar of Interactive Graphics. \textit{IEEE Transactions on Visualization and
-Computer Graphics}, 23(1), 341--350.
-
-\bibitem{g6} AntV (2024). \textit{G6 5.x: A Graph Visualization Framework}. MIT License.
-\texttt{github.com/antvis/G6}.
-
-\bibitem{gephi} Bastian, M., Heymann, S., Jacomy, M. (2009). Gephi: An Open Source Software for
-Exploring and Manipulating Networks. \textit{Proceedings of the Third International AAAI
-Conference on Weblogs and Social Media (ICWSM 2009)}.
-
-\bibitem{gexf} Gephi Consortium (2015). \textit{GEXF File Format, version 1.3}.
-\texttt{gexf.net}.
-
-\bibitem{rdflib} RDFLib contributors (2024). \textit{rdflib: A Python library for working with RDF}, BSD-3 License, \texttt{github.com/RDFLib/rdflib}.
-
-\bibitem{ollama} Ollama (2024). \textit{Ollama: Get up and running with large language models
-locally}. MIT License. \texttt{ollama.com}.
-
+\begin{thebibliography}{9}
+\sloppy\hbadness=10000 % mục tiếng Anh trong mục lục tài liệu không hyphenate theo pattern tiếng Việt — dòng lệch nhẹ chấp nhận được
+\bibitem{blds2015} Quốc hội nước CHXHCN Việt Nam. \emph{Bộ luật Dân sự số 91/2015/QH13}, thông qua 24/11/2015, hiệu lực 01/01/2017.
+\bibitem{blds2005} Quốc hội nước CHXHCN Việt Nam. \emph{Bộ luật Dân sự số 33/2005/QH11}, thông qua 14/06/2005, hiệu lực 01/01/2006.
+\bibitem{blds1995} Quốc hội nước CHXHCN Việt Nam. \emph{Bộ luật Dân sự}, thông qua 28/10/1995, hiệu lực 01/07/1996.
+\bibitem{rdf11} R. Cyganiak, D. Wood, M. Lanthaler. \emph{RDF 1.1 Concepts and Abstract Syntax}. W3C Recommendation, 2014.
+\bibitem{jsonld} G. Kellogg, M. Sporny, D. Longley. \emph{JSON-LD 1.1: A JSON-based Serialization for Linked Data}. W3C Recommendation, 2020.
+\bibitem{embeddinggemma} Google. \emph{embeddinggemma-300m: State-of-the-art open embedding model}. HuggingFace, 2025. \url{https://huggingface.co/google/embeddinggemma-300m}
+\bibitem{bm25} S. Robertson, H. Zaragoza. \emph{The Probabilistic Relevance Framework: BM25 and Beyond}. Foundations and Trends in Information Retrieval, 3(4), 2009.
+\bibitem{rrf} G. V. Cormack, C. L. A. Clarke, S. Büttcher. \emph{Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods}. SIGIR 2009.
+\bibitem{bge} X. Zhang, et al. \emph{BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation}. arXiv:2402.03216, 2024.
+\bibitem{g6} AntV. \emph{G6: A Graph Visualization Framework} (v5.1.1). \url{https://g6.antv.antgroup.com}
 \end{thebibliography}
-\end{english}
-
-% ======================= PHỤ LỤC =======================
-\appendix
-\chapter{Bản đáp án cho yêu cầu của đề tài}
-\begin{table}[H]
-\centering\small
-\caption{Đối chiếu từng yêu cầu với phần tương ứng trong báo cáo.}
-\label{tab:reqmap}
-\begin{tabular}{@{}L{5.8cm}L{1.4cm}L{7.6cm}@{}}
-\toprule
-\textbf{Yêu cầu} & \textbf{Mục} & \textbf{Kết quả} \\
-\midrule
-Chia file bộ luật thành các chunk & Chương 2 & 11.267 chunk theo Điều/Khoản/Điểm, mã ổn định \\
-Lưu trữ thành cơ sở dữ liệu các chunk có nhãn & Chương 2 & Ba tầng chỉ mục: tra theo mã, theo nghĩa, theo quan hệ \\
-Chia sẻ chunk và node & Chương 4 & GEXF 1.3 mở bằng Gephi, RDF và JSON-LD cho kho tri thức chuẩn, mã chunk dùng chung được~--- còn thiếu DOI \\
-Xây dựng đồ thị tri thức & Chương 3 & 33 nút, 21 cạnh có nhãn và mốc thời gian \\
-Cập nhật theo đồ thị động & Chương 3 & Thanh thời gian: năm 2012 có 4 luật, năm 2026 có 14 luật \\
-Cập nhật thời gian & Chương 3 & Mỗi luật có khoảng hiệu lực; tự kiểm ở ba mốc thời gian \\
-Nêu khó khăn và đề xuất cải tiến & Chương 6 & Sáu khó khăn, ba nhóm đề xuất theo lộ trình \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\chapter{Nguồn của từng hình trong báo cáo}
-\begin{table}[H]
-\centering\small
-\caption{Cách tạo ra từng hình và tệp dữ liệu tương ứng.}
-\label{tab:figsrc}
-\begin{tabular}{@{}clL{4.6cm}L{5.2cm}@{}}
-\toprule
-\textbf{Hình} & \textbf{Nội dung} & \textbf{Cách tạo} & \textbf{Nguồn} \\
-\midrule
-\ref{fig:pipeline} & Pipeline tổng quan & Vẽ TikZ trong báo cáo & Bảng~\ref{tab:steps} \\
-\ref{fig:dist} & Số chunk theo văn bản & Biểu đồ Vega-Lite & \texttt{data/civil\_chunks.jsonl} \\
-\ref{fig:g2026} & Đồ thị năm 2026 & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
-\ref{fig:g2012} & Đồ thị năm 2012 & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
-\ref{fig:timeline} & Phổ thời gian & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
-\ref{fig:tooltip} & Thẻ tin khi rê chuột & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
-\ref{fig:drawer} & Khung chi tiết & Ảnh chụp màn hình trang xem & \texttt{docs/graph/explorer.html} \\
-\ref{fig:articles} & Tra cứu điều khoản & Ảnh chụp từ trình duyệt & \texttt{docs/graph/explorer.html} \\
-\ref{fig:eval} & Kết quả truy hồi & Biểu đồ Vega-Lite & \texttt{benchmark/law\_eval\_v12.json} \\
-\ref{fig:rank} & Vị trí đáp án vàng & Biểu đồ Vega-Lite & \texttt{benchmark/error\_analysis.json} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\chapter{Kiểm tra trước khi phát hành}
-\begin{table}[H]
-\centering\small
-\caption{Các kiểm tra thực hiện trước khi phát hành.}
-\label{tab:checks}
-\begin{tabular}{@{}L{6.9cm}L{8.5cm}@{}}
-\toprule
-\textbf{Kiểm tra} & \textbf{Kết quả} \\
-\midrule
-Mã SHA-256 của mọi tệp & 162/162 khớp manifest; hai gương giống nhau (trừ README vì chính sách platform khác nhau) \\
-Quét chữ ẩn, khoá bí mật & Không phát hiện \\
-Mọi tệp JSON/JSONL/GEXF mở được & Có \\
-Chạy trên Chrome thật và Edge thật & Không có lỗi JavaScript \\
-Trang xem chạy khi mất mạng & Có (không cần CDN) \\
-Truy vấn thời gian tự kiểm & Đúng ở cả ba mốc 2000, 2010, 2020 \\
-Đo lại thang đo theo ba cách & Tệp \texttt{benchmark/law\_eval\_v16\_equiv.json}, số A tái lập đúng bản đang công bố \\
-Đo chất lượng đoạn văn bản & 0 đoạn rỗng, 18,7\% đoạn dưới 120 ký tự, 6,4\% trùng nội dung \\
-Phân tích lỗi truy hồi & 51 câu không có đáp án được phân loại: 27 lỗi truy hồi, 24 lỗi khác đoạn \\
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering\small
-\caption{Kiểm tra tái lập và hạ tầng phát hành (tiếp Bảng~\ref{tab:checks}).}
-\label{tab:checks2}
-\begin{tabular}{@{}L{6.9cm}L{8.5cm}@{}}
-\toprule
-\textbf{Kiểm tra} & \textbf{Kết quả} \\
-\midrule
-Kết quả tái lập từ kho & Chạy \texttt{bash tools/reproduce.sh}: Hit@1 = 0,402, Hit@10 = 0,818, giống nhau giữa máy có và không có numpy \\
-Chỉ số đã công bố tái lập được & Tính lại từ \texttt{ranks\_hybrid.json}: Hit@1 = 0,464, Hit@5 = 0,727, sát con số đã công bố \\
-Chỉ số sau khi xếp lại tái lập được & Tính lại từ \texttt{rerank\_result.json}: Hit@1 = 0,445, Hit@5 = 0,787, Hit@10 = 0,868 \\
-Hai thử nghiệm hướng sửa & Thêm ngữ cảnh làm tệ hơn; lọc đoạn trùng làm tệ hơn~--- đều đã ghi lại \\
-Đồ thị RDF nạp được thật & 56.772 bộ ba, trả lời được câu hỏi SPARQL \\
-Kiểm tra tự động mỗi lần push & \texttt{.github/workflows/verify.yml} chạy lại phép chấm, quét chất lượng, kiểm tra manifest và so kết quả tái lập với bản đã commit \\
-Công cụ kiểm tra chạy được trên mọi máy & \texttt{tools/law\_sweep.py} đã bỏ đường dẫn cứng theo máy; dùng đường dẫn từ tham số dòng lệnh, chạy được cả trên CI \\
-\end{tabular}
-\end{table}
-
-\chapter{Tái lập nhanh không cần GPU}
-Mọi lệnh dưới đây chạy trong thư mục gốc của kho, trên Python 3.11 trở lên, không cần GPU,
-không cần mô hình, không cần mạng (trừ lần cài thư viện đầu tiên).
-
-\begin{table}[H]
-\centering\small
-\caption{Các lệnh tái lập và kết quả kỳ vọng.}
-\label{tab:repro-cmds}
-\begin{tabular}{@{}L{6.4cm}L{8.8cm}@{}}
-\toprule
-\textbf{Lệnh} & \textbf{Kết quả kỳ vọng} \\
-\midrule
-\texttt{pip install -r requirements.txt} & Cài numpy và rdflib (hai thư viện duy nhất) \\
-\texttt{bash tools/reproduce.sh} & Chấm lại 281 câu từ kho: Hit@1 = 0,402, Hit@10 = 0,818 \\
-\texttt{python src/law\_eval\_repro.py} & Ghi lại \texttt{benchmark/law\_eval\_repro.json} với cùng chỉ số \\
-\texttt{python src/law\_rerank\_verify.py} & Tính lại chỉ số sau xếp lại từ \texttt{rerank\_result.json}: Hit@1 = 0,445 \\
-\texttt{python src/law\_rdf\_export.py} và \texttt{python src/law\_rdf\_verify.py} & Xuất TTL/JSON-LD 56.772 bộ ba rồi nạp lại bằng rdflib \\
-\texttt{python tools/law\_manifest.py . SHA256SUMS.check gh} rồi \texttt{diff SHA256SUMS SHA256SUMS.check} & Manifest khớp cây tệp~--- hai lệnh này cũng chính là bước CI chạy \\
-\texttt{python tools/law\_sweep.py .} & Quét chất lượng nội dung + kiểm tra manifest: \texttt{SWEEP CLEAN} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Nếu chạy trên máy không có numpy, \texttt{law\_eval\_repro.py} tự chuyển sang nhánh Python
-thuần: thứ hạng và chỉ số không đổi (điểm được làm tròn trước khi xếp hạng), chỉ chậm hơn ---
-đây chính là cách kiểm chứng ``hai cách chạy cho kết quả giống hệt'' được nêu ở mục~5.3.
 
 \end{document}
