@@ -17,7 +17,7 @@ import io, json, os, datetime
 
 R = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 OUT = os.path.join(R, "docs", "graph")
-GEN = datetime.date.today().isoformat()
+GEN = "2026-10-28"  # release date; fixed so CI regeneration is byte-identical
 
 # ---------------------------------------------------------------- input
 tg = json.load(io.open(os.path.join(R, "provenance", "temporal_graph.json"), encoding="utf-8"))
