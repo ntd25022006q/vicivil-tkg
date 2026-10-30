@@ -1,7 +1,7 @@
 b457e8e53822d24a49ce29cc065e44307bf10bc5e3035c4bbd0b4fbd7787a69c  ./CITATION.cff
 597e0ff176c762c9bbee1ba2fa7a91265c4735f94b1d753cafd43d2c64e4bb9c  ./DATASHEET.md
 db859d38cb76bcbe814d27594fcf9b3d43705690767ed05606cb6d5ee864219a  ./LICENSE
-c97c76c47cff0c91fdef13ffe31a4994c6168241a3767f68d0b72c393d40a888  ./README.md
+3ebc9183b66685a092c8c0d6d533d44cbdc339e63309d23d7762f8def6ff9090  ./README.md
 126499f9bd00a7a1fe687e38b1c4ccb5746b8542b100eb199e2b5507a36050fc  ./THIRD-PARTY-NOTICES.md
 79f220def1cfce587ff7ed4fa7777d7cef384f2ac06c4e8705e01a5a485f9225  ./benchmark/as_of_fixes.json
 a1c7cc738f6d6243bbb214e7a70d3e3e21d5f5567c7870d274b6c6dfcd34c7a2  ./benchmark/bench_split.json
@@ -19,7 +19,10 @@ a6ef3752d05c6ddd7e15aa1a4c779d0ff8560909a135ebeafc63e2e68a2a9b4c  ./benchmark/fi
 ec9b357411802e923808af5b3fdc0cda655b5b0122ff89bbd8e0cbbd900e4ef9  ./benchmark/law_eval_repro.json
 08abe726ba30d989650b1d00c419bab04f293245f7ad629f02bc582530735cd3  ./benchmark/law_eval_v12.json
 174086bc459e525a63e36999bd1d9edc69794828d222d18a1a272b3bba5d3da5  ./benchmark/law_eval_v16_equiv.json
+7e4295348676eba8d4bee038319046f6b0267472e6412d96658422f3ba47e959  ./benchmark/llm_rag_result.json
+7f947ac3deb16cc0b34432c2bc263e4c4f81513ea4ea542c763944a0fee41875  ./benchmark/llm_rag_significance.json
 2885c9a677fe669ef5e8ed0270ddd683753a26ca6133ca887049a442407a866a  ./benchmark/question_vectors.json
+92249a2a467ce508992f04a8c48ab1f176f7bd61aa18f7a656e8c2f6a8f58e7b  ./benchmark/rag_inputs.json
 d5b775885d4ffde46ac6f7c95980cdb5ab5b96d12e58006369bfff8e031b75ff  ./benchmark/rank_recompute_from_repo.json
 e4dd191b9616d11d81615be05ebc08f00671d6d2ce5995025788d6e00c53ad0f  ./benchmark/regold.json
 05696568c5927d7caa5cdb979b0b1278be4d694481e04483ebee2822864053c5  ./benchmark/regold_v2.json
@@ -44,7 +47,7 @@ d2535ac84726807023998681abc29b7bb03372fe91271f6a5cf8a9ba40995ad3  ./docs/graph/l
 072c054f2a6310725e038c38a71e00052705e31835632462c9717a23a384e895  ./docs/graph/vega-embed.min.js
 cd32314b1e76e7d879dc9f0534b62be714df03554486c7ca2381abfd0a92d2f4  ./docs/graph/vega-lite.min.js
 e432c751a6363f4a61da62920cc7d7ebd13cf09d82949f8f486248f8071dc3ce  ./docs/graph/vega.min.js
-13bc015e0073caa55e1b4c7b5444869cbc8f467801a1f0c46d9610a28cf7fe2f  ./docs/report/ViCivil-TKG_bao-cao.pdf
+e0580fb9eece0767e614e60f7817fe03da566fa4ccfab7cee4886596fbd50c48  ./docs/report/ViCivil-TKG_bao-cao.pdf
 b282a9abd69631aea98d24e79d128a3545ffbeb3cc5339d46f1741cfb47701b4  ./docs/report/figures/fig05_graph_2026.png
 836197dc1bd3ba57d7890751115612d5a49b47b4feddac31e4ef8845a1bdc1ad  ./docs/report/figures/fig06_graph_2012.png
 0a8a3fe0f378618cb57e3e1a7b077bd4b60214b79122f4761b1743faa72d3f36  ./docs/report/figures/fig07_timeline_tab.png
@@ -54,7 +57,7 @@ bdf1080d595fb96c7cfdbc611f5a925fb805afb6d8ddc7383540f219d156580b  ./docs/report/
 1f16edc3844caa80e779e4deb61f4e8603c319b90b63c5bdd92bf942f0679c93  ./docs/report/figures/fig10_ket-qua-truy-hoi.png
 064c6974caca148fca43348667f35ffc1644a8f3535aac4076f0118ea6bd9cf2  ./docs/report/figures/fig11_phan-bo-chunk.png
 d09c50d13b7290e6d05da1b7a94159e059c33d43965f24cefc81155b22840ecc  ./docs/report/figures/fig12_vi-tri-dap-an.png
-ab5cbc67f4410eee53f7f441ad39ac73f605d6167d27be353ea7dd4fc5fd1536  ./docs/report/report.tex
+562842d2cbc28e1219a103f3ef2a7bef080052d1e8ef3f58d18e37a746c679ed  ./docs/report/report.tex
 04e13e7b3f8807a3e1aca1c3fff3e6fdc8b60a192e1df14d0ca2d7d3c926fcf6  ./index/kv_store_entity_chunks.json
 72240b062d1bbfac9a3c3a56493662eb370acab66494c09f437f321f6590a360  ./index/kv_store_relation_chunks.json
 61262df4e16a404e7ce8f7a4300310103d618e772ba4555ecdeae7f67280e1df  ./index/kv_store_text_chunks.json
