@@ -37,8 +37,9 @@
 - **Benchmark:** 281 situational Qs (271 dev+syn + 12 hand) + no gold
   weak/partial tiers left: 245 verified / 32 regolded (same-Q better-chunk
   with `regolded_from` provenance) / 4 author-verified stubs; 1 question
-  dropped with written reason (`dropped_log.json`); double-rater trail
-  (8B full bench + 14B doubtfuls) in `second_rater*.json`, `regold.json`,
+  dropped with written reason (`dropped_log.json`); model-audit cascade trail
+  (8B full bench: 162/281 accepted; 14B re-audit of the 120 flagged:
+  97 confirmed / 23 reversed) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
 ### Per-law size table (chunk counts, v1.6.0)
