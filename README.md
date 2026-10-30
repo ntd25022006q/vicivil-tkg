@@ -45,7 +45,7 @@ configs:
   - provenance/law_index_stats.json
 ---
 
-# ViCivil-TKG v1.6.0 — Vietnamese Civil Law Temporal Knowledge Graph
+# ViCivil-TKG v1.7.0 — Vietnamese Civil Law Temporal Knowledge Graph
 
 Article-granularity temporal KG of 17 Vietnamese civil-law texts (1996–2026,
 BLDS 1995/2005/2015 included) with a 281-question situational benchmark,
@@ -63,7 +63,7 @@ from official consolidation preambles.
 | `index/` | dense 768-d matrices (`embeddinggemma-300m`, L2-normed) for 14,099 entities / 20,311 in-corpus relation rows (+ 439 cross-version successor edges, sim ≥ 0.90) + kv chunk maps |
 | `provenance/` | temporal graph (33 law windows + 21 amendment/succession edges), 1,506 CITE edges, lineage candidates with similarity bands, source audit, ablation + significance + faithfulness artifacts |
 | `sources_official/` | 5 signed gazette PDFs (BLDS 1995/2005/2015, HNGD 2000, TNBTCNN 2017) used to verify the corpus |
-| `docs/` | RDF/Turtle + JSON-LD + GEXF exports, offline HTML graph explorer, 16-page NCKH report (TeX + PDF) |
+| `docs/` | RDF/Turtle + JSON-LD + GEXF exports, offline HTML graph explorer, 18-page NCKH report (TeX + PDF) |
 
 ## Data fields
 
@@ -106,14 +106,26 @@ from official consolidation preambles.
  "gold_ids": ["BLDS2015|Dieu27|Khoan1|Diema"], "gold_tier": "regolded"}
 ```
 
-## Metrics (frozen v1.2.3 scoring, reproducible without a GPU)
+## Metrics (three published scoring rounds; per-question artifacts for each)
 
-Hybrid retriever (BM25 + dense 768-d, RRF fusion, temporal filter), n = 281:
+Hybrid retriever (BM25 + dense 768-d, RRF fusion, temporal filter), n = 281.
+
+**Frozen v1.2.3 overview** (equivalence-group matching, live query encoder):
 **Hit@1 0.452 / Hit@3 0.658 / Hit@5 0.726 / Hit@10 0.794, MRR 0.569.**
 Stratified: verified 245 → 0.502/0.678/0.731/0.796; regolded 32 →
 0.062/0.531/0.719/0.812; author-verified 4 → 0.5/0.5/0.5/0.5.
-Adding `BAAI/bge-reranker-v2-m3` (30 candidates/question): Hit@10 **0.868**,
-MRR 0.594 (from 0.550); deltas significant (Wilcoxon p < 0.001, `provenance/significance.json`).
+**Strict exact-ID chain** (stored vectors; every TCR/SGB/LLM number below uses it):
+baseline Hit@1 0.409 / Hit@5 0.729 / Hit@10 0.819, MRR 0.554; adding
+`BAAI/bge-reranker-v2-m3` (30 candidates/question): Hit@1 0.445 / Hit@10 **0.868**,
+MRR 0.591 (paired Wilcoxon over per-question MRR p = 0.034; ranks in
+`benchmark/rerank_result.json`). Historical live-encoder rerank run: MRR 0.594
+(from 0.550) — same protocol family, kept for cross-check.
+
+**No-GPU reproduction** (`bash tools/reproduce.sh`, `benchmark/law_eval_repro.json`):
+Hit@1 0.402 / Hit@5 0.730 / Hit@10 0.819, MRR 0.545 — Hit@5/Hit@10 identical to the
+strict chain; Hit@1 sits 0.7 pp under the strict baseline (0.409) from stored-vector
+precision and RRF tie order, and 5.0 pp under the frozen overview (0.452) additionally
+because of the scoring rule (equivalence-groups vs exact-ID).
 
 **Temporal-Constraint Reranking (TCR)** — dropping candidates whose law is not in force at the
 question's `as_of` (the graph's validity windows acting on retrieval) lifts Hit@1 0.409 → 0.530
@@ -121,7 +133,7 @@ over the hybrid baseline and 0.445 → 0.609 over the reranked baseline (MRR 0.5
 0.591 → 0.706; Wilcoxon p < 2·10⁻¹⁵ both). Raw numbers + ablations (recency bias hurts;
 citation-graph boost neutral at 1,506 edges) in `benchmark/tcr_sgb_result.json`.
 
-**End-to-end LLM RAG validation** — feeding each question through a small local LLM (Qwen2.5-3B-Instruct, greedy decode, deterministic) shows the TCR retrieval gain transfers to answers: article-citation accuracy 0.488 → 0.594 when the RAG context is temporally filtered (+10.7 pts, McNemar p = 1.3·10⁻⁴; Span-F1 +2.3 pts, Wilcoxon p = 9.4·10⁻⁵), while closed-book cites correctly only 0.4% of the time and abstains 55% of it. Context Hit@5 values reproduce the published retrieval numbers exactly (0.729 / 0.811 / 0.846). Per-question answers in `benchmark/llm_rag_result.json`, paired tests in `benchmark/llm_rag_significance.json`, exact RAG contexts in `benchmark/rag_inputs.json`.
+**End-to-end LLM RAG validation** — feeding each question through a small local LLM (Qwen2.5-3B-Instruct, greedy decode, deterministic) shows the TCR retrieval gain transfers to answers: article-citation accuracy 0.488 → 0.594 when the RAG context is temporally filtered (+10.7 pts, McNemar p = 1.3·10⁻⁴; Span-F1 +2.3 pts, Wilcoxon p = 9.4·10⁻⁵), while closed-book cites correctly only 0.4% of the time and abstains 55% of it. Context Hit@5 values reproduce the published retrieval numbers exactly (0.729 / 0.811 / 0.846). The rerank+TCR condition covers 280/281 questions: for NEW90253 the stored Track-B rerank pool is empty after strict temporal filtering (no candidate in force at its as_of), so it is skipped by protocol. Per-question answers in `benchmark/llm_rag_result.json`, paired tests in `benchmark/llm_rag_significance.json`, exact RAG contexts in `benchmark/rag_inputs.json`.
 
 **`as_of` repair (transparent):** 28/281 questions carried a date before their gold law took
 effect (23 × 2026-era statutes with a default 2024 date; 5 × stale HNGD 2000 gold). Dates were
