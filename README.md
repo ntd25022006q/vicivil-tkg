@@ -86,7 +86,7 @@ bench  = load_dataset("datbazuka2502/vicivil-tkg", "benchmark")["train"]   # 281
 
 - 36/281 gold answers (32 regolded + 4 author-verified) not yet independently expert-reviewed;
   a ready-made 50-item review package ships in `benchmark/review_package_50.md`.
-- ~500 item-level chunks have empty extraction text (numbered-item granularity); remaining
+- 0 empty-content chunks; 424 short item-level extractions (numbered-item granularity; `law_audit.json`: `empty`=0, `short_n`=424); remaining
   article-numbering gaps are measured in `provenance/law_audit.json`.
 - 603 near-duplicate chunk groups (identical statutory wording across law versions); measured
   top-5 collision impact on 10/281 questions; retrieval-time dedup rejected as rank-distorting.
