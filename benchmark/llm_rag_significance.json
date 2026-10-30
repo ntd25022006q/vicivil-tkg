@@ -1,0 +1,38 @@
+{
+ "rag_hybrid_vs_rag_hybrid_tcr": {
+  "n_common": 281,
+  "mcnemar_cite_b01": 45,
+  "mcnemar_cite_b10": 15,
+  "mcnemar_cite_p": 0.00013451408092849532,
+  "wilcoxon_span_f1_p": 9.407082312180452e-05,
+  "delta_cite_acc": 0.1068,
+  "delta_span_f1": 0.023
+ },
+ "rag_hybrid_vs_rag_rerank_tcr": {
+  "n_common": 280,
+  "mcnemar_cite_b01": 56,
+  "mcnemar_cite_b10": 27,
+  "mcnemar_cite_p": 0.0019314374822250477,
+  "wilcoxon_span_f1_p": 0.0013163728715586498,
+  "delta_cite_acc": 0.1036,
+  "delta_span_f1": 0.0242
+ },
+ "norag_vs_rag_hybrid": {
+  "n_common": 281,
+  "mcnemar_cite_b01": 136,
+  "mcnemar_cite_b10": 0,
+  "mcnemar_cite_p": 2.2958874039497803e-41,
+  "wilcoxon_span_f1_p": 7.960632986945008e-28,
+  "delta_cite_acc": 0.484,
+  "delta_span_f1": 0.1401
+ },
+ "rag_hybrid_tcr_vs_rag_rerank_tcr": {
+  "n_common": 280,
+  "mcnemar_cite_b01": 35,
+  "mcnemar_cite_b10": 36,
+  "mcnemar_cite_p": 1.0,
+  "wilcoxon_span_f1_p": 0.6530101001866521,
+  "delta_cite_acc": -0.0036,
+  "delta_span_f1": 0.0012
+ }
+}
