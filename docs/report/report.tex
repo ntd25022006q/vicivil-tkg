@@ -103,7 +103,7 @@ Luật dân sự Việt Nam không tồn tại trong một bản duy nhất: B�
 
 Công trình này xây dựng một bộ dữ liệu mở ViCivil-TKG giải quyết trực tiếp khoảng trống đó. Từ các tệp PDF công báo chính thức, 17 văn bản luật dân sự (1996--2026) được cắt thành 11.267 đoạn văn bản (chunk) theo cấu trúc Điều~--- Khoản~--- Điểm, mỗi đoạn mang một mã phân cấp ổn định và khoảng hiệu lực kế thừa từ văn bản cha. Trên nền corpus, công trình dựng một đồ thị tri thức thời gian gồm 33 văn bản và 21 cạnh kế thừa/sửa đổi được khai thác từ phần mở đầu văn bản hợp nhất, xuất ra cả ba định dạng RDF/Turtle, JSON-LD và GEXF; lập chỉ mục truy hồi ba tầng gồm 14.099 thực thể và 20.311 hàng quan hệ với vector 768 chiều; xây bộ benchmark 281 câu hỏi tình huống có đáp án được kiểm chứng ba vòng; và kèm một trình xem đồ thị dạng HTML chạy ngoại tuyến để người đọc tự kiểm chứng bằng mắt.
 
-Chất lượng truy hồi được đo trên 281 câu hỏi: Hit@1 = 0,452; Hit@3 = 0,658; Hit@5 = 0,726; Hit@10 = 0,794; MRR = 0,569. Trên nhóm 245 câu đã xác minh, Hit@1 đạt 0,502. Khi bổ sung bước xếp lại (rerank) bằng BAAI/bge-reranker-v2-m3, Hit@10 tăng lên 0,868 và mọi cải thiện đều có ý nghĩa thống kê (Wilcoxon $p<0{,}001$). Bổ sung tiếp lớp \emph{lọc ràng buộc thời gian} (TCR) khai thác khoảng hiệu lực của đồ thị, Hit@1 tăng từ 0,409 lên 0,530 khi không rerank và từ 0,445 lên 0,609 khi có rerank (Wilcoxon $p<2\\times10^{-15}$). Toàn bộ dữ liệu, mã nguồn, chỉ số và báo cáo được công bố công khai; kết quả tái lập được mà không cần GPU.
+Chất lượng truy hồi được đo trên 281 câu hỏi: truy hồi lai nền đạt Hit@1 = 0,409; Hit@5 = 0,729; Hit@10 = 0,819; MRR = 0,554. Khi bổ sung bước xếp lại (rerank) bằng BAAI/bge-reranker-v2-m3, Hit@10 tăng lên 0,868 và mọi cải thiện đều có ý nghĩa thống kê (Wilcoxon $p<0{,}001$). Bổ sung tiếp lớp \emph{lọc ràng buộc thời gian} (TCR) khai thác khoảng hiệu lực của đồ thị, Hit@1 tăng từ 0,409 lên 0,530 khi không rerank và từ 0,445 lên 0,609 khi có rerank (Wilcoxon $p<2\\times10^{-15}$). Trên mô hình ngôn ngữ nhỏ Qwen2.5-3B-Instruct, mức tăng của TCR truyền tải xuống chất lượng trả lời end-to-end: độ chính xác trích dẫn điều luật tăng từ 0,488 lên 0,594 khi ngữ cảnh RAG được lọc thời gian (McNemar $p = 1{,}3\times10^{-4}$). Toàn bộ dữ liệu, mã nguồn, chỉ số và báo cáo được công bố công khai; kết quả tái lập được mà không cần GPU.
 
 \vspace{0.3cm}
 \noindent\textbf{Từ khóa:} luật dân sự Việt Nam; đồ thị tri thức thời gian; dữ liệu mở; truy hồi thông tin; benchmark tiếng Việt; retrieval-augmented generation.
@@ -242,7 +242,7 @@ Chuỗi kiểm chứng đáp án gồm ba vòng: (1) mô hình 8B sinh câu hỏ
 
 \section{Kết quả chính}\label{sec:results}
 
-Bảng~\ref{tab:main} trình bày kết quả của bộ truy hồi lai trên 281 câu hỏi, theo bộ chỉ số đồng băng (frozen) \texttt{v1.2.3} dùng cho mọi so sánh. Chỉ số Hit@k là tỉ lệ câu có ít nhất một đáp án đúng nằm trong $k$ kết quả đầu; MRR là trung bình nghịch đảo hạng của đáp án đúng đầu tiên.
+Bảng~\ref{tab:main} trình bày kết quả của bộ truy hồi lai trên 281 câu hỏi, theo bộ chỉ số đồng băng (frozen) \texttt{v1.2.3} dùng cho mọi so sánh. Chỉ số Hit@k là tỉ lệ câu có ít nhất một đáp án đúng nằm trong $k$ kết quả đầu; MRR là trung bình nghịch đảo hạng của đáp án đúng đầu tiên. Báo cáo dùng hai protocol chấm, ghi rõ ở từng bảng: bảng tổng quan này dùng frozen \texttt{v1.2.3} (luật chấm khoan dung, khớp theo nhóm đáp án tương đương), còn các bảng so sánh TCR và LLM RAG ở các mục sau đo lại bằng luật chấm nghiêm theo đúng mã trong cùng một đợt chạy~--- vì vậy Hit@1 nền của cùng một hệ thống có hai giá trị 0,452 (frozen) và 0,409 (nghiêm); trong mỗi bảng, mọi số liệu đều theo đúng một protocol nên các hàng so sánh trực tiếp được với nhau.
 
 \begin{table}[htbp]
 \centering
@@ -305,6 +305,29 @@ La + rerank (nền) & 0,445 & 0,787 & 0,868 & 0,591 \\
 
 Hai phép ablation đi kèm cho biết giới hạn của phương pháp. Bổ sung điểm \emph{tươi mới} cho phiên bản luật mới nhất trong dòng kế thừa làm \emph{giảm} kết quả, vì bộ benchmark cố tình chứa câu hỏi nhắm đúng văn bản cũ còn hiệu lực tại mốc hỏi~--- xác nhận rằng ràng buộc thời gian đúng nghĩa là \emph{lọc theo khoảng hiệu lực}, không phải thiên vị văn bản mới. Tăng hạng theo đồ thị trích dẫn giữa các điều (SGB) ở mức trung tính (Wilcoxon $p = 0{,}11$): tại quy mô 1.506 cạnh, khối lượng lan truyền chưa đủ đổi thứ hạng, được ghi nhận là hướng mở khi corpus mở rộng. Toàn bộ số liệu thô của đợt đo nằm trong \texttt{benchmark/tcr\_sgb\_result.json}, tái lập được không cần GPU.
 
+\section{Truyền tải xuống hỏi--đáp end-to-end (LLM RAG)}\label{sec:llmrag}
+
+Các số liệu ở các mục trước đo chất lượng truy hồi; câu hỏi tự nhiên tiếp theo là mức tăng đó có chuyển thành câu trả lời tốt hơn không. Để trả lời, toàn bộ 281 câu được đưa qua một mô hình ngôn ngữ nhỏ chạy cục bộ, Qwen2.5-3B-Instruct (giải mã tham lam, tối đa 180 token mới, không lấy mẫu), trong bốn điều kiện: không RAG (đóng sách); RAG với ngữ cảnh là top-5 chunk của truy hồi lai; RAG khi top-5 đã qua lọc TCR; và RAG với top-5 rerank+TCR (280/281 câu, do một câu thiếu danh sách rerank lưu sẵn). Việc chấm điểm tránh dùng LLM làm trọng tài để giữ tính tái lập: \emph{độ chính xác trích dẫn} (Cite-Acc)~--- đáp án có dẫn đúng số Điều của một chunk chuẩn; Span-F1~--- F1 mức token giữa đáp án với nội dung chunk chuẩn; và tỉ lệ bỏ chạy. Ba giá trị Hit@5 ngữ cảnh (0,729 / 0,811 / 0,846) khớp tuyệt đối với các số truy hồi đã công bố, xác nhận bốn điều kiện dùng đúng pipeline đã công bố.
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Truyền tải xuống QA end-to-end: Qwen2.5-3B-Instruct, giải mã tham lam, 281 câu (rerank+TCR: 280 câu). Chấm tự động, không cần LLM trọng tài; Hit@5 ngữ cảnh khớp số truy hồi đã công bố.}
+\label{tab:llmrag}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}} l c c c c}
+\toprule
+Điều kiện & Cite-Acc & Span-F1 & Bỏ chạy & Hit@5 ngữ cảnh \\
+\midrule
+Không RAG (đóng sách) & 0,004 & 0,324 & 0,548 & --- \\
+RAG: truy hồi lai & 0,488 & 0,464 & 0,110 & 0,729 \\
+RAG: lai + TCR & \textbf{0,594} & 0,487 & 0,107 & 0,811 \\
+RAG: rerank + TCR & 0,593 & \textbf{0,488} & 0,111 & 0,846 \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+RAG làm thay đổi căn bản chất lượng trả lời: Cite-Acc từ 0,004 (đóng sách) lên 0,488 và tỉ lệ bỏ chạy giảm từ 0,548 xuống 0,110 (McNemar $p = 2{,}3\times10^{-41}$). Quan trọng hơn, mức tăng của TCR ở tầng truy hồi truyền tải xuống tầng trả lời: Cite-Acc tăng thêm 10,7 điểm phần trăm tuyệt đối khi ngữ cảnh được lọc thời gian (0,488~$\rightarrow$~0,594; McNemar $p = 1{,}3\times10^{-4}$) và Span-F1 tăng 2,3 điểm (Wilcoxon $p = 9{,}4\times10^{-5}$). Cấu hình rerank+TCR cho ngữ cảnh tốt nhất (Hit@5 $= 0{,}846$) nhưng chất lượng trả lời tương đương lai+TCR ($p = 1{,}0$): lợi ích của rerank bão hòa ở tầng trả lời với mô hình 3B~--- người tái lập có thể chọn cấu hình nhẹ hơn mà không mất chất lượng trả lời. Toàn bộ đáp án từng câu nằm trong \texttt{benchmark/llm\_rag\_result.json}, phép thử ghép cặp trong \texttt{benchmark/llm\_rag\_significance.json} và ngữ cảnh đầu vào trong \texttt{benchmark/rag\_inputs.json}.
+
 \section{Phân tích lỗi}\label{sec:errors}
 
 51/281 câu không có đáp án đúng trong top-10 được xem xét từng câu. Ba nguyên nhân chính: (i) \emph{trùng lặp điều luật giữa các văn bản}~--- nội dung điều được giữ nguyên chữ qua các thế hệ, làm các phiên bản khác năm chiếm chỗ trong top-5 (ảnh hưởng 10/281 câu, đã đo lường; lọc trùng tại thời điểm truy hồi bị loại vì làm méo hạng); (ii) \emph{khoảng trống trích xuất} ở một số văn bản còn thiếu điều con (đo trong \texttt{provenance/law\_audit.json}); (iii) \emph{câu hỏi ghép nhiều ý} cần gộp thông tin từ nhiều điều. Ba nhóm nguyên nhân này tương ứng ba hướng cải thiện đã nêu trong phần hạn chế.
@@ -336,13 +359,13 @@ Ba cơ chế bảo đảm tái lập được thiết kế cho người dùng \e
 
 \section{Hạn chế đã công bố}\label{sec:hanche}
 
-Công trình công bố bốn hạn chế chính một cách tường minh. (1) \emph{Chất lượng đáp án:} 36/281 câu chưa qua phúc khảo chuyên gia (32 regolded + 4 author-verified); gói phúc khảo 50 câu đã chuẩn bị sẵn cho người đánh giá độc lập. (2) \emph{Trích xuất:} khoảng 500 chunk cấp mục (item) rỗng nội dung do cấu trúc bản in; một số văn bản còn thiếu điều con (đo chi tiết trong \texttt{law\_audit.json}). (3) \emph{Trùng lặp:} 603 nhóm chunk trùng gần đúng, phần lớn do chữ luật được giữ nguyên giữa các thế hệ~--- hiện tượng có ý nghĩa pháp lý (điều luật ``bất biến'') nhưng gây nhiễu cho truy hồi; chưa có phương án lọc không làm méo hạng. (4) \emph{Phạm vi:} corpus bám khung nguồn tiếng Việt; bản phản chiếu tiếng Anh và các lĩnh vực luật ngoài dân sự chưa thuộc phạm vi phiên bản này. Bộ dữ liệu không phải tư vấn pháp lý.
+Công trình công bố bốn hạn chế chính một cách tường minh. (1) \emph{Chất lượng đáp án:} 36/281 câu chưa qua phúc khảo chuyên gia (32 regolded + 4 author-verified); gói phúc khảo 50 câu đã chuẩn bị sẵn cho người đánh giá độc lập. (2) \emph{Trích xuất:} 2.107/11.267 chunk (18,7\%) dưới 120 ký tự~--- điều khoản con rỗng hoặc rất ngắn theo cấu trúc bản in (đo trong \texttt{chunk\_quality.json}); một số văn bản còn thiếu điều con (đo chi tiết trong \texttt{law\_audit.json}). (3) \emph{Trùng lặp:} 603 nhóm chunk trùng gần đúng, phần lớn do chữ luật được giữ nguyên giữa các thế hệ~--- hiện tượng có ý nghĩa pháp lý (điều luật ``bất biến'') nhưng gây nhiễu cho truy hồi; chưa có phương án lọc không làm méo hạng. (4) \emph{Phạm vi:} corpus bám khung nguồn tiếng Việt; bản phản chiếu tiếng Anh và các lĩnh vực luật ngoài dân sự chưa thuộc phạm vi phiên bản này. Bộ dữ liệu không phải tư vấn pháp lý.
 
 \section{Kết luận}\label{sec:conclusion}
 
-ViCivil-TKG cho thấy câu hỏi pháp lý mang mốc thời gian~--- dạng câu hỏi quan trọng nhất mà ít được hỗ trợ nhất trong dữ liệu pháp lý tiếng Việt~--- có thể được giải quyết trọn vẹn bằng dữ liệu mở: corpus phân cấp 11.267 chunk gắn khoảng hiệu lực, đồ thị 33 văn bản/21 cạnh kế thừa xuất chuẩn RDF, chỉ mục ba tầng 14.099 thực thể, benchmark 281 câu có chuỗi kiểm chứng ba vòng, và bộ chỉ số truy hồi công khai cùng ba luật chấm. Với Hit@5 = 0,726 (0,796 trên nhóm verified), Hit@10 = 0,868 khi có rerank và Hit@1 = 0,609 khi kết hợp rerank với lọc ràng buộc thời gian, bộ dữ liệu đạt mức đủ dùng làm nền cho hệ RAG pháp lý, đồng thời công bố cả điểm yếu lẫn nguyên nhân để người kế tiếp bắt đầu từ đúng chỗ.
+ViCivil-TKG cho thấy câu hỏi pháp lý mang mốc thời gian~--- dạng câu hỏi quan trọng nhất mà ít được hỗ trợ nhất trong dữ liệu pháp lý tiếng Việt~--- có thể được giải quyết trọn vẹn bằng dữ liệu mở: corpus phân cấp 11.267 chunk gắn khoảng hiệu lực, đồ thị 33 văn bản/21 cạnh kế thừa xuất chuẩn RDF, chỉ mục ba tầng 14.099 thực thể, benchmark 281 câu có chuỗi kiểm chứng ba vòng, và bộ chỉ số truy hồi công khai cùng ba luật chấm. Với Hit@5 = 0,726 theo bộ frozen \texttt{v1.2.3} (0,796 trên nhóm verified), Hit@10 = 0,868 khi có rerank và Hit@1 = 0,609 khi kết hợp rerank với lọc ràng buộc thời gian, bộ dữ liệu đạt mức đủ dùng làm nền cho hệ RAG pháp lý, đồng thời công bố cả điểm yếu lẫn nguyên nhân để người kế tiếp bắt đầu từ đúng chỗ.
 
-Hướng phát triển tiếp theo theo thứ tự ưu tiên: hoàn tất phúc khảo chuyên gia cho nhóm đáp án chưa xác minh; lấp khoảng trống trích xuất còn lại được liệt kê trong kiểm toán; thử nghiệm lọc trùng lặp phiên bản ở tầng rerank (nơi việc làm méo hạng có thể kiểm soát); mở rộng khung temporal KG sang lĩnh vực luật hình sự và hành chính; và đánh giá lại điểm tăng của lan truyền theo đồ thị trích dẫn khi corpus lớn hơn.
+Hướng phát triển tiếp theo theo thứ tự ưu tiên: hoàn tất phúc khảo chuyên gia cho nhóm đáp án chưa xác minh (việc đánh giá LLM end-to-end đã hoàn tất ở Mục~\ref{sec:llmrag}); lấp khoảng trống trích xuất còn lại được liệt kê trong kiểm toán; thử nghiệm lọc trùng lặp phiên bản ở tầng rerank (nơi việc làm méo hạng có thể kiểm soát); mở rộng khung temporal KG sang lĩnh vực luật hình sự và hành chính; và đánh giá lại điểm tăng của lan truyền theo đồ thị trích dẫn khi corpus lớn hơn.
 
 % ======================= TÀI LIỆU THAM KHẢO =======================
 \begin{thebibliography}{9}
