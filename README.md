@@ -59,7 +59,7 @@ from official consolidation preambles.
 | folder | content |
 |---|---|
 | `data/` | 11,267 chunk rows at `Dieu`/`Khoan`/`Diem` granularity; per-row source URL + type; law validity window inherited by every chunk; decontaminated extraction (zero CJK/PUA glyphs by automated gate) |
-| `benchmark/` | 281 situational questions with gold chunk ids + `gold_tier` (245 verified / 32 regolded / 4 author-verified), per-question ranks, double-rater + regold audit trail, as-of repair log (`as_of_fixes.json`), TCR experiment (`tcr_sgb_result.json`), 50-item expert review package, end-to-end LLM RAG run (`rag_inputs.json`, `llm_rag_result.json`, `llm_rag_significance.json`) |
+| `benchmark/` | 281 situational questions with gold chunk ids + `gold_tier` (245 verified / 32 regolded / 4 author-verified), per-question ranks, model-audit cascade (8B full pass 162/281 accepted; 14B deep pass on the 120 flagged: 97 confirmed / 23 reversed) + regold trail, as-of repair log (`as_of_fixes.json`), TCR experiment (`tcr_sgb_result.json`), 50-item expert review package, end-to-end LLM RAG run (`rag_inputs.json`, `llm_rag_result.json`, `llm_rag_significance.json`) |
 | `index/` | dense 768-d matrices (`embeddinggemma-300m`, L2-normed) for 14,099 entities / 20,311 in-corpus relation rows (+ 439 cross-version successor edges, sim ≥ 0.90) + kv chunk maps |
 | `provenance/` | temporal graph (33 law windows + 21 amendment/succession edges), 1,506 CITE edges, lineage candidates with similarity bands, source audit, ablation + significance + faithfulness artifacts |
 | `sources_official/` | 5 signed gazette PDFs (BLDS 1995/2005/2015, HNGD 2000, TNBTCNN 2017) used to verify the corpus |
