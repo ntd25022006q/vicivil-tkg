@@ -15,8 +15,6 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="repla
 root, out, _ = sys.argv[1], sys.argv[2], sys.argv[3]
 targets = {
     "data/civil_chunks.jsonl": None,
-    "data/civil_chunks_v10.jsonl": None,
-    "data/civil_extract.json": None,
     "sources_official/BLDS1995_official.pdf": None,
     "sources_official/BLDS2005_official.pdf": None,
     "sources_official/BLDS2015_official.pdf": None,
