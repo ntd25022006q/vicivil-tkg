@@ -1,7 +1,7 @@
 b457e8e53822d24a49ce29cc065e44307bf10bc5e3035c4bbd0b4fbd7787a69c  ./CITATION.cff
 2d77bd3c95b56aa3ed31052cc594bc205f52fb3e56910c4e4630364c9b487510  ./DATASHEET.md
 db859d38cb76bcbe814d27594fcf9b3d43705690767ed05606cb6d5ee864219a  ./LICENSE
-3d9aa8a6d3092d61f91ec73fb4ef5556a1afed89c61c27f3dd5f4d1e5be8331e  ./README.md
+8917ef3b155c40807eae0020e147ff08a30e99b7de30b8e5597bee7573fc8851  ./README.md
 126499f9bd00a7a1fe687e38b1c4ccb5746b8542b100eb199e2b5507a36050fc  ./THIRD-PARTY-NOTICES.md
 79f220def1cfce587ff7ed4fa7777d7cef384f2ac06c4e8705e01a5a485f9225  ./benchmark/as_of_fixes.json
 1a178f708123be83e691352d34445dd962b339a52fef1ca38e4494577945d7ed  ./benchmark/bench_split.json
@@ -44,7 +44,7 @@ d2535ac84726807023998681abc29b7bb03372fe91271f6a5cf8a9ba40995ad3  ./docs/graph/l
 072c054f2a6310725e038c38a71e00052705e31835632462c9717a23a384e895  ./docs/graph/vega-embed.min.js
 cd32314b1e76e7d879dc9f0534b62be714df03554486c7ca2381abfd0a92d2f4  ./docs/graph/vega-lite.min.js
 e432c751a6363f4a61da62920cc7d7ebd13cf09d82949f8f486248f8071dc3ce  ./docs/graph/vega.min.js
-f249f81688d230616056d473da093ced38c866dc9cc4140af258583e32aede1d  ./docs/report/ViCivil-TKG_bao-cao.pdf
+13bc015e0073caa55e1b4c7b5444869cbc8f467801a1f0c46d9610a28cf7fe2f  ./docs/report/ViCivil-TKG_bao-cao.pdf
 b282a9abd69631aea98d24e79d128a3545ffbeb3cc5339d46f1741cfb47701b4  ./docs/report/figures/fig05_graph_2026.png
 836197dc1bd3ba57d7890751115612d5a49b47b4feddac31e4ef8845a1bdc1ad  ./docs/report/figures/fig06_graph_2012.png
 0a8a3fe0f378618cb57e3e1a7b077bd4b60214b79122f4761b1743faa72d3f36  ./docs/report/figures/fig07_timeline_tab.png
