@@ -2,7 +2,6 @@
 32fadbe56b63611f483f4d68c3ab763e09c7b29ce240c28cd588480a59388b85  ./DATASHEET.md
 db859d38cb76bcbe814d27594fcf9b3d43705690767ed05606cb6d5ee864219a  ./LICENSE
 a2806bbfc4338c545e63f9ba110d993b04be13fed737bff55dbfd3f0e25667a0  ./README.md
-cbbcc0cb06de403675fe840433f6f5a977fde4b45bd4ffeb87b9077215283097  ./README.md.bak-iaa
 126499f9bd00a7a1fe687e38b1c4ccb5746b8542b100eb199e2b5507a36050fc  ./THIRD-PARTY-NOTICES.md
 79f220def1cfce587ff7ed4fa7777d7cef384f2ac06c4e8705e01a5a485f9225  ./benchmark/as_of_fixes.json
 a1c7cc738f6d6243bbb214e7a70d3e3e21d5f5567c7870d274b6c6dfcd34c7a2  ./benchmark/bench_split.json
@@ -57,7 +56,6 @@ bdf1080d595fb96c7cfdbc611f5a925fb805afb6d8ddc7383540f219d156580b  ./docs/report/
 064c6974caca148fca43348667f35ffc1644a8f3535aac4076f0118ea6bd9cf2  ./docs/report/figures/fig11_phan-bo-chunk.png
 d09c50d13b7290e6d05da1b7a94159e059c33d43965f24cefc81155b22840ecc  ./docs/report/figures/fig12_vi-tri-dap-an.png
 356efee507211bbf5243e29e392d238b5dff969d187111845d14d53896b9af03  ./docs/report/report.tex
-5edc329f83ee5d6e4a0e2b34bc7840c4ce1ac1818b93db5b5d1c5d55cf710f0e  ./docs/report/report.tex.bak-iaa
 04e13e7b3f8807a3e1aca1c3fff3e6fdc8b60a192e1df14d0ca2d7d3c926fcf6  ./index/kv_store_entity_chunks.json
 72240b062d1bbfac9a3c3a56493662eb370acab66494c09f437f321f6590a360  ./index/kv_store_relation_chunks.json
 61262df4e16a404e7ce8f7a4300310103d618e772ba4555ecdeae7f67280e1df  ./index/kv_store_text_chunks.json
