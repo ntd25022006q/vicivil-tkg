@@ -31,7 +31,7 @@ Retrieval (hybrid BM25 + dense, RRF fusion, temporal filter, frozen `v1.2.3` sco
 retrieval: candidates whose law is not in force at the question's `as_of` are dropped before
 ranking. On the repaired benchmark this lifts **Hit@1 0.409 → 0.530** over the hybrid baseline
 and **0.445 → 0.609** over the reranked baseline (MRR 0.554 → 0.659 and 0.591 → 0.706; Wilcoxon
-*p* < 10⁻¹⁵ both; raw numbers + ablations in `benchmark/tcr_sgb_result.json`). Disclosed
+*p* < 2·10⁻¹⁵ both; raw numbers + ablations in `benchmark/tcr_sgb_result.json`). Disclosed
 ablations: a recency bias toward the newest law version *hurts* (questions deliberately target
 older in-force versions); citation-graph boosting is neutral at 1,506 edges.
 
