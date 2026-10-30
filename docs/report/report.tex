@@ -152,7 +152,7 @@ ViCivil-TKG lấp khoảng trống trên bằng năm sản phẩm đi liền nha
   \item \textbf{Corpus phân cấp có mốc thời gian:} 11.267 chunk thuộc 17 văn bản luật dân sự (1996--2026), mỗi chunk mang mã ổn định dạng \texttt{Law|Dieu|Khoan|Diem} và khoảng hiệu lực kế thừa từ văn bản cha; toàn bộ đã qua bước làm sạch và kiểm soát ký tự tự động.
   \item \textbf{Đồ thị tri thức thời gian:} 33 nút văn bản với 21 cạnh \textsc{Thay-thế}/\textsc{Sửa-đổi} khai thác từ phần mở đầu văn bản hợp nhất; xuất RDF/Turtle, JSON-LD, GEXF để nạp trực tiếp vào các kho tri thức chuẩn~\cite{rdf11,jsonld}.
   \item \textbf{Chỉ mục truy hồi ba tầng:} 14.099 thực thể và 20.311 hàng quan hệ có vector 768 chiều~\cite{embeddinggemma}, hỗ trợ tra theo mã chunk, theo tên thực thể và theo quan hệ.
-  \item \textbf{Benchmark 281 câu hỏi tình huống:} mỗi câu gắn mốc thời gian \texttt{as\_of} và đáp án dạng mã chunk; đáp án được kiểm chứng ba vòng (mô hình sinh, hai mô hình chéo, tác giả phúc khảo) với đầy đủ dấu vết kiểm định.
+  \item \textbf{Benchmark 281 câu hỏi tình huống:} mỗi câu gắn mốc thời gian \texttt{as\_of} và đáp án dạng mã chunk; đáp án được kiểm chứng ba vòng (mô hình sinh, thác nước thẩm định 8B rồi 14B, tác giả phúc khảo) với đầy đủ dấu vết kiểm định.
   \item \textbf{Trình xem đồ thị ngoại tuyến:} một tệp HTML duy nhất trực quan hoá dòng thời gian hiệu lực 33 văn bản, chạy được khi không có mạng.
 \end{enumerate}
 
@@ -238,7 +238,7 @@ Tầng truy hồi chuyển corpus thành ba cấu trúc tra cứu: (i) bảng b�
 
 Bộ benchmark gồm 281 câu hỏi tình huống tiếng Việt, mỗi câu gồm: đề bài tình huống thực tế (không nhắc tên điều luật), mốc thời gian \texttt{as\_of}, và tập đáp án dạng mã chunk. Câu hỏi được sinh theo kịch bản đời sống (``con đẻ muốn đổi từ họ cha sang họ mẹ cần điều kiện gì?'') thay vì hỏi trực tiếp nội dung điều luật, tránh đo lường khả năng ghi nhớ chuỗi ký tự của hệ thống.
 
-Chuỗi kiểm chứng đáp án gồm ba vòng: (1) mô hình 8B sinh câu hỏi kèm đáp án từ chính chunk nguồn; (2) hai mô hình độc lập chéo thẩm định toàn bộ, các câu bị nghi ngờ đưa vào vòng thứ hai chuyên sâu với mô hình 14B, kết quả 57 câu bị loại hoặc neo lại đáp án (\texttt{regolded}) kèm ghi rõ đáp án cũ; (3) tác giả phúc khảo nhóm yếu còn lại. Kết quả cuối phân thành ba tầng chất lượng công khai đúng như thực trạng: 245 câu \emph{verified}, 32 câu \emph{regolded}, 4 câu \emph{author-verified}. Toàn bộ dấu vết kiểm định được công bố trong \texttt{benchmark/}.
+Chuỗi kiểm chứng đáp án gồm ba vòng: (1) mô hình 8B sinh câu hỏi kèm đáp án từ chính chunk nguồn; (2) mô hình 8B thẩm định toàn bộ, xác nhận 162/281 câu dùng được ngay; 120 câu còn lại (96 không dùng được, 24 dùng được một phần) được mô hình 14B chấm lại chuyên sâu, xác nhận 97/120 (80,8\%) và đảo ngược 23 câu; 57 câu rời đáp án cũ được theo dõi trong \texttt{regold.json} (41 không tìm được đáp án thay thế, 16 được neo lại), tiếp tục thử neo lại với pool truy hồi trong \texttt{fixall.json} (44 câu, thành công 15); (3) tác giả phúc khảo nhóm yếu còn lại. Kết quả cuối phân thành ba tầng chất lượng công khai đúng như thực trạng: 245 câu \emph{verified}, 32 câu \emph{regolded}, 4 câu \emph{author-verified}. Toàn bộ dấu vết kiểm định được công bố trong \texttt{benchmark/}.
 
 \section{Kết quả chính}\label{sec:results}
 
