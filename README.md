@@ -1,110 +1,186 @@
-# ViCivil-TKG — Vietnamese Civil Law Temporal Knowledge Graph
+---
+language:
+- vi
+license: cc-by-4.0
+task_categories:
+- question-answering
+- text-retrieval
+pretty_name: ViCivil-TKG (Vietnamese Civil Law Temporal KG)
+size_categories:
+- 10K<n<100K
+tags:
+- vietnamese
+- legal
+- temporal-knowledge-graph
+- retrieval
+- benchmark
+- question-answering
+configs:
+- config_name: corpus
+  data_files: data/civil_chunks.jsonl
+- config_name: benchmark
+  data_files:
+  - benchmark/law_bench_200c.json
+  - benchmark/law_bench_v1.json
+- config_name: index
+  data_files:
+  - index/vdb_chunks.json
+  - index/vdb_entities.json
+  - index/vdb_relationships.json
+  - index/kv_store_text_chunks.json
+  - index/kv_store_entity_chunks.json
+  - index/kv_store_relation_chunks.json
+- config_name: provenance
+  data_files:
+  - provenance/temporal_graph.json
+  - provenance/cite_edges.json
+  - provenance/lineage_candidates.json
+  - provenance/amend_candidates.json
+  - provenance/law_sources.json
+  - provenance/law_audit.json
+  - provenance/ablation_AB.json
+  - provenance/significance.json
+  - provenance/qa_faith.json
+  - provenance/ranks_hybrid.json
+  - provenance/law_index_stats.json
+---
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-![Release](https://img.shields.io/badge/release-v1.6.0-blue.svg)
-![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
-![Benchmark](https://img.shields.io/badge/benchmark-281_QA-green.svg)
-[![HuggingFace Dataset](https://img.shields.io/badge/HF-dataset-yellow.svg)](https://huggingface.co/datasets/datbazuka2502/vicivil-tkg)
+# ViCivil-TKG v1.6.0 — Vietnamese Civil Law Temporal Knowledge Graph
 
-A versioned, article-level temporal knowledge graph of Vietnamese civil law.
-Every chunk carries a hierarchical ID (`Law|Dieu|Khoan|Diem`), every law carries
-a validity interval, and succession/amendment relations are explicit edges mined
-from official consolidation preambles — so the graph answers *"what did the law
-say on date X?"*, which flat per-document corpora cannot.
+Article-granularity temporal KG of 17 Vietnamese civil-law texts (1996–2026,
+BLDS 1995/2005/2015 included) with a 281-question situational benchmark,
+three-round verified gold labels, and an 8-file ADGR-style retrieval index.
+Legal lookup questions are temporal — *"which article was in force on date X"* —
+and this is the dataset that answers them, with explicit succession edges mined
+from official consolidation preambles.
 
-## Key numbers (v1.6.0, all measured and released)
-
-| Artifact | Size |
-|---|---|
-| Corpus chunks (Điều/Khoản/Điểm, 17 statutes 1996–2026) | **11,267** |
-| Temporal graph (nodes / succession + amendment edges) | **33 laws / 21 edges** |
-| Article-level units (`law_articles.json`) | **10,215** |
-| Retrieval index (entities / in-corpus relation rows, 768-d vectors) | **14,099 / 20,311** |
-| Benchmark (situational QA with gold chunk IDs) | **281** = 245 verified + 32 regolded + 4 author-verified |
-
-Retrieval (hybrid BM25 + dense, RRF fusion, temporal filter, frozen `v1.2.3` scoring):
-**Hit@1 0.452 · Hit@3 0.658 · Hit@5 0.726 · Hit@10 0.794 · MRR 0.569** (Hit@1 0.502 on the
-245 verified questions). Adding `BAAI/bge-reranker-v2-m3` over 30 candidates lifts
-**Hit@10 to 0.868** (MRR 0.594); all deltas significant (Wilcoxon *p* < 0.001, `provenance/significance.json`).
-
-**Temporal-Constraint Reranking (TCR)** — the graph's validity windows participate directly in
-retrieval: candidates whose law is not in force at the question's `as_of` are dropped before
-ranking. On the repaired benchmark this lifts **Hit@1 0.409 → 0.530** over the hybrid baseline
-and **0.445 → 0.609** over the reranked baseline (MRR 0.554 → 0.659 and 0.591 → 0.706; Wilcoxon
-*p* < 2·10⁻¹⁵ both; raw numbers + ablations in `benchmark/tcr_sgb_result.json`). Disclosed
-ablations: a recency bias toward the newest law version *hurts* (questions deliberately target
-older in-force versions); citation-graph boosting is neutral at 1,506 edges.
-
-`as_of` repair (transparent): 28/281 questions carried a date before their gold law took effect
-(23 × 2026-era statutes with a default 2024 date; 5 × stale HNGD 2000 gold). Dates were moved
-into the gold law's validity era — full audit trail in `benchmark/as_of_fixes.json`; after
-repair **100% of golds are in force at their `as_of`**.
-
-## Interactive artifacts
-
-- **Temporal graph explorer** — single self-contained file, no build step, works offline:
-  [`docs/graph/explorer.html`](docs/graph/explorer.html), live at
-  <https://ntd25022006q.github.io/vicivil-tkg/graph/explorer.html>
-  (AntV G6 5.1.1; as-of time slider 1996–2026, REPLACES succession spine, dashed
-  amendment edges, per-law provenance drawer; timeline tab driven by
-  [`docs/graph/law_timeline.vl.json`](docs/graph/law_timeline.vl.json), Vega-Lite 5.21).
-- **Report** (Vietnamese, LaTeX, 16 pp.): [`docs/report/ViCivil-TKG_bao-cao.pdf`](docs/report/ViCivil-TKG_bao-cao.pdf), source [`docs/report/report.tex`](docs/report/report.tex).
-- **CI**: `.github/workflows/verify.yml` re-runs the evaluation, re-measures the corpus,
-  exports and validates the RDF graph, and rebuilds the viewer on every push — no GPU, no secrets.
-
-## Reproduce without a GPU
-
-```bash
-git clone https://github.com/ntd25022006q/vicivil-tkg
-cd vicivil-tkg
-bash tools/reproduce.sh   # recomputes the benchmark from released files (BM25 in pure Python + stored vectors + RRF)
-```
-
-Same numbers as the table above; numpy optional. Verify integrity with `sha256sum -c SHA256SUMS`.
-
-## Load the data
-
-```python
-from datasets import load_dataset
-corpus = load_dataset("datbazuka2502/vicivil-tkg", "corpus")["train"]      # 11,267 rows
-bench  = load_dataset("datbazuka2502/vicivil-tkg", "benchmark")["train"]   # 281 rows
-```
-
-## Repository layout
+## What is inside
 
 | folder | content |
 |---|---|
-| `data/` | 11,267 chunk rows at article/clause/point granularity (`chunk_id`, `law_id`, validity window, source URL/type, cleaned flags); frozen v10 backup; decontaminated LLM extraction |
-| `benchmark/` | 281 situational questions with gold chunk IDs + `gold_tier`, per-question ranks, two-rater + regold audit trail, as-of repair log (`as_of_fixes.json`), TCR experiment (`tcr_sgb_result.json`), 50-item expert review package |
-| `index/` | dense 768-d matrices (`embeddinggemma-300m`, L2-normed) for entities/relations + kv chunk maps (ADGR-style LawRetriever format) |
-| `provenance/` | temporal graph (33 law windows, 21 edges), 1,506 CITE edges, lineage candidates with similarity bands, source audit, ablation + significance + faithfulness artifacts |
+| `data/` | 11,267 chunk rows at `Dieu`/`Khoan`/`Diem` granularity; per-row source URL + type; law validity window inherited by every chunk; decontaminated extraction (zero CJK/PUA glyphs by automated gate) |
+| `benchmark/` | 281 situational questions with gold chunk ids + `gold_tier` (245 verified / 32 regolded / 4 author-verified), per-question ranks, double-rater + regold audit trail, as-of repair log (`as_of_fixes.json`), TCR experiment (`tcr_sgb_result.json`), 50-item expert review package, end-to-end LLM RAG run (`rag_inputs.json`, `llm_rag_result.json`, `llm_rag_significance.json`) |
+| `index/` | dense 768-d matrices (`embeddinggemma-300m`, L2-normed) for 14,099 entities / 20,311 in-corpus relation rows (+ 439 cross-version successor edges, sim ≥ 0.90) + kv chunk maps |
+| `provenance/` | temporal graph (33 law windows + 21 amendment/succession edges), 1,506 CITE edges, lineage candidates with similarity bands, source audit, ablation + significance + faithfulness artifacts |
 | `sources_official/` | 5 signed gazette PDFs (BLDS 1995/2005/2015, HNGD 2000, TNBTCNN 2017) used to verify the corpus |
-| `src/`, `tools/` | full pipeline source (crawl → chunk → KG → index → eval → export) + reproducibility scripts |
-| `docs/` | explorer, RDF/JSON-LD/GEXF exports, NCKH report (TeX + PDF) |
+| `docs/` | RDF/Turtle + JSON-LD + GEXF exports, offline HTML graph explorer, 16-page NCKH report (TeX + PDF) |
+
+## Data fields
+
+`corpus` (one JSON line = one chunk, 11,267 rows):
+
+| field | type | meaning |
+|---|---|---|
+| `chunk_id` | str | `Law\|Dieu[\|Khoan[\|Diem[\|Muc]]]` — unique key, also the benchmark gold label |
+| `law_id` | str | corpus law id used by the temporal graph |
+| `dieu` `khoan` `diem` `muc` | str | article/clause/point/item numbers |
+| `tieu_de` | str | article heading |
+| `content` | str | decontaminated chunk text |
+| `chars` | int | len(content) |
+| `source_url` | str | source page (gazette or TVPL mirror) |
+| `source_type` | str | official / mirror / official-copy / semi |
+| `fetched` | date | crawl date of the source page |
+| `valid_from` `valid_to` | date | law validity window inherited by the chunk (joined from `provenance/temporal_graph.json`, present on every row) |
+| `cleaned_v11` | bool | footer/header strip flag — present (true) on the 367 stripped rows, absent elsewhere |
+
+`benchmark` (281 rows):
+
+| field | type | meaning |
+|---|---|---|
+| `qid` | str | question id |
+| `question` | str | situational question (no article numbers mentioned) |
+| `as_of` | date | temporal anchor for retrieval filtering |
+| `gold_ids` | list[str] | gold chunk ids in `corpus` |
+| `gold_tier` | str | verified / regolded / author-verified |
+| `regolded_from` `hint` `reviewed` | str | audit trail |
+
+## Example records
+
+```json
+{"chunk_id": "BLDS2015|Dieu1", "law_id": "BLDS2015", "dieu": "1",
+ "tieu_de": "Phạm vi điều chỉnh",
+ "content": "Bộ luật này quy định địa vị pháp lý, chuẩn mực pháp lý về cách ứng xử ...",
+ "source_type": "official", "valid_from": "2017-01-01", "valid_to": null}
+{"qid": "CIV001", "as_of": "2024-06-01",
+ "question": "Con đẻ muốn đổi từ họ cha sang họ mẹ cần điều kiện gì?",
+ "gold_ids": ["BLDS2015|Dieu27|Khoan1|Diema"], "gold_tier": "regolded"}
+```
+
+## Metrics (frozen v1.2.3 scoring, reproducible without a GPU)
+
+Hybrid retriever (BM25 + dense 768-d, RRF fusion, temporal filter), n = 281:
+**Hit@1 0.452 / Hit@3 0.658 / Hit@5 0.726 / Hit@10 0.794, MRR 0.569.**
+Stratified: verified 245 → 0.502/0.678/0.731/0.796; regolded 32 →
+0.062/0.531/0.719/0.812; author-verified 4 → 0.5/0.5/0.5/0.5.
+Adding `BAAI/bge-reranker-v2-m3` (30 candidates/question): Hit@10 **0.868**,
+MRR 0.594 (from 0.550); deltas significant (Wilcoxon p < 0.001, `provenance/significance.json`).
+
+**Temporal-Constraint Reranking (TCR)** — dropping candidates whose law is not in force at the
+question's `as_of` (the graph's validity windows acting on retrieval) lifts Hit@1 0.409 → 0.530
+over the hybrid baseline and 0.445 → 0.609 over the reranked baseline (MRR 0.554 → 0.659 and
+0.591 → 0.706; Wilcoxon p < 2·10⁻¹⁵ both). Raw numbers + ablations (recency bias hurts;
+citation-graph boost neutral at 1,506 edges) in `benchmark/tcr_sgb_result.json`.
+
+**End-to-end LLM RAG validation** — feeding each question through a small local LLM (Qwen2.5-3B-Instruct, greedy decode, deterministic) shows the TCR retrieval gain transfers to answers: article-citation accuracy 0.488 → 0.594 when the RAG context is temporally filtered (+10.7 pts, McNemar p = 1.3·10⁻⁴; Span-F1 +2.3 pts, Wilcoxon p = 9.4·10⁻⁵), while closed-book cites correctly only 0.4% of the time and abstains 55% of it. Context Hit@5 values reproduce the published retrieval numbers exactly (0.729 / 0.811 / 0.846). Per-question answers in `benchmark/llm_rag_result.json`, paired tests in `benchmark/llm_rag_significance.json`, exact RAG contexts in `benchmark/rag_inputs.json`.
+
+**`as_of` repair (transparent):** 28/281 questions carried a date before their gold law took
+effect (23 × 2026-era statutes with a default 2024 date; 5 × stale HNGD 2000 gold). Dates were
+moved into the gold law's validity era — full audit trail in `benchmark/as_of_fixes.json`.
+After repair, 100% of golds are in force at their `as_of`. Recompute everything with
+`bash tools/reproduce.sh` (GitHub repo) — pure Python 3.9+, no GPU.
+
+## How gold labels were made (protocol)
+
+1. Chunk-level generation with an 8B open model + junk filters (production prompts; no target-law content leaked).
+2. Two-rater hostility audit: 8B model on the full bench, 14B model on the 120 doubtfuls; 57 rejects → 16 gold re-anchors with provenance (`regolded_from`).
+3. Author adjudication for weak/partial labels → rescoped questions, 4 verified stubs, 1 documented drop (`dropped_log.json`). No gold without an audit trail.
 
 ## Known limitations (disclosed, not hidden)
 
-- 36/281 gold answers (32 regolded + 4 author-verified) not yet independently expert-reviewed;
-  a ready-made 50-item review package ships in `benchmark/review_package_50.md`.
-- 0 empty-content chunks; 424 short item-level extractions (numbered-item granularity; `law_audit.json`: `empty`=0, `short_n`=424); remaining
-  article-numbering gaps are measured in `provenance/law_audit.json`.
-- 603 near-duplicate chunk groups (identical statutory wording across law versions); measured
-  top-5 collision impact on 10/281 questions; retrieval-time dedup rejected as rank-distorting.
-- Vietnamese source frame only (English mirror planned). Not legal advice.
+- 36/281 answers (32 regolded + 4 author-verified) not yet independently expert-reviewed;
+  `benchmark/review_package_50.md` is ready for external raters.
+- 0 empty-content chunks; 424 item-level chunks carry short extraction text (`law_audit.json`: `empty`=0, `short_n`=424); remaining numbering gaps measured in `provenance/law_audit.json`.
+- 603 near-duplicate chunk groups across law versions (identical statutory wording); measured top-5 collision impact: 10/281 questions.
+- Vietnamese source frame only; English mirror planned. Not legal advice.
 
-## Citation
+## How to load
 
-Legal texts are public domain (Luật 104/2016/QH13; Luật 64/2025/QH15); the curation
-(schema, IDs, benchmark) is CC-BY-4.0. See [`CITATION.cff`](CITATION.cff):
+```python
+from datasets import load_dataset
+corpus = load_dataset("datbazuka2502/vicivil-tkg", "corpus")["train"]
+bench  = load_dataset("datbazuka2502/vicivil-tkg", "benchmark")["train"]
+
+# index + provenance as raw JSON
+from huggingface_hub import snapshot_download
+p = snapshot_download("datbazuka2502/vicivil-tkg", repo_type="dataset")
+import json
+chunks = [json.loads(l) for l in open(f"{p}/data/civil_chunks.jsonl")]
+```
+
+Index files need `law_adgr.py` (ADGR-style LawRetriever) — shipped in the
+[GitHub repo](https://github.com/ntd25022006q/vicivil-tkg), which also runs the
+verification CI on every push and serves the offline graph explorer via GitHub Pages.
+All released files passed a 12-section audit (manifest completeness, JSON parse-all,
+matrix shapes, gold chain, extraction coverage, secret scan, schema fields, duplicate
+accounting, law-window sanity, kv refs, weird-character gate, id-set equality) and
+carry SHA-256 checksums (`SHA256SUMS`).
+
+## Contact
+
+- GitHub issues: https://github.com/ntd25022006q/vicivil-tkg/issues
+- Dataset: HF "Community" tab on this page
+
+## License & attribution
+
+- Legal texts: public domain (Luật 104/2016/QH13; Luật 64/2025/QH15).
+- Curation (schema, IDs, benchmark): CC-BY-4.0 — cite as:
 
 ```bibtex
 @misc{viciviltkg2026,
-  title  = {ViCivil-TKG: A Temporal Knowledge Graph and Benchmark for Vietnamese Civil Law Retrieval},
+  title  = {ViCivil-TKG: A Temporal Knowledge Graph and Benchmark for
+            Vietnamese Civil Law Retrieval},
   author = {ntd25022006q},
   year   = {2026},
-  url    = {https://github.com/ntd25022006q/vicivil-tkg}
+  url    = {https://huggingface.co/datasets/datbazuka2502/vicivil-tkg}
 }
 ```
-
-Issues: <https://github.com/ntd25022006q/vicivil-tkg/issues> · Dataset discussions:
-<https://huggingface.co/datasets/datbazuka2502/vicivil-tkg/discussions>
