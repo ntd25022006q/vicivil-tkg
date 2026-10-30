@@ -155,7 +155,7 @@ da6df64e692ba9770ec42d3267348efa96ccc3f5e476b5b7a491b874fa9593e1  ./tools/lab-sc
 632b62f006f06fc5550bf018118c39c823c515a0d65b75f4ed96f1f380b0b833  ./tools/lab-scripts/lawrs67.py
 2049e39e3cdcab18e559c13123ded3a3300a6f5a405cc5675a05c3a0a58b07ed  ./tools/lab-scripts/lawv11patch.py
 5916e519f4abfe6ba01e6cd18cc800297b02049edc2d7455d78bc56b467c987f  ./tools/law_extract_pilot.py
-9fd5fdeba3d9701e8bf59e2a0d36f1c163b739bd54187a0ace63b23e16f1890a  ./tools/law_manifest.py
+3c66a8c7d1b9d08d5340947dfa434b0dec3b977131d231c2b5bf7a9064cfc028  ./tools/law_manifest.py
 c814718bc9cb22193fe3910054a1695c2ce223d285414dd183a890767486e3aa  ./tools/law_sweep.py
 cd37ac5056e8d6a8a318afb34d8a7ed2365a215d6059bb5a4a1176e0c4101ed2  ./tools/law_verify.py
 cef4367389b7752f35b9ffcbd6cd3925e445d2a368d7d7c440a2d85dec145a4e  ./tools/lawq_time_demo.py
