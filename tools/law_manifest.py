@@ -63,7 +63,7 @@ miss = []
 for rel in sorted(targets):
     p = os.path.join(root, rel)
     if os.path.exists(p):
-        lines.append(f"{sha(p)}  {rel}")
+        lines.append(f"{sha(p)}  ./{rel}")
     else:
         miss.append(rel)
 _d = os.path.dirname(os.path.abspath(out))
