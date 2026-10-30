@@ -102,7 +102,6 @@
   "NEW39093",
   "NEW45231",
   "NEW57952",
-  "NEW68150",
   "NEW70231",
   "NEW71666",
   "NEW75006",
@@ -149,7 +148,6 @@
   "GEN11904",
   "GEN11923",
   "GEN13335",
-  "GEN15475",
   "GEN16359",
   "GEN18358",
   "GEN20094",
@@ -286,5 +284,5 @@
   "TOP95375",
   "TOP97603"
  ],
- "note": "v2: stratified over 271+12 bench; golds visible; hidden-gold planned"
+ "note": "v2.1 stratified split over the 281-question benchmark. NEW68150 removed (documented drop, see benchmark/dropped_log.json); GEN15475 deduplicated (kept in dev, matching eval precedence dev-wins). dev=140 test=141; identical effective splits to previous versions, so all published metrics are unchanged."
 }
