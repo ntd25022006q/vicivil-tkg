@@ -11544,5 +11544,9 @@
     -2.07337
    ]
   }
- ]
+ ],
+ "mrr_hybrid": 0.5503,
+ "mrr_rerank": 0.5936,
+ "wilcoxon_mrr_p": 0.03391128779500581,
+ "wilcoxon_note": "paired two-sided Wilcoxon (normal approx, tie-corrected) over per-question MRR, rank_hybrid vs rank_rerank, n=281; added v1.7.0 so the README can cite a verifiable rerank significance artifact"
 }
