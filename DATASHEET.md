@@ -94,14 +94,20 @@ map object ids to their referenced `chunk_ids`.
 ## Metrics (measured on the v1.2.3 index; numbers carried to v1.2.4 —
   hygiene-only strip of 12 invisible codepoints, no content change)
 - Full bench n=281: Hit@1 0.452 / Hit@3 0.658 / Hit@5 0.726 / Hit@10 0.794
-  / MRR 0.568. Re-evaluated on the sanitized v1.2.3 index and confirmed
-  unchanged vs v1.2 (same numbers whenever rounded to 3 decimals).
+  / MRR 0.569. Re-evaluated on the sanitized v1.2.3 index and confirmed
+  parseable. The no-GPU re-run (`law_eval_repro.json`, strict exact-ID + stored
+  vectors) reproduces the chain at Hit@1 0.402 / Hit@5 0.730 / Hit@10 0.819 /
+  MRR 0.545 — Hit@5/Hit@10 identical to the strict TCR chain; Hit@1 sits 0.7 pp
+  under the strict baseline (0.409) from vector precision and RRF tie order, and
+  5.0 pp under this frozen overview (0.452) additionally from the scoring rule
+  (equivalence-groups vs exact-ID). Per-question artifacts ship for all rounds.
 - Stratified by gold_tier: verified 245 -> 0.502/0.678/0.731/0.796;
   regolded 32 -> 0.062/0.531/0.719/0.812 (deliberately hard restatements:
   answer lives in a target chunk not reachable by surface wording, but
   rank-10 recall 0.812 shows the index finds it — good for paper);
   author-verified 4 -> 0.500/0.500/0.500/0.500.
-- Per-question ranks saved (`law_eval_v12.json`); ablation + significance
+- Per-question ranks saved (`law_eval_v12.json`, historical engine; strict chain in
+  `tcr_sgb_result.json`, no-GPU repro in `law_eval_repro.json`); ablation + significance
   still those of v1.0 (`ablation_AB.json`, `significance.json`) and will be
   re-run for the paper on this frozen v1.2.3 snapshot.
 - v1.1 metrics for comparison: Hit@1 0.41 / Hit@3 0.60 / Hit@5 0.67 /
@@ -137,8 +143,9 @@ map object ids to their referenced `chunk_ids`.
 
 ## Artifacts in this release
 - Public HF mirror (v1.2.3): https://huggingface.co/datasets/datbazuka2502/vicivil-tkg
-- `data/civil_chunks.jsonl` (11.267 rows), `civil_chunks_v10.jsonl`
-  (frozen v1.0 backup), `civil_extract.json` (clean extraction), 6 index
+- `data/civil_chunks.jsonl` (11.267 rows; superseded intermediates
+  `civil_chunks_v10.jsonl` / `civil_extract.json` removed in v1.7.0,
+  regenerable via `src/law_kg_extract.py`), 6 index
   files (`vdb_chunks / vdb_entities / vdb_relationships` +
   3 kv stores), `temporal_graph.json`.
 - `benchmark/law_bench_200c.json`, `law_bench_v1.json` (281 Qs, gold_tier +
@@ -506,6 +513,18 @@ map object ids to their referenced `chunk_ids`.
   (d) both mirrors regenerated; retrieval metrics not re-run (the strip
   touches 12 invisible codepoints only; v1.2.3 numbers reported above
   remain the reference measurement).
+- **v1.7.0 (mirror tag v1.2.5):** hygiene + disclosure release, zero corpus change.
+  (a) superseded intermediates removed from both mirrors: `data/civil_chunks_v10.jsonl`
+  (v1.0 backup) and `data/civil_extract.json` (raw extraction, regenerable via
+  `src/law_kg_extract.py`); (b) metrics sections now label all three published scoring
+  rounds (frozen v1.2.3 overview, strict exact-ID chain used by TCR/SGB/LLM, no-GPU
+  reproduction) with per-question artifacts, replacing the earlier "confirmed
+  unchanged" wording that over-stated reproducibility; (c) rerank+TCR LLM condition
+  documented as 280/281 (NEW90253: empty stored rerank pool after strict temporal
+  filtering); (d) paired Wilcoxon p over per-question MRR added to
+  `benchmark/rerank_result.json` so the rerank significance is citable from its own
+  artifact; (e) `tools/law_manifest.py` seed list updated; GitHub CI workflow YAML
+  fixed (branches selector); CITATION.cff bumped to 1.7.0.
 - **v1.2.3:** root-cause sanitization pass. (a) Rebuilt 2 NCN2010 chunks
   from the official government .doc via a full piece-table parser (the
   source file itself carries damaged piece records that had leaked binary
