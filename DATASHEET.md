@@ -70,8 +70,8 @@
 | `source_url` | str | URL of the used source page (Cong-bao or TVPL mirror) |
 | `source_type` | str | `official` / `mirror` / `official-copy` / `semi` |
 | `fetched` | date | crawl date of the source page |
-| `valid_from` / `valid_to` | date | law inheritance of `[from, to)` validity |
-| `cleaned_v11` | bool | footer/header decontamination flag |
+| `valid_from` / `valid_to` | date | law inheritance of `[from, to)` validity (joined from the temporal graph, present on every row) |
+| `cleaned_v11` | bool | footer/header decontamination flag — present (true) on the 367 stripped rows, absent elsewhere |
 | `muc` | str | item part for BLDS 1995 clause-level rows |
 
 `benchmark/law_bench_*.json` — 281 question objects in two files:
@@ -155,8 +155,8 @@ map object ids to their referenced `chunk_ids`.
   HF dataset card (byte-level verified).
 
 ## Known gaps (disclosed)
-- ~500 item-level chunks have empty LLM extractions (mostly short BLDS
-  1995 numbered items; validators reject generic 1-word names) — refs kept;
+- 0 empty-content chunks (`law_audit.json`: `empty`=0); 424 item-level chunks
+  carry short LLM extractions (mostly short BLDS 1995 numbered items) — refs kept;
   disclosed per-law histogram in `law_audit.json` (computed, reproducible).
 - Near-duplicate copies across laws (603 total groups; 557 of them span
   more than one law — e.g. the same article text preserved verbatim by a
