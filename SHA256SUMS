@@ -1,7 +1,7 @@
 97a950f3592d1f21114623bfdc95dccad37099add5c6259e3617153f09d6d9ba  ./CITATION.cff
 32fadbe56b63611f483f4d68c3ab763e09c7b29ce240c28cd588480a59388b85  ./DATASHEET.md
 db859d38cb76bcbe814d27594fcf9b3d43705690767ed05606cb6d5ee864219a  ./LICENSE
-a2806bbfc4338c545e63f9ba110d993b04be13fed737bff55dbfd3f0e25667a0  ./README.md
+c5755a73c57fa9f9b8a08a5bd86d90e417bd7621cf268cd671e3ac86fc75b4cb  ./README.md
 126499f9bd00a7a1fe687e38b1c4ccb5746b8542b100eb199e2b5507a36050fc  ./THIRD-PARTY-NOTICES.md
 79f220def1cfce587ff7ed4fa7777d7cef384f2ac06c4e8705e01a5a485f9225  ./benchmark/as_of_fixes.json
 a1c7cc738f6d6243bbb214e7a70d3e3e21d5f5567c7870d274b6c6dfcd34c7a2  ./benchmark/bench_split.json
@@ -45,7 +45,7 @@ d2535ac84726807023998681abc29b7bb03372fe91271f6a5cf8a9ba40995ad3  ./docs/graph/l
 072c054f2a6310725e038c38a71e00052705e31835632462c9717a23a384e895  ./docs/graph/vega-embed.min.js
 cd32314b1e76e7d879dc9f0534b62be714df03554486c7ca2381abfd0a92d2f4  ./docs/graph/vega-lite.min.js
 e432c751a6363f4a61da62920cc7d7ebd13cf09d82949f8f486248f8071dc3ce  ./docs/graph/vega.min.js
-2e951b12a47c2348a209bcc3ec42fc6f2f2e3d763af7c8d311651203ec967da9  ./docs/report/ViCivil-TKG_bao-cao.pdf
+2815cda0ab1a0c4885cebc8d97da066276086d2423ed8fe9a6c08bc0ec02b441  ./docs/report/ViCivil-TKG_bao-cao.pdf
 b282a9abd69631aea98d24e79d128a3545ffbeb3cc5339d46f1741cfb47701b4  ./docs/report/figures/fig05_graph_2026.png
 836197dc1bd3ba57d7890751115612d5a49b47b4feddac31e4ef8845a1bdc1ad  ./docs/report/figures/fig06_graph_2012.png
 0a8a3fe0f378618cb57e3e1a7b077bd4b60214b79122f4761b1743faa72d3f36  ./docs/report/figures/fig07_timeline_tab.png
@@ -55,7 +55,7 @@ bdf1080d595fb96c7cfdbc611f5a925fb805afb6d8ddc7383540f219d156580b  ./docs/report/
 1f16edc3844caa80e779e4deb61f4e8603c319b90b63c5bdd92bf942f0679c93  ./docs/report/figures/fig10_ket-qua-truy-hoi.png
 064c6974caca148fca43348667f35ffc1644a8f3535aac4076f0118ea6bd9cf2  ./docs/report/figures/fig11_phan-bo-chunk.png
 d09c50d13b7290e6d05da1b7a94159e059c33d43965f24cefc81155b22840ecc  ./docs/report/figures/fig12_vi-tri-dap-an.png
-356efee507211bbf5243e29e392d238b5dff969d187111845d14d53896b9af03  ./docs/report/report.tex
+31bd89fa5a54e68849e572cde6d4511c7685ee6dc201a45d24a7b10550177049  ./docs/report/report.tex
 04e13e7b3f8807a3e1aca1c3fff3e6fdc8b60a192e1df14d0ca2d7d3c926fcf6  ./index/kv_store_entity_chunks.json
 72240b062d1bbfac9a3c3a56493662eb370acab66494c09f437f321f6590a360  ./index/kv_store_relation_chunks.json
 61262df4e16a404e7ce8f7a4300310103d618e772ba4555ecdeae7f67280e1df  ./index/kv_store_text_chunks.json
@@ -121,7 +121,7 @@ d312abbcf8a25217d8ef9d4acf7ac6a076f0fdac1e4ae6860f496ad351ad2c69  ./src/law_pdf_
 6d22371c35a4d1b051c4bdf53886941cca78475c8f1a26d4300a73ec7898ab42  ./src/law_quality.py
 35f44467712963f3fc9b5446400670c0b6d85d516d70d45bb5790fecf68d2a62  ./src/law_rank_recompute.py
 52fca1bfc2d998cd20164a5452cade6a2ac363e123c69f5d5d999ec69584bc8e  ./src/law_ranksA.py
-e7ac2dd801d1cadc01db2897ae221181588cf488ea677d3df3ddfc35898ae2c4  ./src/law_rdf_export.py
+b06a3e5fa66ddc7f846e79951d0b57e2302744d4bd33b537aef315410beb8992  ./src/law_rdf_export.py
 6722f4d1ba42c02119424d43304e7d1a76e1c3745ea5564ea51c23890f84cfad  ./src/law_rdf_verify.py
 35f4b22f148a0335b2820edf8b520e307c9588cbe2ff02f06621767071c2f6cb  ./src/law_rerank.py
 2424f382f6afea25d88e600b2677d47fb20bb3ab137642d7b7f6bd8c9b614666  ./src/law_rerank_verify.py
@@ -156,7 +156,7 @@ da6df64e692ba9770ec42d3267348efa96ccc3f5e476b5b7a491b874fa9593e1  ./tools/lab-sc
 2049e39e3cdcab18e559c13123ded3a3300a6f5a405cc5675a05c3a0a58b07ed  ./tools/lab-scripts/lawv11patch.py
 5916e519f4abfe6ba01e6cd18cc800297b02049edc2d7455d78bc56b467c987f  ./tools/law_extract_pilot.py
 3c66a8c7d1b9d08d5340947dfa434b0dec3b977131d231c2b5bf7a9064cfc028  ./tools/law_manifest.py
-c814718bc9cb22193fe3910054a1695c2ce223d285414dd183a890767486e3aa  ./tools/law_sweep.py
+f00f12bb33bfd0abea065f908f15d65597788f2c8e05233c831759c1372e6f5b  ./tools/law_sweep.py
 cd37ac5056e8d6a8a318afb34d8a7ed2365a215d6059bb5a4a1176e0c4101ed2  ./tools/law_verify.py
 cef4367389b7752f35b9ffcbd6cd3925e445d2a368d7d7c440a2d85dec145a4e  ./tools/lawq_time_demo.py
 cb55aa7596e7e156f295b3029b077b4fcbfde5311b48689695ed760afe28879b  ./tools/lawsmoke.py
