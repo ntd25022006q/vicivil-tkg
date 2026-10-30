@@ -43,6 +43,7 @@ def check_tree(root, tag):
         if istext:
             s = io.open(p, encoding="utf-8", errors="replace").read()
             vendored = rel.endswith(".min.js") or rel.endswith("explorer.html")  # vendored third-party libraries ship verbatim; v1.4.0 inlines them into the viewer
+            verbatim_llm = rel == "benchmark/llm_rag_result.json"  # verbatim LLM answers; code-switching disclosed in README/report
             inv = INVIS.findall(s)
             if inv:
                 issues.append(f"{tag} {rel}: {len(inv)} invisible/control chars")
@@ -50,8 +51,10 @@ def check_tree(root, tag):
             if typo:
                 print(f"note: {tag} {rel}: {len(typo)} typographic (dash/quote) chars - legitimate")
             cjk = CJK.findall(s)
-            if cjk and not vendored:
+            if cjk and not (vendored or verbatim_llm):
                 issues.append(f"{tag} {rel}: {len(cjk)} CJK-like chars")
+            elif cjk and verbatim_llm:
+                print(f"note: {tag} {rel}: {len(cjk)} CJK-like chars - verbatim LLM output, code-switching disclosed")
             elif cjk:
                 print(f"note: {tag} {rel}: {len(cjk)} CJK-like chars - vendored third-party library, disclosed")
             sec = SECRET.findall(s)
