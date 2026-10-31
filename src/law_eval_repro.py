@@ -125,7 +125,7 @@ print("  %d vector cau hoi" % len(qvec), flush=True)
 
 # ------------------------------------------------------------------ gold
 gold = {}
-for fn in ("law_bench_200c.json", "law_bench_v1.json"):
+for fn in ("law_bench_main.json", "law_bench_seed.json"):
     p = os.path.join(B, fn)
     if not os.path.exists(p):
         continue

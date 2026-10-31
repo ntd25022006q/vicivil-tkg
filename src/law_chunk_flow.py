@@ -1,4 +1,4 @@
-"""Civil chunker v2 (flow mode): for PDFs whose text comes word-per-line.
+"""Civil chunker (flow mode): for PDFs whose text comes word-per-line.
 Joins everything to one flow, then regex-splits Dieu -> Khoan -> Diem.
 Usage: law_chunk_flow.py <txt> <LAW_ID>   (appends to civil_chunks.jsonl)
 """

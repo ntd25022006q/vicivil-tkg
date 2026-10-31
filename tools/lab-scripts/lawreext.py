@@ -32,7 +32,7 @@ print("extract keys before:", len(out), flush=True)
 pruned = 0
 for cid in list(out):
     r = byid.get(cid)
-    if r is None or r.get("cleaned_v11") or r.get("source_type") == "official":
+    if r is None or r.get("header_footer_cleaned") or r.get("source_type") == "official":
         out.pop(cid, None)
         pruned += 1
 print("pruned stale keys:", pruned, flush=True)

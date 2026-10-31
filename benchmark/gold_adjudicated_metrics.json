@@ -9,16 +9,6 @@
   },
   "mrr": 0.591
  },
- "new_gold_v2": {
-  "n_questions": 279,
-  "hit_at_k": {
-   "1": 0.4803,
-   "3": 0.724,
-   "5": 0.7993,
-   "10": 0.8781
-  },
-  "mrr": 0.6166
- },
  "hybrid_with_old_gold": {
   "hit_at_k": {
    "1": 0.4021,
@@ -38,5 +28,15 @@
   "mrr": 0.565
  },
  "n_regolded": 38,
- "n_unverifiable_remaining": 2
+ "n_unverifiable_remaining": 2,
+ "new_gold_adjudicated": {
+  "n_questions": 279,
+  "hit_at_k": {
+   "1": 0.4803,
+   "3": 0.724,
+   "5": 0.7993,
+   "10": 0.8781
+  },
+  "mrr": 0.6166
+ }
 }

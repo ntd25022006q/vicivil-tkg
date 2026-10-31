@@ -1,4 +1,4 @@
-"""Benchmark v1 eval: Hit@1/3/5 over date-valid chunks (dense only).
+"""Benchmark eval: Hit@1/3/5 over date-valid chunks (dense only).
 Abstain test CIV012 expects MISS (1995 absent) -> counted separately.
 """
 import json, urllib.request
@@ -23,7 +23,7 @@ def emb(texts):
     return np.vstack(out)
 
 
-bench = json.load(open(f"{R}/law_bench_v1.json", encoding="utf-8"))
+bench = json.load(open(f"{R}/law_bench_seed.json", encoding="utf-8"))
 G = json.load(open(f"{R}/temporal_graph.json", encoding="utf-8"))
 lawmap = {L["law_id"]: L for L in G["laws"]}
 ch = json.load(open(f"{D}/vdb_chunks.json", encoding="utf-8"))

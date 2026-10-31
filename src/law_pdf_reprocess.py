@@ -1,4 +1,4 @@
-"""Cleanup bad 'nod' chunks + fixed batch v2 (law_id from index URL slug).
+"""Cleanup bad 'nod' chunks + PDF reprocess batch (law_id from index URL slug).
 Step 1: drop law_id=='nod' chunks; drop 'nod' law from temporal graph.
 Step 2: reprocess pdfs with file->doc map from law_dl.json.
 """

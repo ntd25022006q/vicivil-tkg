@@ -284,5 +284,5 @@
   "TOP95375",
   "TOP97603"
  ],
- "note": "v2.1 stratified split over the 281-question benchmark. NEW68150 removed (documented drop, see benchmark/dropped_log.json); GEN15475 deduplicated (kept in dev, matching eval precedence dev-wins). dev=140 test=141; identical effective splits to previous versions, so all published metrics are unchanged."
+ "note": "Stratified split over the 281-question benchmark. NEW68150 removed (documented drop, see benchmark/dropped_log.json); GEN15475 deduplicated (kept in dev, matching eval precedence dev-wins). dev=140 test=141; identical effective splits to previous versions, so all published metrics are unchanged."
 }

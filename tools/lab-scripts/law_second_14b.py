@@ -11,7 +11,7 @@ SYS = ("Ban doc CAU HOI va DOAN LUAT. DOAN nay co tra loi TRUC TIEP hoac SUY RA 
        "Chi tra loi dung 1 tu: CO / KHONG / MOTPHAN.")
 prev = json.load(open(f"{R}/second_rater.json", encoding="utf-8"))
 qs = {}
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     for o in json.load(open(f"{R}/{fn}", encoding="utf-8")):
         qs[o["qid"]] = o
 chunks = {}

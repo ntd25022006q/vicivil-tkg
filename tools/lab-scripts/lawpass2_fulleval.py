@@ -1,6 +1,6 @@
-"""Final B: wait INDEX OK -> append cross-law lineage edges (sim>=0.90, Muc-remap)
--> clean full eval (Hit@1/3/5/10 + MRR + stratified) -> runs/law_eval_v12.json.
-Log: runs/lawfin2.log
+"""Pass 2: wait INDEX OK -> append cross-law lineage edges (sim>=0.90, Muc-remap)
+-> clean full eval (Hit@1/3/5/10 + MRR + stratified) -> runs/law_eval_ranks_full.json.
+Log: runs/lawpass2_fulleval.log
 """
 import base64, hashlib, io, json, os, sys, time, urllib.request
 import numpy as np
@@ -106,7 +106,7 @@ sys.path.insert(0, f"{W}/src")
 from law_adgr import LawRetriever
 rt = LawRetriever()
 qs = []
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     qs += json.load(open(f"{R}/{fn}", encoding="utf-8"))
 h = {1: 0, 3: 0, 5: 0, 10: 0}
 mrr, n = 0.0, 0
@@ -141,7 +141,7 @@ out = {"n": n, "hit": {k: round(v / n, 3) for k, v in h.items()},
        "mrr": round(mrr / n, 4),
        "strat": {t: {"n": s["n"], "hit": {k: (round(v / s["n"], 3) if k != "n" else s["n"]) for k, v in s.items()}} for t, s in strat.items()},
        "per_q": rowsout}
-json.dump(out, open(f"{R}/law_eval_v12.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(out, open(f"{R}/law_eval_ranks_full.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("V12 EVAL", json.dumps(out["hit"]), "MRR", out["mrr"], flush=True)
 for t, s in out["strat"].items():
     print(t, s["n"], json.dumps(s["hit"]), "n-only", s["hit"].get("n"), flush=True)

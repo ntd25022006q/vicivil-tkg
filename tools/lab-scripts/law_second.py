@@ -10,7 +10,7 @@ OUT = f"{R}/second_rater.json"
 SYS = ("Ban doc CAU HOI va DOAN LUAT. DOAN nay co tra loi CAU HOI khong? "
        "Chi tra loi dung 1 tu: CO / KHONG / MOTPHAN.")
 items = []
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     try:
         items += json.load(open(f"{R}/{fn}", encoding="utf-8"))
     except Exception:

@@ -3,8 +3,8 @@ import json, random
 
 W = "/home/devlab1/law_workspace"
 R = f"{W}/runs"
-bench = json.load(open(f"{R}/law_bench_200c.json", encoding="utf-8"))
-hand = json.load(open(f"{R}/law_bench_v1.json", encoding="utf-8"))
+bench = json.load(open(f"{R}/law_bench_main.json", encoding="utf-8"))
+hand = json.load(open(f"{R}/law_bench_seed.json", encoding="utf-8"))
 chunks = {}
 for L in open(f"{R}/civil_chunks.jsonl", encoding="utf-8"):
     r = json.loads(L)

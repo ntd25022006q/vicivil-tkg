@@ -10,8 +10,8 @@ W = "/home/devlab1/law_workspace"
 R = f"{W}/runs"
 D = f"{W}/law_data"
 OFF_URL = "https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Bo-luat-Dan-su-1995-44-L-CTN-39391.aspx"
-shutil.copy(f"{R}/civil_chunks.jsonl", f"{R}/civil_chunks_v11.jsonl")
-print("backup v1.1 done", flush=True)
+shutil.copy(f"{R}/civil_chunks.jsonl", f"{R}/civil_chunks_backup.jsonl")
+print("backup done", flush=True)
 off = open("/tmp/off_blds1995.txt", encoding="utf-8").read()
 arts = re.split(r"(?=Điều \d+\.)", off)
 print("segments:", len(arts), flush=True)
@@ -53,7 +53,7 @@ for a in arts[1:]:
                           "chars": str(len(content)), "source_url": OFF_URL,
                           "source_type": "official", "fetched": "2026-10-17"})
 print("new95 chunks:", len(new95), flush=True)
-rows = [json.loads(L) for L in open(f"{R}/civil_chunks_v11.jsonl", encoding="utf-8")]
+rows = [json.loads(L) for L in open(f"{R}/civil_chunks_backup.jsonl", encoding="utf-8")]
 rows = [r for r in rows if r["law_id"] != "BLDS1995"] + new95
 with open(f"{R}/civil_chunks.jsonl", "w", encoding="utf-8") as f:
     for r in rows:
@@ -124,7 +124,7 @@ def judge(q, c):
     return "ERROR"
 
 
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     qs = json.load(open(f"{R}/{fn}", encoding="utf-8"))
     for o in qs:
         if o["qid"] == "CIV012":

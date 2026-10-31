@@ -1,4 +1,4 @@
-"""Civil KG extraction PILOT v2: few-shot prompt, strict formats, grounded relations.
+"""Civil KG extraction pilot: few-shot prompt, strict formats, grounded relations.
 Usage: python -u law_kg_extract.py [--pilot | --full]  (deletes old pilot output on --pilot)
 """
 import json, os, re, sys, time, urllib.request

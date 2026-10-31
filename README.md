@@ -20,8 +20,8 @@ configs:
   data_files: data/civil_chunks.jsonl
 - config_name: benchmark
   data_files:
-  - benchmark/law_bench_200c.json
-  - benchmark/law_bench_v1.json
+  - benchmark/law_bench_main.json
+  - benchmark/law_bench_seed.json
 - config_name: index
   data_files:
   - index/vdb_chunks.json
@@ -45,7 +45,7 @@ configs:
   - provenance/law_index_stats.json
 ---
 
-# ViCivil-TKG v1.7.0 — Vietnamese Civil Law Temporal Knowledge Graph
+# ViCivil-TKG v1.0.0 — Vietnamese Civil Law Temporal Knowledge Graph
 
 Article-granularity temporal KG of 17 Vietnamese civil-law texts (1996–2026,
 BLDS 1995/2005/2015 included) with a 281-question situational benchmark,
@@ -59,7 +59,7 @@ from official consolidation preambles.
 | folder | content |
 |---|---|
 | `data/` | 11,267 chunk rows at `Dieu`/`Khoan`/`Diem` granularity; per-row source URL + type; law validity window inherited by every chunk; decontaminated extraction (zero CJK/PUA glyphs by automated gate) |
-| `benchmark/` | 281 situational questions with gold chunk ids + `gold_tier` (245 verified / 32 regolded / 4 author-verified), per-question ranks, model-audit cascade (8B full pass 162/281 accepted; 14B deep pass on the 120 flagged: 97 confirmed / 23 reversed) + regold trail, as-of repair log (`as_of_fixes.json`), TCR experiment (`tcr_sgb_result.json`), 50-item expert review package, end-to-end LLM RAG run (`rag_inputs.json`, `llm_rag_result.json`, `llm_rag_significance.json`) |
+| `benchmark/` | 281 situational questions with gold chunk ids + `gold_tier` (245 verified / 32 regolded / 4 author-verified), per-question ranks, model-audit cascade (8B full pass 162/281 accepted; 14B deep pass on the 120 flagged: 97 confirmed / 23 reversed) + regold trail, as-of repair log (`as_of_fixes.json`), TCR experiment (`tcr_sgb_result.json`) + constraint-hardness sweep (`tcr_weight_sensitivity.json`), 50-item expert review package, end-to-end LLM RAG run (`rag_inputs.json`, `llm_rag_result.json`, `llm_rag_significance.json`) |
 | `index/` | dense 768-d matrices (`embeddinggemma-300m`, L2-normed) for 14,099 entities / 20,311 in-corpus relation rows (+ 439 cross-version successor edges, sim ≥ 0.90) + kv chunk maps |
 | `provenance/` | temporal graph (33 law windows + 21 amendment/succession edges), 1,506 CITE edges, lineage candidates with similarity bands, source audit, ablation + significance + faithfulness artifacts |
 | `sources_official/` | 5 signed gazette PDFs (BLDS 1995/2005/2015, HNGD 2000, TNBTCNN 2017) used to verify the corpus |
@@ -81,7 +81,7 @@ from official consolidation preambles.
 | `source_type` | str | official / mirror / official-copy / semi |
 | `fetched` | date | crawl date of the source page |
 | `valid_from` `valid_to` | date | law validity window inherited by the chunk (joined from `provenance/temporal_graph.json`, present on every row) |
-| `cleaned_v11` | bool | footer/header strip flag — present (true) on the 367 stripped rows, absent elsewhere |
+| `header_footer_cleaned` | bool | footer/header strip flag — present (true) on the 367 stripped rows, absent elsewhere |
 
 `benchmark` (281 rows):
 
@@ -110,7 +110,7 @@ from official consolidation preambles.
 
 Hybrid retriever (BM25 + dense 768-d, RRF fusion, temporal filter), n = 281.
 
-**Frozen v1.2.3 overview** (equivalence-group matching, live query encoder):
+**Frozen v1.0.0 overview** (equivalence-group matching, live query encoder):
 **Hit@1 0.452 / Hit@3 0.658 / Hit@5 0.726 / Hit@10 0.794, MRR 0.569.**
 Stratified: verified 245 → 0.502/0.678/0.731/0.796; regolded 32 →
 0.062/0.531/0.719/0.812; author-verified 4 → 0.5/0.5/0.5/0.5.
@@ -132,6 +132,10 @@ question's `as_of` (the graph's validity windows acting on retrieval) lifts Hit@
 over the hybrid baseline and 0.445 → 0.609 over the reranked baseline (MRR 0.554 → 0.659 and
 0.591 → 0.706; Wilcoxon p < 2·10⁻¹⁵ both). Raw numbers + ablations (recency bias hurts;
 citation-graph boost neutral at 1,506 edges) in `benchmark/tcr_sgb_result.json`.
+  Constraint-hardness sensitivity (`benchmark/tcr_weight_sensitivity.json`): interpolating
+  the filter by down-weighting expired-law candidates with factor (1−α) recovers the full
+  Hit@1 gain already at α=0.1 and coincides with the hard filter exactly from α=0.5 on
+  (every α>0: Wilcoxon p < 10⁻¹⁹) — the gain is not a brittle binary cliff.
 
 **End-to-end LLM RAG validation** — feeding each question through a small local LLM (Qwen2.5-3B-Instruct, greedy decode, deterministic) shows the TCR retrieval gain transfers to answers: article-citation accuracy 0.488 → 0.594 when the RAG context is temporally filtered (+10.7 pts, McNemar p = 1.3·10⁻⁴; Span-F1 +2.3 pts, Wilcoxon p = 9.4·10⁻⁵), while closed-book cites correctly only 0.4% of the time and abstains 55% of it. Context Hit@5 values reproduce the published retrieval numbers exactly (0.729 / 0.811 / 0.846). The rerank+TCR condition covers 280/281 questions: for NEW90253 the stored Track-B rerank pool is empty after strict temporal filtering (no candidate in force at its as_of), so it is skipped by protocol. Per-question answers in `benchmark/llm_rag_result.json`, paired tests in `benchmark/llm_rag_significance.json`, exact RAG contexts in `benchmark/rag_inputs.json`. Data-quality note: answers are stored verbatim and occasionally contain CJK code-switching from the 3B model — 11/281 (3.9%) closed-book, 3/281 (1.1%) RAG, 5/281 (1.8%) RAG+TCR, 2/280 (0.7%) rerank+TCR — a Vietnamese RAG context cuts code-switching roughly 4x; nothing was edited post-hoc.
 
@@ -196,3 +200,4 @@ carry SHA-256 checksums (`SHA256SUMS`).
   url    = {https://huggingface.co/datasets/datbazuka2502/vicivil-tkg}
 }
 ```
+

@@ -1,6 +1,6 @@
-"""Temporal civil QA benchmark v1 (weak supervision: keyword-anchored golds).
+"""Temporal civil QA seed benchmark (weak supervision: keyword-anchored golds).
 Each item: {qid, question, as_of, gold_ids[], answer_hint}. Dates make it temporal:
-same question at different dates -> different golds. Expert review = v2.
+same question at different dates -> different golds. Expert review chain follows in later passes.
 """
 import json
 
@@ -32,7 +32,7 @@ Q = [
 ]
 items = [{"qid": q, "as_of": d, "question": t, "gold_ids": g, "hint": h}
          for q, d, t, g, h in Q]
-open("/home/devlab1/law_workspace/runs/law_bench_v1.json", "w", encoding="utf-8").write(
+open("/home/devlab1/law_workspace/runs/law_bench_seed.json", "w", encoding="utf-8").write(
     json.dumps(items, ensure_ascii=False, indent=1))
 print("wrote", len(items), "questions", flush=True)
 print("temporal probes: CIV002 (2005 law), CIV008 (2010), CIV012 (1995 missing -> abstain expected)", flush=True)

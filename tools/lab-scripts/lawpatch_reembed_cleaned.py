@@ -1,4 +1,4 @@
-"""Patch v1.1: re-embed 1203 cleaned chunks into vdb_chunks.json (rows+contents).
+"""Re-embed 1,203 cleaned chunks into vdb_chunks.json (rows+contents).
 Background job with checkpoints. Output: runs/vdb_patch.log
 """
 import base64, io, json, sys, time, urllib.request
@@ -9,7 +9,7 @@ W = "/home/devlab1/law_workspace"
 R = f"{W}/runs"
 D = f"{W}/law_data"
 chunks = [json.loads(L) for L in open(f"{R}/civil_chunks.jsonl", encoding="utf-8")]
-txt = {r["chunk_id"]: r["content"] for r in chunks if r.get("cleaned_v11")}
+txt = {r["chunk_id"]: r["content"] for r in chunks if r.get("header_footer_cleaned")}
 print("to patch:", len(txt), flush=True)
 vdb = json.load(open(f"{D}/vdb_chunks.json", encoding="utf-8"))
 mat = np.frombuffer(base64.b64decode(vdb["matrix"]), dtype=np.float32).reshape(-1, 768).copy()

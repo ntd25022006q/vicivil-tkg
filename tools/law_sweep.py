@@ -42,7 +42,7 @@ def check_tree(root, tag):
     for p, rel, istext in surface(root):
         if istext:
             s = io.open(p, encoding="utf-8", errors="replace").read()
-            vendored = rel.endswith(".min.js") or rel.endswith("explorer.html")  # vendored third-party libraries ship verbatim; v1.4.0 inlines them into the viewer
+            vendored = rel.endswith(".min.js") or rel.endswith("explorer.html")  # vendored third-party libraries ship verbatim; the release build inlines them into the viewer
             verbatim_llm = rel == "benchmark/llm_rag_result.json"  # verbatim LLM answers; code-switching disclosed in README/report
             inv = INVIS.findall(s)
             if inv:

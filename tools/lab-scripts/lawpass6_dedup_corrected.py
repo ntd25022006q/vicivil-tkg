@@ -1,5 +1,5 @@
-"""Final E: correct near-dup collapse (same-sig + both-active-at-as_of only,
-never across disjoint-version laws) -> full eval -> law_eval_v14.json.
+"""Pass 6: correct near-dup collapse (same-sig + both-active-at-as_of only,
+never across disjoint-version laws) -> full eval -> law_eval_dedupcollapse_corrected.json.
 """
 import io, json, re, sys, time
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
@@ -66,7 +66,7 @@ def retrieve_dedup(q, as_of=None, topk=10, rerank=True, mode="hybrid"):
 
 rt.retrieve = retrieve_dedup
 qs = []
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     qs += json.load(open(f"{R}/{fn}", encoding="utf-8"))
 h = {1: 0, 3: 0, 5: 0, 10: 0}
 mrr, n = 0.0, 0
@@ -94,7 +94,7 @@ for o in qs:
 out = {"n": n, "hit": {k: round(v / n, 3) for k, v in h.items()}, "mrr": round(mrr / n, 4),
        "strat": {t: dict(s) for t, s in strat.items()},
        "per_q": rowsout, "secs": round(time.time() - t0, 1)}
-json.dump(out, open(f"{R}/law_eval_v14.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(out, open(f"{R}/law_eval_dedupcollapse_corrected.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("V14", json.dumps(out["hit"]), "MRR", out["mrr"], flush=True)
 for t, s in out["strat"].items():
     print("STRAT", t, "n", s["n"], "h1", round(s[1] / s["n"], 3), "h3", round(s[3] / s["n"], 3),

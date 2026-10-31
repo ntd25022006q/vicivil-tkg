@@ -8,7 +8,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tài sản của tôi và ông A trao đổi mà không lập hợp đồng thì có được không?"
  },
@@ -21,7 +21,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -33,7 +33,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2015|Dieu551|Khoan2"
  },
@@ -46,7 +46,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -58,7 +58,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -70,7 +70,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -82,7 +82,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -94,7 +94,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -106,7 +106,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -118,7 +118,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Hộ gia đình của tôi có quyền sử dụng đất như thế nào?"
  },
@@ -131,7 +131,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -143,7 +143,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -155,7 +155,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -167,7 +167,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2015|Dieu541|Khoan3"
  },
@@ -180,7 +180,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -192,7 +192,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -204,7 +204,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -216,7 +216,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -228,7 +228,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -240,7 +240,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -252,7 +252,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2015|Dieu4|Khoan2"
  },
@@ -265,7 +265,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -277,7 +277,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tòa án ơi, làm sao tôi có thể yêu cầu bác bỏ thông tin xấu về mình và gia đình được?"
  },
@@ -290,7 +290,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2015|Dieu28|Khoan1|Diemd"
  },
@@ -303,7 +303,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -315,7 +315,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2015|Dieu556|Khoan1"
  },
@@ -328,7 +328,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -340,7 +340,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -352,7 +352,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi muốn đổi lại dân tộc trong hồ sơ của tôi, tôi cần làm gì?"
  },
@@ -365,7 +365,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -377,7 +377,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -389,7 +389,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Quỹ từ thiện có được sử dụng tài sản để đầu tư sinh lời không?"
  },
@@ -402,7 +402,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -414,7 +414,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -426,7 +426,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -438,7 +438,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "regolded_from": "BLDS2005|Dieu671|Khoan1",
   "gold_tier": "regolded"
  },
@@ -451,7 +451,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -463,7 +463,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Anh/chị ơi, người nước ngoài có được quyền mua nhà tại Việt Nam không?"
  },
@@ -476,7 +476,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -488,7 +488,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -500,7 +500,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -512,7 +512,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -524,7 +524,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -536,7 +536,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -548,7 +548,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -560,7 +560,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -572,7 +572,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -584,7 +584,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -596,7 +596,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -608,7 +608,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -620,7 +620,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "regolded_from": "BLDS2005|Dieu430|Khoan1",
   "gold_tier": "regolded"
  },
@@ -633,7 +633,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -645,7 +645,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -657,7 +657,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "regolded_from": "BLDS2005|Dieu142|Khoan1",
   "gold_tier": "regolded"
  },
@@ -670,7 +670,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2005|Dieu665|Khoan1"
  },
@@ -683,7 +683,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -695,7 +695,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -707,7 +707,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2005|Dieu431|Khoan1"
  },
@@ -720,7 +720,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -732,7 +732,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -744,7 +744,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -756,7 +756,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -768,7 +768,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2005|Dieu354|Khoan1"
  },
@@ -781,7 +781,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2005|Dieu157|Khoan1"
  },
@@ -794,7 +794,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -806,7 +806,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -818,7 +818,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -830,7 +830,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -842,7 +842,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tranh chấp về quyền sử dụng đất của tôi với hàng xóm phải giải quyết như thế nào?"
  },
@@ -855,7 +855,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Con có quyền quản lý tài sản của mình hay không khi đã có người khác được chỉ định làm giám hộ?"
  },
@@ -868,7 +868,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -880,7 +880,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "regolded_from": "HNGD2014|Dieu99|Khoan2",
   "gold_tier": "regolded"
  },
@@ -893,7 +893,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -905,7 +905,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Cha mẹ ơi, con đã dưới 18 tuổi thì tài sản của con phải làm sao bây giờ?"
  },
@@ -918,7 +918,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tài sản riêng của tôi đã được sử dụng để trả nợ chung, vậy quyền lợi của tôi sẽ như thế nào?"
  },
@@ -931,7 +931,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -943,7 +943,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -955,7 +955,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -967,7 +967,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -979,7 +979,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -991,7 +991,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1003,7 +1003,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "regolded_from": "HNGD2014|Dieu8|Khoan1|Diemc",
   "gold_tier": "regolded"
  },
@@ -1016,7 +1016,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1028,7 +1028,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1040,7 +1040,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "HNGD2014|Dieu119|Khoan1"
  },
@@ -1053,7 +1053,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "HNGD2014|Dieu95|Khoan2|Diemb"
  },
@@ -1066,7 +1066,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Chồng của tôi muốn bán nhà mà tên sổ đỏ chỉ có tên vợ, vậy bây giờ phải làm sao?"
  },
@@ -1079,7 +1079,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1091,7 +1091,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1103,7 +1103,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi cùng người khác có một hợp đồng hợp tác nhưng bây giờ xảy ra tranh chấp về phân chia lợi nhuận, tôi phải làm sao?"
  },
@@ -1116,7 +1116,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1128,7 +1128,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tại sao công ty tôi lại bị giải thể mà không có bất kỳ thông báo nào trước?"
  },
@@ -1141,7 +1141,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1153,7 +1153,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1165,7 +1165,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Người dân hỏi: Nói về việc giữ gìn mốc giới với nhà hàng xóm, tôi có thể tự ý di chuyển mốc giới đó không?"
  },
@@ -1178,7 +1178,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Con gặp vấn đề là bé nhà con chỉ sống được 23 tiếng sau sinh, vậy có cần làm giấy khai sinh và khai tử cho bé không?"
  },
@@ -1191,7 +1191,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tại sao sau khi giải thể công ty, tài sản còn lại không được chia đều cho tất cả các cổ đông như tôi hiểu?"
  },
@@ -1204,7 +1204,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1216,7 +1216,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1228,7 +1228,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi gặp vấn đề với người giám hộ trẻ em, làm sao tôi có thể yêu cầu cơ quan chức năng thay đổi người giám hộ này?"
  },
@@ -1241,7 +1241,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1253,7 +1253,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi lập di chúc miệng nhưng chỉ có một người làm chứng, vậy di chúc của tôi có hợp pháp không?"
  },
@@ -1266,7 +1266,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1278,7 +1278,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1290,7 +1290,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1302,7 +1302,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1314,7 +1314,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1326,7 +1326,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Nếu tôi là chủ một doanh nghiệp và đã dùng tài sản của mình làm tài sản bảo đảm, vậy khi tôi không thể thực hiện nghĩa vụ thì tài sản của tôi sẽ bị xử lý như thế nào?"
  },
@@ -1339,7 +1339,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1351,7 +1351,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1363,7 +1363,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1375,7 +1375,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1387,7 +1387,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "author-verified",
   "question_rescoped_from": "Tại sao thỏa thuận phân chia tài sản giữa vợ chồng của tôi lại bị tòa án tuyên bố vô hiệu?"
  },
@@ -1400,7 +1400,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1412,7 +1412,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1424,7 +1424,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1436,7 +1436,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1448,7 +1448,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi là người giám hộ của một người thân bị hạn chế năng lực hành vi dân sự, tôi muốn biết quyền và trách nhiệm của tôi theo pháp luật Việt Nam là gì?"
  },
@@ -1461,7 +1461,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2005|Dieu755|Khoan1"
  },
@@ -1474,7 +1474,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1486,7 +1486,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1498,7 +1498,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1510,7 +1510,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1522,7 +1522,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Nếu tôi và vợ tôi đã trải qua việc một trong chúng tôi bị tuyên bố là đã chết và sau đó hôn nhân được khôi phục, liệu tài sản tôi kiếm được trong thời gian đó có phải chia sẻ với vợ không?"
  },
@@ -1535,7 +1535,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1547,7 +1547,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Bên bán hàng yêu cầu tôi phải trả tiền trước nhưng không chịu cam kết về chất lượng sản phẩm, như vậy có đúng không?"
  },
@@ -1560,7 +1560,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "regolded_from": "BLDS2015|Dieu202|Khoan2",
   "gold_tier": "regolded"
  },
@@ -1573,7 +1573,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "regolded_from": "BLDS2015|Dieu432|Khoan2",
   "gold_tier": "regolded"
  },
@@ -1586,7 +1586,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1598,7 +1598,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1610,7 +1610,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1622,7 +1622,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2005|Dieu759|Khoan1"
  },
@@ -1635,7 +1635,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1647,7 +1647,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1659,7 +1659,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1671,7 +1671,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1683,7 +1683,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1695,7 +1695,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Con tôi thường xuyên bị bạn học bắt nạt, tôi phải làm gì để bảo vệ quyền lợi của con theo luật pháp?"
  },
@@ -1708,7 +1708,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Nếu công ty không đồng ý hoãn thanh toán, tôi có thể hoãn việc giao hàng không?"
  },
@@ -1721,7 +1721,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1733,7 +1733,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "HNGD2014|Dieu78|Khoan2"
  },
@@ -1746,7 +1746,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1758,7 +1758,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1770,7 +1770,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1782,7 +1782,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1794,7 +1794,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi và chồng muốn nhờ người khác mang thai hộ nhưng không biết làm sao để lấy được xác nhận từ tổ chức y tế có thẩm quyền?"
  },
@@ -1807,7 +1807,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1819,7 +1819,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "regolded_from": "BLDS2005|Dieu178|Khoan1",
   "gold_tier": "regolded"
  },
@@ -1832,7 +1832,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1844,7 +1844,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "regolded",
   "regolded_from": "BLDS2015|Dieu320|Khoan8"
  },
@@ -1857,7 +1857,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1869,7 +1869,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi mua vé xe nhưng lái xe nói không mang theo hợp đồng vận chuyển hành khách, tôi có quyền đòi lại tiền không?"
  },
@@ -1882,7 +1882,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi làm rơi máy tính của công ty khi được giao nhiệm vụ dọn bàn làm việc, giờ tôi phải làm sao?"
  },
@@ -1895,7 +1895,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Trong di chúc, ông nội không đề cập gì về thù lao cho người phân chia di sản, vậy tôi có phải trả tiền thù lao cho họ không?"
  },
@@ -1908,7 +1908,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1920,7 +1920,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tài sản của tôi bị công ty vận chuyển từ chối, họ nói đó là tài sản cấm giao dịch và có tính chất độc hại, nhưng tôi không biết gì về điều đó."
  },
@@ -1933,7 +1933,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi vừa ký hợp đồng với công ty nhưng không may tên và thông tin cá nhân của tôi bị rò rỉ ra ngoài, giờ tôi phải làm sao?"
  },
@@ -1946,7 +1946,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Nếu tôi đồng sở hữu một mảnh đất với người khác và muốn xây nhà trên phần đất của mình, tôi cần phải hỏi ý kiến của các chủ sở hữu còn lại không?"
  },
@@ -1959,7 +1959,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1971,7 +1971,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1983,7 +1983,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified"
  },
  {
@@ -1995,7 +1995,7 @@
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
-  "reviewed": "author-v1",
+  "reviewed": "author-pass1",
   "gold_tier": "verified",
   "question_rescoped_from": "Tài sản tôi mượn từ bạn lâu rồi mà bạn vẫn chưa đòi, giờ tôi nên làm gì?"
  },
@@ -2008,7 +2008,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOAGIAI2026",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Trưởng ban công tác Mặt trận không thực hiện rà soát, đánh giá về tổ chức, hoạt động của tổ hòa giải hàng năm như quy định, tôi phải làm gì?"
  },
@@ -2021,7 +2021,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOAGIAI2026",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2033,7 +2033,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOAGIAI2026",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2045,7 +2045,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOTICH2014",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Tại sao sau khi bản án về thay đổi hộ tịch có hiệu lực, tôi chưa thấy Ủy ban nhân dân địa phương cập nhật thông tin vào Sổ hộ tịch của tôi trong vòng 5 ngày làm việc?"
  },
@@ -2058,7 +2058,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOTICH2014",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Sau khi nộp tất cả giấy tờ cần thiết cho khai tử, tôi đã chờ 3 ngày làm việc nhưng vẫn chưa nhận được trích lục hộ tịch, vậy tôi phải làm gì?"
  },
@@ -2071,7 +2071,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOTICH2014",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2083,7 +2083,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOTICH2014",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Khi tôi đăng ký kết hôn mà muốn lấy bản chính trích lục hộ tịch thì làm thế nào?"
  },
@@ -2096,7 +2096,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOTICH2014",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2108,7 +2108,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2120,7 +2120,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "regolded_from": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu106|Khoan4",
   "gold_tier": "regolded"
  },
@@ -2133,7 +2133,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2145,7 +2145,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2157,7 +2157,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2169,7 +2169,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2181,7 +2181,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi đã gửi đơn kháng cáo nhưng tòa án trả lời quá hạn, giờ tôi có thể làm gì?"
  },
@@ -2194,7 +2194,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2206,7 +2206,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2218,7 +2218,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "THADSVBHN",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2230,7 +2230,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "THADSVBHN",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Tài sản tôi mua đấu giá bị giữ lại bởi cơ quan thi hành án, họ không chịu giao tài sản và cũng không cung cấp giấy tờ cần thiết, tôi phải làm sao?"
  },
@@ -2243,7 +2243,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "THADSVBHN",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2255,7 +2255,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "THADSVBHN",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2267,7 +2267,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "THADS2008",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "regolded_from": "THADS2008|Dieu164|Khoan2",
   "gold_tier": "regolded"
  },
@@ -2280,7 +2280,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "THADS2008",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "author-verified",
   "question_rescoped_from": "Tại sao tài sản của tôi bị thu giữ mà không được thông báo trước?"
  },
@@ -2293,7 +2293,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "THADS2008",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi cần phải báo cáo công tác tổ chức và hoạt động thi hành án cho cơ quan cấp tỉnh nhưng không biết nội dung báo cáo cần những thông tin gì?"
  },
@@ -2306,7 +2306,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "THADS2008",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2318,7 +2318,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "TNBTCNN2017",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2330,7 +2330,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "TNBTCNN2017",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2342,7 +2342,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "TNBTCNN2017",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2354,7 +2354,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "TNBTCNN2017",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2366,7 +2366,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "luat-so-15-2026-qh16-470450",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2378,7 +2378,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "luat-so-15-2026-qh16-470450",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Tại sao thủ tục bồi thường nhà nước của tôi vẫn chưa được xử lý dù đã lâu rồi?"
  },
@@ -2391,7 +2391,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HNGDVBHN2025",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Việc chia tài sản chung giữa vợ chồng không lập thành văn bản và không công chứng có hiệu lực không?"
  },
@@ -2404,7 +2404,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HNGDVBHN2025",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2416,7 +2416,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "NCN2010",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi muốn thuê một trụ sở để hoạt động nhưng không biết thủ tục như thế nào?"
  },
@@ -2429,7 +2429,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "NCN2010",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2441,7 +2441,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "NCN2010",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Tại sao tôi không được nhận con nuôi mặc dù tôi đã hoàn thành thời gian tù trước đó 5 năm?"
  },
@@ -2454,7 +2454,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "NCN2010",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2466,7 +2466,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "NCN2010",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2478,7 +2478,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOTICH2026",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2490,7 +2490,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOTICH2026",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2502,7 +2502,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HOTICH2026",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Cơ sở dữ liệu hộ tịch của tôi bị mất một số thông tin cá nhân, giờ tôi phải làm sao?"
  },
@@ -2515,7 +2515,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Tài sản duy nhất của tôi lớn hơn nhiều lần so với số tiền nợ cần thanh toán và không thể phân chia được, vậy tài sản của tôi có bị xử lý để trả nợ không?"
  },
@@ -2528,7 +2528,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2540,7 +2540,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2552,7 +2552,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HNGD2000",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {
@@ -2564,7 +2564,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HNGD2000",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
   "question_rescoped_from": "Tôi không phải là người thân của bạn nhưng nếu tôi là, tôi sẽ hỏi: \"Bố/mẹ tôi vừa bị tòa tuyên án vì ngược đãi tôi, vậy bố/mẹ tôi có còn quyền quyết định về vấn đề học tập của tôi không?\""
  },
@@ -2577,7 +2577,7 @@
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "HNGD2000",
-  "reviewed": "author-v1-dates",
+  "reviewed": "author-pass1-dates",
   "gold_tier": "verified"
  },
  {

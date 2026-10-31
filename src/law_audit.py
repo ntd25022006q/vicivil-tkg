@@ -37,7 +37,7 @@ rep["edges"] = len(G["succession"])
 # 5. benchmark golds exist
 ids_set = set(ids)
 missing = []
-for fn in ["law_bench_v1.json", "law_bench_200c.json"]:
+for fn in ["law_bench_seed.json", "law_bench_main.json"]:
     try:
         for o in json.load(open(f"{R}/{fn}", encoding="utf-8")):
             for g in o.get("gold_ids", []):

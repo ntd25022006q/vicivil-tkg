@@ -1,4 +1,4 @@
-"""Civil-law chunker v1: signed PDF -> text -> Dieu/Khoan/Diem records with IDs.
+"""Civil-law chunker: signed PDF -> text -> Dieu/Khoan/Diem records with IDs.
 ID scheme: {LAW}|Dieu{d}|Khoan{k}|Diem{p}  (Khoan/Diem empty when absent).
 Output (JSONL, one record per line = crash-safe):
   runs/civil_chunks.jsonl : {chunk_id, law_id, dieu, khoan, diem, tieu_de, content, chars}

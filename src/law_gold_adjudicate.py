@@ -1,4 +1,4 @@
-"""Dung bo dap an vang chuan (gold v2) va tinh lai chi so.
+"""Dung bo dap an vang da trong tham (adjudicated gold) va tinh lai chi so.
 
 - 240 cau co dap an vang da duoc xac minh: giu nguyen.
 - 41 cau chua xac minh: dua vao ket qua LLM judge 2 vong (chi nhan khi ca hai
@@ -13,7 +13,7 @@ B = os.path.join(R, "benchmark")
 KS = (1, 3, 5, 10)
 
 gold = {}
-for fn in ("law_bench_200c.json", "law_bench_v1.json"):
+for fn in ("law_bench_main.json", "law_bench_seed.json"):
     p = os.path.join(B, fn)
     if os.path.exists(p):
         for q in json.load(open(p, encoding="utf-8")):
@@ -22,11 +22,11 @@ for fn in ("law_bench_200c.json", "law_bench_v1.json"):
 
 regold = json.load(open(os.path.join(B, "regold.json"), encoding="utf-8"))
 unverified = {q for q, v in regold.items() if not v.get("new_gold")}
-ver = json.load(open(os.path.join(B, "regold_v2_verified.json"), encoding="utf-8"))
+ver = json.load(open(os.path.join(B, "regold_judge_round2.json"), encoding="utf-8"))
 rr = json.load(open(os.path.join(B, "rerank_result.json"), encoding="utf-8"))
 ev = json.load(open(os.path.join(B, "law_eval_repro.json"), encoding="utf-8"))
 
-gold_v2 = {}
+gold_adj = {}
 regolded = 0
 still = []
 for qid, meta in gold.items():
@@ -39,10 +39,10 @@ for qid, meta in gold.items():
         else:
             still.append(qid)
             continue
-    gold_v2[qid] = g
+    gold_adj[qid] = g
 
 out_gold = {
-    "n_questions_with_verified_gold": len(gold_v2),
+    "n_questions_with_verified_gold": len(gold_adj),
     "n_questions_unverifiable": len(still),
     "unverifiable_qids": still,
     "n_regolded_by_two_round_llm_judge": regolded,
@@ -51,9 +51,9 @@ out_gold = {
     "rule": "cau chi con lai khi ca hai vong kiem chung cua LLM judge deu xac nhan "
             "doan do tra loi dung; cac doan duoc giu la dap an chinh la cac ban "
             "khac nhau cua cung dieu khoan",
-    "gold": gold_v2,
+    "gold": gold_adj,
 }
-json.dump(out_gold, open(os.path.join(B, "gold_v2.json"), "w", encoding="utf-8"),
+json.dump(out_gold, open(os.path.join(B, "gold_adjudicated.json"), "w", encoding="utf-8"),
           ensure_ascii=False, indent=1)
 
 
@@ -78,18 +78,18 @@ def score(rows, key, goldmap):
 
 
 old = score(rr["per_q"], "rerank_top", {q: m["g"] for q, m in gold.items()})
-new = score(rr["per_q"], "rerank_top", gold_v2)
+new = score(rr["per_q"], "rerank_top", gold_adj)
 old_h = score(rr["per_q"], "hybrid_top", {q: m["g"] for q, m in gold.items()})
-new_h = score(rr["per_q"], "hybrid_top", gold_v2)
+new_h = score(rr["per_q"], "hybrid_top", gold_adj)
 
 res = {
     "old_gold": {"n_questions": old["n_questions"], "hit_at_k": old["hit_at_k"], "mrr": old["mrr"]},
-    "new_gold_v2": {"n_questions": new["n_questions"], "hit_at_k": new["hit_at_k"], "mrr": new["mrr"]},
+    "new_gold_adjudicated": {"n_questions": new["n_questions"], "hit_at_k": new["hit_at_k"], "mrr": new["mrr"]},
     "hybrid_with_old_gold": {"hit_at_k": old_h["hit_at_k"], "mrr": old_h["mrr"]},
     "hybrid_with_new_gold": {"hit_at_k": new_h["hit_at_k"], "mrr": new_h["mrr"]},
     "n_regolded": regolded,
     "n_unverifiable_remaining": len(still),
 }
-json.dump(res, open(os.path.join(B, "gold_v2_metrics.json"), "w", encoding="utf-8"),
+json.dump(res, open(os.path.join(B, "gold_adjudicated_metrics.json"), "w", encoding="utf-8"),
           ensure_ascii=False, indent=1)
 print(json.dumps(res, ensure_ascii=False, indent=1))

@@ -1,5 +1,5 @@
-"""End-to-end civil QA v1: embed question -> dense top-K over date-valid chunks.
-Usage: law_qa.py <qid>   (reads law_bench_v1.json)
+"""End-to-end civil QA: embed question -> dense top-K over date-valid chunks.
+Usage: law_qa.py <qid>   (reads law_bench_seed.json)
 """
 import json, sys, urllib.request
 import numpy as np
@@ -20,7 +20,7 @@ def emb(texts):
 
 
 QID = sys.argv[1]
-b = [x for x in json.load(open(f"{R}/law_bench_v1.json", encoding="utf-8")) if x["qid"] == QID][0]
+b = [x for x in json.load(open(f"{R}/law_bench_seed.json", encoding="utf-8")) if x["qid"] == QID][0]
 G = json.load(open(f"{R}/temporal_graph.json", encoding="utf-8"))
 lawmap = {L["law_id"]: L for L in G["laws"]}
 

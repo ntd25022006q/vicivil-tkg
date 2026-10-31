@@ -7,8 +7,8 @@ from collections import defaultdict
 
 W = "/home/devlab1/law_workspace"
 R = f"{W}/runs"
-bench = {o["qid"]: o for o in json.load(open(f"{R}/law_bench_200c.json", encoding="utf-8"))}
-for o in json.load(open(f"{R}/law_bench_v1.json", encoding="utf-8")):
+bench = {o["qid"]: o for o in json.load(open(f"{R}/law_bench_main.json", encoding="utf-8"))}
+for o in json.load(open(f"{R}/law_bench_seed.json", encoding="utf-8")):
     bench.setdefault(o["qid"], o)
 A = json.load(open(f"{R}/ranks_dense.json", encoding="utf-8"))
 B = json.load(open(f"{R}/ranks_hybrid.json", encoding="utf-8"))

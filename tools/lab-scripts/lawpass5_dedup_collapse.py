@@ -1,5 +1,5 @@
-"""Final D: 1) sync vdb/kv content to [:3000] policy; 2) retry 9 failed3x serially;
-3) retrieval-time near-dup collapse + full re-eval; save law_eval_v13.json.
+"""Pass 5: 1) sync vdb/kv content to [:3000] policy; 2) retry 9 failed3x serially;
+3) retrieval-time near-dup collapse + full re-eval; save law_eval_dedupcollapse.json.
 """
 import base64, io, json, re, sys, time, urllib.request
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
@@ -142,7 +142,7 @@ def retrieve_dedup(q, as_of=None, topk=10, rerank=True, mode="hybrid"):
 
 rt.retrieve = retrieve_dedup
 qs = []
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     qs += json.load(open(f"{R}/{fn}", encoding="utf-8"))
 print("as_of present:", sum(1 for o in qs if o.get("as_of")), "of", len(qs), flush=True)
 h = {1: 0, 3: 0, 5: 0, 10: 0}
@@ -171,7 +171,7 @@ out = {"n": n, "hit": {k: round(v / n, 3) for k, v in h.items()}, "mrr": round(m
                  for t, s in strat.items()},
        "per_q": rowsout, "dedup_groups": int(sum(1 for v in sig.values() if len(v) > 1)),
        "secs": round(time.time() - t0, 1)}
-json.dump(out, open(f"{R}/law_eval_v13_dedup.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(out, open(f"{R}/law_eval_dedup.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("V13-DEDUP", json.dumps(out["hit"]), "MRR", out["mrr"], flush=True)
 for t, s in out["strat"].items():
     print(t, s["n"], json.dumps(s["hit"]), "n-only", s["hit"].get("n"), flush=True)

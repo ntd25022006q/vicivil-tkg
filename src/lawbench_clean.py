@@ -11,6 +11,6 @@ for o in b:
         drop += 1
         continue
     keep.append(o)
-json.dump(keep, open("/home/devlab1/law_workspace/runs/law_bench_200c.json", "w",
+json.dump(keep, open("/home/devlab1/law_workspace/runs/law_bench_main.json", "w",
                      encoding="utf-8"), ensure_ascii=False, indent=1)
 print(f"kept={len(keep)} dropped={drop}", flush=True)

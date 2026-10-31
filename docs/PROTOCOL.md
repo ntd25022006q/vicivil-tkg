@@ -22,7 +22,7 @@ Mọi quy tắc dưới đây tồn tại vì vi phạm nó từng gây mất d�
 4. Trích delta (resume) → rebuild index → eval hồi quy (số không được tụt
    quá ngưỡng gate).
 5. VBHN mới → moi preamble lấy danh sách sửa đổi → cạnh AMENDS verify tay.
-6. Đóng version quý (v1.x): snapshot + delta + CHANGELOG + tag.
+6. Đóng bản quý theo semantic version (ví dụ v1.1.0): snapshot + delta + CHANGELOG + tag.
 
 ## 3. Audit gate (không đạt là dừng, không đẩy)
 
@@ -41,7 +41,7 @@ Mọi quy tắc dưới đây tồn tại vì vi phạm nó từng gây mất d�
 - Gold = chunk tồn tại thật, ngày hỏi nằm trong hiệu lực luật chứa gold.
 - Câu sinh bằng LLM phải qua lọc (CJK/meta/ngắn/dài) + duyệt mẫu thủ công;
   tỉ lệ lọc công bố.
-- Split dev/test công khai, cố định seed; test gold giấu từ v2.
+- Split dev/test công khai, cố định seed; test gold được giữ kín, chỉ công bố gold của dev.
 - Metric tối thiểu: Hit@1/3/5/10 + MRR + nDCG@10 + Điều@5 + abstain.
 - Khác biệt giữa các hệ phải qua kiểm định (McNemar + Wilcoxon) mới được
   gọi là "hơn".

@@ -1,4 +1,4 @@
-"""Eval law ADGR-fixed retrieval on benchmark v1: Hit@1/3/5 + abstain."""
+"""Eval law ADGR-fixed retrieval on benchmark: Hit@1/3/5 + abstain."""
 import json, sys
 
 sys.path.insert(0, "/home/devlab1/law_workspace/src")
@@ -7,7 +7,7 @@ from law_adgr import LawRetriever
 W = "/home/devlab1/law_workspace"
 R = f"{W}/runs"
 rt = LawRetriever()
-bench = json.load(open(f"{R}/law_bench_v1.json", encoding="utf-8"))
+bench = json.load(open(f"{R}/law_bench_seed.json", encoding="utf-8"))
 h1 = h3 = h5 = n = abst = 0
 d1 = d5 = 0
 for b in bench:

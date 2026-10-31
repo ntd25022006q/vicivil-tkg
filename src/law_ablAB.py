@@ -8,7 +8,7 @@ import numpy as np
 W = "/home/devlab1/law_workspace"
 R = f"{W}/runs"
 rt = LawRetriever()
-bench = json.load(open(f"{R}/law_bench_200c.json", encoding="utf-8"))
+bench = json.load(open(f"{R}/law_bench_main.json", encoding="utf-8"))
 split = json.load(open(f"{R}/bench_split.json", encoding="utf-8"))
 qv = rt.embed([b["question"] for b in bench])
 res = {}

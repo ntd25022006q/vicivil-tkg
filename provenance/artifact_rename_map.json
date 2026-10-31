@@ -1,0 +1,120 @@
+{
+ "documented_at": "2026-10-30 23:01:17",
+ "reason": "Canonical artifact naming: replace build-number filenames (v1/v2/200c/v12/v16/fin1..7/rs67/v11patch) with semantic names so the repository layout stays stable across releases. Content of data artifacts is unchanged except where noted.",
+ "renames": [
+  {
+   "old": "benchmark/law_bench_200c.json",
+   "new": "benchmark/law_bench_main.json"
+  },
+  {
+   "old": "benchmark/law_bench_v1.json",
+   "new": "benchmark/law_bench_seed.json"
+  },
+  {
+   "old": "benchmark/law_eval_v12.json",
+   "new": "benchmark/law_eval_ranks_full.json"
+  },
+  {
+   "old": "benchmark/law_eval_v16_equiv.json",
+   "new": "benchmark/law_eval_matching_rules.json"
+  },
+  {
+   "old": "benchmark/gold_v2.json",
+   "new": "benchmark/gold_adjudicated.json"
+  },
+  {
+   "old": "benchmark/gold_v2_metrics.json",
+   "new": "benchmark/gold_adjudicated_metrics.json"
+  },
+  {
+   "old": "benchmark/regold_v2.json",
+   "new": "benchmark/regold_judge_round1.json"
+  },
+  {
+   "old": "benchmark/regold_v2_verified.json",
+   "new": "benchmark/regold_judge_round2.json"
+  },
+  {
+   "old": "src/law_bench_gen2.py",
+   "new": "src/law_bench_refill200.py"
+  },
+  {
+   "old": "src/law_bench_new.py",
+   "new": "src/law_bench_topup_newlaws.py"
+  },
+  {
+   "old": "src/law_bench_topup2.py",
+   "new": "src/law_bench_topup_coverage.py"
+  },
+  {
+   "old": "src/law_bench_v1.py",
+   "new": "src/law_bench_seed_build.py"
+  },
+  {
+   "old": "src/law_eval2.py",
+   "new": "src/law_eval_hybrid.py"
+  },
+  {
+   "old": "src/law_eval200.py",
+   "new": "src/law_eval_rerank_fusion.py"
+  },
+  {
+   "old": "src/law_eval_new.py",
+   "new": "src/law_eval_delta_new.py"
+  },
+  {
+   "old": "src/law_gold_v2.py",
+   "new": "src/law_gold_adjudicate.py"
+  },
+  {
+   "old": "src/law_pdf_batch2.py",
+   "new": "src/law_pdf_reprocess.py"
+  },
+  {
+   "old": "tools/lab-scripts/lawfin1.py",
+   "new": "tools/lab-scripts/lawpass1_dedup_clean.py"
+  },
+  {
+   "old": "tools/lab-scripts/lawfin2.py",
+   "new": "tools/lab-scripts/lawpass2_fulleval.py"
+  },
+  {
+   "old": "tools/lab-scripts/lawfin3.py",
+   "new": "tools/lab-scripts/lawpass3_stubfix_reembed.py"
+  },
+  {
+   "old": "tools/lab-scripts/lawfin5.py",
+   "new": "tools/lab-scripts/lawpass5_dedup_collapse.py"
+  },
+  {
+   "old": "tools/lab-scripts/lawfin6.py",
+   "new": "tools/lab-scripts/lawpass6_dedup_corrected.py"
+  },
+  {
+   "old": "tools/lab-scripts/lawfin7.py",
+   "new": "tools/lab-scripts/lawpass7_rescue_crowdstat.py"
+  },
+  {
+   "old": "tools/lab-scripts/lawrs67.py",
+   "new": "tools/lab-scripts/law_rescope_verify.py"
+  },
+  {
+   "old": "tools/lab-scripts/lawv11patch.py",
+   "new": "tools/lab-scripts/lawpatch_reembed_cleaned.py"
+  },
+  {
+   "old": "tools/lab-scripts/law_second14.py",
+   "new": "tools/lab-scripts/law_second_14b.py"
+  },
+  {
+   "old": "tools/lab-scripts/law95do.py",
+   "new": "tools/lab-scripts/lawblds1995_mucsplit.py"
+  }
+ ],
+ "content_edits": [
+  "benchmark/gold_adjudicated_metrics.json: metric key new_gold_v2 -> new_gold_adjudicated",
+  "benchmark/as_of_fixes.json: file pointer law_bench_200c.json -> law_bench_main.json",
+  "docstring/variable cleanups in renamed scripts (no behavior change)",
+  "DATASHEET.md / README.md / tools/lab-scripts/README.md: filename references updated"
+ ]
+}

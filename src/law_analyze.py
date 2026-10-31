@@ -1,12 +1,12 @@
 """Eval-200 analysis: hand vs synthetic, by law, miss patterns. Run after eval.
-Reads law_eval200.log ranks + bench files. No GPU needed.
+Reads law_eval_rerank_fusion.log ranks + bench files. No GPU needed.
 """
 import json, re
 
-LOG = "/home/devlab1/law_workspace/runs/law_eval200.log"
+LOG = "/home/devlab1/law_workspace/runs/law_eval_rerank_fusion.log"
 R = "/home/devlab1/law_workspace/runs"
-hand = {o["qid"] for o in json.load(open(f"{R}/law_bench_v1.json", encoding="utf-8"))}
-syn = json.load(open(f"{R}/law_bench_200c.json", encoding="utf-8"))
+hand = {o["qid"] for o in json.load(open(f"{R}/law_bench_seed.json", encoding="utf-8"))}
+syn = json.load(open(f"{R}/law_bench_main.json", encoding="utf-8"))
 by_q = {o["qid"]: o for o in syn}
 recs = []
 for L in open(LOG, encoding="utf-8", errors="replace"):

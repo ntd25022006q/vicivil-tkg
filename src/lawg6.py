@@ -505,7 +505,7 @@ footer .frow{max-width:1440px;margin:0 auto;padding:9px 22px;display:flex;gap:16
       <b id="st-gold">281</b> câu hỏi gold
     </span>
     <div class="top-links">
-      <span class="ver">v1.6.0</span>
+      <span class="ver">v1.0.0</span>
       <a href="https://github.com/ntd25022006q/vicivil-tkg" target="_blank">GitHub</a>
       <a href="law_graph.gexf" download>GEXF cho Gephi</a>
     </div>
@@ -539,7 +539,7 @@ footer .frow{max-width:1440px;margin:0 auto;padding:9px 22px;display:flex;gap:16
   <aside id="drawer" aria-label="Chi tiết văn bản"><div class="inner" id="dbody"></div></aside>
 </main>
 <footer><div class="frow">
-  <span>Thẻ dữ liệu v1.6.0</span><span>·</span>
+  <span>Thẻ dữ liệu v1.0.0</span><span>·</span>
   <span>Nguồn công báo chính thức</span><span>·</span>
   <span><a href="law_graph.gexf" download>GEXF 1.3 cho Gephi</a></span><span>·</span>
   <span><a href="law_timeline.vl.json" download>spec Vega-Lite</a></span>

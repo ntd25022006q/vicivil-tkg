@@ -14,7 +14,7 @@ KS = (1, 3, 5, 10)
 
 rr = json.load(open(os.path.join(B, "rerank_result.json"), encoding="utf-8"))
 gold = {}
-for fn in ("law_bench_200c.json", "law_bench_v1.json"):
+for fn in ("law_bench_main.json", "law_bench_seed.json"):
     p = os.path.join(B, fn)
     if os.path.exists(p):
         for q in json.load(open(p, encoding="utf-8")):

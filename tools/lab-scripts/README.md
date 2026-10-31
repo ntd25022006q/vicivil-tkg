@@ -6,13 +6,13 @@ toàn bộ quá trình, không chỉ phần đã được chọn lọc trong `sr
 
 | Nhóm | Script | Vai trò |
 | --- | --- | --- |
-| Trích xuất | `law_extract.py`, `lawreext.py`, `law95do.py` | Lấy văn bản từ nguồn, bóc tách nội dung theo cấu trúc luật |
+| Trích xuất | `law_extract.py`, `lawreext.py`, `lawblds1995_mucsplit.py` | Lấy văn bản từ nguồn, bóc tách nội dung theo cấu trúc luật |
 | Làm sạch dữ liệu | `lawapply.py`, `lawfixall.py` | Chuẩn hoá và sửa các lỗi đã phát hiện trong dữ liệu |
-| Sinh câu hỏi | `law_second.py`, `law_second14.py`, `law_qafaith.py`, `lawrs67.py` | Sinh câu hỏi có đáp án và kiểm tra độ trung thành của câu trả lời |
-| Chấm điểm | `lawfin1.py`, `lawfin2.py`, `lawfin3.py`, `lawfin5.py`, `lawfin6.py`, `lawfin7.py` | Các vòng đánh giá truy hồi, lưu log từng vòng |
+| Sinh câu hỏi | `law_second.py`, `law_second_14b.py`, `law_qafaith.py`, `law_rescope_verify.py` | Sinh câu hỏi có đáp án và kiểm tra độ trung thành của câu trả lời |
+| Chấm điểm | `lawpass1_dedup_clean.py`, `lawpass2_fulleval.py`, `lawpass3_stubfix_reembed.py`, `lawpass5_dedup_collapse.py`, `lawpass6_dedup_corrected.py`, `lawpass7_rescue_crowdstat.py` | Các vòng đánh giá truy hồi, lưu log từng vòng |
 | Ván thời gian | `lawq_time.py` | Truy vấn theo mốc thời gian |
 | Ván đánh giá | `lawregold.py`, `lawreviewpkg.py` | Ván lại nhóm câu hỏi và dựng gói review cho người đọc |
-| Vá dữ liệu v11 | `lawv11patch.py` | Mã hoá lại 1.203 chunk đã làm sạch trong bước v1.1 |
+| Vá chunk đã làm sạch | `lawpatch_reembed_cleaned.py` | Nhúng lại 1.203 chunk đã làm sạch vào chỉ mục vector |
 
 Lưu ý: các script này được giữ **để đối chiếu và tái lập**, không phải
 để chạy trực tiếp. Đường dẫn trong chúng trỏ tới thư mục làm việc trên máy A30

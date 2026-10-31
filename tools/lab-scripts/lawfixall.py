@@ -15,7 +15,7 @@ for L in open(f"{R}/civil_chunks.jsonl", encoding="utf-8"):
     r = json.loads(L)
     chunks[r["chunk_id"]] = r["content"]
 qs = {}
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     for o in json.load(open(f"{R}/{fn}", encoding="utf-8")):
         qs[o["qid"]] = o
 todo = [o for o in qs.values() if o.get("gold_tier") in ("weak", "partial")]

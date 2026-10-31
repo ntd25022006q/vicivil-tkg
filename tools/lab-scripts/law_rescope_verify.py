@@ -11,7 +11,7 @@ for L in open(f"{R}/civil_chunks.jsonl", encoding="utf-8"):
     r = json.loads(L)
     chunks[r["chunk_id"]] = r["content"]
 qs = {}
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     for o in json.load(open(f"{R}/{fn}", encoding="utf-8")):
         qs[o["qid"]] = (fn, o)
 SYS = ("Ban doc CAU HOI va DOAN LUAT. DOAN nay co tra loi TRON VEN cau hoi khong? "
@@ -53,7 +53,7 @@ for qid, nq in NEWQ.items():
     else:
         o["gold_tier"] = "author-review"
         fail += 1
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     arr = [o for f, o in qs.values() if f == fn]
     json.dump(arr, open(f"{R}/{fn}", "w", encoding="utf-8"), ensure_ascii=False)
 print(f"RESCOPE67 DONE ok={ok} fail={fail} skip={skip}", flush=True)

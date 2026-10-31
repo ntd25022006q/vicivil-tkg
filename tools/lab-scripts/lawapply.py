@@ -10,7 +10,7 @@ from law_adgr import LawRetriever
 reg = json.load(open(f"{R}/regold.json", encoding="utf-8"))
 fixed = {q: v["new_gold"] for q, v in reg.items() if v.get("new_gold")}
 print("accepted regolds:", len(fixed), flush=True)
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     qs = json.load(open(f"{R}/{fn}", encoding="utf-8"))
     n = 0
     for o in qs:
@@ -21,7 +21,7 @@ for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
     json.dump(qs, open(f"{R}/{fn}", "w", encoding="utf-8"), ensure_ascii=False)
     print(fn, "updated:", n, flush=True)
 rt = LawRetriever()
-for fn in ["law_bench_200c.json", "law_bench_v1.json"]:
+for fn in ["law_bench_main.json", "law_bench_seed.json"]:
     qs = json.load(open(f"{R}/{fn}", encoding="utf-8"))
     h = {k: 0 for k in (1, 3, 5, 10)}
     for o in qs:

@@ -9,7 +9,7 @@ from law_adgr import LawRetriever
 W = "/home/devlab1/law_workspace"
 R = f"{W}/runs"
 rt = LawRetriever()
-bench = json.load(open(f"{R}/law_bench_200c.json", encoding="utf-8"))
+bench = json.load(open(f"{R}/law_bench_main.json", encoding="utf-8"))
 oldq = {o["qid"] for o in json.load(open(f"{R}/law_bench_200.json", encoding="utf-8"))}
 newq = [b for b in bench if b["qid"] not in oldq]
 print("delta n:", len(newq), flush=True)

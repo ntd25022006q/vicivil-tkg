@@ -1,6 +1,6 @@
-"""Hybrid law retrieval v1: BM25 (lexical, exact numbers/terms) + dense, RRF fusion.
+"""Hybrid law retrieval: BM25 (lexical, exact numbers/terms) + dense, RRF fusion.
 Mirrors ADGR's lesson (dense-only fails) with the cheapest correct fix.
-Usage: import hybrid_search; or run law_eval2.py
+Usage: import hybrid_search; or run law_eval_hybrid.py
 """
 import json, math, re, unicodedata
 from collections import Counter

@@ -1,5 +1,5 @@
-"""Final F: rescue 9 failed3x via Ollama (qwen3:14b, same format/validators);
-+ near-dup crowdstat on saved v12 ranks; write runs/law_crowdstat.json.
+"""Pass 7: rescue 9 failed3x via Ollama (qwen3:14b, same format/validators);
++ near-dup crowdstat on saved full-eval ranks; write runs/law_crowdstat.json.
 """
 import io, json, re, sys, time, urllib.request
 from collections import Counter
@@ -73,7 +73,7 @@ sig = {}
 for c in CM.values():
     sig.setdefault(norm(c["content"][:400]), []).append(c["chunk_id"])
 gr = sum(1 for v in sig.values() if len(v) > 1)
-ev = json.load(open(f"{R}/law_eval_v12.json", encoding="utf-8"))
+ev = json.load(open(f"{R}/law_eval_ranks_full.json", encoding="utf-8"))
 col = missing = rank_low = 0
 for p in ev["per_q"]:
     tops = p["top"]

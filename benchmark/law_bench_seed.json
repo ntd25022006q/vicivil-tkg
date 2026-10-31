@@ -7,7 +7,7 @@
    "BLDS2015|Dieu27|Khoan1|Diema"
   ],
   "hint": "thay đổi họ cho con đẻ (rater-vindicated fix: cases clause answers conditions)",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "regolded_from": "BLDS2015|Dieu27|Khoan1",
   "gold_tier": "regolded"
  },
@@ -19,7 +19,7 @@
    "BLDS2005|Dieu27|Khoan1"
   ],
   "hint": "cùng câu CIV001 nhưng đáp theo BLDS 2005 (temporal)",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "gold_tier": "verified"
  },
  {
@@ -30,7 +30,7 @@
    "HNGD2014|Dieu8|Khoan1|Diema"
   ],
   "hint": "nam đủ 20, nữ đủ 18",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "gold_tier": "verified"
  },
  {
@@ -41,7 +41,7 @@
    "BLDS2015|Dieu651|Khoan1|Diema"
   ],
   "hint": "vợ chồng cha mẹ con",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "gold_tier": "verified"
  },
  {
@@ -52,7 +52,7 @@
    "BLDS2015|Dieu584|Khoan1"
   ],
   "hint": "thiệt hại thực tế, lỗi, nhân quả",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "gold_tier": "verified"
  },
  {
@@ -63,7 +63,7 @@
    "HNGD2014|Dieu81|Khoan1"
   ],
   "hint": "cha mẹ không trực tiếp nuôi con",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "gold_tier": "verified"
  },
  {
@@ -74,7 +74,7 @@
    "BLDS2015|Dieu34|Khoan5"
   ],
   "hint": "cải chính, xin lỗi, bồi thường",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "regolded_from": "BLDS2015|Dieu34|Khoan2",
   "gold_tier": "regolded"
  },
@@ -86,7 +86,7 @@
    "HNGD2014|Dieu55"
   ],
   "hint": "thuận tình ly hôn",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "gold_tier": "verified"
  },
  {
@@ -97,7 +97,7 @@
    "HNGD2014|Dieu33|Khoan1"
   ],
   "hint": "tài sản do vợ chồng tạo ra trong thời kỳ hôn nhân",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "gold_tier": "verified"
  },
  {
@@ -108,7 +108,7 @@
    "BLDS2015|Dieu629|Khoan1"
   ],
   "hint": "nguy kịch, 2 người làm chứng",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "gold_tier": "verified"
  },
  {
@@ -119,7 +119,7 @@
    "BLDS2015|Dieu586|Khoan2"
   ],
   "hint": "cha mẹ/người giám hộ (rater-vindicated fix: minor-liability clause)",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "gold_tier": "verified"
  },
  {
@@ -130,7 +130,7 @@
    "BLDS1995|Dieu679|Muc1"
   ],
   "hint": "con nuoi cung hang thua ke 1 voi con de (temporal HIT)",
-  "reviewed": "author-v2-second-rater",
+  "reviewed": "author-pass2-second-rater",
   "gold_tier": "regolded",
   "regolded_from": "BLDS1995|Dieu679"
  }

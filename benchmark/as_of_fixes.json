@@ -4,7 +4,7 @@
  "fixes": [
   {
    "qid": "NEW84407",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -14,7 +14,7 @@
   },
   {
    "qid": "NEW45231",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -24,7 +24,7 @@
   },
   {
    "qid": "NEW98861",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -34,7 +34,7 @@
   },
   {
    "qid": "NEW17468",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -44,7 +44,7 @@
   },
   {
    "qid": "NEW61903",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -54,7 +54,7 @@
   },
   {
    "qid": "NEW28139",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -64,7 +64,7 @@
   },
   {
    "qid": "NEW75990",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -74,7 +74,7 @@
   },
   {
    "qid": "NEW21932",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -84,7 +84,7 @@
   },
   {
    "qid": "NEW96729",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -94,7 +94,7 @@
   },
   {
    "qid": "TOP89044",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -104,7 +104,7 @@
   },
   {
    "qid": "TOP89101",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -114,7 +114,7 @@
   },
   {
    "qid": "TOP26509",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -124,7 +124,7 @@
   },
   {
    "qid": "TOP27031",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -134,7 +134,7 @@
   },
   {
    "qid": "TOP92479",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -144,7 +144,7 @@
   },
   {
    "qid": "TOP86087",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -154,7 +154,7 @@
   },
   {
    "qid": "TOP81552",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -164,7 +164,7 @@
   },
   {
    "qid": "TOP27902",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -174,7 +174,7 @@
   },
   {
    "qid": "TOP25608",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -184,7 +184,7 @@
   },
   {
    "qid": "TOP45624",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -194,7 +194,7 @@
   },
   {
    "qid": "TOP68085",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -204,7 +204,7 @@
   },
   {
    "qid": "TOP35023",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -214,7 +214,7 @@
   },
   {
    "qid": "TOP36790",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -224,7 +224,7 @@
   },
   {
    "qid": "TOP60751",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2026-07-01",
    "gold_laws": [
@@ -234,7 +234,7 @@
   },
   {
    "qid": "TOP91913",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2008-06-01",
    "gold_laws": [],
@@ -242,7 +242,7 @@
   },
   {
    "qid": "TOP44737",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2008-06-01",
    "gold_laws": [],
@@ -250,7 +250,7 @@
   },
   {
    "qid": "TOP59991",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2008-06-01",
    "gold_laws": [],
@@ -258,7 +258,7 @@
   },
   {
    "qid": "TOP89237",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2008-06-01",
    "gold_laws": [],
@@ -266,7 +266,7 @@
   },
   {
    "qid": "TOP25307",
-   "file": "law_bench_200c.json",
+   "file": "law_bench_main.json",
    "old_as_of": "2024-06-01",
    "new_as_of": "2008-06-01",
    "gold_laws": [],

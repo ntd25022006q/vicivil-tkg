@@ -22,7 +22,7 @@ for L in open(f"{R}/civil_chunks.jsonl", encoding="utf-8"):
 G = json.load(open(f"{R}/temporal_graph.json", encoding="utf-8"))
 lawmap = {L["law_id"]: L for L in G["laws"]}
 items = []
-for fn in ["law_bench_v1.json", "law_bench_200c.json"]:
+for fn in ["law_bench_seed.json", "law_bench_main.json"]:
     try:
         items += json.load(open(f"{R}/{fn}", encoding="utf-8"))
     except Exception:

@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.6.0)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.0.0)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,16 +10,16 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.6.0)
+## Composition (v1.0.0)
 - **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
   sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
   each chunk carries source_url + source_type + (where applicable)
-  `cleaned_v11=true` footer-strip flag. BLDS 1995 re-parsed to clause level
+  `header_footer_cleaned=true` footer-strip flag. BLDS 1995 re-parsed to clause level
   from the signed PDF (1.896 chunks: Dieu or Dieu|Muc{0..k}).
 - **Extraction:** 11.267 chunk rows with entities/relations/deterministic
   DAN-CHIEU refs extracted on the decontaminated text (qwen25-awq,
   temp 0, few-shot + validators). 97 chunks were later re-extracted with
-  qwen3:14b via Ollama (9 stub-rescues in v1.2.2, then 94 rows whose
+  qwen3:14b via Ollama (9 stub-rescues, then 94 rows whose
   stored text or extraction contained residual corruption) — engine
   heterogeneity for those rows is recorded per-row (`engine` field);
   extraction covers 11.267/11.267 rows with zero failed chunks.
@@ -42,7 +42,7 @@
   97 confirmed / 23 reversed) in `second_rater*.json`, `regold.json`,
   `fixall.json`; 50-Q expert review package still pending.
 
-### Per-law size table (chunk counts, v1.6.0)
+### Per-law size table (chunk counts, v1.0.0)
 
 | law_id | chunks | law_id | chunks |
 |---|---:|---|---:|
@@ -72,7 +72,7 @@
 | `source_type` | str | `official` / `mirror` / `official-copy` / `semi` |
 | `fetched` | date | crawl date of the source page |
 | `valid_from` / `valid_to` | date | law inheritance of `[from, to)` validity (joined from the temporal graph, present on every row) |
-| `cleaned_v11` | bool | footer/header decontamination flag — present (true) on the 367 stripped rows, absent elsewhere |
+| `header_footer_cleaned` | bool | footer/header decontamination flag — present (true) on the 367 stripped rows, absent elsewhere |
 | `muc` | str | item part for BLDS 1995 clause-level rows |
 
 `benchmark/law_bench_*.json` — 281 question objects in two files:
@@ -92,10 +92,11 @@
 `{__id__, content[, src_id, tgt_id, ...]}` rows; the three `kv_store_*.json`
 map object ids to their referenced `chunk_ids`.
 
-## Metrics (measured on the v1.2.3 index; numbers carried to v1.2.4 —
-  hygiene-only strip of 12 invisible codepoints, no content change)
+## Metrics (measured on the frozen retrieval index; unchanged by the
+  final hygiene pass, which stripped 12 invisible codepoints with no
+  content change)
 - Full bench n=281: Hit@1 0.452 / Hit@3 0.658 / Hit@5 0.726 / Hit@10 0.794
-  / MRR 0.569. Re-evaluated on the sanitized v1.2.3 index and confirmed
+  / MRR 0.569. Re-evaluated on the sanitized frozen index and confirmed
   parseable. The no-GPU re-run (`law_eval_repro.json`, strict exact-ID + stored
   vectors) reproduces the chain at Hit@1 0.402 / Hit@5 0.730 / Hit@10 0.819 /
   MRR 0.545 — Hit@5/Hit@10 identical to the strict TCR chain; Hit@1 sits 0.7 pp
@@ -107,11 +108,15 @@ map object ids to their referenced `chunk_ids`.
   answer lives in a target chunk not reachable by surface wording, but
   rank-10 recall 0.812 shows the index finds it — good for paper);
   author-verified 4 -> 0.500/0.500/0.500/0.500.
-- Per-question ranks saved (`law_eval_v12.json`, historical engine; strict chain in
+- Per-question ranks saved (`law_eval_ranks_full.json`, historical engine; strict chain in
   `tcr_sgb_result.json`, no-GPU repro in `law_eval_repro.json`); ablation + significance
-  still those of v1.0 (`ablation_AB.json`, `significance.json`) and will be
-  re-run for the paper on this frozen v1.2.3 snapshot.
-- v1.1 metrics for comparison: Hit@1 0.41 / Hit@3 0.60 / Hit@5 0.67 /
+  still those of the initial ablation (`ablation_AB.json`, `significance.json`) and will be
+  re-run for the paper on this frozen release snapshot.
+- Temporal-constraint hardness sweep (`tcr_weight_sensitivity.json`): expired-law
+  candidates down-weighted by (1−α); Hit@1 reaches the hard-filter value 0.530 already
+  at α=0.1 and all metrics coincide with the hard filter from α=0.5 (every α>0:
+  Wilcoxon p<10⁻¹⁹, n=281, no-GPU stored-vector engine).
+- Early-benchmark metrics for comparison: Hit@1 0.41 / Hit@3 0.60 / Hit@5 0.67 /
   Hit@10 0.75 (n=283 incl. 41 weak + 48 partial tiers now resolved).
 
 ## Collection & preprocessing
@@ -119,10 +124,10 @@ map object ids to their referenced `chunk_ids`.
   perfect: 838/838, 110/110, 777/777, 78/78, 689/689 Điều) + TVPL official
   HTML for 24/24 sampled chunks; mirror pages remain for laws without
   official equivalents and stay `mirror`-flagged.
-- **Decontamination (three rounds):** v1.1 stripped boilerplate footers
+- **Decontamination (three rounds):** round 1 stripped boilerplate footers
   ("so hieu:", "ngay cong bao:" ...) from 1.203 chunks (residual 0);
-  v1.2 stripped in-body Cong-bao page headers from 409 chunks and removed
-  3 duplicate chunk IDs; v1.2.3 (1) rebuilt 2 chunks of NCN2010 whose
+  round 2 stripped in-body Cong-bao page headers from 409 chunks and removed
+  3 duplicate chunk IDs; round 3 (1) rebuilt 2 chunks of NCN2010 whose
   official government .doc source carried broken piece-table bytes
   (text re-derived from the same official file with a complete
   piece-table parser, source_url/source_type kept "official"), (2) replaced
@@ -143,21 +148,20 @@ map object ids to their referenced `chunk_ids`.
   authoritative entity/relation/chunk counts used by every audit script.
 
 ## Artifacts in this release
-- Public HF mirror (v1.2.3): https://huggingface.co/datasets/datbazuka2502/vicivil-tkg
+- Public HF mirror (v1.0.0): https://huggingface.co/datasets/datbazuka2502/vicivil-tkg
 - `data/civil_chunks.jsonl` (11.267 rows; superseded intermediates
-  `civil_chunks_v10.jsonl` / `civil_extract.json` removed in v1.7.0,
-  regenerable via `src/law_kg_extract.py`), 6 index
+  `civil_chunks_v10.jsonl` / `civil_extract.json` removed from both mirrors, regenerable via `src/law_kg_extract.py`), 6 index
   files (`vdb_chunks / vdb_entities / vdb_relationships` +
   3 kv stores), `temporal_graph.json`.
-- `benchmark/law_bench_200c.json`, `law_bench_v1.json` (281 Qs, gold_tier +
-  rescoped question provenance), `law_eval_v12.json` (per-Q ranks),
+- `benchmark/law_bench_main.json`, `law_bench_seed.json` (281 Qs, gold_tier +
+  rescoped question provenance), `law_eval_ranks_full.json` (per-Q ranks),
   rater/regold/drop trail: `second_rater.json`, `second_rater14.json`,
-  `regold.json`, `fixall.json`, `dropped_log.json`, `bench_split.json`.
+  `regold.json`, `regold_judge_round1.json`, `regold_judge_round2.json`, `fixall.json`, `dropped_log.json`, `bench_split.json`.
 - `provenance/`: `cite_edges.json`, `lineage_candidates.json`,
   `amend_candidates.json`, `law_audit.json`, `law_sources.json`,
   `ablation_AB.json`, `significance.json`, `qa_faith.json`,
   `ranks_hybrid.json`, `law_index_stats.json`, `SHA256SUMS` (regenerated
-  for v1.2.3 and verified on upload).
+  for v1.0.0 and verified on upload).
 - Data and benchmark trees (`data/`, `benchmark/`, `index/`,
   `provenance/`) are identical between the GitHub release engine and the
   HF dataset card (byte-level verified).
@@ -179,12 +183,11 @@ map object ids to their referenced `chunk_ids`.
   government .doc (its own piece-table is damaged); they were rebuilt from
   the same official file's clean piece-table run and the cleaned text was
   verified against the surrounding articles before release.
-- Remaining article-numbering gaps (final v1.2.3 measurement in
+- Remaining article-numbering gaps (final release measurement in
   `law_audit.json`): HNGD2000 3/110, THADS-VBHN 5/190, VBHN-21 Dieu 497,
   Law 15/2026 44 items (gazette law still awaiting consolidated text);
-  BLDS 1995 has zero gaps left since its v1.2 clause-level rebuild.
-- Graph-mode retrieval still trails hybrid on strict Hit (known from v1.0
-  ablation); 32 regolded questions are hard restatements — stratified
+  BLDS 1995 has zero gaps left since its clause-level rebuild.
+- Graph-mode retrieval still trails hybrid on strict Hit (known from the ablation study); 32 regolded questions are hard restatements — stratified
   numbers are reported so no one average hides them.
 - Expert review (50 Qs) pending; GitHub PAT rotation pending (owner has
   accepted the outreach-level risk in the meantime).
@@ -202,368 +205,15 @@ map object ids to their referenced `chunk_ids`.
   valid_to + open new edges (never rewrite history).
 
 ## Changelog
-- **v1.9.0:** the retrieval pipeline is finished with the step that
-  was still missing, a cross-encoder reranking pass
-  (BAAI/bge-reranker-v2-m3). Reranking the 30 best candidates of each
-  question took 149 seconds on one A30 GPU and improves every measure:
-  Hit@1 from 0,402 to 0,445, Hit@3 from 0,658 to 0,708, Hit@5 from
-  0,730 to 0,787, Hit@10 from 0,818 to 0,868 and MRR from 0,545 to
-  0,594 - better than the figures published before. The reranked
-  ranking is stored in `benchmark/rerank_result.json`, so
-  `src/law_rerank_verify.py` recomputes those numbers from the
-  repository without a GPU, without the model and without a network.
-  The order of work is now: the corpus is optimised on the 17 statutes
-  first, and only then widened. Manifest 154 -> 156 entries.
-- **v1.8.1:** the published numbers are now verifiable in two
-  independent ways, both from the repository and both without a GPU:
-  recomputed from the stored ranking (`provenance/ranks_hybrid.json`,
-  209 questions: Hit@1 = 0,464, Hit@5 = 0,727, close to the published
-  figures) and recomputed from scratch (BM25 + stored vectors + RRF,
-  281 questions: Hit@1 = 0,402, Hit@10 = 0,818). The earlier statement
-  that the result was not reproducible turned out to be a fact about how
-  the result file was written, not a lack of data. Two experiments are
-  published because both contradict the obvious guess: re-embedding the
-  11,267 chunks with context (statute name, article number, title) makes
-  every measure worse - Hit@1 falls from 0,402 to 0,349 - and dropping
-  the duplicated chunks also makes it worse. The duplicated chunks are
-  the same article under different statute versions, which is what many
-  questions ask for, so the corpus is kept as it is. The report is
-  re-typeset at 28 pages.
-- **v1.8.0:** the remaining weaknesses are now measured rather than
-  guessed. `src/law_error_analysis.py` classifies the 51 questions whose
-  answer does not appear in the top ten: 27 are retrieval misses and 24
-  return the right statute under a different article. Two experiments
-  settle the obvious fixes: dropping the 18,7% of chunks shorter than 120
-  characters changes nothing, and dropping the 6,4% duplicated chunks
-  makes the result worse (Hit@10 falls from 0,818 to 0,787) - the
-  duplicates are the same article under different statute versions, which
-  is exactly what several questions ask for. The duplicates are
-  therefore kept. `src/law_rdf_verify.py` loads the RDF and JSON-LD
-  exports into an RDF store and answers SPARQL questions about
-  succession, validity and containment (56,772 triples). The viewer
-  generator and the verification tools now live in the repository, and
-  `.github/workflows/verify.yml` re-runs the evaluation, the corpus
-  measurement, the RDF export and the viewer build on every push, then
-  compares the outcome with what is committed. The report is re-typeset
-  at 27 pages with the error analysis and the filtering experiment.
-- **v1.7.0:** the evaluation is now reproducible from the repository
-  alone. `src/law_eval_repro.py` recomputes the whole run from the files
-  that are published here: BM25 in plain Python over
-  `data/civil_chunks.jsonl`, the dense part from the vectors already
-  stored (`index/vdb_chunks.json` and the new
-  `benchmark/question_vectors.json`), fused with RRF. No GPU, no model,
-  no network - `bash tools/reproduce.sh` runs it on a bare Python 3.9
-  (numpy is optional and gives the identical result, because scores are
-  rounded before ranking). The reproducible run yields Hit@1 = 0,402,
-  Hit@3 = 0,658, Hit@5 = 0,730, Hit@10 = 0,818, MRR = 0,545 on the 281
-  questions, and on the 241 questions with a verified gold Hit@10 =
-  0,809 - the previously unverifiable Hit@10 is now a number anyone can
-  recompute. `src/law_quality.py` measures the corpus itself
-  (`provenance/chunk_quality.json`): 0 empty chunks, 18,7% shorter than
-  120 characters, 6,4% duplicated after normalisation, median length
-  226 characters. Manifest 122 -> 136 entries, now also covering the
-  pipeline sources, the tools and `requirements.txt`.
-- **v1.6.2:** the report is delivered as a single typeset PDF built from
-  `docs/report/report.tex`; the intermediate Markdown copy and the Word
-  version are removed, so the LaTeX source is the only thing to edit and
-  the PDF the only thing to read. 23 pages, no empty page.
-- **v1.6.0:** four of the limitations listed in earlier versions are
-  closed, all with open-source tooling and without using the GPU. The
-  knowledge graph is now exported as RDF/JSON-LD
-  (`docs/graph/law_graph.ttl`, `law_graph.jsonld`: 33 statutes, 21
-  relations, 11,267 chunks) and parses cleanly with rdflib. A
-  statute-level index (`docs/graph/law_articles.json`, 10,215
-  Điều/Khoản/Điểm units) is embedded in the viewer, so the detail panel
-  can filter by article number and show how often each article is
-  cited. The retrieval benchmark is re-scored three ways and published
-  as `benchmark/law_eval_v16_equiv.json`; the strict rule reproduces the
-  published 0.452 Hit@1 exactly, while the multi-answer rule adds
-  0.007 and restricting to the 241 questions with a verifiable gold
-  gives 0.432 - so the 32 low-scoring questions are a measurement
-  artefact, not a retrieval failure. An incremental pipeline
-  (`src/law_incremental.py`) merges new statutes without re-running the
-  whole build; it was exercised on the GPU machine and produced a new
-  chunk delta without touching the GPU. The report is retypeset (25
-  pages) and no page is left blank. Zero change to the data itself.
-- **v1.5.5:** the report is rewritten as a standard research report
-  (23 pages, A4, Times New Roman, XeLaTeX): title page with the fields a
-  submission needs, abstract with keywords, table of contents, list of
-  figures, list of tables, seven chapters, references and three
-  appendices. The hand-built illustrations are dropped; every figure is
-  now either a screenshot of the running viewer or a chart rendered from
-  the committed data files. The two evaluation charts are redrawn with a
-  print layout (white background, serif type) so they read well on paper.
-  Manifest 84 -> 78 entries after removing the superseded illustrations.
-  Zero content change.
-- **v1.5.4:** the report is now also published as a typeset PDF
-  (`docs/report/ViCivil-TKG_bao-cao.pdf`, 13 pages, A4), built from
-  `docs/report/report.tex` with XeLaTeX; the source is kept so the
-  document can be rebuilt or edited. The workflow scripts that were
-  running only on the GPU machine are synced into
-  `tools/lab-scripts/` with a README explaining what each one did, so
-  the whole process is reviewable and not just the published subset.
-  A byte-level comparison confirms the 36 published pipeline scripts are
-  identical to the copies on the GPU machine - there is no divergence
-  between the two. Manifest grows 62 -> 83 entries. Zero content change.
-- **v1.5.3:** the report is rebuilt around verifiable images. The two
-  hand-drawn illustrations are replaced: the pipeline and the index
-  layers are now diagrams drawn with Mermaid, with their source files
-  kept in `docs/report/diagrams/` so anyone can re-render them, and the
-  chunk and GEXF illustrations are screenshots taken verbatim from the
-  committed files themselves. Every figure states in its caption what it
-  is and how it was produced, and the report carries an appendix listing
-  all eleven figures with the tool and the source file for each. The
-  wording is simplified for a non-specialist reader. Manifest grows 60 ->
-  62 entries (two Mermaid sources); zero content change.
-- **v1.5.2:** adds the report, a full A-to-Z write-up with eleven
-  figures captured from the running artifact, covering the chunking and
-  labelling scheme, the three index layers, the knowledge graph, temporal
-  updates, retrieval evaluation, the difficulties met and five concrete
-  improvements. Fixes the detail drawer: as a flex item it was being
-  shrunk to a single pixel by the graph container, so the panel was
-  present in the DOM but invisible on screen; it now keeps its width and
-  the graph refits when it opens or closes. Manifest grows 47 -> 60
-  entries to cover the report, its figures and the operating protocol.
-  Zero content change.
-- **v1.5.1:** fixes the hover tooltip. Each statute is handed to G6
-  wrapped as `{id, data, style}`, and the viewer's own mapper read the
-  law's fields off the wrapper instead of the wrapped record, so every
-  tooltip for a statute rendered empty values ("undefined" and
-  "undefined -> undefined"). The mapping now reads the record it wraps;
-  a hover on Bộ luật Dân sự 1995 shows its number 44-L/CTN, its
-  effective period 1996-07-01 to 2006-01-01 and its 890 chunks. The
-  footer's library-branding line is removed as well - the viewer no
-  longer advertises its own stack. Zero content change; manifest stays
-  at **47 entries**.
-- **v1.5.0:** the viewer now uses the open-source libraries through their
-  documented APIs only. Every custom on-page diagnostic that earlier
-  releases added - the loading mask, the corner status pill and the red
-  error banner - has been removed, so the page contains nothing but the
-  data and its controls; state changes follow the promise returned by
-  `graph.render()`, which is the library's own contract. Errors go to the
-  browser console as normal. To keep releases honest after the Chrome
-  incident, the browser checks were moved out of the page and into the
-  pre-release gate, which loads the artifact in bundled Chromium and in
-  the real Chrome and Edge binaries installed on the build machine and
-  fails the release on any error or missing canvas. A
-  `THIRD-PARTY-NOTICES.md` records the four vendored libraries, their
-  versions and licenses (G6 5.1.1 MIT; Vega 5.30.0, Vega-Lite 5.21.0,
-  vega-embed 6.26.0 BSD-3-Clause), plus the two optional OFL web fonts.
-  Manifest grows 46 -> 47 entries for the new notices file; zero content
-  change otherwise.
-- **v1.4.2:** fixes the viewer in the Google Chrome browser. The app
-  script declared a top-level `const chrome` - the decorative background
-  elements - and Google Chrome exposes a global, non-removable
-  `window.chrome`. A `const` declaration colliding with such a global is
-  an early `SyntaxError` for the entire script block, so nothing in the
-  viewer ever ran and the page stalled on its loading mask. Every
-  top-level binding in the app script was audited against the globals
-  browsers define; this was the only collision. It is renamed
-  (`chromeNodes`), and the two shadowed helper functions that were being
-  silently overridden later in the same script were removed. Regression
-  coverage now runs against a build that defines a non-configurable
-  `window.chrome` before the app script, exactly as Chrome does: the
-  previous build fails that probe with the reported message, this build
-  renders the full graph with 0 JS errors. Zero content change; manifest
-  stays at **46 entries**.
-- **v1.4.1:** fixes the reported viewer stall. The external web-font
-  stylesheet was a render-blocking resource: on a network that drops or
-  black-holes `fonts.googleapis.com`, the browser blocks document parsing
-  on that request, the viewer script never executes, and the page sits on
-  "Đang nạp thư viбn đồ thị…" with no error to show. The stylesheet is now
-  loaded non-blocking (`media="print"` + `onload`), the standard pattern
-  for optional web fonts, so the viewer renders from its own inlined code
-  regardless of font availability; fonts are cosmetic only. Verified by
-  replaying the failure offline: with the font request held open
-  indefinitely, v1.4.0 never left `document.readyState = "loading"`
-  (parser blocked in `<head>`, zero scripts executed) while v1.4.1 draws
-  the full graph with 0 JS errors. The initialisation sequence now also
-  follows the library's documented contract - all element-state updates
-  happen after the promise returned by `graph.render()` resolves - and an
-  error watcher installed *before* the vendored libraries runs, so a
-  library that fails to parse can no longer fail silently. Zero content
-  change; manifest stays at **46 entries**.
-- **v1.4.0:** single-artifact release, zero content change (no
-  data/index/benchmark edits; retrieval metrics above remain the frozen
-  v1.2 measurement). The viewer becomes one fully self-contained file:
-  all four libraries (AntV G6 5.1.1, Vega 5.30.0, Vega-Lite 5.21.0,
-  vega-embed 6.26.0 - all MIT) are inlined into `explorer.html`
-  (~2.3 MB), so the artifact cannot lose its dependencies however it
-  is copied, emailed or opened from disk; the vendored `.min.js` files
-  remain in `docs/graph/` for provenance. The release also fixes the
-  latent correctness bug behind every "blank canvas in the wild"
-  report: the opening state application ran while G6's first render
-  was still in flight, so every element-state update was dropped with
-  an unhandled internal rejection (54 failed calls on this build;
-  silent in earlier versions). The graph now draws only after the
-  library reports ready - time-travel, counting and zoom state land on
-  the first frame (a 2012 probe shows exactly 4 laws in force with all
-  later laws ghosted, zero JS errors). A loading skeleton covers the
-  canvas while libraries initialize, and promise rejections are now
-  captured into the visible error banner as well. Manifest unchanged
-  at **46 entries**; the 12-statute sweep runs green on both mirrors.
-- **v1.3.2:** diagnosability release, zero content change (no
-  data/index/benchmark edits; retrieval metrics above remain the frozen
-  v1.2 measurement). The same field report that motivated v1.3.1
-  (blank network tab on a machine where the libraries could not be
-  loaded) had remained silent because a mid-script failure stopped the
-  page before the error banner was ever built. The viewer now renders
-  an immediate red error banner from the global error handler (with
-  the failing message, position and the last completed init step),
-  and shows a dismissible corner pill with the self-test state
-  (G6/vega loaded, graph initialized, init step) so any environment
-  issue can be read directly off the page without devtools. Manifest
-  unchanged at **46 entries**; the 12-statute sweep runs green on both
-  mirrors.
-- **v1.3.1:** packaging-hardening release, zero content change (no
-  data/index/benchmark edits; retrieval metrics above remain the frozen
-  v1.2 measurement). All four JavaScript engine files (AntV G6 5.1.1,
-  Vega 5.30.0, Vega-Lite 5.21.0, vega-embed 6.26.0 - all MIT) are now
-  **vendored next to the viewer** (`docs/graph/*.min.js`) instead of
-  being fetched from a CDN at view time: the release viewer and its
-  libraries form one self-contained folder that works on any network
-  (a user in the wild was getting a blank network tab and a "0 text"
-  readout whenever jsdelivr was unreachable). Two companion hardening
-  fixes: the "in force" readout now ships the correct build-time value
-  in the static HTML (14 at the initial 2026 view) so it is never
-  misleading while libraries load, and a visible red error banner is
-  rendered if graph initialization ever fails. Manifest grows from 42
-  to **46 entries** (4 vendored libraries); the 12-statute sweep runs
-  green on both mirrors with the same byte-equality policy. The
-  character-hygiene gate is unchanged for all data/index/benchmark
-  content; the vendored third-party library files ship verbatim (their
-  internal locale strings are disclosed alongside the rest of the
-  manifest).
-- **v1.3.0:** viewer-engine migration release, zero content change (no
-  data/index/benchmark edits; retrieval metrics above remain the frozen
-  v1.2 measurement). The succession-network tab is re-implemented on
-  **AntV G6 5.1.1** (MIT) in place of Cytoscape.js 3.30.2, gaining the
-  library's built-in dark theme, hover-activate highlighting, grid
-  backdrop, minimap and formatted tooltips; the head chrome (year axis,
-  lane stems, cap ticks, today line) is re-drawn as G6 elements. Two
-  regressions found during the migration are fixed and shipped here:
-  (a) switching tabs no longer blanks the canvas (the timeline tab now
-  overlays the network instead of hiding it, and the network is
-  element-level, not dependency-level, kept interactive), and
-  (b) disclosure of a pre-existing bug present since v1.2.5 that is
-  corrected in this release: the time-travel slider dimmed replaced
-  laws correctly but never actually hid future laws (an off-by-yearMin
-  term in the visibility rule), so from now on the promised future-hidden
-  behavior is real; the "in force" readout counts were computed from
-  the validity windows and were always correct. Canvas PNG export now
-  uses G6's full-graph (mode:"overall") render with the chart
-  background. Manifest unchanged at **42 entries**; the 12-statute
-  sweep runs green on both mirrors.
-- **v1.2.7:** interaction-and-axis polish release, zero content change
-  (no data/index/benchmark edits; retrieval metrics above remain the
-  frozen v1.2 measurement). Hovering any law now focuses its succession
-  neighborhood and dims everything else, restored cleanly on mouse-out;
-  amending (EXT) laws are now reachable for tooltips and the provenance
-  drawer exactly like ordinary laws (previously EXT nodes were inert on
-  hover/tap); the year guides gain top cap ticks and faint per-lane
-  band stems for structural reading; amendment edges render as gentle
-  arcs while succession lines stay straight through the time columns;
-  the top-left lane-title/older-label overlap is removed. Manifest
-  unchanged at **42 entries**; 12-statute sweep green on both mirrors.
-- **v1.2.6:** visual-refresh release, zero content change (no data/index/
-  benchmark edits; retrieval metrics above remain the frozen v1.2
-  measurement). The viewer's interface is rebuilt to publication-grade
-  typography: Google-Fonts **Be Vietnam Pro** (body) + **IBM Plex Mono**
-  (figures), flat "consultation ledger" palette, a slim masthead with a
-  vector brand mark, an inverse-contrast year seal, a single transport
-  bar (slider / play / 1x-2x speed), edge-type toggles and family chips
-  regrouped on the lane bar, and library names removed from the tab
-  captions ("Mạng kế thừa" / "Phổ thời gian"). Inside the canvas, the
-  offline label packing is upgraded to a near-full Cartesian lattice
-  with vertical-priority ordering (resolving rare pixel-exact
-  collisions between 2024-2025 amending-law labels), edge-of-canvas
-  guard nodes protect border labels from clipping, vertical time guides
-  are drawn behind the nodes, and the Vega-Lite timeline is re-themed
-  to the same palette. Manifest unchanged at **42 entries**; a
-  12-statute glyph/secret/JSON sweep runs green across both mirrors.
-- **v1.2.5:** visualization release, zero content change (no data/index/
-  benchmark edits; retrieval metrics above remain the frozen v1.2
-  measurement). The interactive release viewer is rebuilt on dedicated
-  open-source graph tooling in place of the general-purpose chart
-  library: the temporal successor network
-  (`docs/graph/explorer.html`) now runs on **Cytoscape.js 3.30.2** with
-  (a) lane-grouped layout (10 law families along a vertical axis) using a
-  collision-free pixel-packing pass computed offline in the generator,
-  (b) a time-travel slider (1996→2026) that hides future laws, dims
-  replaced ones and recounts "in force" live, (c) short statutory labels
-  on external amending laws (just the number/year, e.g. "59/2020"), and
-  (d) a provenance drawer per node (validity, chunk/citation counts,
-  succession chip, citation list). The timeline tab
-  (`docs/graph/law_timeline.vl.json`) is an explicit **Vega-Lite 5.21.0**
-  spec (temporal Gantt with successor edges and an "today" marker,
-  palette-matched to the network). Both plus the open GEXF 1.3 export
-  are covered by the manifest, which grows from 41 to **42 entries**.
-  "Sync/pull" wording along the whole pipeline was audited: every step
-  is a full checkout or full upload plus manifest verification — no
-  remote-side partial merge is ever relied on. A 12-statute glyph/
-  secret/JSON sweep runs green across both mirrors.
-- **v1.2.4:** hygiene release, zero content change. (a) The last 12
-  invisible left-to-right-mark (U+200E) control characters — previously
-  recorded as a pending post-release sync item — are now stripped at the
-  source of both mirrors from all four affected files
-  (data/civil_chunks.jsonl, data/civil_chunks_v10.jsonl,
-  index/kv_store_text_chunks.json, index/vdb_chunks.json); all four parses
-  re-verified; (b) one typographic slip in "Collection & preprocessing"
-  ("Dien)" → "Điều)"); (c) explorer label-overlap fix (ECharts
-  labelLayout.hideOverlap) and regenerated docs/graph/explorer.html;
-  (d) both mirrors regenerated; retrieval metrics not re-run (the strip
-  touches 12 invisible codepoints only; v1.2.3 numbers reported above
-  remain the reference measurement).
-- **v1.7.0 (mirror tag v1.2.5):** hygiene + disclosure release, zero corpus change.
-  (a) superseded intermediates removed from both mirrors: `data/civil_chunks_v10.jsonl`
-  (v1.0 backup) and `data/civil_extract.json` (raw extraction, regenerable via
-  `src/law_kg_extract.py`); (b) metrics sections now label all three published scoring
-  rounds (frozen v1.2.3 overview, strict exact-ID chain used by TCR/SGB/LLM, no-GPU
-  reproduction) with per-question artifacts, replacing the earlier "confirmed
-  unchanged" wording that over-stated reproducibility; (c) rerank+TCR LLM condition
-  documented as 280/281 (NEW90253: empty stored rerank pool after strict temporal
-  filtering); (d) paired Wilcoxon p over per-question MRR added to
-  `benchmark/rerank_result.json` so the rerank significance is citable from its own
-  artifact; (e) `tools/law_manifest.py` seed list updated; GitHub CI workflow YAML
-  fixed (branches selector); CITATION.cff bumped to 1.7.0.
-- **v1.2.3:** root-cause sanitization pass. (a) Rebuilt 2 NCN2010 chunks
-  from the official government .doc via a full piece-table parser (the
-  source file itself carries damaged piece records that had leaked binary
-  debris into the corpus); (b) replaced 1 source emoji with "[!] "; (c)
-  re-extracted 94 rows whose output contained stray CJK/PUA glyphs (the
-  extraction engine occasionally emitted isolated Chinese tokens) with
-  qwen3:14b/Ollama — per-row engine field kept; (d) one header-only stub
-  chunk (VBHN-21 Dieu 151, 17 chars) removed from every store and 2.307
-  rows had a non-integer `chars` field normalized to int; index rebuilt
-  (14.099 ent / 20.311 rel + 439 lineage = 20.750 rows) with same-gold
-  anchor sets; re-eval unchanged (0.452/0.658/0.726/0.794, MRR 0.568);
-  (e) 12-section pre-release audit green: zero weird-character groups
-  across all released files, zero id-set drift across the 4 stores, gold
-  281/0 broken, extraction 11.267/11.267 done, zero secret patterns;
-  (f) one residual split roman numeral ("Chương XXX VII" from a scraped
-  page boundary) normalized to "Chương XXXVII" corpus-wide and its index
-  row re-embedded; (g) HF + GitHub trees regenerated and revisioned
-  together with a 41-entry signed manifest covering data, benchmark, index,
-  provenance, the interactive temporal graph explorer
-  (`docs/graph/explorer.html` + open GEXF `docs/graph/law_graph.gexf`),
-  and the five official source PDFs.
-- **v1.2.2:** full-scale cross-artifact audit (zero id-set drift across
-  chunk/extract/vdb/kv files; matrix rows == data rows everywhere; gold
-  0 broken; 439 cross edges all resolvable). 9 failed3x chunk extractions
-  rescued (engine noted per-row) and the 8-file index rebuilt from the
-  complete extraction — re-eval reproduced v1.2 metrics exactly
-  (0.452/0.658/0.726/0.794, MRR 0.569). Duplicate-crowding measured
-  (10/281 top-5 collisions) — retrieval-time dedup rejected as
-  rank-distorting; index content [:3000] cap disclosed.
-- **v1.2:** BLDS 1995 rebuilt at clause level from signed PDF; second
-  decontamination round (409 Cong-bao page headers, 3 dup IDs, 1 Muc-remap
-  fix in lineage injection); full re-extraction on clean text (11.268 rows
-  as shipped at v1.2)
-  + index rebuild (14.066 ent / 20.271 rel + 439 lineage edges); gold
-  archive finalized — no weak/partial tiers: 245 verified + 32 regolded +
-  4 author-verified + 1 documented drop; eval frozen at Hit@1 0.452 /
-  MRR 0.569 (n=281).
-- **v1.1:** official-PDF verification of 5 core laws; footer decontamination
-  (1.203 chunks); double-rater gold audit; 16 regolds; tag + release.
-- **v1.0:** first full benchmark + 8-file index + hybrid/graph ablations,
-  abstain probes, faithfulness n=30 (20/10/0 hallucinated).
+
+- **v1.0.0:** first public release. Corpus of 11,267 hierarchical chunks across
+  17 Vietnamese civil-law statutes (1996-2026) with per-chunk validity windows;
+  temporal knowledge graph (33 statutes, 21 replaces/amends edges) exported as
+  RDF/Turtle, JSON-LD and GEXF; three-tier retrieval index (14,099 entities,
+  20,311 relation rows, 768-d vectors); 281-question situational benchmark with
+  the complete gold-verification trail (8B/14B cascade audit, re-anchoring
+  logs, author review tiers, one documented drop); retrieval metrics (hybrid,
+  TCR temporal filtering, cross-encoder rerank) with paired significance
+  tests; an end-to-end LLM RAG baseline (Qwen2.5-3B-Instruct, four
+  conditions); and a single-file offline graph explorer. All numbers are
+  reproducible from the repository alone, without GPU or network.

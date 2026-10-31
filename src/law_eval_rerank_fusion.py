@@ -1,4 +1,4 @@
-"""Full eval-200: v3 retriever (expansion + rerank-fusion) on clean benchmark.
+"""Full-benchmark eval: expansion + rerank-fusion retriever on the clean benchmark.
 Plus 3 abstain probes (dates with no valid law / missing 1995 content).
 """
 import json, sys
@@ -9,7 +9,7 @@ from law_adgr import LawRetriever
 W = "/home/devlab1/law_workspace"
 R = f"{W}/runs"
 rt = LawRetriever()
-bench = json.load(open(f"{R}/law_bench_200c.json", encoding="utf-8"))
+bench = json.load(open(f"{R}/law_bench_main.json", encoding="utf-8"))
 probes = [
     {"qid": "T1990", "as_of": "1990-01-01",
      "question": "Năm 1990 ly hôn cần điều kiện gì?", "gold_ids": ["ABSENT"]},

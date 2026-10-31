@@ -1,4 +1,4 @@
-"""Temporal graph layer v1: law lifecycle skeleton + point-in-time queries.
+"""Temporal graph layer: law lifecycle skeleton + point-in-time queries.
 Laws carry [valid_from, valid_to); succession edges chain generations.
 Chunks/entities inherit validity from their law; cross-generation entity links
 (same normalized name) become SUPERSEDED_BY when full extraction lands.

@@ -1,5 +1,5 @@
-"""Final A: dedup junk fragments, strip CONG BAO page headers, re-embed + re-extract affected.
-Log: runs/lawfin1.log
+"""Pass 3: strip TVPL truncation stubs (CÔNG BÁO/Số N/Ng [...]) from 9 chunks,
+re-embed them, re-extract them. Log: runs/lawpass3_stubfix_reembed.log
 """
 import base64, io, json, re, sys, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -22,46 +22,27 @@ relation<|#|>TEN NGUON<|#|>TEN DICH<|#|>TU KHOA NGAN<|#|>MO TA 1 CAU
 QUY TAC: TEN phai cu the (>=2 tu, khong chung chung nhu "quyền", "pháp luật"). Khong co gi cu the thi chi in: NONE"""
 REF_RE = re.compile(r"điểm\s+([a-zđ])\s+khoản\s+(\d+)\s+Điều\s+(\d+)|"
                     r"khoản\s+(\d+)\s+Điều\s+(\d+)|Điều\s+(\d+)", re.IGNORECASE)
-CB_RE = re.compile(r"CÔNG BÁO\s*/\s*Số\s*\d+\s*/\s*Ngày\s*[\d-]+\s*\d*\s*")
-chunks = [json.loads(L) for L in open(f"{R}/civil_chunks.jsonl", encoding="utf-8")]
-BY = {}
-seen = {}
-junk = set()
-for r in chunks:
-    cid = r["chunk_id"]
-    if cid in seen:
-        old = seen[cid]
-        up = lambda x: max("".join((x["content"].split("\n"))[1:]).split())
-        both = [old, r]
-        real = max(both, key=lambda x: len(re.sub(r"[^a-zà-ỹđ]", "", " ".join(x["content"].split("\n")[1:]), flags=re.I)))
-        junk.add((min(both, key=lambda x: len(x["content"])))["chunk_id"])
-        BY[cid] = real
-    else:
-        seen[cid] = r
-        BY[cid] = r
-print("junk dup rows:", sorted(junk), flush=True)
-rows = [r for r in chunks if (r["chunk_id"] not in junk) and (r is BY.get(r["chunk_id"])) ]
-rows = list({r["chunk_id"]: r for r in rows}.values())
-print("chunks after dedup:", len(rows), flush=True)
+STUB = re.compile(r"CÔNG BÁO\s*/\s*Số\s*(?:\d+\s*/\s*Ng(?:ày)?[^ ,;.:()\n]{0,6})?\s*\[\.{3}\]\s*")
+rows = [json.loads(L) for L in open(f"{R}/civil_chunks.jsonl", encoding="utf-8")]
 patched = []
 for r in rows:
     c = r.get("content") or ""
-    c2 = CB_RE.sub("", c)
+    c2 = STUB.sub("", c)
     if c2 != c:
-        r["content"] = re.sub(r"\n{2,}", "\n", c2).strip()
+        r["content"] = re.sub(r"\n{2,}", "\n", re.sub(r"[ \t]{2,}", " ", c2)).strip()
         r["chars"] = str(len(r["content"]))
         patched.append(r)
-print("congbao patched:", len(patched), flush=True)
+print("patched:", len(patched), sorted(r["chunk_id"] for r in patched), flush=True)
+left = sum(1 for r in rows if re.search(r"CÔNG BÁO\s*/\s*Số", r.get("content") or ""))
+print("residual Công BÁO pattern anywhere:", left, flush=True)
+assert left == 0, "residual != 0, aborting without write"
 with open(f"{R}/civil_chunks.jsonl", "w", encoding="utf-8") as f:
     for r in rows:
         f.write(json.dumps(r, ensure_ascii=False) + "\n")
-shutil_ok = True
 kv = json.load(open(f"{D}/kv_store_text_chunks.json", encoding="utf-8"))
-kv = {k: v for k, v in kv.items() if k not in junk and k in {r["chunk_id"] for r in rows}}
 for r in patched:
     kv[r["chunk_id"]] = {"law_id": r["law_id"], "content": r["content"]}
 json.dump(kv, open(f"{D}/kv_store_text_chunks.json", "w", encoding="utf-8"), ensure_ascii=False)
-print("kv size:", len(kv), flush=True)
 
 
 def embed_batch(texts):
@@ -79,66 +60,31 @@ def embed_batch(texts):
     raise RuntimeError("embed failed")
 
 
+txt = {r["chunk_id"]: r["content"] for r in patched}
+V = []
+for i in range(0, len(txt), 8):
+    v = embed_batch([txt[c] for c in list(txt)[i:i + 8]])
+    v = v / (np.linalg.norm(v, axis=1, keepdims=True) + 1e-9)
+    V.append(v)
+V = np.vstack(V)
 vdb = json.load(open(f"{D}/vdb_chunks.json", encoding="utf-8"))
 mat = np.frombuffer(base64.b64decode(vdb["matrix"]), dtype=np.float32).reshape(-1, 768).copy()
-keep_idx, keep_data, bad = [], [], []
-for i, c in enumerate(vdb["data"]):
-    cid = c["__id__"]
-    if cid in junk or cid not in {r["chunk_id"] for r in rows}:
-        continue
-    keep_idx.append(i)
-    keep_data.append(c)
-print("vdb keep:", len(keep_data), "of", len(vdb["data"]), flush=True)
-ids_p = [r["chunk_id"] for r in patched]
-missing = [r["chunk_id"] for r in rows if r["chunk_id"] not in {c["__id__"] for c in keep_data}]
-print("missing ids to embed:", len(missing), flush=True)
-vecs = []
-B = 16
-for s in range(0, len(ids_p) + len(missing), B):
-    pass
-todo_embed = ids_p + missing
-todo_map = {r["chunk_id"]: r for r in patched}
-for m in missing:
-    todo_map[m] = next(r for r in rows if r["chunk_id"] == m)
-Vn = []
-for s in range(0, len(todo_embed), B):
-    b = todo_embed[s:s + B]
-    v = embed_batch([todo_map[x]["content"] for x in b])
-    v = v / (np.linalg.norm(v, axis=1, keepdims=True) + 1e-9)
-    Vn.append(v)
-    if (s // B) % 8 == 0:
-        print(f"embed {s + len(b)}/{len(todo_embed)}", flush=True)
-VN = np.vstack(Vn)
-kept_new = [c for c in keep_data if c["__id__"] not in set(ids_p)]
-mat2 = np.vstack([mat[keep_idx[:len(kept_new)]], VN]) if False else None
-pos = {c["__id__"]: i for i, c in enumerate(keep_data)}
-mat_new = np.vstack([mat[keep_idx], VN]) if len(keep_idx) == len(keep_data) else None
-final_rows = [c for c in keep_data if c["__id__"] not in set(ids_p)] + [
-    {"__id__": cid, "content": todo_map[cid]["content"], "url": "patched"} for cid in ids_p]
-cols = [mat[i] for i, c in zip(keep_idx, keep_data) if c["__id__"] not in set(ids_p)]
-matF = np.vstack(cols + [VN])
-vdb["data"] = final_rows
-vdb["matrix"] = base64.b64encode(np.ascontiguousarray(matF, dtype=np.float32).tobytes()).decode()
+posmap = {c["__id__"]: i for i, c in enumerate(vdb["data"])}
+for j, cid in enumerate(txt):
+    mat[posmap[cid]] = V[j]
 json.dump(vdb, open(f"{D}/vdb_chunks.json", "w", encoding="utf-8"), ensure_ascii=False)
-print("vdb final rows:", matF.shape, flush=True)
+print("vdb re-embedded:", len(txt), flush=True)
 ex = json.load(open(f"{R}/civil_extract.json", encoding="utf-8"))
-for j in junk:
-    ex.pop(j, None)
-for cid in list(ex):
-    if cid not in {r["chunk_id"] for r in rows}:
-        ex.pop(cid, None)
-json.dump(ex, open(f"{R}/civil_extract.json", "w", encoding="utf-8"), ensure_ascii=False)
-print("extract keys:", len(ex), flush=True)
 
 
 def refs_of(content, law):
-    res, seenr = [], set()
+    res, seen = [], set()
     for m in REF_RE.finditer(content or ""):
         x = (f"{law}|Dieu{m.group(3)}|Khoan{m.group(2)}|Diem{m.group(1)}" if m.group(3)
              else f"{law}|Dieu{m.group(5)}|Khoan{m.group(4)}" if m.group(5)
              else f"{law}|Dieu{m.group(6)}")
-        if x not in seenr:
-            seenr.add(x)
+        if x not in seen:
+            seen.add(x)
             res.append(x)
     return res
 
@@ -171,10 +117,8 @@ def one(r):
     return r["chunk_id"], {"error": "failed3x", "refs": refs_of(r["content"], r["law_id"]), "done": True}
 
 
-todo_x = [r for r in patched]
-print("re-extract todo:", len(todo_x), flush=True)
-with ThreadPoolExecutor(max_workers=6) as ex2:
-    for cid, val in ex2.map(one, todo_x):
+with ThreadPoolExecutor(max_workers=4) as exn:
+    for cid, val in exn.map(one, patched):
         ex[cid] = val
 json.dump(ex, open(f"{R}/civil_extract.json", "w", encoding="utf-8"), ensure_ascii=False)
-print("FIN1 DONE", len(ex), flush=True)
+print("FIN3 DONE", len(ex), flush=True)

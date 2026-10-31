@@ -10,7 +10,7 @@ W = "/home/devlab1/law_workspace"
 R = f"{W}/runs"
 rt = LawRetriever()
 rt.expand = lambda q: q
-bench = json.load(open(f"{R}/law_bench_200c.json", encoding="utf-8"))
+bench = json.load(open(f"{R}/law_bench_main.json", encoding="utf-8"))
 h1 = h3 = h5 = n = 0
 for b in bench:
     ids = rt.retrieve(b["question"], b["as_of"], topk=10, rerank=False)

@@ -53,8 +53,8 @@ def judge(question, ctx, ans):
 
 
 rt = LawRetriever()
-bench = json.load(open(f"{R}/law_bench_200c.json", encoding="utf-8"))
-hand = json.load(open(f"{R}/law_bench_v1.json", encoding="utf-8"))
+bench = json.load(open(f"{R}/law_bench_main.json", encoding="utf-8"))
+hand = json.load(open(f"{R}/law_bench_seed.json", encoding="utf-8"))
 random.seed(5)
 samp = hand[:12] + random.sample(bench, 18)
 try:

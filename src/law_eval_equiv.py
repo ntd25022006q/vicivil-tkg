@@ -2,9 +2,9 @@
 cach cham de nguoi doc tu so sanh.
 
 Nen:
-  - dap an vang cua moi cau nam o benchmark/law_bench_200c.json (truong gold_ids,
-    co the nhieu dap an) va benchmark/law_bench_v1.json (nhom CIV*).
-  - thu tu tra ve cua he thong nam o benchmark/law_eval_v12.json (truong per_q).
+  - dap an vang cua moi cau nam o benchmark/law_bench_main.json (truong gold_ids,
+    co the nhieu dap an) va benchmark/law_bench_seed.json (nhom CIV*).
+  - thu tu tra ve cua he thong nam o benchmark/law_eval_ranks_full.json (truong per_q).
   - noi dung chuan hoa cua tung chunk lay tu data/civil_chunks.jsonl.
 
 Cach cham:
@@ -35,13 +35,13 @@ with io.open(os.path.join(R, "data", "civil_chunks.jsonl"), encoding="utf-8") as
         content[c["chunk_id"]] = norm(c.get("content", ""))
 
 gold = {}
-for fn in ("law_bench_200c.json", "law_bench_v1.json"):
+for fn in ("law_bench_main.json", "law_bench_seed.json"):
     for q in json.load(io.open(os.path.join(B, fn), encoding="utf-8")):
         g = q.get("gold_ids") or []
         if g:
             gold[q["qid"]] = g
 
-ev = json.load(io.open(os.path.join(B, "law_eval_v12.json"), encoding="utf-8"))
+ev = json.load(io.open(os.path.join(B, "law_eval_ranks_full.json"), encoding="utf-8"))
 tops = {q["qid"]: q.get("top", []) for q in ev.get("per_q", [])}
 
 ks = (1, 3, 5, 10)
@@ -119,6 +119,6 @@ out = {
                 "'khong xac minh duoc' duoc tach ra va cong bo rieng",
     },
 }
-p = os.path.join(B, "law_eval_v16_equiv.json")
+p = os.path.join(B, "law_eval_matching_rules.json")
 io.open(p, "w", encoding="utf-8", newline="\n").write(json.dumps(out, ensure_ascii=False, indent=1))
 print(json.dumps(out, ensure_ascii=False, indent=1))
