@@ -83,5 +83,20 @@
   "congbao PDF (TTDS coordination)",
   "official",
   "2026-10-15"
+ ],
+ "BLTTDS2004": [
+  "https://datafiles.chinhphu.vn/cpp/files/vbpq/2013/08/31097_l24qh_01.doc",
+  "official",
+  "2026-10-31"
+ ],
+ "ND158_2005": [
+  "https://vanban.chinhphu.vn/default.aspx?docid=82898&pageid=27160",
+  "official",
+  "2026-10-31"
+ ],
+ "ND126_2014": [
+  "https://hethongphapluat.com/nghi-dinh-126-2014-nd-cp-huong-dan-thi-hanh-luat-hon-nhan-va-gia-dinh",
+  "mirror",
+  "2026-10-31"
  ]
 }

@@ -1,0 +1,615 @@
+{
+ "EXT20001": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ quy định trách nhiệm của Phó Viện trưởng, không nêu rõ thủ tục cụ thể người dân cần thực hiện",
+  "evidence": "Khi Viện trưởng vắng mặt, một Phó Viện trưởng được Viện trưởng uỷ nhiệm thực hiện nhiệm vụ, quyền hạn của Viện trưởng..."
+ },
+ "EXT20002": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ việc ghi vào biên bản là bắt buộc để quyết định có hiệu lực",
+  "evidence": "Quyết định về các vấn đề khác... phải được ghi vào biên bản phiên toà."
+ },
+ "EXT20003": {
+  "usable": "partial",
+  "reason": "Đoạn luật nêu điều kiện để yêu cầu phản tố được chấp nhận nhưng không xác định rõ liệu yêu cầu phản tố cụ thể của người hỏi có đáp ứng điều kiện đó không.",
+  "evidence": "Yêu cầu phản tố của bị đơn đối với nguyên đơn được chấp nhận khi có một trong các trường hợp sau đây: Giữa yêu cầu phản tố và yêu cầu của nguyên đơn có sự liên quan với nhau và nếu được giải quyết trong cùng một vụ án thì làm cho việc giải quyết vụ án được chính xác và nhanh hơn."
+ },
+ "EXT20004": {
+  "usable": "yes",
+  "reason": "Luật quy định toà án phải nghe lời trình bày của nguyên đơn và bị đơn, việc không làm như vậy là vi phạm.",
+  "evidence": "Toà án phải trực tiếp xác định những tình tiết của vụ án bằng cách hỏi và nghe lời trình bày của nguyên đơn, bị đơn..."
+ },
+ "EXT20005": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ yêu cầu cung cấp địa chỉ tài sản khi người phải thi hành không có mặt tại Việt Nam",
+  "evidence": "trường hợp người phải thi hành là cá nhân không có nơi cư trú hoặc nơi làm việc tại Việt Nam... thì trong đơn yêu cầu còn phải ghi rõ địa chỉ nơi có tài sản..."
+ },
+ "EXT20006": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ quy định nghĩa vụ của tòa án, không nêu rõ quyền của người kháng cáo khi hồ sơ chưa được chuyển.",
+  "evidence": "Sau khi thụ lý vụ án để xét xử phúc thẩm, Toà án cấp phúc thẩm phải chuyển hồ sơ vụ án cho Viện kiểm sát cùng cấp nghiên cứu."
+ },
+ "EXT20007": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ hậu quả nếu không nộp tiền tạm ứng án phí, chỉ quy định nghĩa vụ thông báo",
+  "evidence": "Sau khi chấp nhận đơn kháng cáo hợp lệ, Toà án cấp sơ thẩm phải thông báo cho người kháng cáo biết để họ nộp tiền tạm ứng án phí phúc thẩm... nếu họ không thuộc trường hợp được miễn hoặc không phải nộp..."
+ },
+ "EXT20009": {
+  "usable": "yes",
+  "reason": "Câu hỏi phù hợp với tình huống thực tế, đoạn luật cung cấp đầy đủ thông tin và không cần thông tin ngoài đoạn luật.",
+  "evidence": "Trong trường hợp cả hai thuận tình ly hôn thì mỗi bên đương sự phải chịu một nửa án phí sơ thẩm."
+ },
+ "EXT20010": {
+  "usable": "no",
+  "reason": "Đoạn luật chỉ quy định thời hạn khi nhận hồ sơ từ Bộ Tư pháp, không đề cập đến trường hợp nộp trực tiếp cho tòa án.",
+  "evidence": "Trong thời hạn ba ngày làm việc, kể từ ngày nhận được hồ sơ do Bộ Tư pháp chuyển đến..."
+ },
+ "EXT20011": {
+  "usable": "partial",
+  "reason": "Đoạn luật nêu rõ đương sự phải ký vào biên bản nhưng không quy định hậu quả nếu không ký, nên không đủ thông tin trả lời đầy đủ câu hỏi.",
+  "evidence": "Các thành viên Hội đồng định giá, đương sự, người chứng kiến ký tên vào biên bản."
+ },
+ "EXT20012": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu nguyên tắc chung về việc bổ sung tài liệu, không quy định cụ thể thủ tục, thời hạn hoặc hình thức nộp tài liệu mới.",
+  "evidence": "Kèm theo đơn kháng cáo là tài liệu, chứng cứ bổ sung, nếu có để chứng minh cho kháng cáo của mình là có căn cứ và hợp pháp."
+ },
+ "EXT20013": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu nguyên tắc chung mà không quy định cụ thể thủ tục, điều kiện thực hiện bản án nước ngoài tại Việt Nam.",
+  "evidence": "Toà án Việt Nam xem xét công nhận và cho thi hành tại Việt Nam bản án, quyết định dân sự của Toà án nước ngoài trong các trường hợp sau đây: Bản án, quyết định dân sự của Toà án nước ngoài được pháp luật Việt Nam quy định công nhận và cho thi hành."
+ },
+ "EXT20015": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ quy định nghĩa vụ của tòa án nhưng không nêu rõ quyền của người được thi hành án khi tòa án vi phạm thời hạn chuyển giao.",
+  "evidence": "Đối với bản án, quyết định không thuộc trường hợp quy định tại khoản 1 Điều này thì Toà án đã tuyên bản án, quyết định đó phải chuyển giao bản án, quyết định cho cơ quan thi hành án cùng cấp với Toà án đã xét xử sơ thẩm trong thời hạn ba mươi ngày..."
+ },
+ "EXT20016": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ đề cập đến cơ sở chứng minh sai lệch nhưng không nêu rõ quyền cụ thể của người phát hiện",
+  "evidence": "Có cơ sở chứng minh kết luận của người giám định, lời dịch của người phiên dịch không đúng sự thật hoặc có giả mạo chứng cứ"
+ },
+ "EXT20017": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ quy định trình tự trình bày yêu cầu tại phiên tòa, không đề cập đến các bước chuẩn bị trước khi khởi kiện hoặc nộp đơn khởi kiện.",
+  "evidence": "Người bảo vệ quyền và lợi ích hợp pháp của nguyên đơn trình bày yêu cầu của nguyên đơn và chứng cứ... Nguyên đơn có quyền bổ sung ý kiến."
+ },
+ "EXT20018": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ việc công khai thông tin địa chỉ có được phép hay không, chỉ đề cập đến việc thông báo hoặc nhận tin tức.",
+  "evidence": "Địa chỉ liên hệ của cá nhân, cơ quan, tổ chức, nếu người cần tìm kiếm biết được thông báo hoặc người khác có được tin tức về người cần tìm kiếm."
+ },
+ "EXT20020": {
+  "usable": "no",
+  "reason": "Đoạn luật không đề cập đến quyền khiếu nại khi tống đạt sai quy định.",
+  "evidence": "Việc cấp, tống đạt hoặc thông báo văn bản tố tụng do những người sau đây thực hiện: Những người khác mà pháp luật có quy định."
+ },
+ "EXT20021": {
+  "usable": "partial",
+  "reason": "Luật quy định trách nhiệm nhưng không nêu cụ thể hình thức xử lý",
+  "evidence": "Người phiên dịch cố ý dịch sai sự thật... phải chịu trách nhiệm theo quy định của pháp luật"
+ },
+ "EXT20022": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ trường hợp thu hồi đơn kháng cáo có phải là lý do đình chỉ xét xử phúc thẩm không",
+  "evidence": "Toà án cấp phúc thẩm ra quyết định đình chỉ xét xử phúc thẩm vụ án trong các trường hợp quy định tại điểm a và điểm b khoản 1 Điều 192 của Bộ luật này"
+ },
+ "EXT20023": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ trường hợp tòa án nước ngoài đã thụ lý và phán quyết được công nhận thì tòa án Việt Nam sẽ trả lại đơn hoặc đình chỉ vụ việc.",
+  "evidence": "Toà án Việt Nam trả lại đơn khởi kiện... nếu có Toà án nước ngoài đã thụ lý vụ việc... và bản án, quyết định của Toà án nước ngoài... được công nhận và cho thi hành tại Việt Nam."
+ },
+ "EXT20024": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu quy trình gửi kháng nghị, không hướng dẫn cụ thể cách thực hiện kháng nghị (ví dụ: nộp đơn, thời hạn, nội dung...).",
+  "evidence": "Quyết định kháng nghị phải được gửi ngay cho Toà án cấp sơ thẩm... theo quy định tại Điều 255 của Bộ luật này."
+ },
+ "EXT20025": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ việc có thể bị phạt tiền nếu không đến phiên tòa mà không có lý do chính đáng và gây trở ngại cho xét xử.",
+  "evidence": "Người làm chứng...phạt tiền."
+ },
+ "EXT20026": {
+  "usable": "no",
+  "reason": "Đoạn luật chỉ quy định trách nhiệm của thư ký, không nêu rõ nghĩa vụ của người vắng mặt phải giải trình",
+  "evidence": "Thư ký Toà án báo cáo... lý do vắng mặt"
+ },
+ "EXT20028": {
+  "usable": "no",
+  "reason": "Điều luật yêu cầu cả hai vợ chồng phải cư trú ở Việt Nam, trong khi người vợ/chồng đang sống ở nước ngoài.",
+  "evidence": "Vụ án ly hôn giữa công dân Việt Nam với công dân nước ngoài hoặc người không quốc tịch, nếu cả hai vợ chồng cư trú, làm ăn, sinh sống ở Việt Nam."
+ },
+ "EXT20029": {
+  "usable": "yes",
+  "reason": "Luật đã quy định rõ thẩm quyền của toà án cấp huyện đối với tranh chấp lao động, bao gồm cả trường hợp sa thải trái luật.",
+  "evidence": "Toà án nhân dân cấp huyện có thẩm quyền giải quyết tranh chấp về lao động quy định tại khoản 1 Điều 31 của Bộ luật này."
+ },
+ "EXT20030": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ xác định tranh chấp nhưng không nêu rõ quyền cụ thể của công đoàn khi không đồng ý",
+  "evidence": "Tranh chấp lao động tập thể... không đồng ý với quyết định của Hội đồng trọng tài lao động, bao gồm: Về quyền thành lập, gia nhập, hoạt động công đoàn."
+ },
+ "EXT20031": {
+  "usable": "partial",
+  "reason": "Đoạn luật nêu rõ hậu quả pháp lý khi rút kháng cáo nhưng không quy định cụ thể trình tự xử lý của Hội đồng Toà án",
+  "evidence": "Hội đồng có quyền giữ nguyên, sửa một phần hoặc toàn bộ quyết định... trong trường hợp đương sự rút kháng cáo"
+ },
+ "EXT20032": {
+  "usable": "partial",
+  "reason": "DOAN LUAT không nêu rõ quy định cụ thể trong Điều 352 để xác định thẩm quyền tòa án",
+  "evidence": "Việc chuyển đơn yêu cầu và các giấy tờ, tài liệu kèm theo đến Toà án có thẩm quyền được thực hiện theo quy định tại Điều 352 của Bộ luật này."
+ },
+ "EXT20034": {
+  "usable": "partial",
+  "reason": "Đoạn luật nêu rõ quyền rút lại chứng cứ và quy trình giám định, nhưng không đề cập đến hậu quả pháp lý nếu không rút lại hoặc xử lý chứng cứ giả mạo trong quá trình tố tụng.",
+  "evidence": "Trong trường hợp chứng cứ bị tố cáo là giả mạo thì người đưa ra chứng cứ đó có quyền rút lại; nếu không rút lại, người tố cáo có quyền yêu cầu Toà án trưng cầu giám định..."
+ },
+ "EXT20035": {
+  "usable": "partial",
+  "reason": "Luật chỉ quy định việc thay đổi thẩm phán trước khi mở phiên tòa, không nêu rõ quyền yêu cầu của nguyên đơn trong trường hợp phát hiện mối quan hệ sau khi phiên tòa đã mở.",
+  "evidence": "Chánh án Toà án có những nhiệm vụ, quyền hạn sau đây: Quyết định thay đổi Thẩm phán... trước khi mở phiên toà"
+ },
+ "EXT20036": {
+  "usable": "partial",
+  "reason": "Luật quy định nghĩa vụ nhưng không nêu rõ hậu quả vi phạm",
+  "evidence": "Phải có mặt theo giấy triệu tập của Toà án..."
+ },
+ "EXT20037": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu khái quát về tranh chấp trong kinh doanh, thương mại nhưng không quy định cụ thể quyền kiện tụng của cá nhân với công ty bảo hiểm.",
+  "evidence": "Tranh chấp phát sinh trong hoạt động kinh doanh, thương mại giữa cá nhân, tổ chức có đăng ký kinh doanh với nhau và đều có mục đích lợi nhuận bao gồm: Bảo hiểm;"
+ },
+ "EXT20038": {
+  "usable": "no",
+  "reason": "Luật không quy định quyền quyết định của người trả chi phí",
+  "evidence": "Chi phí định giá...do Hội đồng định giá tính căn cứ vào quy định của pháp luật"
+ },
+ "EXT20039": {
+  "usable": "no",
+  "reason": "Đoạn luật chỉ nêu quy trình kiểm sát viên phát biểu, không hướng dẫn người dân nên làm gì khi kiểm sát viên phát biểu",
+  "evidence": "Phiên họp giải quyết việc dân sự được tiến hành theo trình tự sau đây: Kiểm sát viên phát biểu ý kiến của Viện kiểm sát về việc giải quyết việc dân sự"
+ },
+ "EXT20040": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ bệnh tâm thần có phải là căn cứ để xác định mất/hạn chế năng lực hành vi dân sự hay không.",
+  "evidence": "Đương sự là người từ đủ mười tám tuổi trở lên có đầy đủ năng lực hành vi tố tụng dân sự, trừ người mất năng lực hành vi dân sự, người bị hạn chế năng lực hành vi dân sự hoặc pháp luật có quy định khác."
+ },
+ "EXT20042": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ người nộp có thể làm gì với số tiền nếu vụ án chưa được giải quyết, thiếu thông tin cụ thể về quyền lợi của đương sự.",
+  "evidence": "Tiền tạm ứng án phí... được xử lý khi Toà án tiếp tục giải quyết vụ án dân sự."
+ },
+ "EXT20044": {
+  "usable": "partial",
+  "reason": "Đoạn luật nêu rõ nguyên tắc công nhận nhưng không quy định cụ thể thủ tục, điều kiện để thực hiện",
+  "evidence": "Bản án, quyết định dân sự của Toà án nước ngoài được Toà án Việt Nam công nhận và cho thi hành tại Việt Nam có hiệu lực pháp luật như bản án, quyết định dân sự của Toà án Việt Nam..."
+ },
+ "EXT20045": {
+  "usable": "no",
+  "reason": "Đoạn luật không nêu quy định nào bị vi phạm",
+  "evidence": "Họ đã là người tiến hành tố tụng trong vụ án đó với tư cách là Thẩm phán, Hội thẩm nhân dân, Kiểm sát viên, Thư ký Toà án."
+ },
+ "EXT20046": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ điều kiện kháng nghị khi thỏa thuận vi phạm pháp luật",
+  "evidence": "Quyết định công nhận sự thoả thuận... chỉ có thể bị kháng nghị... nếu có căn cứ cho rằng sự thoả thuận đó là... trái pháp luật"
+ },
+ "EXT20047": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu yêu cầu chung về nội dung đơn mà không liệt kê cụ thể các nội dung đó",
+  "evidence": "Đơn yêu cầu Toà án huỷ bỏ quyết định tuyên bố mất năng lực hành vi dân sự hoặc bị hạn chế năng lực hành vi dân sự phải có đủ các nội dung quy định tại khoản 2 Điều 312 của Bộ luật này."
+ },
+ "EXT20048": {
+  "usable": "partial",
+  "reason": "Luật yêu cầu đưa ra chứng cứ nhưng không nêu rõ phải là 'chứng cứ cụ thể'",
+  "evidence": "Đương sự phản đối yêu cầu của người khác đối với mình phải chứng minh sự phản đối đó là có căn cứ và phải đưa ra chứng cứ để chứng minh."
+ },
+ "EXT20052": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu phương thức nộp trực tiếp, không đề cập các phương thức khác như gửi qua bưu điện hoặc trực tuyến.",
+  "evidence": "Người khởi kiện vụ án gửi đơn khởi kiện và tài liệu, chứng cứ kèm theo đến Toà án có thẩm quyền giải quyết vụ án bằng các phương thức sau đây: Nộp trực tiếp tại Toà án;"
+ },
+ "EXT20053": {
+  "usable": "partial",
+  "reason": "Đoạn luật xác định phạm vi tranh chấp nhưng không nêu rõ thủ tục giải quyết",
+  "evidence": "Tranh chấp phát sinh trong hoạt động kinh doanh, thương mại giữa cá nhân, tổ chức có đăng ký kinh doanh với nhau và đều có mục đích lợi nhuận..."
+ },
+ "EXT20055": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu quy định chung về việc phát biểu, không hướng dẫn cụ thể nội dung, hình thức hoặc căn cứ pháp lý để trình bày ý kiến",
+  "evidence": "Đại diện Viện kiểm sát phát biểu ý kiến của Viện kiểm sát về quyết định kháng nghị"
+ },
+ "EXT20056": {
+  "usable": "partial",
+  "reason": "Đoạn luật xác nhận khả năng giải quyết tranh chấp nhưng thiếu thông tin cụ thể về điều kiện, thủ tục nộp đơn.",
+  "evidence": "Yêu cầu liên quan đến việc Trọng tài thương mại Việt Nam giải quyết các vụ tranh chấp theo quy định của pháp luật về Trọng tài thương mại."
+ },
+ "EXT20058": {
+  "usable": "partial",
+  "reason": "Đoạn luật xác nhận tranh chấp tư vấn thuộc phạm vi kinh doanh nhưng không nêu rõ quyền kiện tụng cụ thể",
+  "evidence": "Tranh chấp phát sinh trong hoạt động kinh doanh, thương mại giữa cá nhân, tổ chức có đăng ký kinh doanh với nhau và đều có mục đích lợi nhuận bao gồm: Tư vấn, kỹ thuật;"
+ },
+ "EXT20059": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu điều kiện thay đổi phiên dịch mà không giải thích quy trình yêu cầu phiên dịch hoặc quyền của đương sự",
+  "evidence": "Người phiên dịch phải từ chối hoặc bị thay đổi trong những trường hợp sau đây: Thuộc một trong những trường hợp quy định tại khoản 1 và khoản 3 Điều 46 của Bộ luật này"
+ },
+ "EXT20061": {
+  "usable": "no",
+  "reason": "Không có quy định cụ thể về xử lý sai sót trong chuyển giao văn bản tố tụng.",
+  "evidence": "DOAN LUAT chỉ quy định việc lập biên bản khi giao văn bản cho người khác, nhưng không nêu rõ xử lý khi giao nhầm cho người không liên quan."
+ },
+ "EXT20062": {
+  "usable": "yes",
+  "reason": "Luật quy định tranh chấp bảo hiểm xã hội không nhất thiết phải qua hòa giải tại cơ sở",
+  "evidence": "Tranh chấp về bảo hiểm xã hội theo quy định của pháp luật về lao động; "
+ },
+ "EXT20064": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu yêu cầu phải thông báo hậu quả nhưng không nêu cụ thể hậu quả là gì",
+  "evidence": "Hậu quả pháp lý của việc người được thông báo không nộp cho Toà án văn bản về ý kiến của mình đối với yêu cầu."
+ },
+ "EXT20065": {
+  "usable": "no",
+  "reason": "Đoạn luật không nêu rõ nghĩa vụ thanh toán khi không có thỏa thuận, nên không thể kết luận chắc chắn",
+  "evidence": "Chi phí cho người phiên dịch là khoản tiền phải trả... theo thoả thuận của đương sự với người phiên dịch hoặc theo quy định của pháp luật."
+ },
+ "EXT20067": {
+  "usable": "partial",
+  "reason": "Luật quy định tòa án phải xác định ngày chết nhưng không nêu rõ phương pháp xác định",
+  "evidence": "Trong trường hợp chấp nhận đơn yêu cầu thì Toà án ra quyết định tuyên bố một người là đã chết; trong quyết định này, Toà án phải xác định ngày chết của người đó..."
+ },
+ "EXT20068": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ nơi ký hợp đồng có phải là nơi thực hiện hợp đồng hay không",
+  "evidence": "Nguyên đơn có thể yêu cầu Toà án nơi hợp đồng được thực hiện giải quyết"
+ },
+ "EXT20070": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ trường hợp rút kháng cáo dẫn đến đình chỉ xét xử phúc thẩm",
+  "evidence": "Toà án cấp phúc thẩm ra quyết định đình chỉ xét xử phúc thẩm vụ án trong các trường hợp sau đây: Người kháng cáo rút toàn bộ kháng cáo..."
+ },
+ "EXT20071": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu điều kiện phải nộp tiền tạm ứng nhưng không quy định xử lý khi không có tiền, nên không đủ thông tin trả lời hoàn toàn.",
+  "evidence": "Người yêu cầu trưng cầu giám định phải nộp tiền tạm ứng chi phí giám định, trừ trường hợp các bên đương sự có thoả thuận khác hoặc pháp luật có quy định khác."
+ },
+ "EXT20072": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ các bước tiếp theo khi kháng cáo bị đình chỉ xét xử.",
+  "evidence": "Toà án cấp phúc thẩm ra quyết định đình chỉ xét xử phúc thẩm vụ án trong các trường hợp sau đây: Các trường hợp khác mà pháp luật có quy định."
+ },
+ "EXT20073": {
+  "usable": "yes",
+  "reason": "Câu hỏi thực tế, luật đã quy định rõ, không cần thông tin ngoài luật",
+  "evidence": "Tài sản bị kê biên có thể... lập biên bản giao cho một bên đương sự hoặc người thứ ba quản lý cho đến khi có quyết định của Toà án."
+ },
+ "EXT20075": {
+  "usable": "yes",
+  "reason": "Luật cấm thẩm phán làm đại diện pháp lý trừ trường hợp đặc biệt, nên hành vi này vi phạm quy định.",
+  "evidence": "Cán bộ, công chức trong các ngành Toà án... không được làm người đại diện trong tố tụng dân sự, trừ trường hợp họ tham gia tố tụng với tư cách người đại diện cho cơ quan của họ hoặc với tư cách là người đại diện theo pháp luật."
+ },
+ "EXT20077": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ quy định nghĩa vụ của người giám định, không nêu hậu quả pháp lý đối với người không tham gia phiên tòa (không phải người giám định).",
+  "evidence": "Người giám định có nghĩa vụ tham gia phiên toà theo giấy triệu tập của Toà án để làm rõ những vấn đề liên quan đến việc giám định và kết luận giám định."
+ },
+ "EXT20079": {
+  "usable": "parse-fail",
+  "reason": "unparseable"
+ },
+ "EXT20080": {
+  "usable": "partial",
+  "reason": "Luật quy định nội dung bắt buộc của quyết định nhưng không nêu rõ quyền khiếu nại khi thiếu thông tin này",
+  "evidence": "Quyết định đưa vụ án ra xét xử phải có các nội dung chính sau đây: Họ, tên những người được triệu tập tham gia phiên toà."
+ },
+ "EXT20081": {
+  "usable": "no",
+  "reason": "Đoạn luật chỉ quy định nghĩa vụ, không giải thích nguyên nhân vi phạm.",
+  "evidence": "Chủ tịch Uỷ ban nhân dân có trách nhiệm chỉ đạo thi hành bản án, nhưng đoạn luật không nêu rõ lý do khi không thực hiện."
+ },
+ "EXT20082": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ đề cập đến kháng nghị của Viện kiểm sát, không nêu rõ quyền kháng nghị của đương sự (người dân)",
+  "evidence": "Quyết định kháng nghị của Viện kiểm sát phải bằng văn bản và có các nội dung chính sau đây: Kháng nghị phần nào của bản án, quyết định của Toà án cấp sơ thẩm chưa có hiệu lực pháp luật"
+ },
+ "EXT20083": {
+  "usable": "no",
+  "reason": "Thiếu thông tin về điều luật hoặc quy trình khiếu nại trong đoạn luật được cung cấp.",
+  "evidence": "DOAN LUAT không đề cập đến quy định cụ thể về quyền khiếu nại hay điều luật liên quan đến việc không thực hiện cưỡng chế thi hành án."
+ },
+ "EXT20084": {
+  "usable": "partial",
+  "reason": "đoạn luật nêu rõ nghĩa vụ trình bày trung thực và trách nhiệm pháp lý, nhưng không quy định cụ thể hình thức xử lý",
+  "evidence": "chịu trách nhiệm trước pháp luật về nội dung trình bày"
+ },
+ "EXT20085": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ nghĩa vụ của nguyên đơn khi không thể tham gia phiên tòa (ví dụ: phải báo cáo lý do, nộp văn bản giải thích...).",
+  "evidence": "Nguyên đơn phải có mặt tại phiên toà theo giấy triệu tập của Toà án; nếu vắng mặt lần thứ nhất có lý do chính đáng thì phải hoãn phiên toà."
+ },
+ "EXT20086": {
+  "usable": "no",
+  "reason": "Luật không quy định quyền này cho người dân trong trường hợp nêu.",
+  "evidence": "DOAN LUAT không đề cập đến quyền của người dân yêu cầu tòa án mở phiên họp khi tòa không gửi hồ sơ cho viện kiểm sát đúng hạn."
+ },
+ "EXT20087": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ địa điểm phải được ghi trong biên bản, bất kể nơi diễn ra phiên hoà giải có phải là trụ sở toà án hay không.",
+  "evidence": "Biên bản hoà giải phải có các nội dung chính sau đây: Địa điểm tiến hành phiên hoà giải;"
+ },
+ "EXT20088": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ quy định nghĩa vụ của Toà án và cơ quan thi hành án, không nêu rõ nghĩa vụ cụ thể của người nhận thông báo.",
+  "evidence": "Ngay sau khi nhận được thông báo bằng văn bản của Bộ Tư pháp... Toà án Việt Nam đã ra quyết định huỷ bỏ... gửi quyết định này cho cơ quan thi hành án. Thủ trưởng cơ quan thi hành án dân sự ra quyết định đình chỉ việc thi hành..."
+ },
+ "EXT20090": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ việc thông báo cho cả người có mặt và vắng mặt",
+  "evidence": "Hội đồng xét xử phải thông báo cho những người có mặt tại phiên toà và người tham gia tố tụng vắng mặt tại phiên toà biết giờ, ngày và địa điểm tuyên án"
+ },
+ "EXT20092": {
+  "usable": "partial",
+  "reason": "Đoạn luật xác nhận tranh chấp có thể phát sinh nhưng không nêu cụ thể biện pháp giải quyết",
+  "evidence": "Tranh chấp phát sinh trong hoạt động kinh doanh, thương mại giữa cá nhân, tổ chức có đăng ký kinh doanh với nhau và đều có mục đích lợi nhuận bao gồm: Mua bán cổ phiếu, trái phiếu và giấy tờ có giá khác;"
+ },
+ "EXT20093": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ bắt buộc ghi tên và địa chỉ các bên, không ghi là vi phạm",
+  "evidence": "Trong phần mở đầu phải ghi rõ... tên, địa chỉ của nguyên đơn, bị đơn, người có quyền lợi, nghĩa vụ liên quan..."
+ },
+ "EXT20095": {
+  "usable": "yes",
+  "reason": "Luật đã quy định rõ thủ tục xác nhận của Ủy ban nhân dân cấp xã nơi người nhận con nuôi cư trú",
+  "evidence": "Trong trường hợp người nhận con nuôi không cư trú tại xã, phường, thị trấn, nơi đăng ký việc nuôi con nuôi... thì Giấy thỏa thuận... phải có xác nhận của Ủy ban nhân cấp xã, nơi người nhận con nuôi cư trú..."
+ },
+ "EXT20097": {
+  "usable": "partial",
+  "reason": "Luật chỉ nêu yêu cầu nộp giấy tờ nhưng không quy định hậu quả pháp lý hoặc thủ tục cụ thể khi đăng ký muộn.",
+  "evidence": "Người đi đăng ký khai sinh, khai tử quá hạn phải nộp các giấy tờ theo quy định tại khoản 1, Điều 15 (nếu là khai sinh) hoặc khoản 1 Điều 21 (nếu là khai tử) của Nghị định này."
+ },
+ "EXT20098": {
+  "usable": "partial",
+  "reason": "Luật cấm thu phí ngoài quy định nhưng không quy định cụ thể thủ tục khiếu nại",
+  "evidence": "Cán bộ Tư pháp hộ tịch không được làm những việc sau đây: Thu lệ phí hộ lịch cao hơn mức quy định hoặc tự ý đặt ra các khoản thu khi đăng ký hộ tịch"
+ },
+ "EXT20099": {
+  "usable": "partial",
+  "reason": "Đoạn luật nêu quy định về nội dung khai sinh nhưng không hướng dẫn cụ thể trình tự đăng ký",
+  "evidence": "Khi đăng ký khai sinh, những nội dung liên quan đến khai sinh được ghi theo lời khai của trẻ; nếu trẻ không nhớ được thì căn cứ vào thể trạng của trẻ để xác định năm sinh, ngày sinh là ngày 01 tháng 01 của năm đó; họ, tên của trẻ được ghi theo đề nghị của người đi khai sinh..."
+ },
+ "EXT20100": {
+  "usable": "partial",
+  "reason": "Luật chưa nêu rõ thủ tục cụ thể, chỉ đề cập áp dụng Nghị định 68/2002/NĐ-CP",
+  "evidence": "Các quy định về đăng ký lại việc kết hôn... được áp dụng để giải quyết đăng ký lại việc kết hôn giữa công dân Việt Nam thường trú tại khu vực biên giới với công dân của nước láng giềng thường trú tại khu vực biên giới với Việt Nam..."
+ },
+ "EXT20101": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu nơi đăng ký nhưng không đề cập thủ tục, tài liệu cần thiết hoặc điều kiện cụ thể khác.",
+  "evidence": "Việc đăng ký khai sinh cho trẻ em sinh ra tại Việt Nam, có cha và mẹ là người nước ngoài, được thực hiện tại Sở Tư pháp, nơi cư trú của người cha hoặc người mẹ, nếu họ có yêu cầu."
+ },
+ "EXT20102": {
+  "usable": "no",
+  "reason": "Đoạn luật không đề cập đến xử phạt khi thông tin không khớp",
+  "evidence": "Mọi hồ sơ, giấy tờ của cá nhân có nội dung ghi về họ, tên, chữ đệm; ngày, tháng, năm sinh; giới tính, dân tộc; quốc tịch; quê quán; quan hệ cha, mẹ, con phải phù hợp với Giấy Khai sinh của người đó."
+ },
+ "EXT20103": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ trích dẫn quy định khác mà không nêu nội dung cụ thể của khoản 3 và 4 Điều 86",
+  "evidence": "Trình tự, thủ tục và thời hạn giải quyết khiếu nại của Bộ trưởng Bộ Tư pháp thực hiện tương tự theo quy định tại khoản 3 và khoản 4 Điều 86 của Nghị định này."
+ },
+ "EXT20104": {
+  "usable": "partial",
+  "reason": "Luật chỉ quy định nơi ghi nhưng không nêu rõ thủ tục thực hiện",
+  "evidence": "Việc xác định cha, mẹ, con được ghi vào sổ đăng ký khai sinh trước đây của người con"
+ },
+ "EXT20105": {
+  "usable": "partial",
+  "reason": "Luật quy định nghĩa vụ gửi quyết định nhưng không nêu rõ biện pháp xử lý khi vi phạm",
+  "evidence": "Sau khi đăng ký giám hộ, Sở Tư pháp gửi cho Ủy ban nhân dân cấp xã... bản sao Quyết định công nhận việc giám hộ để giám sát việc giám hộ"
+ },
+ "EXT20106": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu cơ quan có thẩm quyền cấp bản sao, nhưng không quy định cụ thể thủ tục, hồ sơ cần thiết để xin bản sao.",
+  "evidence": "Ủy ban nhân dân cấp huyện thực hiện quản lý Nhà nước về hộ tịch trong địa phương mình, có nhiệm vụ, quyền hạn sau đây: Cấp bản sao giấy tờ hộ tịch từ sổ hộ tịch"
+ },
+ "EXT20107": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ người có thẩm quyền giải quyết khiếu nại là Giám đốc Sở Tư pháp",
+  "evidence": "Giám đốc Sở Tư pháp thụ lý và giải quyết khiếu nại đối với quyết định hành chính, hành vi hành chính của mình; hành vi hành chính của cán bộ hộ tịch của Sở Tư pháp trong đăng ký và quản lý hộ tịch."
+ },
+ "EXT20108": {
+  "usable": "partial",
+  "reason": "Đoạn luật nêu trách nhiệm nhưng không quy định cụ thể hình thức xử lý (phạt hành chính, kỷ luật, hình sự...).",
+  "evidence": "Chủ tịch Ủy ban nhân dân cấp huyện phải chịu trách nhiệm trong trường hợp do buông lỏng quản lý mà dẫn đến sai phạm..."
+ },
+ "EXT20109": {
+  "usable": "partial",
+  "reason": "Luật không nêu rõ việc bắt buộc có giấy tờ chứng minh",
+  "evidence": "Đăng ký hộ tịch...Căn cứ vào quyết định của cơ quan nhà nước có thẩm quyền..."
+ },
+ "EXT20110": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu quy trình cụ thể để cập nhật thông tin khi chuyển nhà",
+  "evidence": "Sổ hộ khẩu... để làm căn cứ xác định thẩm quyền đăng ký hộ tịch"
+ },
+ "EXT20111": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ quy định nghĩa vụ của người yêu cầu tuyên bố chết, không đề cập đến nghĩa vụ của người bị tuyên bố chết hoặc người thân.",
+  "evidence": "Người yêu cầu Tòa án tuyên bố một người là đã chết phải thực hiện việc đăng ký khai tử."
+ },
+ "EXT20112": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu chung về việc kiểm tra tư cách, nhưng không cụ thể hóa các tiêu chí cần kiểm tra.",
+  "evidence": "Trước khi đăng ký việc nuôi con nuôi, cán bộ Tư pháp hộ tịch phải kiểm tra, xác minh kỹ các nội dung sau đây: Tư cách của người nhận con nuôi;"
+ },
+ "EXT20113": {
+  "usable": "no",
+  "reason": "Luật không quy định biện pháp khiếu nại tiếp theo sau quyết định của Bộ trưởng.",
+  "evidence": "Quyết định giải quyết khiếu nại của Bộ trưởng Bộ Tư pháp là quyết định giải quyết cuối cùng."
+ },
+ "EXT20114": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ quy định nghĩa vụ của cán bộ hộ tịch mà không nêu rõ quyền của người dân khi cán bộ vi phạm.",
+  "evidence": "Sau khi kiểm tra giấy tờ hợp lệ, cán bộ hộ tịch của sở Tư pháp ghi vào sổ hộ tịch theo quy định tạt Điều 57 của Nghị định này."
+ },
+ "EXT20115": {
+  "usable": "partial",
+  "reason": "Luật quy định thời hạn xử lý nhưng không nêu rõ hành động khi quá thời hạn",
+  "evidence": "Trong thời hạn 5 ngày... nếu xét thấy hai bên... thì Ủy ban nhân dân cấp xã đăng ký kết hôn... Trong trường hợp cần phải xác minh... thời hạn nói trên được kéo dài thêm không quá 5 ngày."
+ },
+ "EXT20116": {
+  "usable": "no",
+  "reason": "Đoạn luật chỉ nêu nhiệm vụ tuyên truyền, phổ biến mà không quy định xử lý cụ thể khi không tuân thủ",
+  "evidence": "Trong lĩnh vực quản lý nhà nước về hộ tịch, Ủy ban nhân dân cấp xã có nhiệm vụ, quyền hạn sau đây: Tuyên truyền, phổ biến, vận động nhân dân chấp hành các quy định của pháp luật về hộ tịch"
+ },
+ "EXT20117": {
+  "usable": "partial",
+  "reason": "Luật chỉ quy định thẩm quyền cấp, không hướng dẫn thủ tục nhận giấy",
+  "evidence": "Chủ tịch Hội đồng thi hành án tử hình cấp Giấy báo tử"
+ },
+ "EXT20118": {
+  "usable": "yes",
+  "reason": "Câu hỏi thực tế, luật đã quy định rõ quy trình dịch và công chứng, không cần thông tin ngoài luật.",
+  "evidence": "Giấy tờ hộ tịch quy định tại khoản 1 Điều này bằng tiếng nước ngoài phải được dịch ra tiếng Việt, bản dịch phải được công chứng theo quy định của pháp luật Việt Nam."
+ },
+ "EXT20120": {
+  "usable": "partial",
+  "reason": "Đoạn luật không đề cập cụ thể đến quyền khiếu nại",
+  "evidence": "Cán bộ Tư pháp hộ tịch phải thực hiện những nghĩa vụ và được hưởng những quyền lợi của cán bộ, công chức mà pháp luật quy định đối với công chức cấp xã."
+ },
+ "EXT20121": {
+  "usable": "partial",
+  "reason": "Luật quy định thời hạn nhưng không nêu rõ hành động khi quá thời hạn",
+  "evidence": "Đối với khu vực vùng sâu, vùng xa... thời hạn giải quyết khiếu nại không quá 45 ngày... đối với vụ việc phức tạp, có thể kéo dài hơn nhưng không quá 60 ngày"
+ },
+ "EXT20123": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ quy trình xử lý khi bị từ chối đăng ký kết hôn",
+  "evidence": "Soạn thảo, trình cơ quan có thẩm quyền ban hành hoặc ban hành theo thẩm quyền văn bản quy phạm pháp luật về đăng ký và quản lý hộ tịch"
+ },
+ "EXT20124": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ không được bỏ trống và phải đóng dấu giáp lai toàn bộ sổ.",
+  "evidence": "Sổ hộ tịch phải viết liên tiếp... không được bỏ trống, phải đóng dấu giáp lai từ trang đầu đến trang cuối sổ."
+ },
+ "EXT20125": {
+  "usable": "no",
+  "reason": "Đoạn luật không nêu rõ hậu quả khi trung tâm từ chối thanh tra",
+  "evidence": "Trung tâm có các nghĩa vụ sau đây: Chịu sự thanh tra, kiểm tra của... cơ quan có thẩm quyền khác theo quy định của pháp luật"
+ },
+ "EXT20126": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ tờ khai là thành phần bắt buộc, do đó người nộp hồ sơ cần bổ sung tờ khai theo mẫu quy định.",
+  "evidence": "Hồ sơ ghi vào sổ việc nhận cha, mẹ, con được lập thành 01 bộ, gồm các giấy tờ sau đây: Tờ khai ghi vào sổ việc nhận cha, mẹ, con theo mẫu quy định;"
+ },
+ "EXT20127": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu yêu cầu về giấy tờ chứng minh nhân thân, nhưng không đề cập đến văn bản ly hôn từ nước ngoài (ví dụ: bản sao quyết định ly hôn, bản dịch công chứng, v.v.), nên chưa đủ thông tin trả ",
+  "evidence": "Hồ sơ ghi vào sổ hộ tịch việc ly hôn đã được giải quyết ở nước ngoài bao gồm: Bản sao Chứng minh nhân dân, Hộ chiếu hoặc giấy tờ hợp lệ thay thế để chứng minh nhân thân của người có yêu cầu"
+ },
+ "EXT20128": {
+  "usable": "yes",
+  "reason": "Luật quy định rõ thời hạn gia hạn tối đa 90 ngày và hậu quả nếu không tổ chức lễ trong thời hạn này",
+  "evidence": "Trường hợp có lý do chính đáng mà hai bên nam, nữ yêu cầu gia hạn thời gian tổ chức lễ đăng ký kết hôn... nhưng không quá 90 ngày... Hết thời hạn này mà hai bên nam, nữ không đến tổ chức lễ đăng ký kết hôn thì Giấy chứng nhận kết hôn không còn giá trị"
+ },
+ "EXT20129": {
+  "usable": "parse-fail",
+  "reason": "unparseable"
+ },
+ "EXT20130": {
+  "usable": "no",
+  "reason": "Đoạn luật chỉ quy định thời hạn xử lý của cơ quan có thẩm quyền, không nêu rõ hành động của người nộp đơn khi quá thời hạn.",
+  "evidence": "Trong thời hạn 02 ngày làm việc, kể từ ngày nhận được văn bản trả lời của Sở Tư pháp, Chủ tịch Ủy ban nhân dân cấp xã ký giấy xác nhận..."
+ },
+ "EXT20131": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ đề cập đến nhiệm vụ của cơ quan nhà nước, không hướng dẫn cụ thể hành động của cá nhân khi gặp vấn đề pháp lý",
+  "evidence": "Ủy ban nhân dân cấp tỉnh... giải quyết khiếu nại, tố cáo và xử lý vi phạm hành chính về hôn nhân và gia đình có yếu tố nước ngoài"
+ },
+ "EXT20132": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ quy định trách nhiệm của cơ quan đại diện và cơ quan hữu quan, không đề cập đến hành động của cá nhân nghi ngờ vấn đề cần xác minh.",
+  "evidence": "Trường hợp xét thấy có vấn đề cần xác minh thuộc chức năng của cơ quan hữu quan ở trong nước, Cơ quan đại diện có văn bản nêu rõ vấn đề cần xác minh, gửi Bộ Ngoại giao để yêu cầu cơ quan hữu quan xác minh..."
+ },
+ "EXT20133": {
+  "usable": "partial",
+  "reason": "Đoạn luật đề cập đến xử lý khiếu nại, tố cáo nhưng không nêu rõ hành động cụ thể người dân nên thực hiện khi gặp vấn đề pháp lý.",
+  "evidence": "Thanh tra, kiểm tra việc thực hiện pháp luật về hôn nhân và gia đình có yếu tố nước ngoài... giải quyết khiếu nại, tố cáo theo quy định của pháp luật"
+ },
+ "EXT20135": {
+  "usable": "partial",
+  "reason": "Luật chưa nêu rõ thủ tục, giấy tờ cần thiết để đăng ký kết hôn",
+  "evidence": "Cơ quan đại diện thực hiện việc đăng ký kết hôn phù hợp với pháp luật của nước tiếp nhận..."
+ },
+ "EXT20136": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu khả năng thỏa thuận khác nhưng không quy định cụ thể cách áp dụng nội dung thỏa thuận đó trong thực tế.",
+  "evidence": "Trường hợp lựa chọn áp dụng chế độ tài sản của vợ chồng theo thỏa thuận thì vợ chồng có thể thỏa thuận về xác định tài sản theo một trong các nội dung sau đây: Xác định theo thỏa thuận khác của vợ chồng."
+ },
+ "EXT20137": {
+  "usable": "partial",
+  "reason": "Luật chưa quy định phương thức nộp hồ sơ thay thế khi không thể nộp trực tiếp",
+  "evidence": "Hồ sơ nhận cha, mẹ, con phải do người có yêu cầu nộp trực tiếp tại cơ quan có thẩm quyền..."
+ },
+ "EXT20138": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu cụ thể thủ tục, hồ sơ cần thiết để kết hôn với người nước ngoài.",
+  "evidence": "Ủy ban nhân dân cấp tỉnh thực hiện quản lý nhà nước về hôn nhân và gia đình có yếu tố nước ngoài trên địa bàn, có nhiệm vụ và quyền hạn sau đây: Thực hiện các nhiệm vụ, quyền hạn khác theo quy định của pháp luật."
+ },
+ "EXT20140": {
+  "usable": "partial",
+  "reason": "Đoạn luật chưa nêu rõ các giấy tờ bổ sung như bản dịch công chứng, xác nhận của cơ quan có thẩm quyền...",
+  "evidence": "Hồ sơ ghi vào sổ hộ tịch việc ly hôn đã được giải quyết ở nước ngoài bao gồm: Bản sao giấy tờ để chứng minh thẩm quyền ghi vào sổ hộ tịch việc ly hôn."
+ },
+ "EXT20143": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu điều kiện về thời hạn của phiếu lý lịch tư pháp nhưng không quy định cụ thể xử lý khi phiếu đã quá hạn",
+  "evidence": "Phiếu lý lịch tư pháp của người dự kiến đứng đầu Trung tâm được cấp chưa quá 03 tháng, tính đến ngày nhận hồ sơ"
+ },
+ "EXT20145": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu cụ thể loại chứng cứ nào được chấp nhận, thiếu thông tin thực tế cần thiết",
+  "evidence": "Giấy tờ hoặc chứng cứ khác chứng minh quan hệ cha, con hoặc mẹ, con"
+ },
+ "EXT20146": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu cụ thể điều kiện, quy trình nhận trợ cấp theo Luật Hôn nhân và Gia đình",
+  "evidence": "Khoản trợ cấp, ưu đãi mà vợ, chồng được nhận theo quy định của pháp luật về ưu đãi người có công với cách mạng"
+ },
+ "EXT20147": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ quy trình giải quyết tranh chấp phát sinh từ thỏa thuận tài sản.",
+  "evidence": "Trường hợp lựa chọn áp dụng chế độ tài sản của vợ chồng theo thỏa thuận thì vợ chồng có thể thỏa thuận về xác định tài sản theo một trong các nội dung sau đây: Tài sản giữa vợ và chồng bao gồm tài sản chung và tài sản riêng của vợ, chồng;"
+ },
+ "EXT20148": {
+  "usable": "yes",
+  "reason": "Luật quy định Cơ quan đại diện có thể cấp bản sao khi có yêu cầu.",
+  "evidence": "Việc cấp bản sao Giấy chứng nhận kết hôn từ Sổ đăng ký kết hôn do Cơ quan đại diện thực hiện theo yêu cầu."
+ },
+ "EXT20149": {
+  "usable": "no",
+  "reason": "Đoạn luật không nêu quy định khi không có giấy khai sinh, nên không thể trả lời câu hỏi",
+  "evidence": "Hồ sơ nhận cha, mẹ, con được lập thành 01 bộ, gồm các giấy tờ sau đây: Bản sao Giấy khai sinh của người được nhận là con trong trường hợp nhận con; của người nhận cha, mẹ trong trường hợp xin nhận cha, mẹ;"
+ },
+ "EXT20151": {
+  "usable": "partial",
+  "reason": "Luật chỉ quy định trách nhiệm của Ủy ban nhân dân cấp xã, nhưng không nêu rõ các bước cụ thể người dân cần thực hiện (ví dụ: nộp hồ sơ, chuẩn bị giấy tờ...).",
+  "evidence": "Trong thời hạn 07 ngày làm việc, kể từ ngày nhận được văn bản đồng ý của Sở Tư pháp, Ủy ban nhân dân cấp xã thực hiện đăng ký kết hôn..."
+ },
+ "EXT20152": {
+  "usable": "partial",
+  "reason": "Đoạn luật không nêu rõ điều kiện hoặc quy trình thay đổi luật sư bảo vệ do mâu thuẫn lợi ích",
+  "evidence": "Chủ toạ phiên toà hỏi những người có quyền yêu cầu thay đổi những người tiến hành tố tụng, người giám định, người phiên dịch xem họ có yêu cầu thay đổi ai không."
+ },
+ "EXT20153": {
+  "usable": "yes",
+  "reason": "Luật đã quy định rõ về quyền tự tham gia tố tụng của người từ 15 tuổi trong trường hợp vi phạm hợp đồng lao động.",
+  "evidence": "Đương sự là người từ đủ mười lăm tuổi đến chưa đủ mười tám tuổi đã tham gia lao động theo hợp đồng lao động... được tự mình tham gia tố tụng về những việc có liên quan đến quan hệ lao động..."
+ },
+ "EXT20154": {
+  "usable": "partial",
+  "reason": "Đoạn luật chỉ nêu thời hạn nộp tiền nhưng không quy định hậu quả vi phạm",
+  "evidence": "Trong thời hạn mười lăm ngày, kể từ ngày nhận được giấy báo của Toà án về việc nộp tiền tạm ứng án phí, người khởi kiện phải nộp tiền tạm ứng án phí."
+ }
+}

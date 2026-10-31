@@ -1,0 +1,970 @@
+{
+ "EXT10002": {
+  "usable": "partial",
+  "reason": "ngan gon"
+ },
+ "EXT10003": {
+  "usable": "partial",
+  "reason": "Cau hoi thuc te nhung doan luat khong truc tiep tra loi vi phan loai nguoi quan ly di san va nguoi thua ke nhu the nao, khong cho biet chi tiet ve vi sao khong giao di san."
+ },
+ "EXT10004": {
+  "usable": "partial",
+  "reason": "Cau hoi khong dat tieu chi (2) vi DOAN LUAT cho phe dung nhung khong du lieu de xac dinh hao mon tu nhien hay khong."
+ },
+ "EXT10005": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về đối tượng tranh chấp và đối tượng áp dụng của điều luật không phù hợp hoàn toàn với câu hỏi."
+ },
+ "EXT10008": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc người thứ ba giữ tài sản thế chấp có nghĩa vụ gì khi chủ sở hữu muốn lấy lại tài sản, do đó cần thêm thông tin để trả lời chính xác."
+ },
+ "EXT10010": {
+  "usable": "partial",
+  "reason": "Câu hỏi đề cập đến trường hợp cụ thể nhưng câu trả lời không trực tiếp giải quyết vấn đề đồng ý hay không đồng ý của người thừa kế khác, chỉ nói về khả năng người được chỉ định có thể vừa phân chia vừ"
+ },
+ "EXT10011": {
+  "usable": "no",
+  "reason": "Câu hỏi đề cập đến trường hợp cụ thể mà Đoan Luật đưa ra không giải quyết được. Đoan Luật đề cập đến quyền sống và bảo hộ tính mạng, nhưng không nói về trường hợp cảnh sát có quyền sử dụng vũ lực để b"
+ },
+ "EXT10014": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được nêu rõ ràng trong nội dung, do đó cần thêm thông tin để xác định rõ quyền đòi bồi thường của bên thế chấp. Đoạn luật nêu ra trách nhiệm bảo quản tài sản thế chấp nhưng không trực ti"
+ },
+ "EXT10015": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được giải đáp trực tiếp bởi đoạn luật, vì đoạn luật chỉ đề cập đến việc giảm tiền thuê khoán khi hoa lợi, lợi tức bị mất ít nhất một phần ba do sự kiện bất khả kháng, không chỉ rõ về thi"
+ },
+ "EXT10017": {
+  "usable": "partial",
+  "reason": "Cau hoi dat cau ho, DOAN LUAT tra loi duoc nhung khong dat tiem chi (2) vi khong truc tiep tra loi cau hoi ve su can thiet cua cong viec xet xu cua Toa an."
+ },
+ "EXT10018": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đáp án cần bổ sung thêm thông tin về thủ tục pháp lý cụ thể để thực hiện giao dịch."
+ },
+ "EXT10019": {
+  "usable": "partial",
+  "reason": "cau hoi thuc te nhung doan luat khong truc tiep tra loi vi can them ly do hu quyet dinh va chuyen ho so"
+ },
+ "EXT10020": {
+  "usable": "partial",
+  "reason": "Câu hỏi không cung cấp đủ thông tin về việc người bạn muốn tòa án Việt Nam xét lại vụ án như thế nào, nhưng đoạn luật cung cấp thông tin về việc tòa án Việt Nam không được xét xử lại vụ án đã được Tòa"
+ },
+ "EXT10021": {
+  "usable": "partial",
+  "reason": "ngan gon"
+ },
+ "EXT10022": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được trả lời trực tiếp, cần thêm thông tin về quyền kháng nghị bản án rút gọn đến tòa án cấp phúc thẩm."
+ },
+ "EXT10023": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc người nào vắng mặt và lý do chính đáng có được chấp nhận hay không, nên câu trả lời không thể xác định trực tiếp được có hoãn phiên họp hay không."
+ },
+ "EXT10025": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không trực tiếp trả lời vấn đề khiếu nại, chỉ nêu yêu cầu về nội dung quyết định."
+ },
+ "EXT10026": {
+  "usable": "partial",
+  "reason": "không đầy đủ thông tin về cách thức khiếu nại ban đầu"
+ },
+ "EXT10027": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10028": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc phiên tòa hay phiên hòa giải, đồng thời luật đề cập đến cả hai trường hợp nên không thể trả lời trực tiếp câu hỏi."
+ },
+ "EXT10029": {
+  "usable": "partial",
+  "reason": "Cau hoi lien quan den tinh huong thuc te va DOAN LUAT tra loi duoc nhung thieu thong tin ve ly do suc khoe co duoc xem nhu ly do chinh dang hay khong."
+ },
+ "EXT10030": {
+  "usable": "partial",
+  "reason": "Câu hỏi không đủ thông tin để xác định thẩm phán có vi phạm thời hạn hay không, do đó không thể trả lời trực tiếp bằng đoạn luật này."
+ },
+ "EXT10031": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10032": {
+  "usable": "partial",
+  "reason": "Câu hỏi không cần trích dẫn điều luật cụ thể nhưng đáp án cung cấp thông tin không cần thiết"
+ },
+ "EXT10033": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được trả lời trực tiếp bởi Đoan Luật, Đoan Luật chỉ nói về trách nhiệm của người giải quyết bồi thường chứ không đề cập đến trách nhiệm của người yêu cầu bồi thường khi hồ sơ thiếu thông"
+ },
+ "EXT10034": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với đoạn luật vì không đề cập đến trường hợp tạm đình chỉ. Đoạn luật này chỉ nói về quyền của Thu trưởng cơ quan giải quyết bồi thường, không phải của người dân."
+ },
+ "EXT10035": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật dài và phức tạp, cần tóm tắt hoặc cắt bớt để trả lời trực tiếp câu hỏi."
+ },
+ "EXT10036": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về ngữ cảnh cụ thể của vụ việc, nhưng đáp án cung cấp thông tin về quyền kiến nghị của kiểm sát viên liên quan đến biện pháp khẩn cấp tạm thời tại phiên tòa."
+ },
+ "EXT10037": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không trực tiếp trả lời câu hỏi và cần thêm thông tin về quyền của người mua nhà sau khi phát hiện nhà đã được thế chấp."
+ },
+ "EXT10038": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ định rõ loại phiên họp giải quyết việc dân sự cụ thể, trong khi đáp án đề cập đến nhiều trường hợp khác nhau."
+ },
+ "EXT10039": {
+  "usable": "partial",
+  "reason": "Câu hỏi yêu cầu đánh giá tính hợp lệ của biên bản cụ thể, trong khi Đoan Luật chỉ nêu điều kiện chung về việc lập biên bản."
+ },
+ "EXT10040": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được giải đáp trực tiếp từ đoạn luật, cần thêm thông tin về quy định cụ thể về chi phí bảo quản tài sản bị thu giữ."
+ },
+ "EXT10041": {
+  "usable": "partial",
+  "reason": "Cau hoi lien quan den viec ghi chu chi tiet trong don thieu hanh an nhung doan luat chi cho biet can ghi so tai khoan neu co va khong chi tiet ve vi tri trong don."
+ },
+ "EXT10042": {
+  "usable": "partial",
+  "reason": "DOAN LUAT khong truc tiep tra loi cau hoi ve ly do cong ty khong chap hanh ban an."
+ },
+ "EXT10043": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được trả lời trực tiếp, cần thông tin thêm về việc người dân có phải chịu trách nhiệm chi phí hay không."
+ },
+ "EXT10044": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng và không thể trả lời trực tiếp bằng Đoan Luật đưa ra"
+ },
+ "EXT10045": {
+  "usable": "partial",
+  "reason": "Câu hỏi không yêu cầu thông tin về nội dung cụ thể của quyết định ủy thác thi hành án, nhưng câu trả lời chỉ giải thích về nội dung quyết định và tài liệu cần đi kèm mà không hướng dẫn cách xử lý khi "
+ },
+ "EXT10046": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10047": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về nội dung và không cung cấp đủ thông tin để xác định liệu việc không kiểm kê trong 6 tháng gần đây có vi phạm quy định hay không. Đoạn luật chỉ ra trách nhiệm định kỳ 6 tháng m"
+ },
+ "EXT10048": {
+  "usable": "partial",
+  "reason": "Câu hỏi không liên quan trực tiếp đến việc giao nhận vật chứng của cơ quan thi hành án dân sự, mà có thể liên quan đến cơ quan điều tra hoặc tố tụng khác."
+ },
+ "EXT10049": {
+  "usable": "no",
+  "reason": "DOAN LUAT khong tra loi duoc cau hoi vi khong co thong tin ve cach giai quyet nhap lan khi co hai Pho Truong ban la Thu truong co quan thi han an dan su tinh"
+ },
+ "EXT10050": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với đoạn luật vì đoạn luật không trực tiếp nêu rõ trách nhiệm của ủy ban nhân dân tỉnh về nguồn lực thi hành án dân sự, mà chỉ nói chung về bảo đảm điều kiện cần thiết."
+ },
+ "EXT10052": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về tình huống cụ thể và doan luật không trực tiếp trả lời vì thiếu thông tin về việc tài sản khác có đủ để thi hành án hay không."
+ },
+ "EXT10053": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về lý do cụ thể tại sao cơ quan bảo quản vật chứng không chuyển vật chứng, do đó không thể xác định liệu đoạn luật đã cung cấp có trực tiếp trả lời câu hỏi hay không. Đoạn luật c"
+ },
+ "EXT10054": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ ra rõ ràng việc cần hỗ trợ cập nhật thông tin hộ tịch trên hệ thống điện tử, do đó không thể trả lời trực tiếp và đầy đủ bằng Đoan Luật đưa ra."
+ },
+ "EXT10056": {
+  "usable": "no",
+  "reason": "DOAN LUAT khong tra loi duoc cau hoi. Cau hoi can DOAN LUAT lien quan den quy dinh ve cap lai giay khai sinh hoac thu tuc tu dong khai sinh."
+ },
+ "EXT10057": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10058": {
+  "usable": "parse-fail",
+  "reason": "unparseable judge output"
+ },
+ "EXT10059": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10060": {
+  "usable": "partial",
+  "reason": "cau hoi conten nhung tra loi chua du, can them chi tiet ve qua trinh thuc hien"
+ },
+ "EXT10063": {
+  "usable": "partial",
+  "reason": "Câu hỏi không yêu cầu chi tiết về các giấy tờ cụ thể, nhưng câu trả lời không cung cấp đầy đủ thông tin về các giấy tờ cần thiết. Cần thêm thông tin về các giấy tờ cụ thể được yêu cầu trong khoản 2 Đi"
+ },
+ "EXT10064": {
+  "usable": "partial",
+  "reason": "cau hoi chua du chi tiet ve tinh thanh, doan luat khong truc tiep tra loi cau hoi vi chua du chi tiet"
+ },
+ "EXT10065": {
+  "usable": "partial",
+  "reason": "Câu hỏi cần thêm thông tin chi tiết về quy trình cụ thể, không chỉ quy định chung về tiêu chuẩn và thủ tục."
+ },
+ "EXT10066": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc người hỏi đã kê biên tài sản hay chưa, do đó không thể trả lời trực tiếp bằng đoạn luật trên."
+ },
+ "EXT10067": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được trả lời trực tiếp bởi Đoan Luật, Đoan Luật chỉ nêu nhiệm vụ của Tòa án nhân dân cấp tỉnh mà không giải quyết cách thức khi Tòa án không thực hiện nhiệm vụ này."
+ },
+ "EXT10068": {
+  "usable": "partial",
+  "reason": "Câu trả lời không đủ chi tiết về quy trình cụ thể"
+ },
+ "EXT10069": {
+  "usable": "partial",
+  "reason": "Cau hoi dung nhom tinh huong thuc te va DOAN LUAT cho thay duoc vi sao khong duoc tru them tien nhung khong tra loi duoc vi sao da tru them tien, can thong tin them ve viec ngan hang thuc hien."
+ },
+ "EXT10070": {
+  "usable": "partial",
+  "reason": "cau hoi tham chieu den ly thuyet nhung khong dat day du tieu chi de duoc tra loi truc tiep bang mot doan luat"
+ },
+ "EXT10071": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ ra cụ thể biện pháp khẩn cấp tạm thời nào và không đề cập đến vai trò của cơ quan thi hành án dân sự."
+ },
+ "EXT10072": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về tình huống cụ thể liên quan đến quân đội, nhưng đáp án cung cấp thông tin phù hợp nếu đương sự hoặc tài sản liên quan đến quân đội."
+ },
+ "EXT10073": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc tài sản đã được cưỡng chế khai thác hay chưa, do đó không thể trả lời trực tiếp bằng đoạn luật này."
+ },
+ "EXT10074": {
+  "usable": "partial",
+  "reason": "Cau hoi lien quan den tinh huong thuc te va DOAN LUAT tra loi duoc nhung DOAN LUAT khong chinh xac hoan toan vi chua xac dinh duoc truong hop ngoai le nhu cau hoi yeu cau."
+ },
+ "EXT10075": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10076": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về thỏa thuận giữa các bên và không chỉ ra điều luật cụ thể cho việc nhận vật bị hỏng thay vì tiền mặt."
+ },
+ "EXT10077": {
+  "usable": "partial",
+  "reason": "cau hoi thuc te nhung doan luat khong tra loi duoc cau hoi vi khong co ly do vi sao phai doi 5 ngay"
+ },
+ "EXT10078": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không trực tiếp trả lời được yêu cầu cụ thể trong câu hỏi."
+ },
+ "EXT10079": {
+  "usable": "partial",
+  "reason": "DOAN LUAT nay cho biet cac dich vu va thuc pham cho cong nhan khong duoc dich vu la tai san cua nguoi phai thi hanh an nhung khong truc tiep tra loi cau hoi ve quyen cua co so san xuat."
+ },
+ "EXT10080": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về số tiền cụ thể người hỏi sẽ nhận được, do đó không thể trả lời trực tiếp bằng một đoạn luật cụ thể."
+ },
+ "EXT10081": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10082": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10084": {
+  "usable": "partial",
+  "reason": "DOAN LUAT khong truc tiep tra loi cau hoi ve viec thanh toan no cua doanh nghiep sau khi chuyen doi thanh cong ty co phan."
+ },
+ "EXT10086": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10087": {
+  "usable": "partial",
+  "reason": "ngan gon"
+ },
+ "EXT10088": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10089": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được trả lời đầy đủ bởi Đoan Luật không giải thích về việc lấy giấy tờ liên quan và cách người dân phải hành động khi bị thu giữ giấy tờ."
+ },
+ "EXT10090": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về nội dung và lý do tài sản không được giải toả, cần thêm thông tin để xác định chính xác vấn đề."
+ },
+ "EXT10091": {
+  "usable": "partial",
+  "reason": "thieu chi tiet ve loai giay to can thiet va khong truc tiep tra loi cau hoi ve su co the khi thua thuat su"
+ },
+ "EXT10092": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về hành vi cụ thể nào của người không tuân thủ phán quyết tòa án, do đó cần thêm thông tin để áp dụng đúng pháp luật."
+ },
+ "EXT10093": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10094": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với đoạn luật vì đoạn luật đề cập đến việc cơ quan quản lý tham gia tố tụng, không phải trách nhiệm bồi thường trực tiếp."
+ },
+ "EXT10095": {
+  "usable": "partial",
+  "reason": "DOAN LUAT khong truc tiep tra loi cau hoi va khong ngan gon."
+ },
+ "EXT10096": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ rõ về thiệt hại tinh thần trong trường hợp khẩn cấp, cần thêm thông tin để áp dụng trực tiếp Đoan Luật."
+ },
+ "EXT10097": {
+  "usable": "partial",
+  "reason": "Câu hỏi cần thêm thông tin về việc cơ quan cụ thể giải quyết yêu cầu bồi thường, không chỉ quy định về Bộ Tư pháp."
+ },
+ "EXT10098": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10099": {
+  "usable": "partial",
+  "reason": "Câu hỏi không明确提出要求的三个标准，但回答部分符合标准(2)和(3)，对于标准(1)不明确，因为没有具体的情景描述来判断是否为实际情形。因此，回答部分可用，但需要进一步澄清实际情形以完全符合所有标准。"
+ },
+ "EXT10100": {
+  "usable": "partial",
+  "reason": "Cau hoi lien quan den yeu cau thuc te nhung doan luat khong truc tiep tra loi cau hoi vi khong xac dinh duoc vai tro cua cha me nuoi."
+ },
+ "EXT10102": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không trực tiếp trả lời cách từ chối ép kết hôn"
+ },
+ "EXT10103": {
+  "usable": "partial",
+  "reason": "ngan gon"
+ },
+ "EXT10104": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10105": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10106": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ ra cụ thể về việc xác định lại dân tộc trong trường hợp đã biết bố mẹ đẻ, đồng thời đoạn luật đưa ra thông tin phù hợp nhưng không hoàn toàn đáp ứng nhu cầu cụ thể về thủ tục hành ch"
+ },
+ "EXT10107": {
+  "usable": "no",
+  "reason": "DOAN LUAT khong tra loi duoc cau hoi ve yeu cau giay to khi dang ky ket hon"
+ },
+ "EXT10112": {
+  "usable": "partial",
+  "reason": "ngan gon"
+ },
+ "EXT10110": {
+  "usable": "partial",
+  "reason": "Câu hỏi đề cập đến trường hợp chưa giao kết hợp đồng, nhưng câu trả lời không rõ ràng về tình huống này."
+ },
+ "EXT10111": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10113": {
+  "usable": "partial",
+  "reason": "Câu hỏi liên quan đến thực tế nhưng câu trả lời không trực tiếp giải quyết vấn đề đặt ra. Cần thêm thông tin về quy định cụ thể liên quan đến hành vi bán hàng kém chất lượng."
+ },
+ "EXT10114": {
+  "usable": "partial",
+  "reason": "Cau hoi thuc te nhung DOAN LUAT khong truc tiep tra loi cau hoi vi chua xac dinh duoc 'quy dinh khac cua phap luat' la gi."
+ },
+ "EXT10115": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10118": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc người hỏi có phải là chủ sở hữu kệ sách hay không, và luật đề cập đến trường hợp sáp nhập tài sản của chính mình vào bất động sản của người khác, không phải sáp nhập tài "
+ },
+ "EXT10119": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10120": {
+  "usable": "partial",
+  "reason": "Câu hỏi đề cập đến tình huống cụ thể nhưng câu trả lời không trực tiếp chỉ dẫn cách chứng minh giao dịch dân sự dưới áp lực và yêu cầu tòa án tuyên bố vô hiệu. Cần thêm thông tin về Điều 123 và Điều 1"
+ },
+ "EXT10124": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10125": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc có thỏa thuận khác hay không, và luật đề cập đến lãi suất theo quy định, không phải quyền đòi lãi suất."
+ },
+ "EXT10126": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10127": {
+  "usable": "partial",
+  "reason": "khong du thong tin de tra loi truc tiep cau hoi ve su can thiep cua nguoi dan khi co tranh chieu ve muc cuoc"
+ },
+ "EXT10128": {
+  "usable": "partial",
+  "reason": "Câu hỏi không đủ nội dung để xác định rõ ràng quy định cụ thể về thời gian trả lại đồ mượn, do đó không thể áp dụng trực tiếp đoạn luật đưa ra."
+ },
+ "EXT10129": {
+  "usable": "partial",
+  "reason": "Cau hoi lien quan den tinh huong thuc te va DOAN LUAT tra loi duoc nhung can them thong tin ve quy trinh va phuong thuc thanh toan chi phi neu chu di san khong dong y."
+ },
+ "EXT10131": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ ra rõ ràng hợp đồng phụ bị vô hiệu có ảnh hưởng như thế nào đến hợp đồng chính, do đó cần thêm thông tin để xác định chính xác."
+ },
+ "EXT10132": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10133": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được trả lời trực tiếp bởi đoạn luật, nhưng đoạn luật cung cấp thông tin cần thiết để trả lời câu hỏi. Đoạn luật không nêu rõ tổ hợp tác không có chứng thực của ủy ban nhân dân xã, phườn"
+ },
+ "EXT10134": {
+  "usable": "partial",
+  "reason": "Cau hoi khong dat tieu chi (1) vi khong phan minh ve tinh huong thuc te va (3) vi can thong tin them ve chuc danh nguoi hoi."
+ },
+ "EXT10135": {
+  "usable": "partial",
+  "reason": "Tra loi chi can thiet la cac diem 1, 4, 7 va 8 trong DOAN LUAT da cho. Cac diem con lai khong lien quan den cau hoi."
+ },
+ "EXT10136": {
+  "usable": "partial",
+  "reason": "Câu hỏi không đủ thông tin để xác định cụ thể trách nhiệm của bố, do đó không thể trả lời trực tiếp bằng một đoạn luật duy nhất."
+ },
+ "EXT10138": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10139": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về trường hợp cụ thể và không đề cập đến việc xác định người giám hộ thay thế khi cha mẹ bị hạn chế quyền."
+ },
+ "EXT10140": {
+  "usable": "partial",
+  "reason": "Câu hỏi đề cập đến thỏa thuận hôn nhân theo tập quán dân tộc, nhưng không đủ thông tin để xác định thỏa thuận cụ thể có phù hợp với Điều 2 và không vi phạm điều cấm của Luật này hay không."
+ },
+ "EXT10141": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10142": {
+  "usable": "partial",
+  "reason": "Câu hỏi đề cập đến tình huống cụ thể nhưng đáp án cần bổ sung Điều 8 Luật Hôn nhân và Gia đình quy định về điều kiện kết hôn để trả lời đầy đủ."
+ },
+ "EXT10143": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng và thiếu thông tin cụ thể về điều luật cụ thể, đồng thời câu trả lời không hoàn toàn phù hợp vì thiếu phần chi tiết về trường hợp cha và mẹ đều bị hạn chế quyền."
+ },
+ "EXT10144": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10145": {
+  "usable": "partial",
+  "reason": "Câu hỏi không đủ rõ ràng về hành vi cụ thể bị cấm trong luật"
+ },
+ "EXT10146": {
+  "usable": "partial",
+  "reason": "cau hoi chua chinh xac va doan luat khong tra loi duoc truc tiep cau hoi vi chua xac dinh duoc yeu to nuoc ngoai cua cau hoi"
+ },
+ "EXT10147": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ rõ loại đất cụ thể nên câu trả lời cần thêm thông tin để chính xác."
+ },
+ "EXT10149": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với đoạn luật vì không đề cập trực tiếp đến việc công nhận và thi hành quyết định của tòa án nước ngoài tại Việt Nam, mà chỉ hỏi về cách thực hiện quyết định. Đoạn luật cung cấp "
+ },
+ "EXT10150": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10152": {
+  "usable": "partial",
+  "reason": "问题符合要求，但法律条文没有直接回答在存在利益冲突的情况下是否有权要求更换法官的问题。"
+ },
+ "EXT10153": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ ra cụ thể trường hợp tiết lộ thông tin riêng tư nào, do đó không thể đưa ra câu trả lời cụ thể từ Đoan Luật."
+ },
+ "EXT10154": {
+  "usable": "partial",
+  "reason": "Câu hỏi cần thêm thông tin chi tiết về hành vi cụ thể của công an để xác định rõ quyền kiện. Đoạn luật cung cấp thông tin về trách nhiệm của người tiến hành tố tụng nhưng không trực tiếp trả lời cách "
+ },
+ "EXT10155": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10157": {
+  "usable": "partial",
+  "reason": "Câu hỏi không yêu cầu thông tin về việc tổ chức quốc tế tuyên bố từ bỏ quyền miễn trừ, nhưng câu trả lời không đủ rõ ràng để xác định quyền miễn trừ khi tổ chức không tuyên bố từ bỏ."
+ },
+ "EXT10159": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật cần thêm chi tiết cụ thể về điều ước quốc tế liên quan"
+ },
+ "EXT10160": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10161": {
+  "usable": "partial",
+  "reason": "Câu hỏi đề cập đến việc tiến hành hòa giải nhưng không nêu rõ căn cứ pháp lý cụ thể, do đó cần thêm thông tin từ Luật Hôn nhân và Gia đình để trả lời đầy đủ."
+ },
+ "EXT10162": {
+  "usable": "partial",
+  "reason": "Câu hỏi không cần chi tiết về khó khăn nhận thức, làm chủ hành vi nhưng đáp án cung cấp thông tin rộng hơn yêu cầu."
+ },
+ "EXT10164": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10166": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với tiêu chí vì đề cập đến việc bổ sung nội dung mới trong kháng cáo, nhưng đoạn luật chỉ nói về việc Tòa án không xem xét nội dung mới vượt quá phạm vi kháng cáo ban đầu, không "
+ },
+ "EXT10167": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10168": {
+  "usable": "partial",
+  "reason": "cau hoi tu conten nhung doan luat khong truc tiep tra loi vi chua xac dinh duoc thiet lap tai toa an nao"
+ },
+ "EXT10169": {
+  "usable": "partial",
+  "reason": "Cau hoi dung nhap conten nhung doan luat khong truc tiep tra loi cau hoi vi no tham chua chi tiet ve quyen khiuu nai cua nguoi khoi kiem sau khi nhan duoc quyet dinnghi tra lai don khoi kiem."
+ },
+ "EXT10170": {
+  "usable": "partial",
+  "reason": "Câu hỏi không yêu cầu thông tin về việc thu hồi tiền hoàn trả sau khi có quyết định, mà là quá trình đòi lại tiền sau khi bị thiệt hại. Đoạn luật đưa ra không trực tiếp trả lời câu hỏi."
+ },
+ "EXT10171": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng và không cung cấp đủ thông tin để xác định liệu người dân có quyền yêu cầu cơ quan chức năng thực hiện theo quy định hay không. Đoạn luật chỉ nêu trách nhiệm của nhà nước về kinh"
+ },
+ "EXT10172": {
+  "usable": "partial",
+  "reason": "Thiếu chi tiết về phương thức chi trả và khôi phục quyền lợi hợp pháp"
+ },
+ "EXT10173": {
+  "usable": "partial",
+  "reason": "Câu hỏi liên quan đến thực tế nhưng câu trả lời không đủ rõ ràng để kết luận vi phạm pháp luật, cần thêm thông tin về quy định cụ thể về tuyển dụng, phê chuẩn công chức."
+ },
+ "EXT10174": {
+  "usable": "partial",
+  "reason": "Câu hỏi liên quan đến yêu cầu hoãn thi hành án nhưng đoạn luật không trực tiếp giải đáp vấn đề này, cần thông tin thêm về quy định về hoãn thi hành án."
+ },
+ "EXT10175": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10176": {
+  "usable": "partial",
+  "reason": "DOAN LUAT khong truc tiep tra loi cau hoi vi khong chi ra chi tiet ve noi dung quan diem phai truyen bay"
+ },
+ "EXT10177": {
+  "usable": "partial",
+  "reason": "Câu hỏi và đoạn luật đáp ứng các tiêu chí nhưng đoạn luật không hoàn chỉnh, thiếu một phần nội dung."
+ },
+ "EXT10178": {
+  "usable": "partial",
+  "reason": "Cau hoi lien quan den viec truoc khi truyen tien, khong truc tiep tra loi cho truong hop truyen tien bi tu choi"
+ },
+ "EXT10179": {
+  "usable": "partial",
+  "reason": "Câu hỏi không yêu cầu đầy đủ thông tin về các bên liên quan, do đó câu trả lời chỉ cung cấp phần thông tin còn thiếu."
+ },
+ "EXT10180": {
+  "usable": "partial",
+  "reason": "Câu hỏi của người dân không đầy đủ để xác định chính xác thời hạn hoàn trả từ văn bản kiến nghị của Hội đồng xác định người có lỗi đến khi phải hoàn trả số tiền bảo đảm tài chính. Tuy nhiên, theo DOAN"
+ },
+ "EXT10181": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không trực tiếp trả lời quyền khiếu nại của người dân"
+ },
+ "EXT10182": {
+  "usable": "partial",
+  "reason": "Câu hỏi không đề cập đến việc tham gia họp trái phép và do đó không phù hợp hoàn toàn với điều luật về mức phạt cho thành viên tham gia họp không được mời."
+ },
+ "EXT10183": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với đoạn luật vì đoạn luật không chỉ rõ ai sẽ thay thế làm chủ tịch hội đồng khi người đứng đầu cơ quan gây ra thiệt hại."
+ },
+ "EXT10184": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được giải đáp đầy đủ bởi Đoan Luật, Đoan Luật không đề cập đến hậu quả pháp lý khi vi phạm bảo mật thông tin."
+ },
+ "EXT10185": {
+  "usable": "partial",
+  "reason": "Câu trả lời không trực tiếp giải đáp được liệu người dân có thể truy cập và theo dõi tiến trình vụ án của mình trên nền tảng số thi hành án dân sự hay không."
+ },
+ "EXT10186": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10187": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không trực tiếp trả lời quyền khiếu nại của người dân"
+ },
+ "EXT10188": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với tiêu chí vì đề cập đến việc ủy thác cho cơ quan thi hành án dân sự nơi người nhận cấp dưỡng cư trú, trong khi đoạn luật chỉ đề cập đến việc ủy thác cho nơi người phải thi hàn"
+ },
+ "EXT10189": {
+  "usable": "partial",
+  "reason": "Câu hỏi liên quan đến thực tế nhưng câu trả lời không trực tiếp giải đáp yêu cầu của người hỏi. Câu trả lời nên tập trung vào quyền yêu cầu chủ cũ hoàn tất thủ tục đăng ký quyền sử dụng đất."
+ },
+ "EXT10190": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc người dân có phải chịu chi phí hay không, trong khi Đoan Luật chỉ nói về chi phí nhưng không xác định rõ ai phải chịu."
+ },
+ "EXT10191": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật cung cấp thông tin rộng và không trực tiếp trả lời câu hỏi bảo vệ quyền lợi cá nhân của đương sự."
+ },
+ "EXT10192": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với đoạn luật vì đoạn luật đề cập đến cả trường hợp có tranh chấp, trong khi câu hỏi chỉ đề cập đến trường hợp không có tranh chấp"
+ },
+ "EXT10193": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không trực tiếp trả lời về quyền khiếu nại"
+ },
+ "EXT10194": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được trả lời đầy đủ bởi Đoan Luật chỉ đề cập đến trách nhiệm lập hồ sơ bảo đảm tài chính khi không thực hiện được nghĩa vụ trong thời hạn 5 ngày làm việc, không đề cập đến hậu quả pháp l"
+ },
+ "EXT10195": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với tiêu chí vì không cung cấp đủ thông tin về vai trò của người hỏi trong vụ việc dân sự và không chỉ rõ điều kiện kinh tế được xác định như thế nào. Đoạn luật chỉ nêu nhiệm vụ "
+ },
+ "EXT10196": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật cần thêm chi tiết về điều kiện cụ thể để được miễn hoặc giảm chi phí cưỡng chế."
+ },
+ "EXT10197": {
+  "usable": "no",
+  "reason": "DOAN LUAT khong tra loi duoc cau hoi ve xung phuc khi Chấp hanh vien khong lap ho so trong thoi han qui ding"
+ },
+ "EXT10198": {
+  "usable": "partial",
+  "reason": "ngan gon"
+ },
+ "EXT10199": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc mua tài sản bị thi hành án, đồng thời đoạn luật cung cấp thông tin nhưng không giải thích đầy đủ về các thủ tục cụ thể mà người mua cần thực hiện."
+ },
+ "EXT10200": {
+  "usable": "partial",
+  "reason": "cau hoi dung nhung doan luat khong truc tiep tra loi cau hoi va can thong tin them"
+ },
+ "EXT10201": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10202": {
+  "usable": "partial",
+  "reason": "Cau hoi hop le nhung doan luat khong tra loi duoc cau hoi mot cach truc tiep. Doan luat can phai chi dinh cach thuc tai khoan khi khong co giay to ho tich."
+ },
+ "EXT10203": {
+  "usable": "partial",
+  "reason": "Câu hỏi không明确提出要求的条件(如：法律条款、教育要求等)，但回答中包含了关于从事户籍工作职员的学历要求，即必须是法律专业本科或以上。因此，回答部分符合要求，但由于问题未具体说明现行法律或规定，导致无法直接判断是否需要调岗，所以标记为partial。"
+ },
+ "EXT10204": {
+  "usable": "partial",
+  "reason": "Câu hỏi cần trả lời trực tiếp về việc có thể làm lại giấy khai sinh hay không, nhưng đoạn luật chỉ giải thích về nội dung giấy khai sinh mà không đề cập đến việc làm lại."
+ },
+ "EXT10205": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không trực tiếp trả lời về thủ tục cải chính thông tin dân tộc, chỉ nêu trường hợp cải chính."
+ },
+ "EXT10206": {
+  "usable": "partial",
+  "reason": "khong truc tiep tra loi cach lam trich luc hutich"
+ },
+ "EXT10207": {
+  "usable": "partial",
+  "reason": "Câu hỏi không yêu cầu thông tin về việc ghi vào Sổ hộ tịch theo bản án ly hôn cụ thể, mà chỉ hỏi về việc cập nhật thông tin sau khi có bản án. Đáp án cần thêm hướng dẫn cụ thể hơn về quy trình thực hi"
+ },
+ "EXT10209": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ ra cụ thể mối quan hệ họ hàng nào, do đó không thể đưa ra câu trả lời chính xác chỉ dựa trên đoạn luật đưa ra."
+ },
+ "EXT10210": {
+  "usable": "partial",
+  "reason": "Câu hỏi không đủ thông tin để xác định rõ ràng việc sử dụng tiền chung trả nợ cá nhân có vi phạm pháp luật hay không, cần thêm thông tin về thỏa thuận giữa vợ chồng và quy định cụ thể của pháp luật."
+ },
+ "EXT10211": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10213": {
+  "usable": "partial",
+  "reason": "Câu hỏi cần thông tin cụ thể hơn về thẩm quyền của tòa án trong trường hợp có yếu tố nước ngoài, không chỉ quy định chung về tố tụng dân sự."
+ },
+ "EXT10214": {
+  "usable": "partial",
+  "reason": "Câu hỏi cần thêm thông tin về biện pháp pháp lý cụ thể để giải quyết tình huống cưỡng ép kết hôn."
+ },
+ "EXT10215": {
+  "usable": "partial",
+  "reason": "Cau hoi lien quan den tinh huong thuc te va DOAN LUAT cho biet phan nao quyen ben nhờ mang thai hộ, nhung khong du thong tin de xac dinh khi nao ben nhờ co the tu choi yeu cau them tien cua ben mang t"
+ },
+ "EXT10216": {
+  "usable": "partial",
+  "reason": "Câu hỏi không đủ nội dung để xác định căn cứ cụ thể tại khoản 2, 3 và 4 Điều 25 Luật nuôi con nuôi, cần thông tin thêm để trả lời chính xác."
+ },
+ "EXT10217": {
+  "usable": "partial",
+  "reason": "Cau hoi khong dat tieu chi (1) vi chua phan tich tinh huong thuc te, DOAN LUAT khong tra loi duoc cau hoi vi chua chi tiet hoac truc tiep ve dieu kien cua nguoi nuoc ngoai."
+ },
+ "EXT10218": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với đoạn luật vì đề cập đến việc làm con nuôi trong nước, không phải cho con nuôi nước ngoài như trong đoạn luật."
+ },
+ "EXT10219": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về thời điểm cụ thể trong quy trình nhận con nuôi, do đó không thể xác định chắc chắn người hỏi có được gặp mặt con nuôi hay không dựa trên thông tin cung cấp."
+ },
+ "EXT10220": {
+  "usable": "partial",
+  "reason": "Câu hỏi không明确提出具体的法律条款，但提供的法规段落也不直接对应一个具体的法律条款，而是描述了法院的职责。需要进一步明确具体的法律条款或调整问题以匹配提供的法规段落。"
+ },
+ "EXT10221": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10222": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật cung cấp không trực tiếp liên quan đến nội dung câu hỏi, cần tham chiếu Điều 99 Bộ luật Lao động thay vì Điều liên quan đến thi hành án."
+ },
+ "EXT10223": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10225": {
+  "usable": "partial",
+  "reason": "khong du thong tin chi tiet ve trach nhiem cua chu cong ty trong truong hop nay va khong truc tiep tra loi cau hoi."
+ },
+ "EXT10228": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được trả lời đầy đủ, thiếu hướng dẫn về việc xem xét lại quyết định khiếu nại."
+ },
+ "EXT10229": {
+  "usable": "no",
+  "reason": "DOAN LUAT khong tra loi duoc cau hoi cua nguoi dan ve bai hon, DOAN LUAT nay lien quan den chuc nang Chấp hành viên"
+ },
+ "EXT10230": {
+  "usable": "partial",
+  "reason": "Cau hoi dung nhap vao tinh huong thuc te nhung doan luat tra loi khong du truc tiep. Doan luat chi ra nguoi bi khiu nai phai chap hanh quyet dinh khiu nai nhung khong danh gia duoc vi tri cua nguoi ho"
+ },
+ "EXT10231": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về nội dung và đối tượng được thi hành án, cần thêm thông tin để áp dụng trực tiếp Đoan Luật"
+ },
+ "EXT10232": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10234": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với tiêu chí vì không phải tình huống thực tế và không thể trả lời trực tiếp bằng đoạn luật cung cấp. Tuy nhiên, đoạn luật cung cấp thông tin về hiệu lực của Luật số 81/2025/QH15"
+ },
+ "EXT10235": {
+  "usable": "no",
+  "reason": "DOAN LUAT khong truc tiep tra loi cau hoi ve quyen cua nguoi dan khi yeu cau bao cao ket qua thi han an va khong nhan duoc."
+ },
+ "EXT10236": {
+  "usable": "partial",
+  "reason": "Câu hỏi đề cập đến tài sản cụ thể nhưng câu trả lời không rõ ràng liệu tài sản đó có bị thi hành án hay không, chỉ nêu điều kiện miễn trừ."
+ },
+ "EXT10237": {
+  "usable": "partial",
+  "reason": "Câu hỏi không hoàn toàn phù hợp với đoạn luật vì nó hỏi về quyền của người dân khi tài sản không được trả lại, trong khi đoạn luật chỉ nói về thời hạn ra quyết định tiêu hủy của cơ quan thi hành án."
+ },
+ "EXT10238": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với đoạn luật vì đề cập đến biện pháp xử lý tạm thời của tòa án, trong khi đoạn luật đề cập đến quyết định áp dụng biện pháp khẩn cấp tạm thời và biện pháp xử lý chuyển hướng bồi"
+ },
+ "EXT10239": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10240": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10241": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ ra rõ ràng tài sản có thể chia được hay không, do đó cần thêm thông tin để trả lời chính xác."
+ },
+ "EXT10242": {
+  "usable": "partial",
+  "reason": "Câu hỏi không明确提出要求的三个标准，但答案部分符合标准(2)和(3)，缺少直接指示下一步行动的标准(1)。"
+ },
+ "EXT10243": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không trực tiếp trả lời nơi khiếu nại tiếp theo sau quyết định của Thủ trưởng cơ quan quản lý thi hành án thuộc Bộ Quốc phòng."
+ },
+ "EXT10244": {
+  "usable": "partial",
+  "reason": "Câu hỏi không đủ rõ ràng và cụ thể, cần thêm thông tin để xác định chính xác trách nhiệm của người dân trong việc khiếu nại."
+ },
+ "EXT10245": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10246": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng và không trực tiếp liên quan đến nội dung của Đoan Luật được cung cấp. Đoan Luật cung cấp thông tin về trách nhiệm phối hợp nhưng không giải thích lý do tại sao một cơ quan lại t"
+ },
+ "EXT10247": {
+  "usable": "partial",
+  "reason": "Cau hoi dung nhap va tra loi nhung DOAN LUAT khong truc tiep tra loi cau hoi cua nguoi dan vi khong phan minh nguoi dan co quyen khi thua hay khong."
+ },
+ "EXT10248": {
+  "usable": "partial",
+  "reason": "khong du thong tin chi tiet ve dieu 142 de tra loi truc tiep cau hoi"
+ },
+ "EXT10249": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được trả lời trực tiếp bởi Đoan Luật, Đoan Luật chỉ cung cấp thông tin về ngạch chấp hành viên nhưng không đề cập đến quyền của người dân trong việc hỏi thông tin này."
+ },
+ "EXT10250": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10251": {
+  "usable": "partial",
+  "reason": "Câu hỏi cần được trả lời trực tiếp về quyền khiếu nại, không phải nguyên tắc xử phạt chung"
+ },
+ "EXT10252": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10253": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với tiêu chí vì đề cập đến cả vi phạm hành chính và thi hành án dân sự, trong khi đoạn luật chỉ đề cập đến quyền xử phạt trong quá trình thi hành án dân sự liên quan đến vụ phá s"
+ },
+ "EXT10254": {
+  "usable": "partial",
+  "reason": "Câu hỏi không hoàn chỉnh, thiếu thông tin cụ thể về việc muốn khiếu nại với bộ phận nào của Bộ Tư pháp. Tuy nhiên, đoạn luật đã cung cấp thông tin về trách nhiệm của Bộ Tư pháp trong việc tổng kết côn"
+ },
+ "EXT10255": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10256": {
+  "usable": "partial",
+  "reason": "ngan gon"
+ },
+ "EXT10257": {
+  "usable": "partial",
+  "reason": "DOAN LUAT cho biet thong tin chung ve dang ghi don khiếu nại nhung khong truc tiep tra loi cau hoi ve noi dung chinh cua phan yeu cau giai quyet."
+ },
+ "EXT10258": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về nội dung kiện tụng cụ thể và không nêu rõ lý do vì sao hồ sơ bồi thường không được thụ lý, mặc dù đoạn luật đã cung cấp thông tin liên quan."
+ },
+ "EXT10259": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ ra Điều cụ thể trong Luật nhưng DOAN LUAT không trực tiếp chỉ rõ Điều luật cụ thể để khiếu nại khi cơ quan chức năng vi phạm."
+ },
+ "EXT10260": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không giải quyết được vấn đề cụ thể trong câu hỏi về việc phải làm khi cơ quan thi hành án không thực hiện quyết định tạm đình chỉ thi hành án."
+ },
+ "EXT10261": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10262": {
+  "usable": "partial",
+  "reason": "Câu hỏi không được trả lời trực tiếp, cần thêm thông tin về thời hạn khiếu nại sau khi quyết định có hiệu lực"
+ },
+ "EXT10263": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với tiêu chí vì không đề cập đến việc yêu cầu bồi thường từ cơ quan cụ thể nào, mà chỉ hỏi về quyền của người dân. Đáp án đưa ra thông tin về cơ quan giải quyết bồi thường nhưng "
+ },
+ "EXT10264": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10265": {
+  "usable": "partial",
+  "reason": "Câu hỏi không phù hợp với tiêu chí vì không liên quan trực tiếp đến Điều 12 Luật Tố cáo, mà liên quan đến quy định về bồi thường thiệt hại."
+ },
+ "EXT10267": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10268": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không trực tiếp trả lời quyền khiếu nại của bị can"
+ },
+ "EXT10269": {
+  "usable": "partial",
+  "reason": "Câu hỏi không cung cấp đủ thông tin để xác định cụ thể điều luật liên quan và câu trả lời chỉ nêu khung pháp lý chung mà không giải thích rõ lý do vì sao quyết định không được thực hiện."
+ },
+ "EXT10270": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10271": {
+  "usable": "partial",
+  "reason": "Câu hỏi phù hợp nhưng đoạn luật không hoàn toàn đáp ứng yêu cầu vì thiếu phần quy định tiếp theo sau khi đình chỉ vụ án."
+ },
+ "EXT10274": {
+  "usable": "partial",
+  "reason": "Câu hỏi không nêu rõ giá trị lớn của căn hộ, cần thêm thông tin để trả lời chính xác."
+ },
+ "EXT10275": {
+  "usable": "partial",
+  "reason": "Câu hỏi không nêu rõ trường hợp cụ thể để Ủy ban bảo vệ và chăm sóc trẻ em có quyền yêu cầu tòa án hạn chế quyền của cha mẹ, do đó cần thêm thông tin từ pháp luật về tố tụng dân sự để trả lời đầy đủ."
+ },
+ "EXT10276": {
+  "usable": "partial",
+  "reason": "Câu hỏi không chỉ rõ vị trí hòa giải viên cụ thể (Tổ trưởng hay thành viên), do đó không thể áp dụng trực tiếp một điều luật cụ thể."
+ },
+ "EXT10277": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc 'không tự nguyện' có vi phạm pháp luật hay không, cần thêm thông tin để xác định rõ ràng."
+ },
+ "EXT10278": {
+  "usable": "partial",
+  "reason": "Cau hoi lien quan den quy dinh hoa giai trong cong dong, nhung doan luat khong truc tiep tra loi cau hoi ve nguoi duoc tim den de duoc ho tro hoa giai."
+ },
+ "EXT10280": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10281": {
+  "usable": "yes",
+  "reason": "ngan gon"
+ },
+ "EXT10282": {
+  "usable": "partial",
+  "reason": "Câu hỏi không rõ ràng về việc xử lý pháp lý khi không đăng ký khai tử, trong khi đoạn luật chỉ nêu trách nhiệm đăng ký."
+ }
+}

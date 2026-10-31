@@ -1,0 +1,113 @@
+{
+ "EXT20010": {
+  "regolded_to": "BLTTDS2004|Dieu174|Khoan1",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định thời hạn 3 ngày làm việc để tòa án thông báo cho Viện kiểm sát"
+ },
+ "EXT20018": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20020": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20026": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20028": {
+  "regolded_to": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu469|Khoan1|Diemd",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Vì nguyên đơn là công dân Việt Nam, nên Tòa án Việt Nam có thẩm quyền giải quyết vụ việc ly hôn."
+ },
+ "EXT20038": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20039": {
+  "regolded_to": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu261",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định người tham gia tranh luận có quyền đáp lại ý kiến của người khác dựa trên chứng cứ."
+ },
+ "EXT20045": {
+  "regolded_to": "BLTTDS2004|Dieu283|Khoan2",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật xác nhận có vi phạm nghiêm trọng thủ tục tố tụng"
+ },
+ "EXT20061": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20065": {
+  "regolded_to": "BLTTDS2004|Dieu144|Khoan3",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định người yêu cầu phải trả phí trừ khi có thỏa thuận khác, mà trường hợp này không có thỏa thuận."
+ },
+ "EXT20077": {
+  "regolded_to": "BLTTDS2004|Dieu384",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định rõ hậu quả pháp lý là bị phạt cảnh cáo hoặc phạt tiền khi không tham gia phiên tòa không có lý do chính đáng."
+ },
+ "EXT20079": {
+  "regolded_to": "BLTTDS2004|Dieu175|Khoan2",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật cho phép người được thông báo yêu cầu tòa án xem, ghi chép, sao chụp hồ sơ tố tụng."
+ },
+ "EXT20081": {
+  "regolded_to": "THADS2008|Dieu162|Khoan2",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Chủ tịch Ủy ban nhân dân cố tình không thi hành bản án là vi phạm pháp luật."
+ },
+ "EXT20083": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20086": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20102": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20109": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20113": {
+  "regolded_to": "THADSVBHN|Dieu142|Khoan4|Diemb",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định Bộ trưởng có thể xem xét lại quyết định khiếu nại đã có hiệu lực nếu cần thiết."
+ },
+ "EXT20116": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20123": {
+  "regolded_to": "BLDS1995|Dieu57|Muc2",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định người bị từ chối có quyền khiếu nại đến cơ quan có thẩm quyền."
+ },
+ "EXT20125": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20129": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20130": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20132": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT20149": {
+  "regolded_to": "HOTICH2014|Dieu16|Khoan1",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định có thể dùng văn bản xác nhận của người làm chứng hoặc giấy cam đoan thay vì giấy khai sinh."
+ }
+}

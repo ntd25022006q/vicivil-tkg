@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG v1.0.0)
+# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG)
 
 ## Motivation
 - *Why built:* no public Vietnamese legal KG exists at article–clause–point
@@ -10,55 +10,55 @@
   `review_package_50.md`); until then treat gold labels as LLM+author
   adjudicated, not expert-verified.
 
-## Composition (v1.0.0)
-- **Chunks:** 11.267 (law|dieu[|khoan|diem|muc] IDs) across 17 laws;
-  sources: official 6.141 / mirror 4.476 / official-copy 266 / semi 391,
-  each chunk carries source_url + source_type + (where applicable)
-  `header_footer_cleaned=true` footer-strip flag. BLDS 1995 re-parsed to clause level
-  from the signed PDF (1.896 chunks: Dieu or Dieu|Muc{0..k}).
-- **Extraction:** 11.267 chunk rows with entities/relations/deterministic
-  DAN-CHIEU refs extracted on the decontaminated text (qwen25-awq,
-  temp 0, few-shot + validators). 97 chunks were later re-extracted with
-  qwen3:14b via Ollama (9 stub-rescues, then 94 rows whose
-  stored text or extraction contained residual corruption) — engine
-  heterogeneity for those rows is recorded per-row (`engine` field);
-  extraction covers 11.267/11.267 rows with zero failed chunks.
-- **Index (8-file ADGR-style):** 14.099 entities (10 legal types) / 20.311
-  relations incl. chunk-chunk DAN-CHIEU edges (+439 cross-version
-  successor edges appended separately, totalling 20.750 relation rows)
-  mined by embedding similarity (sim >= 0.90, 0.80-0.90 band retained for
-  manual review only) / chunk + entity + relation dense matrices (768-d,
-  embeddinggemma:300m, L2-normed). Index content mirrors chunk text with a
-  disclosed [:3000] char cap for BM25/representation — full text stays in
-  `civil_chunks.jsonl`.
-- **Temporal:** 17 laws [valid_from, valid_to) + 16 external amending laws;
-  21 edges (4 succession + 17 AMENDS) with dates; chunks inherit law
-  validity; abstain tested (1990 empty-pool + missing-law probes).
-- **Benchmark:** 281 situational Qs (271 dev+syn + 12 hand) + no gold
-  weak/partial tiers left: 245 verified / 32 regolded (same-Q better-chunk
-  with `regolded_from` provenance) / 4 author-verified stubs; 1 question
-  dropped with written reason (`dropped_log.json`); model-audit cascade trail
-  (8B full bench: 162/281 accepted; 14B re-audit of the 120 flagged:
-  97 confirmed / 23 reversed) in `second_rater*.json`, `regold.json`,
-  `fixall.json`; 50-Q expert review package still pending.
+## Composition
+- **Chunks:** 13.151 (law|dieu[|khoan|diem|muc] IDs) across **20 laws**
+  (1995–2026, including the 1996–2015 era additions: BLTTHS 2004,
+  NĐ 158/2005 hộ tịch, NĐ 126/2014 HNGD guide); every chunk carries
+  source_url + source_type + `fetched` + its law's `[valid_from, valid_to)`
+  window. 2 chunks converted from a damaged government `.doc` produced binary
+  mojibake and were dropped (logged in `dropped_log.json`; referenced by no
+  question). BLDS 1995 is clause-level from the signed PDF.
+- **Extraction:** the original 11.267 rows carry LLM entities/relations
+  (qwen25-awq temp 0 + validators; 97 re-extracted with qwen3:14b, per-row
+  `engine` field). The 1.886 round-2 rows are stored as cleaned raw text and
+  are NOT part of the entity/relation index yet (disclosed; retrieval uses
+  their chunk vectors, which ARE in `index/vdb_chunks.json`).
+- **Index (8-file ADGR-style):** 14.099 entities / 20.750 relation rows
+  (incl. DAN-CHIEU edges) + chunk/entity/relation dense matrices (768-d,
+  embeddinggemma:300m, L2-normed). The chunk matrix covers all 13.151 rows.
+- **Temporal graph:** 37 law windows + 24 succession/amendment edges with
+  dates; chunks inherit law validity; abstain probes retained
+  (1990 empty-pool + missing-law cases).
+- **Benchmark:** **451 published questions** in three cohorts:
+  281 core (269 generated + 12 hand-written CIV001–CIV012), 106 round-1
+  extension (101 verified + 5 regolded), 64 round-2 extension from the
+  1996–2015 statutes (53 verified + 11 regolded). **226 quarantined
+  questions** (136 + 90) are published verbatim with audit trails and count
+  in no metric. Core gold tiers after the full adjudication chain:
+  **229 verified / 21 regolded / 4 author-verified / 27 pass3-flagged**
+  (flagged disclosed with reasons, excluded from headline metrics), and
+  **0 unverifiable** questions remain. Dev/test split 140/141 (stratified).
 
-### Per-law size table (chunk counts, v1.0.0)
-
-| law_id | chunks | law_id | chunks |
-|---|---:|---|---:|
-| van-ban-hop-nhat-so-21 (BLTTHS-VBHN, official PDF) | 1.979 | TNBTCNN-2017 (official mirror) | 505 |
-| BLDS 1995 (clause-level, official PDF) | 1.890 | HNGD 2014 (Hôn nhân gia đình) | 393 |
-| BLDS 2015 (official mirror) | 1.838 | HNGD-VBHN 2025 | 392 |
-| BLDS 2005 (official mirror) | 780 | Hộ tịch 2014 (official copy) | 266 |
-| THADS-VBHN (MOJ official file) | 758 | HNGD 2000 (mirror) | 239 |
-| THA dân sự 2008 (mirror) | 721 | NCN 2010 (gov .doc) | 208 |
-| ND 152/2026-ND-CP (official PDF) | 665 | HOAGIAI2026 (công báo PDF) | 175 |
-| Luật số 15/2026/QH16 (công báo PDF) | 151 | Hộ tịch 2026 (công báo PDF) | 172 |
-| TT liên tịch 07/2026 (công báo PDF) | 135 | | |
+### Adjudication chain (all trails in `benchmark/`)
+1. Two-tier audit at generation time (8B judge → 14B deep re-audit with
+   evidence) — failures quarantined.
+2. Two-round re-anchoring: a replacement chunk is accepted only when both
+   judge rounds confirm (38 core golds re-anchored this way).
+3. Pass-3 (qwen3:14b): 99 weak-gold suspects re-checked → 66 gold-ok /
+   29 flagged / 4 re-anchored, with guardrails (chunk exists · appears in
+   stored candidates · inside the as_of validity window; 1 proposal
+   rejected by the guardrails). The last 2 previously-unverifiable questions
+   were both successfully re-anchored in this pass.
+4. Independent agreement audit on a fixed 60-question sample (seed 20261101):
+   gold-set agreement 0.554, primary-chunk agreement 0.571 (56/60 parse OK).
+   This is a model-vs-model check and does NOT replace human review.
+5. Round-2 cohort added a cross-cohort near-duplicate scan (cos > 0.95 vs all
+   387 published questions): 1 near-duplicate (cos 0.9931) caught and
+   quarantined (`extension2_dedup_audit.json`).
 
 ## Data fields (schema)
 
-`data/civil_chunks.jsonl` — one JSON object per line, 11.267 rows:
+`data/civil_chunks.jsonl` — one JSON object per line, 13.151 rows:
 
 | field | type | meaning |
 |---|---|---|
@@ -66,137 +66,90 @@
 | `law_id` | str | corpus law identifier used by the temporal graph |
 | `dieu` / `khoan` / `diem` / `muc` | str | article/clause/point/item part numbers |
 | `tieu_de` | str | article heading as in the official text |
-| `content` | str | decontaminated chunk text (full text, mirror includes same) |
-| `chars` | int | len(content), schema-normalized |
+| `content` | str | decontaminated chunk text |
+| `chars` | int | len(content) |
 | `source_url` | str | URL of the used source page (Cong-bao or TVPL mirror) |
 | `source_type` | str | `official` / `mirror` / `official-copy` / `semi` |
 | `fetched` | date | crawl date of the source page |
-| `valid_from` / `valid_to` | date | law inheritance of `[from, to)` validity (joined from the temporal graph, present on every row) |
-| `header_footer_cleaned` | bool | footer/header decontamination flag — present (true) on the 367 stripped rows, absent elsewhere |
-| `muc` | str | item part for BLDS 1995 clause-level rows |
+| `valid_from` / `valid_to` | date | law validity `[from, to)` (present on every row) |
+| `header_footer_cleaned` | bool | decontamination flag (367 stripped rows) |
 
-`benchmark/law_bench_*.json` — 281 question objects in two files:
+`benchmark/law_bench_*.json` — question objects:
 
 | field | type | meaning |
 |---|---|---|
-| `qid` | str | question id (CIV-prefix) |
+| `qid` | str | question id (CIV/GEN/NEW/TOP/EXT prefix by cohort) |
 | `question` | str | situational natural-language question |
 | `as_of` | date | the "what did law say then" date used for temporal filtering |
 | `gold_ids` | list[str] | gold chunk ids referencing `civil_chunks.jsonl` |
-| `gold_tier` | str | `verified` / `regolded` / `author-verified` |
-| `regolded_from` | list[str] | original gold before re-anchoring (when tier=regolded) |
-| `hint`, `reviewed` | str | adjudication trail (rater notes, reviewer pass) |
+| `gold_tier` | str | `verified` / `regolded` / `author-verified` / `flagged` |
+| `regolded_from` | list[str] | original gold before re-anchoring (tier=regolded) |
+| `hint`, `reviewed`, `weak_review` | str | adjudication trail fields |
 
-`index/` — dense matrices store `embedding_dim: 768`, a base64 `matrix`
-(float32, row-major, L2-normed) and a parallel `data` list of
-`{__id__, content[, src_id, tgt_id, ...]}` rows; the three `kv_store_*.json`
-map object ids to their referenced `chunk_ids`.
-
-## Metrics (measured on the frozen retrieval index; unchanged by the
-  final hygiene pass, which stripped 12 invisible codepoints with no
-  content change)
-- Full bench n=281: Hit@1 0.452 / Hit@3 0.658 / Hit@5 0.726 / Hit@10 0.794
-  / MRR 0.569. Re-evaluated on the sanitized frozen index and confirmed
-  parseable. The no-GPU re-run (`law_eval_repro.json`, strict exact-ID + stored
-  vectors) reproduces the chain at Hit@1 0.402 / Hit@5 0.730 / Hit@10 0.819 /
-  MRR 0.545 — Hit@5/Hit@10 identical to the strict TCR chain; Hit@1 sits 0.7 pp
-  under the strict baseline (0.409) from vector precision and RRF tie order, and
-  5.0 pp under this frozen overview (0.452) additionally from the scoring rule
-  (equivalence-groups vs exact-ID). Per-question artifacts ship for all rounds.
-- Stratified by gold_tier: verified 245 -> 0.502/0.678/0.731/0.796;
-  regolded 32 -> 0.062/0.531/0.719/0.812 (deliberately hard restatements:
-  answer lives in a target chunk not reachable by surface wording, but
-  rank-10 recall 0.812 shows the index finds it — good for paper);
-  author-verified 4 -> 0.500/0.500/0.500/0.500.
-- Per-question ranks saved (`law_eval_ranks_full.json`, historical engine; strict chain in
-  `tcr_sgb_result.json`, no-GPU repro in `law_eval_repro.json`); ablation + significance
-  still those of the initial ablation (`ablation_AB.json`, `significance.json`) and will be
-  re-run for the paper on this frozen release snapshot.
-- Temporal-constraint hardness sweep (`tcr_weight_sensitivity.json`): expired-law
-  candidates down-weighted by (1−α); Hit@1 reaches the hard-filter value 0.530 already
-  at α=0.1 and all metrics coincide with the hard filter from α=0.5 (every α>0:
-  Wilcoxon p<10⁻¹⁹, n=281, no-GPU stored-vector engine).
-- Early-benchmark metrics for comparison: Hit@1 0.41 / Hit@3 0.60 / Hit@5 0.67 /
-  Hit@10 0.75 (n=283 incl. 41 weak + 48 partial tiers now resolved).
+## Metrics (current frozen snapshot; every number reproducible from artifacts)
+- **Core retrieval, hybrid BM25+dense+RRF with TCR** (documented protocol,
+  `law_ranks_full_rebuild.py verify` reproduces the published ranking with
+  0 mismatches): full n=281 → Hit@1 0.537 / Hit@3 0.737 / Hit@5 0.808 /
+  Hit@10 0.875 / MRR 0.659. Stratified: verified (229) 0.585/0.760/0.821/0.895
+  MRR 0.693; regolded (21) 0.238/0.762/0.857/0.905; author-verified (4)
+  0.250/0.500/0.750/0.750; pass3-flagged (27) 0.407/0.556/0.667/0.704
+  (excluded from headline averages).
+- **No-TCR hybrid repro** (`law_eval_repro.json`, no GPU, no network):
+  Hit@1 0.395 / Hit@5 0.730 / Hit@10 0.811 / MRR 0.536 — the TCR gap is the
+  temporal-filtering contribution.
+- **Gold-adjudication effect** (same stored rerank/hybrid candidate lists,
+  old vs adjudicated gold): rerank Hit@1 0.448→0.484, Hit@5 0.794→0.808,
+  MRR 0.596→0.621; hybrid Hit@1 0.406→0.441, MRR 0.548→0.571.
+- **Core LLM RAG** (Qwen2.5-3B-Instruct, greedy, rescored from stored answers
+  after gold updates): cite_acc No-RAG 0.004 → hybrid 0.488 → hybrid+TCR
+  **0.601** (McNemar p = 5.8e-05) → rerank+TCR 0.600 (ctx_hit5 0.846);
+  No-RAG vs hybrid+TCR p = 5.3e-51.
+- **Round-1 extension** (n=106): retrieval Hit@5 0.906 → 0.925 with TCR
+  (Wilcoxon p = 2.1e-05).
+- **Round-2 extension, 1996–2015 (n=64):** retrieval Hit@5 0.703 → 0.781 with
+  TCR (p = 4.0e-05) → 0.828 with rerank+TCR (Hit@1 0.703, p = 1.4e-03);
+  LLM cite_acc 0.000 → 0.531 with TCR (McNemar p = 1.2e-10). Stratified
+  tiers published; the regolded stratum (11 Qs) is the hardest slice of the
+  whole benchmark (Hit@1 0.091).
 
 ## Collection & preprocessing
-- **Sources:** signed Cong-bao PDFs (5 core laws re-verified numerically
-  perfect: 838/838, 110/110, 777/777, 78/78, 689/689 Điều) + TVPL official
-  HTML for 24/24 sampled chunks; mirror pages remain for laws without
-  official equivalents and stay `mirror`-flagged.
-- **Decontamination (three rounds):** round 1 stripped boilerplate footers
-  ("so hieu:", "ngay cong bao:" ...) from 1.203 chunks (residual 0);
-  round 2 stripped in-body Cong-bao page headers from 409 chunks and removed
-  3 duplicate chunk IDs; round 3 (1) rebuilt 2 chunks of NCN2010 whose
-  official government .doc source carried broken piece-table bytes
-  (text re-derived from the same official file with a complete
-  piece-table parser, source_url/source_type kept "official"), (2) replaced
-  a source-page warning emoji with a plain "[!] " marker in BLDS2005
-  Dieu 777, and (3) re-ran 94 LLM extractions whose stored output contained
-  stray non-Vietnamese glyphs (the earlier engine occasionally emitted
-  isolated CJK tokens). A byte-level gate over every released file now
-  counts non-Vietnamese-script / private-use artifacts as zero.
-  The extraction and index in this release therefore match chunk text 1:1.
-- **Lineage:** per-Dieu mean-vector cosine across BLDS 1995->2005->2015;
-  sim >= 0.90 accepted as "phien ban khac" relations (439 unique after
-  Muc-remap for the 1995 clause split), 0.80-0.90 band kept in
-  `lineage_candidates.json` for audit, not injected.
-- **CITES:** 1.506 intra-law cross-reference edges from the ref regex —
-  these are already regenerated as DAN-CHIEU relations inside the index
-  build, so `cite_edges.json` doubles as ground truth for them.
-- **Index stats file:** `provenance/law_index_stats.json` carries the
-  authoritative entity/relation/chunk counts used by every audit script.
+- **Sources:** signed Cong-bao PDFs + official government .doc + TVPL
+  official pages; mirrors only where no official equivalent exists
+  (`provenance/law_sources.json` records source_url/type/fetched per law).
+- **Decontamination:** three documented rounds on the original corpus
+  (footer/header strip, duplicate-id removal, .doc piece-table rebuilds,
+  stray-glyph re-extraction). Round-2 ingestion applied the same gates; two
+  mojibake chunks were dropped instead of repaired (unreferenced).
+- **Lineage & cross-refs:** per-Dieu cosine lineage BLDS 1995→2005→2015 and
+  1.506 intra-law CITES edges (as DAN-CHIEU relations) unchanged from the
+  v1.0.0 corpus build.
 
 ## Artifacts in this release
-- Public HF mirror (v1.0.0): https://huggingface.co/datasets/datbazuka2502/vicivil-tkg
-- `data/civil_chunks.jsonl` (11.267 rows; superseded intermediates
-  `civil_chunks_v10.jsonl` / `civil_extract.json` removed from both mirrors, regenerable via `src/law_kg_extract.py`), 6 index
-  files (`vdb_chunks / vdb_entities / vdb_relationships` +
-  3 kv stores), `temporal_graph.json`.
-- `benchmark/law_bench_main.json`, `law_bench_seed.json` (281 Qs, gold_tier +
-  rescoped question provenance), `law_eval_ranks_full.json` (per-Q ranks),
-  rater/regold/drop trail: `second_rater.json`, `second_rater14.json`,
-  `regold.json`, `regold_judge_round1.json`, `regold_judge_round2.json`, `fixall.json`, `dropped_log.json`, `bench_split.json`.
-- `provenance/`: `cite_edges.json`, `lineage_candidates.json`,
-  `amend_candidates.json`, `law_audit.json`, `law_sources.json`,
-  `ablation_AB.json`, `significance.json`, `qa_faith.json`,
-  `ranks_hybrid.json`, `law_index_stats.json`, `SHA256SUMS` (regenerated
-  for v1.0.0 and verified on upload).
-- Data and benchmark trees (`data/`, `benchmark/`, `index/`,
-  `provenance/`) are identical between the GitHub release engine and the
-  HF dataset card (byte-level verified).
+- `data/civil_chunks.jsonl` (13.151 rows), 6 index files + 3 kv stores,
+  `provenance/temporal_graph.json` (37 windows, 24 edges), `law_sources.json`.
+- Core benchmark + full trail (`regold*.json`, `fixall.json`, `as_of_fixes.json`,
+  `gold_adjudicated.json`, `gold_pass3.json`, `weak_gold_reanchor.json`,
+  `dropped_log.json`, `bench_split.json`).
+- Extension round 1: questions + vectors + audit trail + eval artifacts
+  (`law_bench_extension.json`, `extension_flagged.json`, ...).
+- Extension round 2: `law_bench_extension2.json` + `extension2_*` audit,
+  dedup, vectors, ranks, rerank and LLM-QA artifacts.
+- Paper: `docs/report/ViCivil-TKG_paper.pdf` (IMRaD, LaTeX source in
+  `docs/report/paper.tex`).
+- `SHA256SUMS` regenerated over the full release tree; `audit_release.py`
+  verifies structure, counts, hashes and placeholder/secret scans.
 
 ## Known gaps (disclosed)
-- 0 empty-content chunks (`law_audit.json`: `empty`=0); 424 item-level chunks
-  carry short LLM extractions (mostly short BLDS 1995 numbered items) — refs kept;
-  disclosed per-law histogram in `law_audit.json` (computed, reproducible).
-- Near-duplicate copies across laws (603 total groups; 557 of them span
-  more than one law — e.g. the same article text preserved verbatim by a
-  2005 successor, or VBHN consolidations): measured impact is small —
-  only 10/281 benchmark questions show a top-5 duplicate collision, and
-  temporal filtering already prevents most crowding. A retrieval-time
-  duplicate-collapse experiment was REJECTED: the retriever's internal
-  ordering depends on the requested top-k, so extending-and-truncating
-  outside the retriever distorts ranks (Hit@1 fell to 0.0 in probe).
-  Numbers below therefore use the unmodified hybrid retriever.
-- Two NCN2010 article-bodies could not be byte-preserved from the
-  government .doc (its own piece-table is damaged); they were rebuilt from
-  the same official file's clean piece-table run and the cleaned text was
-  verified against the surrounding articles before release.
-- Remaining article-numbering gaps (final release measurement in
-  `law_audit.json`): HNGD2000 3/110, THADS-VBHN 5/190, VBHN-21 Dieu 497,
-  Law 15/2026 44 items (gazette law still awaiting consolidated text);
-  BLDS 1995 has zero gaps left since its clause-level rebuild.
-- Graph-mode retrieval still trails hybrid on strict Hit (known from the ablation study); 32 regolded questions are hard restatements — stratified
-  numbers are reported so no one average hides them.
-- Expert review (50 Qs) pending; GitHub PAT rotation pending (owner has
-  accepted the outreach-level risk in the meantime).
-- The first HF token was exposed in a chat log during upload and has been
-  revoked; a new token is used thereafter with no secret stored in any
-  released file (verified by secret-pattern scan).
-- Bench has 1 duplicated question text across two qids (CIV001/CIV002,
-  both verified) — counted in all averages, disclosed here to avoid
-  hidden double weighting.
+- Single domain (civil + civil-procedure law), Vietnamese only.
+- 27 core questions pass3-flagged; the regolded strata are systematically
+  harder (low Hit@1, high Hit@5) — always read stratified numbers.
+- Independent judge agreement on the 60-question sample is 0.554 — gold
+  anchoring in this domain is genuinely ambiguous; human expert review
+  (50-question package) is the top-priority next step.
+- The 1.886 round-2 chunk rows are not yet mined for entities/relations
+  (retrieval-ready, KG-pending).
+- GitHub PAT rotation still pending (owner accepted the residual risk);
+  no secret is stored in any released file (pattern-scanned).
 
 ## Uses, distribution, maintenance
 - **License:** legal texts public domain (Luật 104/2016/QH13, Luật
@@ -206,14 +159,13 @@ map object ids to their referenced `chunk_ids`.
 
 ## Changelog
 
-- **v1.0.0:** first public release. Corpus of 11,267 hierarchical chunks across
-  17 Vietnamese civil-law statutes (1996-2026) with per-chunk validity windows;
-  temporal knowledge graph (33 statutes, 21 replaces/amends edges) exported as
-  RDF/Turtle, JSON-LD and GEXF; three-tier retrieval index (14,099 entities,
-  20,311 relation rows, 768-d vectors); 281-question situational benchmark with
-  the complete gold-verification trail (8B/14B cascade audit, re-anchoring
-  logs, author review tiers, one documented drop); retrieval metrics (hybrid,
-  TCR temporal filtering, cross-encoder rerank) with paired significance
-  tests; an end-to-end LLM RAG baseline (Qwen2.5-3B-Instruct, four
-  conditions); and a single-file offline graph explorer. All numbers are
-  reproducible from the repository alone, without GPU or network.
+- **2026-10-31 (data update within v1.0.0):** corpus 11.267→13.151 chunks,
+  17→20 laws (1996–2015 era statutes added); benchmark 281→451 published
+  questions (+226 quarantined with trails); pass-3 adjudication completed
+  (0 unverifiable golds left); cross-cohort dedup audit added; documented
+  hybrid+TCR retrieval protocol with 0-mismatch verification; all metrics
+  recomputed; NCKH paper (IMRaD) replaces the previous technical report.
+- **v1.0.0:** first public release (corpus, temporal KG, index, 281-question
+  benchmark with full verification trail, retrieval + LLM RAG baselines,
+  offline graph explorer). All numbers reproducible from the repository
+  alone, without GPU or network.

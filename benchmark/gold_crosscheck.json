@@ -1,0 +1,2433 @@
+{
+ "meta": {
+  "model": "qwen3:14b",
+  "total": 387,
+  "counts": {
+   "no": 24,
+   "yes": 312,
+   "partial": 50,
+   "parse-fail": 1
+  },
+  "by_cohort": {
+   "main": {
+    "no": 18,
+    "yes": 210,
+    "partial": 40,
+    "parse-fail": 1
+   },
+   "seed": {
+    "yes": 9,
+    "partial": 2,
+    "no": 1
+   },
+   "ext": {
+    "yes": 93,
+    "no": 5,
+    "partial": 8
+   }
+  },
+  "disagreement_qids": [
+   "CIV002",
+   "CIV004",
+   "CIV005",
+   "EXT10020",
+   "EXT10021",
+   "EXT10059",
+   "EXT10066",
+   "EXT10104",
+   "EXT10138",
+   "EXT10157",
+   "EXT10160",
+   "EXT10192",
+   "EXT10206",
+   "EXT10219",
+   "EXT10240",
+   "EXT10252",
+   "GEN11580",
+   "GEN11923",
+   "GEN13629",
+   "GEN17239",
+   "GEN19616",
+   "GEN25840",
+   "GEN26434",
+   "GEN28924",
+   "GEN29347",
+   "GEN31914",
+   "GEN33568",
+   "GEN35982",
+   "GEN38275",
+   "GEN42951",
+   "GEN56474",
+   "GEN56666",
+   "GEN58372",
+   "GEN66553",
+   "GEN69613",
+   "GEN70985",
+   "GEN71065",
+   "GEN71067",
+   "GEN71934",
+   "GEN72269",
+   "GEN75189",
+   "GEN77738",
+   "GEN78263",
+   "GEN86368",
+   "GEN87544",
+   "GEN88877",
+   "GEN91088",
+   "GEN94813",
+   "GEN95535",
+   "GEN95669",
+   "GEN97275",
+   "GEN98662",
+   "NEW17446",
+   "NEW20421",
+   "NEW21932",
+   "NEW39093",
+   "NEW46465",
+   "NEW57186",
+   "NEW59911",
+   "NEW61903",
+   "NEW71666",
+   "NEW82981",
+   "NEW87268",
+   "NEW91253",
+   "TOP19744",
+   "TOP25047",
+   "TOP28886",
+   "TOP40623",
+   "TOP46606",
+   "TOP52869",
+   "TOP68536",
+   "TOP84342",
+   "TOP89044",
+   "TOP92479",
+   "TOP97603"
+  ],
+  "criteria": "A1 prompt (situational / direct answer / self-contained)",
+  "policy": "gold frozen; disagreements disclosed and prioritised for expert review"
+ },
+ "verdicts": {
+  "GEN70985": {
+   "usable": "no",
+   "reason": "cau hoi la dinh nghia, khong phai tinh huong thuc te",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN62121": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật quy định rõ quyền của bên nhận thế chấp khi không được thông báo, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN45559": {
+   "usable": "yes",
+   "reason": "Luật quy định bên đã thực hiện nghĩa vụ có quyền yêu cầu thanh toán phần đã thực hiện khi hợp đồng bị chấm dứt đơn phương.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN85381": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp trả lời tình huống người cư trú nhiều nơi bằng quy định pháp luật áp dụng theo mối liên hệ gắn bó nhất",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN28924": {
+   "usable": "partial",
+   "reason": "Luật nêu điều kiện thay đổi hợp đồng nhưng không trả lời trực tiếp câu hỏi có thể thay đổi hay không",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN69550": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về giải quyết tài sản theo quy định thừa kế",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN67567": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp trả lời giải pháp khi hợp đồng không sửa đổi được và bên kia không tiếp tục",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN53214": {
+   "usable": "yes",
+   "reason": "Câu hỏi xác định mối quan hệ thừa kế theo quy định hàng thừa kế thứ ba trong đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN25779": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp với tình huống thực tế, luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN89703": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, đoạn luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN90443": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN14471": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ cách xử lý khi không biết chủ sở hữu tài sản.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN51489": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN79344": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ về bồi thường thiệt hại do tài sản bị mất trong vận chuyển.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN53978": {
+   "usable": "yes",
+   "reason": "luat tra loi duoc truc tiep ve thoi han 10 nam",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN72269": {
+   "usable": "partial",
+   "reason": "Luật chỉ nêu điều kiện công nhận hình thức di chúc, không khẳng định trực tiếp hiệu lực của di chúc Mỹ tại Việt Nam",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN13629": {
+   "usable": "no",
+   "reason": "Câu hỏi không nêu rõ tình huống cụ thể (ví dụ: người nhận có phải là người thứ ba được chỉ định không), nên đoạn luật không thể trả lời trực tiếp.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN96905": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ trách nhiệm trả tiền khi đến hạn, phù hợp với tình huống nêu trong câu hỏi.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN15475": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về hiệu lực hợp đồng vi phạm pháp luật, được trả lời trực tiếp qua quy định về hợp đồng vô hiệu trong Bộ luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN49584": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về quyền từ chối khi nguyên vật liệu không đảm bảo chất lượng hoặc nguy hại cho xã hội.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN34985": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp hướng dẫn xử lý khi luật khác trái nguyên tắc cơ bản của pháp luật dân sự",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN56131": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN91745": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ người có quyền yêu cầu sau khi chết",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN18358": {
+   "usable": "yes",
+   "reason": "Luật xác nhận quyền yêu cầu công nhận thay đổi tên trong trường hợp quy định",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN70295": {
+   "usable": "yes",
+   "reason": "Luật quy định 1 tháng là 30 ngày, nên nửa tháng là 15 ngày.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN82789": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về quyền đòi lại tài sản khi không xác định thời hạn và yêu cầu báo trước thời gian hợp lý.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN89661": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và đủ thông tin trong nội dung luật",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN90903": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ hợp đồng phải lập thành văn bản",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN44743": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp với tình huống thực tế, được trả lời trực tiếp từ đoạn luật và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN79721": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trả lời trực tiếp về thủ tục đổi họ cho con nuôi theo yêu cầu của cha/mẹ nuôi",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN95535": {
+   "usable": "partial",
+   "reason": "Câu hỏi cần thông tin cụ thể về thỏa thuận hoặc quy định pháp luật liên quan đến bất động sản liền kề",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN73628": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời về mục đích không nhằm thu lợi nhuận của quỹ từ thiện.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN30174": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định chủ sở hữu nguồn nguy hiểm cao độ phải bồi thường thiệt hại dù không có lỗi, trừ các trường hợp ngoại lệ.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN62886": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN71934": {
+   "usable": "no",
+   "reason": "DOAN LUAT không nêu rõ hình thức cụ thể của di chúc",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN38275": {
+   "usable": "partial",
+   "reason": "Câu hỏi về nghĩa vụ trả nợ của người nhận tài sản tặng cho trong di chúc, nhưng đoạn luật chỉ quy định trách nhiệm của người thừa kế, không đề cập đến người nhận tặng cho.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN13335": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ bên thuê khoán được cải tạo tài sản nếu có thỏa thuận và bảo toàn giá trị.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN59266": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN66436": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, được trả lời trực tiếp từ đoạn luật, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN67544": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ việc công chứng khi pháp luật yêu cầu, trả lời trực tiếp",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN95147": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN54013": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trả lời trực tiếp về hoàn tiền và bồi thường thiệt hại khi thu hồi đất vì lợi ích công cộng",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN57254": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trực tiếp trả lời về hiệu lực di chúc từ thời điểm mở thừa kế (khi người lập di chúc chết), không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN67362": {
+   "usable": "yes",
+   "reason": "Luật cấm tổ chức họ dưới hình thức cho vay nặng lãi, nhưng không xác định họ là cho vay nặng lãi mặc định.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN10962": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ việc hoàn trả tài sản khi hợp đồng bị hủy bỏ",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN97280": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thủ tục sửa đổi điều lệ cần được cơ quan nhà nước có thẩm quyền công nhận.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN83997": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ về thanh toán nợ khi tổ hợp tác chấm dứt",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN86204": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, được trả lời trực tiếp bởi điều luật về tình thế cấp thiết và quyền sử dụng tài sản của người khác mà không bị cản trở.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN34245": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp quy định điều khoản miễn trách nhiệm trong hợp đồng theo mẫu không có hiệu lực nếu không có thỏa thuận khác.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN46743": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về việc bồi thường khi vượt quá yêu cầu cấp thiết",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN18692": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ quyền của người mua khi phát hiện khuyết tật và các trường hợp miễn trách nhiệm của bên bán.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN87629": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, được trả lời trực tiếp từ đoạn luật về căn cứ xác định pháp luật áp dụng dựa trên quốc tịch và nơi cư trú.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN95321": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về nghĩa vụ trả tiền gốc và lãi đúng hạn, được DOAN LUAT trả lời trực tiếp",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN52565": {
+   "usable": "yes",
+   "reason": "Luật quy định phải báo bằng văn bản khi chuyển giao quyền yêu cầu",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN48222": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về xử lý di chúc bị mất/hỏng, được trả lời trực tiếp bởi đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN19616": {
+   "usable": "partial",
+   "reason": "DOAN LUAT liệt kê loại tổ chức nhưng không nêu rõ điều kiện thành lập cụ thể",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN79204": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về quyền gia hạn, chấm dứt hợp đồng và yêu cầu bồi thường khi bên nhận gia công chậm giao sản phẩm.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN28619": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ cách xác định giá khi không có thỏa thuận, đáp ứng đủ 3 tiêu chí.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN40699": {
+   "usable": "yes",
+   "reason": "Luật quy định chủ hộ có thể ủy quyền cho thành viên khác đã thành niên làm đại diện hộ trong quan hệ dân sự.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN25840": {
+   "usable": "partial",
+   "reason": "luật không nêu rõ cơ quan đăng ký cụ thể",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN86368": {
+   "usable": "partial",
+   "reason": "Luật quy định nghĩa vụ thanh toán và lãi chậm trả, nhưng không hướng dẫn cụ thể hành động cần thực hiện khi phát sinh chậm trả.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN93786": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN29504": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ điều kiện thay thế tài sản thế chấp dựa trên loại tài sản và sự đồng ý của bên nhận thế chấp.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN85482": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nhan dinh truc tiep ve viec thoi hieu khong ap dung cho quyen nhan than",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN64020": {
+   "usable": "yes",
+   "reason": "luat duoc ap dung truc tiep cho tinh huong co phan quyen 50%",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN59549": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ tuổi 15-18 lập di chúc được nếu có sự đồng ý của cha mẹ hoặc người giám hộ.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN79482": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, DOAN LUAT trực tiếp trả lời tên nghĩa vụ là 'Nghĩa vụ dân sự có đối tượng tuỳ ý lựa chọn', không cần thông tin ngoài DOAN LUAT.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN90810": {
+   "usable": "yes",
+   "reason": "Câu hỏi được trả lời trực tiếp từ đoạn luật về thời hạn 3 tháng.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN67578": {
+   "usable": "yes",
+   "reason": "DOAN LUAT truc tiep tra loi cau hoi ve vi tri luat ap dung cho tranh chap quyen, nghia vu tai san trong hon nhan gia dinh.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN57365": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN27762": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN42951": {
+   "usable": "partial",
+   "reason": "DOAN LUAT chỉ nêu quy trình đăng ký và giao nhận con nuôi, không giải thích toàn bộ thủ tục nhận nuôi (như điều kiện, hồ sơ cần thiết, thời gian xử lý...).",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN33568": {
+   "usable": "partial",
+   "reason": "Luật chỉ đề cập ủy quyền giữa vợ chồng, không trả lời trực tiếp về ủy quyền cho người khác",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN50764": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN42748": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về việc nghĩa vụ được thực hiện bằng tài sản chung, trừ trường hợp có thỏa thuận khác.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN95410": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ việc áp dụng pháp luật nước ngoài trong hôn nhân với người nước ngoài, nếu không trái nguyên tắc cơ bản của Việt Nam.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN56666": {
+   "usable": "partial",
+   "reason": "luật chỉ nêu yêu cầu về văn bản và công chứng, không hướng dẫn đầy đủ thủ tục chia tài sản",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN57395": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN35982": {
+   "usable": "no",
+   "reason": "cau hoi khong phai tinh huong thuc te",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN82529": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN87544": {
+   "usable": "no",
+   "reason": "doan luat khong nhan dinh chi tiet quyen va nghia vu giua vo va chong",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN37968": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ tuổi kết hôn, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN54339": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thời gian hưởng chế độ thai sản cho người mang thai hộ",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN52098": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, được trả lời trực tiếp từ đoạn luật, không cần thông tin ngoài.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN72530": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ việc Tòa án buộc thực hiện nghĩa vụ khi có yêu cầu chính đáng",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN88877": {
+   "usable": "partial",
+   "reason": "Luật nêu điều kiện nhưng không trả lời trực tiếp khả năng của người hỏi",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN39029": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp bằng Điều 24 và 25, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN53768": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN69613": {
+   "usable": "partial",
+   "reason": "luật chỉ quy định quyền thực hiện giao dịch đáp ứng nhu cầu thiết yếu, không đề cập toàn bộ quyền tự quyết của cha mẹ",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN63901": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN52760": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về việc thừa kế thỏa thuận cử người công bố di chúc khi không có chỉ định.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN99286": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN29347": {
+   "usable": "partial",
+   "reason": "Luật quy định nghĩa vụ phải thực hiện đúng thời hạn, nhưng không nêu rõ biện pháp xử lý vi phạm cụ thể như yêu cầu bồi thường hay khởi kiện.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN83381": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ nước có mối liên hệ gắn bó nhất là nơi người tiêu dùng cư trú, trực tiếp trả lời câu hỏi về thẩm quyền pháp lý.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN69784": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp cả hai phần (xác định ranh giới và cấm lấn chiếm), không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN31043": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ ràng, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN70440": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trả lời trực tiếp về quyền sở hữu tài sản còn lại sau khi thanh toán nợ và chi phí giải thể",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN26434": {
+   "usable": "partial",
+   "reason": "luật không đề cập đến việc người sử dụng đã dùng hợp lý hoặc người khác không có giấy tờ chứng minh",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN88524": {
+   "usable": "yes",
+   "reason": "Câu hỏi phản ánh tình huống thực tế, đoạn luật trực tiếp quy định nghĩa vụ của bên cho thuê, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN78202": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN37861": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp với quy định về quyền hoãn thực hiện nghĩa vụ khi bên kia chưa thanh toán.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN21948": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ đầy đủ điều kiện hợp pháp của di chúc theo quy định pháp luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN97250": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về hiệu lực hôn nhân sau khi hủy quyết định tuyên bố chết, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN66553": {
+   "usable": "no",
+   "reason": "luat chi ap dung khi biet hoac doan bien duoc y dinh, khong tra loi khi khong ro y dinh",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN56474": {
+   "usable": "partial",
+   "reason": "Luật chỉ nêu hiệu lực của giao dịch vô hiệu, chưa đề cập cụ thể hậu quả pháp lý như hoàn trả tài sản, bồi thường thiệt hại",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN78263": {
+   "usable": "partial",
+   "reason": "luật chỉ đề cập biện pháp bảo đảm phát sinh hiệu lực đối kháng, không nêu rõ thứ tự giữa hai khoản nợ cùng tài sản thế chấp",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN76727": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN71410": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ phương thức xử lý tài sản bảo đảm trực tiếp trả lời.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN97275": {
+   "usable": "no",
+   "reason": "Luật quy định về người bị thiệt hại, không đề cập đến người thân của người mất khả năng lao động.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN71796": {
+   "usable": "yes",
+   "reason": "Luật không cho phép việc không thực hiện quyền dân sự làm chấm dứt nghĩa vụ trả nợ.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN95669": {
+   "usable": "partial",
+   "reason": "DOAN LUAT nêu định nghĩa thiệt hại tinh thần nhưng không trực tiếp trả lời khả năng kiện người khác do nói xấu trên mạng xã hội",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN45337": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp với trường hợp trẻ bị bỏ rơi chưa xác định cha mẹ và được nuôi dưỡng tạm thời, luật quy định rõ họ được xác định theo đề nghị của người nuôi dưỡng.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN25918": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN48268": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ trường hợp hoàn thành cùng lúc thì chia đều phần thưởng",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN94813": {
+   "usable": "no",
+   "reason": "Câu hỏi yêu cầu trả lại tiền mà không trả lại hàng, nhưng luật quy định phải khôi phục tình trạng ban đầu (trả lại hàng hoặc bồi thường bằng tiền nếu không trả được bằng hiện vật).",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN16359": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, được trả lời trực tiếp từ đoạn luật và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN85560": {
+   "usable": "yes",
+   "reason": "DOAN LUAT quy định rõ quyền yêu cầu hoàn trả từ công ty bảo hiểm khi đã bồi thường thiệt hại cho người thứ ba",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN33898": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, đoạn luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN52151": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về chuyển giao quyền sở hữu trí tuệ cho công nghệ sáng chế, được trả lời trực tiếp từ đoạn luật về chuyển giao quyền sở hữu công nghiệp qua hợp đồng, đăng ký và điều kiện pháp lý.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN58372": {
+   "usable": "no",
+   "reason": "DOAN LUAT không đề cập đến tài sản bị tịch thu hoặc hậu quả pháp lý khi thực hiện hợp đồng mua bán trong trường hợp này.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN77738": {
+   "usable": "partial",
+   "reason": "Luật quy định quyền nhân thân thuộc về người sáng chế nhưng không nêu rõ việc sa thải có ảnh hưởng đến quyền tác giả hay không.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN71065": {
+   "usable": "partial",
+   "reason": "luat nhan de quy dinh nhung khong giai thich ly do co ban",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN45293": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ về chi phí vận chuyển khi không thỏa thuận, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN30064": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp trả lời về giải quyết quan hệ tài sản khi hôn nhân được khôi phục",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN20094": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ hợp đồng thuê chấm dứt khi bên thuê đạt mục đích, nên người thuê có quyền từ chối đóng thêm tiền và chấm dứt hợp đồng.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN61247": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN75189": {
+   "usable": "partial",
+   "reason": "luật đề cập đến việc đòi lại tài sản khi bên mượn sử dụng sai mục đích, nhưng không nêu rõ nghĩa vụ cụ thể của tổ chức xã hội khi vi phạm",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN17239": {
+   "usable": "partial",
+   "reason": "luật đề cập đến mục đích sử dụng, không trực tiếp liên quan đến tiêu chuẩn chất lượng đã công bố",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN71067": {
+   "usable": "partial",
+   "reason": "Luật quy định nghĩa vụ giao giấy tờ khi có thỏa thuận, nhưng không nêu rõ biện pháp xử lý khi vi phạm",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN91088": {
+   "usable": "partial",
+   "reason": "DOAN LUAT nêu quy trình chung nhưng không cụ thể các bước thực hiện",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN56252": {
+   "usable": "yes",
+   "reason": "Luật quy định di chúc bằng tiếng nước ngoài phải được dịch ra tiếng Việt và công chứng",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN99167": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về luật áp dụng cho hợp đồng có yếu tố nước ngoài, được trả lời trực tiếp từ điều 3 Bộ luật Dân sự.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN47787": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật quy định rõ nghĩa vụ trả thưởng khi đã công khai hứa, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN84647": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp về thời điểm chấm dứt quyền sở hữu, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN60238": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ quyền ưu tiên mua và hậu quả khi không thông báo, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN95837": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trực tiếp trả lời và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN52611": {
+   "usable": "yes",
+   "reason": "Luật cho phép yêu cầu Tòa án thay đổi mức bồi thường khi không phù hợp thực tế",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN98662": {
+   "usable": "no",
+   "reason": "cau hoi khong phai tinh huong thuc te",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN51429": {
+   "usable": "yes",
+   "reason": "luat tra loi duoc truc tiep ve dieu kien hoan thuc hien nghia vu",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN31914": {
+   "usable": "parse-fail",
+   "reason": "unparseable after 1600-token retry (thinking budget)",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN81336": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về quyền của con nuôi và bố mẹ đẻ, được trả lời trực tiếp bằng điều luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN59944": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ quyền yêu cầu nhận lại tài sản đã góp khi rút khỏi hợp đồng hợp tác.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN95074": {
+   "usable": "yes",
+   "reason": "Câu hỏi phản ánh tình huống thực tế, được trả lời trực tiếp bởi đoạn luật về lãi suất 150% khi trả chậm, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN81461": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp quy định trường hợp pháp luật nước ngoài không được áp dụng khi trái với nguyên tắc pháp luật Việt Nam, phù hợp với câu hỏi thực tế về việc ưu tiên luật Việt Nam trong hôn nhân quố",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN48308": {
+   "usable": "yes",
+   "reason": "Câu hỏi phản ánh tình huống thực tế được điều khoản luật giải thích trực tiếp",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN56550": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ xác nhận y tế về việc người vợ không thể mang thai và sinh con ngay cả khi áp dụng kỹ thuật hỗ trợ sinh sản.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN91337": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nhan dinh thuc te ve viec tinh lai thoi hieu tu khi su kien gián đoạn chấm dứt, truc tiep tra loi cau hoi ve thoi han tiep tuc yeu cau.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN11904": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật quy định rõ quyền được hoàn tiền khi phát hiện khuyết tật trong thời hạn bảo hành.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN90604": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thời điểm thanh toán khi không thỏa thuận, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN75894": {
+   "usable": "yes",
+   "reason": "Câu hỏi phản ánh tình huống thực tế, luật quy định rõ quyền của người thế chấp khi bên nhận thế chấp không thông báo, đáp ứng đầy đủ 3 tiêu chí.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN46407": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ điều kiện giao dịch phải được công khai để người xác lập giao dịch biết hoặc phải biết, trực tiếp trả lời câu hỏi.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN11923": {
+   "usable": "no",
+   "reason": "cau hoi khong phai tinh huong thuc te",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN44390": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ trách nhiệm bồi thường thiệt hại khi gây hại cố ý không có ủy quyền",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN39298": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, đoạn luật trả lời trực tiếp, không cần thông tin ngoài",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN55424": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về nghĩa vụ liên đới, luật áp dụng trực tiếp",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN94343": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN53892": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN11580": {
+   "usable": "partial",
+   "reason": "cau hoi khong phai tinh huong thuc te",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN39897": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp với tình huống thực tế, được trả lời trực tiếp bởi đoạn luật và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN93396": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về nghĩa vụ trả tiền thuê nhà theo từng phần (tháng) được DOAN LUAT quy định trực tiếp về nghĩa vụ dân sự chia được theo phần.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN74272": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "GEN45218": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW69151": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ người chủ trì và phối hợp trực tiếp",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW21840": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về việc xử lý vi phạm nguyên tắc tại Điều 4",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW64501": {
+   "usable": "yes",
+   "reason": "Luật công nhận thỏa thuận miệng là hình thức hợp lệ của kết quả hòa giải",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW14208": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW83864": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trả lời trực tiếp hành động của công chức hộ tịch khi khai tử đúng",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW90326": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật quy định rõ trách nhiệm của UBND cấp huyện khi không có xã, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW57952": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp số bản chính (01) và trừ trường hợp đăng ký khai sinh, kết hôn",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW83995": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp trả lời câu hỏi về vai trò của Sở Tư pháp khi UBND cấp tỉnh cần hỗ trợ.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW28534": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ bản án cấp dưỡng được thi hành ngay, trả lời trực tiếp câu hỏi về việc thực thi bản án.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW87268": {
+   "usable": "no",
+   "reason": "DOAN LUAT không nêu rõ nơi nộp chứng cứ hoặc người nhận, chỉ đề cập đến thẩm phán công bố tài liệu.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW53084": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ việc cần cung cấp chứng cứ để khởi kiện, và không yêu cầu chứng minh lỗi của bên kinh doanh nếu là tổ chức bảo vệ người tiêu dùng (không áp dụng cho cá nhân).",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW21414": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ quyền yêu cầu độc lập hoặc tham gia tố tụng của người có quyền lợi liên quan.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW91442": {
+   "usable": "yes",
+   "reason": "luật quy định khả năng tự thực hiện hoặc ủy quyền, do đó trả lời trực tiếp câu hỏi",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW84407": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp trả lời câu hỏi về quy định cho phép Thẩm phán tiến hành phiên họp khi Kiểm sát viên vắng mặt",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW45231": {
+   "usable": "yes",
+   "reason": "DOAN LUAT quy định rõ thời hạn 05 ngày làm việc trong khoản 3 Điều 275 BLTTDS, trực tiếp trả lời câu hỏi về thời hạn gửi quyết định.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW98861": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thời hạn 7 ngày và trình tự chuyển hồ sơ khi cả Tòa án và Viện kiểm sát yêu cầu.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW17468": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp trả lời câu hỏi về hành động khi Tòa án không thực hiện yêu cầu của Viện kiểm sát",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW70231": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ thời hạn 05 ngày làm việc để ra quyết định thi hành án sau khi nhận quyết định ủy thác.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW15696": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định trực tiếp cơ quan nhà nước có thẩm quyền thực hiện thủ tục, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW75514": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ về quyền, lợi ích của vợ trong thi hành án, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW71666": {
+   "usable": "partial",
+   "reason": "luat quy định thủ tục thu hồi nhưng không nêu rõ lý do cụ thể trong trường hợp của người dân",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW20421": {
+   "usable": "partial",
+   "reason": "luật chỉ nêu điều kiện từ chối, không giải thích việc không nêu lý do rõ ràng",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW82981": {
+   "usable": "no",
+   "reason": "cau hoi khong phai tinh huong thuc te",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW93215": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, được trả lời trực tiếp từ đoạn luật, không cần thông tin ngoài.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW50275": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thời hạn 24 giờ sau quyết định đình chỉ.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW46465": {
+   "usable": "partial",
+   "reason": "Luật chỉ nêu quyền ủy quyền, không xác định rõ việc ủy quyền có loại bỏ quyền yêu cầu bồi thường của người bị thiệt hại hay không.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW75006": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW38972": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp với điều kiện đình chỉ khi văn bản xem xét lại không còn là căn cứ, được quy định trực tiếp trong đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW39093": {
+   "usable": "partial",
+   "reason": "luat khong chi tiet loai giay to can cung cap",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW61903": {
+   "usable": "partial",
+   "reason": "luật chỉ nêu nội dung thương lượng bao gồm 'các loại thiệt hại được bồi thường' nhưng không liệt kê cụ thể loại thiệt hại nào",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW28139": {
+   "usable": "yes",
+   "reason": "Câu hỏi nêu rõ nhiệm vụ của Chính phủ về chuyển đổi số trong bồi thường nhà nước, được trả lời trực tiếp từ điều khoản pháp lý.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW23120": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về hình thức văn bản và điều kiện công chứng",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW91253": {
+   "usable": "no",
+   "reason": "Luật không giải thích lý do chú ruột không được coi là họ hàng, mà chỉ xác định phạm vi ba đời",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW22714": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW17446": {
+   "usable": "partial",
+   "reason": "Luật chỉ nêu trách nhiệm của UBND cấp tỉnh, chưa đủ thông tin về các bước cụ thể để nhận nuôi",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW35143": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW57186": {
+   "usable": "no",
+   "reason": "doan luat đề cập điều kiện cho tổ chức, không đề cập yêu cầu kiến thức pháp luật đối với cá nhân xin nhận con nuôi",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW59911": {
+   "usable": "partial",
+   "reason": "luat chi neu toi pham khong neu ket qua tu phat",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW26614": {
+   "usable": "yes",
+   "reason": "Chủ tịch UBND xã không có thẩm quyền ký giấy chứng nhận kết hôn theo quy định.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW95746": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp trả lời về cơ quan thực hiện đăng ký giám hộ (UBND cấp xã) cho trường hợp người gốc Việt Nam chưa xác định quốc tịch sống tại Việt Nam",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW99436": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW75990": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW21932": {
+   "usable": "no",
+   "reason": "Luật không quy định cụ thể mức tiền tối thiểu để lại cho hoạt động kinh doanh, chỉ nêu các yếu tố xác định",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW96729": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ phải xác minh số định danh cá nhân trong quá trình thi hành án.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW49913": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW90253": {
+   "usable": "yes",
+   "reason": "Câu hỏi xác định đối tượng không bị hạn chế quyền cha mẹ, được trả lời trực tiếp từ đoạn luật liệt kê các trường hợp bị hạn chế.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "NEW53217": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP25047": {
+   "usable": "no",
+   "reason": "Câu hỏi về thời hạn yêu cầu tổ hòa giải can thiệp, nhưng đoạn luật chỉ quy định thời hạn phân công hòa giải viên sau khi phát sinh căn cứ, không đề cập đến thời hạn yêu cầu can thiệp.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP52869": {
+   "usable": "partial",
+   "reason": "cau hoi khong phai tinh huong thuc te",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP33735": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP65619": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời về việc đề nghị Ủy ban nhân dân cấp xã, Công an cấp xã bảo đảm an ninh khi có nguy cơ bạo lực.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP28886": {
+   "usable": "partial",
+   "reason": "Luật không nêu rõ liệu tranh chấp ảnh hưởng trật tự làng xã có thuộc trường hợp ngoại lệ hay không.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP14097": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật quy định rõ cách xử lý, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP89133": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về trách nhiệm đăng ký khai sinh và hậu quả vi phạm.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP42625": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thủ tục cập nhật Sổ hộ tịch khi có bản án thay đổi họ tên",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP61006": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thủ tục bổ sung thông tin hộ tịch cho hôn nhân nước ngoài tại Điều 29, Mục 6",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP68536": {
+   "usable": "partial",
+   "reason": "luat khong nhan dinh truc tiep ve quyen truy cap cua chu so huu",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP95375": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ phương thức tống đạt qua văn phòng đại diện cho cơ quan, tổ chức nước ngoài",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP77430": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ thẩm phán phải trình bày nội dung kháng cáo, trực tiếp trả lời câu hỏi.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP89044": {
+   "usable": "no",
+   "reason": "Luật không quy định rõ trách nhiệm của Tòa án khi Viện kiểm sát không gửi quyết định phân công trong thời hạn 10 ngày",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP89101": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ cách xử lý khi tài liệu bị thiếu sau khi gửi qua bưu điện",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP26509": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thủ tục và thời hạn (7 ngày hoặc 1 ngày trước phiên tòa), không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP27031": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP92479": {
+   "usable": "partial",
+   "reason": "Luật quy định thời hạn phản hồi nhưng không nêu rõ biện pháp khi Tòa án vi phạm thời hạn",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP86087": {
+   "usable": "yes",
+   "reason": "Câu hỏi cụ thể, được trả lời trực tiếp từ đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP40623": {
+   "usable": "partial",
+   "reason": "luat khong chi tiet truong hop can thiet",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP50371": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thẩm quyền thi hành án của cơ quan cấp quân khu",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP23504": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP53044": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, đoạn luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP76535": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP67853": {
+   "usable": "yes",
+   "reason": "Có giấy xác nhận từ bệnh viện huyện, đáp ứng điều kiện hoãn thi hành án theo quy định.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP81485": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP25718": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ cơ quan thi hành án dân sự huyện có thẩm quyền thi hành quyết định giám đốc thẩm của Tòa án tỉnh đối với bản án của Tòa án huyện nơi mình có trụ sở.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP58739": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP33026": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ trường hợp trở ngại khách quan (sức khỏe) không tính vào thời hạn khiếu nại, cho phép kéo dài thời gian.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP46606": {
+   "usable": "partial",
+   "reason": "luật chỉ nêu quyền khôi phục, không hướng dẫn thủ tục thực hiện",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP18069": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp tiêu chí, luật trực tiếp trả lời và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP15416": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ điều kiện được yêu cầu giải quyết lại sau đình chỉ",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP10527": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, đoạn luật trả lời trực tiếp về thẩm quyền tòa án và quy định pháp luật",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP81552": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP27902": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP25608": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thời hạn 02 ngày làm việc khi không tổ chức thương lượng",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP84201": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP58788": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về hôn nhân có yếu tố nước ngoài, được trả lời trực tiếp từ điều luật",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP84342": {
+   "usable": "partial",
+   "reason": "luật không nêu rõ việc cha mẹ được tự ý chọn người giám hộ",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP27523": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp trả lời về việc tài sản riêng của con được giao cho người giám hộ quản lý khi con mất năng lực hành vi dân sự",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP35966": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ trách nhiệm giữa cha mẹ nuôi và con nuôi theo quy định pháp luật, trực tiếp trả lời câu hỏi.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP55876": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ khoản tiền phải trả để bù đắp chi phí giải quyết nuôi con nuôi nước ngoài",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP28658": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ việc đổi tên người từ 9 tuổi phải có sự đồng ý của người đó, trực tiếp trả lời được.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP43156": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời nghĩa vụ hỗ trợ tìm gia đình thay thế cho trẻ khuyết tật nhiễm HIV",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP97603": {
+   "usable": "partial",
+   "reason": "luật quy định thời hạn 20 ngày nhưng không nêu rõ hậu quả nếu không cấp đúng hạn",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP62589": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp trả lời nguồn thông tin trong cơ sở dữ liệu hộ tịch",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP69002": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP55435": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ việc cập nhật sổ hộ tịch dựa trên bản án công nhận kết hôn",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP10475": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp hướng dẫn giải pháp khi thông tin hộ tịch sai lệch",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP19744": {
+   "usable": "partial",
+   "reason": "luật chỉ quy định trách nhiệm của cơ quan, không hướng dẫn cụ thể cách thức người dân thực hiện",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP41254": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP45624": {
+   "usable": "yes",
+   "reason": "Giá tài sản giảm 30% >= 20% theo quy định tại khoản 5 Điều 82 Luật Thi hành án dân sự",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP68085": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ hồ sơ ủy thác xử lý tài sản bao gồm các tài liệu cụ thể như quyết định ủy thác, bản án, quyết định thi hành án... trực tiếp trả lời câu hỏi.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP35023": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ số lượng (từ 3 thành viên) và thời hạn (20 ngày), không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP36790": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ nghĩa vụ thông báo và trách nhiệm bồi thường khi không thực hiện, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP60751": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ thời hạn 03 ngày làm việc để gửi quyết định giám đốc thẩm",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP91913": {
+   "usable": "yes",
+   "reason": "DOAN LUAT tra loi truc tiep cau hoi ve quy dinh tai Dieu 30 Bo luat Dan su",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP44737": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP59991": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP89237": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ nơi đăng ký và quy định áp dụng",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "TOP25307": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về quyền giữ lại tài sản của vợ/chồng khi chia di sản, được DOAN LUAT quy định trực tiếp.",
+   "cohort": "main",
+   "model": "qwen3:14b"
+  },
+  "CIV001": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ điều kiện thay đổi họ cho con đẻ từ họ cha sang họ mẹ hoặc ngược lại",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV002": {
+   "usable": "partial",
+   "reason": "DOAN LUAT nêu điều kiện thay đổi họ từ cha sang mẹ (điểm d) nhưng không quy định cụ thể điều kiện thực hiện",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV003": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV004": {
+   "usable": "partial",
+   "reason": "cau hoi khong phai tinh huong thuc te",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV005": {
+   "usable": "no",
+   "reason": "Câu hỏi về nguyên tắc chung, đoạn luật quy định nghĩa vụ bồi thường cụ thể, không nêu nguyên tắc tổng quát",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV006": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV007": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp về quyền yêu cầu xin lỗi, cải chính và bồi thường thiệt hại.",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV008": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV009": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, đoạn luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV010": {
+   "usable": "yes",
+   "reason": "Luật quy định rõ điều kiện hiệu lực của di chúc miệng",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV011": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "CIV012": {
+   "usable": "yes",
+   "reason": "Luật quy định con nuôi và con đẻ cùng thuộc hàng thừa kế thứ nhất",
+   "cohort": "seed",
+   "model": "qwen3:14b"
+  },
+  "EXT10014": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp với quy định về bồi thường khi tài sản thế chấp bị mất giá trị do bên nhận thế chấp không bảo quản đúng cách.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10017": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ việc không thỏa thuận được thì yêu cầu Tòa án giải quyết theo Điều 59.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10020": {
+   "usable": "no",
+   "reason": "Luật không cho phép tòa án Việt Nam xét lại bản án nước ngoài, chỉ kiểm tra tính hợp lệ",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10021": {
+   "usable": "partial",
+   "reason": "DOAN LUAT nêu nhiệm vụ, quyền hạn của Viện trưởng nhưng không quy định rõ nghĩa vụ bắt buộc kháng nghị khi phát hiện vi phạm pháp luật",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10025": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ nội dung quyết định dân sự phải có tên và địa chỉ người liên quan, từ đó xác định được quyền khiếu nại.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10027": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10030": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thời hạn 5 ngày và trách nhiệm của thẩm phán, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10031": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10034": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10035": {
+   "usable": "yes",
+   "reason": "Luật mới cho phép áp dụng quy định có lợi hơn cho người yêu cầu bồi thường đối với trường hợp chưa có kết quả giải quyết.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10036": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời về quyền kiến nghị của kiểm sát viên đối với biện pháp khẩn cấp tạm thời.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10038": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nhanh chóng tra loi cau hoi ve han 7 ngay va hanh dong cua Vien Kiem sat",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10040": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ về chi phí bảo quản tài sản khi đương sự không nhận vật chứng.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10045": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế về thiếu thông tin trong quyết định ủy thác, được DOAN LUAT trả lời trực tiếp về nội dung bắt buộc và tài liệu cần kèm theo.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10046": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật quy định rõ Chấp hành viên có quyền cưỡng chế người phải thi hành án giao trả giấy tờ.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10048": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ xử lý khi niêm phong bị rách cần kết luận thẩm quyền",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10050": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, đoạn luật trực tiếp trả lời và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10054": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định trực tiếp trách nhiệm của Ủy ban nhân dân cấp tỉnh trong quản lý, cập nhật Cơ sở dữ liệu hộ tịch điện tử.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10057": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10059": {
+   "usable": "no",
+   "reason": "luat khong neu den hop nhat lai tai san, chi neu den chấm dứt hiệu lực chia tài sản",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10066": {
+   "usable": "partial",
+   "reason": "luat chỉ quy định hành động của cơ quan thi hành án, không nêu rõ nghĩa vụ của người dân",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10070": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp nghĩa vụ của người bị tố cáo, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10074": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ trách nhiệm chi trả chi phí định giá lại tài sản thuộc người thi hành án",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10075": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp trả lời về nội dung quyền và nghĩa vụ được ghi trong biên bản khi tạm giao quản lý đất đai.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10079": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10081": {
+   "usable": "yes",
+   "reason": "Câu hỏi phản ánh tình huống thực tế, đoạn luật trực tiếp trả lời và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10082": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thủ tục yêu cầu cung cấp thông tin và xử lý khi không hợp tác",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10084": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp về nghĩa vụ thanh toán nợ sau chuyển đổi, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10086": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10088": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ chấp hành viên có thể áp dụng biện pháp bảo vệ tài sản theo yêu cầu của đương sự.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10093": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp tiêu chí, luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10096": {
+   "usable": "yes",
+   "reason": "DOAN LUAT tra loi duoc truc tiep ve cach bồi thường thiệt hại tinh thần khi bị giữ trong trường hợp khẩn cấp",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10098": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10099": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10104": {
+   "usable": "partial",
+   "reason": "Luật đề cập đến hòa giải viên đề xuất UBND cấp xã, không trực tiếp trả lời việc người dân yêu cầu UBND cấp xã",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10105": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thời hạn 03 ngày để hòa giải viên bắt đầu hòa giải.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10111": {
+   "usable": "yes",
+   "reason": "Câu hỏi phản ánh tình huống thực tế, đoạn luật trực tiếp quy định nghĩa vụ thông báo và xử lý tài sản, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10115": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10118": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10119": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp với quy định về xử lý tài sản bảo đảm khi nghĩa vụ đến hạn, luật trả lời trực tiếp",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10124": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10126": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thủ tục chỉ định giám hộ khi chưa mất năng lực hành vi dân sự",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10131": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10132": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ 'nửa tháng là mười lăm ngày'",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10135": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp hướng dẫn cách giải thích điều khoản không rõ ràng trong hợp đồng",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10136": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ về giao dịch do người không có quyền đại diện, bố không phải trả tiền nếu không đồng ý.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10138": {
+   "usable": "partial",
+   "reason": "Câu hỏi thiếu thông tin về sự đồng ý của người chưa thành niên (con trai 16 tuổi) theo quy định tại khoản 3",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10141": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ vợ chồng có thể thỏa thuận chấm dứt hiệu lực chia tài sản theo khoản 2 Điều 38, trực tiếp trả lời câu hỏi.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10142": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp về điều kiện kết hôn trái pháp luật, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10143": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, được trả lời trực tiếp từ đoạn luật và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10144": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10145": {
+   "usable": "yes",
+   "reason": "Câu hỏi mô tả hành vi đe dọa trực tiếp phù hợp với định nghĩa 'cản trở kết hôn' trong đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10150": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nhan dinh truc tiep cau hoi ve viec ap dung nguyen tac co di co lai",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10155": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10157": {
+   "usable": "partial",
+   "reason": "DOAN LUAT không trực tiếp xác định có miễn trừ hay không, mà chỉ nêu điều kiện xác định năng lực pháp lý dựa trên điều ước quốc tế",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10159": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10160": {
+   "usable": "no",
+   "reason": "cau hoi la trich doan luat, khong phai tinh huong thuc te",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10161": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nêu rõ thẩm phán phải hòa giải để vợ chồng đoàn tụ, trực tiếp trả lời câu hỏi về căn cứ pháp lý.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10162": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thẩm quyền tòa án nơi người bị yêu cầu cư trú hoặc làm việc, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10164": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp về quy trình xử lý kháng cáo quá hạn, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10166": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và đủ thông tin trong nội dung được cung cấp.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10167": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, đoạn luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10168": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trực tiếp quy định việc chọn Tòa án khi bất động sản ở nhiều tỉnh",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10169": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10172": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời nội dung thương lượng bồi thường, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10175": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ cách thông báo khi thay đổi kháng cáo trước phiên tòa phúc thẩm.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10176": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10177": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10180": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thời hạn 05 ngày làm việc",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10186": {
+   "usable": "yes",
+   "reason": "Luật cho phép sử dụng giá thị trường hoặc giá chuyển nhượng thực tế khi không có khung giá do nhà nước quy định.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10190": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10192": {
+   "usable": "partial",
+   "reason": "luat co truong hop ngoai le khong duoc dieu chinh",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10198": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10201": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, được trả lời trực tiếp từ đoạn luật, không cần thông tin ngoài.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10203": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ trình độ cần thiết, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10206": {
+   "usable": "partial",
+   "reason": "luat chỉ nêu quyền yêu cầu, không hướng dẫn thủ tục cụ thể",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10211": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10219": {
+   "usable": "no",
+   "reason": "Luật cấm tiếp xúc trước thông báo chính thức, trừ trường hợp đặc biệt không được đề cập trong đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10221": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ thời hạn 30 ngày và hậu quả là tài sản được giao cho người được thi hành án.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10222": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ nghĩa vụ thanh toán lương trong thời gian chờ bố trí công việc",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10223": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, được trả lời trực tiếp từ đoạn luật và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10230": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10232": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10234": {
+   "usable": "yes",
+   "reason": "Câu hỏi trực tiếp được trả lời bởi điều 3 của DOAN LUAT",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10236": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, thông tin trong đoạn luật",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10239": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10240": {
+   "usable": "partial",
+   "reason": "luat khong nhan dinh ve thu tuc nop don",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10241": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trả lời trực tiếp về cách xử lý phần tài sản của người phải thi hành án trong tài sản chung",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10242": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10245": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, đủ thông tin trong đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10250": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật quy định rõ ngày tính là ngày có dấu bưu điện.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10252": {
+   "usable": "no",
+   "reason": "Luật quy định nghĩa vụ của chấp hành viên, không đề cập quyền yêu cầu của người dân",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10253": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trực tiếp trả lời, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10255": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, đoạn luật trả lời trực tiếp về quyền được khôi phục danh dự và bồi thường thiệt hại, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10256": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật trả lời trực tiếp và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10258": {
+   "usable": "yes",
+   "reason": "Câu hỏi phản ánh tình huống thực tế, được trả lời trực tiếp từ đoạn luật và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10261": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, được trả lời trực tiếp từ đoạn luật, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10263": {
+   "usable": "yes",
+   "reason": "DOAN LUAT nhan dinh truc tiep cau hoi ve co quan bao dam theo khoan 5,6 Dieu 19",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10264": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10267": {
+   "usable": "yes",
+   "reason": "DOAN LUAT trả lời trực tiếp về việc cơ quan không thụ lý đơn khi thiệt hại không thuộc phạm vi bồi thường theo Chương II.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10270": {
+   "usable": "yes",
+   "reason": "DOAN LUAT quy định rõ trường hợp tòa cấp sơ thẩm phải bồi thường khi bản án của họ bị hủy và bị cáo được tuyên không có tội",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10271": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, được trả lời trực tiếp từ đoạn luật và không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10274": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật quy định rõ việc bán tài sản có giá trị lớn cần sự đồng ý của cha mẹ, đáp ứng đủ 3 tiêu chí.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10277": {
+   "usable": "yes",
+   "reason": "Câu hỏi phù hợp tiêu chí, luật trực tiếp trả lời về việc không tự nguyện vi phạm quy định.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10280": {
+   "usable": "yes",
+   "reason": "Câu hỏi thực tế, luật trả lời trực tiếp, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  },
+  "EXT10281": {
+   "usable": "yes",
+   "reason": "Câu hỏi là tình huống thực tế, luật quy định trực tiếp cách đăng ký khai sinh cho trẻ sinh ra ở nước ngoài trở về Việt Nam, không cần thông tin ngoài đoạn luật.",
+   "cohort": "ext",
+   "model": "qwen3:14b"
+  }
+ }
+}

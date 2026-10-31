@@ -2,41 +2,58 @@
  "old_gold": {
   "n_questions": 281,
   "hit_at_k": {
-   "1": 0.4448,
-   "3": 0.7082,
-   "5": 0.7865,
+   "1": 0.4484,
+   "3": 0.7153,
+   "5": 0.7936,
    "10": 0.8683
   },
-  "mrr": 0.591
+  "mrr": 0.5957
+ },
+ "new_gold_adjudicated": {
+  "n_questions": 281,
+  "hit_at_k": {
+   "1": 0.484,
+   "3": 0.7295,
+   "5": 0.8078,
+   "10": 0.879
+  },
+  "mrr": 0.6212
  },
  "hybrid_with_old_gold": {
   "hit_at_k": {
-   "1": 0.4021,
-   "3": 0.6584,
-   "5": 0.7295,
-   "10": 0.8185
+   "1": 0.4057,
+   "3": 0.6619,
+   "5": 0.7367,
+   "10": 0.8149
   },
-  "mrr": 0.5449
+  "mrr": 0.548
  },
  "hybrid_with_new_gold": {
   "hit_at_k": {
-   "1": 0.4337,
-   "3": 0.6667,
-   "5": 0.7348,
-   "10": 0.828
+   "1": 0.4413,
+   "3": 0.6726,
+   "5": 0.7438,
+   "10": 0.8256
   },
-  "mrr": 0.565
+  "mrr": 0.5712
  },
  "n_regolded": 38,
- "n_unverifiable_remaining": 2,
- "new_gold_adjudicated": {
-  "n_questions": 279,
-  "hit_at_k": {
-   "1": 0.4803,
-   "3": 0.724,
-   "5": 0.7993,
-   "10": 0.8781
-  },
-  "mrr": 0.6166
+ "n_unverifiable_remaining": 0,
+ "pass3": {
+  "judge": "qwen3:14b",
+  "n_rechecked": 2,
+  "n_regolded": 2
+ },
+ "agreement_audit": {
+  "n": 60,
+  "n_parse_fail": 4,
+  "n_effective": 56,
+  "n_agree_gold": 31,
+  "n_agree_primary": 32,
+  "agreement_rate": 0.5536,
+  "primary_rate": 0.5714,
+  "seed": 20261101,
+  "judge": "qwen3:14b",
+  "protocol": "judge picks the legal basis among stored rerank_top-8; agreement = chosen chunk belongs to the adjudicated gold set"
  }
 }

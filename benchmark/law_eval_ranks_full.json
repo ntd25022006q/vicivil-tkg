@@ -1,42 +1,52 @@
 {
  "n": 281,
  "hit": {
-  "1": 0.452,
-  "3": 0.658,
-  "5": 0.726,
-  "10": 0.794
+  "1": 0.5374,
+  "3": 0.7367,
+  "5": 0.8078,
+  "10": 0.8754
  },
- "mrr": 0.569,
+ "mrr": 0.6586,
  "strat": {
   "verified": {
-   "n": 245,
+   "n": 229,
    "hit": {
-    "1": 0.502,
-    "3": 0.678,
-    "5": 0.731,
-    "10": 0.796,
-    "n": 245
-   }
+    "1": 0.5852,
+    "3": 0.7598,
+    "5": 0.821,
+    "10": 0.8952
+   },
+   "mrr": 0.693
+  },
+  "flagged": {
+   "n": 27,
+   "hit": {
+    "1": 0.4074,
+    "3": 0.5556,
+    "5": 0.6667,
+    "10": 0.7037
+   },
+   "mrr": 0.5196
   },
   "regolded": {
-   "n": 32,
+   "n": 21,
    "hit": {
-    "1": 0.062,
-    "3": 0.531,
-    "5": 0.719,
-    "10": 0.812,
-    "n": 32
-   }
+    "1": 0.2381,
+    "3": 0.7619,
+    "5": 0.8571,
+    "10": 0.9048
+   },
+   "mrr": 0.5101
   },
   "author-verified": {
    "n": 4,
    "hit": {
-    "1": 0.5,
+    "1": 0.25,
     "3": 0.5,
-    "5": 0.5,
-    "10": 0.5,
-    "n": 4
-   }
+    "5": 0.75,
+    "10": 0.75
+   },
+   "mrr": 0.4028
   }
  },
  "per_q": [
@@ -48,7 +58,12 @@
     "BLDS2015|Dieu455|Khoan2",
     "BLDS2015|Dieu312|Khoan4",
     "BLDS2015|Dieu321|Khoan4",
-    "BLDS2015|Dieu456"
+    "BLDS2015|Dieu223",
+    "BLDS2015|Dieu455|Khoan3",
+    "BLDS2015|Dieu456",
+    "BLDS2015|Dieu321|Khoan5",
+    "BLDS2015|Dieu454|Khoan2",
+    "BLDS2015|Dieu404|Khoan3"
    ]
   },
   {
@@ -59,18 +74,28 @@
     "BLDS2015|Dieu324|Khoan2|Diemc",
     "BLDS2015|Dieu311|Khoan2",
     "BLDS2015|Dieu321|Khoan6",
-    "BLDS2015|Dieu323|Khoan5"
+    "BLDS2015|Dieu323|Khoan5",
+    "BLDS2015|Dieu324|Khoan1|Diema",
+    "BLDS2015|Dieu321|Khoan3",
+    "BLDS2015|Dieu324|Khoan2|Diemb",
+    "BLDS2015|Dieu323|Khoan2",
+    "BLDS2015|Dieu318|Khoan4"
    ]
   },
   {
    "qid": "GEN45559",
-   "rank": null,
+   "rank": 12,
    "top": [
     "BLDS2015|Dieu551|Khoan2",
-    "BLDS2015|Dieu551|Khoan1",
-    "BLDS2015|Dieu428|Khoan2",
     "BLDS2015|Dieu550|Khoan1",
-    "BLDS2015|Dieu545|Khoan2"
+    "BLDS2015|Dieu551|Khoan1",
+    "BLDS2015|Dieu553",
+    "BLDS2015|Dieu545|Khoan2",
+    "BLDS2015|Dieu428|Khoan2",
+    "BLDS2015|Dieu481|Khoan2",
+    "BLDS2015|Dieu551|Khoan3",
+    "BLDS2015|Dieu520|Khoan1",
+    "BLDS2015|Dieu547|Khoan3"
    ]
   },
   {
@@ -80,19 +105,29 @@
     "BLDS2015|Dieu672|Khoan1",
     "BLDS2015|Dieu672|Khoan2",
     "HNGD2014|Dieu129|Khoan1",
+    "BLDS2015|Dieu40|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu466|Khoan1|Diemb",
-    "BLDS2015|Dieu40|Khoan2"
+    "BLDS2015|Dieu684",
+    "HNGD2014|Dieu127|Khoan2",
+    "BLDS2015|Dieu687|Khoan2",
+    "THADS2008|Dieu130|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu383"
    ]
   },
   {
    "qid": "GEN28924",
-   "rank": 4,
+   "rank": 2,
    "top": [
-    "BLDS2015|Dieu398|Khoan2|Diema",
-    "BLDS2015|Dieu389|Khoan1|Diemb",
-    "BLDS2015|Dieu398|Khoan2|Diemđ",
+    "BLDS2015|Dieu683|Khoan6",
     "BLDS2015|Dieu420|Khoan1|Diemd",
-    "BLDS2015|Dieu398|Khoan2|Dieme"
+    "BLDS2015|Dieu398|Khoan2|Diema",
+    "BLDS2015|Dieu398|Khoan2|Diemđ",
+    "BLDS2015|Dieu420|Khoan1|Diemc",
+    "BLDS2015|Dieu398|Khoan2|Dieme",
+    "BLDS2015|Dieu389|Khoan1|Diemb",
+    "BLDS2015|Dieu398|Khoan2|Diemd",
+    "BLDS2015|Dieu420|Khoan1|Diemb",
+    "BLDS2015|Dieu403|Khoan1"
    ]
   },
   {
@@ -103,18 +138,28 @@
     "HNGD2014|Dieu67|Khoan2|Diema",
     "HNGD2014|Dieu67|Khoan2|Diemb",
     "BLDS2015|Dieu72|Khoan1",
-    "BLDS2015|Dieu73|Khoan3"
+    "BLDS2015|Dieu73|Khoan3",
+    "BLDS2015|Dieu71|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu393",
+    "BLDS2015|Dieu73|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu395",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu394|Khoan1"
    ]
   },
   {
    "qid": "GEN67567",
-   "rank": 2,
+   "rank": 5,
    "top": [
     "BLDS2015|Dieu420|Khoan3|Diemb",
-    "BLDS2015|Dieu420|Khoan3|Diema",
+    "BLDS2015|Dieu551|Khoan1",
     "BLDS2015|Dieu421|Khoan1",
     "BLDS2015|Dieu474|Khoan2",
-    "BLDS2015|Dieu551|Khoan1"
+    "BLDS2015|Dieu420|Khoan3|Diema",
+    "BLDS2015|Dieu401|Khoan2",
+    "BLDS2015|Dieu428|Khoan3",
+    "BLDS2015|Dieu420|Khoan4",
+    "BLDS2015|Dieu423|Khoan1|Diema",
+    "BLDS2015|Dieu424|Khoan2"
    ]
   },
   {
@@ -123,20 +168,30 @@
    "top": [
     "BLDS2015|Dieu651|Khoan1|Diemc",
     "BLDS2015|Dieu651|Khoan1|Diemb",
-    "BLDS2015|Dieu613",
     "BLDS2015|Dieu615|Khoan4",
-    "TNBTCNN2017|Dieu41|Khoan2|Diema"
+    "BLDS2015|Dieu613",
+    "BLDS2015|Dieu637|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu74|Khoan1",
+    "BLDS2015|Dieu626|Khoan1",
+    "BLDS2015|Dieu651|Khoan3",
+    "BLDS2015|Dieu649",
+    "BLDS2015|Dieu52|Khoan3"
    ]
   },
   {
    "qid": "GEN25779",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "BLDS2015|Dieu477|Khoan2|Diemc",
     "BLDS2015|Dieu477|Khoan2|Diemb",
     "BLDS2015|Dieu477|Khoan2|Diema",
+    "BLDS2015|Dieu477|Khoan2|Diemc",
     "BLDS2015|Dieu477|Khoan1",
-    "BLDS2015|Dieu482|Khoan1"
+    "BLDS2015|Dieu490|Khoan1",
+    "BLDS2015|Dieu482|Khoan1",
+    "BLDS2015|Dieu479|Khoan1",
+    "BLDS2015|Dieu476|Khoan2",
+    "BLDS2015|Dieu477|Khoan3",
+    "BLDS2015|Dieu329|Khoan2"
    ]
   },
   {
@@ -144,10 +199,15 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu101|Khoan2",
-    "BLDS2015|Dieu212|Khoan2",
     "BLDS2015|Dieu101|Khoan1",
+    "BLDS2015|Dieu212|Khoan2",
+    "HNGD2014|Dieu62|Khoan3",
     "HNGD2014|Dieu6",
-    "HNGD2014|Dieu62|Khoan3"
+    "BLDS2015|Dieu241|Khoan4",
+    "HNGD2014|Dieu5|Khoan1",
+    "BLDS2015|Dieu73|Khoan4",
+    "BLDS2015|Dieu664|Khoan1",
+    "BLDS2015|Dieu102|Khoan1"
    ]
   },
   {
@@ -156,31 +216,46 @@
    "top": [
     "BLDS2015|Dieu455|Khoan2",
     "BLDS2015|Dieu455|Khoan1",
-    "BLDS2015|Dieu312|Khoan4",
     "BLDS2015|Dieu455|Khoan3",
-    "BLDS2015|Dieu223"
+    "BLDS2015|Dieu223",
+    "BLDS2015|Dieu312|Khoan4",
+    "ND126_2014|Dieu17|Khoan2",
+    "BLDS2015|Dieu504|Khoan2",
+    "BLDS2015|Dieu535|Khoan2",
+    "BLDS2015|Dieu538|Khoan2",
+    "BLDS2015|Dieu456"
    ]
   },
   {
    "qid": "GEN14471",
-   "rank": 5,
+   "rank": 4,
    "top": [
     "BLDS2015|Dieu229|Khoan2|Diema",
     "BLDS2015|Dieu229|Khoan2|Diemb",
     "BLDS2015|Dieu579|Khoan1",
+    "BLDS2015|Dieu229|Khoan1",
     "BLDS2015|Dieu221|Khoan6",
-    "BLDS2015|Dieu229|Khoan1"
+    "BLDS2015|Dieu230|Khoan1",
+    "BLDS2015|Dieu228|Khoan2",
+    "BLDS2015|Dieu642|Khoan2",
+    "BLDS2015|Dieu240",
+    "BLDS2015|Dieu230|Khoan2|Diemb"
    ]
   },
   {
    "qid": "GEN51489",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "BLDS2015|Dieu318|Khoan1",
     "BLDS2015|Dieu318|Khoan2",
+    "BLDS2015|Dieu318|Khoan1",
     "BLDS2015|Dieu326|Khoan1",
+    "BLDS2015|Dieu110|Khoan3",
     "BLDS2015|Dieu325|Khoan1",
-    "BLDS2015|Dieu225|Khoan1"
+    "BLDS2015|Dieu225|Khoan1",
+    "BLDS2015|Dieu318|Khoan3",
+    "BLDS2015|Dieu110|Khoan2",
+    "BLDS2015|Dieu466|Khoan1",
+    "BLDS2015|Dieu320|Khoan4"
    ]
   },
   {
@@ -190,8 +265,13 @@
     "BLDS2015|Dieu536|Khoan3",
     "BLDS2015|Dieu540|Khoan4",
     "BLDS2015|Dieu541|Khoan2",
+    "BLDS2015|Dieu541|Khoan1",
+    "BLDS2015|Dieu534|Khoan5",
     "BLDS2015|Dieu541|Khoan3",
-    "BLDS2015|Dieu534|Khoan5"
+    "BLDS2015|Dieu527|Khoan3",
+    "BLDS2015|Dieu528|Khoan1",
+    "BLDS2015|Dieu528|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu206|Khoan1"
    ]
   },
   {
@@ -202,18 +282,28 @@
     "BLDS2015|Dieu623|Khoan3",
     "BLDS2015|Dieu623|Khoan1|Diema",
     "BLDS2015|Dieu661",
-    "BLDS2015|Dieu623|Khoan1|Diemb"
+    "BLDS2015|Dieu623|Khoan1|Diemb",
+    "BLDS2015|Dieu614",
+    "BLDS2015|Dieu680|Khoan1",
+    "BLDS2015|Dieu372|Khoan9",
+    "BLDS2015|Dieu611|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu399|Khoan1"
    ]
   },
   {
    "qid": "GEN72269",
-   "rank": 6,
+   "rank": 9,
    "top": [
     "BLDS2015|Dieu638|Khoan5",
-    "BLDS2015|Dieu681|Khoan2|Diemb",
     "BLDS2015|Dieu643|Khoan3",
+    "BLDS2015|Dieu643|Khoan1",
     "BLDS2015|Dieu681|Khoan2|Diema",
-    "BLDS2015|Dieu643|Khoan2|Diema"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu427|Khoan1",
+    "BLDS2015|Dieu681|Khoan2|Diemb",
+    "BLDS2015|Dieu643|Khoan4",
+    "BLDS2015|Dieu643|Khoan2|Diema",
+    "BLDS2015|Dieu681|Khoan2|Diemc",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu427|Khoan2"
    ]
   },
   {
@@ -223,30 +313,45 @@
     "BLDS2015|Dieu539|Khoan4",
     "BLDS2015|Dieu538|Khoan3",
     "BLDS2015|Dieu538|Khoan1",
+    "BLDS2015|Dieu321|Khoan6",
     "BLDS2015|Dieu532|Khoan1",
-    "BLDS2015|Dieu321|Khoan6"
+    "BLDS2015|Dieu533|Khoan2",
+    "BLDS2015|Dieu532|Khoan2",
+    "BLDS2015|Dieu530",
+    "BLDS2015|Dieu536|Khoan3",
+    "BLDS2015|Dieu538|Khoan2"
    ]
   },
   {
    "qid": "GEN96905",
-   "rank": 7,
+   "rank": 4,
    "top": [
-    "BLDS2015|Dieu496|Khoan3",
     "BLDS2015|Dieu466|Khoan4",
+    "BLDS2015|Dieu496|Khoan3",
     "BLDS2015|Dieu466|Khoan5|Diema",
+    "BLDS2015|Dieu466|Khoan1",
+    "BLDS2015|Dieu481|Khoan1",
     "BLDS2015|Dieu494",
-    "BLDS2015|Dieu466|Khoan5|Diemb"
+    "BLDS2015|Dieu466|Khoan5|Diemb",
+    "ND126_2014|Dieu67|Khoan5",
+    "BLDS2015|Dieu466|Khoan2",
+    "BLDS2015|Dieu357|Khoan1"
    ]
   },
   {
    "qid": "GEN15475",
-   "rank": null,
+   "rank": 133,
    "top": [
     "BLDS2015|Dieu403|Khoan1",
     "BLDS2015|Dieu117|Khoan1|Diemc",
     "BLDS2015|Dieu398|Khoan2|Dieme",
     "BLDS2015|Dieu403|Khoan2",
-    "BLDS2015|Dieu630|Khoan1|Diemb"
+    "BLDS2015|Dieu427|Khoan1",
+    "HNGD2014|Dieu50|Khoan1|Diemc",
+    "BLDS2015|Dieu402|Khoan3",
+    "BLDS2015|Dieu402|Khoan4",
+    "BLDS2015|Dieu630|Khoan1|Diemb",
+    "BLDS2015|Dieu458|Khoan2"
    ]
   },
   {
@@ -256,30 +361,45 @@
     "BLDS2015|Dieu546|Khoan2",
     "BLDS2015|Dieu548",
     "BLDS2015|Dieu552|Khoan3",
+    "BLDS2015|Dieu546|Khoan1",
+    "BLDS2015|Dieu546|Khoan6",
+    "BLDS2015|Dieu547|Khoan1",
     "BLDS2015|Dieu544|Khoan1",
-    "BLDS2015|Dieu547|Khoan1"
+    "BLDS2015|Dieu553",
+    "BLDS2015|Dieu546|Khoan5",
+    "BLDS2015|Dieu547|Khoan2"
    ]
   },
   {
    "qid": "GEN34985",
-   "rank": 3,
+   "rank": 4,
    "top": [
     "BLDS2015|Dieu4|Khoan2",
     "BLDS2015|Dieu5|Khoan2",
-    "BLDS2015|Dieu6|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu439|Khoan8",
-    "BLDS2015|Dieu670|Khoan1|Diema"
+    "BLDS2015|Dieu6|Khoan2",
+    "BLDS2015|Dieu12",
+    "HNGD2014|Dieu122|Khoan2",
+    "BLDS2015|Dieu670|Khoan1|Diema",
+    "BLDS2015|Dieu666",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu45|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu459|Khoan2|Diemb"
    ]
   },
   {
    "qid": "GEN56131",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "BLDS2015|Dieu225|Khoan2|Diemb",
     "BLDS2015|Dieu225|Khoan2|Diema",
     "BLDS2015|Dieu225|Khoan3|Diema",
+    "BLDS2015|Dieu225|Khoan2|Diemb",
     "BLDS2015|Dieu225|Khoan2|Diemc",
-    "BLDS2015|Dieu225|Khoan3|Diemb"
+    "BLDS2015|Dieu225|Khoan4",
+    "BLDS2015|Dieu225|Khoan3|Diemb",
+    "BLDS2015|Dieu226|Khoan2|Diemb",
+    "BLDS2015|Dieu226|Khoan2|Diema",
+    "HNGD2014|Dieu59|Khoan4",
+    "BLDS2015|Dieu225|Khoan1"
    ]
   },
   {
@@ -287,10 +407,15 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu34|Khoan2",
-    "BLDS2015|Dieu34|Khoan5",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu394|Khoan1",
+    "BLDS2015|Dieu34|Khoan5",
     "BLDS2015|Dieu34|Khoan4",
-    "BLDS2015|Dieu73|Khoan1"
+    "BLDS2015|Dieu73|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu392|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu392|Khoan1",
+    "HNGD2014|Dieu92",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu395",
+    "BLDS2015|Dieu34|Khoan3"
    ]
   },
   {
@@ -298,10 +423,15 @@
    "rank": 3,
    "top": [
     "BLDS2015|Dieu28|Khoan1|Dieme",
-    "BLDS2015|Dieu28|Khoan1|Diema",
+    "BLDS2015|Dieu28|Khoan1|Diemd",
     "BLDS2015|Dieu28|Khoan1|Diemg",
     "BLDS2015|Dieu28|Khoan3",
-    "BLDS2015|Dieu28|Khoan1|Diemc"
+    "BLDS2015|Dieu28|Khoan1|Diema",
+    "BLDS2015|Dieu28|Khoan1|Diemc",
+    "BLDS2015|Dieu28|Khoan1|Diemb",
+    "BLDS2015|Dieu28|Khoan1|Diemđ",
+    "BLDS2015|Dieu27|Khoan1|Diemg",
+    "BLDS2015|Dieu28|Khoan2"
    ]
   },
   {
@@ -312,7 +442,12 @@
     "BLDS2015|Dieu146|Khoan1|Diemc",
     "BLDS2015|Dieu146|Khoan1|Diemb",
     "BLDS2015|Dieu146|Khoan1|Diemđ",
-    "BLDS2015|Dieu146|Khoan1|Dieme"
+    "BLDS2015|Dieu146|Khoan1|Dieme",
+    "BLDS2015|Dieu146|Khoan1|Diemh",
+    "BLDS2015|Dieu146|Khoan1|Diema",
+    "BLDS2015|Dieu146|Khoan1|Diemg",
+    "BLDS2015|Dieu148|Khoan3",
+    "BLDS2015|Dieu147|Khoan2"
    ]
   },
   {
@@ -321,9 +456,14 @@
    "top": [
     "BLDS2015|Dieu556|Khoan1",
     "BLDS2015|Dieu558|Khoan3",
-    "BLDS2015|Dieu434|Khoan2",
+    "BLDS2015|Dieu470|Khoan1",
     "BLDS2015|Dieu469|Khoan1",
-    "BLDS2015|Dieu469|Khoan2"
+    "BLDS2015|Dieu469|Khoan2",
+    "BLDS2015|Dieu434|Khoan2",
+    "BLDS2015|Dieu559|Khoan2",
+    "BLDS2015|Dieu499|Khoan1",
+    "BLDS2015|Dieu474|Khoan2",
+    "BLDS2015|Dieu554"
    ]
   },
   {
@@ -332,9 +472,14 @@
    "top": [
     "BLDS2015|Dieu99|Khoan3",
     "BLDS2015|Dieu99|Khoan4",
-    "BLDS2015|Dieu100|Khoan2",
     "BLDS2015|Dieu99|Khoan2",
-    "BLDS2015|Dieu100|Khoan1|Diemb"
+    "BLDS2015|Dieu100|Khoan2",
+    "BLDS2015|Dieu100|Khoan1|Diemb",
+    "BLDS2015|Dieu100|Khoan1|Diemc",
+    "BLDS2015|Dieu99|Khoan1",
+    "BLDS2015|Dieu100|Khoan1|Diema",
+    "BLDS2015|Dieu97",
+    "TNBTCNN2017|Dieu73|Khoan2|Diemc"
    ]
   },
   {
@@ -342,10 +487,15 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu502|Khoan1",
-    "BLDS2015|Dieu502|Khoan2",
     "BLDS2015|Dieu504|Khoan2",
+    "BLDS2015|Dieu502|Khoan2",
+    "BLDS2015|Dieu331|Khoan2",
+    "BLDS2015|Dieu455|Khoan2",
+    "THADS2008|Dieu111|Khoan3",
+    "BLDS2015|Dieu453|Khoan2",
+    "THADS2008|Dieu112|Khoan3|Diemd",
     "BLDS2015|Dieu501|Khoan2",
-    "THADS2008|Dieu112|Khoan3|Diemd"
+    "THADS2008|Dieu112|Khoan3|Diemb"
    ]
   },
   {
@@ -356,7 +506,12 @@
     "BLDS2015|Dieu29|Khoan3|Diema",
     "BLDS2015|Dieu29|Khoan2",
     "NCN2010|Dieu24|Khoan3",
-    "BLDS2015|Dieu26|Khoan2"
+    "BLDS2015|Dieu26|Khoan2",
+    "BLDS2015|Dieu29|Khoan1",
+    "BLDS2015|Dieu27|Khoan1|Diemc",
+    "BLDS2015|Dieu28|Khoan1|Diemb",
+    "HNGD2014|Dieu78|Khoan2",
+    "HOTICH2014|Dieu4|Khoan11"
    ]
   },
   {
@@ -367,7 +522,12 @@
     "BLDS2015|Dieu27|Khoan1|Diema",
     "BLDS2015|Dieu27|Khoan1|Diemc",
     "BLDS2015|Dieu27|Khoan1|Diemd",
-    "BLDS2015|Dieu27|Khoan1|Diemg"
+    "BLDS2015|Dieu27|Khoan1|Diemg",
+    "NCN2010|Dieu24|Khoan2",
+    "BLDS2015|Dieu27|Khoan2",
+    "BLDS2015|Dieu27|Khoan3",
+    "BLDS2015|Dieu27|Khoan1|Dieme",
+    "BLDS2015|Dieu28|Khoan1|Diemb"
    ]
   },
   {
@@ -377,8 +537,13 @@
     "BLDS2005|Dieu279",
     "BLDS2005|Dieu274|Khoan1",
     "BLDS2005|Dieu261",
+    "BLDS2005|Dieu273",
     "BLDS2005|Dieu275|Khoan1",
-    "BLDS2005|Dieu273"
+    "BLDS2005|Dieu266|Khoan1",
+    "BLDS2005|Dieu173|Khoan1",
+    "BLDS2005|Dieu265|Khoan1",
+    "BLTTDS2004|Dieu25|Khoan7",
+    "BLDS2005|Dieu272"
    ]
   },
   {
@@ -386,21 +551,31 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu105|Khoan1",
+    "BLTTDS2004|Dieu29|Khoan1|Diema",
+    "BLTTDS2004|Dieu29|Khoan1|Diemc",
+    "BLTTDS2004|Dieu29|Khoan1|Diemđ",
     "HNGD2000|Dieu67|Khoan3",
-    "BLDS2005|Dieu229",
-    "BLDS2005|Dieu227",
-    "BLDS2005|Dieu116"
+    "BLTTDS2004|Dieu29|Khoan1|Diemb",
+    "BLTTDS2004|Dieu29|Khoan2",
+    "BLTTDS2004|Dieu29|Khoan1|Diemn",
+    "BLTTDS2004|Dieu29|Khoan1|Diemo",
+    "BLTTDS2004|Dieu29|Khoan1|Diemh"
    ]
   },
   {
    "qid": "GEN30174",
-   "rank": 10,
+   "rank": 24,
    "top": [
     "BLDS2005|Dieu624",
     "BLDS2005|Dieu617",
+    "BLDS2005|Dieu626",
     "BLDS2005|Dieu627",
+    "BLDS2005|Dieu616",
+    "BLDS2005|Dieu263",
+    "BLDS2005|Dieu618",
+    "BLDS2005|Dieu448|Khoan1",
     "BLDS2005|Dieu614|Khoan1",
-    "BLDS2005|Dieu616"
+    "BLDS2005|Dieu604|Khoan1"
    ]
   },
   {
@@ -408,10 +583,15 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu423|Khoan1",
+    "BLDS2005|Dieu421",
     "BLDS2005|Dieu395",
     "BLDS2005|Dieu408|Khoan1",
+    "BLDS2005|Dieu450",
     "BLDS2005|Dieu664|Khoan1",
-    "BLDS2005|Dieu421"
+    "BLDS2005|Dieu757|Khoan1",
+    "BLDS2005|Dieu392|Khoan1",
+    "BLDS2005|Dieu492",
+    "BLDS2005|Dieu401|Khoan1"
    ]
   },
   {
@@ -420,20 +600,30 @@
    "top": [
     "BLDS2005|Dieu768|Khoan1",
     "BLDS2005|Dieu649",
+    "BLDS2005|Dieu655",
+    "BLDS2005|Dieu656",
     "BLDS2005|Dieu652|Khoan1",
+    "BLDS2005|Dieu658",
+    "BLDS2005|Dieu661|Khoan1",
     "BLDS2005|Dieu653|Khoan1",
-    "BLDS2005|Dieu656"
+    "BLDS2005|Dieu657",
+    "BLDS2005|Dieu662|Khoan1"
    ]
   },
   {
    "qid": "GEN38275",
-   "rank": 7,
+   "rank": 1,
    "top": [
     "BLDS2005|Dieu671|Khoan1",
     "BLDS2005|Dieu670|Khoan1",
+    "HNGD2000|Dieu45|Khoan3",
+    "BLDS2005|Dieu470|Khoan1",
+    "BLDS2005|Dieu637|Khoan1",
     "BLDS2005|Dieu648",
-    "BLDS2005|Dieu667|Khoan1",
-    "BLDS2005|Dieu675|Khoan1"
+    "BLDS2005|Dieu469",
+    "BLDS2005|Dieu468",
+    "BLDS2005|Dieu631",
+    "BLDS2005|Dieu687|Khoan1"
    ]
   },
   {
@@ -441,10 +631,15 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu508|Khoan1",
-    "BLDS2005|Dieu506|Khoan1",
     "BLDS2005|Dieu507",
+    "BLDS2005|Dieu483",
+    "BLDS2005|Dieu486|Khoan1",
     "BLDS2005|Dieu485|Khoan1",
-    "BLDS2005|Dieu483"
+    "BLDS2005|Dieu506|Khoan1",
+    "BLDS2005|Dieu487|Khoan1",
+    "BLDS2005|Dieu511",
+    "BLDS2005|Dieu494",
+    "BLDS2005|Dieu706"
    ]
   },
   {
@@ -453,9 +648,14 @@
    "top": [
     "BLDS2005|Dieu761|Khoan1",
     "BLDS2005|Dieu762|Khoan1",
+    "BLTTDS2004|Dieu407|Khoan1|Diemb",
     "BLDS2005|Dieu765|Khoan1",
+    "BLTTDS2004|Dieu407|Khoan1|Diemd",
+    "BLTTDS2004|Dieu407|Khoan2",
     "BLDS2005|Dieu763|Khoan1",
-    "BLDS2005|Dieu758"
+    "BLTTDS2004|Dieu407|Khoan1|Diema",
+    "BLTTDS2004|Dieu408|Khoan1",
+    "BLTTDS2004|Dieu407|Khoan1|Diemc"
    ]
   },
   {
@@ -465,8 +665,13 @@
     "BLDS2005|Dieu75|Khoan1",
     "BLDS2005|Dieu76",
     "BLDS2005|Dieu77",
+    "BLDS2005|Dieu221",
     "BLDS2005|Dieu223|Khoan1",
-    "BLDS2005|Dieu221"
+    "BLDS2005|Dieu184",
+    "THADS2008|Dieu74|Khoan2|Diema",
+    "THADS2008|Dieu74|Khoan2|Diemb",
+    "BLDS2005|Dieu214",
+    "BLDS2005|Dieu216|Khoan1"
    ]
   },
   {
@@ -474,10 +679,15 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu310|Khoan1",
-    "BLDS2005|Dieu314|Khoan1",
     "BLDS2005|Dieu309|Khoan1",
+    "ND158_2005|Dieu10",
+    "BLDS2005|Dieu316|Khoan1",
+    "BLDS2005|Dieu314|Khoan1",
     "BLDS2005|Dieu311|Khoan1",
-    "BLDS2005|Dieu316|Khoan1"
+    "BLDS2005|Dieu313",
+    "THADS2008|Dieu124|Khoan2",
+    "BLTTDS2004|Dieu350|Khoan3",
+    "BLDS2005|Dieu61"
    ]
   },
   {
@@ -485,10 +695,15 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu309|Khoan1",
-    "BLDS2005|Dieu314|Khoan1",
     "BLDS2005|Dieu312",
     "BLDS2005|Dieu293",
-    "BLDS2005|Dieu299|Khoan1"
+    "ND158_2005|Dieu10",
+    "BLDS2005|Dieu315|Khoan1",
+    "BLDS2005|Dieu314|Khoan1",
+    "BLDS2005|Dieu313",
+    "HNGD2000|Dieu55|Khoan1",
+    "HNGD2000|Dieu50|Khoan1",
+    "HNGD2000|Dieu58|Khoan2"
    ]
   },
   {
@@ -496,10 +711,15 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu710|Khoan1",
-    "BLDS2005|Dieu707",
-    "BLDS2005|Dieu706",
+    "BLDS2005|Dieu712",
     "BLDS2005|Dieu709",
-    "BLDS2005|Dieu712"
+    "BLDS2005|Dieu706",
+    "BLDS2005|Dieu713|Khoan1",
+    "BLDS2005|Dieu345",
+    "BLDS2005|Dieu707",
+    "BLDS2005|Dieu703",
+    "BLDS2005|Dieu708",
+    "BLDS2005|Dieu718"
    ]
   },
   {
@@ -509,19 +729,29 @@
     "BLDS2005|Dieu667|Khoan1",
     "BLDS2005|Dieu662|Khoan1",
     "BLDS2005|Dieu673",
+    "BLDS2005|Dieu675|Khoan1",
+    "BLDS2005|Dieu651|Khoan1",
+    "BLDS2005|Dieu658",
     "BLDS2005|Dieu665|Khoan1",
-    "BLDS2005|Dieu675|Khoan1"
+    "BLDS2005|Dieu652|Khoan1",
+    "BLDS2005|Dieu668",
+    "BLDS2005|Dieu768|Khoan1"
    ]
   },
   {
    "qid": "GEN67362",
-   "rank": 5,
+   "rank": 2,
    "top": [
-    "BLDS2005|Dieu474|Khoan1",
     "BLDS2005|Dieu373",
-    "BLDS2005|Dieu473",
+    "BLDS2005|Dieu479|Khoan1",
+    "BLTTDS2004|Dieu283|Khoan2",
+    "BLDS2005|Dieu474|Khoan1",
     "BLDS2005|Dieu477|Khoan1",
-    "BLDS2005|Dieu479|Khoan1"
+    "BLTTDS2004|Dieu102|Khoan11",
+    "BLDS2005|Dieu478|Khoan1",
+    "BLTTDS2004|Dieu27|Khoan5",
+    "BLTTDS2004|Dieu25|Khoan2",
+    "BLDS2005|Dieu476|Khoan1"
    ]
   },
   {
@@ -529,10 +759,15 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu425|Khoan1",
-    "BLDS2005|Dieu491",
-    "BLDS2005|Dieu511",
     "BLDS2005|Dieu335",
-    "BLDS2005|Dieu83|Khoan1"
+    "BLDS2005|Dieu356",
+    "BLDS2005|Dieu252",
+    "BLDS2005|Dieu511",
+    "BLDS2005|Dieu491",
+    "BLDS2005|Dieu420",
+    "BLDS2005|Dieu83|Khoan1",
+    "BLDS2005|Dieu137|Khoan1",
+    "BLDS2005|Dieu417"
    ]
   },
   {
@@ -540,10 +775,15 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu88|Khoan1",
+    "BLDS2005|Dieu423|Khoan1",
     "BLDS2005|Dieu91|Khoan1",
     "THADS2008|Dieu178|Khoan3",
-    "BLDS2005|Dieu98|Khoan1",
-    "BLDS2005|Dieu423|Khoan1"
+    "BLTTDS2004|Dieu43|Khoan2",
+    "BLDS2005|Dieu11",
+    "BLTTDS2004|Dieu81",
+    "THADS2008|Dieu153|Khoan7",
+    "THADS2008|Dieu151|Khoan7",
+    "BLDS2005|Dieu89|Khoan1"
    ]
   },
   {
@@ -552,9 +792,14 @@
    "top": [
     "BLDS2005|Dieu120|Khoan1",
     "THADS2008|Dieu139",
-    "BLDS2005|Dieu119|Khoan1",
     "BLDS2005|Dieu117|Khoan1",
-    "THADS2008|Dieu54|Khoan1|Diemd"
+    "BLDS2005|Dieu119|Khoan1",
+    "THADS2008|Dieu54|Khoan1|Diemd",
+    "BLTTDS2004|Dieu62|Khoan2|Diema",
+    "BLDS2005|Dieu387",
+    "BLDS2005|Dieu113|Khoan1",
+    "BLDS2005|Dieu383",
+    "BLDS2005|Dieu114|Khoan1"
    ]
   },
   {
@@ -563,9 +808,14 @@
    "top": [
     "BLDS2005|Dieu262|Khoan1",
     "BLDS2005|Dieu194|Khoan1",
-    "BLDS2005|Dieu169|Khoan1",
     "BLDS2005|Dieu273",
-    "BLDS2005|Dieu517"
+    "BLDS2005|Dieu256",
+    "BLTTDS2004|Dieu25|Khoan2",
+    "BLDS2005|Dieu169|Khoan1",
+    "BLTTDS2004|Dieu102|Khoan11",
+    "BLDS2005|Dieu614|Khoan1",
+    "BLDS2005|Dieu257",
+    "BLDS2005|Dieu602"
    ]
   },
   {
@@ -574,9 +824,14 @@
    "top": [
     "BLDS2005|Dieu407|Khoan1",
     "BLDS2005|Dieu408|Khoan1",
-    "BLDS2005|Dieu157|Khoan1",
-    "BLDS2005|Dieu410|Khoan1",
-    "BLDS2005|Dieu466"
+    "BLTTDS2004|Dieu25|Khoan3",
+    "BLTTDS2004|Dieu92|Khoan3",
+    "BLTTDS2004|Dieu382|Khoan2",
+    "BLDS2005|Dieu312",
+    "BLDS2005|Dieu405",
+    "BLDS2005|Dieu368|Khoan1",
+    "BLTTDS2004|Dieu317|Khoan1",
+    "BLTTDS2004|Dieu25|Khoan6"
    ]
   },
   {
@@ -584,21 +839,31 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu614|Khoan1",
-    "BLDS2005|Dieu262|Khoan1",
+    "BLDS2005|Dieu617",
     "BLDS2005|Dieu613|Khoan1",
+    "BLDS2005|Dieu262|Khoan1",
+    "BLDS2005|Dieu618",
+    "BLTTDS2004|Dieu101|Khoan2|Diemc",
     "BLDS2005|Dieu605|Khoan1",
-    "BLDS2005|Dieu615|Khoan1"
+    "BLDS2005|Dieu622",
+    "BLTTDS2004|Dieu105",
+    "BLDS2005|Dieu616"
    ]
   },
   {
    "qid": "GEN18692",
-   "rank": 2,
+   "rank": 3,
    "top": [
     "BLDS2005|Dieu430|Khoan1",
     "BLDS2005|Dieu444|Khoan1",
     "BLDS2005|Dieu447|Khoan1",
-    "BLDS2005|Dieu289|Khoan1",
-    "BLDS2005|Dieu551"
+    "BLDS2005|Dieu446",
+    "BLDS2005|Dieu460|Khoan1",
+    "BLDS2005|Dieu551",
+    "BLDS2005|Dieu552",
+    "BLDS2005|Dieu630",
+    "BLDS2005|Dieu436|Khoan1",
+    "BLDS2005|Dieu557|Khoan1"
    ]
   },
   {
@@ -606,10 +871,15 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu763|Khoan1",
-    "BLDS2005|Dieu62|Khoan1",
-    "THADS2008|Dieu141|Khoan2",
     "BLDS2005|Dieu21",
-    "BLDS2005|Dieu130"
+    "THADS2008|Dieu141|Khoan2",
+    "BLTTDS2004|Dieu57|Khoan4",
+    "BLTTDS2004|Dieu407|Khoan2",
+    "BLDS2005|Dieu130",
+    "HNGD2000|Dieu10|Khoan2",
+    "BLTTDS2004|Dieu319|Khoan2",
+    "BLTTDS2004|Dieu321|Khoan2",
+    "BLTTDS2004|Dieu407|Khoan1|Diemd"
    ]
   },
   {
@@ -618,31 +888,46 @@
    "top": [
     "BLDS2005|Dieu290|Khoan1",
     "BLDS2005|Dieu474|Khoan1",
-    "BLDS2005|Dieu438|Khoan1",
     "BLDS2005|Dieu471",
-    "BLDS2005|Dieu489|Khoan1"
+    "BLDS2005|Dieu438|Khoan1",
+    "BLDS2005|Dieu478|Khoan1",
+    "BLDS2005|Dieu489|Khoan1",
+    "BLDS2005|Dieu477|Khoan1",
+    "BLDS2005|Dieu709",
+    "BLDS2005|Dieu453",
+    "HNGD2000|Dieu83|Khoan1"
    ]
   },
   {
    "qid": "GEN52565",
-   "rank": 4,
+   "rank": null,
    "top": [
+    "ND158_2005|Dieu10",
+    "BLTTDS2004|Dieu417|Khoan2",
     "HNGD2000|Dieu24|Khoan1",
-    "BLDS2005|Dieu310|Khoan1",
-    "THADS2008|Dieu44|Khoan1",
-    "BLDS2005|Dieu309|Khoan1",
-    "BLDS2005|Dieu585"
+    "HNGD2000|Dieu83|Khoan1",
+    "HNGD2000|Dieu83|Khoan2",
+    "BLDS2005|Dieu585",
+    "HNGD2000|Dieu58|Khoan1",
+    "HNGD2000|Dieu58|Khoan2",
+    "HNGD2000|Dieu8|Khoan13",
+    "THADS2008|Dieu37|Khoan3|Diema"
    ]
   },
   {
    "qid": "GEN48222",
-   "rank": 3,
+   "rank": 2,
    "top": [
     "BLDS2005|Dieu665|Khoan1",
-    "BLDS2005|Dieu672|Khoan1",
     "BLDS2005|Dieu666|Khoan1",
+    "BLDS2005|Dieu672|Khoan1",
+    "BLDS2005|Dieu649",
+    "BLDS2005|Dieu657",
     "BLDS2005|Dieu662|Khoan1",
-    "BLDS2005|Dieu658"
+    "BLDS2005|Dieu658",
+    "HNGD2000|Dieu58|Khoan1",
+    "BLDS2005|Dieu673",
+    "BLDS2005|Dieu656"
    ]
   },
   {
@@ -653,7 +938,12 @@
     "BLDS2005|Dieu104|Khoan1",
     "BLDS2005|Dieu100|Khoan1",
     "BLDS2005|Dieu230",
-    "BLDS2005|Dieu232"
+    "BLDS2005|Dieu232",
+    "BLDS2005|Dieu231",
+    "BLDS2005|Dieu227",
+    "BLDS2005|Dieu372",
+    "BLDS2005|Dieu229",
+    "BLDS2005|Dieu102|Khoan1"
    ]
   },
   {
@@ -663,30 +953,45 @@
     "BLDS2005|Dieu555|Khoan1",
     "BLDS2005|Dieu553",
     "BLDS2005|Dieu550",
+    "BLDS2005|Dieu554",
     "BLDS2005|Dieu552",
-    "BLDS2005|Dieu554"
+    "BLDS2005|Dieu557|Khoan1",
+    "BLDS2005|Dieu306",
+    "BLDS2005|Dieu551",
+    "BLDS2005|Dieu305|Khoan1",
+    "BLDS2005|Dieu565"
    ]
   },
   {
    "qid": "GEN28619",
-   "rank": 2,
+   "rank": 1,
    "top": [
     "BLDS2005|Dieu431|Khoan1",
     "BLDS2005|Dieu524|Khoan1",
     "THADS2008|Dieu98|Khoan3|Diema",
+    "THADS2008|Dieu98|Khoan3|Diemb",
+    "BLDS2005|Dieu505",
     "BLDS2005|Dieu409|Khoan1",
-    "BLDS2005|Dieu408|Khoan1"
+    "BLDS2005|Dieu458|Khoan6",
+    "BLDS2005|Dieu354|Khoan1",
+    "BLDS2005|Dieu504",
+    "BLDS2005|Dieu348|Khoan1"
    ]
   },
   {
    "qid": "GEN40699",
-   "rank": 1,
+   "rank": 3,
    "top": [
-    "BLDS2005|Dieu107|Khoan1",
+    "ND158_2005|Dieu10",
     "HNGD2000|Dieu83|Khoan1",
+    "BLDS2005|Dieu107|Khoan1",
+    "HNGD2000|Dieu83|Khoan2",
     "BLDS2005|Dieu185|Khoan1",
-    "BLDS2005|Dieu144|Khoan1",
-    "BLDS2005|Dieu184"
+    "BLDS2005|Dieu198",
+    "BLDS2005|Dieu184",
+    "BLTTDS2004|Dieu213|Khoan6",
+    "HNGD2000|Dieu58|Khoan1",
+    "ND158_2005|Dieu15|Khoan1"
    ]
   },
   {
@@ -697,18 +1002,28 @@
     "BLDS2005|Dieu753|Khoan1",
     "BLDS2005|Dieu755|Khoan1",
     "BLDS2005|Dieu776",
-    "BLDS2005|Dieu754"
+    "BLDS2005|Dieu754",
+    "HNGD2000|Dieu12",
+    "BLTTDS2004|Dieu25|Khoan4",
+    "BLDS2005|Dieu316|Khoan1",
+    "ND158_2005|Dieu53",
+    "ND158_2005|Dieu4|Khoan2"
    ]
   },
   {
    "qid": "GEN86368",
-   "rank": 4,
+   "rank": 8,
    "top": [
     "BLDS2005|Dieu461|Khoan1",
     "BLDS2005|Dieu436|Khoan1",
+    "HNGD2000|Dieu83|Khoan2",
+    "HNGD2000|Dieu83|Khoan1",
+    "BLDS2005|Dieu305|Khoan1",
     "BLDS2005|Dieu576|Khoan1",
+    "BLDS2005|Dieu306",
     "BLDS2005|Dieu438|Khoan1",
-    "BLDS2005|Dieu453"
+    "BLDS2005|Dieu369",
+    "HNGD2000|Dieu71|Khoan2"
    ]
   },
   {
@@ -716,21 +1031,31 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu103|Khoan1",
+    "BLDS2005|Dieu89|Khoan1",
     "BLDS2005|Dieu88|Khoan1",
-    "BLDS2005|Dieu230",
+    "BLDS2005|Dieu593|Khoan1",
     "BLDS2005|Dieu104|Khoan1",
-    "BLDS2005|Dieu227"
+    "BLTTDS2004|Dieu30|Khoan4",
+    "BLDS2005|Dieu100|Khoan1",
+    "BLTTDS2004|Dieu408|Khoan2",
+    "THADS2008|Dieu10",
+    "BLDS2005|Dieu11"
    ]
   },
   {
    "qid": "GEN29504",
-   "rank": 3,
+   "rank": 2,
    "top": [
     "BLDS2005|Dieu354|Khoan1",
-    "BLDS2005|Dieu349|Khoan5",
     "BLDS2005|Dieu349|Khoan2",
+    "BLDS2005|Dieu349|Khoan5",
+    "BLDS2005|Dieu356",
     "BLDS2005|Dieu357",
-    "BLDS2005|Dieu352|Khoan1"
+    "BLDS2005|Dieu346|Khoan1",
+    "BLDS2005|Dieu342|Khoan1",
+    "BLDS2005|Dieu352|Khoan1",
+    "BLDS2005|Dieu348|Khoan1",
+    "BLDS2005|Dieu350"
    ]
   },
   {
@@ -739,20 +1064,30 @@
    "top": [
     "BLDS2005|Dieu157|Khoan1",
     "BLDS2005|Dieu160",
+    "BLDS2005|Dieu24",
+    "BLDS2005|Dieu16",
+    "BLTTDS2004|Dieu101|Khoan2|Diemc",
+    "BLTTDS2004|Dieu101|Khoan2|Diemb",
+    "HNGD2000|Dieu61|Khoan7",
+    "BLTTDS2004|Dieu101|Khoan1",
     "BLDS2005|Dieu158|Khoan1",
-    "BLDS2005|Dieu760|Khoan1",
-    "BLDS2005|Dieu675|Khoan1"
+    "BLTTDS2004|Dieu117|Khoan1|Dieme"
    ]
   },
   {
    "qid": "GEN64020",
-   "rank": 2,
+   "rank": 3,
    "top": [
-    "BLDS2005|Dieu240",
-    "BLDS2005|Dieu216|Khoan1",
     "BLDS2005|Dieu225|Khoan1",
     "HNGD2000|Dieu99",
-    "BLDS2005|Dieu223|Khoan1"
+    "BLDS2005|Dieu216|Khoan1",
+    "BLDS2005|Dieu223|Khoan1",
+    "BLDS2005|Dieu222|Khoan1",
+    "BLDS2005|Dieu224|Khoan1",
+    "BLDS2005|Dieu217|Khoan1",
+    "HNGD2000|Dieu98",
+    "THADS2008|Dieu74|Khoan1",
+    "THADS2008|Dieu95|Khoan2"
    ]
   },
   {
@@ -762,8 +1097,13 @@
     "BLDS2005|Dieu647|Khoan1",
     "BLDS2005|Dieu652|Khoan1",
     "BLDS2005|Dieu654",
+    "BLDS2005|Dieu649",
+    "BLDS2005|Dieu657",
     "BLDS2005|Dieu662|Khoan1",
-    "BLDS2005|Dieu649"
+    "BLDS2005|Dieu656",
+    "BLDS2005|Dieu661|Khoan1",
+    "BLDS2005|Dieu651|Khoan1",
+    "BLDS2005|Dieu20|Khoan1"
    ]
   },
   {
@@ -773,8 +1113,13 @@
     "BLDS2005|Dieu295|Khoan1",
     "BLDS2005|Dieu314|Khoan1",
     "BLDS2005|Dieu299|Khoan1",
+    "BLDS2005|Dieu280",
     "BLDS2005|Dieu420",
-    "BLDS2005|Dieu361"
+    "BLDS2005|Dieu287|Khoan1",
+    "BLDS2005|Dieu361",
+    "BLDS2005|Dieu304|Khoan1",
+    "BLDS2005|Dieu285|Khoan1",
+    "BLDS2005|Dieu300|Khoan1"
    ]
   },
   {
@@ -782,21 +1127,31 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu73|Khoan1",
+    "ND158_2005|Dieu31|Khoan2",
+    "ND158_2005|Dieu31|Khoan3",
     "BLDS2005|Dieu72",
+    "ND158_2005|Dieu31|Khoan1",
     "BLDS2005|Dieu68",
+    "BLDS2005|Dieu148|Khoan1",
     "BLDS2005|Dieu71|Khoan1",
-    "BLDS2005|Dieu148|Khoan1"
+    "BLDS2005|Dieu383",
+    "BLDS2005|Dieu120|Khoan1"
    ]
   },
   {
    "qid": "GEN67578",
-   "rank": 4,
+   "rank": 6,
    "top": [
-    "BLDS2015|Dieu73|Khoan4",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu28|Khoan8",
+    "BLDS2015|Dieu73|Khoan4",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu28|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu29|Khoan8",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu397|Khoan2",
     "HNGD2014|Dieu60|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu29|Khoan8"
+    "ND126_2014|Dieu1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu36|Khoan4",
+    "HNGD2014|Dieu12|Khoan2",
+    "HNGD2014|Dieu123|Khoan2"
    ]
   },
   {
@@ -806,52 +1161,77 @@
     "HNGD2014|Dieu76|Khoan3",
     "HNGD2014|Dieu76|Khoan4",
     "HNGD2014|Dieu76|Khoan2",
+    "HNGD2014|Dieu77|Khoan1",
     "HNGD2014|Dieu87|Khoan2|Diemc",
-    "HNGD2014|Dieu77|Khoan1"
+    "HNGD2014|Dieu87|Khoan2|Diema",
+    "HNGD2014|Dieu87|Khoan2|Diemb",
+    "HNGD2014|Dieu87|Khoan1",
+    "HNGD2014|Dieu76|Khoan1",
+    "NCN2010|Dieu24|Khoan4"
    ]
   },
   {
    "qid": "GEN27762",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "BLDS2015|Dieu27|Khoan1|Diemb",
     "HNGD2014|Dieu84|Khoan1",
+    "HNGD2014|Dieu82|Khoan3",
+    "HNGD2014|Dieu86|Khoan1",
+    "HNGD2014|Dieu89|Khoan2",
+    "NCN2010|Dieu24|Khoan4",
     "BLDS2015|Dieu28|Khoan1|Diemb",
-    "BLDS2015|Dieu27|Khoan1|Diemc",
-    "HNGD2014|Dieu82|Khoan3"
+    "HNGD2014|Dieu78|Khoan1",
+    "HNGD2014|Dieu84|Khoan4",
+    "BLDS2015|Dieu27|Khoan1|Diemb",
+    "HNGD2014|Dieu78|Khoan3"
    ]
   },
   {
    "qid": "GEN42951",
-   "rank": null,
+   "rank": 21,
    "top": [
     "HNGD2014|Dieu99|Khoan2",
     "NCN2010|Dieu16",
+    "NCN2010|Dieu28|Khoan3",
     "NCN2010|Dieu36|Khoan4",
+    "NCN2010|Dieu8|Khoan4",
     "NCN2010|Dieu21|Khoan1",
-    "NCN2010|Dieu28|Khoan3"
+    "NCN2010|Dieu13|Khoan6",
+    "NCN2010|Dieu5|Khoan2",
+    "HNGD2014|Dieu97|Khoan1",
+    "NCN2010|Dieu15|Khoan2|Diemb"
    ]
   },
   {
    "qid": "GEN33568",
-   "rank": 7,
+   "rank": 11,
    "top": [
     "BLDS2015|Dieu564|Khoan1|Diemb",
     "BLDS2015|Dieu138|Khoan1",
+    "BLDS2015|Dieu331|Khoan1",
+    "BLDS2015|Dieu564|Khoan1|Diema",
+    "ND126_2014|Dieu44|Khoan2",
+    "BLDS2015|Dieu444|Khoan1",
+    "HNGD2014|Dieu44|Khoan2",
     "HNGD2014|Dieu112",
-    "HNGD2014|Dieu105",
-    "BLDS2015|Dieu564|Khoan1|Diema"
+    "BLDS2015|Dieu430",
+    "HNGD2014|Dieu105"
    ]
   },
   {
    "qid": "GEN50764",
-   "rank": 1,
+   "rank": 2,
    "top": [
+    "HNGD2014|Dieu73|Khoan3",
     "HNGD2014|Dieu73|Khoan4",
     "HNGD2014|Dieu87|Khoan2|Diemc",
-    "HNGD2014|Dieu73|Khoan3",
+    "HNGD2014|Dieu73|Khoan2",
     "HNGD2014|Dieu87|Khoan2|Diema",
-    "HNGD2014|Dieu110"
+    "HNGD2014|Dieu76|Khoan4",
+    "BLDS2015|Dieu136|Khoan1",
+    "HNGD2014|Dieu87|Khoan2|Diemb",
+    "HNGD2014|Dieu110",
+    "HNGD2014|Dieu68|Khoan4"
    ]
   },
   {
@@ -859,32 +1239,47 @@
    "rank": 1,
    "top": [
     "HNGD2014|Dieu46|Khoan3",
-    "HNGD2014|Dieu59|Khoan4",
     "HNGD2014|Dieu46|Khoan1",
+    "HNGD2014|Dieu59|Khoan4",
     "HNGD2014|Dieu46|Khoan2",
-    "HNGD2014|Dieu44|Khoan1"
+    "HNGD2014|Dieu44|Khoan1",
+    "HNGD2014|Dieu36",
+    "BLDS2015|Dieu219|Khoan2",
+    "HNGD2014|Dieu37|Khoan4",
+    "HNGD2014|Dieu44|Khoan3",
+    "HNGD2014|Dieu75|Khoan1"
    ]
   },
   {
    "qid": "GEN95410",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "HNGD2014|Dieu126|Khoan1",
     "HNGD2014|Dieu122|Khoan2",
+    "ND126_2014|Dieu23|Khoan4",
+    "HNGD2014|Dieu126|Khoan1",
     "HNGD2014|Dieu122|Khoan1",
+    "ND126_2014|Dieu36|Khoan1|Diema",
     "HNGD2014|Dieu130",
-    "BLDS2015|Dieu670|Khoan1|Diema"
+    "HOTICH2014|Dieu37|Khoan2",
+    "HNGD2014|Dieu126|Khoan2",
+    "ND126_2014|Dieu43|Khoan1|Diemc",
+    "BLDS2015|Dieu670|Khoan2"
    ]
   },
   {
    "qid": "GEN56666",
-   "rank": null,
+   "rank": 18,
    "top": [
     "BLDS2015|Dieu219|Khoan1",
+    "BLDS2015|Dieu506|Khoan3",
+    "BLDS2015|Dieu219|Khoan2",
+    "ND126_2014|Dieu14|Khoan1",
+    "BLDS2015|Dieu220|Khoan1",
     "HNGD2014|Dieu40|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu165|Khoan2",
-    "BLDS2015|Dieu219|Khoan2",
-    "BLDS2015|Dieu506|Khoan3"
+    "ND126_2014|Dieu12|Khoan3",
+    "BLDS2015|Dieu213|Khoan4",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu153|Khoan2"
    ]
   },
   {
@@ -894,19 +1289,29 @@
     "HNGD2014|Dieu24|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu207|Khoan3",
     "HNGD2014|Dieu56|Khoan1",
+    "HNGD2014|Dieu56|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemh",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu379"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu379",
+    "BLDS2015|Dieu53|Khoan1",
+    "BLDS2015|Dieu68|Khoan2",
+    "HNGD2014|Dieu51|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemi"
    ]
   },
   {
    "qid": "GEN35982",
-   "rank": 3,
+   "rank": 5,
    "top": [
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu187|Khoan5",
     "HNGD2014|Dieu5|Khoan1",
     "HNGD2014|Dieu5|Khoan4",
+    "ND126_2014|Dieu67|Khoan1",
     "HNGD2014|Dieu2|Khoan4",
-    "HNGD2014|Dieu3|Khoan3",
-    "HNGD2014|Dieu103|Khoan1"
+    "HNGD2014|Dieu103|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu187|Khoan1",
+    "HNGD2014|Dieu70|Khoan3",
+    "BLDS2015|Dieu39|Khoan1",
+    "HNGD2014|Dieu18"
    ]
   },
   {
@@ -917,29 +1322,44 @@
     "HNGD2014|Dieu104|Khoan1",
     "HNGD2014|Dieu113|Khoan1",
     "HNGD2014|Dieu104|Khoan2",
-    "HNGD2014|Dieu114|Khoan1"
+    "HNGD2014|Dieu114|Khoan1",
+    "HNGD2014|Dieu114|Khoan2",
+    "HNGD2014|Dieu111",
+    "HNGD2014|Dieu69|Khoan2",
+    "HNGD2014|Dieu71|Khoan1",
+    "HNGD2014|Dieu110"
    ]
   },
   {
    "qid": "GEN87544",
-   "rank": 5,
+   "rank": 7,
    "top": [
     "HNGD2014|Dieu17",
-    "HNGD2014|Dieu15",
+    "HNGD2014|Dieu29|Khoan1",
+    "BLDS2015|Dieu73|Khoan4",
     "HNGD2014|Dieu80",
+    "HNGD2014|Dieu23",
+    "HNGD2014|Dieu15",
+    "HNGD2014|Dieu3|Khoan3",
     "HNGD2014|Dieu14|Khoan1",
-    "HNGD2014|Dieu3|Khoan3"
+    "HNGD2014|Dieu18",
+    "HNGD2014|Dieu21"
    ]
   },
   {
    "qid": "GEN37968",
-   "rank": 3,
+   "rank": 2,
    "top": [
-    "HOTICH2014|Dieu4|Khoan7",
     "HNGD2014|Dieu8|Khoan1|Diema",
     "HNGD2014|Dieu8|Khoan1|Diemb",
     "HNGD2014|Dieu8|Khoan1|Diemc",
-    "HNGD2014|Dieu8|Khoan1|Diemd"
+    "HNGD2014|Dieu8|Khoan1|Diemd",
+    "ND126_2014|Dieu67|Khoan1",
+    "HOTICH2014|Dieu38|Khoan3",
+    "HNGD2014|Dieu3|Khoan5",
+    "HNGD2014|Dieu15",
+    "ND126_2014|Dieu24|Khoan4",
+    "HNGD2014|Dieu3|Khoan8"
    ]
   },
   {
@@ -950,7 +1370,12 @@
     "HNGD2014|Dieu98|Khoan2",
     "HNGD2014|Dieu95|Khoan3|Diemc",
     "HNGD2014|Dieu95|Khoan3|Diemb",
-    "HNGD2014|Dieu95|Khoan3|Diema"
+    "HNGD2014|Dieu95|Khoan3|Diema",
+    "HNGD2014|Dieu95|Khoan3|Diemđ",
+    "HNGD2014|Dieu95|Khoan3|Diemd",
+    "HNGD2014|Dieu97|Khoan1",
+    "HNGD2014|Dieu97|Khoan4",
+    "HNGD2014|Dieu96|Khoan1|Diemc"
    ]
   },
   {
@@ -959,9 +1384,14 @@
    "top": [
     "HNGD2014|Dieu98|Khoan5",
     "HNGD2014|Dieu97|Khoan5",
-    "HNGD2014|Dieu97|Khoan1",
     "HNGD2014|Dieu98|Khoan3",
-    "HNGD2014|Dieu96|Khoan1|Diemc"
+    "HNGD2014|Dieu97|Khoan1",
+    "HNGD2014|Dieu96|Khoan1|Diemc",
+    "HNGD2014|Dieu99|Khoan2",
+    "HNGD2014|Dieu95|Khoan3|Diema",
+    "HNGD2014|Dieu95|Khoan2|Diemc",
+    "HNGD2014|Dieu98|Khoan4",
+    "HNGD2014|Dieu95|Khoan2|Diemb"
    ]
   },
   {
@@ -970,20 +1400,30 @@
    "top": [
     "HNGD2014|Dieu119|Khoan1",
     "HNGD2014|Dieu119|Khoan2|Diema",
-    "HNGD2014|Dieu119|Khoan2|Diemb",
+    "HNGD2014|Dieu119|Khoan2|Diemd",
     "HNGD2014|Dieu119|Khoan3",
-    "HNGD2014|Dieu119|Khoan2|Diemc"
+    "HNGD2014|Dieu119|Khoan2|Diemb",
+    "HNGD2014|Dieu119|Khoan2|Diemc",
+    "HNGD2014|Dieu107|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu116",
+    "HNGD2014|Dieu116|Khoan1",
+    "HNGD2014|Dieu111"
    ]
   },
   {
    "qid": "GEN88877",
-   "rank": 4,
+   "rank": 5,
    "top": [
     "HNGD2014|Dieu95|Khoan2|Diemb",
+    "HNGD2014|Dieu95|Khoan2|Diemc",
     "HNGD2014|Dieu95|Khoan2|Diema",
     "HNGD2014|Dieu95|Khoan3|Diema",
     "HNGD2014|Dieu95|Khoan3|Diemd",
-    "HNGD2014|Dieu95|Khoan2|Diemc"
+    "HNGD2014|Dieu97|Khoan1",
+    "HNGD2014|Dieu96|Khoan1|Diemc",
+    "HNGD2014|Dieu3|Khoan22",
+    "HNGD2014|Dieu96|Khoan1|Diemd",
+    "HNGD2014|Dieu96|Khoan2"
    ]
   },
   {
@@ -991,10 +1431,15 @@
    "rank": 1,
    "top": [
     "HNGD2014|Dieu26|Khoan1",
-    "HNGD2014|Dieu24|Khoan1",
     "HNGD2014|Dieu26|Khoan2",
+    "HNGD2014|Dieu24|Khoan1",
+    "ND126_2014|Dieu12|Khoan2",
     "HNGD2014|Dieu34|Khoan1",
-    "HNGD2014|Dieu24|Khoan3"
+    "ND126_2014|Dieu15|Khoan1|Diema",
+    "HNGD2014|Dieu24|Khoan3",
+    "ND126_2014|Dieu15|Khoan1|Diemb",
+    "HNGD2014|Dieu34|Khoan2",
+    "ND126_2014|Dieu15|Khoan1|Diemc"
    ]
   },
   {
@@ -1002,21 +1447,31 @@
    "rank": 1,
    "top": [
     "HNGD2014|Dieu101|Khoan1",
-    "HNGD2014|Dieu101|Khoan2",
+    "HNGD2014|Dieu102|Khoan1",
     "HNGD2014|Dieu128|Khoan1",
+    "HNGD2014|Dieu101|Khoan2",
+    "HOTICH2014|Dieu25|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu28|Khoan4",
+    "ND126_2014|Dieu31|Khoan1",
     "HOTICH2014|Dieu25|Khoan2",
-    "HNGD2014|Dieu102|Khoan1"
+    "HOTICH2014|Dieu49|Khoan1",
+    "ND126_2014|Dieu30|Khoan1"
    ]
   },
   {
    "qid": "GEN69613",
-   "rank": 3,
+   "rank": 1,
    "top": [
+    "HNGD2014|Dieu73|Khoan2",
     "HNGD2014|Dieu86|Khoan1",
     "HNGD2014|Dieu110",
-    "HNGD2014|Dieu73|Khoan2",
+    "HNGD2014|Dieu71|Khoan1",
     "HNGD2014|Dieu87|Khoan2|Diemc",
-    "HNGD2014|Dieu71|Khoan1"
+    "BLDS2015|Dieu136|Khoan1",
+    "HNGD2014|Dieu70|Khoan3",
+    "HNGD2014|Dieu87|Khoan1",
+    "HNGD2014|Dieu68|Khoan4",
+    "HNGD2014|Dieu87|Khoan2|Diema"
    ]
   },
   {
@@ -1027,7 +1482,12 @@
     "BLDS2015|Dieu385",
     "BLDS2015|Dieu562",
     "BLDS2015|Dieu455|Khoan1",
-    "BLDS2015|Dieu542"
+    "BLDS2015|Dieu522",
+    "BLDS2015|Dieu542",
+    "BLDS2015|Dieu513",
+    "BLDS2015|Dieu418|Khoan1",
+    "BLDS2015|Dieu399",
+    "BLDS2015|Dieu530"
    ]
   },
   {
@@ -1036,9 +1496,14 @@
    "top": [
     "BLDS2015|Dieu647|Khoan2",
     "BLDS2015|Dieu656|Khoan1|Diema",
-    "BLDS2015|Dieu641|Khoan3|Diemc",
+    "BLDS2015|Dieu657|Khoan1",
+    "BLDS2015|Dieu656|Khoan1|Diemb",
+    "BLDS2015|Dieu659|Khoan1",
     "BLDS2015|Dieu634",
-    "BLDS2015|Dieu656|Khoan1|Diemb"
+    "BLDS2015|Dieu645|Khoan1",
+    "BLDS2015|Dieu641|Khoan3|Diemc",
+    "BLDS2015|Dieu616|Khoan2",
+    "BLDS2015|Dieu647|Khoan3"
    ]
   },
   {
@@ -1047,31 +1512,46 @@
    "top": [
     "BLDS2015|Dieu75|Khoan3",
     "BLDS2015|Dieu76|Khoan3",
-    "BLDS2015|Dieu84|Khoan4",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu415",
-    "TNBTCNN2017|Dieu18|Khoan9"
+    "BLDS2015|Dieu84|Khoan4",
+    "TNBTCNN2017|Dieu18|Khoan9",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu67|Khoan3",
+    "BLDS2015|Dieu3|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu31|Khoan2",
+    "ND126_2014|Dieu57|Khoan2",
+    "BLDS2015|Dieu62|Khoan2"
    ]
   },
   {
    "qid": "GEN29347",
-   "rank": null,
+   "rank": 37,
    "top": [
     "BLDS2005|Dieu436|Khoan1",
     "BLDS2005|Dieu432|Khoan1",
-    "BLDS2005|Dieu453",
     "BLDS2005|Dieu461|Khoan1",
-    "BLDS2005|Dieu460|Khoan1"
+    "BLDS2005|Dieu438|Khoan1",
+    "BLDS2005|Dieu709",
+    "BLDS2005|Dieu453",
+    "BLDS2005|Dieu460|Khoan1",
+    "BLDS2005|Dieu489|Khoan1",
+    "BLDS2005|Dieu420",
+    "BLDS2005|Dieu354|Khoan1"
    ]
   },
   {
    "qid": "GEN83381",
    "rank": null,
    "top": [
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu466|Khoan1|Diemb",
+    "BLDS2015|Dieu545|Khoan3",
     "BLDS2015|Dieu432|Khoan3",
     "BLDS2015|Dieu546|Khoan5",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu466|Khoan1|Diemc",
-    "BLDS2015|Dieu685"
+    "BLDS2015|Dieu552|Khoan3",
+    "HNGD2014|Dieu127|Khoan3",
+    "TNBTCNN2017|Dieu17|Khoan3|Diemc",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu466|Khoan1|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan1",
+    "BLDS2015|Dieu449|Khoan1",
+    "BLDS2015|Dieu432|Khoan2"
    ]
   },
   {
@@ -1080,9 +1560,14 @@
    "top": [
     "BLDS2015|Dieu175|Khoan1",
     "BLDS2015|Dieu246",
-    "BLDS2015|Dieu159|Khoan2|Diema",
     "BLDS2015|Dieu247",
-    "BLDS2015|Dieu249"
+    "BLDS2015|Dieu249",
+    "BLDS2015|Dieu263|Khoan1",
+    "BLDS2015|Dieu176|Khoan2",
+    "BLDS2015|Dieu177|Khoan3",
+    "BLDS2015|Dieu254|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu122",
+    "BLDS2015|Dieu174"
    ]
   },
   {
@@ -1090,10 +1575,15 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu30|Khoan3",
+    "HOTICH2014|Dieu15|Khoan1",
     "BLDS2015|Dieu30|Khoan4",
     "HOTICH2014|Dieu35|Khoan2|Diema",
     "BLDS2015|Dieu30|Khoan1",
-    "HOTICH2014|Dieu35|Khoan2|Diemb"
+    "HOTICH2014|Dieu35|Khoan2|Diemb",
+    "HOTICH2014|Dieu16|Khoan1",
+    "HOTICH2014|Dieu35|Khoan1|Diema",
+    "HOTICH2014|Dieu15|Khoan2",
+    "HOTICH2014|Dieu35|Khoan1|Diemd"
    ]
   },
   {
@@ -1103,19 +1593,29 @@
     "BLDS2015|Dieu94|Khoan2",
     "BLDS2015|Dieu94|Khoan1|Diema",
     "BLDS2015|Dieu94|Khoan1|Diemc",
+    "BLDS2015|Dieu314|Khoan4",
+    "BLDS2015|Dieu94|Khoan3",
     "BLDS2015|Dieu273|Khoan2",
-    "BLDS2015|Dieu94|Khoan1|Diemb"
+    "BLDS2015|Dieu512|Khoan2",
+    "BLDS2015|Dieu94|Khoan1|Diemb",
+    "BLDS2015|Dieu450|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu26|Khoan13"
    ]
   },
   {
    "qid": "GEN26434",
-   "rank": 1,
+   "rank": 2,
    "top": [
-    "BLDS2015|Dieu581|Khoan1",
     "BLDS2015|Dieu581|Khoan2",
-    "THADS2008|Dieu68|Khoan3|Diemb",
+    "BLDS2015|Dieu581|Khoan1",
+    "BLDS2015|Dieu73|Khoan3",
+    "BLDS2015|Dieu499|Khoan2",
+    "BLDS2015|Dieu582",
+    "BLDS2015|Dieu316",
     "BLDS2015|Dieu558|Khoan2",
-    "THADS2008|Dieu126|Khoan2"
+    "BLDS2015|Dieu580|Khoan4",
+    "THADS2008|Dieu68|Khoan3|Diemb",
+    "BLDS2015|Dieu580|Khoan1"
    ]
   },
   {
@@ -1126,7 +1626,12 @@
     "BLDS2015|Dieu476|Khoan1",
     "BLDS2015|Dieu482|Khoan1",
     "BLDS2015|Dieu480|Khoan1",
-    "BLDS2015|Dieu477|Khoan1"
+    "BLDS2015|Dieu477|Khoan1",
+    "BLDS2015|Dieu481|Khoan1",
+    "BLDS2015|Dieu489",
+    "BLDS2015|Dieu466|Khoan1",
+    "BLDS2015|Dieu482|Khoan4",
+    "BLDS2015|Dieu532|Khoan2"
    ]
   },
   {
@@ -1136,19 +1641,29 @@
     "BLDS2015|Dieu51|Khoan4|Diemc",
     "BLDS2015|Dieu60|Khoan1|Diemd",
     "BLDS2015|Dieu61|Khoan3",
+    "BLDS2015|Dieu61|Khoan1",
     "BLDS2015|Dieu60|Khoan1|Diemc",
-    "BLDS2015|Dieu51|Khoan4|Diema"
+    "BLDS2015|Dieu51|Khoan4|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu239|Khoan6",
+    "HOTICH2014|Dieu23",
+    "BLDS2015|Dieu60|Khoan3",
+    "BLDS2015|Dieu60|Khoan1|Diemb"
    ]
   },
   {
    "qid": "GEN37861",
-   "rank": 10,
+   "rank": 6,
    "top": [
     "BLDS2015|Dieu440|Khoan2",
-    "BLDS2015|Dieu560",
     "BLDS2015|Dieu354|Khoan2",
-    "BLDS2015|Dieu438|Khoan1|Diema",
-    "BLDS2015|Dieu434|Khoan3"
+    "BLDS2015|Dieu560",
+    "BLDS2015|Dieu434|Khoan3",
+    "BLDS2015|Dieu535|Khoan3",
+    "BLDS2015|Dieu411|Khoan2",
+    "BLDS2015|Dieu527|Khoan3",
+    "BLDS2015|Dieu356|Khoan1",
+    "THADS2008|Dieu84|Khoan5",
+    "BLDS2015|Dieu440|Khoan1"
    ]
   },
   {
@@ -1158,8 +1673,13 @@
     "BLDS2005|Dieu652|Khoan1",
     "BLDS2005|Dieu656",
     "BLDS2005|Dieu768|Khoan1",
+    "BLDS2005|Dieu654",
+    "BLDS2005|Dieu649",
+    "BLDS2005|Dieu666|Khoan1",
+    "BLDS2005|Dieu675|Khoan1",
     "BLDS2005|Dieu653|Khoan1",
-    "BLDS2005|Dieu667|Khoan1"
+    "BLDS2005|Dieu655",
+    "BLDS2005|Dieu659"
    ]
   },
   {
@@ -1168,9 +1688,14 @@
    "top": [
     "BLDS2015|Dieu73|Khoan2|Diemb",
     "BLDS2015|Dieu73|Khoan2|Diema",
-    "HNGD2014|Dieu67|Khoan2|Diema",
     "HNGD2014|Dieu67|Khoan1",
-    "BLDS2015|Dieu72|Khoan1"
+    "HNGD2014|Dieu67|Khoan2|Diema",
+    "BLDS2015|Dieu72|Khoan1",
+    "BLDS2015|Dieu70|Khoan3",
+    "HNGD2014|Dieu67|Khoan2|Diemb",
+    "BLDS2015|Dieu655|Khoan2",
+    "BLDS2015|Dieu73|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu395"
    ]
   },
   {
@@ -1178,32 +1703,47 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu575|Khoan2",
+    "BLDS2015|Dieu574",
+    "BLDS2015|Dieu576|Khoan1",
+    "BLDS2015|Dieu46|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu16|Khoan2",
     "BLDS2015|Dieu171|Khoan1",
     "BLDS2015|Dieu565|Khoan1",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu87|Khoan1|Diemb",
-    "BLDS2015|Dieu574"
+    "THADS2008|Dieu90|Khoan1",
+    "BLDS2015|Dieu318|Khoan4",
+    "BLDS2015|Dieu575|Khoan3"
    ]
   },
   {
    "qid": "GEN56474",
-   "rank": null,
+   "rank": 9,
    "top": [
     "BLDS2015|Dieu130",
     "BLDS2015|Dieu133|Khoan2",
-    "HNGD2014|Dieu50|Khoan1|Diema",
+    "BLDS2015|Dieu132|Khoan2",
     "BLDS2015|Dieu128",
-    "BLDS2015|Dieu126|Khoan1"
+    "ND126_2014|Dieu13|Khoan2",
+    "BLDS2015|Dieu126|Khoan1",
+    "HNGD2014|Dieu50|Khoan1|Diema",
+    "BLDS2015|Dieu132|Khoan3",
+    "BLDS2015|Dieu131|Khoan1",
+    "HNGD2014|Dieu26|Khoan2"
    ]
   },
   {
    "qid": "GEN78263",
    "rank": 7,
    "top": [
+    "BLDS2015|Dieu94|Khoan1|Diemc",
     "BLDS2015|Dieu308|Khoan2",
     "BLDS2015|Dieu307|Khoan1",
     "BLDS2015|Dieu308|Khoan1|Diemc",
-    "BLDS2015|Dieu94|Khoan1|Diemc",
-    "BLDS2015|Dieu308|Khoan1|Diema"
+    "BLDS2015|Dieu308|Khoan1|Diema",
+    "THADS2008|Dieu90|Khoan2",
+    "BLDS2015|Dieu308|Khoan1|Diemb",
+    "THADS2008|Dieu47|Khoan2|Diema",
+    "BLDS2015|Dieu450|Khoan2",
+    "BLDS2015|Dieu94|Khoan1|Diemb"
    ]
   },
   {
@@ -1212,19 +1752,29 @@
    "top": [
     "BLDS2015|Dieu630|Khoan3",
     "BLDS2015|Dieu634",
-    "BLDS2015|Dieu627",
     "BLDS2015|Dieu629|Khoan1",
-    "BLDS2015|Dieu630|Khoan1|Diema"
+    "BLDS2015|Dieu627",
+    "BLDS2015|Dieu630|Khoan1|Diema",
+    "BLDS2015|Dieu642|Khoan1",
+    "BLDS2015|Dieu633",
+    "BLDS2015|Dieu640|Khoan1",
+    "BLDS2015|Dieu636|Khoan2",
+    "BLDS2015|Dieu631|Khoan3"
    ]
   },
   {
    "qid": "GEN71410",
-   "rank": 2,
+   "rank": 4,
    "top": [
     "BLDS2015|Dieu305|Khoan1",
-    "BLDS2015|Dieu303|Khoan1|Diemc",
     "BLDS2015|Dieu305|Khoan2",
+    "BLDS2015|Dieu302",
+    "BLDS2015|Dieu303|Khoan1|Diemc",
+    "BLDS2015|Dieu336|Khoan3",
     "BLDS2015|Dieu305|Khoan3",
+    "BLDS2015|Dieu307|Khoan3",
+    "BLDS2015|Dieu305|Khoan4",
+    "BLDS2015|Dieu296|Khoan3",
     "BLDS2015|Dieu296|Khoan2"
    ]
   },
@@ -1233,32 +1783,47 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu612|Khoan1",
-    "HNGD2000|Dieu36|Khoan1",
     "HNGD2000|Dieu40",
-    "BLDS2005|Dieu615|Khoan1",
-    "HNGD2000|Dieu56"
+    "HNGD2000|Dieu36|Khoan1",
+    "HNGD2000|Dieu56",
+    "HNGD2000|Dieu58|Khoan1",
+    "BLDS2005|Dieu606|Khoan1",
+    "HNGD2000|Dieu57",
+    "BLDS2005|Dieu621|Khoan1",
+    "HNGD2000|Dieu78|Khoan1",
+    "BLDS2005|Dieu609|Khoan1"
    ]
   },
   {
    "qid": "GEN71796",
-   "rank": null,
+   "rank": 123,
    "top": [
+    "BLDS2015|Dieu469|Khoan1",
     "BLDS2015|Dieu499|Khoan2",
     "BLDS2015|Dieu499|Khoan1",
-    "BLDS2015|Dieu166|Khoan1",
+    "BLDS2015|Dieu450|Khoan2",
+    "BLDS2015|Dieu469|Khoan2",
+    "BLDS2015|Dieu467",
     "BLDS2015|Dieu582",
-    "BLDS2015|Dieu450|Khoan2"
+    "BLDS2015|Dieu580|Khoan1",
+    "BLDS2015|Dieu470|Khoan1",
+    "BLDS2015|Dieu581|Khoan1"
    ]
   },
   {
    "qid": "GEN95669",
-   "rank": 5,
+   "rank": 3,
    "top": [
-    "BLDS2015|Dieu34|Khoan4",
     "BLDS2015|Dieu592|Khoan2",
+    "BLDS2015|Dieu34|Khoan4",
+    "BLDS2015|Dieu361|Khoan3",
+    "BLDS2015|Dieu590|Khoan2",
     "BLDS2015|Dieu591|Khoan2",
+    "BLDS2015|Dieu34|Khoan5",
     "BLDS2015|Dieu379|Khoan2",
-    "BLDS2015|Dieu361|Khoan3"
+    "BLDS2015|Dieu607|Khoan1",
+    "BLDS2015|Dieu8|Khoan7",
+    "BLDS2015|Dieu584|Khoan1"
    ]
   },
   {
@@ -1269,18 +1834,28 @@
     "BLDS2015|Dieu26|Khoan2",
     "NCN2010|Dieu3|Khoan7",
     "BLDS2015|Dieu29|Khoan2",
-    "HOTICH2014|Dieu16|Khoan1"
+    "HOTICH2014|Dieu35|Khoan2|Diema",
+    "HOTICH2014|Dieu35|Khoan2|Diemb",
+    "HOTICH2014|Dieu16|Khoan1",
+    "NCN2010|Dieu24|Khoan3",
+    "NCN2010|Dieu18|Khoan1|Diemd",
+    "NCN2010|Dieu15|Khoan2|Diema"
    ]
   },
   {
    "qid": "GEN25918",
-   "rank": 1,
+   "rank": 3,
    "top": [
-    "HNGD2014|Dieu50|Khoan1|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu29|Khoan8",
+    "ND126_2014|Dieu7",
+    "HNGD2014|Dieu50|Khoan1|Diema",
     "HNGD2014|Dieu50|Khoan1|Diemb",
     "HNGD2014|Dieu50|Khoan1|Diemc",
-    "HNGD2014|Dieu67|Khoan2|Diema"
+    "ND126_2014|Dieu15|Khoan2",
+    "HNGD2014|Dieu67|Khoan2|Diema",
+    "HNGD2014|Dieu47",
+    "ND126_2014|Dieu13|Khoan2",
+    "ND126_2014|Dieu17|Khoan1"
    ]
   },
   {
@@ -1289,20 +1864,30 @@
    "top": [
     "BLDS2005|Dieu592|Khoan1",
     "BLDS2005|Dieu301|Khoan1",
-    "BLDS2005|Dieu380|Khoan1",
     "BLDS2005|Dieu297",
-    "HNGD2000|Dieu95|Khoan2|Diemd"
+    "BLDS2005|Dieu590|Khoan1",
+    "BLDS2005|Dieu380|Khoan1",
+    "HNGD2000|Dieu95|Khoan2|Diemd",
+    "BLDS2005|Dieu300|Khoan1",
+    "BLTTDS2004|Dieu177|Khoan3",
+    "HNGD2000|Dieu95|Khoan2|Diema",
+    "BLDS2005|Dieu662|Khoan1"
    ]
   },
   {
    "qid": "GEN94813",
-   "rank": 9,
+   "rank": 6,
    "top": [
     "BLDS2005|Dieu446",
     "BLDS2005|Dieu443|Khoan1",
-    "BLDS2005|Dieu444|Khoan1",
     "BLDS2005|Dieu442",
-    "BLDS2005|Dieu447|Khoan1"
+    "BLDS2005|Dieu444|Khoan1",
+    "BLDS2005|Dieu436|Khoan1",
+    "BLDS2005|Dieu137|Khoan1",
+    "BLDS2005|Dieu447|Khoan1",
+    "BLDS2005|Dieu425|Khoan1",
+    "BLTTDS2004|Dieu25|Khoan3",
+    "BLDS2005|Dieu459|Khoan1"
    ]
   },
   {
@@ -1310,10 +1895,15 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu328|Khoan2",
-    "BLDS2015|Dieu386|Khoan2",
-    "BLDS2015|Dieu167",
     "BLDS2015|Dieu332",
-    "BLDS2015|Dieu443"
+    "BLDS2015|Dieu545|Khoan3",
+    "BLDS2015|Dieu167",
+    "BLDS2015|Dieu386|Khoan2",
+    "BLDS2015|Dieu439|Khoan3",
+    "BLDS2015|Dieu444|Khoan3",
+    "BLDS2015|Dieu443",
+    "BLDS2015|Dieu436|Khoan2",
+    "BLDS2015|Dieu438|Khoan2"
    ]
   },
   {
@@ -1323,8 +1913,13 @@
     "BLDS2005|Dieu577|Khoan1",
     "BLDS2005|Dieu580|Khoan1",
     "BLDS2005|Dieu618",
+    "BLDS2005|Dieu617",
+    "BLDS2005|Dieu622",
     "BLDS2005|Dieu616",
-    "BLDS2005|Dieu614|Khoan1"
+    "BLDS2005|Dieu614|Khoan1",
+    "BLDS2005|Dieu579|Khoan1",
+    "BLDS2005|Dieu576|Khoan1",
+    "BLDS2005|Dieu605|Khoan1"
    ]
   },
   {
@@ -1333,9 +1928,14 @@
    "top": [
     "BLDS2015|Dieu674|Khoan3",
     "BLDS2015|Dieu674|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu378",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu470|Khoan2|Diemd",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diema"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu378",
+    "BLDS2015|Dieu18",
+    "BLDS2015|Dieu674|Khoan1",
+    "BLDS2015|Dieu676|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemo",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu69|Khoan3"
    ]
   },
   {
@@ -1345,8 +1945,13 @@
     "BLDS2005|Dieu755|Khoan1",
     "BLDS2005|Dieu753|Khoan1",
     "BLDS2005|Dieu754",
+    "BLTTDS2004|Dieu29|Khoan2",
+    "BLTTDS2004|Dieu25|Khoan4",
+    "BLDS2005|Dieu757|Khoan1",
     "THADS2008|Dieu84|Khoan3",
-    "BLDS2005|Dieu757|Khoan1"
+    "BLDS2005|Dieu181",
+    "BLDS2005|Dieu743",
+    "THADS2008|Dieu84|Khoan1"
    ]
   },
   {
@@ -1355,42 +1960,62 @@
    "top": [
     "BLDS2005|Dieu432|Khoan1",
     "BLDS2005|Dieu429|Khoan1",
-    "BLDS2005|Dieu440|Khoan1",
+    "BLDS2005|Dieu442",
     "BLDS2005|Dieu443|Khoan1",
-    "THADS2008|Dieu103"
+    "BLDS2005|Dieu461|Khoan1",
+    "BLDS2005|Dieu440|Khoan1",
+    "BLDS2005|Dieu428",
+    "THADS2008|Dieu103",
+    "BLDS2005|Dieu459|Khoan1",
+    "THADS2008|Dieu101|Khoan5"
    ]
   },
   {
    "qid": "GEN77738",
-   "rank": 7,
+   "rank": 5,
    "top": [
+    "BLDS2005|Dieu774",
     "BLDS2005|Dieu740|Khoan1",
     "BLDS2005|Dieu739|Khoan1",
-    "BLDS2005|Dieu774",
     "BLDS2005|Dieu738|Khoan1",
+    "BLDS2005|Dieu751|Khoan1",
+    "BLDS2005|Dieu741",
+    "BLDS2005|Dieu51|Khoan1",
+    "BLDS2005|Dieu743",
+    "BLDS2005|Dieu737",
     "BLDS2005|Dieu736|Khoan1"
    ]
   },
   {
    "qid": "GEN71065",
-   "rank": 8,
+   "rank": 10,
    "top": [
-    "BLDS2015|Dieu501|Khoan2",
     "BLDS2015|Dieu502|Khoan2",
+    "BLDS2015|Dieu501|Khoan2",
     "BLDS2015|Dieu241|Khoan4",
     "BLDS2015|Dieu155|Khoan3",
-    "BLDS2015|Dieu272|Khoan4"
+    "BLDS2015|Dieu272|Khoan4",
+    "BLDS2015|Dieu271|Khoan1",
+    "THADS2008|Dieu110|Khoan2",
+    "BLDS2015|Dieu175|Khoan2",
+    "BLDS2015|Dieu502|Khoan1",
+    "BLDS2015|Dieu200|Khoan2"
    ]
   },
   {
    "qid": "GEN45293",
-   "rank": 4,
+   "rank": 5,
    "top": [
-    "BLDS2015|Dieu533|Khoan1",
     "BLDS2015|Dieu536|Khoan1",
+    "BLDS2015|Dieu533|Khoan1",
     "BLDS2015|Dieu442|Khoan4",
+    "BLDS2015|Dieu533|Khoan2",
     "BLDS2015|Dieu442|Khoan2",
-    "BLDS2015|Dieu532|Khoan2"
+    "BLDS2015|Dieu532|Khoan2",
+    "BLDS2015|Dieu524|Khoan5",
+    "BLDS2015|Dieu522",
+    "BLDS2015|Dieu527|Khoan1",
+    "BLDS2015|Dieu442|Khoan1"
    ]
   },
   {
@@ -1401,7 +2026,12 @@
     "HNGD2014|Dieu67|Khoan2|Diema",
     "BLDS2015|Dieu73|Khoan4",
     "BLDS2015|Dieu73|Khoan2|Diemb",
-    "BLDS2015|Dieu72|Khoan2"
+    "BLDS2015|Dieu72|Khoan1",
+    "BLDS2015|Dieu72|Khoan2",
+    "BLDS2015|Dieu73|Khoan2|Diema",
+    "HNGD2014|Dieu12|Khoan3",
+    "TNBTCNN2017|Dieu15|Khoan8",
+    "HNGD2014|Dieu67|Khoan1"
    ]
   },
   {
@@ -1409,10 +2039,15 @@
    "rank": 5,
    "top": [
     "BLDS2005|Dieu494",
-    "BLDS2005|Dieu495",
+    "BLDS2005|Dieu712",
     "BLDS2005|Dieu706",
+    "BLDS2005|Dieu495",
+    "BLDS2005|Dieu482|Khoan1",
+    "BLDS2005|Dieu709",
+    "BLDS2005|Dieu710|Khoan1",
+    "BLDS2005|Dieu489|Khoan1",
     "BLDS2005|Dieu707",
-    "BLDS2005|Dieu482|Khoan1"
+    "BLDS2005|Dieu498|Khoan1"
    ]
   },
   {
@@ -1420,32 +2055,47 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu406|Khoan3",
-    "BLDS2015|Dieu406|Khoan2",
     "BLDS2015|Dieu405|Khoan3",
+    "BLDS2015|Dieu406|Khoan2",
+    "BLDS2015|Dieu117|Khoan2",
     "BLDS2015|Dieu117|Khoan1|Diemc",
-    "BLDS2015|Dieu117|Khoan1|Diemb"
+    "BLDS2015|Dieu117|Khoan1|Diemb",
+    "BLDS2015|Dieu132|Khoan2",
+    "BLDS2015|Dieu406|Khoan1",
+    "BLDS2015|Dieu117|Khoan1|Diema",
+    "BLDS2015|Dieu125|Khoan2|Diemc"
    ]
   },
   {
    "qid": "GEN75189",
-   "rank": 5,
+   "rank": 6,
    "top": [
     "BLDS2015|Dieu202|Khoan2",
     "BLDS2015|Dieu202|Khoan1",
     "BLDS2015|Dieu94|Khoan3",
     "BLDS2015|Dieu201|Khoan2",
-    "BLDS2015|Dieu499|Khoan2"
+    "BLDS2015|Dieu467",
+    "BLDS2015|Dieu499|Khoan2",
+    "BLDS2015|Dieu497|Khoan1",
+    "BLDS2015|Dieu480|Khoan1",
+    "BLDS2015|Dieu262|Khoan2",
+    "BLDS2015|Dieu201|Khoan1"
    ]
   },
   {
    "qid": "GEN17239",
-   "rank": null,
+   "rank": 11,
    "top": [
     "BLDS2015|Dieu432|Khoan3",
-    "BLDS2015|Dieu432|Khoan2",
     "BLDS2015|Dieu448|Khoan1",
+    "BLDS2015|Dieu432|Khoan2",
     "BLDS2015|Dieu546|Khoan5",
-    "BLDS2015|Dieu279|Khoan2"
+    "BLDS2015|Dieu437|Khoan2|Diemc",
+    "BLDS2015|Dieu608",
+    "BLDS2015|Dieu552|Khoan3",
+    "BLDS2015|Dieu279|Khoan2",
+    "BLDS2015|Dieu547|Khoan2",
+    "BLDS2015|Dieu545|Khoan3"
    ]
   },
   {
@@ -1456,7 +2106,12 @@
     "BLDS2015|Dieu323|Khoan6",
     "BLDS2015|Dieu320|Khoan1",
     "BLDS2015|Dieu321|Khoan3",
-    "THADS2008|Dieu162|Khoan6"
+    "THADS2008|Dieu162|Khoan6",
+    "THADS2008|Dieu68|Khoan2",
+    "BLDS2015|Dieu323|Khoan5",
+    "BLDS2015|Dieu366|Khoan1",
+    "BLDS2015|Dieu317|Khoan2",
+    "BLDS2015|Dieu320|Khoan7"
    ]
   },
   {
@@ -1465,20 +2120,30 @@
    "top": [
     "BLDS2015|Dieu639|Khoan2",
     "BLDS2015|Dieu634",
-    "BLDS2015|Dieu639|Khoan1",
     "BLDS2015|Dieu633",
-    "BLDS2015|Dieu627"
+    "BLDS2015|Dieu639|Khoan1",
+    "BLDS2015|Dieu627",
+    "BLDS2015|Dieu636|Khoan2",
+    "BLDS2015|Dieu630|Khoan3",
+    "BLDS2015|Dieu641|Khoan3|Diemc",
+    "BLDS2015|Dieu635",
+    "BLDS2015|Dieu681|Khoan2|Diema"
    ]
   },
   {
    "qid": "GEN56252",
-   "rank": 1,
+   "rank": 4,
    "top": [
+    "ND158_2005|Dieu6|Khoan2",
+    "BLTTDS2004|Dieu350|Khoan3",
+    "BLTTDS2004|Dieu364|Khoan2",
     "BLDS2005|Dieu672|Khoan1",
+    "BLTTDS2004|Dieu84|Khoan3",
+    "BLTTDS2004|Dieu361|Khoan3",
+    "BLTTDS2004|Dieu351|Khoan2",
+    "BLTTDS2004|Dieu365|Khoan2",
     "BLDS2005|Dieu649",
-    "BLDS2005|Dieu665|Khoan1",
-    "BLDS2005|Dieu652|Khoan1",
-    "THADS2008|Dieu8|Khoan1"
+    "BLTTDS2004|Dieu184|Khoan4"
    ]
   },
   {
@@ -1487,9 +2152,14 @@
    "top": [
     "BLDS2005|Dieu770|Khoan1",
     "BLDS2005|Dieu769|Khoan1",
-    "BLDS2005|Dieu760|Khoan1",
     "BLDS2005|Dieu776",
-    "BLDS2005|Dieu771"
+    "BLDS2005|Dieu771",
+    "BLDS2005|Dieu760|Khoan1",
+    "HNGD2000|Dieu101",
+    "BLDS2005|Dieu757|Khoan1",
+    "BLDS2005|Dieu401|Khoan1",
+    "BLDS2005|Dieu759|Khoan1",
+    "BLDS2005|Dieu423|Khoan1"
    ]
   },
   {
@@ -1497,21 +2167,31 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu590|Khoan1",
-    "BLDS2005|Dieu592|Khoan1",
     "BLDS2005|Dieu591",
+    "BLDS2005|Dieu592|Khoan1",
     "BLDS2005|Dieu420",
-    "BLDS2005|Dieu600|Khoan1"
+    "BLDS2005|Dieu369",
+    "BLDS2005|Dieu305|Khoan1",
+    "THADS2008|Dieu153|Khoan5",
+    "BLDS2005|Dieu600|Khoan1",
+    "BLTTDS2004|Dieu27|Khoan5",
+    "BLDS2005|Dieu290|Khoan1"
    ]
   },
   {
    "qid": "GEN84647",
-   "rank": 8,
+   "rank": 6,
    "top": [
-    "BLDS2015|Dieu225|Khoan2|Diemb",
-    "BLDS2015|Dieu225|Khoan3|Diema",
     "THADS2008|Dieu86|Khoan1",
+    "BLDS2015|Dieu225|Khoan3|Diema",
+    "BLDS2015|Dieu225|Khoan2|Diemb",
     "BLDS2015|Dieu225|Khoan2|Diema",
-    "BLDS2015|Dieu451"
+    "BLDS2015|Dieu450|Khoan2",
+    "BLDS2015|Dieu241|Khoan3",
+    "THADS2008|Dieu113|Khoan1|Diemc",
+    "THADS2008|Dieu135|Khoan3",
+    "HNGD2014|Dieu62|Khoan1",
+    "BLDS2015|Dieu225|Khoan2|Diemc"
    ]
   },
   {
@@ -1519,10 +2199,15 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu218|Khoan3",
-    "BLDS2015|Dieu219|Khoan1",
     "BLDS2015|Dieu219|Khoan2",
+    "BLDS2015|Dieu219|Khoan1",
+    "BLDS2015|Dieu218|Khoan5",
     "BLDS2015|Dieu218|Khoan1",
-    "BLDS2015|Dieu451"
+    "BLDS2015|Dieu451",
+    "THADS2008|Dieu74|Khoan1",
+    "THADS2008|Dieu74|Khoan2|Diemb",
+    "THADS2008|Dieu74|Khoan3",
+    "BLDS2015|Dieu255"
    ]
   },
   {
@@ -1533,7 +2218,12 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu27|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu390|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu390|Khoan1",
-    "BLDS2015|Dieu70|Khoan4"
+    "BLDS2015|Dieu70|Khoan3",
+    "BLDS2015|Dieu70|Khoan4",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu389",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu388|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu394|Khoan1",
+    "BLDS2015|Dieu71|Khoan1|Diema"
    ]
   },
   {
@@ -1541,10 +2231,15 @@
    "rank": 1,
    "top": [
     "BLDS2005|Dieu605|Khoan1",
-    "BLDS2005|Dieu580|Khoan1",
     "BLDS2005|Dieu577|Khoan1",
     "BLDS2005|Dieu611|Khoan1",
-    "BLDS2005|Dieu609|Khoan1"
+    "BLDS2005|Dieu580|Khoan1",
+    "BLDS2005|Dieu628|Khoan1",
+    "BLDS2005|Dieu777",
+    "BLDS2005|Dieu610|Khoan1",
+    "BLDS2005|Dieu609|Khoan1",
+    "ND158_2005|Dieu94|Khoan3",
+    "BLDS2005|Dieu552"
    ]
   },
   {
@@ -1554,7 +2249,12 @@
     "HNGD2014|Dieu72|Khoan1",
     "HNGD2014|Dieu105",
     "HNGD2014|Dieu79|Khoan1",
+    "HNGD2014|Dieu87|Khoan1",
     "HNGD2014|Dieu71|Khoan2",
+    "HNGD2014|Dieu87|Khoan2|Diemb",
+    "HNGD2014|Dieu83|Khoan2",
+    "HNGD2014|Dieu71|Khoan1",
+    "HNGD2014|Dieu82|Khoan2",
     "HNGD2014|Dieu69|Khoan1"
    ]
   },
@@ -1565,30 +2265,45 @@
     "BLDS2015|Dieu354|Khoan2",
     "BLDS2015|Dieu411|Khoan2",
     "BLDS2015|Dieu411|Khoan1",
+    "THADS2008|Dieu162|Khoan4",
     "BLDS2015|Dieu354|Khoan1",
-    "THADS2008|Dieu162|Khoan4"
+    "BLDS2015|Dieu410|Khoan1",
+    "BLDS2015|Dieu284|Khoan1",
+    "BLDS2015|Dieu355|Khoan1",
+    "BLDS2015|Dieu299|Khoan1",
+    "BLDS2015|Dieu352"
    ]
   },
   {
    "qid": "GEN31914",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "BLDS2015|Dieu438|Khoan2",
     "BLDS2015|Dieu434|Khoan2",
     "BLDS2015|Dieu332",
     "BLDS2015|Dieu434|Khoan1",
-    "BLDS2015|Dieu443"
+    "BLDS2015|Dieu443",
+    "BLDS2015|Dieu440|Khoan2",
+    "BLDS2015|Dieu437|Khoan2|Diema",
+    "BLDS2015|Dieu499|Khoan1",
+    "BLDS2015|Dieu437|Khoan2|Diemb",
+    "BLDS2015|Dieu436|Khoan2",
+    "BLDS2015|Dieu437|Khoan2|Diemc"
    ]
   },
   {
    "qid": "GEN81336",
-   "rank": 4,
+   "rank": 2,
    "top": [
     "NCN2010|Dieu24|Khoan1",
+    "NCN2010|Dieu24|Khoan4",
     "BLDS2015|Dieu39|Khoan1",
     "HNGD2014|Dieu78|Khoan2",
-    "NCN2010|Dieu24|Khoan4",
-    "HNGD2014|Dieu83|Khoan1"
+    "HNGD2014|Dieu83|Khoan1",
+    "HNGD2014|Dieu70|Khoan3",
+    "BLDS2015|Dieu28|Khoan1|Diemb",
+    "HNGD2014|Dieu81|Khoan1",
+    "NCN2010|Dieu8|Khoan2|Diemb",
+    "NCN2010|Dieu27|Khoan5"
    ]
   },
   {
@@ -1596,10 +2311,15 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu510|Khoan2",
-    "BLDS2015|Dieu505|Khoan8",
     "BLDS2015|Dieu510|Khoan1|Diema",
+    "BLDS2015|Dieu505|Khoan8",
     "BLDS2015|Dieu510|Khoan1|Diemb",
-    "BLDS2015|Dieu510|Khoan3"
+    "BLDS2015|Dieu510|Khoan3",
+    "BLDS2015|Dieu512|Khoan2",
+    "BLDS2015|Dieu509",
+    "BLDS2015|Dieu397",
+    "HNGD2014|Dieu36",
+    "BLDS2015|Dieu506|Khoan3"
    ]
   },
   {
@@ -1610,18 +2330,28 @@
     "BLDS2015|Dieu466|Khoan5|Diema",
     "BLDS2015|Dieu468|Khoan1",
     "BLDS2015|Dieu466|Khoan4",
-    "BLDS2015|Dieu357|Khoan2"
+    "BLDS2015|Dieu357|Khoan2",
+    "BLDS2015|Dieu468|Khoan2",
+    "BLDS2015|Dieu357|Khoan1",
+    "TNBTCNN2017|Dieu23|Khoan4",
+    "TNBTCNN2017|Dieu23|Khoan5",
+    "BLDS2015|Dieu470|Khoan2"
    ]
   },
   {
    "qid": "GEN81461",
-   "rank": 3,
+   "rank": 2,
    "top": [
     "HNGD2014|Dieu122|Khoan2",
-    "HNGD2014|Dieu126|Khoan1",
     "BLDS2015|Dieu670|Khoan1|Diema",
+    "HNGD2014|Dieu126|Khoan1",
+    "ND126_2014|Dieu23|Khoan4",
+    "ND126_2014|Dieu36|Khoan1|Diemb",
     "HNGD2014|Dieu122|Khoan1",
-    "HNGD2014|Dieu126|Khoan2"
+    "ND126_2014|Dieu36|Khoan1|Diema",
+    "HNGD2014|Dieu126|Khoan2",
+    "ND126_2014|Dieu19|Khoan3",
+    "BLDS2015|Dieu670|Khoan2"
    ]
   },
   {
@@ -1630,42 +2360,62 @@
    "top": [
     "BLDS2015|Dieu420|Khoan1|Diemđ",
     "BLDS2015|Dieu404|Khoan4",
+    "BLDS2015|Dieu420|Khoan2",
+    "BLDS2015|Dieu387|Khoan1",
     "BLDS2015|Dieu417",
     "BLDS2015|Dieu408|Khoan3",
-    "BLDS2015|Dieu387|Khoan1"
+    "BLDS2015|Dieu683|Khoan6",
+    "BLDS2015|Dieu403|Khoan2",
+    "BLDS2015|Dieu405|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan1"
    ]
   },
   {
    "qid": "GEN56550",
-   "rank": 1,
+   "rank": 3,
    "top": [
-    "HNGD2014|Dieu95|Khoan2|Diema",
     "HNGD2014|Dieu95|Khoan2|Diemc",
     "HNGD2014|Dieu95|Khoan2|Diemb",
+    "HNGD2014|Dieu95|Khoan2|Diema",
     "HNGD2014|Dieu95|Khoan3|Diemc",
-    "HNGD2014|Dieu95|Khoan3|Diemđ"
+    "HNGD2014|Dieu95|Khoan3|Diemđ",
+    "HNGD2014|Dieu96|Khoan2",
+    "HNGD2014|Dieu95|Khoan3|Diema",
+    "HNGD2014|Dieu95|Khoan3|Diemd",
+    "HNGD2014|Dieu96|Khoan1|Diemc",
+    "HNGD2014|Dieu95|Khoan3|Diemb"
    ]
   },
   {
    "qid": "GEN91337",
-   "rank": null,
+   "rank": 29,
    "top": [
-    "TNBTCNN2017|Dieu50|Khoan2",
     "BLDS2015|Dieu527|Khoan6",
-    "THADS2008|Dieu145|Khoan1|Diemb",
+    "TNBTCNN2017|Dieu50|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu323|Khoan3",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu259|Khoan2"
+    "THADS2008|Dieu145|Khoan1|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu259|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu286|Khoan3",
+    "BLDS2015|Dieu150|Khoan4",
+    "THADS2008|Dieu30|Khoan3",
+    "BLDS2015|Dieu150|Khoan3",
+    "TNBTCNN2017|Dieu52|Khoan3"
    ]
   },
   {
    "qid": "GEN11904",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "BLDS2005|Dieu517",
     "BLDS2005|Dieu446",
-    "BLDS2005|Dieu600|Khoan1",
+    "BLDS2005|Dieu447|Khoan1",
+    "BLDS2005|Dieu517",
+    "BLDS2005|Dieu448|Khoan1",
+    "BLDS2005|Dieu475",
     "BLDS2005|Dieu444|Khoan1",
-    "BLDS2005|Dieu447|Khoan1"
+    "BLDS2005|Dieu461|Khoan1",
+    "BLTTDS2004|Dieu25|Khoan6",
+    "BLTTDS2004|Dieu385|Khoan1|Dieme",
+    "THADS2008|Dieu126|Khoan4"
    ]
   },
   {
@@ -1674,31 +2424,46 @@
    "top": [
     "BLDS2015|Dieu434|Khoan3",
     "BLDS2015|Dieu440|Khoan2",
-    "BLDS2015|Dieu560",
+    "BLDS2015|Dieu332",
     "BLDS2015|Dieu434|Khoan2",
-    "BLDS2015|Dieu332"
+    "BLDS2015|Dieu560",
+    "BLDS2015|Dieu331|Khoan1",
+    "BLDS2015|Dieu440|Khoan1",
+    "BLDS2015|Dieu433|Khoan2",
+    "BLDS2015|Dieu556|Khoan1",
+    "BLDS2015|Dieu499|Khoan1"
    ]
   },
   {
    "qid": "GEN75894",
-   "rank": null,
+   "rank": 9,
    "top": [
-    "BLDS2015|Dieu304|Khoan1",
     "BLDS2015|Dieu304|Khoan2|Diemb",
-    "BLDS2015|Dieu321|Khoan4",
+    "BLDS2015|Dieu304|Khoan1",
     "BLDS2015|Dieu312|Khoan4",
-    "BLDS2015|Dieu304|Khoan2|Diema"
+    "BLDS2015|Dieu320|Khoan8",
+    "BLDS2015|Dieu321|Khoan5",
+    "BLDS2015|Dieu321|Khoan4",
+    "BLDS2015|Dieu451",
+    "BLDS2015|Dieu304|Khoan2|Diema",
+    "BLDS2015|Dieu320|Khoan7",
+    "BLDS2015|Dieu323|Khoan5"
    ]
   },
   {
    "qid": "GEN46407",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "BLDS2015|Dieu142|Khoan1|Diemc",
     "BLDS2015|Dieu406|Khoan2",
+    "BLDS2015|Dieu142|Khoan1|Diemc",
     "BLDS2015|Dieu120|Khoan2",
-    "BLDS2015|Dieu143|Khoan1|Diemc",
-    "BLDS2015|Dieu142|Khoan2"
+    "BLDS2015|Dieu142|Khoan2",
+    "BLDS2015|Dieu120|Khoan1",
+    "BLDS2015|Dieu420|Khoan1|Diemc",
+    "BLDS2015|Dieu142|Khoan3",
+    "BLDS2015|Dieu143|Khoan2",
+    "BLDS2015|Dieu408|Khoan2",
+    "BLDS2015|Dieu143|Khoan1|Diemc"
    ]
   },
   {
@@ -1708,8 +2473,13 @@
     "BLDS2005|Dieu528|Khoan1",
     "BLDS2005|Dieu527",
     "BLDS2005|Dieu532",
+    "BLDS2005|Dieu536|Khoan1",
     "BLDS2005|Dieu531",
-    "BLDS2005|Dieu530"
+    "BLDS2005|Dieu530",
+    "BLDS2005|Dieu529",
+    "BLDS2005|Dieu534|Khoan1",
+    "BLDS2005|Dieu535",
+    "BLDS2005|Dieu401|Khoan1"
    ]
   },
   {
@@ -1717,10 +2487,15 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu577|Khoan1",
+    "BLDS2015|Dieu142|Khoan4",
     "BLDS2015|Dieu577|Khoan2",
     "BLDS2015|Dieu600",
-    "BLDS2015|Dieu142|Khoan4",
-    "TNBTCNN2017|Dieu65|Khoan2|Diema"
+    "TNBTCNN2017|Dieu65|Khoan2|Diema",
+    "BLDS2015|Dieu596|Khoan2",
+    "BLDS2015|Dieu575|Khoan2",
+    "TNBTCNN2017|Dieu71|Khoan2",
+    "BLDS2015|Dieu576|Khoan1",
+    "BLDS2015|Dieu602"
    ]
   },
   {
@@ -1729,9 +2504,14 @@
    "top": [
     "BLDS2015|Dieu657|Khoan3",
     "BLDS2015|Dieu644|Khoan1|Diemb",
+    "BLDS2015|Dieu618|Khoan3",
+    "BLDS2015|Dieu618|Khoan2|Diemb",
     "BLDS2015|Dieu644|Khoan1|Diema",
+    "BLDS2015|Dieu660|Khoan1",
+    "BLDS2015|Dieu657|Khoan2",
+    "BLDS2015|Dieu659|Khoan2",
     "BLDS2015|Dieu618|Khoan1|Diemb",
-    "BLDS2015|Dieu618|Khoan2|Diemb"
+    "BLDS2015|Dieu657|Khoan1"
    ]
   },
   {
@@ -1739,10 +2519,15 @@
    "rank": null,
    "top": [
     "BLDS2015|Dieu440|Khoan2",
-    "BLDS2015|Dieu332",
+    "BLDS2015|Dieu447",
+    "BLDS2015|Dieu440|Khoan3",
     "BLDS2015|Dieu453|Khoan1",
+    "BLDS2015|Dieu332",
     "BLDS2015|Dieu434|Khoan3",
-    "NCN2010|Dieu21|Khoan3"
+    "BLDS2015|Dieu440|Khoan1",
+    "NCN2010|Dieu21|Khoan3",
+    "BLDS2015|Dieu438|Khoan2",
+    "BLDS2015|Dieu378|Khoan3"
    ]
   },
   {
@@ -1751,9 +2536,14 @@
    "top": [
     "BLDS2015|Dieu535|Khoan4",
     "BLDS2015|Dieu535|Khoan2",
+    "BLDS2015|Dieu533|Khoan2",
     "BLDS2015|Dieu530",
+    "BLDS2015|Dieu539|Khoan1",
     "BLDS2015|Dieu532|Khoan1",
-    "BLDS2015|Dieu539|Khoan1"
+    "BLDS2015|Dieu536|Khoan3",
+    "BLDS2015|Dieu538|Khoan2",
+    "BLDS2015|Dieu538|Khoan3",
+    "BLDS2015|Dieu525|Khoan2|Diema"
    ]
   },
   {
@@ -1764,18 +2554,28 @@
     "BLDS2015|Dieu38|Khoan4",
     "BLDS2015|Dieu565|Khoan4",
     "BLDS2015|Dieu387|Khoan1",
-    "BLDS2015|Dieu517|Khoan5"
+    "BLDS2015|Dieu517|Khoan5",
+    "ND126_2014|Dieu55|Khoan2|Diemd",
+    "BLDS2015|Dieu546|Khoan4",
+    "BLDS2015|Dieu408|Khoan2",
+    "BLDS2015|Dieu38|Khoan2",
+    "HOTICH2014|Dieu74|Khoan6"
    ]
   },
   {
    "qid": "GEN11580",
-   "rank": 4,
+   "rank": 5,
    "top": [
-    "BLDS2015|Dieu219|Khoan1",
     "BLDS2015|Dieu209|Khoan1",
     "BLDS2015|Dieu209|Khoan2",
+    "BLDS2015|Dieu219|Khoan1",
+    "BLDS2015|Dieu218|Khoan1",
     "BLDS2015|Dieu217|Khoan1",
-    "BLDS2015|Dieu210|Khoan2"
+    "BLDS2015|Dieu210|Khoan2",
+    "THADS2008|Dieu74|Khoan2|Diemb",
+    "BLDS2015|Dieu220|Khoan2",
+    "BLDS2015|Dieu219|Khoan2",
+    "THADS2008|Dieu74|Khoan3"
    ]
   },
   {
@@ -1786,18 +2586,28 @@
     "BLDS2015|Dieu264|Khoan1",
     "BLDS2015|Dieu333|Khoan1",
     "BLDS2015|Dieu257",
-    "BLDS2015|Dieu581|Khoan1"
+    "BLDS2015|Dieu321|Khoan1",
+    "BLDS2015|Dieu581|Khoan1",
+    "BLDS2015|Dieu224",
+    "BLDS2015|Dieu131|Khoan3",
+    "BLDS2015|Dieu184|Khoan3",
+    "BLDS2015|Dieu314|Khoan3"
    ]
   },
   {
    "qid": "GEN93396",
    "rank": null,
    "top": [
-    "BLDS2005|Dieu494",
     "BLDS2005|Dieu489|Khoan1",
+    "BLDS2005|Dieu494",
+    "BLDS2005|Dieu709",
     "BLDS2005|Dieu498|Khoan1",
     "BLDS2005|Dieu496",
-    "BLDS2005|Dieu453"
+    "BLDS2005|Dieu506|Khoan1",
+    "BLDS2005|Dieu453",
+    "BLDS2005|Dieu480",
+    "HNGD2000|Dieu54",
+    "BLDS2005|Dieu703"
    ]
   },
   {
@@ -1808,7 +2618,12 @@
     "BLDS2015|Dieu688|Khoan1|Diema",
     "BLDS2015|Dieu688|Khoan1|Diemd",
     "BLDS2015|Dieu117|Khoan1|Diema",
-    "BLDS2015|Dieu688|Khoan1|Diemc"
+    "BLDS2015|Dieu688|Khoan1|Diemc",
+    "BLDS2015|Dieu117|Khoan2",
+    "BLDS2015|Dieu117|Khoan1|Diemc",
+    "BLDS2015|Dieu152",
+    "BLDS2015|Dieu502|Khoan1",
+    "BLDS2015|Dieu119|Khoan2"
    ]
   },
   {
@@ -1816,10 +2631,15 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu496|Khoan3",
-    "BLDS2015|Dieu499|Khoan1",
     "BLDS2015|Dieu494",
+    "BLDS2015|Dieu499|Khoan1",
+    "BLDS2015|Dieu481|Khoan1",
+    "BLDS2015|Dieu469|Khoan1",
     "BLDS2015|Dieu463",
-    "BLDS2015|Dieu481|Khoan1"
+    "BLDS2015|Dieu496|Khoan5",
+    "BLDS2015|Dieu470|Khoan1",
+    "BLDS2015|Dieu497|Khoan2",
+    "BLDS2015|Dieu469|Khoan2"
    ]
   },
   {
@@ -1827,54 +2647,79 @@
    "rank": 1,
    "top": [
     "HOAGIAI2026|Dieu15|Khoan3",
-    "HOAGIAI2026|Dieu27",
-    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu38|Khoan1|Dieme",
     "HOAGIAI2026|Dieu32|Khoan3",
-    "HOAGIAI2026|Dieu9|Khoan2|Diemb"
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu38|Khoan1|Dieme",
+    "HOAGIAI2026|Dieu17|Khoan2|Diemb",
+    "HOAGIAI2026|Dieu27",
+    "HOAGIAI2026|Dieu9|Khoan2|Diemc",
+    "HOAGIAI2026|Dieu32|Khoan2",
+    "HOAGIAI2026|Dieu9|Khoan2|Diemb",
+    "HOAGIAI2026|Dieu33|Khoan1",
+    "HOAGIAI2026|Dieu17|Khoan2|Diema"
    ]
   },
   {
    "qid": "NEW21840",
-   "rank": 1,
+   "rank": 2,
    "top": [
-    "HOAGIAI2026|Dieu14|Khoan1|Diemc",
     "HOAGIAI2026|Dieu13|Khoan2",
+    "HOAGIAI2026|Dieu14|Khoan1|Diemc",
     "HOAGIAI2026|Dieu21|Khoan1",
+    "HOAGIAI2026|Dieu24|Khoan3",
     "HOAGIAI2026|Dieu21|Khoan3",
-    "HOAGIAI2026|Dieu11|Khoan1"
+    "HOAGIAI2026|Dieu1|Khoan1",
+    "HOAGIAI2026|Dieu13|Khoan5",
+    "HOAGIAI2026|Dieu11|Khoan1",
+    "HOAGIAI2026|Dieu26|Khoan1",
+    "HOAGIAI2026|Dieu31"
    ]
   },
   {
    "qid": "NEW64501",
-   "rank": null,
+   "rank": 59,
    "top": [
-    "HOAGIAI2026|Dieu29|Khoan3",
     "HOAGIAI2026|Dieu5|Khoan2",
-    "HOAGIAI2026|Dieu28|Khoan2|Diemb",
+    "HOAGIAI2026|Dieu2|Khoan7",
+    "HOAGIAI2026|Dieu29|Khoan3",
     "HOAGIAI2026|Dieu2|Khoan8",
-    "HOAGIAI2026|Dieu30|Khoan1"
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu14|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu418|Khoan1|Diemc",
+    "HOAGIAI2026|Dieu30|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu459|Khoan1|Diema",
+    "HOAGIAI2026|Dieu28|Khoan2|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu418|Khoan1|Diemb"
    ]
   },
   {
    "qid": "NEW14208",
-   "rank": 3,
+   "rank": 1,
    "top": [
-    "HOTICH2014|Dieu25|Khoan2",
-    "HOTICH2014|Dieu44|Khoan4",
     "HOTICH2014|Dieu30|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu269|Khoan3",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu315|Khoan2"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu315|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu370|Khoan3",
+    "HOTICH2014|Dieu28|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu350|Khoan1|Diemb",
+    "HOTICH2014|Dieu30|Khoan2",
+    "BLDS2015|Dieu391|Khoan4",
+    "HOTICH2014|Dieu31",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu365|Khoan1"
    ]
   },
   {
    "qid": "NEW83864",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "HOTICH2014|Dieu34|Khoan2",
     "HOTICH2014|Dieu52|Khoan2",
+    "HOTICH2014|Dieu34|Khoan2",
     "HOTICH2014|Dieu52|Khoan1",
     "HOTICH2014|Dieu34|Khoan1",
-    "HOTICH2014|Dieu49|Khoan2"
+    "HOTICH2014|Dieu33|Khoan2",
+    "HOTICH2014|Dieu49|Khoan2",
+    "HOTICH2014|Dieu52|Khoan3",
+    "HOTICH2014|Dieu40|Khoan2",
+    "HOTICH2014|Dieu20|Khoan2",
+    "HOTICH2014|Dieu16|Khoan2"
    ]
   },
   {
@@ -1884,8 +2729,13 @@
     "HOTICH2014|Dieu70|Khoan4",
     "HOTICH2014|Dieu70|Khoan3",
     "HOTICH2014|Dieu73|Khoan1|Diemb",
+    "HOTICH2014|Dieu69|Khoan3",
     "HOTICH2014|Dieu5|Khoan4",
-    "HOTICH2014|Dieu70|Khoan1|Diema"
+    "HOTICH2014|Dieu70|Khoan1|Diema",
+    "HOTICH2014|Dieu71|Khoan1|Diema",
+    "HOTICH2014|Dieu70|Khoan1|Diemb",
+    "HOTICH2014|Dieu71|Khoan2",
+    "HOTICH2014|Dieu71|Khoan1|Diemb"
    ]
   },
   {
@@ -1894,9 +2744,14 @@
    "top": [
     "HOTICH2014|Dieu62|Khoan1",
     "HOTICH2014|Dieu4|Khoan9",
-    "HOTICH2014|Dieu9|Khoan1",
     "HOTICH2014|Dieu9|Khoan2",
-    "HOTICH2014|Dieu63"
+    "HOTICH2014|Dieu62|Khoan2",
+    "HOTICH2014|Dieu9|Khoan1",
+    "HOTICH2014|Dieu6|Khoan2",
+    "HOTICH2014|Dieu44|Khoan4",
+    "HOTICH2014|Dieu63",
+    "HOTICH2014|Dieu64|Khoan2",
+    "HOTICH2014|Dieu57|Khoan2"
    ]
   },
   {
@@ -1905,108 +2760,158 @@
    "top": [
     "HOTICH2014|Dieu69|Khoan2",
     "TNBTCNN2017|Dieu73|Khoan4",
+    "ND126_2014|Dieu63|Khoan2",
     "HOTICH2014|Dieu70|Khoan2",
+    "NCN2010|Dieu49|Khoan1|Diemc",
+    "TNBTCNN2017|Dieu73|Khoan2|Diemđ",
+    "TNBTCNN2017|Dieu73|Khoan3|Diemi",
+    "TNBTCNN2017|Dieu73|Khoan3|Dieme",
     "HOTICH2014|Dieu69|Khoan1|Diemg",
-    "NCN2010|Dieu37|Khoan4"
+    "HOTICH2014|Dieu69|Khoan1|Diemh"
    ]
   },
   {
    "qid": "NEW28534",
-   "rank": null,
+   "rank": 63,
    "top": [
-    "HNGD2014|Dieu87|Khoan3",
-    "HNGD2014|Dieu110",
+    "THADS2008|Dieu80",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu282|Khoan1",
-    "TNBTCNN2017|Dieu20|Khoan2",
-    "THADS2008|Dieu52|Khoan3"
+    "THADS2008|Dieu120|Khoan2",
+    "HNGD2014|Dieu87|Khoan1",
+    "HNGD2014|Dieu87|Khoan3",
+    "THADS2008|Dieu52|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu486|Khoan1",
+    "THADS2008|Dieu81",
+    "THADS2008|Dieu162|Khoan4",
+    "THADS2008|Dieu6|Khoan2"
    ]
   },
   {
    "qid": "NEW87268",
-   "rank": 9,
+   "rank": 58,
    "top": [
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu7",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu106|Khoan4",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu106|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu330|Khoan1",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu91|Khoan1|Diemc"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu106|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu91|Khoan1|Diemc",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu91|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu70|Khoan6",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu6|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu106|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu287|Khoan1|Diema"
    ]
   },
   {
    "qid": "NEW53084",
-   "rank": null,
+   "rank": 17,
    "top": [
-    "BLDS2015|Dieu546|Khoan5",
     "BLDS2015|Dieu545|Khoan3",
+    "BLDS2015|Dieu546|Khoan5",
+    "BLDS2015|Dieu552|Khoan3",
+    "BLDS2015|Dieu14|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu330|Khoan1",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu91|Khoan1|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu195|Khoan4",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu189|Khoan5",
+    "BLDS2015|Dieu432|Khoan3",
+    "THADS2008|Dieu141|Khoan2",
     "BLDS2015|Dieu547|Khoan2"
    ]
   },
   {
    "qid": "NEW21414",
-   "rank": 9,
+   "rank": 7,
    "top": [
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu68|Khoan6",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu68|Khoan4",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu201|Khoan1|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu73|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu201|Khoan1|Diemb",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu243|Khoan3"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu201|Khoan1|Diemc",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu73|Khoan1|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu391|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu419|Khoan3|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu199|Khoan2"
    ]
   },
   {
    "qid": "NEW91442",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu86|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu69|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu86|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu86|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu90|Khoan1",
     "BLDS2015|Dieu142|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu86|Khoan1"
+    "BLDS2015|Dieu134|Khoan2",
+    "BLDS2015|Dieu142|Khoan1|Diemc",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu85|Khoan4",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu85|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu90|Khoan2"
    ]
   },
   {
    "qid": "NEW84407",
-   "rank": null,
+   "rank": 10,
    "top": [
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu320|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu324|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu209|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu296|Khoan1",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu367|Khoan1"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu367|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu458|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu438|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu232|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu374|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu209|Khoan3",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu27|Khoan1"
    ]
   },
   {
    "qid": "NEW45231",
-   "rank": null,
+   "rank": 2,
    "top": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu4|Khoan2",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu16|Khoan2",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu4|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan3",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu323|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu336|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu373|Khoan3"
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu17",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu31|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu373|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu280|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu290|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu323|Khoan2"
    ]
   },
   {
    "qid": "NEW98861",
-   "rank": null,
+   "rank": 2,
    "top": [
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu318|Khoan3",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu41|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu6|Khoan3|Diema",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu6|Khoan3|Diemc",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu5|Khoan2",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu7|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu6|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu36|Khoan3|Diemd",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu366|Khoan3",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu6|Khoan3|Diemb",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu373|Khoan3",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu220|Khoan2"
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu6|Khoan3|Diemd"
    ]
   },
   {
    "qid": "NEW17468",
-   "rank": null,
+   "rank": 2,
    "top": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu36|Khoan3|Diemb",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu37|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu280|Khoan3",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu57|Khoan1|Diemđ",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu36|Khoan3|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu232|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu23|Khoan3",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu36|Khoan2|Diemc",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu374|Khoan1",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu324|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu21|Khoan1"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu367|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu458|Khoan2"
    ]
   },
   {
@@ -2014,54 +2919,79 @@
    "rank": 1,
    "top": [
     "THADSVBHN|Dieu57|Khoan1|Diemb",
-    "THADSVBHN|Dieu57|Khoan1|Diema",
     "THADS2008|Dieu57|Khoan2",
+    "THADSVBHN|Dieu57|Khoan1|Diema",
+    "THADS2008|Dieu36|Khoan1|Diemđ",
     "THADS2008|Dieu57|Khoan1",
-    "THADSVBHN|Dieu57|Khoan2|Diemb"
+    "THADSVBHN|Dieu57|Khoan2|Diemb",
+    "THADSVBHN|Dieu36|Khoan1",
+    "THADS2008|Dieu36|Khoan3",
+    "THADS2008|Dieu36|Khoan2",
+    "THADS2008|Dieu49|Khoan3|Diema"
    ]
   },
   {
    "qid": "NEW15696",
    "rank": 6,
    "top": [
-    "THADSVBHN|Dieu106|Khoan2|Diemc",
     "THADSVBHN|Dieu106|Khoan2|Diemd",
-    "THADS2008|Dieu178|Khoan2",
+    "THADS2008|Dieu106|Khoan2",
+    "THADSVBHN|Dieu106|Khoan2|Diemc",
     "THADSVBHN|Dieu106|Khoan2|Diema",
-    "THADS2008|Dieu106|Khoan2"
+    "THADS2008|Dieu178|Khoan2",
+    "THADSVBHN|Dieu106|Khoan2|Diemđ",
+    "THADSVBHN|Dieu178|Khoan2",
+    "THADSVBHN|Dieu106|Khoan1",
+    "THADSVBHN|Dieu106|Khoan2|Diemb",
+    "THADSVBHN|Dieu106|Khoan2|Dieme"
    ]
   },
   {
    "qid": "NEW75514",
-   "rank": 3,
+   "rank": 4,
    "top": [
-    "THADS2008|Dieu21|Khoan3",
     "THADSVBHN|Dieu21|Khoan3",
+    "THADS2008|Dieu21|Khoan3",
+    "HNGD2014|Dieu66|Khoan3",
     "THADSVBHN|Dieu21|Khoan5|Diema",
+    "THADS2008|Dieu21|Khoan5|Diema",
+    "THADSVBHN|Dieu145|Khoan1|Diemb",
     "THADS2008|Dieu145|Khoan1|Diemb",
-    "THADS2008|Dieu21|Khoan5|Diema"
+    "HNGD2014|Dieu45|Khoan4",
+    "THADS2008|Dieu52|Khoan3",
+    "THADS2008|Dieu107|Khoan1|Diemb"
    ]
   },
   {
    "qid": "NEW71666",
-   "rank": 9,
+   "rank": 15,
    "top": [
     "BLDS2015|Dieu272|Khoan4",
+    "THADS2008|Dieu36|Khoan1|Diemd",
     "THADSVBHN|Dieu110|Khoan2",
     "THADS2008|Dieu110|Khoan2",
-    "TNBTCNN2017|Dieu17|Khoan11",
-    "THADS2008|Dieu106|Khoan4"
+    "THADSVBHN|Dieu95|Khoan2",
+    "THADS2008|Dieu95|Khoan2",
+    "BLDS2015|Dieu244",
+    "BLDS2015|Dieu218|Khoan4",
+    "THADSVBHN|Dieu116|Khoan3",
+    "BLDS2015|Dieu94|Khoan3"
    ]
   },
   {
    "qid": "NEW20421",
-   "rank": 8,
+   "rank": 14,
    "top": [
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan2",
     "THADS2008|Dieu147|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu503",
+    "THADS2008|Dieu148",
+    "THADS2008|Dieu150",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu489|Khoan3",
-    "TNBTCNN2017|Dieu17|Khoan13",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu501|Khoan1|Diema"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu502",
+    "THADS2008|Dieu152|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu83|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan1"
    ]
   },
   {
@@ -2069,10 +2999,15 @@
    "rank": 1,
    "top": [
     "THADS2008|Dieu20|Khoan5",
-    "THADS2008|Dieu66|Khoan3|Diema",
     "THADS2008|Dieu72|Khoan2|Diema",
     "THADS2008|Dieu66|Khoan3|Diemb",
-    "THADS2008|Dieu130|Khoan1|Diema"
+    "THADS2008|Dieu130|Khoan1|Diemđ",
+    "THADS2008|Dieu130|Khoan1|Diema",
+    "THADS2008|Dieu66|Khoan3|Diema",
+    "THADS2008|Dieu72|Khoan2|Diemd",
+    "THADS2008|Dieu66|Khoan3|Diemc",
+    "TNBTCNN2017|Dieu17|Khoan4",
+    "THADS2008|Dieu130|Khoan1|Diemc"
    ]
   },
   {
@@ -2083,7 +3018,12 @@
     "THADS2008|Dieu15|Khoan2",
     "THADS2008|Dieu14|Khoan1|Diemd",
     "THADS2008|Dieu23|Khoan1|Diemh",
-    "THADS2008|Dieu167|Khoan1|Diemk"
+    "THADS2008|Dieu167|Khoan1|Diemk",
+    "THADS2008|Dieu14|Khoan5",
+    "THADS2008|Dieu16|Khoan3",
+    "TNBTCNN2017|Dieu73|Khoan2|Diemg",
+    "THADS2008|Dieu15|Khoan4",
+    "ND126_2014|Dieu59|Khoan2"
    ]
   },
   {
@@ -2093,8 +3033,13 @@
     "THADS2008|Dieu132|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diemh",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diemg",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diema",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan3"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Dieme",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diemd",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diemđ",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan2"
    ]
   },
   {
@@ -2103,9 +3048,14 @@
    "top": [
     "TNBTCNN2017|Dieu13|Khoan1|Dieme",
     "BLDS2015|Dieu419|Khoan2",
+    "BLDS2015|Dieu585|Khoan3",
     "BLDS2015|Dieu597",
+    "TNBTCNN2017|Dieu13|Khoan1|Diemđ",
     "TNBTCNN2017|Dieu13|Khoan1|Diema",
-    "TNBTCNN2017|Dieu13|Khoan1|Diemđ"
+    "BLDS2015|Dieu568|Khoan3",
+    "TNBTCNN2017|Dieu13|Khoan1|Diemg",
+    "TNBTCNN2017|Dieu13|Khoan1|Diemd",
+    "TNBTCNN2017|Dieu40|Khoan3"
    ]
   },
   {
@@ -2116,7 +3066,12 @@
     "TNBTCNN2017|Dieu15|Khoan2",
     "TNBTCNN2017|Dieu56|Khoan2",
     "TNBTCNN2017|Dieu57|Khoan5",
-    "TNBTCNN2017|Dieu51|Khoan2"
+    "TNBTCNN2017|Dieu57|Khoan4",
+    "TNBTCNN2017|Dieu51|Khoan2",
+    "THADS2008|Dieu156|Khoan1|Diemc",
+    "TNBTCNN2017|Dieu17|Khoan5|Diemb",
+    "TNBTCNN2017|Dieu43|Khoan5",
+    "TNBTCNN2017|Dieu31|Khoan2"
    ]
   },
   {
@@ -2125,9 +3080,14 @@
    "top": [
     "TNBTCNN2017|Dieu50|Khoan3",
     "TNBTCNN2017|Dieu48|Khoan1|Diemb",
+    "TNBTCNN2017|Dieu50|Khoan1|Diemd",
+    "TNBTCNN2017|Dieu69|Khoan1",
     "TNBTCNN2017|Dieu50|Khoan2",
+    "TNBTCNN2017|Dieu48|Khoan1|Diemc",
+    "TNBTCNN2017|Dieu51|Khoan1|Diema",
     "TNBTCNN2017|Dieu51|Khoan1|Diemđ",
-    "TNBTCNN2017|Dieu50|Khoan1|Diemd"
+    "TNBTCNN2017|Dieu51|Khoan2",
+    "TNBTCNN2017|Dieu51|Khoan1|Diemc"
    ]
   },
   {
@@ -2135,32 +3095,47 @@
    "rank": 1,
    "top": [
     "TNBTCNN2017|Dieu46|Khoan6|Diema",
-    "TNBTCNN2017|Dieu41|Khoan5",
     "TNBTCNN2017|Dieu13|Khoan2|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu448|Khoan2",
     "TNBTCNN2017|Dieu46|Khoan3|Dieme",
-    "TNBTCNN2017|Dieu45|Khoan1"
+    "TNBTCNN2017|Dieu41|Khoan5",
+    "TNBTCNN2017|Dieu16|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu196|Khoan3",
+    "TNBTCNN2017|Dieu45|Khoan1",
+    "TNBTCNN2017|Dieu41|Khoan1|Diemc",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu362|Khoan3"
    ]
   },
   {
    "qid": "NEW61903",
-   "rank": null,
+   "rank": 6,
    "top": [
     "TNBTCNN2017|Dieu46|Khoan5|Diema",
-    "TNBTCNN2017|Dieu15|Khoan4",
+    "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diema",
+    "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diemb",
+    "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diemd",
+    "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diemđ",
+    "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diemc",
     "TNBTCNN2017|Dieu46|Khoan6|Diemđ",
-    "TNBTCNN2017|Dieu46|Khoan5|Diemb",
-    "TNBTCNN2017|Dieu46|Khoan6|Diema"
+    "TNBTCNN2017|Dieu15|Khoan4",
+    "luat-so-15-2026-qh16-470450|Dieu46|Khoan3|Diema",
+    "TNBTCNN2017|Dieu46|Khoan5|Diemb"
    ]
   },
   {
    "qid": "NEW28139",
-   "rank": null,
+   "rank": 1,
    "top": [
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diemd",
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan3|Diemd",
+    "TNBTCNN2017|Dieu73|Khoan2|Diemi",
     "TNBTCNN2017|Dieu73|Khoan2|Diemk",
     "TNBTCNN2017|Dieu73|Khoan2|Diemc",
-    "TNBTCNN2017|Dieu73|Khoan2|Diemi",
+    "TNBTCNN2017|Dieu73|Khoan2|Diemg",
     "TNBTCNN2017|Dieu73|Khoan2|Diema",
-    "TNBTCNN2017|Dieu73|Khoan2|Diemb"
+    "TNBTCNN2017|Dieu73|Khoan2|Diemo",
+    "TNBTCNN2017|Dieu73|Khoan2|Dieml",
+    "TNBTCNN2017|Dieu73|Khoan2|Diemn"
    ]
   },
   {
@@ -2170,19 +3145,29 @@
     "HNGD2014|Dieu38|Khoan2",
     "HNGDVBHN2025|Dieu38|Khoan2",
     "HNGD2014|Dieu47",
+    "HNGD2014|Dieu39|Khoan2",
     "HNGDVBHN2025|Dieu47",
-    "HNGD2014|Dieu39|Khoan2"
+    "HNGDVBHN2025|Dieu39|Khoan2",
+    "HNGD2014|Dieu41|Khoan1",
+    "HNGDVBHN2025|Dieu41|Khoan1",
+    "HNGDVBHN2025|Dieu36",
+    "BLDS2015|Dieu213|Khoan4"
    ]
   },
   {
    "qid": "NEW91253",
-   "rank": null,
+   "rank": 26,
    "top": [
+    "BLDS2015|Dieu52|Khoan3",
     "HNGD2014|Dieu106",
     "HNGD2014|Dieu114|Khoan1",
     "HNGDVBHN2025|Dieu114|Khoan1",
+    "HNGD2014|Dieu114|Khoan2",
+    "HNGDVBHN2025|Dieu114|Khoan2",
+    "BLDS2015|Dieu52|Khoan1",
+    "NCN2010|Dieu14|Khoan3",
     "HNGDVBHN2025|Dieu106",
-    "BLDS2015|Dieu52|Khoan3"
+    "BLDS2015|Dieu51|Khoan1"
    ]
   },
   {
@@ -2192,19 +3177,29 @@
     "NCN2010|Dieu43|Khoan2|Diemđ",
     "NCN2010|Dieu43|Khoan1|Diemb",
     "NCN2010|Dieu43|Khoan1|Diemđ",
+    "NCN2010|Dieu43|Khoan2|Diemb",
     "NCN2010|Dieu43|Khoan2|Diemd",
-    "NCN2010|Dieu43|Khoan2|Diemb"
+    "NCN2010|Dieu43|Khoan2|Diemi",
+    "NCN2010|Dieu43|Khoan2|Diema",
+    "NCN2010|Dieu43|Khoan2|Diemk",
+    "NCN2010|Dieu43|Khoan2|Dieme",
+    "NCN2010|Dieu43|Khoan1|Diema"
    ]
   },
   {
    "qid": "NEW17446",
-   "rank": null,
+   "rank": 44,
    "top": [
     "NCN2010|Dieu28|Khoan2|Diemc",
-    "NCN2010|Dieu3|Khoan5",
-    "NCN2010|Dieu28|Khoan2|Diemd",
     "NCN2010|Dieu28|Khoan3",
-    "NCN2010|Dieu12|Khoan2"
+    "NCN2010|Dieu28|Khoan2|Diemd",
+    "NCN2010|Dieu3|Khoan5",
+    "NCN2010|Dieu37|Khoan5",
+    "NCN2010|Dieu12|Khoan2",
+    "NCN2010|Dieu28|Khoan1",
+    "NCN2010|Dieu31|Khoan1|Diema",
+    "NCN2010|Dieu31|Khoan1|Diemc",
+    "NCN2010|Dieu28|Khoan2|Diema"
    ]
   },
   {
@@ -2213,20 +3208,30 @@
    "top": [
     "NCN2010|Dieu14|Khoan2|Diemd",
     "BLDS2015|Dieu49|Khoan3",
+    "NCN2010|Dieu25|Khoan3",
     "HNGD2014|Dieu85|Khoan1|Diema",
     "NCN2010|Dieu25|Khoan2",
-    "BLDS2015|Dieu621|Khoan1|Diema"
+    "BLDS2015|Dieu621|Khoan1|Diema",
+    "HNGD2014|Dieu85|Khoan1|Diemc",
+    "NCN2010|Dieu14|Khoan1|Diemc",
+    "HNGD2014|Dieu85|Khoan1|Diemb",
+    "BLDS2015|Dieu621|Khoan1|Diemc"
    ]
   },
   {
    "qid": "NEW57186",
-   "rank": null,
+   "rank": 17,
    "top": [
     "NCN2010|Dieu31|Khoan1|Diema",
     "NCN2010|Dieu40|Khoan1",
     "NCN2010|Dieu31|Khoan1|Diemc",
     "NCN2010|Dieu31|Khoan1|Diemi",
-    "NCN2010|Dieu31|Khoan1|Diemg"
+    "NCN2010|Dieu31|Khoan1|Diemg",
+    "NCN2010|Dieu31|Khoan1|Diemd",
+    "NCN2010|Dieu31|Khoan1|Diemh",
+    "NCN2010|Dieu31|Khoan1|Diemđ",
+    "NCN2010|Dieu31|Khoan3",
+    "NCN2010|Dieu37|Khoan2"
    ]
   },
   {
@@ -2236,8 +3241,13 @@
     "NCN2010|Dieu25|Khoan2",
     "NCN2010|Dieu25|Khoan3",
     "HNGD2014|Dieu85|Khoan1|Diema",
+    "HNGD2014|Dieu85|Khoan1|Diemd",
     "HNGD2014|Dieu68|Khoan4",
-    "HNGD2014|Dieu78|Khoan1"
+    "HNGD2014|Dieu85|Khoan1|Diemb",
+    "HNGD2014|Dieu78|Khoan1",
+    "HNGD2014|Dieu85|Khoan1|Diemc",
+    "NCN2010|Dieu23|Khoan1",
+    "NCN2010|Dieu24|Khoan4"
    ]
   },
   {
@@ -2245,10 +3255,15 @@
    "rank": 1,
    "top": [
     "HOTICH2026|Dieu8|Khoan2|Diemb",
-    "HOTICH2014|Dieu18|Khoan2",
     "HOTICH2014|Dieu38|Khoan3",
+    "ND126_2014|Dieu24|Khoan4",
+    "HOTICH2014|Dieu18|Khoan2",
+    "ND126_2014|Dieu24|Khoan3",
+    "ND126_2014|Dieu28|Khoan5",
     "HNGDVBHN2025|Dieu13",
-    "HOTICH2026|Dieu2|Khoan9"
+    "ND126_2014|Dieu39|Khoan3",
+    "HOTICH2026|Dieu16|Khoan3",
+    "HNGD2014|Dieu13"
    ]
   },
   {
@@ -2259,7 +3274,12 @@
     "HOTICH2026|Dieu17|Khoan1|Diemđ",
     "HOTICH2026|Dieu17|Khoan1|Diemd",
     "HOTICH2026|Dieu5|Khoan1",
-    "HOTICH2026|Dieu18|Khoan3"
+    "HOTICH2026|Dieu16|Khoan1|Diemc",
+    "HOTICH2026|Dieu18|Khoan3",
+    "HOTICH2014|Dieu39",
+    "HOTICH2026|Dieu15|Khoan1|Diemc",
+    "HOTICH2026|Dieu18|Khoan5",
+    "HOTICH2026|Dieu18|Khoan4"
    ]
   },
   {
@@ -2269,41 +3289,61 @@
     "HOTICH2026|Dieu24|Khoan2",
     "HOTICH2026|Dieu26|Khoan5",
     "HOTICH2026|Dieu24|Khoan1",
+    "HOTICH2014|Dieu68|Khoan2",
     "HOTICH2014|Dieu66|Khoan3",
-    "HOTICH2014|Dieu68|Khoan2"
+    "HOTICH2026|Dieu24|Khoan3",
+    "HOTICH2014|Dieu61|Khoan2",
+    "HOTICH2014|Dieu61|Khoan1",
+    "HOTICH2014|Dieu68|Khoan1",
+    "HOTICH2014|Dieu4|Khoan4"
    ]
   },
   {
    "qid": "NEW75990",
-   "rank": null,
+   "rank": 1,
    "top": [
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu27|Khoan9",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu42|Khoan9",
     "BLDS2015|Dieu219|Khoan1",
-    "THADS2008|Dieu51|Khoan1|Diema",
+    "BLDS2015|Dieu111|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu27|Khoan9",
+    "THADSVBHN|Dieu90|Khoan1",
+    "THADS2008|Dieu90|Khoan1",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu25|Khoan3",
+    "BLDS2015|Dieu213|Khoan4",
     "THADS2008|Dieu107|Khoan1|Diema",
-    "THADS2008|Dieu90|Khoan1"
+    "THADS2008|Dieu51|Khoan1|Diema"
    ]
   },
   {
    "qid": "NEW21932",
-   "rank": null,
+   "rank": 1,
    "top": [
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu50|Khoan1",
+    "THADSVBHN|Dieu79|Khoan1",
     "THADS2008|Dieu79|Khoan1",
-    "HNGD2014|Dieu64",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu30|Khoan1",
+    "HNGDVBHN2025|Dieu64",
+    "HNGD2014|Dieu64",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu51|Khoan1",
     "HNGD2014|Dieu66|Khoan4",
+    "HNGDVBHN2025|Dieu66|Khoan4",
     "HNGD2014|Dieu25|Khoan1"
    ]
   },
   {
    "qid": "NEW96729",
-   "rank": null,
+   "rank": 1,
    "top": [
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu21|Khoan1",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu21|Khoan4",
+    "THADSVBHN|Dieu44|Khoan1",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu9|Khoan2|Diema",
+    "THADSVBHN|Dieu20|Khoan4",
     "THADS2008|Dieu20|Khoan4",
-    "THADS2008|Dieu92|Khoan1",
-    "THADS2008|Dieu177|Khoan1",
-    "THADS2008|Dieu162|Khoan6",
-    "THADS2008|Dieu44|Khoan1"
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu9|Khoan2|Dieme",
+    "THADSVBHN|Dieu177|Khoan1",
+    "THADSVBHN|Dieu44|Khoan5",
+    "THADS2008|Dieu177|Khoan1"
    ]
   },
   {
@@ -2311,21 +3351,31 @@
    "rank": 1,
    "top": [
     "HNGD2000|Dieu45|Khoan2",
+    "HNGD2000|Dieu45|Khoan1",
     "HNGD2000|Dieu36|Khoan1",
     "HNGD2000|Dieu46|Khoan1",
+    "HNGD2000|Dieu56",
     "BLDS1995|Dieu85|Muc1",
-    "HNGD2000|Dieu45|Khoan1"
+    "HNGD2000|Dieu80",
+    "HNGD2000|Dieu95|Khoan2|Diemb",
+    "HNGD2000|Dieu40",
+    "HNGD2000|Dieu10|Khoan2"
    ]
   },
   {
    "qid": "NEW90253",
-   "rank": 6,
+   "rank": 8,
    "top": [
-    "HNGD2000|Dieu42|Khoan1",
-    "BLDS1995|Dieu70|Muc0",
     "HNGD2000|Dieu43|Khoan3",
+    "HNGD2000|Dieu42|Khoan1",
+    "HNGD2000|Dieu42|Khoan4",
     "HNGD2000|Dieu43|Khoan1",
-    "HNGD2000|Dieu43|Khoan2"
+    "HNGD2000|Dieu43|Khoan2",
+    "HNGD2000|Dieu42|Khoan2",
+    "BLDS1995|Dieu70|Muc0",
+    "HNGD2000|Dieu69|Khoan5",
+    "HNGD2000|Dieu39",
+    "BLDS1995|Dieu67|Muc2"
    ]
   },
   {
@@ -2335,19 +3385,29 @@
     "HNGD2000|Dieu94",
     "HNGD2000|Dieu43|Khoan1",
     "HNGD2000|Dieu92|Khoan1",
+    "HNGD2000|Dieu43|Khoan3",
     "HNGD2000|Dieu69|Khoan4",
-    "HNGD2000|Dieu78|Khoan1"
+    "HNGD2000|Dieu78|Khoan1",
+    "HNGD2000|Dieu43|Khoan2",
+    "HNGD2000|Dieu70",
+    "HNGD2000|Dieu56",
+    "HNGD2000|Dieu38|Khoan1"
    ]
   },
   {
    "qid": "TOP25047",
-   "rank": null,
+   "rank": 11,
    "top": [
-    "HOAGIAI2026|Dieu28|Khoan2|Diemb",
-    "HOAGIAI2026|Dieu28|Khoan2|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu419|Khoan3|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu418|Khoan1|Diemb",
     "HOAGIAI2026|Dieu22|Khoan1|Diemc",
-    "HOAGIAI2026|Dieu22|Khoan1|Diemb"
+    "HOAGIAI2026|Dieu6|Khoan1",
+    "HOAGIAI2026|Dieu23|Khoan1",
+    "HOAGIAI2026|Dieu22|Khoan1|Dieme",
+    "HOAGIAI2026|Dieu22|Khoan1|Diemb",
+    "HOAGIAI2026|Dieu28|Khoan2|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu418|Khoan1|Diemc",
+    "HOAGIAI2026|Dieu28|Khoan2|Diemb"
    ]
   },
   {
@@ -2358,7 +3418,12 @@
     "HOAGIAI2026|Dieu22|Khoan2|Diemb",
     "HOAGIAI2026|Dieu22|Khoan2|Diemđ",
     "HOAGIAI2026|Dieu24|Khoan2",
-    "HOAGIAI2026|Dieu20|Khoan1|Diema"
+    "HOAGIAI2026|Dieu2|Khoan4",
+    "HOAGIAI2026|Dieu33|Khoan2",
+    "HOAGIAI2026|Dieu20|Khoan1|Diema",
+    "HOAGIAI2026|Dieu31",
+    "HOAGIAI2026|Dieu10|Khoan2",
+    "HOAGIAI2026|Dieu1|Khoan1"
    ]
   },
   {
@@ -2367,9 +3432,14 @@
    "top": [
     "HOAGIAI2026|Dieu24|Khoan2",
     "HOAGIAI2026|Dieu17|Khoan1",
-    "HOAGIAI2026|Dieu14|Khoan4",
+    "HOAGIAI2026|Dieu24|Khoan3",
+    "HOAGIAI2026|Dieu21|Khoan2",
+    "HOAGIAI2026|Dieu18|Khoan2",
     "HOAGIAI2026|Dieu31",
-    "HOAGIAI2026|Dieu24|Khoan3"
+    "HOAGIAI2026|Dieu14|Khoan4",
+    "HOAGIAI2026|Dieu13|Khoan3",
+    "HOAGIAI2026|Dieu27",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu419|Khoan3|Diema"
    ]
   },
   {
@@ -2380,18 +3450,28 @@
     "HOAGIAI2026|Dieu13|Khoan4",
     "HOAGIAI2026|Dieu22|Khoan2|Diemc",
     "nghi-dinh-so-152-2026-nd-cp-469524|Dieu106|Khoan1|Diemb",
-    "HOAGIAI2026|Dieu16|Khoan5"
+    "HOAGIAI2026|Dieu16|Khoan5",
+    "HOAGIAI2026|Dieu21|Khoan3",
+    "HOAGIAI2026|Dieu12|Khoan11",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu106|Khoan1|Diemc",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu106|Khoan1|Diema",
+    "HOAGIAI2026|Dieu16|Khoan3"
    ]
   },
   {
    "qid": "TOP28886",
-   "rank": 7,
+   "rank": 5,
    "top": [
     "HOAGIAI2026|Dieu12|Khoan9",
     "HOAGIAI2026|Dieu6|Khoan1",
     "HOAGIAI2026|Dieu3|Khoan1|Diemd",
     "HOAGIAI2026|Dieu3|Khoan1|Diemb",
-    "HOAGIAI2026|Dieu13|Khoan4"
+    "HOAGIAI2026|Dieu3|Khoan1|Diema",
+    "HOAGIAI2026|Dieu2|Khoan1",
+    "HOAGIAI2026|Dieu13|Khoan4",
+    "HOAGIAI2026|Dieu3|Khoan1|Diemc",
+    "HOAGIAI2026|Dieu16|Khoan4",
+    "HNGDVBHN2025|Dieu52"
    ]
   },
   {
@@ -2401,8 +3481,13 @@
     "HOAGIAI2026|Dieu9|Khoan5",
     "HOAGIAI2026|Dieu10|Khoan1|Diemb",
     "HOAGIAI2026|Dieu11|Khoan1",
+    "HOAGIAI2026|Dieu9|Khoan1",
+    "HOAGIAI2026|Dieu10|Khoan2",
     "HOAGIAI2026|Dieu9|Khoan3|Diemb",
-    "HOAGIAI2026|Dieu10|Khoan2"
+    "HOAGIAI2026|Dieu10|Khoan1|Diema",
+    "HOAGIAI2026|Dieu9|Khoan4",
+    "HOAGIAI2026|Dieu17|Khoan3",
+    "HOAGIAI2026|Dieu9|Khoan3|Diema"
    ]
   },
   {
@@ -2410,43 +3495,63 @@
    "rank": 1,
    "top": [
     "HOTICH2014|Dieu15|Khoan1",
+    "HOTICH2014|Dieu15|Khoan2",
     "HOTICH2014|Dieu16|Khoan1",
     "HOTICH2014|Dieu11|Khoan1|Diemb",
-    "HOTICH2014|Dieu15|Khoan2",
-    "HOTICH2014|Dieu16|Khoan3"
+    "HOTICH2014|Dieu16|Khoan3",
+    "HOTICH2014|Dieu7|Khoan4",
+    "HOTICH2014|Dieu35|Khoan2|Diema",
+    "HOTICH2014|Dieu13",
+    "HOTICH2014|Dieu36|Khoan3",
+    "HOTICH2014|Dieu35|Khoan2|Diemb"
    ]
   },
   {
    "qid": "TOP42625",
-   "rank": 2,
+   "rank": 6,
    "top": [
+    "HOTICH2014|Dieu31",
     "HOTICH2014|Dieu3|Khoan2|Diema",
-    "HOTICH2014|Dieu29|Khoan2",
-    "HOTICH2014|Dieu3|Khoan2|Diemc",
+    "HOTICH2014|Dieu28|Khoan2",
     "HOTICH2014|Dieu3|Khoan2|Dieme",
-    "HOTICH2014|Dieu31"
+    "HOTICH2014|Dieu3|Khoan2|Diemc",
+    "HOTICH2014|Dieu29|Khoan2",
+    "HOTICH2014|Dieu30|Khoan1",
+    "HOTICH2014|Dieu3|Khoan2|Diemđ",
+    "HOTICH2014|Dieu3|Khoan2|Diemb",
+    "HOTICH2014|Dieu28|Khoan3"
    ]
   },
   {
    "qid": "TOP61006",
-   "rank": null,
+   "rank": 43,
    "top": [
-    "HOTICH2014|Dieu48|Khoan2",
-    "HOTICH2014|Dieu50|Khoan1",
-    "HOTICH2014|Dieu3|Khoan3",
-    "HOTICH2014|Dieu38|Khoan4",
-    "HOTICH2014|Dieu48|Khoan1"
+    "ND126_2014|Dieu43|Khoan1|Diemc",
+    "ND126_2014|Dieu43|Khoan1|Diema",
+    "ND126_2014|Dieu43|Khoan1|Diemb",
+    "ND126_2014|Dieu43|Khoan1|Diemd",
+    "ND126_2014|Dieu42|Khoan3",
+    "ND126_2014|Dieu47",
+    "ND126_2014|Dieu46|Khoan2",
+    "ND126_2014|Dieu38|Khoan1|Diemd",
+    "ND126_2014|Dieu42|Khoan2",
+    "HOTICH2014|Dieu48|Khoan2"
    ]
   },
   {
    "qid": "TOP68536",
-   "rank": null,
+   "rank": 18,
    "top": [
-    "HOTICH2014|Dieu59|Khoan1",
     "HOTICH2014|Dieu9|Khoan1",
+    "HOTICH2014|Dieu59|Khoan1",
     "HOTICH2014|Dieu12|Khoan1|Diemi",
     "HOTICH2014|Dieu60|Khoan1",
-    "HOTICH2014|Dieu63"
+    "HOTICH2014|Dieu63",
+    "HOTICH2014|Dieu64|Khoan1",
+    "HOTICH2014|Dieu55",
+    "HOTICH2014|Dieu68|Khoan2",
+    "HOTICH2014|Dieu57|Khoan1",
+    "HOTICH2014|Dieu4|Khoan2"
    ]
   },
   {
@@ -2456,8 +3561,13 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu474|Khoan1|Diemđ",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu474|Khoan1|Diemd",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu474|Khoan1|Dieme",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu474|Khoan1|Diemc",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu477|Khoan4",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu474|Khoan1|Diemc"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu467|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu469|Khoan1|Diemb"
    ]
   },
   {
@@ -2466,75 +3576,110 @@
    "top": [
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu324|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu302|Khoan1|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu341|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu313|Khoan4",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu298|Khoan2|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu298|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu302|Khoan1|Diemc",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu341|Khoan1"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu236|Khoan1|Diemc",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu298|Khoan2|Diema"
    ]
   },
   {
    "qid": "TOP89044",
-   "rank": null,
+   "rank": 3,
    "top": [
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan5|Diema",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu269|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu366|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu220|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu292|Khoan2"
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu25|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu373|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu292|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu336|Khoan2",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu4|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu36|Khoan3|Diemd",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu457|Khoan1|Diemc",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu7|Khoan1"
    ]
   },
   {
    "qid": "TOP89101",
-   "rank": null,
+   "rank": 2,
    "top": [
     "TNBTCNN2017|Dieu41|Khoan5",
-    "TNBTCNN2017|Dieu42|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu8|Khoan3",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu20|Khoan2|Diemb",
     "HOTICH2014|Dieu9|Khoan2",
-    "TNBTCNN2017|Dieu41|Khoan1|Diemb",
-    "HOTICH2014|Dieu9|Khoan1"
+    "TNBTCNN2017|Dieu42|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu8|Khoan1",
+    "TNBTCNN2017|Dieu41|Khoan4",
+    "HOTICH2014|Dieu9|Khoan1",
+    "THADSVBHN|Dieu149|Khoan1|Diemđ",
+    "TNBTCNN2017|Dieu41|Khoan1|Diemb"
    ]
   },
   {
    "qid": "TOP26509",
-   "rank": null,
+   "rank": 1,
    "top": [
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu62|Khoan2",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu26|Khoan2",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu26|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu26|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu62|Khoan1",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu368|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu62|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu232|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu298|Khoan2|Diemb"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu368|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu61|Khoan2",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu24",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu62|Khoan4"
    ]
   },
   {
    "qid": "TOP27031",
-   "rank": null,
+   "rank": 31,
    "top": [
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu50|Khoan3",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu58|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu6|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu309|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu58|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu310|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu48|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu97|Khoan2|Dieme",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu106|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu48|Khoan3"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu345|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu97|Khoan2|Diemg"
    ]
   },
   {
    "qid": "TOP92479",
-   "rank": null,
+   "rank": 1,
    "top": [
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu457|Khoan1|Diemc",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu336|Khoan2",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu37|Khoan3",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu17",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu36|Khoan3|Diemd",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu220|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu359|Khoan3|Diemc",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu366|Khoan3"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu336|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu366|Khoan3",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu36|Khoan2|Diemc",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu7|Khoan1",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu22|Khoan2"
    ]
   },
   {
    "qid": "TOP86087",
-   "rank": null,
+   "rank": 5,
    "top": [
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu506|Khoan2",
+    "THADSVBHN|Dieu145|Khoan2|Diemb",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan4",
     "THADS2008|Dieu145|Khoan2|Diemb",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu13|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu319|Khoan3",
+    "THADSVBHN|Dieu150",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu11",
     "THADS2008|Dieu150",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu319|Khoan3"
+    "THADS2008|Dieu152|Khoan1"
    ]
   },
   {
@@ -2544,19 +3689,29 @@
     "THADSVBHN|Dieu44|Khoan4|Diemđ",
     "THADSVBHN|Dieu44|Khoan4|Diemc",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu102|Khoan3",
+    "THADS2008|Dieu31|Khoan2",
     "THADS2008|Dieu44|Khoan1",
-    "THADS2008|Dieu88|Khoan1"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu253|Khoan2",
+    "THADSVBHN|Dieu92|Khoan1",
+    "THADS2008|Dieu179|Khoan2",
+    "THADS2008|Dieu92|Khoan1",
+    "THADSVBHN|Dieu88|Khoan1"
    ]
   },
   {
    "qid": "TOP50371",
-   "rank": 4,
+   "rank": 2,
    "top": [
     "THADS2008|Dieu35|Khoan3|Diema",
+    "THADSVBHN|Dieu35|Khoan2|Diemc",
+    "THADS2008|Dieu35|Khoan3|Diemb",
     "THADS2008|Dieu35|Khoan3|Diemc",
     "THADSVBHN|Dieu35|Khoan2|Diema",
-    "THADSVBHN|Dieu35|Khoan2|Diemc",
-    "THADSVBHN|Dieu35|Khoan2|Diemb"
+    "THADSVBHN|Dieu35|Khoan2|Diemb",
+    "THADS2008|Dieu56|Khoan1|Diemb",
+    "THADS2008|Dieu35|Khoan3|Diemđ",
+    "THADS2008|Dieu35|Khoan3|Diemd",
+    "THADSVBHN|Dieu35|Khoan2|Diemd"
    ]
   },
   {
@@ -2564,10 +3719,15 @@
    "rank": 1,
    "top": [
     "THADSVBHN|Dieu173|Khoan6",
-    "THADS2008|Dieu172|Khoan4",
-    "THADS2008|Dieu173|Khoan4",
     "THADSVBHN|Dieu172|Khoan4",
-    "THADS2008|Dieu174|Khoan5"
+    "THADS2008|Dieu173|Khoan4",
+    "THADS2008|Dieu172|Khoan4",
+    "THADS2008|Dieu174|Khoan5",
+    "THADSVBHN|Dieu174|Khoan6",
+    "THADSVBHN|Dieu54|Khoan3",
+    "THADS2008|Dieu169|Khoan4",
+    "THADS2008|Dieu54|Khoan3",
+    "THADSVBHN|Dieu173|Khoan7"
    ]
   },
   {
@@ -2578,18 +3738,28 @@
     "THADSVBHN|Dieu170|Khoan3|Diemđ",
     "THADSVBHN|Dieu170|Khoan4|Diemd",
     "THADSVBHN|Dieu170|Khoan1|Diemb",
-    "THADS2008|Dieu23|Khoan1|Dieme"
+    "THADSVBHN|Dieu170|Khoan2|Diema",
+    "THADSVBHN|Dieu23|Khoan1|Diemc",
+    "THADSVBHN|Dieu23|Khoan1|Dieme",
+    "THADS2008|Dieu23|Khoan1|Diemc",
+    "THADS2008|Dieu23|Khoan1|Dieme",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu19|Khoan3"
    ]
   },
   {
    "qid": "TOP76535",
-   "rank": 3,
+   "rank": 1,
    "top": [
+    "THADSVBHN|Dieu176|Khoan2",
     "THADS2008|Dieu176|Khoan2",
     "THADSVBHN|Dieu67|Khoan2",
-    "THADSVBHN|Dieu176|Khoan2",
     "THADSVBHN|Dieu77|Khoan1|Diemb",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu114|Khoan10"
+    "THADS2008|Dieu67|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu114|Khoan10",
+    "THADSVBHN|Dieu77|Khoan2",
+    "THADSVBHN|Dieu67|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu114|Khoan11",
+    "THADSVBHN|Dieu67|Khoan1"
    ]
   },
   {
@@ -2598,9 +3768,14 @@
    "top": [
     "THADS2008|Dieu48|Khoan1|Diema",
     "TNBTCNN2017|Dieu49|Khoan1",
-    "THADS2008|Dieu48|Khoan2",
+    "THADS2008|Dieu48|Khoan3",
     "THADS2008|Dieu48|Khoan1|Diemb",
-    "THADS2008|Dieu48|Khoan3"
+    "THADS2008|Dieu48|Khoan2",
+    "THADS2008|Dieu30|Khoan2",
+    "TNBTCNN2017|Dieu49|Khoan2",
+    "THADS2008|Dieu162|Khoan4",
+    "THADS2008|Dieu48|Khoan4",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu332|Khoan1"
    ]
   },
   {
@@ -2609,9 +3784,14 @@
    "top": [
     "THADS2008|Dieu145|Khoan1|Diema",
     "THADS2008|Dieu144|Khoan2|Diema",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu500|Khoan2|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu501|Khoan2|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu500|Khoan2|Diemb",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu501|Khoan2|Diema"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu500|Khoan2|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu330|Khoan1",
+    "THADS2008|Dieu150",
+    "THADS2008|Dieu143|Khoan2|Diemb",
+    "THADS2008|Dieu145|Khoan2|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu78|Khoan1"
    ]
   },
   {
@@ -2622,7 +3802,12 @@
     "THADS2008|Dieu35|Khoan1|Diemb",
     "THADS2008|Dieu35|Khoan1|Diemd",
     "THADS2008|Dieu35|Khoan2|Diemg",
-    "THADS2008|Dieu142|Khoan2|Diemc"
+    "THADS2008|Dieu35|Khoan1|Diema",
+    "THADS2008|Dieu56|Khoan2",
+    "THADS2008|Dieu35|Khoan3|Diemđ",
+    "THADS2008|Dieu56|Khoan1|Diemc",
+    "THADS2008|Dieu35|Khoan2|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu337|Khoan5"
    ]
   },
   {
@@ -2633,7 +3818,12 @@
     "THADS2008|Dieu130|Khoan1|Diemc",
     "THADS2008|Dieu130|Khoan1|Diemd",
     "THADS2008|Dieu130|Khoan1|Diemđ",
-    "THADS2008|Dieu130|Khoan1|Diemb"
+    "THADS2008|Dieu36|Khoan1|Diemđ",
+    "THADS2008|Dieu130|Khoan1|Diemb",
+    "THADS2008|Dieu132|Khoan1",
+    "THADS2008|Dieu36|Khoan3",
+    "THADS2008|Dieu118|Khoan1",
+    "THADS2008|Dieu105|Khoan2"
    ]
   },
   {
@@ -2642,9 +3832,14 @@
    "top": [
     "THADS2008|Dieu140|Khoan2|Diemd",
     "THADS2008|Dieu146|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu505",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu502",
+    "THADS2008|Dieu148",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan1",
     "THADS2008|Dieu140|Khoan2|Diemc",
+    "THADS2008|Dieu146|Khoan1",
     "THADS2008|Dieu146|Khoan4",
-    "THADS2008|Dieu146|Khoan1"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu140"
    ]
   },
   {
@@ -2655,7 +3850,12 @@
     "BLDS2015|Dieu599|Khoan1",
     "BLDS2015|Dieu600",
     "TNBTCNN2017|Dieu15|Khoan8",
-    "BLDS2015|Dieu35|Khoan2"
+    "TNBTCNN2017|Dieu13|Khoan1|Diemc",
+    "THADS2008|Dieu143|Khoan1|Diemđ",
+    "BLDS2015|Dieu35|Khoan2",
+    "HNGD2014|Dieu72|Khoan3",
+    "HNGD2014|Dieu3|Khoan20",
+    "BLDS2015|Dieu8|Khoan7"
    ]
   },
   {
@@ -2665,63 +3865,93 @@
     "TNBTCNN2017|Dieu36|Khoan1|Diemb",
     "TNBTCNN2017|Dieu36|Khoan1|Diemđ",
     "TNBTCNN2017|Dieu36|Khoan1|Diema",
+    "TNBTCNN2017|Dieu36|Khoan1|Diemd",
+    "TNBTCNN2017|Dieu36|Khoan1|Diemc",
     "TNBTCNN2017|Dieu36|Khoan2|Diemb",
-    "TNBTCNN2017|Dieu35|Khoan4"
+    "TNBTCNN2017|Dieu35|Khoan4",
+    "TNBTCNN2017|Dieu36|Khoan1|Dieme",
+    "TNBTCNN2017|Dieu36|Khoan2|Diema",
+    "TNBTCNN2017|Dieu36|Khoan2|Diemc"
    ]
   },
   {
    "qid": "TOP15416",
-   "rank": 9,
+   "rank": 12,
    "top": [
-    "TNBTCNN2017|Dieu50|Khoan3",
-    "TNBTCNN2017|Dieu50|Khoan2",
     "TNBTCNN2017|Dieu51|Khoan1|Diema",
-    "TNBTCNN2017|Dieu51|Khoan1|Diemc",
-    "TNBTCNN2017|Dieu51|Khoan1|Diemđ"
+    "TNBTCNN2017|Dieu50|Khoan2",
+    "TNBTCNN2017|Dieu50|Khoan3",
+    "TNBTCNN2017|Dieu51|Khoan3",
+    "TNBTCNN2017|Dieu50|Khoan1|Diemd",
+    "TNBTCNN2017|Dieu48|Khoan1|Diemb",
+    "TNBTCNN2017|Dieu50|Khoan1|Diemc",
+    "TNBTCNN2017|Dieu51|Khoan1|Diemđ",
+    "TNBTCNN2017|Dieu51|Khoan4",
+    "TNBTCNN2017|Dieu51|Khoan1|Diemc"
    ]
   },
   {
    "qid": "TOP10527",
-   "rank": null,
+   "rank": 36,
    "top": [
-    "TNBTCNN2017|Dieu15|Khoan7",
     "TNBTCNN2017|Dieu4|Khoan4",
-    "TNBTCNN2017|Dieu1",
+    "TNBTCNN2017|Dieu15|Khoan7",
     "TNBTCNN2017|Dieu55|Khoan3|Diema",
-    "TNBTCNN2017|Dieu76|Khoan1"
+    "TNBTCNN2017|Dieu40|Khoan2",
+    "BLDS2015|Dieu598",
+    "TNBTCNN2017|Dieu76|Khoan1",
+    "TNBTCNN2017|Dieu73|Khoan2|Diemm",
+    "TNBTCNN2017|Dieu1",
+    "TNBTCNN2017|Dieu7|Khoan2|Diemc",
+    "TNBTCNN2017|Dieu55|Khoan2"
    ]
   },
   {
    "qid": "TOP81552",
-   "rank": null,
+   "rank": 4,
    "top": [
-    "TNBTCNN2017|Dieu73|Khoan3|Diemi",
     "TNBTCNN2017|Dieu73|Khoan3|Diema",
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan3|Diema",
     "TNBTCNN2017|Dieu73|Khoan3|Diemc",
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan3|Diemb",
+    "TNBTCNN2017|Dieu73|Khoan3|Diemi",
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan3|Diemc",
+    "luat-so-15-2026-qh16-470450|Dieu73|Khoan3|Diemd",
     "TNBTCNN2017|Dieu73|Khoan4",
+    "TNBTCNN2017|Dieu73|Khoan3|Diemd",
     "TNBTCNN2017|Dieu73|Khoan3|Diemg"
    ]
   },
   {
    "qid": "TOP27902",
-   "rank": null,
+   "rank": 1,
    "top": [
-    "BLDS2015|Dieu51|Khoan1",
+    "luat-so-15-2026-qh16-470450|Dieu1|Khoan10",
+    "luat-so-15-2026-qh16-470450|Dieu17|Khoan6",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu54|Khoan3",
-    "HNGD2014|Dieu3|Khoan16",
+    "BLDS2015|Dieu51|Khoan1",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan9",
+    "luat-so-15-2026-qh16-470450|Dieu1|Khoan3|Diemb",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu77|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu294|Khoan1",
-    "HNGD2014|Dieu3|Khoan19"
+    "THADSVBHN|Dieu156|Khoan1|Diema",
+    "THADS2008|Dieu156|Khoan1|Diema"
    ]
   },
   {
    "qid": "TOP25608",
-   "rank": null,
+   "rank": 1,
    "top": [
+    "luat-so-15-2026-qh16-470450|Dieu47|Khoan1|Diemb",
     "TNBTCNN2017|Dieu47|Khoan1",
-    "TNBTCNN2017|Dieu46|Khoan1",
+    "luat-so-15-2026-qh16-470450|Dieu46|Khoan1",
     "TNBTCNN2017|Dieu52|Khoan2",
+    "TNBTCNN2017|Dieu46|Khoan1",
+    "luat-so-15-2026-qh16-470450|Dieu47|Khoan2",
+    "luat-so-15-2026-qh16-470450|Dieu47|Khoan1|Diemd",
+    "luat-so-15-2026-qh16-470450|Dieu47|Khoan1|Diemc",
     "TNBTCNN2017|Dieu46|Khoan8",
-    "TNBTCNN2017|Dieu48|Khoan3|Diemb"
+    "luat-so-15-2026-qh16-470450|Dieu47|Khoan1|Diema"
    ]
   },
   {
@@ -2730,20 +3960,30 @@
    "top": [
     "HNGD2014|Dieu26|Khoan2",
     "HNGDVBHN2025|Dieu26|Khoan2",
-    "HNGDVBHN2025|Dieu60|Khoan1",
     "HNGD2014|Dieu60|Khoan1",
-    "BLDS2015|Dieu139|Khoan1"
+    "HNGDVBHN2025|Dieu60|Khoan1",
+    "ND126_2014|Dieu16",
+    "BLDS2015|Dieu139|Khoan1",
+    "HNGD2014|Dieu32|Khoan2",
+    "HNGDVBHN2025|Dieu32|Khoan2",
+    "HNGDVBHN2025|Dieu24|Khoan1",
+    "ND126_2014|Dieu8|Khoan2"
    ]
   },
   {
    "qid": "TOP58788",
-   "rank": 5,
+   "rank": 4,
    "top": [
-    "HNGDVBHN2025|Dieu122|Khoan2",
     "HNGD2014|Dieu122|Khoan2",
-    "HNGD2014|Dieu121|Khoan2",
+    "HNGDVBHN2025|Dieu122|Khoan2",
     "HNGD2014|Dieu122|Khoan1",
-    "HNGDVBHN2025|Dieu122|Khoan1"
+    "HNGDVBHN2025|Dieu122|Khoan1",
+    "HNGD2014|Dieu121|Khoan2",
+    "ND126_2014|Dieu23|Khoan4",
+    "HNGDVBHN2025|Dieu121|Khoan2",
+    "ND126_2014|Dieu36|Khoan1|Diemb",
+    "HNGD2014|Dieu126|Khoan1",
+    "HNGDVBHN2025|Dieu130"
    ]
   },
   {
@@ -2754,29 +3994,44 @@
     "HNGDVBHN2025|Dieu87|Khoan2|Diemb",
     "HNGD2014|Dieu87|Khoan1",
     "HNGDVBHN2025|Dieu87|Khoan1",
-    "HNGDVBHN2025|Dieu87|Khoan2|Diema"
+    "BLDS2015|Dieu55|Khoan1",
+    "HNGD2014|Dieu87|Khoan2|Diema",
+    "HNGD2014|Dieu83|Khoan2",
+    "HNGD2014|Dieu87|Khoan2|Diemc",
+    "HNGD2014|Dieu70|Khoan3",
+    "HNGDVBHN2025|Dieu83|Khoan2"
    ]
   },
   {
    "qid": "TOP27523",
-   "rank": 4,
+   "rank": 2,
    "top": [
-    "HNGD2014|Dieu76|Khoan2",
     "HNGD2014|Dieu76|Khoan4",
-    "HNGDVBHN2025|Dieu76|Khoan2",
     "HNGDVBHN2025|Dieu76|Khoan4",
-    "HNGD2014|Dieu77|Khoan3"
+    "HNGD2014|Dieu76|Khoan2",
+    "HNGD2014|Dieu77|Khoan3",
+    "HNGDVBHN2025|Dieu76|Khoan2",
+    "HNGDVBHN2025|Dieu77|Khoan3",
+    "HNGD2014|Dieu68|Khoan4",
+    "HNGDVBHN2025|Dieu68|Khoan4",
+    "HNGD2014|Dieu69|Khoan2",
+    "HNGDVBHN2025|Dieu69|Khoan2"
    ]
   },
   {
    "qid": "TOP35966",
-   "rank": null,
+   "rank": 78,
    "top": [
-    "NCN2010|Dieu21|Khoan1",
+    "HNGD2014|Dieu99|Khoan2",
     "NCN2010|Dieu40|Khoan2",
     "NCN2010|Dieu37|Khoan4",
-    "NCN2010|Dieu46|Khoan1",
-    "NCN2010|Dieu43|Khoan2|Diemg"
+    "NCN2010|Dieu15|Khoan2|Diemb",
+    "NCN2010|Dieu23|Khoan1",
+    "NCN2010|Dieu15|Khoan1",
+    "HNGD2014|Dieu97|Khoan1",
+    "NCN2010|Dieu21|Khoan1",
+    "NCN2010|Dieu15|Khoan2|Diema",
+    "NCN2010|Dieu46|Khoan1"
    ]
   },
   {
@@ -2785,9 +4040,14 @@
    "top": [
     "NCN2010|Dieu12|Khoan2",
     "NCN2010|Dieu28|Khoan4",
+    "NCN2010|Dieu28|Khoan1",
     "NCN2010|Dieu31|Khoan1|Diemc",
     "NCN2010|Dieu31|Khoan1|Diema",
-    "NCN2010|Dieu28|Khoan1"
+    "NCN2010|Dieu29|Khoan1",
+    "NCN2010|Dieu28|Khoan3",
+    "NCN2010|Dieu29|Khoan2",
+    "NCN2010|Dieu31|Khoan1|Diemg",
+    "NCN2010|Dieu31|Khoan1|Diemđ"
    ]
   },
   {
@@ -2798,6 +4058,11 @@
     "BLDS2015|Dieu28|Khoan1|Diemb",
     "BLDS2015|Dieu28|Khoan2",
     "NCN2010|Dieu21|Khoan1",
+    "BLDS2015|Dieu27|Khoan2",
+    "NCN2010|Dieu13|Khoan6",
+    "HNGD2014|Dieu84|Khoan3",
+    "ND126_2014|Dieu30|Khoan2",
+    "HNGD2014|Dieu51|Khoan3",
     "NCN2010|Dieu27|Khoan5"
    ]
   },
@@ -2809,7 +4074,12 @@
     "NCN2010|Dieu28|Khoan2|Diemd",
     "NCN2010|Dieu43|Khoan2|Diemh",
     "NCN2010|Dieu43|Khoan2|Diema",
-    "NCN2010|Dieu43|Khoan2|Diemg"
+    "NCN2010|Dieu43|Khoan2|Diemg",
+    "NCN2010|Dieu43|Khoan2|Diemb",
+    "NCN2010|Dieu43|Khoan2|Diemd",
+    "NCN2010|Dieu28|Khoan1",
+    "NCN2010|Dieu28|Khoan3",
+    "NCN2010|Dieu28|Khoan2|Diemc"
    ]
   },
   {
@@ -2819,30 +4089,45 @@
     "NCN2010|Dieu22|Khoan1",
     "NCN2010|Dieu22|Khoan3",
     "NCN2010|Dieu19|Khoan2",
+    "NCN2010|Dieu22|Khoan2",
     "NCN2010|Dieu9|Khoan1",
-    "NCN2010|Dieu36|Khoan1"
+    "NCN2010|Dieu41|Khoan3",
+    "ND126_2014|Dieu34|Khoan2",
+    "NCN2010|Dieu37|Khoan2",
+    "ND126_2014|Dieu50|Khoan4",
+    "ND126_2014|Dieu50|Khoan3"
    ]
   },
   {
    "qid": "TOP62589",
-   "rank": 3,
+   "rank": 2,
    "top": [
     "HOTICH2026|Dieu25|Khoan2|Diemd",
-    "HOTICH2026|Dieu25|Khoan2|Diemb",
     "HOTICH2026|Dieu25|Khoan2|Diemc",
+    "HOTICH2026|Dieu25|Khoan2|Diemb",
+    "HOTICH2026|Dieu25|Khoan2|Diemđ",
     "HOTICH2026|Dieu25|Khoan2|Diema",
-    "HOTICH2026|Dieu25|Khoan2|Diemđ"
+    "HOTICH2026|Dieu9|Khoan1",
+    "HOTICH2014|Dieu4|Khoan4",
+    "HOTICH2026|Dieu25|Khoan1|Diemc",
+    "HOTICH2026|Dieu25|Khoan1|Diemg",
+    "HOTICH2026|Dieu26|Khoan1"
    ]
   },
   {
    "qid": "TOP69002",
-   "rank": 2,
+   "rank": 1,
    "top": [
-    "HOTICH2026|Dieu25|Khoan1|Diemm",
     "HOTICH2026|Dieu4|Khoan2|Diemg",
     "HOTICH2014|Dieu60|Khoan1",
+    "HOTICH2026|Dieu25|Khoan1|Diemm",
     "HOTICH2026|Dieu4|Khoan2|Diema",
-    "HOTICH2026|Dieu25|Khoan3"
+    "HOTICH2014|Dieu4|Khoan13",
+    "HOTICH2014|Dieu5|Khoan5",
+    "HOTICH2026|Dieu4|Khoan2|Diemc",
+    "HOTICH2026|Dieu4|Khoan2|Diemd",
+    "HOTICH2026|Dieu4|Khoan2|Diemb",
+    "HOTICH2026|Dieu2|Khoan2"
    ]
   },
   {
@@ -2852,151 +4137,221 @@
     "HOTICH2026|Dieu4|Khoan2|Diemđ",
     "HOTICH2026|Dieu4|Khoan2|Diema",
     "HOTICH2026|Dieu4|Khoan2|Dieme",
+    "ND126_2014|Dieu43|Khoan1|Diemc",
+    "ND126_2014|Dieu38|Khoan1|Diemd",
+    "ND126_2014|Dieu43|Khoan1|Diema",
     "HOTICH2026|Dieu4|Khoan2|Diemc",
-    "HOTICH2026|Dieu4|Khoan2|Diemd"
+    "HOTICH2026|Dieu4|Khoan2|Diemb",
+    "HOTICH2026|Dieu4|Khoan2|Diemd",
+    "ND126_2014|Dieu43|Khoan1|Diemb"
    ]
   },
   {
    "qid": "TOP10475",
-   "rank": 2,
+   "rank": 3,
    "top": [
     "HOTICH2026|Dieu13|Khoan5",
+    "HOTICH2014|Dieu74|Khoan4",
     "HOTICH2026|Dieu19|Khoan2|Diemđ",
     "HOTICH2026|Dieu13|Khoan4",
-    "HOTICH2014|Dieu74|Khoan4",
-    "HOTICH2014|Dieu12|Khoan1|Diemđ"
+    "HOTICH2026|Dieu25|Khoan3",
+    "HOTICH2014|Dieu12|Khoan1|Diemđ",
+    "HOTICH2014|Dieu4|Khoan12",
+    "HOTICH2026|Dieu13|Khoan1",
+    "HOTICH2014|Dieu12|Khoan1|Diemd",
+    "HOTICH2026|Dieu14"
    ]
   },
   {
    "qid": "TOP19744",
-   "rank": null,
+   "rank": 13,
    "top": [
-    "HOTICH2026|Dieu4|Khoan2|Diema",
     "HOTICH2014|Dieu60|Khoan1",
+    "HOTICH2026|Dieu4|Khoan2|Diema",
+    "HOTICH2026|Dieu4|Khoan2|Diemc",
     "HOTICH2026|Dieu25|Khoan3",
-    "HOTICH2026|Dieu25|Khoan1|Diemm",
-    "HOTICH2026|Dieu4|Khoan2|Diemc"
+    "HOTICH2014|Dieu5|Khoan5",
+    "HOTICH2026|Dieu4|Khoan2|Dieme",
+    "HOTICH2026|Dieu4|Khoan2|Diemb",
+    "HOTICH2026|Dieu4|Khoan2|Diemđ",
+    "HOTICH2026|Dieu19|Khoan2|Dieme",
+    "HOTICH2026|Dieu4|Khoan2|Diemg"
    ]
   },
   {
    "qid": "TOP41254",
-   "rank": null,
+   "rank": 23,
    "top": [
     "HOTICH2026|Dieu25|Khoan1|Diemg",
     "HOTICH2026|Dieu25|Khoan1|Diemh",
-    "HOTICH2026|Dieu25|Khoan1|Dieme",
+    "HOTICH2026|Dieu25|Khoan1|Diemd",
     "HOTICH2026|Dieu25|Khoan1|Diema",
-    "HOTICH2026|Dieu25|Khoan1|Diemd"
+    "HOTICH2026|Dieu25|Khoan1|Dieme",
+    "HOTICH2026|Dieu9|Khoan1",
+    "HOTICH2026|Dieu25|Khoan1|Diemc",
+    "HOTICH2026|Dieu25|Khoan1|Diemi",
+    "HOTICH2014|Dieu4|Khoan2",
+    "HOTICH2026|Dieu25|Khoan1|Diemđ"
    ]
   },
   {
    "qid": "TOP45624",
-   "rank": null,
+   "rank": 1,
    "top": [
-    "THADS2008|Dieu75",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu62|Khoan1",
     "THADS2008|Dieu104",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu104|Khoan3|Diemc",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu62|Khoan2",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu91|Khoan1|Diemb",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu91|Khoan1|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu317|Khoan3|Diemb",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu50|Khoan1"
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu62|Khoan3",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu60|Khoan6",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu104|Khoan3|Diemc",
+    "THADSVBHN|Dieu104|Khoan1"
    ]
   },
   {
    "qid": "TOP68085",
-   "rank": null,
+   "rank": 2,
    "top": [
+    "THADSVBHN|Dieu57|Khoan2|Diema",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu27|Khoan1|Diema",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu27|Khoan1|Diemd",
     "BLDS2015|Dieu566|Khoan1",
     "BLDS2015|Dieu567|Khoan1",
-    "THADS2008|Dieu57|Khoan1",
-    "THADS2008|Dieu20|Khoan4",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu151|Khoan2"
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan3",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu27|Khoan1|Diemb",
+    "THADSVBHN|Dieu57|Khoan2|Diemđ",
+    "THADSVBHN|Dieu57|Khoan2|Diemb",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu27|Khoan1|Diemc"
    ]
   },
   {
    "qid": "TOP35023",
-   "rank": null,
+   "rank": 1,
    "top": [
-    "THADS2008|Dieu125|Khoan2",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu40|Khoan1",
+    "THADSVBHN|Dieu125|Khoan1",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu40|Khoan2",
+    "THADSVBHN|Dieu125|Khoan2",
     "THADS2008|Dieu125|Khoan1",
-    "THADS2008|Dieu125|Khoan3",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu104|Khoan4|Diema",
-    "BLDS2015|Dieu557|Khoan3"
+    "THADSVBHN|Dieu125|Khoan3",
+    "THADS2008|Dieu125|Khoan2",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu84|Khoan5|Diemb",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu84|Khoan5|Diema",
+    "THADS2008|Dieu125|Khoan3"
    ]
   },
   {
    "qid": "TOP36790",
-   "rank": null,
+   "rank": 1,
    "top": [
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu55|Khoan3",
     "BLDS2015|Dieu311|Khoan2",
     "BLDS2015|Dieu316",
-    "BLDS2015|Dieu307|Khoan3",
     "BLDS2015|Dieu312|Khoan2",
-    "BLDS2015|Dieu312|Khoan3"
+    "BLDS2015|Dieu307|Khoan3",
+    "BLDS2015|Dieu312|Khoan3",
+    "BLDS2015|Dieu314|Khoan1",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu55|Khoan4",
+    "BLDS2015|Dieu307|Khoan2",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu42|Khoan5|Diema"
    ]
   },
   {
    "qid": "TOP60751",
-   "rank": null,
+   "rank": 1,
    "top": [
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan8",
     "THADS2008|Dieu57|Khoan2",
-    "THADS2008|Dieu134",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu336|Khoan1",
-    "THADS2008|Dieu56|Khoan1|Diemc",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu350|Khoan1|Diemc"
+    "THADSVBHN|Dieu57|Khoan1|Diemb",
+    "THADS2008|Dieu134",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan3",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu33|Khoan4",
+    "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan5",
+    "THADSVBHN|Dieu135|Khoan2",
+    "THADS2008|Dieu135|Khoan2"
    ]
   },
   {
    "qid": "TOP91913",
-   "rank": null,
+   "rank": 1,
    "top": [
-    "NCN2010|Dieu24|Khoan3",
-    "HOTICH2014|Dieu14|Khoan2",
-    "BLDS2015|Dieu29|Khoan2",
-    "BLDS2015|Dieu29|Khoan3|Diemb",
-    "HOTICH2014|Dieu1|Khoan2"
+    "HNGD2000|Dieu75|Khoan2",
+    "ND158_2005|Dieu36|Khoan3",
+    "BLDS2005|Dieu28|Khoan1",
+    "HNGD2000|Dieu105|Khoan2",
+    "HNGD2000|Dieu72",
+    "BLDS2005|Dieu44",
+    "ND158_2005|Dieu25|Khoan1",
+    "ND158_2005|Dieu27|Khoan2|Diemb",
+    "HNGD2000|Dieu105|Khoan1",
+    "ND158_2005|Dieu27|Khoan2|Diemc"
    ]
   },
   {
    "qid": "TOP44737",
-   "rank": null,
+   "rank": 1,
    "top": [
-    "HNGD2014|Dieu112",
-    "BLDS2015|Dieu52|Khoan1",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu208|Khoan3",
-    "HNGD2014|Dieu87|Khoan2|Diemc",
-    "BLDS2015|Dieu51|Khoan1"
+    "HNGD2000|Dieu83|Khoan2",
+    "HNGD2000|Dieu83|Khoan1",
+    "BLDS2005|Dieu61",
+    "HNGD2000|Dieu58|Khoan2",
+    "HNGD2000|Dieu71|Khoan1",
+    "HNGD2000|Dieu43|Khoan2",
+    "HNGD2000|Dieu58|Khoan1",
+    "BLTTDS2004|Dieu103",
+    "HNGD2000|Dieu81",
+    "BLDS2005|Dieu59|Khoan1"
    ]
   },
   {
    "qid": "TOP59991",
-   "rank": null,
+   "rank": 1,
    "top": [
-    "HNGD2014|Dieu77|Khoan1",
-    "HNGD2014|Dieu76|Khoan2",
-    "HNGD2014|Dieu76|Khoan1",
-    "HNGD2014|Dieu77|Khoan2",
-    "HNGD2014|Dieu75|Khoan2"
+    "HNGD2000|Dieu46|Khoan1",
+    "HNGD2000|Dieu45|Khoan2",
+    "HNGD2000|Dieu45|Khoan1",
+    "HNGD2000|Dieu46|Khoan2",
+    "HNGD2000|Dieu92|Khoan2",
+    "HNGD2000|Dieu43|Khoan2",
+    "HNGD2000|Dieu45|Khoan3",
+    "HNGD2000|Dieu43|Khoan1",
+    "HNGD2000|Dieu93",
+    "HNGD2000|Dieu44|Khoan2"
    ]
   },
   {
    "qid": "TOP89237",
-   "rank": null,
+   "rank": 1,
    "top": [
-    "HNGD2014|Dieu123|Khoan1",
-    "BLDS2015|Dieu46|Khoan3",
-    "HOTICH2014|Dieu41",
-    "HOTICH2014|Dieu39",
-    "HOTICH2014|Dieu42"
+    "HNGD2000|Dieu106|Khoan1",
+    "HNGD2000|Dieu102|Khoan1",
+    "HNGD2000|Dieu102|Khoan2",
+    "ND158_2005|Dieu53",
+    "ND158_2005|Dieu54|Khoan3",
+    "ND158_2005|Dieu54|Khoan1",
+    "HNGD2000|Dieu106|Khoan2",
+    "ND158_2005|Dieu31|Khoan4",
+    "ND158_2005|Dieu55|Khoan2",
+    "ND158_2005|Dieu1|Khoan3"
    ]
   },
   {
    "qid": "TOP25307",
-   "rank": null,
+   "rank": 4,
    "top": [
-    "HNGD2014|Dieu66|Khoan3",
-    "HNGD2014|Dieu64",
-    "HNGD2014|Dieu66|Khoan2",
-    "BLDS2015|Dieu661",
-    "HNGD2014|Dieu61|Khoan1"
+    "HNGD2000|Dieu96|Khoan2",
+    "HNGD2000|Dieu30",
+    "HNGD2000|Dieu96|Khoan1",
+    "HNGD2000|Dieu31|Khoan3",
+    "BLDS2005|Dieu680|Khoan1",
+    "BLDS2005|Dieu686",
+    "HNGD2000|Dieu95|Khoan2|Diemb",
+    "HNGD2000|Dieu90",
+    "BLTTDS2004|Dieu27|Khoan2",
+    "HNGD2000|Dieu32|Khoan1"
    ]
   },
   {
@@ -3007,18 +4362,28 @@
     "BLDS2015|Dieu27|Khoan1|Diema",
     "BLDS2015|Dieu27|Khoan1|Diemd",
     "BLDS2015|Dieu27|Khoan1|Diemc",
-    "BLDS2015|Dieu28|Khoan1|Diemb"
+    "BLDS2015|Dieu27|Khoan1|Diemg",
+    "BLDS2015|Dieu28|Khoan1|Diemb",
+    "BLDS2015|Dieu28|Khoan1|Diemc",
+    "NCN2010|Dieu24|Khoan2",
+    "HNGD2014|Dieu84|Khoan2|Diemb",
+    "HOTICH2014|Dieu26|Khoan2"
    ]
   },
   {
    "qid": "CIV002",
-   "rank": 1,
+   "rank": 3,
    "top": [
-    "BLDS2005|Dieu27|Khoan1",
     "HNGD2000|Dieu75|Khoan1",
-    "BLDS2005|Dieu28|Khoan1",
-    "HNGD2000|Dieu71|Khoan1",
-    "BLDS2005|Dieu43|Khoan1"
+    "ND158_2005|Dieu28|Khoan2",
+    "BLDS2005|Dieu27|Khoan1",
+    "HNGD2000|Dieu65|Khoan1",
+    "BLTTDS2004|Dieu27|Khoan4",
+    "ND158_2005|Dieu32|Khoan1",
+    "ND158_2005|Dieu26|Khoan1",
+    "ND158_2005|Dieu35|Khoan2",
+    "HNGD2000|Dieu78|Khoan3",
+    "HNGD2000|Dieu71|Khoan1"
    ]
   },
   {
@@ -3029,7 +4394,12 @@
     "HNGD2014|Dieu8|Khoan1|Diemb",
     "HNGD2014|Dieu8|Khoan1|Diemc",
     "HNGD2014|Dieu8|Khoan1|Diemd",
-    "HNGD2014|Dieu3|Khoan5"
+    "HNGD2014|Dieu3|Khoan5",
+    "HOTICH2014|Dieu38|Khoan3",
+    "HOTICH2014|Dieu18|Khoan1",
+    "ND126_2014|Dieu67|Khoan1",
+    "HNGD2014|Dieu3|Khoan8",
+    "HOTICH2014|Dieu17|Khoan1"
    ]
   },
   {
@@ -3037,21 +4407,31 @@
    "rank": 1,
    "top": [
     "BLDS2015|Dieu651|Khoan1|Diema",
-    "BLDS2015|Dieu651|Khoan1|Diemc",
-    "BLDS2015|Dieu651|Khoan1|Diemb",
     "BLDS2015|Dieu651|Khoan3",
-    "BLDS2015|Dieu651|Khoan2"
+    "BLDS2015|Dieu651|Khoan1|Diemb",
+    "BLDS2015|Dieu651|Khoan2",
+    "BLDS2015|Dieu651|Khoan1|Diemc",
+    "BLDS2015|Dieu614",
+    "BLDS2015|Dieu660|Khoan1",
+    "BLDS2015|Dieu649",
+    "BLDS2015|Dieu650|Khoan1|Diemc",
+    "BLDS2015|Dieu621|Khoan1|Diemc"
    ]
   },
   {
    "qid": "CIV005",
-   "rank": null,
+   "rank": 125,
    "top": [
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu26|Khoan6",
     "TNBTCNN2017|Dieu46|Khoan2|Diemc",
     "BLDS2015|Dieu687|Khoan1",
+    "BLDS2015|Dieu428|Khoan4",
     "BLDS2015|Dieu551|Khoan3",
-    "BLDS2015|Dieu428|Khoan4"
+    "BLDS2015|Dieu423|Khoan1|Diema",
+    "BLDS2015|Dieu11|Khoan5",
+    "TNBTCNN2017|Dieu23|Khoan6",
+    "BLDS2015|Dieu658|Khoan6",
+    "BLDS2015|Dieu363"
    ]
   },
   {
@@ -3061,19 +4441,29 @@
     "HNGD2014|Dieu81|Khoan1",
     "HNGD2014|Dieu118|Khoan5",
     "HNGD2014|Dieu110",
+    "HNGD2014|Dieu58",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu29|Khoan4",
-    "HNGD2014|Dieu58"
+    "HNGD2014|Dieu87|Khoan2|Diemc",
+    "HNGD2014|Dieu82|Khoan3",
+    "HNGD2014|Dieu115",
+    "HNGD2014|Dieu87|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu208|Khoan3"
    ]
   },
   {
    "qid": "CIV007",
-   "rank": null,
+   "rank": 19,
    "top": [
-    "BLDS2015|Dieu592|Khoan1|Diemc",
     "BLDS2015|Dieu584|Khoan1",
-    "BLDS2015|Dieu592|Khoan1|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu496",
-    "BLDS2015|Dieu592|Khoan2"
+    "BLDS2015|Dieu592|Khoan2",
+    "BLDS2015|Dieu592|Khoan1|Diemc",
+    "TNBTCNN2017|Dieu15|Khoan2",
+    "BLDS2015|Dieu592|Khoan1|Diema",
+    "BLDS2015|Dieu379|Khoan2",
+    "TNBTCNN2017|Dieu31|Khoan1",
+    "BLDS2015|Dieu361|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu492"
    ]
   },
   {
@@ -3082,31 +4472,46 @@
    "top": [
     "HNGD2014|Dieu9|Khoan2",
     "HNGD2014|Dieu55",
-    "HNGD2014|Dieu5|Khoan2|Dieme",
     "HNGD2014|Dieu56|Khoan1",
-    "HNGD2014|Dieu5|Khoan2|Diema"
+    "HNGD2014|Dieu56|Khoan2",
+    "BLDS2005|Dieu42",
+    "HNGD2014|Dieu51|Khoan1",
+    "HNGD2014|Dieu115",
+    "HNGD2014|Dieu63",
+    "HNGD2014|Dieu5|Khoan2|Dieme",
+    "HNGD2014|Dieu61|Khoan1"
    ]
   },
   {
    "qid": "CIV009",
-   "rank": 3,
+   "rank": 2,
    "top": [
     "HNGD2014|Dieu48|Khoan1|Diema",
-    "HNGD2014|Dieu48|Khoan1|Diemb",
     "HNGD2014|Dieu33|Khoan1",
+    "ND126_2014|Dieu15|Khoan1|Diema",
+    "HNGD2014|Dieu48|Khoan1|Diemb",
     "HNGD2014|Dieu48|Khoan1|Diemd",
-    "HNGD2014|Dieu33|Khoan2"
+    "HNGD2014|Dieu33|Khoan2",
+    "HNGD2014|Dieu48|Khoan1|Diemc",
+    "HNGD2014|Dieu40|Khoan1",
+    "ND126_2014|Dieu12|Khoan1",
+    "ND126_2014|Dieu15|Khoan1|Diemb"
    ]
   },
   {
    "qid": "CIV010",
-   "rank": null,
+   "rank": 10,
    "top": [
-    "BLDS2015|Dieu630|Khoan5",
     "BLDS2015|Dieu629|Khoan2",
-    "BLDS2015|Dieu643|Khoan5",
+    "BLDS2015|Dieu630|Khoan5",
     "BLDS2015|Dieu643|Khoan1",
-    "BLDS2015|Dieu643|Khoan3"
+    "BLDS2015|Dieu643|Khoan5",
+    "BLDS2015|Dieu643|Khoan3",
+    "BLDS2015|Dieu643|Khoan2|Diema",
+    "BLDS2015|Dieu643|Khoan4",
+    "BLDS2015|Dieu627",
+    "BLDS2015|Dieu640|Khoan2",
+    "BLDS2015|Dieu629|Khoan1"
    ]
   },
   {
@@ -3115,9 +4520,14 @@
    "top": [
     "HNGD2014|Dieu74",
     "BLDS2015|Dieu586|Khoan2",
-    "BLDS2015|Dieu594",
     "BLDS2015|Dieu599|Khoan1",
-    "BLDS2015|Dieu586|Khoan3"
+    "BLDS2015|Dieu586|Khoan3",
+    "BLDS2015|Dieu595|Khoan2",
+    "BLDS2015|Dieu594",
+    "BLDS2015|Dieu586|Khoan1",
+    "BLDS2015|Dieu131|Khoan4",
+    "BLDS2015|Dieu585|Khoan4",
+    "BLDS2015|Dieu587"
    ]
   },
   {
@@ -3128,8 +4538,14 @@
     "BLDS1995|Dieu682",
     "BLDS1995|Dieu40",
     "BLDS1995|Dieu679|Muc1",
-    "BLDS1995|Dieu740|Muc0"
+    "BLDS1995|Dieu740|Muc0",
+    "BLDS1995|Dieu200|Muc1",
+    "BLDS1995|Dieu200|Muc2",
+    "BLDS1995|Dieu680",
+    "BLDS1995|Dieu678|Muc1",
+    "BLDS1995|Dieu648"
    ]
   }
- ]
+ ],
+ "note": "rebuilt after pass-3 gold updates; hybrid+TCR protocol verified identical to the published ranking (verify mode, 0 mismatches) before rescoring"
 }

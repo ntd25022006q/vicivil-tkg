@@ -1,0 +1,1886 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "cohort": "extension2",
+ "params": {
+  "batch": 6,
+  "max_new_tokens": 180,
+  "decode": "greedy",
+  "transformers": "5.19.0",
+  "torch": "2.14.1+cu126"
+ },
+ "conditions": {
+  "norag": {
+   "summary": {
+    "n": 64,
+    "cite_acc": 0.0,
+    "span_f1": 0.3152,
+    "abstain_rate": 0.4844,
+    "ctx_hit5": 0.0,
+    "mean_ans_tokens": 71.9
+   },
+   "per_q": {
+    "EXT20029": {
+     "answer": "Nếu bạn bị công ty sa thải trái luật, bạn nên khởi kiện tại Tòa án nhân dân cấp huyện nơi công ty có trụ sở chính.",
+     "cite_ok": false,
+     "span_f1": 0.1975,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20025": {
+     "answer": "Theo Điều 108 Bộ Luật Tố tụng Hình sự năm 2015, nếu người phải tham gia phiên tòa không đến mà không có sự cho phép của Toà án, họ có thể bị phạt tiền từ 1-4 triệu đồng. Tuy nhiên, cần chú ý rằng đây chỉ là một trong những hình thức xử phạt và có thể có thêm các hình thức khác tùy theo quy định cụ thể của pháp luật. Không đủ thông tin về toàn bộ quy định để đưa ra quyết định chính xác hơn.",
+     "cite_ok": false,
+     "span_f1": 0.35,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20107": {
+     "answer": "Nếu bạn khiếu nại về việc đăng ký hộ tịch bị sai sót, bạn nên gửi đơn khiếu nại đến Phòng Tư pháp hoặc Sở Tư pháp của địa phương nơi xảy ra sự việc.",
+     "cite_ok": false,
+     "span_f1": 0.3,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20066": {
+     "answer": "Nếu người kháng cáo nộp đơn kháng cáo sau thời hạn quy định, Tòa án cấp phúc thẩm có thể quyết định không thụ lý vụ án. Điều này được quy định tại Điều 514 Bộ Luật Tố tụng Hình sự 2015.",
+     "cite_ok": false,
+     "span_f1": 0.2951,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20123": {
+     "answer": "Theo Luật Hộ tịch hiện hành, việc từ chối đăng ký kết hôn thường liên quan đến các quy định về hôn nhân và gia đình, không phải là quy định cụ thể trong Luật Hộ tịch. Bạn nên tham khảo trực tiếp Luật Hôn nhân và Gia đình để hiểu rõ hơn về nguyên nhân từ chối và cách giải quyết. Nếu có vấn đề liên quan đến thủ tục đăng ký kết hôn, bạn có thể liên hệ với cơ quan chức năng có thẩm quyền để được hướng dẫn cụ thể.",
+     "cite_ok": false,
+     "span_f1": 0.4362,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20070": {
+     "answer": "Nếu bạn kháng cáo và sau đó muốn rút đơn kháng cáo, tòa án có thể chấp nhận yêu cầu này nếu chưa có quyết định của toà sơ thẩm. Tuy nhiên, việc chấp nhận hoặc từ chối yêu cầu này thuộc thẩm quyền của tòa án cấp phúc thẩm. Bạn nên liên hệ trực tiếp với tòa án để được hướng dẫn cụ thể hơn. Không đủ thông tin về quy định chi tiết trong các điều luật cụ thể.",
+     "cite_ok": false,
+     "span_f1": 0.3,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20081": {
+     "answer": "Chủ tịch Ủy ban nhân dân không thực hiện chỉ đạo thi hành bản án của Tòa án có thể do nhiều nguyên nhân như thiếu sự hiểu biết về nội dung bản án, khó khăn trong việc thực hiện hoặc các vấn đề khác liên quan đến tài chính, cơ sở vật chất hay quy định cụ thể của địa phương. Không đủ thông tin để đưa ra nguyên nhân chính xác.",
+     "cite_ok": false,
+     "span_f1": 0.22,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20045": {
+     "answer": "Không đủ thông tin. Để trả lời chính xác, cần biết thêm thông tin về quy định cụ thể mà bạn đang tham khảo và các quy định liên quan đến việc tiến hành tố tụng trong vụ án đó.",
+     "cite_ok": false,
+     "span_f1": 0.0816,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20149": {
+     "answer": "Không đủ thông tin để trả lời chính xác. Bạn cần cung cấp thêm thông tin về tình trạng hôn nhân và việc đăng ký kết hôn của bạn. Việc này liên quan đến các quy định cụ thể về quyền thừa kế và nhận cha con trong Luật Hôn nhân và Family Việt Nam. Bạn nên tham khảo ý kiến của một chuyên gia pháp lý để được tư vấn chính xác.",
+     "cite_ok": false,
+     "span_f1": 0.1915,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20078": {
+     "answer": "Theo Điều 207 Bộ Luật Tố tụng dân sự 2015, khi khởi kiện, người khởi kiện có quyền yêu cầu một hoặc nhiều biện pháp bảo vệ quyền và lợi ích hợp pháp của mình. Do đó, bạn có thể đưa ra yêu cầu của mình trong hồ sơ khởi kiện.",
+     "cite_ok": false,
+     "span_f1": 0.2581,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20075": {
+     "answer": "Không đủ thông tin. Việc một thẩm phán được cho phép làm đại diện pháp lý trong vụ kiện dân sự tuân theo quy định cụ thể của Điều 281 Bộ Luật Tố tụng Hình sự năm 2015 (hoặc tương đương), nhưng cần phải có sự đồng ý của đương sự và tuân thủ các quy định về việc thẩm phán không được tham gia vụ án mà họ đã thụ lý. Bạn nên kiểm tra lại quy định cụ thể của địa phương hiện hành.",
+     "cite_ok": false,
+     "span_f1": 0.3286,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20113": {
+     "answer": "Nếu bạn khiếu nại về quyết định của Bộ trưởng Bộ Tư pháp và bị từ chối, bạn có thể tiếp tục khiếu nại theo các bước sau:\n\n1. Tiếp tục khiếu nại lên cơ quan có thẩm quyền cao hơn như Chính phủ hoặc Quốc hội.\n2. Bạn cũng có thể yêu cầu giải thích lại quyết định từ Bộ trưởng Bộ Tư pháp.\n3. Nếu vẫn không hài lòng, bạn có thể khởi kiện Bộ trưởng Bộ Tư pháp ra Tòa án nhân dân tối cao.\n\nTuy nhiên, cần lưu ý rằng quy trình cụ thể có thể thay đổi tùy thuộc vào từng trường hợp cụ thể và các quy định hiện hành.",
+     "cite_ok": false,
+     "span_f1": 0.4024,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20077": {
+     "answer": "Nếu bạn đã nhận được giấy triệu tập nhưng không tham gia phiên tòa, có thể bạn sẽ bị phạt tiền hoặc có thể bị xử lý hình sự tùy theo mức độ vi phạm và quy định của từng trường hợp cụ thể. Bạn nên liên hệ với cơ quan tố tụng để được hướng dẫn cụ thể về hậu quả pháp lý có thể xảy ra. Không đủ thông tin để cung cấp số cụ thể của các điều luật liên quan.",
+     "cite_ok": false,
+     "span_f1": 0.2953,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20079": {
+     "answer": "Không đủ thông tin. Việc tòa án có thể công khai thông tin cá nhân trong hồ sơ tố tụng phụ thuộc vào các quy định cụ thể của từng nước và từng trường hợp cụ thể. Bạn nên tham khảo trực tiếp các quy định về quyền riêng tư và bảo mật thông tin cá nhân tại Việt Nam để có câu trả lời chính xác nhất.",
+     "cite_ok": false,
+     "span_f1": 0.1031,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20126": {
+     "answer": "Nếu hồ sơ của bạn thiếu tờ khai theo mẫu quy định để nhận cha cho con, bạn cần bổ sung tờ khai đó. Tuy nhiên, không có cụ thể hóa số Điều luật nào liên quan đến trường hợp này trong hệ thống pháp luật hiện hành của Việt Nam. Bạn nên liên hệ với cơ quan chức năng có thẩm quyền để được hướng dẫn cụ thể và đầy đủ hơn.",
+     "cite_ok": false,
+     "span_f1": 0.2407,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20062": {
+     "answer": "Không nhất thiết phải qua hòa giải tại cơ sở. Bạn có thể lựa chọn khởi kiện trực tiếp tại Tòa án nếu muốn. Tuy nhiên, việc hòa giải có thể giúp tiết kiệm thời gian và chi phí. Bạn nên tham khảo ý kiến của một chuyên gia pháp lý để có quyết định phù hợp nhất. Không đủ thông tin để xác định bạn có cần phải qua hòa giải hay không.",
+     "cite_ok": false,
+     "span_f1": 0.2381,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20074": {
+     "answer": "Trong phiên tòa, bạn có quyền hỏi người làm chứng về những điểm chưa rõ. Tuy nhiên, quyền này cần tuân thủ theo quy định của pháp luật và sự cho phép của Hội đồng xét xử. Bạn nên tham khảo thêm Điều 417 Bộ Luật Tố tụng Hình sự năm 2015 để có thông tin chính xác nhất.",
+     "cite_ok": false,
+     "span_f1": 0.2639,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20118": {
+     "answer": "Để hợp pháp hóa giấy khai sinh viết bằng tiếng Anh tại Việt Nam, bạn cần thực hiện các bước sau:\n\n1. Đưa bản gốc giấy khai sinh đến cơ quan có thẩm quyền (cục quản lý xuất nhập cảnh hoặc phòng tư pháp) để chứng thực chữ ký và dấu của người lập bản khai sinh.\n\n2. Sau khi chứng thực chữ ký và dấu, bạn sẽ được cấp bản sao đã chứng thực.\n\n3. Tiếp theo, bạn cần mang bản sao đã chứng thực này đến cơ quan ngoại giao hoặc đại sứ quán nước bạn đang định cư để xin chứng thực lãnh sự.\n\n4. Cuối cùng, bạn sẽ nhận được bản sao đã chứng thực và lãnh sự, đây mới là bản hợp pháp hóa đầy đủ để sử dụng tại Việt Nam.\n\nLưu ý rằng quy trình cụ thể có thể th",
+     "cite_ok": false,
+     "span_f1": 0.2088,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20093": {
+     "answer": "Không đủ thông tin. Việc ghi rõ tên và địa chỉ của các bên liên quan trong bản án có thể tuân theo quy định cụ thể của từng nước hoặc tòa án, nhưng thông tin này thường được ghi để thuận tiện cho việc liên lạc sau này. Không ghi rõ có thể gây khó khăn trong việc liên hệ với các bên liên quan, nhưng không chắc chắn rằng điều này sẽ vi phạm một quy định cụ thể nào đó. Bạn nên tham khảo thêm về quy định cụ thể của tòa án nơi bạn đang làm việc.",
+     "cite_ok": false,
+     "span_f1": 0.1963,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20095": {
+     "answer": "Không đủ thông tin. Việc cụ thể về thủ tục bổ sung khi người nhận con nuôi không sống tại địa phương đăng ký nuôi con thường liên quan đến quy định của từng tỉnh, thành phố trực thuộc trung ương và có thể thay đổi theo thời gian. Bạn nên tham khảo trực tiếp tại Văn phòng登记机关 hoặc liên hệ với cơ quan chức năng địa phương để có thông tin chính xác.",
+     "cite_ok": false,
+     "span_f1": 0.1744,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20004": {
+     "answer": "Không đủ thông tin. Việc toà án có vi phạm luật hay không cần dựa trên các quy định cụ thể về quyền của đương sự trong phiên tòa, mà không phải chỉ dựa trên việc họ không nghe lời trình bày của nguyên đơn và bị đơn. Cần xem xét thêm về quy trình tố tụng và các quy định liên quan đến quyền của đương sự trong phiên tòa.",
+     "cite_ok": false,
+     "span_f1": 0.3645,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20153": {
+     "answer": "Không đủ thông tin\n\nViệc 15 tuổi có thể đủ tuổi lao động theo quy định của một số nước nhưng không phải ở tất cả các quốc gia. Hơn nữa, việc tự mình tham gia tố tụng trong vụ kiện lao động đòi hỏi nhiều kỹ năng pháp lý và hiểu biết về quy định lao động, điều này thường đòi hỏi người đại diện phải đủ tuổi và có đủ kiến thức pháp lý. Bạn nên tham khảo ý kiến của một chuyên gia pháp lý để có câu trả lời chính xác nhất cho trường hợp cụ thể của mình.",
+     "cite_ok": false,
+     "span_f1": 0.385,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20010": {
+     "answer": "Theo Điều 189 Bộ luật Tố tụng Hình sự 2015, khi nhận được đơn khởi kiện, tòa án phải thụ lý và thông báo cho viện kiểm sát trong vòng 5 ngày làm việc. Tuy nhiên, nếu có yêu cầu bổ sung tài liệu hoặc thông tin từ người khởi kiện thì thời hạn này có thể kéo dài thêm.",
+     "cite_ok": false,
+     "span_f1": 0.3193,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20039": {
+     "answer": "Người dân tại phiên tòa không được tham gia vào việc phát biểu ý kiến của kiểm sát viên. Họ nên lắng nghe và tuân thủ các quyết định của tòa án. Nếu có bất kỳ thắc mắc nào về quy trình hoặc quyền lợi cá nhân, họ nên hỏi luật sư đại diện cho mình. Không đủ thông tin để nêu cụ thể các hành động cụ thể mà người dân nên thực hiện.",
+     "cite_ok": false,
+     "span_f1": 0.3399,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20076": {
+     "answer": "Theo Điều 162, khoản 5 của Bộ Luật Tố tụng Hình sự năm 2015, việc miễn án phí sơ thẩm đối với một bên không làm ảnh hưởng đến nghĩa vụ nộp án phí của bên kia. Do đó, nếu bạn được miễn nộp án phí sơ thẩm, người kia vẫn phải nộp án phí sơ thẩm theo quy định.",
+     "cite_ok": false,
+     "span_f1": 0.4356,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20002": {
+     "answer": "Không đủ thông tin để trả lời câu hỏi này chính xác. Việc không ghi vào biên bản phiên tòa không ảnh hưởng đến hiệu lực của quyết định, nhưng cần xem xét thêm các quy định cụ thể về thủ tục tố tụng hình sự liên quan đến việc ghi nhận và thực thi quyết định của hội đồng xét xử. Bạn có thể tham khảo Điều 281 Bộ Luật Tố tụng Hình Sư năm 2015 hoặc các điều tương đương trong trường hợp áp dụng luật khác.",
+     "cite_ok": false,
+     "span_f1": 0.288,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20051": {
+     "answer": "Không đủ thông tin. Việc chủ tọa phiên tòa có thể cách ly người khai và người làm chứng dựa trên quy định cụ thể của từng nước và từng trường hợp cụ thể. Bạn cần tham khảo thêm về quy định tại Việt Nam.",
+     "cite_ok": false,
+     "span_f1": 0.3656,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20049": {
+     "answer": "Theo Điều 91 Bộ Luật Tố tụng Hình sự 2015 (hoặc tương đương cho các vụ án khác), sau khi kháng cáo được chấp nhận, người kháng cáo có quyền rút kháng cáo trong thời hạn 7 ngày kể từ ngày nhận được quyết định chấp nhận kháng cáo. Bạn cần gửi văn bản đề nghị rút kháng cáo đến tòa án trong thời hạn quy định để có thể thực hiện được. Không đủ thông tin để cụ thể hóa về số điều luật liên quan.",
+     "cite_ok": false,
+     "span_f1": 0.2959,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20091": {
+     "answer": "Theo Điều 37 Bộ Luật Tố tụng dân sự năm 2015, đương sự có quyền yêu cầu xem bản sao của đơn khởi kiện và các tài liệu chứng cứ khác liên quan đến vụ án. Do đó, bạn có quyền yêu cầu xem đơn khởi kiện và tài liệu chứng cứ kèm theo.",
+     "cite_ok": false,
+     "span_f1": 0.4819,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20148": {
+     "answer": "Không đủ thông tin. Bạn cần phải liên hệ với cơ quan chức năng ở nước ngoài để biết họ có cấp bản sao giấy chứng nhận kết hôn hay không và các yêu cầu về thủ tục cụ thể.",
+     "cite_ok": false,
+     "span_f1": 0.3011,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20089": {
+     "answer": "Không đủ thông tin. Việc đình chỉ phiên tòa dựa trên sự trở về của người thân mất tích không được quy định cụ thể trong các điều luật hiện hành của Việt Nam liên quan đến tố tụng dân sự. Bạn nên liên hệ với cơ quan tư pháp địa phương để được hướng dẫn chính xác hơn.",
+     "cite_ok": false,
+     "span_f1": 0.1897,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20008": {
+     "answer": "Thẩm phán có quyền đối chất giữa bạn và người làm chứng nếu họ cung cấp thông tin trái ngược nhau. Đây là một trong những biện pháp mà thẩm phán có thể sử dụng để xác minh sự thật.",
+     "cite_ok": false,
+     "span_f1": 0.2857,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20041": {
+     "answer": "Theo Điều 187 Bộ Luật Tố tụng dân sự năm 2015, khi nhận được đơn khởi kiện, Tòa án phải thông báo cho bị đơn về việc đã thụ lý vụ án trong thời hạn 14 ngày làm việc kể từ ngày nhận được đơn khởi kiện.",
+     "cite_ok": false,
+     "span_f1": 0.434,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20124": {
+     "answer": "Không đủ thông tin. Bạn cần cung cấp thêm thông tin về nội dung bị bỏ trống trong sổ hộ tịch và mục đích sử dụng nó. Việc có thể sử dụng hoặc không sử dụng một bản sao của sổ hộ tịch khi có phần bị bỏ trống phụ thuộc vào các quy định cụ thể của Luật Hộ tịch và có thể liên quan đến các điều khác ngoài Điều 18.",
+     "cite_ok": false,
+     "span_f1": 0.1782,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20134": {
+     "answer": "Để được hỗ trợ về pháp luật hôn nhân khi kết hôn với người nước ngoài, bạn nên:\n\n1. Tìm hiểu về các quy định liên quan đến hôn nhân quốc tế tại Việt Nam và nước bạn định cư.\n2. Liên hệ với cơ quan chức năng có thẩm quyền về hôn nhân và gia đình, thường là Sở Tư pháp hoặc Văn phòng đăng ký kết hôn.\n3. Có thể tham khảo ý kiến của một chuyên gia pháp luật về hôn nhân quốc tế.\n\nLưu ý rằng quy định cụ thể có thể thay đổi theo thời gian và tùy thuộc vào từng trường hợp cụ thể.",
+     "cite_ok": false,
+     "span_f1": 0.3311,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20050": {
+     "answer": "Không đủ thông tin. Việc kiện về việc mất tích của một công dân nước ngoài tại Việt Nam thường liên quan đến các quy định cụ thể về ngoại giao và quyền lợi của người nước ngoài. Bạn nên tham khảo trực tiếp với cơ quan chức năng hoặc luật sư chuyên về vấn đề này để có câu trả lời chính xác và đầy đủ.",
+     "cite_ok": false,
+     "span_f1": 0.3439,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20141": {
+     "answer": "Không đủ thông tin. Điều cụ thể về trường hợp này không được nêu trong câu hỏi. Bạn có thể cung cấp thêm thông tin về lĩnh vực pháp luật liên quan không? Ví dụ, đây có thể là một quy định từ Luật Doanh nghiệp hoặc một văn bản pháp luật khác.",
+     "cite_ok": false,
+     "span_f1": 0.1591,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20028": {
+     "answer": "Có, bạn có thể kiện ly hôn tại Việt Nam. Tuy nhiên, cần tuân thủ các quy định về thời gian ly thân và các thủ tục tố tụng khác theo Luật Hôn nhân và Family của Việt Nam. Bạn nên tham khảo ý kiến của một luật sư để được tư vấn cụ thể hơn về trường hợp của mình.",
+     "cite_ok": false,
+     "span_f1": 0.2098,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20139": {
+     "answer": "Để ghi việc ly hôn vào sổ hộ tịch khi bạn đang cư trú tại Việt Nam nhưng ly hôn ở nước ngoài, bạn cần thực hiện các bước sau:\n\n1. Liên hệ với cơ quan có thẩm quyền về tư pháp của địa phương nơi bạn ly hôn để xin bản sao quyết định ly hôn và các giấy tờ liên quan.\n\n2. Gửi hồ sơ này đến Phòng Tư pháp hoặc Văn phòng đăng ký户口 (nếu có) của tỉnh bạn đang thường trú.\n\n3. Sau khi nhận được hồ sơ, cơ quan chức năng sẽ tiến hành kiểm tra và có thể yêu cầu bổ sung thêm các giấy tờ cần thiết.\n\n4. Cuối cùng, họ sẽ ghi chú về việc ly hôn vào sổ hộ tịch.\n\nLưu ý rằng quy trình cụ thể có thể thay đổi tùy thuộc vào địa phương và thời điểm hiện tại,",
+     "cite_ok": false,
+     "span_f1": 0.4286,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20142": {
+     "answer": "Không đủ thông tin. Bạn cần cung cấp thêm thông tin về loại giấy tờ và quy định cụ thể của địa phương để có câu trả lời chính xác. Việc xác minh này thường liên quan đến các quy định về đăng ký dân cư và có thể yêu cầu sự phê chuẩn từ cơ quan có thẩm quyền.",
+     "cite_ok": false,
+     "span_f1": 0.2264,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20065": {
+     "answer": "Không đủ thông tin. Theo quy định tại Điều 381 Bộ Luật Tố tụng Hình sự năm 2015, khi sử dụng dịch vụ phiên dịch trong phiên tòa, bên nào yêu cầu dịch vụ phải chịu chi phí. Tuy nhiên, không rõ liệu việc không có thỏa thuận về chi phí sẽ dẫn đến việc bạn phải trả hay không cần phải trả. Cần xem xét thêm các quy định cụ thể của địa phương hoặc thông qua cơ quan tố tụng để có câu trả lời chính xác.",
+     "cite_ok": false,
+     "span_f1": 0.2435,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20094": {
+     "answer": "Không đủ thông tin để trả lời chắc chắn. Tuy nhiên, trong nhiều trường hợp, tòa án có thể chia vụ án thành các phần riêng biệt nếu mỗi vấn đề có thể được giải quyết độc lập. Điều này phụ thuộc vào quy định cụ thể của pháp luật hình sự và dân sự địa phương về việc chia vụ án. Bạn nên tham khảo trực tiếp các quy định về tố tụng dân sự tại Việt Nam.",
+     "cite_ok": false,
+     "span_f1": 0.3448,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20060": {
+     "answer": "Tòa án có thể tiếp tục thực hiện thủ tục thi hành án theo quy định tại Điều 419 Bộ Luật Civil năm 2005 (hoặc Điều tương đương trong các văn bản pháp luật hiện hành nếu có sự thay đổi). Tuy nhiên, nếu sau một thời gian nhất định mà vẫn không xác định được địa chỉ người phải thi hành, tòa án có thể tạm đình chỉ việc thi hành án theo quy định tại Điều 420 của cùng điều luật.",
+     "cite_ok": false,
+     "span_f1": 0.3636,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20090": {
+     "answer": "Đúng, theo Điều 281 Bộ Luật Tố tụng Hình sự năm 2015, khi Hội đồng xét xử hoãn phiên tòa, họ phải thông báo về thời gian và địa điểm tiếp theo cho các đương sự và người có quyền lợi, nghĩa vụ liên quan.",
+     "cite_ok": false,
+     "span_f1": 0.3041,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20150": {
+     "answer": "Không đủ thông tin. Theo quy định tại Điều 109 Luật Hôn nhân và Family Việt Nam năm 2014, địa điểm đăng ký kết hôn phải là nơi có nơi đăng ký thường trú của một trong hai bên hoặc nơi có nơi đăng ký tạm trú nếu cả hai bên đều có nơi đăng ký tạm trú cùng nhau. Bạn cần cung cấp thêm thông tin về nơi đăng ký tạm trú của cả hai bên để có câu trả lời chính xác hơn.",
+     "cite_ok": false,
+     "span_f1": 0.4432,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20009": {
+     "answer": "Theo quy định tại Điều 789 Bộ Luật Civil năm 2015, khi ly hôn, mỗi bên phải chịu một nửa tổng số tiền án phí sơ thẩm. Tuy nhiên, không có cụ thể hóa về việc mỗi bên phải nộp bao nhiêu tiền án phí vì số tiền này phụ thuộc vào quy định của Tòa án về mức án phí sơ thẩm cho vụ án ly hôn cụ thể.",
+     "cite_ok": false,
+     "span_f1": 0.4677,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20033": {
+     "answer": "Theo thông tin bạn cung cấp, câu trả lời là Chánh án Toà án sẽ thực hiện việc sửa chữa, bổ sung bản án khi Thẩm phán ban đầu không còn làm Thẩm phán. Đây dựa trên khoản 2 của một điều luật cụ thể (tuy nhiên, tôi không thể xác định được số cụ thể của điều luật từ thông tin bạn cung cấp).",
+     "cite_ok": false,
+     "span_f1": 0.3538,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20043": {
+     "answer": "Có, bạn có thể kiện tại tòa án Việt Nam. Tuy nhiên, cần tuân thủ các quy định về việc kiện tụng của pháp luật Việt Nam, bao gồm cả quy định về thẩm quyền xét xử và trình tự tố tụng. Bạn nên tham khảo thêm về quy định cụ thể tại Điều 281 Bộ luật Tố tụng dân sự năm 2015.",
+     "cite_ok": false,
+     "span_f1": 0.2373,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20096": {
+     "answer": "Theo Điều 91 Luật Hộ tịch năm 2014, khiếu nại về quyết định về hộ tịch được thực hiện theo trình tự sau:\n\n1. Trước hết, bạn có thể khiếu nại trực tiếp lên Chủ tịch Ủy ban nhân dân cấp huyện.\n2. Nếu không hài lòng với quyết định của Chủ tịch Ủy ban nhân dân cấp huyện, bạn có quyền khiếu nại lên Chủ tịch Ủy ban nhân dân cấp tỉnh.\n\nVì vậy, trong trường hợp này, bạn có thể khiếu nại lên Chủ tịch Ủy ban nhân dân cấp tỉnh.",
+     "cite_ok": false,
+     "span_f1": 0.4062,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20046": {
+     "answer": "Không đủ thông tin. Việc kháng nghị quyết định công nhận thỏa thuận dựa trên pháp luật cụ thể cần được xem xét theo từng trường hợp cụ thể và có thể liên quan đến các quy định về tố tụng dân sự và quy định về hợp đồng trong các điều luật khác nhau. Bạn nên tham khảo trực tiếp các quy định của pháp luật Việt Nam liên quan đến vấn đề này.",
+     "cite_ok": false,
+     "span_f1": 0.2381,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20054": {
+     "answer": "Không phải như vậy. Khi bạn rút toàn bộ yêu cầu khởi kiện, vụ việc pháp lý sẽ kết thúc. Bị đơn không có quyền tự chuyển đổi vai trò thành nguyên đơn. Bạn vẫn giữ vai trò bị đơn trong vụ việc này. Việc bị đơn giữ nguyên yêu cầu phản tố chỉ cho thấy họ vẫn muốn tiếp tục tranh chấp, nhưng không có nghĩa họ sẽ tự chuyển đổi vai trò thành nguyên đơn.",
+     "cite_ok": false,
+     "span_f1": 0.487,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20019": {
+     "answer": "Tòa án Việt Nam có quyền giải quyết vụ việc này theo Điều 52 của Bộ luật Tố tụng Dân sự năm 2015, quy định về thẩm quyền giải quyết vụ án dân sự. Tuy nhiên, cần xem xét thêm về yếu tố quốc gia để đảm bảo compliance với các quy định cụ thể hơn. Không đủ thông tin để xác định chi tiết hơn về quyền hạn này.",
+     "cite_ok": false,
+     "span_f1": 0.2897,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20069": {
+     "answer": "Theo Điều 225 của Bộ Luật Tố tụng Dân sự, nếu kháng cáo mà không nộp tiền tạm ứng án phí trong thời hạn 10 ngày kể từ ngày nhận được quyết định驳回 kháng cáo, thì coi như người kháng cáo đã từ bỏ quyền kháng cáo.",
+     "cite_ok": false,
+     "span_f1": 0.4361,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20119": {
+     "answer": "Đúng vậy. Theo Điều 108 Luật Hộ tịch năm 2014, nếu Chủ tịch Ủy ban nhân dân cấp tỉnh không thực hiện chức năng quản lý nhà nước về hộ tịch đúng quy định, gây hậu quả vi phạm pháp luật về hộ tịch, thì người dân có quyền yêu cầu Chủ tịch chịu trách nhiệm theo pháp luật.",
+     "cite_ok": false,
+     "span_f1": 0.3692,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20087": {
+     "answer": "Đúng, bạn cần ghi rõ địa điểm diễn ra phiên hòa giải trong biên bản hòa giải. Điều này tuân theo quy định tại Điều 281 Bộ luật Tố tụng dân sự.",
+     "cite_ok": false,
+     "span_f1": 0.254,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20144": {
+     "answer": "Không đủ thông tin. Bạn cần cung cấp số điều cụ thể từ qui chế hoặc luật liên quan để tôi có thể trả lời chính xác hơn.",
+     "cite_ok": false,
+     "span_f1": 0.0889,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20014": {
+     "answer": "Điều 89 Bộ Luật Tố tụng dân sự 2015 quy định về việc này. Sau 7 ngày lập biên bản hòa giải thành mà không có đương sự thay đổi ý kiến, Tòa án sẽ ra quyết định công nhận thoả thuận và gửi quyết định đó cho các đương sự trong 5 ngày làm việc.",
+     "cite_ok": false,
+     "span_f1": 0.5032,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20027": {
+     "answer": "Đúng vậy. Khi yêu cầu công nhận và thi hành bản án của tòa án nước ngoài tại Việt Nam, bạn cần ghi rõ yêu cầu của mình và phần bản án đã được thi hành tại nước ngoài trong đơn yêu cầu. Bạn nên tham khảo thêm các quy định cụ thể về thủ tục này trong Luật民事诉讼法 hoặc các văn bản liên quan khác để đảm bảo đầy đủ và chính xác.",
+     "cite_ok": false,
+     "span_f1": 0.4615,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20128": {
+     "answer": "Giấy chứng nhận kết hôn có hiệu lực ngay khi được cấp và không phụ thuộc vào việc tổ chức lễ đăng ký kết hôn. Do đó, bạn không cần phải làm thêm bất kỳ thủ tục nào để duy trì hiệu lực của Giấy chứng nhận kết hôn, miễn là bạn đã nhận được nó.",
+     "cite_ok": false,
+     "span_f1": 0.2935,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20073": {
+     "answer": "Theo Điều 371 Bộ Luật Dân sự 2015, tài sản bị kê biên có thể được giao cho một bên đương sự quản lý cho đến khi có quyết định của Toà án. Do đó, câu trả lời là có.",
+     "cite_ok": false,
+     "span_f1": 0.6024,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20023": {
+     "answer": "Tòa án Việt Nam có thể tiếp tục thụ lý đơn kiện của bạn nếu vụ việc vẫn còn liên quan đến các vấn đề pháp lý thuộc thẩm quyền của Tòa án Việt Nam. Tuy nhiên, nếu tòa án nước ngoài đã thụ lý và ra phán quyết về vụ việc, việc tiếp theo của Tòa án Việt Nam có thể là việc xác định liệu phán quyết đó có ảnh hưởng đến việc giải quyết vụ kiện tại Việt Nam hay không. Nếu phán quyết nước ngoài được xem là có hiệu lực và không trái với Hiến pháp Việt Nam hoặc các quy định pháp luật Việt Nam, Tòa án Việt Nam có thể chấp nhận phán quyết đó trong quá trình xét xử. Tuy nhiên, điều này cần phải được xác định cụ thể qua quá trình xét xử và tranh tụng giữa các bên liên quan. Không đủ thông tin",
+     "cite_ok": false,
+     "span_f1": 0.3707,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20057": {
+     "answer": "Không đủ thông tin. Theo Điều 317 Bộ Luật Tố tụng Hình sự năm 2015, người làm chứng có quyền yêu cầu không tiết lộ thông tin cá nhân của mình, nhưng không có quy định cụ thể về việc không cho những người tham gia phiên tòa nhìn thấy họ. Bạn nên liên hệ với Hội đồng xét xử để có câu trả lời chính xác nhất.",
+     "cite_ok": false,
+     "span_f1": 0.4202,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20122": {
+     "answer": "Trả lời: Theo quy định tại Điều 8 Quyết định 31/2014/QĐ-TTg của Chính phủ, khi muốn thay đổi thông tin hộ tịch, bạn cần đến Phòng Cảnh sát hình sự - Công an cấp huyện hoặc Trung tâm hành chính công cấp huyện để làm thủ tục. Sau khi được giải quyết, cơ quan có thẩm quyền sẽ gửi quyết định thay đổi cho cơ quan đã đăng ký thông tin hộ tịch trước đây để cập nhật. Tuy nhiên, cần chú ý rằng cụ thể hơn về quy trình và thủ tục, bạn nên tham khảo trực tiếp tại Điều 8 của Quyết định trên hoặc liên hệ với cơ quan chức năng địa phương.",
+     "cite_ok": false,
+     "span_f1": 0.3716,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20005": {
+     "answer": "Để công nhận và thi hành quyết định của trọng tài nước ngoài tại Việt Nam, theo Điều 221 Bộ luật Tư pháp năm 2015, bên được thi hành quyết định phải có địa chỉ tại Việt Nam. Trường hợp không có địa chỉ tại Việt Nam, bên đó cần phải cung cấp thông tin cụ thể về địa điểm mà quyết định có thể được thực hiện (ví dụ: địa chỉ văn phòng đại diện, địa chỉ email, số điện thoại liên lạc).",
+     "cite_ok": false,
+     "span_f1": 0.3782,
+     "abstain": false,
+     "ctx_hit5": false
+    }
+   }
+  },
+  "rag_hybrid": {
+   "summary": {
+    "n": 64,
+    "cite_acc": 0.3906,
+    "span_f1": 0.4133,
+    "abstain_rate": 0.1875,
+    "ctx_hit5": 0.7031,
+    "mean_ans_tokens": 78.3
+   },
+   "per_q": {
+    "EXT20065": {
+     "answer": "Theo Điều 144, Khoản 4 của Bộ Luật Tố tụng Dân sự 2004 (BLTTDS2004), trong trường hợp Tòa án yêu cầu người phiên dịch, chi phí cho người phiên dịch sẽ do Tòa án trả. Do đó, nếu bạn đã thuê một phiên dịch trong phiên tòa nhưng không có thỏa thuận về chi phí, bạn không phải trả tiền cho dịch vụ này vì chi phí sẽ do Tòa án chịu.",
+     "cite_ok": true,
+     "span_f1": 0.3673,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20029": {
+     "answer": "Để trả lời câu hỏi này chính xác, cần thêm thông tin về địa điểm nơi công ty bạn đang hoạt động và nơi bạn cư trú. Theo các quy định chung về khởi kiện, bạn cần làm đơn khởi kiện tại Tòa án có thẩm quyền giải quyết vụ án dân sự. \n\nTheo Điều 164 của Bộ Luật Tố tụng Dân sự 2004 (BLTTDS2004), cá nhân, cơ quan, tổ chức khởi kiện phải làm đơn khởi kiện. Điều này cho thấy đơn khởi kiện có thể được nộp trực tiếp tại Tòa án hoặc gửi qua các phương thức khác như gửi trực tuyến qua Cổng thông tin điện tử của Tòa án (nếu có).\n\nTuy nhiên, không có cụ thể hóa về việc Tòa án nào có thẩm quyền giải quyết vụ việc khi công ty bị",
+     "cite_ok": false,
+     "span_f1": 0.2383,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20076": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20124": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0625,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20142": {
+     "answer": "Theo các trích dẫn luật, nếu bạn nghi ngờ về nhân thân của cha, mẹ hoặc con cái không phải là người được ghi trong giấy tờ, bạn có quyền yêu cầu Sở Tư pháp xác minh. Điều này được quy định tại [ND126_2014 — Điều 34 — Khoản 3].",
+     "cite_ok": true,
+     "span_f1": 0.4,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20141": {
+     "answer": "Điều 57, Khoản 1, Điểm b của Nghị định 126/2014/NĐ-CP chính là điều khoản quy định khi trung tâm bị tước quyền sử dụng giấy đăng ký hoạt động, trung tâm sẽ bị chấm dứt hoạt động theo quy định.",
+     "cite_ok": true,
+     "span_f1": 0.5385,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20077": {
+     "answer": "Nếu bạn đã nhận được giấy triệu tập nhưng không tham gia phiên tòa, bạn sẽ bị xử phạt hành chính theo quy định của pháp luật như sau:\n\nTheo Điều 490 của Bộ Luật Tố tụng Hình sự 2015 (BLTTDS2004), người làm chứng, người phiên dịch, người giám định đã được triệu tập hợp lệ nhưng cố ý không đến Tòa án hoặc không có mặt tại phiên tòa, phiên họp mà không có lý do chính đáng và nếu sự vắng mặt của họ gây trở ngại cho việc thu thập, xác minh chứng cứ hoặc giải quyết vụ việc thì bị xử phạt hành chính theo quy định của pháp luật.",
+     "cite_ok": false,
+     "span_f1": 0.3575,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20094": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn luật cung cấp, không có quy định cụ thể về việc tòa án có thể chia một vụ án thành nhiều vụ án riêng biệt dựa trên nhiều loại vi phạm khác nhau. Việc này phụ thuộc vào quy định cụ thể của từng vụ án và thẩm quyền giải quyết của tòa án.",
+     "cite_ok": false,
+     "span_f1": 0.4444,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20025": {
+     "answer": "Đúng theo Điều 384 và Điều 386 BLTTDS2004, nếu bạn được Toà án triệu tập hợp lệ nhưng không đến lần thứ hai mà không có lý do chính đáng, Toà án có thể phạt bạn tiền.",
+     "cite_ok": true,
+     "span_f1": 0.4528,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20004": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn luật cung cấp, việc Tòa án phải nghe lời trình bày của nguyên đơn, bị đơn trong phiên tòa không được nêu rõ là bắt buộc khi họ vắng mặt. Tuy nhiên, nếu họ vắng mặt, họ có thể đề nghị xét xử vắng mặt theo quy định. Việc Tòa án có vi phạm hay không phụ thuộc vào các quyết định và yêu cầu cụ thể từ phía nguyên đơn, bị đơn hoặc người đại diện của họ.",
+     "cite_ok": false,
+     "span_f1": 0.2648,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20089": {
+     "answer": "Theo các trích dẫn luật, nếu bạn yêu cầu tuyên bố người thân mất tích và họ trở về nhà, bạn có thể yêu cầu Tòa án đình chỉ việc xét đơn yêu cầu. Điều này được quy định tại:\n\n- [van-ban-hop-nhat-so-21-vbhn-vpqh-468974 — Điều 388 — Khoản 3]: \"nếu người bị yêu cầu tuyên bố mất tích trở về và yêu cầu Tòa án đình chỉ việc xét đơn yêu cầu thì Tòa án ra quyết định đình chỉ việc xét đơn yêu cầu tuyên bố một người mất tích.\"\n- [van-ban-hop-nhat-so-21-vbhn-vpqh-468974 — Điều 392 — Khoản 3]: \"trong thời hạn thông báo, nếu người",
+     "cite_ok": false,
+     "span_f1": 0.6047,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20008": {
+     "answer": "Đúng theo Điều 88 của Bộ Luật Tố tụng Dân sự 2004 và Điều 100 của văn bản hợp nhất số 21/2018/UBTVQH14, nếu Thẩm phán xác định có mâu thuẫn trong lời khai của đương sự và người làm chứng, Thẩm phán sẽ tiến hành đối chất giữa đương sự với người làm chứng.",
+     "cite_ok": true,
+     "span_f1": 0.5234,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20091": {
+     "answer": "Có, bạn có quyền yêu cầu xem đơn khởi kiện và tài liệu, chứng cứ kèm theo đơn khởi kiện. Điều này được quy định tại Điều 175, Khoản 2, Điều 199 của Luật Thi hành dân sự 2004.",
+     "cite_ok": true,
+     "span_f1": 0.5588,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20078": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, nếu bạn (bị đơn) có yêu cầu đối với nguyên đơn, bạn có thể đưa ra yêu cầu phản tố. Điều này được quy định tại Điều 176 của Bộ Luật Tố tụng dân sự năm 2004 (BLTTDS2004), cụ thể tại Khoản 2, Điểm c của Điều này. Yêu cầu phản tố của bạn sẽ được chấp nhận nếu có sự liên quan giữa yêu cầu phản tố của bạn và yêu cầu của nguyên đơn, và việc giải quyết cả hai yêu cầu trong cùng một vụ án sẽ giúp cho việc giải quyết vụ án được chính xác và nhanh chóng hơn.",
+     "cite_ok": false,
+     "span_f1": 0.3506,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20002": {
+     "answer": "Không đủ thông tin. \n\nTheo các trích dẫn luật được cung cấp, việc Hội đồng xét xử quyết định một vấn đề mà không ghi vào biên bản phiên tòa không được quy định cụ thể về hậu quả pháp lý của quyết định đó. Các quy định chỉ đề cập đến việc ghi vào biên bản phiên tòa sau khi Hội đồng xét xử thảo luận và thông qua quyết định, chứ không nói đến trường hợp không ghi vào biên bản.",
+     "cite_ok": false,
+     "span_f1": 0.4202,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20095": {
+     "answer": "Trong trường hợp người nhận con nuôi không sống tại địa phương đăng ký nuôi con, họ vẫn phải nộp hồ sơ nhận con nuôi cho Ủy ban nhân dân cấp xã nơi đăng ký việc nuôi con nuôi. Tuy nhiên, sau khi nộp hồ sơ, họ cần thực hiện thủ tục giao nhận con nuôi theo quy định của pháp luật về hộ tịch, vì việc đăng ký và giao nhận con nuôi phải được thực hiện tại cơ quan nhà nước có thẩm quyền theo quy định của pháp luật về hộ tịch. Điều này được quy định tại [HNGD2000 — Điều 72] và [BLDS1995 — Điều 59].",
+     "cite_ok": false,
+     "span_f1": 0.3292,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20134": {
+     "answer": "Theo các trích dẫn luật, bạn có quyền được tư vấn và hỗ trợ về hôn nhân và gia đình có yếu tố nước ngoài. Tuy nhiên, bạn cần tuân thủ pháp luật của nước sở tại về điều kiện kết hôn. Việc tư vấn, hỗ trợ không phụ thuộc vào quốc tịch hoặc nơi cư trú của người có yêu cầu. Bạn nên liên hệ với Trung tâm tư vấn hôn nhân của Việt Nam hoặc tổ chức tư vấn hôn nhân nước ngoài được thành lập theo quy định của pháp luật nước đó để giải quyết vấn đề liên quan đến hôn nhân và gia đình giữa công dân Việt Nam với người nước ngoài.",
+     "cite_ok": false,
+     "span_f1": 0.5031,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20123": {
+     "answer": "Theo các trích dẫn luật, nếu bạn bị từ chối đăng ký kết hôn, bạn có quyền khiếu nại đến cơ quan nhà nước có thẩm quyền. Tuy nhiên, cụ thể về quy trình khiếu nại theo luật hộ tịch không được nêu rõ trong các trích dẫn luật đã cung cấp. Bạn nên liên hệ trực tiếp với cơ quan đăng ký kết hôn đã từ chối để hiểu rõ hơn về quy trình khiếu nại.",
+     "cite_ok": false,
+     "span_f1": 0.4211,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20148": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, bạn có thể xin cấp bản sao Giấy chứng nhận kết hôn từ Sổ đăng ký kết hôn tại Cơ quan đại diện nếu có yêu cầu. Điều này được quy định tại Điều 24, Khoản 3 của Luật Hôn nhân và Family (ND126_2014).",
+     "cite_ok": false,
+     "span_f1": 0.566,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20039": {
+     "answer": "Trong phiên tòa, khi kiểm sát viên phát biểu ý kiến về việc giải quyết vụ việc dân sự, người dân không có quyền hoặc nghĩa vụ cụ thể nào được nêu trong các trích dẫn luật đã cung cấp. Các trích dẫn luật tập trung vào trách nhiệm của kiểm sát viên và tòa án trong việc phát biểu ý kiến, chứ không đề cập đến quyền hoặc nghĩa vụ của người dân. Do đó, câu trả lời là \"Không đủ thông tin\" để trả lời câu hỏi về hành vi của người dân trong trường hợp này.",
+     "cite_ok": false,
+     "span_f1": 0.3616,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20113": {
+     "answer": "Nếu bạn khiếu nại về quyết định của Bộ trưởng Bộ Tư pháp và bị từ chối, bạn có thể yêu cầu Bộ trưởng Bộ Tư pháp xem xét lại quyết định đó theo Điều 142, Khoản 4, Điểm b của Luật Thi hành án dân sự 2008.",
+     "cite_ok": true,
+     "span_f1": 0.5208,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20118": {
+     "answer": "Để hợp pháp hóa giấy khai sinh nước ngoài viết tiếng Anh của con bạn tại Việt Nam, bạn cần thực hiện theo các bước sau:\n\n1. Dịch sang tiếng Việt: Giấy tờ bằng tiếng nước ngoài phải được dịch sang tiếng Việt.\n2. Chứng thực chữ ký người dịch: Chữ ký của người dịch phải được chứng thực theo quy định của pháp luật Việt Nam.\n\nĐiều này dựa trên Điều 11 của Luật Hộ tịch 2026, cụ thể là Khoản 2 của Điều 11, yêu cầu giấy tờ bằng tiếng nước ngoài phải được dịch ra tiếng Việt và chứng thực chữ ký người dịch.",
+     "cite_ok": false,
+     "span_f1": 0.4366,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20028": {
+     "answer": "Theo các trích dẫn luật, nếu bạn là công dân Việt Nam đang sống và làm việc ở nước ngoài, nhưng vợ/chồng bạn vẫn ở Việt Nam và bạn muốn ly hôn, thì bạn cần tuân theo quy định trong HNGD2014 Điều 127 Khoản 2. Theo đó, việc ly hôn sẽ được giải quyết theo pháp luật của nước nơi thường trú chung của vợ chồng. Nếu họ không có nơi thường trú chung, thì việc ly hôn sẽ được giải quyết theo pháp luật Việt Nam. Do vậy, bạn có thể kiện ly hôn ở Việt Nam. Tuy nhiên, cần lưu ý rằng nếu bạn đã ly hôn ở nước ngoài và muốn kết hôn lại tại Việt Nam, bạn cần thực hiện thủ tục ghi vào sổ hộ tịch việc ly hôn đã được giải quyết ở nước ngoài như quy định",
+     "cite_ok": false,
+     "span_f1": 0.2643,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20081": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0645,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20074": {
+     "answer": "Được, theo Điều 253 của Luật xử lý hành vi vi phạm pháp luật trong hoạt động tố tụng hình sự năm 2015 (sửa đổi, bổ sung năm 2020) và Điều 226 của Bộ luật Tố tụng dân sự năm 2004, sau khi người làm chứng trình bày xong, chủ tọa phiên tòa có quyền yêu cầu họ được hỏi thêm về những điểm chưa rõ, chưa đầy đủ hoặc có mâu thuẫn với nhau, mâu thuẫn với lời khai của họ trước đó, mâu thuẫn với lời trình bày của đương sự, người bảo vệ quyền và lợi ích hợp pháp của đương sự.",
+     "cite_ok": true,
+     "span_f1": 0.6316,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20139": {
+     "answer": "Theo các trích dẫn luật, nếu bạn là công dân Việt Nam đã ly hôn ở nước ngoài và thường trú tại Việt Nam, bạn cần làm thủ tục ghi vào sổ hộ tịch việc ly hôn tại Sở Tư pháp, nơi bạn thường trú. Điều này tương ứng với điểm a trong Điều 43 của Luật Hộ tịch số 126/2014/QH13.",
+     "cite_ok": false,
+     "span_f1": 0.4818,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20051": {
+     "answer": "Đúng theo Điều 242 và Điều 216 của Bộ Luật Tố tụng Hình sự 2004 (BLTTDS2004), nếu lời khai của bạn và người làm chứng có ảnh hưởng lẫn nhau, chủ tọa phiên tòa có thể quyết định cách ly bạn với người làm chứng trước khi hỏi người làm chứng.",
+     "cite_ok": true,
+     "span_f1": 0.6263,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20087": {
+     "answer": "Không đủ thông tin. \n\nViệc đặt địa điểm phiên hòa giải không phải là trụ sở Tòa án trong biên bản hòa giải tuân theo Điều 281 Bộ luật Tố tụng dân sự 2015 không được nêu cụ thể trong các trích dẫn luật bạn cung cấp. Bạn nên tham khảo thêm Điều 281 BLTTDS2004 hoặc Điều 281 BLTTDS2015 để có thông tin chính xác.",
+     "cite_ok": false,
+     "span_f1": 0.2917,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20119": {
+     "answer": "Đúng theo các quy định trong Luật Hộ tịch số 158/2005/QH11 và Nghị định 146/2014/NĐ-CP, nếu Chủ tịch Ủy ban nhân dân cấp tỉnh không quản lý chặt chẽ dẫn đến sai phạm trong đăng ký hộ tịch, người dân có quyền yêu cầu Chủ tịch chịu trách nhiệm theo pháp luật. Điều này được quy định tại Điều 77, Điều 78 và Điều 79 của Luật Hộ tịch 2005, cũng như Điều 69 và Điều 70 của Nghị định 146/2014/NĐ-CP.",
+     "cite_ok": true,
+     "span_f1": 0.4125,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20045": {
+     "answer": "Theo các trích dẫn luật được cung cấp, nếu bạn là người tiến hành tố tụng trong vụ án này, bạn có thể vi phạm quy định nếu bạn có hành vi trái pháp luật hoặc làm sai lệch hồ sơ vụ án, vụ việc. Điều này được quy định tại [TNBTCNN2017 — Điều 10 — Khoản 5]. Ngoài ra, bạn cũng có thể vi phạm nếu xúc phạm danh dự, nhân phẩm, uy tín của người tiến hành tố tụng hoặc đe doạ, sử dụng vũ lực hoặc có hành vi khác cản trở người tiến hành tố tụng thực hiện các biện pháp xác minh, thu thập chứng cứ, như được quy định tại [BLTTDS2004 — Điều 385 — Khoản 1 — Điểm g].",
+     "cite_ok": false,
+     "span_f1": 0.0769,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20027": {
+     "answer": "Đúng theo Điều 350 của Luật Thi hành án dân sự năm 2004, khi gửi đơn yêu cầu công nhận và cho thi hành tại Việt Nam bản án, quyết định dân sự của Toà án nước ngoài, bạn cần ghi rõ yêu cầu của mình và phần đã được thi hành tại nước ngoài trong đơn yêu cầu.",
+     "cite_ok": true,
+     "span_f1": 0.5714,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20054": {
+     "answer": "Đúng theo Điều 219 BLTTDS 2004 và Điều 217 BLTTDS 2004 (cụ thể là Điều 219 - Khoản 1 và Điều 217 - Khoản 2 - Điểm b), nếu bạn (nguyên đơn) rút toàn bộ yêu cầu khởi kiện, nhưng bị đơn vẫn giữ nguyên yêu cầu phản tố của mình, thì bị đơn sẽ trở thành nguyên đơn và bạn sẽ trở thành bị đơn.",
+     "cite_ok": true,
+     "span_f1": 0.6535,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20107": {
+     "answer": "Nếu bạn khiếu nại về việc đăng ký hộ tịch bị sai sót, bạn nên gửi đơn đến cơ quan nhà nước có thẩm quyền, cụ thể là cơ quan Tư pháp hoặc Sở Tư pháp nơi đã thực hiện việc đăng ký hộ tịch. Theo Điều 4 của Hiến định số 20/2014/QH13, cải chính hộ tịch là trách nhiệm của cơ quan nhà nước có thẩm quyền. Do đó, bạn cần liên hệ trực tiếp với cơ quan này để trình bày vấn đề và yêu cầu cải chính.",
+     "cite_ok": false,
+     "span_f1": 0.292,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20126": {
+     "answer": "Theo các trích dẫn luật, nếu hồ sơ của bạn thiếu tờ khai theo mẫu quy định, bạn cần nộp tờ khai này cùng với các chứng cứ khác để chứng minh quan hệ cha con cho cơ quan đăng ký hộ tịch.",
+     "cite_ok": false,
+     "span_f1": 0.3077,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20150": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, bạn có thể đăng ký kết hôn. Cụ thể, Điều 19, Khoản 1 của Luật Hôn nhân và Family số 126/2014/QH13 quy định rằng \"nếu công dân Việt Nam không có nơi đăng ký thường trú, nhưng có nơi đăng ký tạm trú theo quy định của pháp luật về cư trú thì Ủy ban nhân dân cấp tỉnh, nơi đăng ký tạm trú của công dân Việt Nam thực hiện đăng ký kết hôn.\" Do đó, vì bạn có nơi đăng ký tạm trú, nên bạn có thể thực hiện thủ tục đăng ký kết hôn tại Ủy ban nhân dân cấp tỉnh nơi đăng ký tạm trú của bạn.",
+     "cite_ok": true,
+     "span_f1": 0.6154,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20079": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn được cung cấp, không có quy định cụ thể về việc tòa án phải công khai thông tin cá nhân trong hồ sơ tố tụng. Việc này phụ thuộc vào quy định của từng loại thông tin và trường hợp cụ thể. Bạn nên tham khảo thêm các quy định liên quan đến quyền riêng tư và bảo mật thông tin cá nhân trong tố tụng.",
+     "cite_ok": false,
+     "span_f1": 0.1359,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20144": {
+     "answer": "Đúng vậy, theo Điều 54, Khoản 3 của Nghị định 126/2014/NĐ-CP, nếu Sở Tư pháp không cấp giấy đăng ký hoạt động trong thời hạn 05 ngày làm việc, kể từ ngày nhận đủ hồ sơ hợp lệ, thì Sở Tư pháp phải thông báo bằng văn bản cho tổ chức về lý do từ chối.",
+     "cite_ok": true,
+     "span_f1": 0.6777,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20009": {
+     "answer": "Theo các quy định trong văn bản hợp nhất số 21/UBLN-VPQH-468974, nếu bạn và vợ bạn đồng ý ly hôn và nộp đơn cùng lúc, mỗi bên phải chịu một nửa án phí sơ thẩm. Điều này được quy định tại Điều 147, Khoản 4 của văn bản này.",
+     "cite_ok": false,
+     "span_f1": 0.3208,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20149": {
+     "answer": "Theo các trích dẫn luật, nếu bạn không có giấy khai sinh của mình và muốn nhận cha cho con, bạn nên:\n\n1. Liên hệ với Sở Tư pháp để xem xét việc nhận con và đăng ký khai sinh. Điều này dựa trên Điều 50 của Luật Hộ tịch số 15/2005/QH11.\n\n2. Nếu vào thời điểm đăng ký khai sinh có người nhận con, Ủy ban nhân dân cấp xã sẽ kết hợp giải quyết việc nhận con và đăng ký khai sinh. Điều này được quy định tại Điều 15 của Luật Hộ tịch số 15/2005/QH11.\n\nTuy nhiên, cần lưu ý rằng việc nhận cha cho con khi không có giấy khai sinh có thể gặp khó khăn và cần sự hỗ trợ từ cơ quan chức năng",
+     "cite_ok": false,
+     "span_f1": 0.3454,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20014": {
+     "answer": "Đúng theo các điều khoản trong Luật xử lý纷争 (BLTTDS2004), Điều 187 và Điều 212, nếu sau 7 ngày lập biên bản hoà giải thành mà không có đương sự nào thay đổi ý kiến về sự thoả thuận đó, Thẩm phán chủ trì phiên hoà giải hoặc một Thẩm phán được Chánh án Toà án phân công sẽ ra quyết định công nhận sự thoả thuận của các đương sự. Trong thời hạn 5 ngày làm việc, kể từ ngày ra quyết định công nhận sự thoả thuận, Toà án phải gửi quyết định đó cho các đương sự và Viện kiểm sát cùng cấp.",
+     "cite_ok": true,
+     "span_f1": 0.8488,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20122": {
+     "answer": "Theo các quy định trong Luật Hộ tịch năm 2026 (HOTICH2026), nếu bạn muốn thay đổi thông tin hộ tịch, cơ quan có thẩm quyền sẽ thực hiện như sau:\n\n- Cập nhật vào sổ hộ tịch, Cơ sở dữ liệu hộ tịch theo bản án, quyết định đã có hiệu lực pháp luật của Tòa án, quyết định, giấy tờ hộ tịch do cơ quan nhà nước có thẩm quyền cấp, xác nhận đối với các thay đổi thông tin sau đây của cá nhân: Thông tin hộ tịch, quốc tịch; Xác định lại giới tính; Đăng ký thay đổi thông tin hộ tịch quy định tại các điểm b, c, đ, e và g khoản 2 Điều này cho người nước ngoài, người gốc Việt Nam chưa xác định được quốc tịch đang sinh sống tại Việt Nam đã",
+     "cite_ok": false,
+     "span_f1": 0.4,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20033": {
+     "answer": "Chánh án Toà án sẽ thực hiện việc sửa chữa, bổ sung bản án nếu Thẩm phán ban đầu không còn làm Thẩm phán. Điều này được quy định tại [BLTTDS2004 — Điều 240 — Khoản 2] và [van-ban-hop-nhat-so-21-vbhn-vpqh-468974 — Điều 268 — Khoản 2].",
+     "cite_ok": true,
+     "span_f1": 0.4386,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20070": {
+     "answer": "Nếu bạn kháng cáo nhưng sau đó muốn rút đơn kháng cáo, tòa án sẽ xử lý như sau theo Điều 284 và Điều 256 của Bộ Luật Tố tụng Hình sự 2004:\n\n1. Trước khi bắt đầu phiên tòa hoặc tại phiên tòa phúc thẩm, người kháng cáo có quyền rút kháng cáo.\n2. Tòa án cấp phúc thẩm sẽ đình chỉ xét xử phúc thẩm đối với những phần của vụ án mà người kháng cáo đã rút kháng cáo.\n3. Việc đình chỉ xét xử phúc thẩm trước khi mở phiên tòa do Thẩm phán chủ tọa phiên tòa quyết định, tại phiên tòa do Hội đồng xét xử quyết định.\n\nĐiều này cho thấy, nếu bạn muốn rút đơn kháng cáo, bạn cần thực hiện quyền này trước khi phiên tòa bắt đầu hoặc tại phiên tòa, và tòa án sẽ đình",
+     "cite_ok": false,
+     "span_f1": 0.2703,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20153": {
+     "answer": "Theo các trích dẫn luật, bạn từ đủ 15 tuổi trở lên có thể tự mình tham gia tố tụng về những việc có liên quan đến quan hệ lao động. Tuy nhiên, bạn cần phải được triệu tập bởi Toà án nếu có người đại diện hợp pháp của bạn. Vì vậy, bạn có thể tự mình tham gia tố tụng về việc kiện công ty về vi phạm hợp đồng lao động, nhưng cần phải được triệu tập bởi Toà án.",
+     "cite_ok": false,
+     "span_f1": 0.4663,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20075": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0345,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20066": {
+     "answer": "Nếu bạn nộp đơn kháng cáo quá hạn, Toà án cấp phúc thẩm sẽ xử lý như sau:\n\n1. Gửi đơn kháng cáo, bản tường trình của người kháng cáo về lý do kháng cáo quá hạn và tài liệu, chứng cứ, nếu có cho Viện kiểm sát cùng cấp.\n2. Thành lập Hội đồng gồm ba Thẩm phán để xem xét kháng cáo quá hạn.\n3. Hội đồng có quyền ra quyết định chấp nhận hoặc không chấp nhận việc kháng cáo quá hạn và phải ghi rõ lý do của việc chấp nhận hoặc không chấp nhận trong quyết định.\n4. Gửi quyết định cho người kháng cáo quá hạn và Toà án cấp sơ thẩm.\n5. Nếu chấp nhận việc kháng cáo quá hạn, Toà án cấp sơ thẩm phải tiến hành các thủ tục do Bộ luật này quy định và gửi hồ sơ vụ án cho Toà",
+     "cite_ok": false,
+     "span_f1": 0.785,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20096": {
+     "answer": "Theo các trích dẫn luật, nếu bạn không hài lòng với quyết định về hộ tịch của Chủ tịch Ủy ban nhân dân cấp huyện, bạn có thể khiếu nại lên Chủ tịch Ủy ban nhân dân cấp tỉnh. Điều này được quy định tại Điều 88 (Khoản 1) của Luật Thi hành án dân sự số 158/2005/QH11.",
+     "cite_ok": true,
+     "span_f1": 0.4842,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20041": {
+     "answer": "Khi bạn nộp đơn khởi kiện, tòa án có trách nhiệm thông báo cho bị đơn về việc đã thụ lý vụ án trong thời hạn 03 ngày làm việc, kể từ ngày thụ lý vụ án. Điều này được quy định tại Điều 196, Khoản 1 của Văn bản hợp nhất số 21/VBHN-VPQH 468974 và Điều 174, Khoản 1 của Bộ Luật Tố tụng Dân sự 2004.",
+     "cite_ok": true,
+     "span_f1": 0.4496,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20046": {
+     "answer": "Theo Điều 459 Khoản 1 Điểm b BLDS2015, nếu thỏa thuận trọng tài không có giá trị pháp lý theo pháp luật của nước mà các bên đã chọn để áp dụng hoặc theo pháp luật của nước nơi phán quyết đã được tuyên, và nếu các bên không chọn pháp luật áp dụng cho thỏa thuận đó, thì bạn có quyền kháng nghị quyết định công nhận thỏa thuận đó.",
+     "cite_ok": false,
+     "span_f1": 0.3115,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20049": {
+     "answer": "Theo các trích dẫn luật, nếu bạn muốn rút kháng cáo trong giai đoạn phúc thẩm nhưng chưa gửi văn bản đến tòa án, bạn cần:\n\n1. Lập thành văn bản về việc rút kháng cáo.\n2. Gửi văn bản đó cho Toà án cấp phúc thẩm.\n\nVăn bản này sau đó sẽ được thông báo cho các đương sự và ghi vào biên bản phiên toà.",
+     "cite_ok": false,
+     "span_f1": 0.4698,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20057": {
+     "answer": "Đúng theo Điều 253 và Điều 226 của Bộ Luật Tố tụng Hình sự 2004 (BLTTDS2004), bạn có quyền yêu cầu Hội đồng xét xử không tiết lộ thông tin nhân thân của bạn và không cho những người trong phiên tòa nhìn thấy bạn nếu cần thiết để bảo đảm an toàn cho bạn và những người thân thích của bạn.",
+     "cite_ok": true,
+     "span_f1": 0.6018,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20043": {
+     "answer": "Theo các trích dẫn luật, bạn có quyền khởi kiện tại Tòa án Việt Nam để yêu cầu bảo vệ quyền và lợi ích hợp pháp của mình khi bị xâm phạm hoặc có tranh chấp. Điều này được quy định tại Điều 465 của văn bản hợp nhất số 21/2016/QH14 và Điều 410 BLTTDS 2004. Bạn có thể kiện vì bị đơn là cơ quan, tổ chức có trụ sở tại Việt Nam hoặc bị đơn là cơ quan, tổ chức có chi nhánh, văn phòng đại diện tại Việt Nam, trong trường hợp này là văn phòng đại diện của công ty Việt Nam tại Việt Nam.",
+     "cite_ok": true,
+     "span_f1": 0.4337,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20069": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0444,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20090": {
+     "answer": "Đúng, theo Điều 233 Khoản 4 của Luật Tố tụng hình sự 2004, khi hoãn tuyên án, Hội đồng xét xử phải thông báo ngay cho Viện kiểm sát cùng cấp và những người tham gia tố tụng về thời gian, địa điểm mới của phiên tòa tuyên án.",
+     "cite_ok": false,
+     "span_f1": 0.3543,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20019": {
+     "answer": "Có, Tòa án Việt Nam có quyền giải quyết vụ việc này. Theo Điều 410 BLTTDS2004, Tòa án Việt Nam giải quyết các vụ việc dân sự có yếu tố nước ngoài trong trường hợp tranh chấp phát sinh từ hợp đồng mà việc thực hiện toàn bộ hoặc một phần hợp đồng xảy ra trên lãnh thổ Việt Nam. Trong trường hợp này, hợp đồng đã được thực hiện một phần tại Việt Nam nên Tòa án Việt Nam có thẩm quyền giải quyết vụ việc.",
+     "cite_ok": true,
+     "span_f1": 0.4321,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20010": {
+     "answer": "Tòa án phải thụ lý hồ sơ trong thời hạn ba ngày làm việc kể từ ngày nhận được hồ sơ và thông báo cho Viện kiểm sát cùng cấp biết trong cùng thời hạn ba ngày làm việc kể từ ngày thụ lý hồ sơ. Theo Điều 353 - Khoản 1 của Bộ luật Tố tụng Dân sự 2004.",
+     "cite_ok": false,
+     "span_f1": 0.4237,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20060": {
+     "answer": "Theo Điều 437, Khoản 5, Điểm e và Điểm h của văn bản hợp nhất số 21 VBHN-VPQH-468974, nếu tòa án không xác định được địa chỉ của người phải thi hành hoặc địa điểm nơi có tài sản liên quan đến việc thi hành tại Việt Nam, tòa án sẽ ra quyết định đình chỉ việc xét đơn yêu cầu thi hành án.",
+     "cite_ok": false,
+     "span_f1": 0.5109,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20050": {
+     "answer": "Đúng theo Điều 473 Khoản 2 của văn bản hợp nhất số 21 VBHN-VPQH-468974, nếu không xác định được địa chỉ của đương sự ở nước ngoài, người khởi kiện có thể yêu cầu Tòa án Việt Nam đề nghị cơ quan có thẩm quyền của nước ngoài xác định địa chỉ của đương sự hoặc tuyên bố đương sự mất tích hoặc đã chết theo quy định của pháp luật Việt Nam hoặc pháp luật nước ngoài. Do đó, bạn có thể kiện ra Tòa án Việt Nam để yêu cầu tuyên bố công dân nước ngoài mất tích.",
+     "cite_ok": false,
+     "span_f1": 0.4583,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20093": {
+     "answer": "Không đủ thông tin. Các trích dẫn luật đề cập đến việc ghi rõ họ, tên, địa chỉ của các bên liên quan trong đơn yêu cầu không công nhận bản án, quyết định dân sự của Tòa án nước ngoài hoặc trong bản án, nhưng không cung cấp thông tin về việc ghi rõ thông tin này trong bản án. Để đưa ra quyết định chính xác, cần thêm thông tin về quy định cụ thể về việc ghi rõ thông tin này trong bản án theo các văn bản luật liên quan.",
+     "cite_ok": false,
+     "span_f1": 0.2222,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20062": {
+     "answer": "Không, nếu bạn có tranh chấp về bảo hiểm xã hội với công ty, bạn không nhất thiết phải qua hòa giải tại cơ sở. Điều này được quy định tại [BLTTDS2004 — Điều 31 — Khoản 1 — Điểm d].",
+     "cite_ok": true,
+     "span_f1": 0.303,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20023": {
+     "answer": "Theo Điều 472, Khoản 1, Điểm d của văn bản hợp nhất số 21 VBHN-VPQH-468974, nếu vụ việc dân sự thuộc thẩm quyền chung của Tòa án Việt Nam nhưng đã được một Tòa án nước ngoài thụ lý và ra phán quyết, thì Tòa án Việt Nam sẽ trả lại đơn khởi kiện, đơn yêu cầu hoặc đình chỉ giải quyết vụ việc đó. Tuy nhiên, điều này không loại trừ khả năng Tòa án Việt Nam vẫn có thẩm quyền giải quyết vụ việc nếu bản án, quyết định của Tòa án nước ngoài không được Tòa án Việt Nam công nhận.",
+     "cite_ok": false,
+     "span_f1": 0.5137,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20073": {
+     "answer": "Theo các trích dẫn luật, tài sản bị kê biên có thể được giao cho một bên đương sự quản lý cho đến khi có quyết định của Toà án. Điều này được quy định ở cả [BLTTDS2004 — Điều 108 — Khoản 2] và [van-ban-hop-nhat-so-21-vbhn-vpqh-468974 — Điều 120 — Khoản 2].",
+     "cite_ok": true,
+     "span_f1": 0.5051,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20128": {
+     "answer": "Theo Điều 25, Khoản 5 của Nghị định 126/2014/NĐ-CP, nếu bạn có lý do chính đáng và đã nhận được Giấy chứng nhận kết hôn, nhưng vì lý do bất khả kháng không thể tổ chức lễ đăng ký kết hôn trong 90 ngày kể từ ngày Chủ tịch Ủy ban nhân dân cấp tỉnh ký Giấy chứng nhận kết hôn, bạn có thể yêu cầu gia hạn thời gian tổ chức lễ đăng ký kết hôn. Thời gian gia hạn không quá 90 ngày kể từ ngày Chủ tịch Ủy ban nhân dân cấp tỉnh ký Giấy chứng nhận kết hôn. Nếu hết thời hạn này mà hai bên nam, nữ không đến tổ chức lễ đăng ký kết hôn, Giấy chứng nhận kết hôn sẽ không còn giá trị, nhưng Cơ quan đại diện sẽ lưu Giấy chứng nhận kết hôn trong hồ sơ",
+     "cite_ok": true,
+     "span_f1": 0.6643,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20005": {
+     "answer": "Để công nhận và thi hành quyết định của Trọng tài nước ngoài tại Việt Nam, bạn cần cung cấp thông tin về địa chỉ nơi cư trú hoặc làm việc của người phải thi hành. Nếu người này không có địa chỉ tại Việt Nam, bạn cần chỉ rõ địa chỉ nơi có tài sản và các loại tài sản liên quan đến việc thi hành quyết định của Trọng tài nước ngoài tại Việt Nam.\n\nTheo Điều 364 của BLTTDS2004, cũng như Điều 350 của cùng bộ luật, quy định tương tự về việc cung cấp thông tin địa chỉ đối với người phải thi hành quyết định của Trọng tài nước ngoài.",
+     "cite_ok": true,
+     "span_f1": 0.5353,
+     "abstain": false,
+     "ctx_hit5": true
+    }
+   }
+  },
+  "rag_hybrid_tcr": {
+   "summary": {
+    "n": 64,
+    "cite_acc": 0.5312,
+    "span_f1": 0.426,
+    "abstain_rate": 0.2344,
+    "ctx_hit5": 0.7812,
+    "mean_ans_tokens": 70.8
+   },
+   "per_q": {
+    "EXT20029": {
+     "answer": "Nếu bạn bị công ty sa thải trái luật, bạn cần làm đơn khởi kiện lên Tòa án nhân dân cấp huyện nơi công ty có trụ sở. Theo Điều 164, Khoản 1 của Luật Tố tụng dân sự năm 2004 (BLTTDS2004), cá nhân, cơ quan, tổ chức khởi kiện phải làm đơn khởi kiện.\n\nĐiều 107 của BLTTDS2004 cũng cho biết tạm đình chỉ thi hành quyết định sa thải người lao động được áp dụng nếu việc giải quyết vụ án có liên quan đến sa thải người lao động và xét thấy quyết định sa thải người lao động là trái pháp luật hoặc ảnh hưởng nghiêm trọng đến đời sống của người lao động. Điều này chỉ ra rằng bạn có thể yêu cầu tạm đình",
+     "cite_ok": false,
+     "span_f1": 0.2391,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20091": {
+     "answer": "Theo Điều 175, Khoản 2 của Luật Tố tụng dân sự năm 2004, nếu bạn được thông báo về một vụ kiện, bạn có quyền yêu cầu Toà án cho xem, ghi chép, sao chụp đơn khởi kiện và tài liệu, chứng cứ kèm theo đơn khởi kiện.",
+     "cite_ok": true,
+     "span_f1": 0.7273,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20039": {
+     "answer": "Trong phiên tòa, khi kiểm sát viên phát biểu ý kiến về việc giải quyết vụ việc dân sự, người dân không có quyền hoặc nghĩa vụ cụ thể nào được nêu trong các trích dẫn luật đã cung cấp. Các trích dẫn luật tập trung vào trách nhiệm và quyền của các bên tham gia tố tụng như chủ toạ phiên toà, người bào chữa, đại diện Viện kiểm sát, Hội đồng phúc thẩm và Hội đồng giám đốc thẩm chứ không đề cập đến người dân. Do đó, câu trả lời là \"Không đủ thông tin\" để trả lời câu hỏi về hành vi của người dân trong trường hợp này.",
+     "cite_ok": false,
+     "span_f1": 0.3455,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20025": {
+     "answer": "Đúng theo Điều 384 và Điều 386 BLTTDS2004, nếu bạn được Toà án triệu tập hợp lệ nhưng không có mặt tại phiên toà lần đầu tiên với lý do chính đáng, bạn sẽ được hoãn phiên toà. Tuy nhiên, nếu bạn không có mặt tại phiên toà lần thứ hai mà không có lý do chính đáng, bạn có thể bị phạt tiền.",
+     "cite_ok": true,
+     "span_f1": 0.4511,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20079": {
+     "answer": "Không đủ thông tin. \n\nTheo các trích dẫn luật đã cung cấp, không có quy định cụ thể về việc người yêu cầu tòa án công khai thông tin cá nhân trong hồ sơ tố tụng. Các quy định chủ yếu liên quan đến việc tòa án có thể giữ bí mật một số loại thông tin theo yêu cầu của đương sự, nhưng không đề cập đến quyền yêu cầu công khai thông tin cá nhân. Để có câu trả lời chính xác, cần thêm thông tin về quy định cụ thể liên quan đến quyền yêu cầu công khai thông tin cá nhân trong tố tụng dân sự tại Việt Nam.",
+     "cite_ok": false,
+     "span_f1": 0.1127,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20094": {
+     "answer": "Không đủ thông tin. \n\nTheo các trích dẫn luật cung cấp, chúng ta chỉ biết được về khả năng nhập và tách vụ án dựa trên các tiêu chí cụ thể như bảo đảm đúng pháp luật, chứ không có thông tin trực tiếp về việc kiện về cả vi phạm hợp đồng và vi phạm quyền tác giả có thể chia vụ án thành hai vụ án riêng biệt hay không.",
+     "cite_ok": false,
+     "span_f1": 0.4037,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20054": {
+     "answer": "Đúng theo Điều 219, Khoản 1 của Bộ Luật Tố tụng Dân sự 2004, nếu bạn (nguyên đơn) rút toàn bộ yêu cầu khởi kiện nhưng bị đơn vẫn giữ nguyên yêu cầu phản tố của mình, thì bị đơn sẽ trở thành nguyên đơn và bạn sẽ trở thành bị đơn.",
+     "cite_ok": true,
+     "span_f1": 0.7333,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20124": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0625,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20004": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn luật đã cung cấp, việc không nghe lời trình bày của nguyên đơn và bị đơn không trực tiếp dẫn đến vi phạm luật mà phụ thuộc vào nhiều yếu tố khác như nguyên đơn và bị đơn có vắng mặt tại phiên tòa hay không, có người đại diện thay mặt họ tham gia phiên tòa hay không, và chủ toạ phiên tòa có hỏi về vấn đề này hay không.",
+     "cite_ok": false,
+     "span_f1": 0.3208,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20081": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0645,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20142": {
+     "answer": "Đúng theo Điều 34, Khoản 3 của Luật Thi hành án dân sự số 126/2014/QH13, nếu bạn nghi ngờ về việc cha mẹ hoặc con cái không phải là người được ghi trong giấy tờ, bạn có quyền yêu cầu Sở Tư pháp thực hiện xác minh.",
+     "cite_ok": true,
+     "span_f1": 0.4,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20076": {
+     "answer": "Không đủ thông tin. Điều 162, khoản 5 không liên quan đến trường hợp được miễn nộp án phí sơ thẩm như được nêu trong các trích dẫn luật bạn cung cấp.",
+     "cite_ok": false,
+     "span_f1": 0.3014,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20141": {
+     "answer": "Điều 57, Khoản 1, Điểm b của Nghị định 126/2014/NĐ-CP chính là điều khoản quy định khi trung tâm bị tước quyền sử dụng giấy đăng ký hoạt động thì trung tâm sẽ bị chấm dứt hoạt động theo quy định tại Điều này.",
+     "cite_ok": true,
+     "span_f1": 0.5122,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20078": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, nếu bạn (bị đơn) có yêu cầu đối với nguyên đơn, bạn có quyền đưa ra yêu cầu phản tố (điểm c Điều 60 BLTTDS 2004). Điều này cho thấy bạn có thể phản tố yêu cầu của nguyên đơn, đồng thời giữ nguyên yêu cầu của mình. Tuy nhiên, cần lưu ý rằng việc này chỉ được thực hiện khi yêu cầu phản tố của bạn có liên quan đến yêu cầu của nguyên đơn và có thể giúp giải quyết vụ án chính xác và nhanh chóng hơn.",
+     "cite_ok": true,
+     "span_f1": 0.4286,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20077": {
+     "answer": "Nếu bạn đã nhận được giấy triệu tập nhưng không tham gia phiên tòa, bạn sẽ gặp hậu quả pháp lý như sau:\n\n- Theo Điều 200 của BLTTDS2004, nếu bị đơn vắng mặt lần thứ nhất mà có lý do chính đáng, Toà án có thể hoãn phiên toà.\n- Theo Điều 203 của BLTTDS2004, nếu người bảo vệ quyền và lợi ích hợp pháp của đương sự vắng mặt lần thứ hai mà không có lý do chính đáng, Toà án sẽ tiến hành xét xử vụ án mà đương sự tự bảo vệ quyền và lợi ích hợp pháp của mình.\n- Theo Điều 386 của BLTTDS2004, nếu người làm chứng cố ý không đến Toà án hoặc không có mặt tại phiên toà mà không có lý do chính đáng",
+     "cite_ok": false,
+     "span_f1": 0.4388,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20074": {
+     "answer": "Theo Điều 226, Khoản 3 của Bộ Luật Tố tụng Dân sự 2004, sau khi người làm chứng trình bày xong, chủ toạ phiên toà có quyền yêu cầu họ trả lời thêm về những điểm chưa rõ, chưa đầy đủ hoặc có mâu thuẫn với nhau, mâu thuẫn với lời khai của họ trước đó, mâu thuẫn với lời trình bày của đương sự, người bảo vệ quyền và lợi ích hợp pháp của đương sự. Do đó, bạn hoàn toàn có quyền yêu cầu hỏi thêm người làm chứng về những điểm chưa rõ.",
+     "cite_ok": true,
+     "span_f1": 0.7403,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20046": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, bạn có quyền kháng nghị quyết định công nhận thỏa thuận nếu phát hiện thỏa thuận đó vi phạm pháp luật. Điều này được quy định tại Điều 188, Khoản 2 của Bộ luật Tố tụng dân sự 2004, cụ thể là \"Quyết định công nhận sự thoả thuận của các đương sự chỉ có thể bị kháng nghị theo thủ tục giám đốc thẩm nếu có căn cứ cho rằng sự thoả thuận đó là do bị nhầm lẫn, lừa dối, đe doạ hoặc trái pháp luật, trái đạo đức xã hội.\"",
+     "cite_ok": true,
+     "span_f1": 0.6711,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20009": {
+     "answer": "Theo quy định tại Điều 131, Khoản 4 của Bộ Luật Tố tụng Dân sự 2004, khi cả hai đương sự thuận tình ly hôn, mỗi bên đương sự phải chịu một nửa án phí sơ thẩm.",
+     "cite_ok": true,
+     "span_f1": 0.4176,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20134": {
+     "answer": "Theo các trích dẫn luật, bạn có quyền được tư vấn và hỗ trợ về hôn nhân và gia đình có yếu tố nước ngoài. Bạn có thể:\n\n- Tư vấn, hỗ trợ về hôn nhân và gia đình có yếu tố nước ngoài từ Trung tâm tư vấn hôn nhân và gia đình có uy tín.\n- Hợp tác với tổ chức tư vấn, hỗ trợ hôn nhân của nước ngoài được thành lập theo quy định của pháp luật nước đó.\n- Tư vấn, bồi dưỡng về ngôn ngữ, văn hóa, phong tục tập quán, pháp luật về hôn nhân và gia đình, về nhập cư của nước mà người yêu cầu dự định kết hôn với công dân nước đó.\n\nTuy nhiên, bạn cũng cần tuân thủ các quy định về điều kiện kết hôn của cả hai nước và không được lợi dụng việc tư vấn, hỗ trợ để mua",
+     "cite_ok": false,
+     "span_f1": 0.3438,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20126": {
+     "answer": "Để hoàn thiện hồ sơ khi thiếu tờ khai theo mẫu quy định, bạn cần làm theo hướng dẫn tại Điều 25 của Luật Hộ tịch năm 2014. Theo đó, người yêu cầu đăng ký nhận cha, mẹ, con phải nộp tờ khai theo mẫu quy định cùng với các chứng cứ chứng minh quan hệ cha con hoặc mẹ con cho cơ quan đăng ký hộ tịch.",
+     "cite_ok": false,
+     "span_f1": 0.3301,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20095": {
+     "answer": "Trong trường hợp người nhận con nuôi không sống tại địa phương đăng ký nuôi con, họ cần làm thủ tục ghi chú việc nuôi con nuôi tại Sở Tư pháp và Ủy ban nhân dân cấp xã nơi người đó thường trú (Điều 40, Khoản 2, NCN2010).",
+     "cite_ok": false,
+     "span_f1": 0.217,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20019": {
+     "answer": "Có, Tòa án Việt Nam có quyền giải quyết vụ việc này. Theo Điều 410 BLTTDS2004, khi tranh chấp phát sinh từ hợp đồng mà việc thực hiện toàn bộ hoặc một phần hợp đồng xảy ra trên lãnh thổ Việt Nam, Tòa án Việt Nam sẽ giải quyết vụ việc. Trong trường hợp này, hợp đồng đã được ký kết tại Việt Nam nên Tòa án Việt Nam có thẩm quyền giải quyết vụ việc dân sự có yếu tố nước ngoài.",
+     "cite_ok": true,
+     "span_f1": 0.4177,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20045": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn luật đã cung cấp, bạn chỉ được mô tả là \"làm việc trong vụ án đó\" nhưng không rõ bạn có vai trò là người tiến hành tố tụng hay không. Để xác định có vi phạm hay không, cần biết rõ bạn có được giao nhiệm vụ người tiến hành tố tụng hay không.",
+     "cite_ok": false,
+     "span_f1": 0.1389,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20041": {
+     "answer": "Theo Điều 174, Khoản 1 của Bộ Luật Tố tụng Dân sự 2004, Toà án phải thông báo bằng văn bản cho bị đơn về việc đã thụ lý vụ án trong thời hạn ba ngày làm việc kể từ ngày thụ lý vụ án.",
+     "cite_ok": true,
+     "span_f1": 0.6154,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20148": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, bạn có thể xin cấp bản sao Giấy chứng nhận kết hôn từ Sổ đăng ký kết hôn tại Cơ quan đại diện nếu có yêu cầu. Điều này được quy định tại Điều 24, Khoản 3 của Luật Hôn nhân và Family (ND126_2014).",
+     "cite_ok": false,
+     "span_f1": 0.566,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20069": {
+     "answer": "Không đủ thông tin. Trích dẫn luật không chứa thông tin về Điều 225 Bộ luật Tố tụng dân sự liên quan đến trường hợp kháng cáo quá hạn không nộp tiền tạm ứng án phí.",
+     "cite_ok": false,
+     "span_f1": 0.2295,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20087": {
+     "answer": "Không đủ thông tin\n\nĐiều 281 Bộ luật Tố tụng dân sự không liên quan trực tiếp đến việc ghi địa điểm phiên hòa giải trong biên bản hòa giải. Để trả lời câu hỏi này chính xác, cần trích dẫn Điều 281 Bộ luật Tố tụng dân sự 2005.",
+     "cite_ok": false,
+     "span_f1": 0.2469,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20002": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn luật đã cung cấp, không có quy định cụ thể về việc quyết định không được ghi vào biên bản phiên tòa sẽ ảnh hưởng đến hiệu lực của quyết định.",
+     "cite_ok": false,
+     "span_f1": 0.32,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20075": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0345,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20065": {
+     "answer": "Theo Điều 144, Khoản 3 của Bộ Luật Tố tụng Dân sự năm 2004 (BLTTDS2004), nếu không có thoả thuận khác, bên thuê dịch vụ (trong trường hợp này là bạn) phải trả tiền dịch vụ cho người phiên dịch. Do đó, nếu bạn đã thuê phiên dịch trong phiên tòa nhưng không có thỏa thuận về chi phí, bạn có trách nhiệm trả tiền cho dịch vụ này dựa trên giá thị trường của dịch vụ cùng loại tại thời điểm và địa điểm giao kết hợp đồng.",
+     "cite_ok": true,
+     "span_f1": 0.313,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20089": {
+     "answer": "Theo Điều 331, Khoản 3 của Luật Thi hành dân sự năm 2004, nếu người bị yêu cầu tuyên bố mất tích trở về và yêu cầu Toà án đình chỉ việc xét đơn yêu cầu, Toà án sẽ ra quyết định đình chỉ việc xét đơn yêu cầu tuyên bố một người mất tích. Do đó, bạn có thể yêu cầu Toà án đình chỉ việc xét xử tại tòa án nếu người thân của bạn trở về nhà.",
+     "cite_ok": true,
+     "span_f1": 0.6423,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20118": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, nếu giấy khai sinh nước ngoài của con bạn viết bằng tiếng Anh, bạn cần thực hiện các bước sau để hợp pháp hóa nó tại Việt Nam:\n\n1. Dịch sang tiếng Việt: Giấy tờ bằng tiếng nước ngoài phải được dịch sang tiếng Việt.\n2. Công chứng bản dịch: Bản dịch tiếng Việt phải được công chứng theo quy định của pháp luật Việt Nam.\n\nĐiều này dựa vào Điều 6, Khoản 2 của Luật Hộ tịch số 158/2005/QH11 và Điều 31, Khoản 1, Điểm c của Luật收养法 số 2010/QH12.",
+     "cite_ok": true,
+     "span_f1": 0.4672,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20070": {
+     "answer": "Nếu bạn kháng cáo nhưng sau đó muốn rút đơn kháng cáo, tòa án sẽ xử lý theo các bước sau:\n\n1. Theo Điều 256 BLTTDS2004, Khoản 2, trước khi bắt đầu phiên toà hoặc tại phiên toà phúc thẩm, người kháng cáo có quyền rút kháng cáo.\n\n2. Theo Điều 260 BLTTDS2004, Khoản 1, Điểm b, Toà án cấp phúc thẩm có quyền đình chỉ xét xử phúc thẩm đối với những phần của vụ án mà người kháng cáo đã rút kháng cáo hoặc Viện kiểm sát đã rút kháng nghị.\n\nVì vậy, nếu bạn muốn rút đơn kháng cáo, tòa án sẽ đình chỉ xét xử phúc thẩm phần vụ án có kháng cáo của bạn.",
+     "cite_ok": true,
+     "span_f1": 0.3544,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20139": {
+     "answer": "Theo các trích dẫn luật, nếu bạn là công dân Việt Nam đã ly hôn ở nước ngoài và thường trú tại Việt Nam, bạn cần làm thủ tục ghi vào sổ hộ tịch việc ly hôn tại Sở Tư pháp, nơi bạn thường trú. Điều này tương ứng với điểm a trong Điều 43 của Luật Hộ tịch số 126/2014/QH13.",
+     "cite_ok": false,
+     "span_f1": 0.4818,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20043": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, bạn có thể kiện tại Tòa án Việt Nam nếu thỏa mãn một trong các trường hợp quy định tại Điều 410 BLTTDS 2004. Cụ thể, trường hợp phù hợp là \"Bị đơn là công dân nước ngoài, người không quốc tịch cư trú, làm ăn, sinh sống lâu dài tại Việt Nam hoặc có tài sản trên lãnh thổ Việt Nam\". Vì vậy, nếu bạn là công dân nước ngoài, có cơ quan quản lý, chi nhánh, văn phòng đại diện tại Việt Nam hoặc có tài sản trên lãnh thổ Việt Nam, bạn có thể kiện tại Tòa án Việt Nam.",
+     "cite_ok": true,
+     "span_f1": 0.4337,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20113": {
+     "answer": "Nếu bạn khiếu nại về quyết định của Bộ trưởng Bộ Tư pháp và bị từ chối, bạn có thể tiếp tục khiếu nại theo các bước sau:\n\n1. Bạn có thể yêu cầu Bộ trưởng Bộ Tư pháp xem xét lại quyết định giải quyết khiếu nại đã có hiệu lực thi hành nếu quyết định đó vi phạm pháp luật và gây thiệt hại cho lợi ích của Nhà nước, quyền, lợi ích hợp pháp của công dân, cơ quan, tổ chức theo kiến nghị của Tổng Thanh tra (theo Điều 89, Khoản 1, Luật Hộ tịch 2005).\n\n2. Bạn cũng có thể khiếu nại lên Bộ trưởng Bộ Tư pháp nếu quyết định giải quyết khiếu nại của Thủ trưởng cơ quan quản lý thi hành án dân sự thuộc Bộ Tư pháp (theo",
+     "cite_ok": false,
+     "span_f1": 0.4216,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20010": {
+     "answer": "Tòa án phải thụ lý và thông báo cho Viện kiểm sát biết trong thời hạn ba ngày làm việc kể từ ngày nhận được hồ sơ. Điều này được quy định tại Điều 353, Khoản 1 của Luật Thi hành dân sự 2004.",
+     "cite_ok": false,
+     "span_f1": 0.3883,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20119": {
+     "answer": "Đúng theo Điều 77 và Điều 78 của Luật Hộ tịch số 158/2005/QH11, nếu Chủ tịch Ủy ban nhân dân cấp tỉnh không quản lý chặt chẽ dẫn đến sai phạm trong đăng ký hộ tịch, người dân có quyền yêu cầu Chủ tịch chịu trách nhiệm theo pháp luật.",
+     "cite_ok": true,
+     "span_f1": 0.4715,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20049": {
+     "answer": "Theo Điều 256, Khoản 2 của BLTTDS2004, nếu bạn muốn rút kháng cáo trong giai đoạn phúc thẩm, bạn cần thực hiện các bước sau:\n\n1. Rút kháng cáo: Người kháng cáo có quyền rút kháng cáo trước khi bắt đầu phiên toà hoặc tại phiên toà phúc thẩm.\n2. Thông báo cho Toà án: Việc rút kháng cáo phải được ghi vào biên bản phiên toà.\n3. Gửi văn bản: Văn bản nêu ý kiến về việc rút kháng cáo phải được gửi cho Toà án cấp phúc thẩm.\n\nVì vậy, bạn cần thực hiện việc rút kháng cáo và gửi văn bản nêu ý kiến về việc rút kháng cáo cho Toà án cấp phúc thẩm.",
+     "cite_ok": true,
+     "span_f1": 0.54,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20144": {
+     "answer": "Đúng vậy, theo Điều 54, Khoản 3 của Nghị định 126/2014/NĐ-CP, nếu Sở Tư pháp không cấp giấy đăng ký hoạt động trong thời hạn 05 ngày làm việc, kể từ ngày nhận đủ hồ sơ hợp lệ, thì Sở Tư pháp phải thông báo bằng văn bản cho tổ chức về lý do từ chối.",
+     "cite_ok": true,
+     "span_f1": 0.6777,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20008": {
+     "answer": "Đúng, theo Điều 88 của Bộ Luật Tố tụng Dân sự 2004, khi có sự mâu thuẫn trong lời khai của các đương sự với nhau, Thẩm phán sẽ tiến hành đối chất giữa các đương sự với nhau.",
+     "cite_ok": true,
+     "span_f1": 0.6444,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20107": {
+     "answer": "Nếu bạn khiếu nại về việc đăng ký hộ tịch bị sai sót, bạn nên gửi đơn khiếu nại đến cơ quan có thẩm quyền giải quyết khiếu nại. Theo Điều 84 của Luật Hộ tịch năm 2005, cá nhân có quyền khiếu nại với cơ quan nhà nước có thẩm quyền về những quyết định hành chính của cơ quan đăng ký và quản lý hộ tịch hoặc hành vi hành chính trong đăng ký và quản lý hộ tịch của công chức làm công tác hộ tịch khi có căn cứ cho rằng quyết định, hành vi đó là trái pháp luật, xâm phạm quyền, lợi ích hợp pháp của mình.",
+     "cite_ok": false,
+     "span_f1": 0.4177,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20149": {
+     "answer": "Theo Điều 16, Khoản 1, Điều 15 của Luật Hộ tịch 2014, nếu bạn không có giấy khai sinh của mình, bạn vẫn có thể đăng ký khai sinh cho con. Bạn cần nộp tờ khai theo mẫu quy định, cùng với văn bản của người làm chứng xác nhận về việc sinh hoặc giấy cam đoan về việc sinh, nếu không có người làm chứng. Trường hợp khai sinh cho trẻ em bị bỏ rơi, bạn cần có biên bản xác nhận việc trẻ bị bỏ rơi do cơ quan có thẩm quyền lập.",
+     "cite_ok": true,
+     "span_f1": 0.6857,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20051": {
+     "answer": "Đúng theo Điều 216, Khoản 2 của Bộ Luật Tố tụng Dân sự 2004, nếu lời khai của đương sự và người làm chứng có ảnh hưởng lẫn nhau, chủ toạ phiên toà có thể quyết định cách ly đương sự với người làm chứng trước khi hỏi người làm chứng.",
+     "cite_ok": true,
+     "span_f1": 0.7273,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20066": {
+     "answer": "Nếu bạn nộp đơn kháng cáo quá hạn, Toà án cấp phúc thẩm sẽ thành lập Hội đồng gồm ba Thẩm phán để xem xét kháng cáo quá hạn. Hội đồng sẽ xem xét và có thể chấp nhận hoặc không chấp nhận việc kháng cáo quá hạn, với quyết định ghi rõ lý do. Sau đó, Toà án cấp phúc thẩm sẽ gửi quyết định cho người kháng cáo quá hạn và Toà án cấp sơ thẩm. Nếu chấp nhận kháng cáo quá hạn, Toà án cấp sơ thẩm sẽ tiến hành các thủ tục do Bộ luật này quy định và gửi hồ sơ vụ án cho Toà án cấp phúc thẩm.",
+     "cite_ok": false,
+     "span_f1": 0.7922,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20027": {
+     "answer": "Đúng theo Điều 350 của Bộ luật Tố tụng Dân sự năm 2004, khi gửi đơn yêu cầu công nhận và cho thi hành bản án, quyết định dân sự của Toà án nước ngoài tại Việt Nam, bạn cần ghi rõ yêu cầu của mình và phần đã được thi hành tại nước ngoài trong đơn yêu cầu.",
+     "cite_ok": true,
+     "span_f1": 0.5455,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20014": {
+     "answer": "Đúng theo Điều 187 BLTTDS2004.",
+     "cite_ok": true,
+     "span_f1": 0.0,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20153": {
+     "answer": "Theo Điều 57 của Bộ Luật Tố tụng Dân sự 2004, bạn có đủ điều kiện để tự mình tham gia tố tụng về những việc có liên quan đến quan hệ lao động. Do đó, bạn có thể tự mình tham gia tố tụng khi muốn kiện công ty về vi phạm hợp đồng lao động.",
+     "cite_ok": true,
+     "span_f1": 0.4072,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20033": {
+     "answer": "Theo Điều 240, Khoản 2 của Bộ Luật Tố tụng Dân sự 2004, nếu Thẩm phán ban đầu không còn làm Thẩm phán, việc sửa chữa, bổ sung bản án sẽ do Chánh án Toà án thực hiện.",
+     "cite_ok": true,
+     "span_f1": 0.4466,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20050": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn luật được cung cấp, chỉ đề cập đến việc tuyên bố công dân Việt Nam mất tích hoặc đã chết có liên quan đến quyền, nghĩa vụ trên lãnh thổ Việt Nam. Việc tuyên bố mất tích của công dân nước ngoài tại Việt Nam không được quy định cụ thể trong các trích dẫn này. Cần trích dẫn thêm luật liên quan đến công dân nước ngoài để có câu trả lời chính xác.",
+     "cite_ok": false,
+     "span_f1": 0.474,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20150": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, bạn có thể đăng ký kết hôn. Cụ thể, Điều 19, Khoản 1 của Luật Hôn nhân và Family số 126/2014/QH13 quy định rằng \"nếu công dân Việt Nam không có nơi đăng ký thường trú, nhưng có nơi đăng ký tạm trú theo quy định của pháp luật về cư trú thì Ủy ban nhân dân cấp tỉnh, nơi đăng ký tạm trú của công dân Việt Nam thực hiện đăng ký kết hôn.\"",
+     "cite_ok": true,
+     "span_f1": 0.627,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20023": {
+     "answer": "Theo các trích dẫn luật, nếu tòa án nước ngoài đã thụ lý và ra phán quyết về vụ việc dân sự có yếu tố nước ngoài mà bạn đã khởi kiện tại Việt Nam, thì tòa án Việt Nam sẽ trả lại đơn khởi kiện hoặc đình chỉ giải quyết vụ việc. Điều này được quy định tại Điều 413 Khoản 2 BLTTDS 2004.",
+     "cite_ok": true,
+     "span_f1": 0.5493,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20123": {
+     "answer": "Theo Điều 13, Khoản 2 của Luật Hôn nhân và gia đình năm 2000, nếu bạn bị từ chối đăng ký kết hôn, bạn có quyền khiếu nại theo quy định của pháp luật. Bạn nên tìm hiểu thêm về quy trình khiếu nại từ cơ quan nhà nước có thẩm quyền để bảo vệ quyền lợi của mình.",
+     "cite_ok": false,
+     "span_f1": 0.4575,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20057": {
+     "answer": "Theo Điều 226, Khoản 5 của Bộ Luật Tố tụng Hình sự 2004 (BLTTDS2004), bạn có quyền yêu cầu Hội đồng xét xử không tiết lộ thông tin nhân thân của bạn và không cho những người trong phiên tòa nhìn thấy bạn nếu cần bảo đảm an toàn cho bạn và những người thân thích của bạn.",
+     "cite_ok": true,
+     "span_f1": 0.5872,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20090": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0308,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20060": {
+     "answer": "Tòa án sẽ tiếp tục yêu cầu Chấp hành viên tiến hành xác minh về địa chỉ của người phải thi hành án. Theo Điều 20 của Luật Thi hành án dân sự năm 2008, Chấp hành viên có trách nhiệm xác minh tài sản, điều kiện thi hành án của người phải thi hành án. Nếu người được thi hành án đã áp dụng các biện pháp cần thiết nhưng không thể xác minh được điều kiện thi hành án của người phải thi hành án, họ có thể yêu cầu Chấp hành viên tiến hành xác minh. Việc yêu cầu này phải được lập thành văn bản và ghi rõ các biện pháp đã được áp dụng nhưng không có kết quả, kèm theo tài liệu chứng minh.",
+     "cite_ok": false,
+     "span_f1": 0.2289,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20096": {
+     "answer": "Theo các trích dẫn luật, nếu bạn không hài lòng với quyết định về hộ tịch của Chủ tịch Ủy ban nhân dân cấp huyện, bạn có thể khiếu nại lên Chủ tịch Ủy ban nhân dân cấp tỉnh. Điều này được quy định tại Điều 88, Khoản 1 của Luật Thi hành án dân sự số 158/2005/QH11.",
+     "cite_ok": true,
+     "span_f1": 0.4842,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20028": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, bạn có thể kiện ly hôn ở Việt Nam nếu đáp ứng một số điều kiện sau:\n\n- Bạn đang cư trú ở nước ngoài.\n- Bạn là công dân Việt Nam.\n- Bạn muốn ly hôn với vợ/chồng đang cư trú ở Việt Nam.\n\nĐiều 104 của Luật Hôn nhân và Gia đình năm 2000 (HNGD2000) cho phép trường hợp này được giải quyết theo pháp luật Việt Nam. Tuy nhiên, cần lưu ý rằng việc giải quyết ly hôn sẽ phụ thuộc vào các yếu tố cụ thể như mối quan hệ giữa bạn và vợ/chồng, và có thể phải tuân thủ thêm các quy định liên quan đến việc xác nhận tình trạng hôn nhân từ cơ quan ngoại giao hoặc lãnh sự.\n\nTóm lại,",
+     "cite_ok": false,
+     "span_f1": 0.3318,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20093": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20062": {
+     "answer": "Không, nếu bạn có tranh chấp về bảo hiểm xã hội với công ty, thì tranh chấp này không nhất thiết phải qua hòa giải tại cơ sở. Điều này được quy định tại BLTTDS2004, Điều 31, Khoản 1, Điểm d.",
+     "cite_ok": true,
+     "span_f1": 0.3259,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20122": {
+     "answer": "Theo Điều 40, Khoản 1 của Luật Hộ tịch số 158/2005/QH11, nếu Ủy ban nhân dân cấp xã thực hiện việc thay đổi, cải chính, bổ sung hoặc điều chỉnh hộ tịch và sổ hộ tịch đã chuyển lưu một quyển tại Ủy ban nhân dân cấp huyện, thì Ủy ban nhân dân cấp xã có trách nhiệm gửi thông báo cho Ủy ban nhân dân cấp huyện về những nội dung thay đổi để ghi tiếp vào sổ hộ tịch lưu tại Ủy ban nhân dân cấp huyện.",
+     "cite_ok": false,
+     "span_f1": 0.3077,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20073": {
+     "answer": "Theo Điều 108 của BLTTDS2004, tài sản bị kê biên có thể được giao cho một bên đương sự hoặc người thứ ba quản lý cho đến khi có quyết định của Toà án.",
+     "cite_ok": true,
+     "span_f1": 0.7532,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20128": {
+     "answer": "Theo Điều 25, Khoản 5 của Nghị định 126/2014/NĐ-CP, nếu bạn có lý do chính đáng và đã nhận được Giấy chứng nhận kết hôn, nhưng không thể tổ chức lễ đăng ký kết hôn trong 90 ngày, bạn có thể xin gia hạn thời gian tổ chức lễ đăng ký kết hôn. Thời gian gia hạn không quá 90 ngày, kể từ ngày người đứng đầu Cơ quan đại diện ký Giấy chứng nhận kết hôn. Nếu hết thời hạn này mà hai bên nam, nữ không đến tổ chức lễ đăng ký kết hôn, Giấy chứng nhận kết hôn sẽ mất giá trị, nhưng Cơ quan đại diện vẫn lưu Giấy chứng nhận kết hôn trong hồ sơ. Trường hợp hai bên vẫn muốn kết hôn với nhau, họ cần làm lại thủ tục đăng ký kết hôn",
+     "cite_ok": true,
+     "span_f1": 0.797,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20005": {
+     "answer": "Theo Điều 364 của BLTTDS2004, khi đơn yêu cầu công nhận và cho thi hành tại Việt Nam quyết định của Trọng tài nước ngoài được gửi đi, nếu người phải thi hành không có nơi cư trú hoặc nơi làm việc tại Việt Nam, thì trong đơn yêu cầu cần ghi rõ địa chỉ nơi có tài sản và các loại tài sản liên quan đến việc thi hành quyết định của Trọng tài nước ngoài tại Việt Nam.",
+     "cite_ok": true,
+     "span_f1": 0.6239,
+     "abstain": false,
+     "ctx_hit5": true
+    }
+   }
+  },
+  "rag_rerank_tcr": {
+   "summary": {
+    "n": 64,
+    "cite_acc": 0.5312,
+    "span_f1": 0.4965,
+    "abstain_rate": 0.2188,
+    "ctx_hit5": 0.8281,
+    "mean_ans_tokens": 79.1
+   },
+   "per_q": {
+    "EXT20079": {
+     "answer": "Không đủ thông tin. \n\nTheo các trích dẫn luật cung cấp, việc tòa án có thể không công bố thông tin cá nhân nếu có yêu cầu chính đáng từ đương sự, nhưng điều khoản cụ thể về việc yêu cầu công khai thông tin cá nhân trong hồ sơ tố tụng không được nêu rõ. Cần trích dẫn thêm các điều khoản liên quan đến quyền của đương sự khi yêu cầu công khai thông tin cá nhân trong hồ sơ tố tụng để đưa ra quyết định chính xác.",
+     "cite_ok": false,
+     "span_f1": 0.1333,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20029": {
+     "answer": "Nếu bạn bị công ty sa thải trái luật, bạn cần làm đơn khởi kiện gửi đến Toà án có thẩm quyền giải quyết vụ án dân sự. Theo Điều 312, Khoản 1 của Bộ Luật Tố tụng Dân sự 2004, người yêu cầu Toà án giải quyết việc dân sự phải gửi đơn đến Toà án có thẩm quyền quy định tại mục 2 Chương III của Bộ luật này. Tuy nhiên, không đủ thông tin cụ thể về thẩm quyền giải quyết vụ án dân sự của từng Toà án để xác định Toà án cụ thể nào phù hợp. Bạn nên liên hệ với Văn phòng Tòa án Nhân dân cấp tỉnh hoặc Tòa án Quân sự gần nơi cư trú để được hướng dẫn cụ thể hơn.",
+     "cite_ok": false,
+     "span_f1": 0.2919,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20094": {
+     "answer": "Không đủ thông tin. Theo các quy định trên, việc tách vụ án dựa trên các yêu cầu khác nhau cần được thực hiện nếu việc tách và giải quyết các vụ án được tách bảo đảm đúng pháp luật. Tuy nhiên, không có thông tin cụ thể về việc vi phạm hợp đồng và vi phạm quyền tác giả có thể được coi là hai yêu cầu khác nhau trong trường hợp này hay không. Cần thêm thông tin về nội dung cụ thể của vụ kiện để đưa ra quyết định chính xác.",
+     "cite_ok": false,
+     "span_f1": 0.4545,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20124": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0625,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20054": {
+     "answer": "Đúng theo quy định tại Điều 219, Khoản 1 của Bộ Luật Tố tụng Dân sự 2004, nếu bạn (nguyên đơn) rút toàn bộ yêu cầu khởi kiện nhưng bị đơn vẫn giữ nguyên yêu cầu phản tố của mình, thì bị đơn sẽ trở thành nguyên đơn và bạn sẽ trở thành bị đơn.",
+     "cite_ok": true,
+     "span_f1": 0.7097,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20081": {
+     "answer": "Không đủ thông tin.",
+     "cite_ok": false,
+     "span_f1": 0.0645,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20091": {
+     "answer": "Theo Điều 175, Khoản 2 của Bộ Luật Tố tụng Dân sự 2004, bạn có quyền yêu cầu Toà án cho xem, ghi chép, sao chụp đơn khởi kiện và tài liệu, chứng cứ kèm theo đơn khởi kiện.",
+     "cite_ok": true,
+     "span_f1": 0.7353,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20141": {
+     "answer": "Điều 57, Khoản 1, Điểm b của Luật Trung tâm hỗ trợ phụ nữ năm 2014. Nếu trung tâm bị tước quyền sử dụng giấy đăng ký hoạt động theo quyết định của cơ quan nhà nước có thẩm quyền, trung tâm sẽ bị chấm dứt hoạt động theo quy định tại Điều này. Sau khi tước quyền sử dụng giấy đăng ký hoạt động, Sở Tư pháp hoặc cơ quan có thẩm quyền khác sẽ gửi Hội Liên hiệp phụ nữ quyết định tước quyền sử dụng giấy đăng ký hoạt động chậm nhất 30 ngày trước ngày trung tâm bị buộc chấm dứt hoạt động (Điều 57, Khoản 3).",
+     "cite_ok": true,
+     "span_f1": 0.411,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20118": {
+     "answer": "Để hợp pháp hóa giấy khai sinh nước ngoài viết tiếng Anh tại Việt Nam, bạn cần làm theo các bước sau:\n\n1. Bạn cần có bản dịch ra tiếng Việt của giấy khai sinh đó.\n2. Bản dịch tiếng Việt này cần được công chứng hoặc chứng thực hợp pháp.\n3. Sau đó, bạn cần hợp pháp hóa lãnh sự cho bản dịch tiếng Việt này.\n\nHành động này dựa vào Điều 350 và Điều 49 của Bộ Luật Tố tụng Dân sự năm 2004 (BLTTDS2004) và Điều 49 của Nghị định 158/2005/NĐ-CP (ND158_2005).",
+     "cite_ok": false,
+     "span_f1": 0.3582,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20076": {
+     "answer": "Không đủ thông tin. Điều 162, khoản 5 không liên quan đến trường hợp được miễn nộp án phí sơ thẩm như được nêu trong các trích dẫn luật bạn cung cấp.",
+     "cite_ok": false,
+     "span_f1": 0.3014,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20046": {
+     "answer": "Theo các trích dẫn luật, bạn có quyền kháng nghị quyết định công nhận sự thoả thuận của các đương sự nếu có căn cứ cho rằng sự thoả thuận đó là do bị nhầm lẫn, lừa dối, đe doạ hoặc trái pháp luật, trái đạo đức xã hội. Điều này được quy định tại [BLTTDS2004 — Điều 188 — Khoản 2]. Tuy nhiên, kháng nghị phải được thực hiện theo thủ tục giám đốc thẩm.",
+     "cite_ok": true,
+     "span_f1": 0.768,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20089": {
+     "answer": "Theo Điều 331, Khoản 3 của Bộ Luật Tố tụng Dân sự 2004, nếu người yêu cầu tuyên bố mất tích trở về và yêu cầu Toà án đình chỉ việc xét đơn yêu cầu, Toà án sẽ ra quyết định đình chỉ việc xét đơn yêu cầu tuyên bố một người mất tích. Do đó, bạn có thể làm như vậy.",
+     "cite_ok": true,
+     "span_f1": 0.6723,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20087": {
+     "answer": "Không đủ thông tin\n\nĐiều 281 Bộ luật Tố tụng dân sự không liên quan trực tiếp đến việc ghi rõ địa điểm phiên hòa giải trong biên bản hòa giải.",
+     "cite_ok": false,
+     "span_f1": 0.2903,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20002": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn luật cung cấp, việc Hội đồng xét xử quyết định một vấn đề mà không ghi vào biên bản phiên tòa không được quy định cụ thể về hậu quả pháp lý của quyết định đó.",
+     "cite_ok": false,
+     "span_f1": 0.45,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20078": {
+     "answer": "Theo các trích dẫn luật, nếu bạn bị nguyên đơn kiện nhưng cũng có yêu cầu đối với nguyên đơn, bạn có thể đưa ra yêu cầu phản tố (điểm c Điều 60 BLTTDS2004 và điểm a Điều 176 BLTTDS2004). Điều này cho phép bạn phản tố với nguyên đơn nếu yêu cầu của bạn liên quan và có thể giúp giải quyết vụ án một cách chính xác và nhanh chóng. Tuy nhiên, cần lưu ý rằng yêu cầu phản tố chỉ được chấp nhận khi có sự liên quan giữa yêu cầu phản tố và yêu cầu của nguyên đơn, và cả hai yêu cầu được giải quyết trong cùng một vụ án.",
+     "cite_ok": true,
+     "span_f1": 0.3822,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20126": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn luật đã cung cấp, tờ khai theo mẫu quy định là một phần bắt buộc của hồ sơ khi đăng ký nhận cha, mẹ, con, nhưng không có thông tin về cách khắc phục nếu hồ sơ thiếu tờ khai này. Bạn nên liên hệ với cơ quan hộ tịch địa phương để được hướng dẫn cụ thể.",
+     "cite_ok": false,
+     "span_f1": 0.297,
+     "abstain": true,
+     "ctx_hit5": false
+    },
+    "EXT20039": {
+     "answer": "Người dân nên lắng nghe và tuân thủ ý kiến của kiểm sát viên về việc giải quyết vụ việc dân sự trong phiên tòa. Họ không được hạn chế thời gian để phản hồi ý kiến đó, nhưng có quyền đáp lại nếu cần thiết.",
+     "cite_ok": false,
+     "span_f1": 0.3065,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20153": {
+     "answer": "Theo Điều 57 của Bộ Luật Tố tụng Dân sự 2004, khi bạn đủ 15 tuổi nhưng chưa đủ 18 tuổi và đã tham gia lao động theo hợp đồng lao động hoặc giao dịch dân sự bằng tài sản riêng của mình, bạn có quyền tự mình tham gia tố tụng về những việc có liên quan đến quan hệ lao động hoặc quan hệ dân sự đó. Do đó, bạn có thể tự mình tham gia tố tụng khi muốn kiện công ty về vi phạm hợp đồng lao động.",
+     "cite_ok": true,
+     "span_f1": 0.5941,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20077": {
+     "answer": "Nếu bạn đã nhận được giấy triệu tập nhưng không tham gia phiên tòa, bạn có thể gặp một trong những hậu quả sau:\n\n- Bị Toà án phạt cảnh cáo hoặc phạt tiền nếu không có lý do chính đáng (theo Điều 384 BLTTDS2004).\n\n- Bị dẫn giải hoặc phạt tiền nếu là người làm chứng cố ý không đến phiên tòa (theo Điều 386 BLTTDS2004, Khoản 1).\n\n- Hoãn phiên tòa nếu là bị đơn vắng mặt lần đầu tiên có lý do chính đáng (theo Điều 200 BLTTDS2004, Khoản 1).\n\n- Tiến hành xét xử vụ án và đương sự tự bảo vệ quyền và lợi ích hợp pháp của mình nếu là người bảo vệ quyền và lợi ích hợp pháp của đương",
+     "cite_ok": true,
+     "span_f1": 0.4043,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20075": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn luật đã cung cấp, thẩm phán không được làm người đại diện trong tố tụng dân sự, trừ trường hợp họ tham gia tố tụng với tư cách người đại diện cho cơ quan của họ hoặc với tư cách là người đại diện theo pháp luật. Trong trường hợp này, thẩm phán đã vi phạm quy định của pháp luật về việc không được làm người đại diện trong tố tụng dân sự.",
+     "cite_ok": false,
+     "span_f1": 0.6324,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20065": {
+     "answer": "Theo Điều 144, Khoản 1 và Khoản 3 của Bộ Luật Tố tụng Dân sự 2004 (BLTTDS2004), chi phí cho người phiên dịch phải do người có yêu cầu chịu, trừ trường hợp các bên đương sự có thoả thuận khác. \n\nTuy nhiên, trong trường hợp bạn đã thuê phiên dịch trong phiên tòa mà không có thỏa thuận về chi phí, theo Điều 518 của Bộ Luật Dân sự 2005 (BLDS2005), bên thuê dịch vụ (trong trường hợp này là bạn) phải trả tiền dịch vụ tại địa điểm thực hiện công việc khi hoàn thành dịch vụ, nếu không có thoả thuận khác. \n\nVì vậy, dựa trên các điều khoản này, bạn có thể phải trả tiền cho",
+     "cite_ok": true,
+     "span_f1": 0.3425,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20045": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, nếu bạn là người tiến hành tố tụng trong vụ án này, bạn có thể vi phạm các quy định sau:\n\n- Vi phạm Điều 13, Khoản 2 của BLTTDS2004 khi không tuân thủ nhiệm vụ, quyền hạn của mình.\n- Vi phạm Điều 385, Khoản 1, Điểm g của BLTTDS2004 khi xúc phạm danh dự, nhân phẩm, uy tín của người tiến hành tố tụng hoặc đe doạ, sử dụng vũ lực hoặc có hành vi khác cản trở người tiến hành tố tụng thực hiện các biện pháp xác minh, thu thập chứng cứ.\n- Vi phạm Điều 97, Khoản 3 của BLTTDS2004 khi không giữ bí mật những chứng cứ",
+     "cite_ok": false,
+     "span_f1": 0.0945,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20014": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, nếu sau 7 ngày lập biên bản hoà giải thành mà không có đương sự nào thay đổi ý kiến về sự thoả thuận đó, Thẩm phán chủ trì phiên hoà giải hoặc một Thẩm phán được Chánh án Toà án phân công sẽ ra quyết định công nhận sự thoả thuận của các đương sự. Trong thời hạn 5 ngày làm việc, Toà án phải gửi quyết định đó cho các đương sự và Viện kiểm sát cùng cấp. Điều này được quy định tại Điều 187, Khoản 1 của Bộ luật Tố tụng Dân sự 2004.",
+     "cite_ok": true,
+     "span_f1": 0.7707,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20010": {
+     "answer": "Tòa án phải thụ lý và thông báo cho Viện kiểm sát trong thời hạn ba ngày làm việc kể từ ngày nhận được hồ sơ. Theo Điều 353 và Điều 367 của BLTTDS2004.",
+     "cite_ok": false,
+     "span_f1": 0.4301,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20148": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, bạn có thể yêu cầu cấp bản sao Giấy chứng nhận kết hôn từ Sổ đăng ký kết hôn do Cơ quan đại diện thực hiện theo yêu cầu (theo Điều 25, Khoản 4 của ND126_2014). Tuy nhiên, bạn cần nhớ rằng việc tổ chức lễ đăng ký kết hôn phải tuân thủ theo quy định tại Điều 24, Khoản 3 của cùng văn bản luật.",
+     "cite_ok": true,
+     "span_f1": 0.625,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20008": {
+     "answer": "Đúng, theo Điều 88 của Bộ Luật Tố tụng Dân sự 2004, nếu Thẩm phán xét thấy có sự mâu thuẫn trong lời khai của các đương sự với nhau, Thẩm phán sẽ tiến hành đối chất giữa các đương sự với nhau.",
+     "cite_ok": true,
+     "span_f1": 0.6383,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20070": {
+     "answer": "Nếu bạn kháng cáo nhưng sau đó muốn rút đơn kháng cáo, tòa án sẽ xử lý theo các bước sau:\n\n1. Theo Điều 256 BLTTDS2004, Khoản 2, trước khi bắt đầu phiên toà hoặc tại phiên toà phúc thẩm, người kháng cáo có quyền rút kháng cáo.\n\n2. Theo Điều 260 BLTTDS2004, Khoản 1, Điểm b, Toà án cấp phúc thẩm có quyền đình chỉ xét xử phúc thẩm đối với những phần của vụ án mà người kháng cáo đã rút kháng cáo hoặc Viện kiểm sát đã rút kháng nghị.\n\nVì vậy, nếu bạn muốn rút đơn kháng cáo, tòa án sẽ đình chỉ xét xử phúc thẩm phần vụ án mà bạn kháng cáo.",
+     "cite_ok": true,
+     "span_f1": 0.3567,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20074": {
+     "answer": "Theo Điều 226, Khoản 3 của Bộ Luật Tố tụng Dân sự 2004, sau khi người làm chứng trình bày xong, chủ toạ phiên toà có quyền yêu cầu họ trả lời thêm về những điểm chưa rõ, chưa đầy đủ hoặc có mâu thuẫn với nhau, mâu thuẫn với lời khai của họ trước đó, mâu thuẫn với lời trình bày của đương sự, người bảo vệ quyền và lợi ích hợp pháp của đương sự. Do đó, bạn hoàn toàn có quyền yêu cầu hỏi thêm người làm chứng về những điểm họ trình bày chưa rõ.",
+     "cite_ok": true,
+     "span_f1": 0.7609,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20069": {
+     "answer": "Không đủ thông tin. Điều 225 Bộ luật Tố tụng dân sự không được trích dẫn trong các trích dẫn luật bạn cung cấp. Theo các trích dẫn luật bạn đã cung cấp, nếu không nộp tiền tạm ứng án phí phúc thẩm trong thời hạn 10 ngày kể từ ngày nhận được thông báo của Toà án về việc nộp tiền tạm ứng án phí phúc thẩm, người kháng cáo sẽ được coi là từ bỏ việc kháng cáo, trừ trường hợp có lý do chính đáng.",
+     "cite_ok": false,
+     "span_f1": 0.6092,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20113": {
+     "answer": "Theo các trích dẫn luật được cung cấp, nếu bạn khiếu nại về quyết định của Bộ trưởng Bộ Tư pháp và bị từ chối, bạn có thể yêu cầu Bộ trưởng Bộ Tư pháp xem xét lại quyết định đó nếu trường hợp cần thiết, theo Điều 142, Khoản 4, Điểm b của Luật Thi hành án dân sự năm 2008.",
+     "cite_ok": true,
+     "span_f1": 0.5455,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20051": {
+     "answer": "Đúng theo Điều 216, Khoản 2 của Bộ Luật Tố tụng Dân sự 2004, nếu lời khai của đương sự và người làm chứng có ảnh hưởng lẫn nhau, chủ toạ phiên toà có thể quyết định cách ly đương sự với người làm chứng trước khi hỏi người làm chứng.",
+     "cite_ok": true,
+     "span_f1": 0.7273,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20050": {
+     "answer": "Theo các trích dẫn luật, bạn có thể kiện ra Toà án Việt Nam để tuyên bố một công dân nước ngoài mất tích. Điều này dựa trên Điều 411, Khoản 2, Điểm d của Bộ luật Tố tụng Dân sự năm 2004 (BLTTDS2004), trong đó quy định rằng \"yêu cầu Toà án Việt Nam tuyên bố công dân Việt Nam mất tích, đã chết nếu việc tuyên bố đó có liên quan đến việc xác lập quyền, nghĩa vụ của họ trên lãnh thổ Việt Nam\" thuộc thẩm quyền giải quyết riêng biệt của Toà án Việt Nam.",
+     "cite_ok": true,
+     "span_f1": 0.6349,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20057": {
+     "answer": "Đúng theo Điều 226 của Bộ Luật Tố tụng Dân sự 2004, bạn có quyền yêu cầu Hội đồng xét xử không tiết lộ thông tin nhân thân của bạn và không cho những người trong phiên tòa nhìn thấy bạn nếu bạn lo ngại về an toàn cá nhân.",
+     "cite_ok": true,
+     "span_f1": 0.495,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20041": {
+     "answer": "Theo Điều 174 của Bộ luật Tố tụng Dân sự 2004, Toà án phải thông báo bằng văn bản cho bị đơn, cá nhân, cơ quan, tổ chức có quyền lợi, nghĩa vụ liên quan đến việc giải quyết vụ án, cho Viện kiểm sát cùng cấp về việc Toà án đã thụ lý vụ án trong thời hạn ba ngày làm việc kể từ ngày thụ lý vụ án.",
+     "cite_ok": true,
+     "span_f1": 0.9147,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20049": {
+     "answer": "Theo Điều 256 BLTTDS2004, Khoản 2, nếu bạn muốn rút kháng cáo trong giai đoạn phúc thẩm, bạn cần thực hiện các bước sau:\n\n1. Rút kháng cáo: Người kháng cáo có quyền rút kháng cáo trước khi bắt đầu phiên toà hoặc tại phiên toà phúc thẩm.\n2. Gửi văn bản: Văn bản nêu ý kiến về việc rút kháng cáo phải được gửi cho Toà án cấp phúc thẩm.\n3. Thông báo: Toà án cấp phúc thẩm phải thông báo cho các đương sự biết về việc rút kháng cáo.\n\nVì vậy, bạn cần gửi văn bản nêu ý kiến về việc rút kháng cáo cho Toà án cấp phúc thẩm sau khi quyết định rút kháng cáo.",
+     "cite_ok": true,
+     "span_f1": 0.505,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20019": {
+     "answer": "Có, Tòa án Việt Nam có quyền giải quyết vụ việc này. Theo Điều 410 BLTTDS 2004, nếu tranh chấp dân sự có yếu tố nước ngoài và bị đơn là công dân nước ngoài (trong trường hợp này là công dân Mỹ) có trụ sở chính hoặc chi nhánh tại Việt Nam, thì Tòa án Việt Nam sẽ giải quyết vụ việc. Trong trường hợp này, cả hai đương sự đều là công dân Việt Nam nhưng hợp đồng được ký kết tại Việt Nam, điều này cũng phù hợp với quy định trên.",
+     "cite_ok": true,
+     "span_f1": 0.4235,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20009": {
+     "answer": "Theo quy định tại Điều 131, Khoản 4 của Bộ Luật Tố tụng Dân sự 2004, nếu cả hai đương sự thuận tình ly hôn, thì mỗi bên đương sự phải chịu một nửa án phí sơ thẩm.",
+     "cite_ok": true,
+     "span_f1": 0.4348,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20142": {
+     "answer": "Đúng theo Điều 34, Khoản 3 của Luật Thi hành Luật hôn nhân và gia đình số 126/2014/QH13, nếu nghi ngờ hoặc có khiếu nại, tố cáo về việc nhận cha, mẹ, con hoặc có vấn đề cần làm rõ về nhân thân của các bên cha, mẹ, con, thì Sở Tư pháp sẽ thực hiện xác minh. Do đó, bạn có quyền yêu cầu Sở Tư pháp xác minh về vấn đề này.",
+     "cite_ok": true,
+     "span_f1": 0.623,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20123": {
+     "answer": "Theo Điều 13, Khoản 2 của Luật Hôn nhân và gia đình năm 2000 (HNGD2000), nếu bạn bị từ chối đăng ký kết hôn, bạn có quyền khiếu nại theo quy định của pháp luật.",
+     "cite_ok": false,
+     "span_f1": 0.3876,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20025": {
+     "answer": "Theo Điều 386, Khoản 1 của Luật Tố tụng dân sự năm 2004, nếu bạn đã được Toà án triệu tập hợp lệ nhưng cố ý không đến Toà án hoặc không có mặt tại phiên toà mà không có lý do chính đáng, và sự vắng mặt của bạn gây trở ngại cho việc thu thập, xác minh chứng cứ hoặc xét xử vụ án, thì Toà án có quyền ra quyết định dẫn giải, cảnh cáo hoặc phạt tiền. Do đó, nếu bạn không đến phiên toà như đã được triệu tập, bạn có thể bị phạt tiền.",
+     "cite_ok": true,
+     "span_f1": 0.7692,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20043": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, bạn có quyền khởi kiện tại Toà án Việt Nam. Cụ thể, Điều 410 BLTTDS 2004 quy định rằng \"Toà án Việt Nam giải quyết các vụ việc dân sự có yếu tố nước ngoài trong các trường hợp sau đây: Bị đơn là công dân nước ngoài, người không quốc tịch cư trú, làm ăn, sinh sống lâu dài tại Việt Nam hoặc có tài sản trên lãnh thổ Việt Nam\". Vì vậy, vì bị đơn là một công ty Việt Nam có văn phòng tại Việt Nam, bạn thuộc trường hợp được quy định tại điểm b của điều này và có quyền khởi kiện tại Toà án Việt Nam.",
+     "cite_ok": true,
+     "span_f1": 0.4571,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20023": {
+     "answer": "Theo Điều 413, Khoản 2 của Bộ Luật Tố tụng Dân sự năm 2004, nếu tòa án nước ngoài đã thụ lý vụ việc dân sự và bản án, quyết định của tòa án nước ngoài về vụ việc dân sự đó được công nhận và cho thi hành tại Việt Nam, thì tòa án Việt Nam sẽ trả lại đơn khởi kiện, đơn yêu cầu hoặc đình chỉ giải quyết vụ việc dân sự có yếu tố nước ngoài.",
+     "cite_ok": true,
+     "span_f1": 0.828,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20096": {
+     "answer": "Theo Điều 88 và Điều 86 của Luật Thi hành宪法 (ND158_2005), Chủ tịch Ủy ban nhân dân cấp tỉnh có thẩm quyền thụ lý và giải quyết khiếu nại về hộ tịch nếu quyết định đó đã được Chủ tịch Ủy ban nhân dân cấp huyện giải quyết nhưng còn khiếu nại. Do đó, nếu bạn không hài lòng với quyết định về hộ tịch của Chủ tịch Ủy ban nhân dân cấp huyện, bạn có thể khiếu nại lên Chủ tịch Ủy ban nhân dân cấp tỉnh.",
+     "cite_ok": true,
+     "span_f1": 0.5484,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20149": {
+     "answer": "Để nhận cha cho con mà không có giấy khai sinh của mình, bạn cần tuân thủ các bước sau:\n\n1. Nộp tờ khai theo mẫu quy định.\n2. Nộp văn bản của người làm chứng xác nhận về việc sinh.\n3. Nếu không có người làm chứng, bạn cần nộp giấy cam đoan về việc sinh.\n4. Trường hợp khai sinh cho trẻ em bị bỏ rơi, bạn cần có biên bản xác nhận việc trẻ bị bỏ rơi do cơ quan có thẩm quyền lập.\n5. Trường hợp khai sinh cho trẻ em sinh ra do mang thai hộ, bạn cần có văn bản chứng minh việc mang thai hộ theo quy định pháp luật.\n\nSau khi hoàn thiện hồ sơ theo quy định, bạn cần nộp hồ sơ đến cơ quan đăng ký hộ tịch để thực hiện việc đăng ký",
+     "cite_ok": false,
+     "span_f1": 0.7645,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20119": {
+     "answer": "Đúng theo Điều 77, Khoản 3 của Luật Hộ tịch số 158/2005/QH11, nếu Chủ tịch Ủy ban nhân dân cấp tỉnh không quản lý chặt chẽ dẫn đến sai phạm trong đăng ký hộ tịch, thì Chủ tịch này phải chịu trách nhiệm. Do đó, người dân có quyền yêu cầu Chủ tịch chịu trách nhiệm theo pháp luật.",
+     "cite_ok": true,
+     "span_f1": 0.5152,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20033": {
+     "answer": "Theo Điều 240 - Khoản 2 của Bộ Luật Tố tụng Hình sự 2004, nếu Thẩm phán ban đầu không còn làm Thẩm phán, việc sửa chữa, bổ sung bản án sẽ do Chánh án Toà án thực hiện.",
+     "cite_ok": true,
+     "span_f1": 0.4272,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20134": {
+     "answer": "Theo các trích dẫn luật, bạn có quyền được tư vấn và hỗ trợ về hôn nhân và gia đình có yếu tố nước ngoài. Việc này không phụ thuộc vào quốc tịch hay nơi cư trú của bạn. Bạn có thể liên hệ với các trung tâm tư vấn hôn nhân của nước ngoài nếu có nhu cầu. Tuy nhiên, bạn vẫn phải tuân thủ các quy định về điều kiện kết hôn của Việt Nam, đặc biệt là khi kết hôn tại Việt Nam.",
+     "cite_ok": false,
+     "span_f1": 0.5669,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20028": {
+     "answer": "Theo các trích dẫn luật đã cung cấp, bạn có thể kiện ly hôn ở Việt Nam nếu bạn là công dân Việt Nam và đang cư trú, làm ăn, sinh sống ở Việt Nam. Điều này được quy định tại [BLTTDS2004 — Điều 410 — Khoản 2 — Điểm g], cho biết \"Toà án Việt Nam giải quyết các vụ việc dân sự có yếu tố nước ngoài trong các trường hợp sau đây: Vụ việc ly hôn mà nguyên đơn hoặc bị đơn là công dân Việt Nam.\"\n\nTuy nhiên, cần lưu ý rằng bạn phải cư trú, làm ăn, sinh sống ở Việt Nam. Nếu bạn không cư trú tại Việt Nam, việc ly hôn sẽ được giải quyết theo pháp luật của nước nơi thường trú chung của vợ chồng hoặc theo pháp luật Việt Nam nếu họ không có nơi",
+     "cite_ok": false,
+     "span_f1": 0.5179,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20090": {
+     "answer": "Không đủ thông tin. \n\nTheo các trích dẫn luật cung cấp, chúng ta chỉ biết về quy trình thông báo khi Hội đồng xét xử quyết định tuyên án và không có thông tin cụ thể về quy trình thông báo khi hoãn tuyên án.",
+     "cite_ok": false,
+     "span_f1": 0.269,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20066": {
+     "answer": "Nếu bạn nộp đơn kháng cáo quá hạn, Toà án cấp phúc thẩm sẽ thành lập Hội đồng gồm ba Thẩm phán để xem xét kháng cáo quá hạn. Hội đồng có quyền ra quyết định chấp nhận hoặc không chấp nhận việc kháng cáo quá hạn và phải ghi rõ lý do của việc chấp nhận hoặc không chấp nhận trong quyết định. Sau đó, Toà án cấp phúc thẩm sẽ gửi quyết định cho người kháng cáo quá hạn và Toà án cấp sơ thẩm. Nếu Toà án cấp phúc thẩm chấp nhận việc kháng cáo quá hạn, Toà án cấp sơ thẩm phải tiến hành các thủ tục do Bộ luật này quy định và gửi hồ sơ vụ án cho Toà án cấp phúc thẩm.",
+     "cite_ok": false,
+     "span_f1": 0.9037,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20122": {
+     "answer": "Theo Điều 19, Khoản 1 của Luật Hộ tịch số 11/2026/QH15, nếu muốn thay đổi thông tin hộ tịch, cơ quan có thẩm quyền sẽ thực hiện việc ghi nhận biến động thông tin nhân thân của cá nhân khi có lý do chính đáng, đủ điều kiện theo quy định của Luật này, quy định của pháp luật về dân sự và quy định khác của pháp luật có liên quan. Cơ quan này cần ghi nhận thay đổi thông tin hộ tịch vào sổ hộ tịch. Sau đó, cơ quan này phải gửi quyết định thay đổi cho nơi đã đăng ký thông tin hộ tịch trước đây để cập nhật sổ hộ tịch.",
+     "cite_ok": false,
+     "span_f1": 0.5027,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20060": {
+     "answer": "Theo Điều 48, Khoản 1, Điểm a của Luật Thi hành án dân sự 2008, nếu người phải thi hành án không xác định được địa chỉ, tòa án có quyền ra quyết định hoãn thi hành án vì lý do chính đáng. Tòa án sẽ căn cứ vào xác nhận của cơ sở y tế từ cấp huyện trở lên về tình trạng ốm nặng của người phải thi hành án, hoặc vì lý do chính đáng khác mà người này không thể tự thực hiện nghĩa vụ theo bản án, quyết định.",
+     "cite_ok": false,
+     "span_f1": 0.2909,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20150": {
+     "answer": "Theo các trích dẫn luật, bạn có thể đăng ký kết hôn. Cụ thể:\n\n- Nếu ít nhất một bên định cư ở nước ngoài, Ủy ban nhân dân cấp tỉnh, nơi đăng ký tạm trú của công dân Việt Nam sẽ thực hiện đăng ký kết hôn.\n\n- Nếu cả hai bên đều không có nơi đăng ký thường trú tại Việt Nam, Ủy ban nhân dân cấp tỉnh, nơi đăng ký tạm trú của một trong hai bên cũng sẽ thực hiện đăng ký kết hôn.\n\nVì vậy, với trường hợp của bạn, Ủy ban nhân dân cấp tỉnh, nơi đăng ký tạm trú của công dân Việt Nam sẽ thực hiện đăng ký kết hôn.",
+     "cite_ok": false,
+     "span_f1": 0.6852,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20107": {
+     "answer": "Nếu bạn khiếu nại về việc đăng ký hộ tịch bị sai sót, bạn nên gửi đơn đến Chủ tịch Ủy ban nhân dân cấp huyện. Theo Điều 86 của Luật Hộ tịch 2005, Chủ tịch Ủy ban nhân dân cấp huyện thụ lý và giải quyết khiếu nại đối với quyết định hành chính, hành vi hành chính của mình, cũng như hành vi hành chính của cán bộ Phòng Tư pháp trong đăng ký và quản lý hộ tịch.",
+     "cite_ok": false,
+     "span_f1": 0.619,
+     "abstain": false,
+     "ctx_hit5": false
+    },
+    "EXT20073": {
+     "answer": "Theo Điều 108 của BLTTDS2004, tài sản bị kê biên có thể được giao cho một bên đương sự quản lý cho đến khi có quyết định của Toà án. Do đó, bạn có thể được giao quản lý tài sản bị kê biên cho đến khi có quyết định của Toà án.",
+     "cite_ok": true,
+     "span_f1": 0.5833,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20144": {
+     "answer": "Đúng theo Điều 54, Khoản 3 của Nghị định 126/2014/NĐ-CP, nếu Sở Tư pháp không cấp giấy đăng ký hoạt động trong thời hạn 05 ngày làm việc, kể từ ngày nhận đủ hồ sơ hợp lệ, thì Sở Tư pháp phải thông báo bằng văn bản cho Trung tâm, trong đó nêu rõ lý do từ chối. Do đó, bạn có quyền yêu cầu như vậy.",
+     "cite_ok": true,
+     "span_f1": 0.7121,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20128": {
+     "answer": "Theo các trích dẫn luật, nếu bạn đã nhận được Giấy chứng nhận kết hôn nhưng vì lý do bất khả kháng không thể tổ chức lễ đăng ký kết hôn trong 90 ngày, bạn có thể làm theo các bước sau:\n\n1. Gửi đơn xin gia hạn thời gian tổ chức lễ đăng ký kết hôn cho cơ quan có thẩm quyền (cơ quan đứng đầu Cơ quan đại diện hoặc Chủ tịch Ủy ban nhân dân cấp tỉnh tùy thuộc vào nơi cấp Giấy chứng nhận kết hôn).\n\n2. Trong đơn xin gia hạn, bạn cần nêu rõ lý do bất khả kháng và yêu cầu gia hạn thời gian tổ chức lễ đăng ký kết hôn.\n\n3. Cơ quan có thẩm quyền sẽ xem xét và quyết định có gia hạn thời gian tổ chức lễ đăng ký kết hôn không. Nếu chấp thuận, họ",
+     "cite_ok": false,
+     "span_f1": 0.4855,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20062": {
+     "answer": "Không, nếu bạn có tranh chấp về bảo hiểm xã hội với công ty, thì tranh chấp này không nhất thiết phải qua hòa giải tại cơ sở. Điều này được quy định tại Điều 31, Khoản 1, Điểm d của Bộ Luật Tố tụng Lao động năm 2004.",
+     "cite_ok": true,
+     "span_f1": 0.3636,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20095": {
+     "answer": "Trong trường hợp người nhận con nuôi không sống tại địa phương đăng ký nuôi con, người nhận con nuôi cần làm thủ tục ghi chú việc nuôi con nuôi tại Sở Tư pháp và Ủy ban nhân dân cấp xã nơi người đó thường trú (theo Điều 40, Điều 19 của Luật收养2010).",
+     "cite_ok": false,
+     "span_f1": 0.2478,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20004": {
+     "answer": "Không đủ thông tin. Theo các trích dẫn luật được cung cấp, không có quy định cụ thể về việc toà án phải nghe lời trình bày của nguyên đơn và bị đơn trong phiên tòa. Các quy định đề cập chủ yếu đến việc toà án phải nghe lời trình bày từ các đương sự và người tham gia tố tụng khác, nhưng không đưa ra yêu cầu bắt buộc phải nghe lời trình bày của nguyên đơn và bị đơn riêng biệt.",
+     "cite_ok": false,
+     "span_f1": 0.3426,
+     "abstain": true,
+     "ctx_hit5": true
+    },
+    "EXT20027": {
+     "answer": "Đúng, theo Điều 350, Khoản 1, Điểm c của Luật Thi hành án dân sự năm 2004, khi yêu cầu công nhận và cho thi hành bản án, quyết định dân sự của Toà án nước ngoài tại Việt Nam, bạn cần ghi rõ yêu cầu của mình và phần đã được thi hành tại nước ngoài trong đơn yêu cầu.",
+     "cite_ok": true,
+     "span_f1": 0.5513,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20005": {
+     "answer": "Theo Điều 364, Khoản 1, Điểm b của Luật Thi hành án dân sự năm 2004, khi yêu cầu công nhận và cho thi hành tại Việt Nam quyết định của Trọng tài nước ngoài, nếu người phải thi hành không có nơi cư trú hoặc nơi làm việc tại Việt Nam, thì cần ghi rõ địa chỉ nơi có tài sản và các loại tài sản liên quan đến việc thi hành quyết định của Trọng tài nước ngoài tại Việt Nam.",
+     "cite_ok": true,
+     "span_f1": 0.5738,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20139": {
+     "answer": "Theo các trích dẫn luật, bạn cần đến Sở Tư pháp, nơi bạn thường trú tại Việt Nam để ghi vào sổ hộ tịch việc ly hôn đã được giải quyết ở nước ngoài. Điều này dựa trên điểm d của Điều 43 trong Luật Hộ tịch năm 2014 (ND126_2014).",
+     "cite_ok": false,
+     "span_f1": 0.4,
+     "abstain": false,
+     "ctx_hit5": true
+    },
+    "EXT20093": {
+     "answer": "Không đủ thông tin. Các quy định cụ thể về việc ghi rõ tên và địa chỉ của các bên liên quan trong bản án được nêu ở các điều 238, 279, 350 và 361 của Luật Thi hành án dân sự 2004, nhưng không có quy định cụ thể rằng nếu không ghi rõ sẽ vi phạm luật. Để có câu trả lời chính xác, cần xem xét đầy đủ các điều khoản liên quan.",
+     "cite_ok": false,
+     "span_f1": 0.2116,
+     "abstain": true,
+     "ctx_hit5": true
+    }
+   }
+  }
+ },
+ "significance": {
+  "norag_vs_hybrid_tcr_mcnemar": {
+   "p": 1.1641532182693481e-10,
+   "table": [
+    [
+     30,
+     0
+    ],
+    [
+     34,
+     0
+    ]
+   ]
+  },
+  "hybrid_vs_hybrid_tcr_mcnemar": {
+   "p": 0.01171875,
+   "table": [
+    [
+     29,
+     1
+    ],
+    [
+     10,
+     24
+    ]
+   ]
+  },
+  "hybrid_vs_hybrid_tcr_spanf1_wilcoxon": {
+   "stat": 563.0,
+   "p": 0.08285431977653455
+  }
+ },
+ "runtime_sec": 221.5
+}

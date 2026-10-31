@@ -10,7 +10,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tài sản của tôi và ông A trao đổi mà không lập hợp đồng thì có được không?"
+  "question_rescoped_from": "Tài sản của tôi và ông A trao đổi mà không lập hợp đồng thì có được không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN62121",
@@ -34,8 +35,10 @@
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
-  "gold_tier": "regolded",
-  "regolded_from": "BLDS2015|Dieu551|Khoan2"
+  "gold_tier": "flagged",
+  "regolded_from": "BLDS2015|Dieu551|Khoan2",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "better_gold not found; GOLD hiện tại thiếu cụ thể về nghĩa vụ trả tiền công khi bên đặt gia công chấm dứt hợp đồng, trong khi UNG VIEN BLDS2015"
  },
  {
   "qid": "GEN85381",
@@ -120,7 +123,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Hộ gia đình của tôi có quyền sử dụng đất như thế nào?"
+  "question_rescoped_from": "Hộ gia đình của tôi có quyền sử dụng đất như thế nào?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN90443",
@@ -168,8 +172,10 @@
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
-  "gold_tier": "regolded",
-  "regolded_from": "BLDS2015|Dieu541|Khoan3"
+  "gold_tier": "flagged",
+  "regolded_from": "BLDS2015|Dieu541|Khoan3",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "GEN53978",
@@ -254,7 +260,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "regolded",
-  "regolded_from": "BLDS2015|Dieu4|Khoan2"
+  "regolded_from": "BLDS2015|Dieu4|Khoan2",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN56131",
@@ -279,7 +286,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tòa án ơi, làm sao tôi có thể yêu cầu bác bỏ thông tin xấu về mình và gia đình được?"
+  "question_rescoped_from": "Tòa án ơi, làm sao tôi có thể yêu cầu bác bỏ thông tin xấu về mình và gia đình được?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN18358",
@@ -291,8 +299,10 @@
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
-  "gold_tier": "regolded",
-  "regolded_from": "BLDS2015|Dieu28|Khoan1|Diemd"
+  "gold_tier": "flagged",
+  "regolded_from": "BLDS2015|Dieu28|Khoan1|Diemd",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "GEN70295",
@@ -317,7 +327,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "regolded",
-  "regolded_from": "BLDS2015|Dieu556|Khoan1"
+  "regolded_from": "BLDS2015|Dieu556|Khoan1",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN89661",
@@ -353,8 +364,10 @@
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Tôi muốn đổi lại dân tộc trong hồ sơ của tôi, tôi cần làm gì?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Tôi muốn đổi lại dân tộc trong hồ sơ của tôi, tôi cần làm gì?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "GEN79721",
@@ -391,7 +404,8 @@
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Quỹ từ thiện có được sử dụng tài sản để đầu tư sinh lời không?"
+  "question_rescoped_from": "Quỹ từ thiện có được sử dụng tài sản để đầu tư sinh lời không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN30174",
@@ -434,13 +448,14 @@
   "as_of": "2010-06-01",
   "question": "Phần tài sản tôi tặng cho người khác trong di chúc có bắt buộc họ phải trả nợ không?",
   "gold_ids": [
-   "BLDS2005|Dieu637|Khoan1"
+   "BLDS2005|Dieu671|Khoan1"
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "regolded_from": "BLDS2005|Dieu671|Khoan1",
-  "gold_tier": "regolded"
+  "gold_tier": "regolded",
+  "weak_review": "pass3-reanchored"
  },
  {
   "qid": "GEN13335",
@@ -465,7 +480,8 @@
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Anh/chị ơi, người nước ngoài có được quyền mua nhà tại Việt Nam không?"
+  "question_rescoped_from": "Anh/chị ơi, người nước ngoài có được quyền mua nhà tại Việt Nam không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN66436",
@@ -616,13 +632,14 @@
   "as_of": "2010-06-01",
   "question": "Vật mà tôi vừa mua không đáp ứng chất lượng như đã công bố, tôi phải làm sao?",
   "gold_ids": [
-   "BLDS2005|Dieu444|Khoan1"
+   "BLDS2005|Dieu447|Khoan1"
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "regolded_from": "BLDS2005|Dieu430|Khoan1",
-  "gold_tier": "regolded"
+  "gold_tier": "regolded",
+  "weak_review": "pass3-reanchored"
  },
  {
   "qid": "GEN87629",
@@ -659,7 +676,9 @@
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "regolded_from": "BLDS2005|Dieu142|Khoan1",
-  "gold_tier": "regolded"
+  "gold_tier": "flagged",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "GEN48222",
@@ -672,7 +691,8 @@
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "gold_tier": "regolded",
-  "regolded_from": "BLDS2005|Dieu665|Khoan1"
+  "regolded_from": "BLDS2005|Dieu665|Khoan1",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN19616",
@@ -703,13 +723,14 @@
   "as_of": "2010-06-01",
   "question": "Giá cả trong hợp đồng được xác định như thế nào?",
   "gold_ids": [
-   "BLDS2005|Dieu524|Khoan1"
+   "BLDS2005|Dieu431|Khoan1"
   ],
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "gold_tier": "regolded",
-  "regolded_from": "BLDS2005|Dieu431|Khoan1"
+  "regolded_from": "BLDS2005|Dieu431|Khoan1",
+  "weak_review": "pass3-reanchored"
  },
  {
   "qid": "GEN40699",
@@ -770,7 +791,8 @@
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "gold_tier": "regolded",
-  "regolded_from": "BLDS2005|Dieu354|Khoan1"
+  "regolded_from": "BLDS2005|Dieu354|Khoan1",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN85482",
@@ -783,7 +805,8 @@
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "gold_tier": "regolded",
-  "regolded_from": "BLDS2005|Dieu157|Khoan1"
+  "regolded_from": "BLDS2005|Dieu157|Khoan1",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN64020",
@@ -844,7 +867,8 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tranh chấp về quyền sử dụng đất của tôi với hàng xóm phải giải quyết như thế nào?"
+  "question_rescoped_from": "Tranh chấp về quyền sử dụng đất của tôi với hàng xóm phải giải quyết như thế nào?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN57365",
@@ -857,7 +881,8 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Con có quyền quản lý tài sản của mình hay không khi đã có người khác được chỉ định làm giám hộ?"
+  "question_rescoped_from": "Con có quyền quản lý tài sản của mình hay không khi đã có người khác được chỉ định làm giám hộ?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN27762",
@@ -882,7 +907,8 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "regolded_from": "HNGD2014|Dieu99|Khoan2",
-  "gold_tier": "regolded"
+  "gold_tier": "regolded",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN33568",
@@ -907,7 +933,8 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Cha mẹ ơi, con đã dưới 18 tuổi thì tài sản của con phải làm sao bây giờ?"
+  "question_rescoped_from": "Cha mẹ ơi, con đã dưới 18 tuổi thì tài sản của con phải làm sao bây giờ?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN42748",
@@ -920,7 +947,8 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tài sản riêng của tôi đã được sử dụng để trả nợ chung, vậy quyền lợi của tôi sẽ như thế nào?"
+  "question_rescoped_from": "Tài sản riêng của tôi đã được sử dụng để trả nợ chung, vậy quyền lợi của tôi sẽ như thế nào?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN95410",
@@ -1005,7 +1033,8 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "regolded_from": "HNGD2014|Dieu8|Khoan1|Diemc",
-  "gold_tier": "regolded"
+  "gold_tier": "regolded",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN54339",
@@ -1041,8 +1070,10 @@
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
-  "gold_tier": "regolded",
-  "regolded_from": "HNGD2014|Dieu119|Khoan1"
+  "gold_tier": "flagged",
+  "regolded_from": "HNGD2014|Dieu119|Khoan1",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "GEN88877",
@@ -1054,8 +1085,10 @@
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
-  "gold_tier": "regolded",
-  "regolded_from": "HNGD2014|Dieu95|Khoan2|Diemb"
+  "gold_tier": "flagged",
+  "regolded_from": "HNGD2014|Dieu95|Khoan2|Diemb",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "better_gold not found; GOLD thiếu thông tin về điều kiện của vợ chồng nhờ mang thai hộ, trong khi ứng viên khác đã bao quát toàn bộ quy định."
  },
  {
   "qid": "GEN39029",
@@ -1068,7 +1101,8 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Chồng của tôi muốn bán nhà mà tên sổ đỏ chỉ có tên vợ, vậy bây giờ phải làm sao?"
+  "question_rescoped_from": "Chồng của tôi muốn bán nhà mà tên sổ đỏ chỉ có tên vợ, vậy bây giờ phải làm sao?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN53768",
@@ -1105,7 +1139,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi cùng người khác có một hợp đồng hợp tác nhưng bây giờ xảy ra tranh chấp về phân chia lợi nhuận, tôi phải làm sao?"
+  "question_rescoped_from": "Tôi cùng người khác có một hợp đồng hợp tác nhưng bây giờ xảy ra tranh chấp về phân chia lợi nhuận, tôi phải làm sao?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN52760",
@@ -1130,7 +1165,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tại sao công ty tôi lại bị giải thể mà không có bất kỳ thông báo nào trước?"
+  "question_rescoped_from": "Tại sao công ty tôi lại bị giải thể mà không có bất kỳ thông báo nào trước?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN29347",
@@ -1167,7 +1203,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Người dân hỏi: Nói về việc giữ gìn mốc giới với nhà hàng xóm, tôi có thể tự ý di chuyển mốc giới đó không?"
+  "question_rescoped_from": "Người dân hỏi: Nói về việc giữ gìn mốc giới với nhà hàng xóm, tôi có thể tự ý di chuyển mốc giới đó không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN31043",
@@ -1180,7 +1217,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Con gặp vấn đề là bé nhà con chỉ sống được 23 tiếng sau sinh, vậy có cần làm giấy khai sinh và khai tử cho bé không?"
+  "question_rescoped_from": "Con gặp vấn đề là bé nhà con chỉ sống được 23 tiếng sau sinh, vậy có cần làm giấy khai sinh và khai tử cho bé không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN70440",
@@ -1193,7 +1231,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tại sao sau khi giải thể công ty, tài sản còn lại không được chia đều cho tất cả các cổ đông như tôi hiểu?"
+  "question_rescoped_from": "Tại sao sau khi giải thể công ty, tài sản còn lại không được chia đều cho tất cả các cổ đông như tôi hiểu?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN26434",
@@ -1230,7 +1269,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi gặp vấn đề với người giám hộ trẻ em, làm sao tôi có thể yêu cầu cơ quan chức năng thay đổi người giám hộ này?"
+  "question_rescoped_from": "Tôi gặp vấn đề với người giám hộ trẻ em, làm sao tôi có thể yêu cầu cơ quan chức năng thay đổi người giám hộ này?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN37861",
@@ -1255,7 +1295,8 @@
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi lập di chúc miệng nhưng chỉ có một người làm chứng, vậy di chúc của tôi có hợp pháp không?"
+  "question_rescoped_from": "Tôi lập di chúc miệng nhưng chỉ có một người làm chứng, vậy di chúc của tôi có hợp pháp không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN97250",
@@ -1389,7 +1430,9 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "gold_tier": "author-verified",
-  "question_rescoped_from": "Tại sao thỏa thuận phân chia tài sản giữa vợ chồng của tôi lại bị tòa án tuyên bố vô hiệu?"
+  "question_rescoped_from": "Tại sao thỏa thuận phân chia tài sản giữa vợ chồng của tôi lại bị tòa án tuyên bố vô hiệu?",
+  "weak_review": "pass3-flagged-human-overruled",
+  "weak_review_reason": "better_gold not found; Đáp án của UNG VIEN Diemb đầy đủ hơn, phù hợp với quy định pháp luật"
  },
  {
   "qid": "GEN48268",
@@ -1450,7 +1493,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi là người giám hộ của một người thân bị hạn chế năng lực hành vi dân sự, tôi muốn biết quyền và trách nhiệm của tôi theo pháp luật Việt Nam là gì?"
+  "question_rescoped_from": "Tôi là người giám hộ của một người thân bị hạn chế năng lực hành vi dân sự, tôi muốn biết quyền và trách nhiệm của tôi theo pháp luật Việt Nam là gì?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN52151",
@@ -1463,7 +1507,9 @@
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "gold_tier": "regolded",
-  "regolded_from": "BLDS2005|Dieu755|Khoan1"
+  "regolded_from": "BLDS2005|Dieu755|Khoan1",
+  "weak_review": "pass3-reanchor-rejected",
+  "weak_review_reason": "not-in-candidates: Câu hỏi yêu cầu quy trình chuyển giao quyền sở hữu trí tuệ, UNG VIEN BLDS2005|Dieu757|Khoan1 cung cấp thông tin cụ thể hơn về hợp đồng và đăng ký."
  },
  {
   "qid": "GEN58372",
@@ -1524,7 +1570,8 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Nếu tôi và vợ tôi đã trải qua việc một trong chúng tôi bị tuyên bố là đã chết và sau đó hôn nhân được khôi phục, liệu tài sản tôi kiếm được trong thời gian đó có phải chia sẻ với vợ không?"
+  "question_rescoped_from": "Nếu tôi và vợ tôi đã trải qua việc một trong chúng tôi bị tuyên bố là đã chết và sau đó hôn nhân được khôi phục, liệu tài sản tôi kiếm được trong thời gian đó có phải chia sẻ với vợ không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN20094",
@@ -1549,7 +1596,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Bên bán hàng yêu cầu tôi phải trả tiền trước nhưng không chịu cam kết về chất lượng sản phẩm, như vậy có đúng không?"
+  "question_rescoped_from": "Bên bán hàng yêu cầu tôi phải trả tiền trước nhưng không chịu cam kết về chất lượng sản phẩm, như vậy có đúng không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN75189",
@@ -1562,7 +1610,9 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "regolded_from": "BLDS2015|Dieu202|Khoan2",
-  "gold_tier": "regolded"
+  "gold_tier": "flagged",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "better_gold not found; GOLD BLDS2015|Dieu499|Khoan2 không phù hợp với đối tượng tổ chức xã hội, trong khi UNG VIEN BLDS2015|Dieu202|Khoan2 trực"
  },
  {
   "qid": "GEN17239",
@@ -1575,7 +1625,9 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "regolded_from": "BLDS2015|Dieu432|Khoan2",
-  "gold_tier": "regolded"
+  "gold_tier": "flagged",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "better_gold not found; UNG VIEN BLDS2015|Dieu448|Khoan1 trực tiếp giải quyết nghĩa vụ của bên bán, phù hợp hơn với câu hỏi về hành động cần thự"
  },
  {
   "qid": "GEN71067",
@@ -1623,8 +1675,10 @@
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
-  "gold_tier": "regolded",
-  "regolded_from": "BLDS2005|Dieu759|Khoan1"
+  "gold_tier": "flagged",
+  "regolded_from": "BLDS2005|Dieu759|Khoan1",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "GEN47787",
@@ -1696,8 +1750,10 @@
   "hint": "synthetic situational (weak gold)",
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Con tôi thường xuyên bị bạn học bắt nạt, tôi phải làm gì để bảo vệ quyền lợi của con theo luật pháp?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Con tôi thường xuyên bị bạn học bắt nạt, tôi phải làm gì để bảo vệ quyền lợi của con theo luật pháp?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "GEN51429",
@@ -1709,8 +1765,10 @@
   "hint": "synthetic situational (weak gold)",
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Nếu công ty không đồng ý hoãn thanh toán, tôi có thể hoãn việc giao hàng không?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Nếu công ty không đồng ý hoãn thanh toán, tôi có thể hoãn việc giao hàng không?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "better_gold not found; GOLD thiếu điều kiện cụ thể về khả năng thực hiện nghĩa vụ của bên kia, trong khi UNG VIEN BLDS2015|Dieu411|Khoan1 cung "
  },
  {
   "qid": "GEN31914",
@@ -1735,7 +1793,8 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "gold_tier": "regolded",
-  "regolded_from": "HNGD2014|Dieu78|Khoan2"
+  "regolded_from": "HNGD2014|Dieu78|Khoan2",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN59944",
@@ -1796,7 +1855,8 @@
   "law_id": "HNGD2014",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi và chồng muốn nhờ người khác mang thai hộ nhưng không biết làm sao để lấy được xác nhận từ tổ chức y tế có thẩm quyền?"
+  "question_rescoped_from": "Tôi và chồng muốn nhờ người khác mang thai hộ nhưng không biết làm sao để lấy được xác nhận từ tổ chức y tế có thẩm quyền?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN91337",
@@ -1821,7 +1881,8 @@
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "regolded_from": "BLDS2005|Dieu178|Khoan1",
-  "gold_tier": "regolded"
+  "gold_tier": "regolded",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN90604",
@@ -1846,7 +1907,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "regolded",
-  "regolded_from": "BLDS2015|Dieu320|Khoan8"
+  "regolded_from": "BLDS2015|Dieu320|Khoan8",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN46407",
@@ -1871,7 +1933,8 @@
   "law_id": "BLDS2005",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi mua vé xe nhưng lái xe nói không mang theo hợp đồng vận chuyển hành khách, tôi có quyền đòi lại tiền không?"
+  "question_rescoped_from": "Tôi mua vé xe nhưng lái xe nói không mang theo hợp đồng vận chuyển hành khách, tôi có quyền đòi lại tiền không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN44390",
@@ -1884,7 +1947,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi làm rơi máy tính của công ty khi được giao nhiệm vụ dọn bàn làm việc, giờ tôi phải làm sao?"
+  "question_rescoped_from": "Tôi làm rơi máy tính của công ty khi được giao nhiệm vụ dọn bàn làm việc, giờ tôi phải làm sao?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN39298",
@@ -1897,7 +1961,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Trong di chúc, ông nội không đề cập gì về thù lao cho người phân chia di sản, vậy tôi có phải trả tiền thù lao cho họ không?"
+  "question_rescoped_from": "Trong di chúc, ông nội không đề cập gì về thù lao cho người phân chia di sản, vậy tôi có phải trả tiền thù lao cho họ không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN55424",
@@ -1935,7 +2000,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi vừa ký hợp đồng với công ty nhưng không may tên và thông tin cá nhân của tôi bị rò rỉ ra ngoài, giờ tôi phải làm sao?"
+  "question_rescoped_from": "Tôi vừa ký hợp đồng với công ty nhưng không may tên và thông tin cá nhân của tôi bị rò rỉ ra ngoài, giờ tôi phải làm sao?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN11580",
@@ -1948,7 +2014,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Nếu tôi đồng sở hữu một mảnh đất với người khác và muốn xây nhà trên phần đất của mình, tôi cần phải hỏi ý kiến của các chủ sở hữu còn lại không?"
+  "question_rescoped_from": "Nếu tôi đồng sở hữu một mảnh đất với người khác và muốn xây nhà trên phần đất của mình, tôi cần phải hỏi ý kiến của các chủ sở hữu còn lại không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "GEN39897",
@@ -1997,7 +2064,8 @@
   "law_id": "BLDS2015",
   "reviewed": "author-pass1",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tài sản tôi mượn từ bạn lâu rồi mà bạn vẫn chưa đòi, giờ tôi nên làm gì?"
+  "question_rescoped_from": "Tài sản tôi mượn từ bạn lâu rồi mà bạn vẫn chưa đòi, giờ tôi nên làm gì?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW69151",
@@ -2010,7 +2078,8 @@
   "law_id": "HOAGIAI2026",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Trưởng ban công tác Mặt trận không thực hiện rà soát, đánh giá về tổ chức, hoạt động của tổ hòa giải hàng năm như quy định, tôi phải làm gì?"
+  "question_rescoped_from": "Trưởng ban công tác Mặt trận không thực hiện rà soát, đánh giá về tổ chức, hoạt động của tổ hòa giải hàng năm như quy định, tôi phải làm gì?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW21840",
@@ -2047,7 +2116,8 @@
   "law_id": "HOTICH2014",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tại sao sau khi bản án về thay đổi hộ tịch có hiệu lực, tôi chưa thấy Ủy ban nhân dân địa phương cập nhật thông tin vào Sổ hộ tịch của tôi trong vòng 5 ngày làm việc?"
+  "question_rescoped_from": "Tại sao sau khi bản án về thay đổi hộ tịch có hiệu lực, tôi chưa thấy Ủy ban nhân dân địa phương cập nhật thông tin vào Sổ hộ tịch của tôi trong vòng 5 ngày làm việc?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW83864",
@@ -2059,8 +2129,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "HOTICH2014",
   "reviewed": "author-pass1-dates",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Sau khi nộp tất cả giấy tờ cần thiết cho khai tử, tôi đã chờ 3 ngày làm việc nhưng vẫn chưa nhận được trích lục hộ tịch, vậy tôi phải làm gì?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Sau khi nộp tất cả giấy tờ cần thiết cho khai tử, tôi đã chờ 3 ngày làm việc nhưng vẫn chưa nhận được trích lục hộ tịch, vậy tôi phải làm gì?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "NEW90326",
@@ -2085,7 +2157,8 @@
   "law_id": "HOTICH2014",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Khi tôi đăng ký kết hôn mà muốn lấy bản chính trích lục hộ tịch thì làm thế nào?"
+  "question_rescoped_from": "Khi tôi đăng ký kết hôn mà muốn lấy bản chính trích lục hộ tịch thì làm thế nào?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW83995",
@@ -2122,7 +2195,9 @@
   "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
   "reviewed": "author-pass1-dates",
   "regolded_from": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu106|Khoan4",
-  "gold_tier": "regolded"
+  "gold_tier": "flagged",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "better_gold not found; GOLD hiện tại không nêu rõ nơi nộp và người nhận, trong khi UNG VIEN Dieu7 trả lời đầy đủ"
  },
  {
   "qid": "NEW53084",
@@ -2182,8 +2257,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
   "reviewed": "author-pass1-dates",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Tôi đã gửi đơn kháng cáo nhưng tòa án trả lời quá hạn, giờ tôi có thể làm gì?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Tôi đã gửi đơn kháng cáo nhưng tòa án trả lời quá hạn, giờ tôi có thể làm gì?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "NEW98861",
@@ -2232,7 +2309,8 @@
   "law_id": "THADSVBHN",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tài sản tôi mua đấu giá bị giữ lại bởi cơ quan thi hành án, họ không chịu giao tài sản và cũng không cung cấp giấy tờ cần thiết, tôi phải làm sao?"
+  "question_rescoped_from": "Tài sản tôi mua đấu giá bị giữ lại bởi cơ quan thi hành án, họ không chịu giao tài sản và cũng không cung cấp giấy tờ cần thiết, tôi phải làm sao?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW75514",
@@ -2269,7 +2347,9 @@
   "law_id": "THADS2008",
   "reviewed": "author-pass1-dates",
   "regolded_from": "THADS2008|Dieu164|Khoan2",
-  "gold_tier": "regolded"
+  "gold_tier": "flagged",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "NEW82981",
@@ -2282,7 +2362,9 @@
   "law_id": "THADS2008",
   "reviewed": "author-pass1-dates",
   "gold_tier": "author-verified",
-  "question_rescoped_from": "Tại sao tài sản của tôi bị thu giữ mà không được thông báo trước?"
+  "question_rescoped_from": "Tại sao tài sản của tôi bị thu giữ mà không được thông báo trước?",
+  "weak_review": "pass3-flagged-human-overruled",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "NEW93215",
@@ -2294,8 +2376,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "THADS2008",
   "reviewed": "author-pass1-dates",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Tôi cần phải báo cáo công tác tổ chức và hoạt động thi hành án cho cơ quan cấp tỉnh nhưng không biết nội dung báo cáo cần những thông tin gì?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Tôi cần phải báo cáo công tác tổ chức và hoạt động thi hành án cho cơ quan cấp tỉnh nhưng không biết nội dung báo cáo cần những thông tin gì?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "better_gold not found; GOLD hiện tại sai cơ quan hướng dẫn (cấp tỉnh) thay vì Bộ Tư pháp như quy định tại Điều 167 THADS2008"
  },
  {
   "qid": "NEW50275",
@@ -2380,7 +2464,8 @@
   "law_id": "luat-so-15-2026-qh16-470450",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tại sao thủ tục bồi thường nhà nước của tôi vẫn chưa được xử lý dù đã lâu rồi?"
+  "question_rescoped_from": "Tại sao thủ tục bồi thường nhà nước của tôi vẫn chưa được xử lý dù đã lâu rồi?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW23120",
@@ -2393,7 +2478,8 @@
   "law_id": "HNGDVBHN2025",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Việc chia tài sản chung giữa vợ chồng không lập thành văn bản và không công chứng có hiệu lực không?"
+  "question_rescoped_from": "Việc chia tài sản chung giữa vợ chồng không lập thành văn bản và không công chứng có hiệu lực không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW91253",
@@ -2418,7 +2504,8 @@
   "law_id": "NCN2010",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi muốn thuê một trụ sở để hoạt động nhưng không biết thủ tục như thế nào?"
+  "question_rescoped_from": "Tôi muốn thuê một trụ sở để hoạt động nhưng không biết thủ tục như thế nào?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW17446",
@@ -2443,7 +2530,8 @@
   "law_id": "NCN2010",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tại sao tôi không được nhận con nuôi mặc dù tôi đã hoàn thành thời gian tù trước đó 5 năm?"
+  "question_rescoped_from": "Tại sao tôi không được nhận con nuôi mặc dù tôi đã hoàn thành thời gian tù trước đó 5 năm?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW57186",
@@ -2504,7 +2592,8 @@
   "law_id": "HOTICH2026",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Cơ sở dữ liệu hộ tịch của tôi bị mất một số thông tin cá nhân, giờ tôi phải làm sao?"
+  "question_rescoped_from": "Cơ sở dữ liệu hộ tịch của tôi bị mất một số thông tin cá nhân, giờ tôi phải làm sao?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW75990",
@@ -2517,7 +2606,8 @@
   "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tài sản duy nhất của tôi lớn hơn nhiều lần so với số tiền nợ cần thanh toán và không thể phân chia được, vậy tài sản của tôi có bị xử lý để trả nợ không?"
+  "question_rescoped_from": "Tài sản duy nhất của tôi lớn hơn nhiều lần so với số tiền nợ cần thanh toán và không thể phân chia được, vậy tài sản của tôi có bị xử lý để trả nợ không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW21932",
@@ -2566,7 +2656,8 @@
   "law_id": "HNGD2000",
   "reviewed": "author-pass1-dates",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi không phải là người thân của bạn nhưng nếu tôi là, tôi sẽ hỏi: \"Bố/mẹ tôi vừa bị tòa tuyên án vì ngược đãi tôi, vậy bố/mẹ tôi có còn quyền quyết định về vấn đề học tập của tôi không?\""
+  "question_rescoped_from": "Tôi không phải là người thân của bạn nhưng nếu tôi là, tôi sẽ hỏi: \"Bố/mẹ tôi vừa bị tòa tuyên án vì ngược đãi tôi, vậy bố/mẹ tôi có còn quyền quyết định về vấn đề học tập của tôi không?\"",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "NEW53217",
@@ -2603,7 +2694,8 @@
   "law_id": "HOAGIAI2026",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Trong quá trình hòa giải, tôi bị hòa giải viên thiên vị, tôi có quyền làm gì theo luật?"
+  "question_rescoped_from": "Trong quá trình hòa giải, tôi bị hòa giải viên thiên vị, tôi có quyền làm gì theo luật?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP33735",
@@ -2616,7 +2708,8 @@
   "law_id": "HOAGIAI2026",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Nếu hòa giải viên có liên quan đến vụ việc cần hòa giải, người dân có quyền hỏi Tổ trưởng tổ hòa giải vì sao vẫn phân công họ?"
+  "question_rescoped_from": "Nếu hòa giải viên có liên quan đến vụ việc cần hòa giải, người dân có quyền hỏi Tổ trưởng tổ hòa giải vì sao vẫn phân công họ?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP65619",
@@ -2629,7 +2722,8 @@
   "law_id": "HOAGIAI2026",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Nếu thấy mâu thuẫn có thể dẫn đến bạo lực, tôi nên làm gì để đảm bảo an ninh cho mình và những người xung quanh?"
+  "question_rescoped_from": "Nếu thấy mâu thuẫn có thể dẫn đến bạo lực, tôi nên làm gì để đảm bảo an ninh cho mình và những người xung quanh?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP28886",
@@ -2666,7 +2760,8 @@
   "law_id": "HOTICH2014",
   "reviewed": "pending",
   "regolded_from": "HOTICH2014|Dieu12|Khoan3",
-  "gold_tier": "regolded"
+  "gold_tier": "regolded",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP42625",
@@ -2715,7 +2810,8 @@
   "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Văn phòng đại diện công ty nước ngoài tại Việt Nam nhận được văn bản tố tụng từ tòa án, vậy văn phòng đó phải làm gì tiếp theo?"
+  "question_rescoped_from": "Văn phòng đại diện công ty nước ngoài tại Việt Nam nhận được văn bản tố tụng từ tòa án, vậy văn phòng đó phải làm gì tiếp theo?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP77430",
@@ -2775,8 +2871,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
   "reviewed": "pending",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Trong vụ án dân sự, tòa án không thu thập chứng cứ một cách khách quan và công bằng, làm ảnh hưởng đến quyền lợi của tôi."
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Trong vụ án dân sự, tòa án không thu thập chứng cứ một cách khách quan và công bằng, làm ảnh hưởng đến quyền lợi của tôi.",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "TOP92479",
@@ -2800,8 +2898,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
   "reviewed": "pending",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Khiếu nại về một quyết định của tòa án, tôi phải gửi đơn đó cho viện kiểm sát cùng cấp đúng không?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Khiếu nại về một quyết định của tòa án, tôi phải gửi đơn đó cho viện kiểm sát cùng cấp đúng không?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "TOP40623",
@@ -2825,8 +2925,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "THADSVBHN",
   "reviewed": "pending",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Tôi bị tòa án quân sự trung ương kết án phạt tiền và tịch thu tài sản, tôi cần làm gì để thi hành án?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Tôi bị tòa án quân sự trung ương kết án phạt tiền và tịch thu tài sản, tôi cần làm gì để thi hành án?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "TOP23504",
@@ -2838,8 +2940,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "THADSVBHN",
   "reviewed": "pending",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Tại sao tôi không được khen thưởng dù đã có nhiều thành tích trong công tác thi hành án dân sự?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Tại sao tôi không được khen thưởng dù đã có nhiều thành tích trong công tác thi hành án dân sự?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "TOP53044",
@@ -2852,7 +2956,8 @@
   "law_id": "THADSVBHN",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tại sao tòa án không giải quyết yêu cầu của tôi mặc dù tôi đã gửi kiến nghị?"
+  "question_rescoped_from": "Tại sao tòa án không giải quyết yêu cầu của tôi mặc dù tôi đã gửi kiến nghị?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP76535",
@@ -2865,7 +2970,8 @@
   "law_id": "THADSVBHN",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tại sao ngân hàng của tôi không thực hiện yêu cầu giải tỏa tài khoản từ Chấp hành viên?"
+  "question_rescoped_from": "Tại sao ngân hàng của tôi không thực hiện yêu cầu giải tỏa tài khoản từ Chấp hành viên?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP67853",
@@ -2890,7 +2996,8 @@
   "law_id": "THADS2008",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Trong quá trình khiếu nại, tôi yêu cầu cơ quan chức năng cung cấp cho tôi đầy đủ thông tin và tài liệu liên quan đến vụ việc của mình theo quy định."
+  "question_rescoped_from": "Trong quá trình khiếu nại, tôi yêu cầu cơ quan chức năng cung cấp cho tôi đầy đủ thông tin và tài liệu liên quan đến vụ việc của mình theo quy định.",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP25718",
@@ -2915,7 +3022,8 @@
   "law_id": "THADS2008",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Nếu tôi muốn ngăn chặn quyết định sa thải công việc của mình trong 24 giờ sau khi nhận được, tôi cần làm gì theo luật?"
+  "question_rescoped_from": "Nếu tôi muốn ngăn chặn quyết định sa thải công việc của mình trong 24 giờ sau khi nhận được, tôi cần làm gì theo luật?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP33026",
@@ -2963,8 +3071,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "TNBTCNN2017",
   "reviewed": "pending",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Nếu tôi đã gửi đơn yêu cầu bồi thường danh dự đến cơ quan có lỗi và họ đã đình chỉ giải quyết, tôi có thể gửi lại đơn yêu cầu không?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Nếu tôi đã gửi đơn yêu cầu bồi thường danh dự đến cơ quan có lỗi và họ đã đình chỉ giải quyết, tôi có thể gửi lại đơn yêu cầu không?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "TOP10527",
@@ -2977,7 +3087,8 @@
   "law_id": "TNBTCNN2017",
   "reviewed": "pending",
   "gold_tier": "author-verified",
-  "question_rescoped_from": "Tôi gặp rắc rối với việc đòi tiền bồi thường từ nhà nước, tôi phải làm thế nào?"
+  "question_rescoped_from": "Tôi gặp rắc rối với việc đòi tiền bồi thường từ nhà nước, tôi phải làm thế nào?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP81552",
@@ -2990,7 +3101,8 @@
   "law_id": "luat-so-15-2026-qh16-470450",
   "reviewed": "pending",
   "gold_tier": "author-verified",
-  "question_rescoped_from": "Tại sao ủy ban nhân dân tỉnh tôi không thực hiện đúng trách nhiệm chỉ đạo và giám sát việc bồi thường nhà nước theo quy định?"
+  "question_rescoped_from": "Tại sao ủy ban nhân dân tỉnh tôi không thực hiện đúng trách nhiệm chỉ đạo và giám sát việc bồi thường nhà nước theo quy định?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP27902",
@@ -3002,8 +3114,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "luat-so-15-2026-qh16-470450",
   "reviewed": "pending",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Nếu tôi tố cáo một hành vi tham nhũng, quyền lợi pháp lý sẽ được bảo vệ cho những người thân trong gia đình tôi như thế nào?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Nếu tôi tố cáo một hành vi tham nhũng, quyền lợi pháp lý sẽ được bảo vệ cho những người thân trong gia đình tôi như thế nào?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "TOP25608",
@@ -3028,7 +3142,8 @@
   "law_id": "HNGDVBHN2025",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Nếu tôi mua một tài sản từ vợ/chồng mà không biết họ đang vi phạm quy định đại diện giữa vợ chồng, tôi có bị mất tiền không?"
+  "question_rescoped_from": "Nếu tôi mua một tài sản từ vợ/chồng mà không biết họ đang vi phạm quy định đại diện giữa vợ chồng, tôi có bị mất tiền không?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP58788",
@@ -3101,7 +3216,8 @@
   "law_id": "NCN2010",
   "reviewed": "pending",
   "regolded_from": "NCN2010|Dieu24|Khoan2",
-  "gold_tier": "regolded"
+  "gold_tier": "regolded",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP43156",
@@ -3114,7 +3230,8 @@
   "law_id": "NCN2010",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Tôi muốn làm thủ tục nhận con nuôi từ nước ngoài nhưng không biết cần những giấy tờ gì và quy trình như thế nào?"
+  "question_rescoped_from": "Tôi muốn làm thủ tục nhận con nuôi từ nước ngoài nhưng không biết cần những giấy tờ gì và quy trình như thế nào?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP97603",
@@ -3139,7 +3256,8 @@
   "law_id": "HOTICH2026",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Giấy chứng nhận kết hôn của tôi bị mất, giờ tôi muốn làm lại nhưng không biết phải làm sao?"
+  "question_rescoped_from": "Giấy chứng nhận kết hôn của tôi bị mất, giờ tôi muốn làm lại nhưng không biết phải làm sao?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP69002",
@@ -3164,7 +3282,8 @@
   "law_id": "HOTICH2026",
   "reviewed": "pending",
   "regolded_from": "HOTICH2026|Dieu4|Khoan2|Diemb",
-  "gold_tier": "regolded"
+  "gold_tier": "regolded",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP10475",
@@ -3177,7 +3296,8 @@
   "law_id": "HOTICH2026",
   "reviewed": "pending",
   "regolded_from": "HOTICH2026|Dieu2|Khoan1",
-  "gold_tier": "regolded"
+  "gold_tier": "regolded",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP19744",
@@ -3202,7 +3322,8 @@
   "law_id": "HOTICH2026",
   "reviewed": "pending",
   "gold_tier": "verified",
-  "question_rescoped_from": "Thẻ căn cước của tôi bị mất, tôi cần làm gì để cập nhật thông tin trong cơ sở dữ liệu hộ tịch?"
+  "question_rescoped_from": "Thẻ căn cước của tôi bị mất, tôi cần làm gì để cập nhật thông tin trong cơ sở dữ liệu hộ tịch?",
+  "weak_review": "pass3-ok"
  },
  {
   "qid": "TOP45624",
@@ -3238,8 +3359,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
   "reviewed": "pending",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Vì sao Hội đồng tiêu hủy vật chứng, tài sản cần phải có ít nhất 3 thành viên và quyết định phải được quá nửa số thành viên tán thành?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Vì sao Hội đồng tiêu hủy vật chứng, tài sản cần phải có ít nhất 3 thành viên và quyết định phải được quá nửa số thành viên tán thành?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "better_gold not found; GOLD thiếu thông tin về thời hạn thành lập hội đồng, UNG VIEN THADS2008 bổ sung đầy đủ cả thời hạn thành lập và tiêu hủy"
  },
  {
   "qid": "TOP36790",
@@ -3275,8 +3398,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "HNGD2000",
   "reviewed": "pending",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Con nuôi của tôi là người dân tộc thiểu số, vậy con tôi sẽ được xác định là dân tộc gì?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Con nuôi của tôi là người dân tộc thiểu số, vậy con tôi sẽ được xác định là dân tộc gì?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "TOP44737",
@@ -3288,8 +3413,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "HNGD2000",
   "reviewed": "pending",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Em mới 12 tuổi, gia đình muốn bán mảnh đất mà em còn sót lại từ bố mẹ, em có quyền ngăn chặn quyết định này không?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Em mới 12 tuổi, gia đình muốn bán mảnh đất mà em còn sót lại từ bố mẹ, em có quyền ngăn chặn quyết định này không?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "TOP59991",
@@ -3301,8 +3428,10 @@
   "hint": "synthetic (weak gold)",
   "law_id": "HNGD2000",
   "reviewed": "pending",
-  "gold_tier": "verified",
-  "question_rescoped_from": "Con tôi đã trên 9 tuổi, nhưng tại sao tôi vẫn phải hỏi ý kiến của ông bà về việc sử dụng tiền tiết kiệm của con?"
+  "gold_tier": "flagged",
+  "question_rescoped_from": "Con tôi đã trên 9 tuổi, nhưng tại sao tôi vẫn phải hỏi ý kiến của ông bà về việc sử dụng tiền tiết kiệm của con?",
+  "weak_review": "pass3-flagged",
+  "weak_review_reason": "judge parse-fail"
  },
  {
   "qid": "TOP89237",

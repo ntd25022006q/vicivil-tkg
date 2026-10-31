@@ -1,38 +1,39 @@
 {
  "rag_hybrid_vs_rag_hybrid_tcr": {
   "n_common": 281,
-  "mcnemar_cite_b01": 45,
+  "mcnemar_cite_b01": 47,
   "mcnemar_cite_b10": 15,
-  "mcnemar_cite_p": 0.00013451408092849532,
-  "wilcoxon_span_f1_p": 9.407082312180452e-05,
-  "delta_cite_acc": 0.1068,
-  "delta_span_f1": 0.023
+  "mcnemar_cite_p": 5.778372004920304e-05,
+  "wilcoxon_span_f1_p": 8.021638219407983e-05,
+  "delta_cite_acc": 0.1139,
+  "delta_span_f1": 0.0234
  },
  "rag_hybrid_vs_rag_rerank_tcr": {
   "n_common": 280,
-  "mcnemar_cite_b01": 56,
+  "mcnemar_cite_b01": 58,
   "mcnemar_cite_b10": 27,
-  "mcnemar_cite_p": 0.0019314374822250477,
-  "wilcoxon_span_f1_p": 0.0013163728715586498,
-  "delta_cite_acc": 0.1036,
-  "delta_span_f1": 0.0242
+  "mcnemar_cite_p": 0.001016220951347889,
+  "wilcoxon_span_f1_p": 0.0013252711455997372,
+  "delta_cite_acc": 0.1107,
+  "delta_span_f1": 0.0243
  },
  "norag_vs_rag_hybrid": {
   "n_common": 281,
   "mcnemar_cite_b01": 136,
   "mcnemar_cite_b10": 0,
   "mcnemar_cite_p": 2.2958874039497803e-41,
-  "wilcoxon_span_f1_p": 7.960632986945008e-28,
+  "wilcoxon_span_f1_p": 7.282961650841986e-28,
   "delta_cite_acc": 0.484,
-  "delta_span_f1": 0.1401
+  "delta_span_f1": 0.1406
  },
- "rag_hybrid_tcr_vs_rag_rerank_tcr": {
-  "n_common": 280,
-  "mcnemar_cite_b01": 35,
-  "mcnemar_cite_b10": 36,
-  "mcnemar_cite_p": 1.0,
-  "wilcoxon_span_f1_p": 0.6530101001866521,
-  "delta_cite_acc": -0.0036,
-  "delta_span_f1": 0.0012
- }
+ "norag_vs_rag_hybrid_tcr": {
+  "n_common": 281,
+  "mcnemar_cite_b01": 168,
+  "mcnemar_cite_b10": 0,
+  "mcnemar_cite_p": 5.345529420184391e-51,
+  "wilcoxon_span_f1_p": 1.0658328852088618e-34,
+  "delta_cite_acc": 0.5979,
+  "delta_span_f1": 0.1641
+ },
+ "note": "rebuilt from stored per_q answers after pass-3 gold updates (McNemar exact on cite_ok; Wilcoxon wilcox on span_f1)"
 }

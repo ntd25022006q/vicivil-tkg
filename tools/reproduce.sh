@@ -29,6 +29,11 @@ say "5/6 Lap chi muc dieu khoan"
 say "6/6 Kiem dinh thong ke cap doi (LLM RAG: McNemar + Wilcoxon)"
 "$PY" src/law_rag_signif.py
 
+say "7/7 Cham lai cohort mo rong (round 1 + round 2, khong GPU)"
+"" src/law_extension_eval.py
+"" src/law_extension_eval.py benchmark/law_bench_extension2.json benchmark/extension2_question_vectors.json benchmark/extension2_eval_ranks.json
+"" src/law_ranks_full_rebuild.py verify
+
 say "Ket qua:"
 ls -l benchmark/law_eval_repro.json benchmark/rerank_verify.json \
       provenance/chunk_quality.json provenance/rdf_verify.json \

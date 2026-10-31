@@ -1,0 +1,135 @@
+{
+ "EXT10002": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10003": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10011": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10015": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10034": {
+  "regolded_to": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan1",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định rõ quyền khiếu nại lần hai trong 5 ngày làm việc"
+ },
+ "EXT10042": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10047": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10049": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10056": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10058": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10068": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10107": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10171": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10173": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10180": {
+  "regolded_to": "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemd",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định thời hạn 05 ngày làm việc kể từ ngày nhận văn bản kiến nghị."
+ },
+ "EXT10182": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10183": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10187": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10188": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10192": {
+  "regolded_to": "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diema",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định điều chỉnh giấy tờ theo số liệu đo đạc thực tế khi không có tranh chấp."
+ },
+ "EXT10197": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10206": {
+  "regolded_to": "HOTICH2014|Dieu63",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định cá nhân có quyền yêu cầu cấp bản sao trích lục hộ tịch từ cơ quan quản lý."
+ },
+ "EXT10220": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10228": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10229": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10235": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10237": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10243": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10259": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10262": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT10263": {
+  "regolded_to": "TNBTCNN2017|Dieu37|Khoan3",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định Tòa án cấp phúc thẩm là cơ quan giải quyết bồi thường trong trường hợp này."
+ },
+ "EXT10268": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ }
+}

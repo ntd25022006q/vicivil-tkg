@@ -1,0 +1,21 @@
+{
+ "meta": {
+  "threshold": 0.95,
+  "published_reference_files": [
+   "question_vectors.json",
+   "law_bench_extension.json",
+   "extension_question_vectors.json"
+  ],
+  "n_published_vectors": 387,
+  "n_quarantine_vectors": 136,
+  "n_generated": 154,
+  "rule": "cos>0.95 vs a PUBLISHED question quarantines the generated question; matches against round-1 quarantined questions are recorded only"
+ },
+ "hits_vs_published": {
+  "EXT20063": {
+   "match": "core281:NEW21414",
+   "cosine": 0.9931
+  }
+ },
+ "hits_vs_quarantined": {}
+}

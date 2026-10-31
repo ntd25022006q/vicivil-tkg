@@ -1,0 +1,717 @@
+[
+ {
+  "qid": "EXT20002",
+  "as_of": "2012-07-01",
+  "question": "Nếu hội đồng xét xử quyết định một vấn đề mà không ghi vào biên bản phiên tòa, thì vấn đề đó có hiệu lực không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu210|Khoan3"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20004",
+  "as_of": "2012-07-01",
+  "question": "Trong phiên tòa, tôi không được nghe lời trình bày của nguyên đơn và bị đơn, toà án có vi phạm luật không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu197|Khoan1"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20005",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi có quyết định của trọng tài nước ngoài và muốn công nhận để thi hành tại Việt Nam, tôi cần phải cung cấp thông tin về địa chỉ nơi cư trú hoặc làm việc của người phải thi hành. Nếu họ không có địa chỉ tại Việt Nam, tôi cần phải chỉ rõ địa chỉ ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu364|Khoan1|Diemb"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20008",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi và người làm chứng cung cấp thông tin trái ngược nhau, Thẩm phán sẽ đối chất tôi với người làm chứng đúng không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu88|Khoan1"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20009",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi và vợ tôi đồng ý ly hôn và nộp đơn cùng lúc, mỗi bên phải nộp bao nhiêu án phí? Theo quy định, mỗi bên phải chịu một nửa án phí sơ thẩm.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu131|Khoan4"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20010",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi nộp hồ sơ cho tòa án hôm nay, tòa án phải thụ lý và thông báo cho Viện kiểm sát biết trong bao lâu? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu174|Khoan1"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "regolded",
+  "regolded_from": "BLTTDS2004|Dieu353|Khoan1"
+ },
+ {
+  "qid": "EXT20014",
+  "as_of": "2012-07-01",
+  "question": "Nếu sau 7 ngày lập biên bản hoà giải thành mà không có đương sự thay đổi ý kiến, toà án sẽ ra quyết định công nhận thoả thuận và phải gửi quyết định này cho các đương sự trong 5 ngày làm việc.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu187|Khoan1"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20019",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là người Việt Nam và có một tranh chấp dân sự với một công dân Mỹ về một hợp đồng ký kết tại Việt Nam, tòa án Việt Nam có quyền giải quyết vụ việc này không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu410|Khoan2|Diemd"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20023",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đã nộp đơn kiện về một vụ việc có yếu tố nước ngoài tại Việt Nam nhưng biết rằng tòa án nước ngoài đã thụ lý và ra phán quyết về vụ việc đó, thì tòa án Việt Nam sẽ xử lý đơn của tôi như thế nào? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu413|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20025",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi được Toà án triệu tập nhưng không đến, tôi có thể bị phạt tiền không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu386|Khoan1"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20027",
+  "as_of": "2012-07-01",
+  "question": "Tôi muốn yêu cầu công nhận và cho thi hành bản án của tòa án nước ngoài tại Việt Nam, tôi cần phải ghi rõ yêu cầu của tôi và phần đã được thi hành tại nước ngoài trong đơn yêu cầu, đúng không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu350|Khoan1|Diemc"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20028",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đang sống và làm việc ở nước ngoài mà vợ/chồng tôi vẫn ở Việt Nam, tôi muốn ly hôn, tôi có thể kiện ở Việt Nam không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu469|Khoan1|Diemd"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "regolded",
+  "regolded_from": "BLTTDS2004|Dieu411|Khoan1|Diemc"
+ },
+ {
+  "qid": "EXT20029",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi bị công ty sa thải trái luật, tôi phải làm đơn kiện lên tòa án nào? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu33|Khoan1|Diemc"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20033",
+  "as_of": "2012-07-01",
+  "question": "Nếu Thẩm phán ban đầu không còn làm Thẩm phán, ai sẽ thực hiện việc sửa chữa, bổ sung bản án? Chánh án Toà án sẽ thực hiện theo khoản 2 Điều này.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu240|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20039",
+  "as_of": "2012-07-01",
+  "question": "Trong phiên tòa, người dân nên làm gì khi kiểm sát viên phát biểu ý kiến về việc giải quyết vụ việc dân sự? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu261"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "regolded",
+  "regolded_from": "BLTTDS2004|Dieu314|Khoan1|Diemg"
+ },
+ {
+  "qid": "EXT20041",
+  "as_of": "2012-07-01",
+  "question": "Khi tôi nộp đơn khởi kiện, tòa án có bắt buộc phải thông báo cho bị đơn về việc đã thụ lý vụ án trong thời hạn bao lâu? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu174|Khoan1"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20043",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là công dân nước ngoài và có tranh chấp dân sự với một công ty Việt Nam có văn phòng tại Việt Nam, tôi có thể kiện tại tòa án Việt Nam không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu410|Khoan2|Diema"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20045",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là người tiến hành tố tụng trong vụ án này, tôi có vi phạm quy định nào không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu283|Khoan2"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "regolded",
+  "regolded_from": "BLTTDS2004|Dieu49|Khoan2"
+ },
+ {
+  "qid": "EXT20046",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi và đối phương đã đạt được một thỏa thuận nhưng sau đó phát hiện ra nó vi phạm pháp luật, tôi có quyền kháng nghị quyết định công nhận thỏa thuận đó không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu188|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20049",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn rút kháng cáo trong giai đoạn phúc thẩm nhưng chưa gửi văn bản đến tòa án, tôi cần làm gì theo luật? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu256|Khoan3"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20050",
+  "as_of": "2012-07-01",
+  "question": "Nếu một công dân nước ngoài mất tích tại Việt Nam, tôi có thể kiện ra tòa án Việt Nam để tuyên bố họ mất tích được không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu411|Khoan2|Diemc"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20051",
+  "as_of": "2012-07-01",
+  "question": "Nếu lời khai của tôi và người làm chứng có ảnh hưởng lẫn nhau, chủ tọa phiên tòa có thể cách ly chúng tôi không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu216|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20054",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi khởi kiện nhưng sau đó rút toàn bộ yêu cầu, bị đơn vẫn giữ nguyên yêu cầu phản tố, thì bị đơn sẽ trở thành nguyên đơn và tôi sẽ trở thành bị đơn đúng không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu219|Khoan1"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20057",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là người làm chứng trong một vụ án và lo ngại về an toàn cá nhân, tôi có quyền yêu cầu Hội đồng xét xử không tiết lộ thông tin nhân thân và không cho những người trong phiên tòa nhìn thấy tôi không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu226|Khoan5"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20060",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi nộp đơn yêu cầu thi hành án nhưng tòa án không xác định được địa chỉ của người phải thi hành, tòa án sẽ xử lý như thế nào? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu354|Khoan1|Diemb"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20062",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi có tranh chấp về bảo hiểm xã hội với công ty, tôi có cần phải qua hòa giải tại cơ sở không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu31|Khoan1|Diemd"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20065",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đã thuê một phiên dịch trong phiên tòa nhưng không có thỏa thuận về chi phí, tôi có phải trả tiền cho dịch vụ này không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu144|Khoan3"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "regolded",
+  "regolded_from": "BLTTDS2004|Dieu144|Khoan1"
+ },
+ {
+  "qid": "EXT20066",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi nộp đơn kháng cáo quá hạn thì toà án cấp phúc thẩm sẽ xử lý như thế nào? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu247|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20069",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi kháng cáo nhưng quá hạn 10 ngày không nộp tiền tạm ứng án phí, tôi sẽ bị coi là từ bỏ quyền kháng cáo theo quy định pháp luật. (Điều 225 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu248|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20070",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi kháng cáo nhưng sau đó muốn rút đơn kháng cáo, tòa án sẽ xử lý như thế nào? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu260|Khoan1|Diemb"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20073",
+  "as_of": "2012-07-01",
+  "question": "Nếu tài sản của tôi bị kê biên, tôi có thể được giao quản lý tài sản đó không? Theo Điều luật, tài sản bị kê biên có thể được giao cho một bên đương sự quản lý cho đến khi có quyết định của Toà án.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu108|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20074",
+  "as_of": "2012-07-01",
+  "question": "Trong phiên tòa, tôi muốn hỏi thêm người làm chứng về những điểm họ trình bày chưa rõ, có được không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu226|Khoan3"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20075",
+  "as_of": "2012-07-01",
+  "question": "Tòa án đã cho phép một thẩm phán làm đại diện pháp lý trong một vụ kiện dân sự, tôi nên làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu75|Khoan3"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20076",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi được miễn nộp án phí sơ thẩm, thì người kia vẫn phải nộp án phí sơ thẩm đúng không? (Điều 162, khoản 5)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu131|Khoan5"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20077",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đã nhận được giấy triệu tập nhưng không tham gia phiên tòa, tôi sẽ gặp hậu quả pháp lý gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu384"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "regolded",
+  "regolded_from": "BLTTDS2004|Dieu205|Khoan1"
+ },
+ {
+  "qid": "EXT20078",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi bị nguyên đơn kiện nhưng tôi cũng có yêu cầu đối với nguyên đơn, tôi có thể làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu60|Khoan1|Diemc"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20079",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi yêu cầu tòa án công khai thông tin cá nhân trong hồ sơ tố tụng, tôi có vi phạm luật không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu175|Khoan2"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "regolded",
+  "regolded_from": "BLTTDS2004|Dieu13|Khoan3"
+ },
+ {
+  "qid": "EXT20081",
+  "as_of": "2012-07-01",
+  "question": "Tại sao Chủ tịch Ủy ban nhân dân không thực hiện chỉ đạo thi hành bản án của tòa án?",
+  "gold_ids": [
+   "THADS2008|Dieu162|Khoan2"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "regolded",
+  "regolded_from": "BLTTDS2004|Dieu378|Khoan2"
+ },
+ {
+  "qid": "EXT20087",
+  "as_of": "2012-07-01",
+  "question": "Nếu phiên hoà giải diễn ra tại một địa điểm không phải là trụ sở toà án, tôi cần ghi rõ địa điểm đó trong biên bản hoà giải đúng không? (Dựa trên Điều 281 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu186|Khoan1|Diemb"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20089",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi yêu cầu tuyên bố người thân mất tích nhưng họ trở về nhà, tôi có thể làm gì để đình chỉ việc xét xử tại tòa án?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu331|Khoan3"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20090",
+  "as_of": "2012-07-01",
+  "question": "Nếu Hội đồng xét xử hoãn tuyên án sau phiên tòa, họ phải thông báo thời gian và địa điểm mới cho tất cả những người liên quan đúng không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu236|Khoan5"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20091",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi được thông báo về một vụ kiện, tôi có quyền yêu cầu xem đơn khởi kiện và tài liệu chứng cứ kèm theo không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu175|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20093",
+  "as_of": "2012-07-01",
+  "question": "Khi viết bản án, tôi không ghi rõ tên và địa chỉ của các bên liên quan, điều này có vi phạm luật không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu279|Khoan3"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20094",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi kiện một công ty về cả vi phạm hợp đồng và vi phạm quyền tác giả, toà án có thể chia vụ án thành hai vụ riêng biệt không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu38|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20095",
+  "as_of": "2012-02-06",
+  "question": "Trong trường hợp người nhận con nuôi không sống tại địa phương đăng ký nuôi con, cần làm thêm thủ tục gì? ",
+  "gold_ids": [
+   "ND158_2005|Dieu26|Khoan1"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20096",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi không hài lòng với quyết định về hộ tịch của Chủ tịch Ủy ban nhân dân cấp huyện, tôi có thể khiếu nại lên Chủ tịch Ủy ban nhân dân cấp tỉnh được không? ",
+  "gold_ids": [
+   "ND158_2005|Dieu88|Khoan1"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20107",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi khiếu nại về việc đăng ký hộ tịch bị sai sót, tôi nên gửi đơn đến ai? ",
+  "gold_ids": [
+   "ND158_2005|Dieu87|Khoan1"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20113",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi khiếu nại về quyết định của Bộ trưởng Bộ Tư pháp và bị từ chối, tôi có thể làm gì thêm? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu142|Khoan4|Diemb"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "ND158_2005",
+  "gold_tier": "regolded",
+  "regolded_from": "ND158_2005|Dieu89|Khoan3"
+ },
+ {
+  "qid": "EXT20118",
+  "as_of": "2012-02-06",
+  "question": "Giấy khai sinh nước ngoài của con tôi viết tiếng Anh, tôi phải làm gì để hợp pháp hóa nó tại Việt Nam? ",
+  "gold_ids": [
+   "ND158_2005|Dieu6|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20119",
+  "as_of": "2012-02-06",
+  "question": "Nếu Chủ tịch Ủy ban nhân dân cấp tỉnh không quản lý chặt chẽ dẫn đến sai phạm trong đăng ký hộ tịch, người dân có quyền yêu cầu Chủ tịch chịu trách nhiệm theo pháp luật.",
+  "gold_ids": [
+   "ND158_2005|Dieu77|Khoan3"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20122",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi muốn thay đổi thông tin hộ tịch, cơ quan có thẩm quyền sẽ thực hiện như thế nào? Cơ quan đó phải gửi quyết định thay đổi cho nơi đã đăng ký thông tin hộ tịch trước đây để cập nhật sổ hộ tịch. (Điều này dựa trên quy định tại khoản 1 Điều này)",
+  "gold_ids": [
+   "ND158_2005|Dieu41|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20123",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi muốn đăng ký kết hôn nhưng bị từ chối, tôi cần làm gì theo luật hộ tịch? ",
+  "gold_ids": [
+   "BLDS1995|Dieu57|Muc2"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "ND158_2005",
+  "gold_tier": "regolded",
+  "regolded_from": "ND158_2005|Dieu75|Khoan1"
+ },
+ {
+  "qid": "EXT20124",
+  "as_of": "2012-02-06",
+  "question": "Sổ hộ tịch cua toi bi bo trống nhung khong du dau giap lai, co phai dung khong? Mua chien: Khoan 2 Điều 18 Luật hộ tịch.",
+  "gold_ids": [
+   "ND158_2005|Dieu68|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20126",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi muốn nhận cha cho con nhưng hồ sơ của tôi thiếu tờ khai theo mẫu quy định, tôi cần làm gì? ",
+  "gold_ids": [
+   "ND126_2014|Dieu40|Khoan1|Diema"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20128",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi đã nhận được Giấy chứng nhận kết hôn nhưng vì lý do bất khả kháng nên không thể tổ chức lễ đăng ký kết hôn trong 90 ngày, tôi có thể làm gì để giữ hiệu lực của Giấy chứng nhận kết hôn?",
+  "gold_ids": [
+   "ND126_2014|Dieu25|Khoan5"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20134",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi muốn kết hôn với một người nước ngoài và cần tư vấn về pháp luật hôn nhân, tôi có quyền được hỗ trợ như thế nào?",
+  "gold_ids": [
+   "ND126_2014|Dieu52|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20139",
+  "as_of": "2016-02-15",
+  "question": "Tôi thường trú ở Việt Nam và đã ly hôn ở nước ngoài, giờ tôi muốn ghi việc ly hôn vào sổ hộ tịch, tôi phải làm thủ tục ở đâu? ",
+  "gold_ids": [
+   "ND126_2014|Dieu42|Khoan2"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20141",
+  "as_of": "2016-02-15",
+  "question": "Nếu trung tâm bị tước quyền sử dụng giấy đăng ký hoạt động, trung tâm sẽ bị chấm dứt hoạt động theo quy định tại Điều này.",
+  "gold_ids": [
+   "ND126_2014|Dieu57|Khoan1|Diemb"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20142",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi nghi ngờ cha mẹ hoặc con cái không phải là người được ghi trong giấy tờ, tôi có quyền yêu cầu Sở Tư pháp xác minh không?",
+  "gold_ids": [
+   "ND126_2014|Dieu34|Khoan3"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20144",
+  "as_of": "2016-02-15",
+  "question": "Nếu Sở Tư pháp không cấp giấy đăng ký hoạt động trong thời hạn 5 ngày làm việc, tôi có quyền yêu cầu Sở Tư pháp phải thông báo bằng văn bản về lý do từ chối theo quy định tại Điều này.",
+  "gold_ids": [
+   "ND126_2014|Dieu54|Khoan3"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20148",
+  "as_of": "2016-02-15",
+  "question": "Tôi kết hôn tại Việt Nam nhưng muốn xin bản sao giấy chứng nhận kết hôn tại cơ quan đại diện, tôi có được cấp không? ",
+  "gold_ids": [
+   "ND126_2014|Dieu25|Khoan4"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20149",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi muốn nhận cha cho con nhưng không có giấy khai sinh của mình, tôi có thể làm gì? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu16|Khoan1"
+  ],
+  "hint": "extension cohort round 2, 1996-2015 statutes (weak gold, disclosed; re-anchored)",
+  "law_id": "ND126_2014",
+  "gold_tier": "regolded",
+  "regolded_from": "ND126_2014|Dieu32|Khoan1|Diemc"
+ },
+ {
+  "qid": "EXT20150",
+  "as_of": "2016-02-15",
+  "question": "Tôi muốn kết hôn với người nước ngoài nhưng không có nơi đăng ký thường trú, chỉ có đăng ký tạm trú. Tôi có thể đăng ký kết hôn được không? ",
+  "gold_ids": [
+   "ND126_2014|Dieu19|Khoan1"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT20153",
+  "as_of": "2012-07-01",
+  "question": "Mình 15 tuổi và muốn kiện công ty về vi phạm hợp đồng lao động, mình có thể tự mình tham gia tố tụng không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu57|Khoan6"
+  ],
+  "hint": "extension cohort r2 (weak gold, disclosed; ND/TT/2004-2015 era)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ }
+]

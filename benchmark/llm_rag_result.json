@@ -12,7 +12,7 @@
    "summary": {
     "n": 281,
     "cite_acc": 0.0036,
-    "span_f1": 0.3237,
+    "span_f1": 0.3244,
     "abstain_rate": 0.548,
     "ctx_hit5": 0.0,
     "mean_ans_tokens": 78.2
@@ -98,7 +98,7 @@
     "GEN28619": {
      "answer": "Giá cả trong hợp đồng thường được xác định cụ thể trong nội dung hợp đồng, có thể bằng cách liệt kê chi tiết các sản phẩm hoặc dịch vụ, số lượng, đơn giá và tổng cộng. Tuy nhiên, không có một quy định chung cụ thể về cách xác định giá cả trong các điều luật hiện hành của Việt Nam.",
      "cite_ok": false,
-     "span_f1": 0.2308,
+     "span_f1": 0.2986,
      "abstain": false,
      "ctx_hit5": false
     },
@@ -763,7 +763,7 @@
     "GEN18692": {
      "answer": "Nếu vật phẩm bạn mua không đáp ứng chất lượng như đã công bố, bạn nên thực hiện các bước sau:\n\n1. Liên hệ với nhà cung cấp hoặc cửa hàng bán hàng để yêu cầu giải quyết vấn đề.\n2. Nếu không được giải quyết thỏa đáng, bạn có thể yêu cầu bồi thường theo quy định của pháp luật về hàng hóa giả mạo hoặc hàng giả.\n3. Bạn cũng có thể liên hệ với cơ quan quản lý thị trường địa phương để trình bày vấn đề và yêu cầu họ can thiệp.\n\nLưu ý rằng, bạn cần giữ lại chứng từ mua hàng và các bằng chứng khác liên quan đến vấn đề này để hỗ trợ khi yêu cầu giải quyết.",
      "cite_ok": false,
-     "span_f1": 0.2397,
+     "span_f1": 0.2636,
      "abstain": false,
      "ctx_hit5": false
     },
@@ -882,7 +882,7 @@
     "GEN38275": {
      "answer": "Không, phần tài sản bạn tặng cho người khác trong di chúc không phải chịu trách nhiệm về các khoản nợ của bạn. Điều này tuân theo quy định tại Điều 419 Bộ Luật Dân sự năm 2015.",
      "cite_ok": false,
-     "span_f1": 0.1505,
+     "span_f1": 0.2581,
      "abstain": false,
      "ctx_hit5": false
     },
@@ -1991,7 +1991,7 @@
    "summary": {
     "n": 281,
     "cite_acc": 0.4875,
-    "span_f1": 0.4638,
+    "span_f1": 0.465,
     "abstain_rate": 0.1103,
     "ctx_hit5": 0.7295,
     "mean_ans_tokens": 83.6
@@ -2525,7 +2525,7 @@
     "GEN38275": {
      "answer": "Theo các trích dẫn luật, nếu toàn bộ di sản không đủ để thanh toán nghĩa vụ tài sản của người lập di chúc thì phần di tặng cũng được dùng để thực hiện phần nghĩa vụ còn lại của người này. Tuy nhiên, điều này chỉ áp dụng khi toàn bộ di sản không đủ để thanh toán nghĩa vụ tài sản. Trong trường hợp còn lại, người được di tặng không phải thực hiện nghĩa vụ tài sản đối với phần được di tặng. \n\nĐiều này được quy định tại các điều 674 BLDS1995 và 646 BLDS2015. Do đó, câu trả lời là không phải luôn luôn, phụ thuộc vào tình hình cụ thể của di sản và nghĩa vụ tài sản.",
      "cite_ok": false,
-     "span_f1": 0.3897,
+     "span_f1": 0.6095,
      "abstain": false,
      "ctx_hit5": false
     },
@@ -2980,7 +2980,7 @@
     "GEN18692": {
      "answer": "Theo Điều 437 của Bộ Luật Thương mại 1995 (sửa đổi năm 2014), bạn có quyền yêu cầu bên bán sửa chữa, đổi vật có khuyết tật, giảm giá và bồi thường thiệt hại, nếu không có thoả thuận khác. Tuy nhiên, để có thể thực hiện các quyền này, cần phải chứng minh rằng vật mua không đáp ứng chất lượng như đã công bố. Bạn nên lưu lại chứng cứ về việc vật không đáp ứng chất lượng như đã công bố và liên hệ với bên bán để giải quyết vấn đề. Nếu không đạt được thỏa thuận, bạn có thể đưa vụ việc này ra tòa án hoặc trọng tài thương mại.",
      "cite_ok": false,
-     "span_f1": 0.3191,
+     "span_f1": 0.379,
      "abstain": false,
      "ctx_hit5": false
     },
@@ -3246,7 +3246,7 @@
     "GEN28619": {
      "answer": "Giá cả trong hợp đồng được xác định dựa trên các điều khoản sau:\n\n- Nếu không có thỏa thuận về giá, giá sẽ được xác định theo giá thị trường tại địa điểm và thời điểm giao kết hợp đồng (theo Điều 519 BLDS2015 và Điều 433 BLDS2015).\n\n- Trường hợp không có thỏa thuận về phương thức thanh toán, phương thức thanh toán sẽ được xác định theo tập quán tại địa điểm và thời điểm giao kết hợp đồng (theo Điều 519 BLDS2015 và Điều 433 BLDS2015).\n\nNhư vậy, giá cả và phương thức thanh toán đều dựa trên giá thị trường và tập quán tại địa điểm và thời điểm giao kết hợp đồng.",
      "cite_ok": false,
-     "span_f1": 0.374,
+     "span_f1": 0.4364,
      "abstain": false,
      "ctx_hit5": false
     },
@@ -3969,8 +3969,8 @@
   "rag_hybrid_tcr": {
    "summary": {
     "n": 281,
-    "cite_acc": 0.5943,
-    "span_f1": 0.4868,
+    "cite_acc": 0.6014,
+    "span_f1": 0.4885,
     "abstain_rate": 0.1068,
     "ctx_hit5": 0.8114,
     "mean_ans_tokens": 81.4
@@ -5505,7 +5505,7 @@
     "GEN28619": {
      "answer": "Giá cả trong hợp đồng được xác định như sau:\n\n1. Theo thỏa thuận của các bên.\n2. Theo quy định của Nhà nước đối với tài sản cụ thể.\n3. Theo giá thị trường tại địa điểm và thời điểm giao kết hợp đồng.\n4. Theo hệ số trượt giá nếu có thoả thuận.\n5. Theo phương pháp xác định giá nếu có thoả thuận.\n6. Theo giá thị trường nếu không rõ ràng.\n7. Theo giá dịch vụ cùng loại tại thời điểm và địa điểm giao kết hợp đồng nếu không thoả thuận về giá dịch vụ.\n8. Theo giá trị tài sản thuê khoán được xác định bởi người thứ ba nếu không xác định được giá trị.\n\nĐiều 431 BLDS2005, Điều 524 BLDS2005, Điều 505 BLDS",
      "cite_ok": true,
-     "span_f1": 0.4838,
+     "span_f1": 0.6,
      "abstain": false,
      "ctx_hit5": true
     },
@@ -5861,8 +5861,8 @@
     },
     "GEN38275": {
      "answer": "Theo Điều 671, Khoản 1 của Bộ Luật Dân sự 2005, người được di tặng không phải thực hiện nghĩa vụ tài sản đối với phần được di tặng, trừ trường hợp toàn bộ di sản không đủ để thanh toán nghĩa vụ tài sản của người lập di chúc thì phần di tặng cũng được dùng để thực hiện phần nghĩa vụ còn lại của người này. Do đó, phần tài sản bạn tặng cho người khác trong di chúc không bắt buộc họ phải trả nợ, trừ trường hợp đặc biệt như trên.",
-     "cite_ok": false,
-     "span_f1": 0.4198,
+     "cite_ok": true,
+     "span_f1": 0.7403,
      "abstain": false,
      "ctx_hit5": true
     },
@@ -5882,8 +5882,8 @@
     },
     "GEN18692": {
      "answer": "Theo Điều 430 BLDS2005, nếu vật mua không đáp ứng chất lượng như đã công bố, bạn cần báo ngay khi phát hiện khuyết tật và có quyền yêu cầu bên bán sửa chữa, đổi vật có khuyết tật, giảm giá và bồi thường thiệt hại, nếu không có thoả thuận khác. Bạn cũng có thể yêu cầu giảm giá, đổi vật có khuyết tật lấy vật khác hoặc trả lại vật và lấy lại tiền theo Điều 446 và Điều 447 BLDS2005.",
-     "cite_ok": false,
-     "span_f1": 0.3855,
+     "cite_ok": true,
+     "span_f1": 0.4279,
      "abstain": false,
      "ctx_hit5": true
     },
@@ -5948,8 +5948,8 @@
   "rag_rerank_tcr": {
    "summary": {
     "n": 280,
-    "cite_acc": 0.5929,
-    "span_f1": 0.4884,
+    "cite_acc": 0.6,
+    "span_f1": 0.4897,
     "abstain_rate": 0.1107,
     "ctx_hit5": 0.8464,
     "mean_ans_tokens": 83.7
@@ -7196,8 +7196,8 @@
     },
     "GEN28619": {
      "answer": "Giá cả trong hợp đồng được xác định như sau:\n\n- Theo thỏa thuận của các bên (Điều 431 BLDS2005).\n- Nếu không thỏa thuận được, giá sẽ được xác định dựa trên giá thị trường tại địa điểm và thời điểm giao kết hợp đồng (Điều 431 BLDS2005).\n- Đối với tài sản thuộc loại tươi sống, mau hỏng hoặc có giá trị nhỏ mà các bên không thoả thuận được, giá sẽ do chấp hành viên xác định (Điều 98 THADS2008).\n\nTóm lại, giá cả trong hợp đồng được xác định dựa trên thỏa thuận của các bên, nhưng nếu không thỏa thuận được, giá sẽ được xác định dựa trên giá thị trường hoặc do chấp hành viên xác định trong trường hợp đặc biệt.",
-     "cite_ok": false,
-     "span_f1": 0.3616,
+     "cite_ok": true,
+     "span_f1": 0.4718,
      "abstain": false,
      "ctx_hit5": true
     },
@@ -7497,8 +7497,8 @@
     },
     "GEN38275": {
      "answer": "Theo Điều 671, Khoản 1 của Bộ Luật Dân sự 2005, người được di tặng không phải thực hiện nghĩa vụ tài sản đối với phần được di tặng, trừ trường hợp toàn bộ di sản không đủ để thanh toán nghĩa vụ tài sản của người lập di chúc thì phần di tặng cũng được dùng để thực hiện phần nghĩa vụ còn lại của người này. Do đó, phần tài sản bạn tặng cho người khác trong di chúc không bắt buộc họ phải trả nợ, trừ trường hợp đặc biệt khi toàn bộ di sản không đủ để thanh toán nghĩa vụ tài sản của người lập di chúc.",
-     "cite_ok": false,
-     "span_f1": 0.4385,
+     "cite_ok": true,
+     "span_f1": 0.7374,
      "abstain": false,
      "ctx_hit5": true
     },
@@ -7547,7 +7547,7 @@
     "GEN18692": {
      "answer": "Theo Điều 430 BLDS 2005, nếu chất lượng của vật đã được công bố và bạn phát hiện khuyết tật làm mất giá trị hoặc giảm sút giá trị sử dụng của vật đã mua, bạn có quyền yêu cầu bên bán sửa chữa, giảm giá, đổi vật có khuyết tật lấy vật khác hoặc trả lại vật và lấy lại tiền. Tuy nhiên, bạn cần chứng minh rằng khuyết tật này đã được công bố trước khi mua.",
      "cite_ok": false,
-     "span_f1": 0.4,
+     "span_f1": 0.3602,
      "abstain": false,
      "ctx_hit5": true
     },
@@ -7918,5 +7918,6 @@
    }
   }
  },
- "runtime_sec": 973.0
+ "runtime_sec": 973.0,
+ "rescore_note": "cite_acc and span_f1 recomputed from stored greedy answers after pass-3 gold updates; abstain and ctx_hit5 unchanged (answer/context dependent)"
 }

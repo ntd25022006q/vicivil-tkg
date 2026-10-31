@@ -263,6 +263,38 @@
    "valid_from": "2026-03-01",
    "valid_to": null,
    "status": "external-ref"
+  },
+  {
+   "law_id": "BLTTDS2004",
+   "ten": "Bo luat To tung dan su 2004",
+   "so_hieu": "24/2004/QH11",
+   "valid_from": "2005-01-01",
+   "valid_to": "2017-07-01",
+   "status": "het_hieu_luc"
+  },
+  {
+   "law_id": "ND158_2005",
+   "ten": "Nghi dinh 158/2005/NĐ-CP ve dang ky va quan ly ho tich",
+   "so_hieu": "158/2005/NĐ-CP",
+   "valid_from": "2006-04-01",
+   "valid_to": "2016-01-01",
+   "status": "het_hieu_luc"
+  },
+  {
+   "law_id": "ND126_2014",
+   "ten": "Nghi dinh 126/2014/NĐ-CP chi tiet mot so dieu va bien phap thi hanh Luat HNGD",
+   "so_hieu": "126/2014/NĐ-CP",
+   "valid_from": "2015-02-15",
+   "valid_to": null,
+   "status": "hieu_luc"
+  },
+  {
+   "law_id": "BLTTDS2015-EXT",
+   "ten": "Bo luat To tung dan su 2015",
+   "so_hieu": "92/2015/QH13",
+   "valid_from": "2017-07-01",
+   "valid_to": null,
+   "status": "external-ref"
   }
  ],
  "succession": [
@@ -412,12 +444,50 @@
    "relation": "AMENDS",
    "at": "2026-03-01",
    "note": "verified from VBHN preamble (2025-12-11)"
+  },
+  {
+   "src": "BLTTDS2015-EXT",
+   "tgt": "BLTTDS2004",
+   "relation": "REPLACES",
+   "at": "2017-07-01",
+   "note": "Bo luat To tung dan su 2015 thay the BLTTDS 2004 tu 01/07/2017"
+  },
+  {
+   "src": "HOTICH2014",
+   "tgt": "ND158_2005",
+   "relation": "REPLACES",
+   "at": "2016-01-01",
+   "note": "Luat Ho tich 2014 (hieu luc 01/01/2016) thay the ND 158/2005"
+  },
+  {
+   "src": "ND126_2014",
+   "tgt": "HNGD2014",
+   "relation": "GUIDES",
+   "at": "2015-02-15",
+   "note": "ND 126/2014 chi tiet va bien phap thi hanh Luat HNGD 2014"
   }
  ],
  "chunk_counts": {
   "BLDS2015": 1838,
   "BLDS2005": 780,
-  "HNGD2014": 393
+  "HNGD2014": 393,
+  "van-ban-hop-nhat-so-21-vbhn-vpqh-468974": 1979,
+  "luat-so-15-2026-qh16-470450": 151,
+  "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106": 135,
+  "nghi-dinh-so-152-2026-nd-cp-469524": 665,
+  "HOTICH2014": 266,
+  "HNGDVBHN2025": 392,
+  "NCN2010": 208,
+  "THADSVBHN": 758,
+  "THADS2008": 721,
+  "TNBTCNN2017": 505,
+  "HNGD2000": 239,
+  "HOAGIAI2026": 175,
+  "HOTICH2026": 172,
+  "BLDS1995": 1890,
+  "BLTTDS2004": 1310,
+  "ND158_2005": 314,
+  "ND126_2014": 262
  },
  "tests": {
   "2010-06-01": [
@@ -429,6 +499,19 @@
   ],
   "2000-01-01": [
    "BLDS1995"
+  ],
+  "2006-06-01": [
+   "BLDS2005",
+   "ND158_2005"
+  ],
+  "2011-06-01": [
+   "BLDS2005",
+   "BLTTDS2004"
+  ],
+  "2015-06-01": [
+   "BLTTDS2004",
+   "ND126_2014",
+   "HNGD2014"
   ]
  }
 }

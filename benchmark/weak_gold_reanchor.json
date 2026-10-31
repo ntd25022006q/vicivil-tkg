@@ -1,0 +1,53 @@
+{
+ "meta": {
+  "judge": "qwen3:14b-pass3",
+  "n_verdicts": 99,
+  "n_reanchored": 3,
+  "n_reanchor_rejected": 1,
+  "n_flagged": 29,
+  "n_confirmed_ok": 66,
+  "guardrails": [
+   "chunk-exists",
+   "in-stored-candidates",
+   "validity-window"
+  ]
+ },
+ "reanchors": [
+  {
+   "qid": "GEN18692",
+   "from": [
+    "BLDS2005|Dieu444|Khoan1"
+   ],
+   "to": [
+    "BLDS2005|Dieu447|Khoan1"
+   ],
+   "evidence": "UNG VIEN BLDS2005|Dieu447|Khoan1 chi tiết hơn về chi phí sửa chữa và thời hạn xử lý khuyết tật",
+   "reason": "GOLD hiện tại thiếu thông tin cụ thể về chi phí sửa chữa và thời gian hợp lý để bên bán khắc phục, trong khi UNG VIEN 447 đã nêu rõ các điều này",
+   "judge": "qwen3:14b-pass3"
+  },
+  {
+   "qid": "GEN28619",
+   "from": [
+    "BLDS2005|Dieu524|Khoan1"
+   ],
+   "to": [
+    "BLDS2005|Dieu431|Khoan1"
+   ],
+   "evidence": "GOLD chỉ đề cập giá thị trường khi không có thỏa thuận, trong khi UNG VIEN BLDS2005|Dieu431|Khoan1 nêu rõ thêm các trường hợp giá do bên thứ ba xác định, áp dụng hệ số trượt giá, và quy định khung giá của Nhà nước.",
+   "reason": "UNG VIEN cung cấp thông tin phong phú hơn, bao quát nhiều tình huống xác định giá hơn GOLD.",
+   "judge": "qwen3:14b-pass3"
+  },
+  {
+   "qid": "GEN38275",
+   "from": [
+    "BLDS2005|Dieu637|Khoan1"
+   ],
+   "to": [
+    "BLDS2005|Dieu671|Khoan1"
+   ],
+   "evidence": "Dieu671 quy định người được di tặng không phải thực hiện nghĩa vụ tài sản đối với phần được di tặng",
+   "reason": "GOLD hiện tại nói về nghĩa vụ của người thừa kế, không đề cập đến người được di tặng. UNG VIEN BLDS2005|Dieu671|Khoan1 trực tiếp trả lời câu hỏi về nghĩa vụ của người nhận di tặng",
+   "judge": "qwen3:14b-pass3"
+  }
+ ]
+}

@@ -1,14 +1,20 @@
 {
- "n_questions_with_verified_gold": 279,
- "n_questions_unverifiable": 2,
- "unverifiable_qids": [
-  "TOP27031",
-  "TOP43156"
- ],
+ "n_questions_with_verified_gold": 281,
+ "n_questions_unverifiable": 0,
+ "unverifiable_qids": [],
  "n_regolded_by_two_round_llm_judge": 38,
  "judge_model": "qwen2.5:14b",
  "judge_agreement_rate": 0.8875,
  "rule": "cau chi con lai khi ca hai vong kiem chung cua LLM judge deu xac nhan doan do tra loi dung; cac doan duoc giu la dap an chinh la cac ban khac nhau cua cung dieu khoan",
+ "pass3": {
+  "judge": "qwen3:14b",
+  "n_rechecked": 2,
+  "n_regolded": 2,
+  "qids": [
+   "TOP27031",
+   "TOP43156"
+  ]
+ },
  "gold": {
   "GEN70985": [
    "BLDS2015|Dieu455|Khoan1",
@@ -119,7 +125,7 @@
    "BLDS2005|Dieu768|Khoan1"
   ],
   "GEN38275": [
-   "BLDS2005|Dieu637|Khoan1"
+   "BLDS2005|Dieu671|Khoan1"
   ],
   "GEN13335": [
    "BLDS2005|Dieu508|Khoan1"
@@ -165,7 +171,7 @@
    "BLDS2005|Dieu614|Khoan1"
   ],
   "GEN18692": [
-   "BLDS2005|Dieu444|Khoan1"
+   "BLDS2005|Dieu447|Khoan1"
   ],
   "GEN87629": [
    "BLDS2005|Dieu763|Khoan1"
@@ -186,7 +192,7 @@
    "BLDS2005|Dieu555|Khoan1"
   ],
   "GEN28619": [
-   "BLDS2005|Dieu524|Khoan1"
+   "BLDS2005|Dieu431|Khoan1"
   ],
   "GEN40699": [
    "BLDS2005|Dieu107|Khoan1"
@@ -879,6 +885,12 @@
   ],
   "CIV012": [
    "BLDS1995|Dieu679|Muc1"
+  ],
+  "TOP27031": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu50|Khoan3"
+  ],
+  "TOP43156": [
+   "NCN2010|Dieu43|Khoan2|Diemc"
   ]
  }
 }

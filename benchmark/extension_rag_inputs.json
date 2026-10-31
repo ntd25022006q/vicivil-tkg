@@ -1,0 +1,2970 @@
+{
+ "EXT10014": {
+  "question": "Tài sản thế chấp của tôi bị mất giá trị vì người nhận thế chấp không bảo quản đúng cách, tôi có quyền đòi bồi thường không?",
+  "gold_ids": [
+   "BLDS2005|Dieu352|Khoan1"
+  ],
+  "as_of": "2012-08-07",
+  "base_top5": [
+   "BLDS2005|Dieu352|Khoan1",
+   "BLDS2015|Dieu324|Khoan2|Diema",
+   "BLDS1995|Dieu353|Muc2",
+   "BLDS1995|Dieu355|Muc1",
+   "BLDS2015|Dieu323|Khoan3"
+  ],
+  "tcr_top5": [
+   "BLDS2005|Dieu352|Khoan1",
+   "BLDS2005|Dieu348|Khoan1",
+   "BLDS2005|Dieu353",
+   "BLDS2005|Dieu354|Khoan1",
+   "BLDS2005|Dieu350"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2005|Dieu348|Khoan1",
+   "BLDS2005|Dieu352|Khoan1",
+   "BLDS2005|Dieu353",
+   "BLDS2005|Dieu354|Khoan1",
+   "BLDS2005|Dieu350"
+  ]
+ },
+ "EXT10017": {
+  "question": "Trong quá trình ly hôn, tôi và vợ tôi đều muốn tiếp tục sử dụng mảnh đất nông nghiệp trồng cây hàng năm chung nhưng không thể thỏa thuận được. Vậy tôi phải làm gì?",
+  "gold_ids": [
+   "HNGD2014|Dieu62|Khoan2|Diema"
+  ],
+  "as_of": "2016-01-01",
+  "base_top5": [
+   "HNGD2014|Dieu62|Khoan2|Diema",
+   "HNGD2014|Dieu62|Khoan2|Diemb",
+   "HNGDVBHN2025|Dieu62|Khoan2|Diema",
+   "HNGD2000|Dieu97|Khoan2|Diema",
+   "HNGD2014|Dieu62|Khoan2|Diemc"
+  ],
+  "tcr_top5": [
+   "HNGD2014|Dieu62|Khoan2|Diema",
+   "HNGD2014|Dieu62|Khoan2|Diemb",
+   "HNGD2014|Dieu62|Khoan2|Diemc",
+   "HNGD2014|Dieu62|Khoan2|Diemd",
+   "HNGD2014|Dieu62|Khoan3"
+  ],
+  "rr_tcr_top5": [
+   "HNGD2014|Dieu62|Khoan2|Diema",
+   "HNGD2014|Dieu62|Khoan2|Diemb",
+   "HNGD2014|Dieu62|Khoan2|Diemd",
+   "HNGD2014|Dieu62|Khoan2|Diemc",
+   "HNGD2014|Dieu61|Khoan1"
+  ]
+ },
+ "EXT10020": {
+  "question": "Tôi có một người bạn vừa nhận được một bản án từ tòa án của một nước khác. Anh ấy muốn biết liệu tòa án Việt Nam có thể xét lại vụ án này không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu438|Khoan4"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diemd",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu438|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diemđ",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu427|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu444|Khoan1"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diemd",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu438|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diemđ",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu427|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu444|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu438|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diemd",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu444|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu425|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diema"
+  ]
+ },
+ "EXT10021": {
+  "question": "Trong quá trình tố tụng dân sự, tôi gặp phải trường hợp viện kiểm sát không thực hiện việc kháng nghị theo thủ tục giám đốc thẩm khi xét thấy bản án của tòa án vi phạm pháp luật. Viện kiểm sát có nghĩa vụ thực hiện việc này theo luật định hay không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu57|Khoan1|Diemd"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu57|Khoan1|Diemd",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu21|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu58|Khoan7",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu331|Khoan2"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu57|Khoan1|Diemd",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu21|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu58|Khoan7",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu331|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu57|Khoan1|Dieme"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu57|Khoan1|Diemd",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu21|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu331|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu58|Khoan7",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu278"
+  ]
+ },
+ "EXT10025": {
+  "question": "Tòa án không ghi rõ tên và địa chỉ của tôi trong quyết định dân sự vừa ra, tôi có khiếu nại được không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu370|Khoan1|Dieme"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu448|Khoan1|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu477|Khoan6|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu477|Khoan6|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu473|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu370|Khoan1|Diemd"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu448|Khoan1|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu477|Khoan6|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu477|Khoan6|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu473|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu370|Khoan1|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu473|Khoan1",
+   "THADS2008|Dieu147|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu189|Khoan4|Diemđ",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu448|Khoan1|Diema"
+  ]
+ },
+ "EXT10027": {
+  "question": "Nếu tôi kháng cáo và tòa án phúc thẩm sửa lại bản án, tôi có phải trả án phí phúc thẩm không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu148|Khoan2"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu148|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu148|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu148|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu276|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu321|Khoan1"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu148|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu148|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu148|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu276|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu321|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu148|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu148|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu148|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu146|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu276|Khoan1"
+  ]
+ },
+ "EXT10030": {
+  "question": "Thẩm phán không mở phiên họp giải quyết khiếu nại của tôi trong thời hạn 5 ngày làm việc kể từ khi được phân công, tôi có khiếu nại được không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan3"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan1",
+   "THADS2008|Dieu148",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu373|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu505"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan1",
+   "THADS2008|Dieu148",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu373|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu505"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu191|Khoan3|Diemd",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu191|Khoan3|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan1",
+   "THADS2008|Dieu148"
+  ]
+ },
+ "EXT10031": {
+  "question": "Tôi đã nộp tiền tạm ứng cho chi phí ủy thác tư pháp nhưng số tiền đó nhiều hơn chi phí thực tế, tôi có được hoàn lại phần tiền thừa không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu154|Khoan2"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu154|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu158|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu162|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu166|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu154|Khoan1"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu154|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu158|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu162|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu166|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu154|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu154|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu158|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu162|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu166|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu154|Khoan1"
+  ]
+ },
+ "EXT10034": {
+  "question": "Trong trường hợp kết quả giải quyết bồi thường không được chấp nhận, người dân có quyền làm gì trong thời hạn 5 ngày làm việc?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan1"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "luat-so-15-2026-qh16-470450|Dieu43|Khoan2|Diemd",
+   "TNBTCNN2017|Dieu47|Khoan1",
+   "TNBTCNN2017|Dieu42|Khoan2|Diemb",
+   "TNBTCNN2017|Dieu42|Khoan3",
+   "luat-so-15-2026-qh16-470450|Dieu47|Khoan1|Diemb"
+  ],
+  "tcr_top5": [
+   "luat-so-15-2026-qh16-470450|Dieu43|Khoan2|Diemd",
+   "TNBTCNN2017|Dieu47|Khoan1",
+   "TNBTCNN2017|Dieu42|Khoan2|Diemb",
+   "TNBTCNN2017|Dieu42|Khoan3",
+   "luat-so-15-2026-qh16-470450|Dieu47|Khoan1|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu42|Khoan3",
+   "TNBTCNN2017|Dieu42|Khoan2|Diemb",
+   "TNBTCNN2017|Dieu47|Khoan1",
+   "TNBTCNN2017|Dieu42|Khoan2|Diema",
+   "TNBTCNN2017|Dieu50|Khoan2"
+  ]
+ },
+ "EXT10035": {
+  "question": "Trong trường hợp tôi đã yêu cầu bồi thường từ năm 2025 và chưa có kết quả giải quyết, tôi có được áp dụng Luật mới có hiệu lực từ năm 2026 để được hưởng lợi ích cao hơn không?",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu3|Khoan2"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "luat-so-15-2026-qh16-470450|Dieu3|Khoan2",
+   "TNBTCNN2017|Dieu78|Khoan1",
+   "TNBTCNN2017|Dieu78|Khoan2",
+   "luat-so-15-2026-qh16-470450|Dieu47|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu87|Khoan1"
+  ],
+  "tcr_top5": [
+   "luat-so-15-2026-qh16-470450|Dieu3|Khoan2",
+   "TNBTCNN2017|Dieu78|Khoan1",
+   "TNBTCNN2017|Dieu78|Khoan2",
+   "luat-so-15-2026-qh16-470450|Dieu47|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu87|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "luat-so-15-2026-qh16-470450|Dieu3|Khoan2",
+   "TNBTCNN2017|Dieu78|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu6",
+   "TNBTCNN2017|Dieu78|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu87|Khoan1"
+  ]
+ },
+ "EXT10036": {
+  "question": "Trong vụ việc của tôi, kiểm sát viên có thể kiến nghị gì về biện pháp khẩn cấp tạm thời tại phiên tòa được không?",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu21|Khoan2|Dieme"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu140",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu21|Khoan2|Dieme",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu134",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu112|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu133|Khoan1|Dieme"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu140",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu21|Khoan2|Dieme",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu134",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu112|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu133|Khoan1|Dieme"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu140",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu21|Khoan2|Dieme",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu134",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu133|Khoan2|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu139|Khoan2"
+  ]
+ },
+ "EXT10038": {
+  "question": "Viện kiểm sát cần làm gì trong thời hạn 7 ngày sau khi nhận được quyết định mở phiên họp để tham gia phiên họp giải quyết việc dân sự?",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu25|Khoan2"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu366|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu373|Khoan3",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu25|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan3",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu25|Khoan3"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu366|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu373|Khoan3",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu25|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan3",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu25|Khoan3"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu366|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu373|Khoan3",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu25|Khoan2",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu26|Khoan2",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu25|Khoan1"
+  ]
+ },
+ "EXT10040": {
+  "question": "Tại sao tôi phải trả chi phí bảo quản tài sản bị thu giữ trong trường hợp tôi không nhận được vật chứng đó?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu80|Khoan2|Diemi"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu39|Khoan2",
+   "BLDS2015|Dieu558|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu82|Khoan6",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu83|Khoan1|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu81|Khoan10"
+  ],
+  "tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu39|Khoan2",
+   "BLDS2015|Dieu558|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu82|Khoan6",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu83|Khoan1|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu81|Khoan10"
+  ],
+  "rr_tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu39|Khoan2",
+   "BLDS2015|Dieu560",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu80|Khoan2|Diemi",
+   "THADS2008|Dieu58|Khoan3",
+   "THADSVBHN|Dieu58|Khoan3"
+  ]
+ },
+ "EXT10045": {
+  "question": "Tôi gặp khó khăn vì quyết định ủy thác thi hành án không ghi rõ các khoản cần thiết và không kèm theo các tài liệu liên quan, tôi phải làm sao?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan3"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan3",
+   "THADSVBHN|Dieu57|Khoan1|Diema",
+   "THADS2008|Dieu44|Khoan1",
+   "THADS2008|Dieu57|Khoan1",
+   "THADSVBHN|Dieu57|Khoan2|Diema"
+  ],
+  "tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan3",
+   "THADSVBHN|Dieu57|Khoan1|Diema",
+   "THADS2008|Dieu44|Khoan1",
+   "THADS2008|Dieu57|Khoan1",
+   "THADSVBHN|Dieu57|Khoan2|Diema"
+  ],
+  "rr_tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu105|Khoan2",
+   "THADS2008|Dieu44|Khoan1",
+   "THADS2008|Dieu31|Khoan2",
+   "THADSVBHN|Dieu57|Khoan1|Diema"
+  ]
+ },
+ "EXT10046": {
+  "question": "Tôi đang giữ một số giấy tờ mà tòa án đã quyết định tôi phải trả cho người khác, nhưng tôi không muốn giao. Liệu Chấp hành viên có quyền cưỡng chế tôi giao giấy tờ đó không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu70|Khoan1"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu70|Khoan1",
+   "THADS2008|Dieu116|Khoan1",
+   "THADSVBHN|Dieu82|Khoan2",
+   "THADS2008|Dieu82|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu73|Khoan1"
+  ],
+  "tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu70|Khoan1",
+   "THADS2008|Dieu116|Khoan1",
+   "THADSVBHN|Dieu82|Khoan2",
+   "THADS2008|Dieu82|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu73|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu70|Khoan1",
+   "THADSVBHN|Dieu116|Khoan1",
+   "THADS2008|Dieu116|Khoan1",
+   "THADSVBHN|Dieu68|Khoan5",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu42|Khoan8"
+  ]
+ },
+ "EXT10048": {
+  "question": "Khi nhận vật chứng niêm phong, tôi phát hiện gói bị rách nhưng người giao không có kết luận của cơ quan thẩm quyền, tôi nên làm gì?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu37|Khoan2|Diemc"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "THADSVBHN|Dieu123|Khoan2",
+   "THADS2008|Dieu123|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu37|Khoan2|Diemc",
+   "THADS2008|Dieu93",
+   "THADSVBHN|Dieu93"
+  ],
+  "tcr_top5": [
+   "THADSVBHN|Dieu123|Khoan2",
+   "THADS2008|Dieu123|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu37|Khoan2|Diemc",
+   "THADS2008|Dieu93",
+   "THADSVBHN|Dieu93"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu123|Khoan2",
+   "THADSVBHN|Dieu123|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu37|Khoan2|Diemc",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu8|Khoan3",
+   "THADS2008|Dieu123|Khoan1"
+  ]
+ },
+ "EXT10050": {
+  "question": "Ủy ban nhân dân tỉnh có trách nhiệm đảm bảo nguồn lực để thực hiện nhiệm vụ thi hành án dân sự đúng quy định không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan8"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan8",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan10",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu105|Khoan2",
+   "TNBTCNN2017|Dieu73|Khoan3|Diemi",
+   "THADSVBHN|Dieu167|Khoan1|Diemg"
+  ],
+  "tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan8",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan10",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu105|Khoan2",
+   "TNBTCNN2017|Dieu73|Khoan3|Diemi",
+   "THADSVBHN|Dieu167|Khoan1|Diemg"
+  ],
+  "rr_tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan8",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan9",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu106|Khoan3",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan10",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu105|Khoan2"
+  ]
+ },
+ "EXT10054": {
+  "question": "Tôi gặp khó khăn trong việc cập nhật thông tin hộ tịch của mình trên hệ thống điện tử.Ủy ban nhân dân cấp tỉnh có trách nhiệm hỗ trợ tôi trong việc này không?",
+  "gold_ids": [
+   "HOTICH2014|Dieu69|Khoan1|Diemd"
+  ],
+  "as_of": "2017-01-01",
+  "base_top5": [
+   "HOTICH2014|Dieu69|Khoan1|Diemd",
+   "HOTICH2014|Dieu60|Khoan1",
+   "HOTICH2014|Dieu70|Khoan1|Dieme",
+   "HOTICH2014|Dieu71|Khoan1|Diemđ",
+   "HOTICH2014|Dieu73|Khoan1|Diemd"
+  ],
+  "tcr_top5": [
+   "HOTICH2014|Dieu69|Khoan1|Diemd",
+   "HOTICH2014|Dieu60|Khoan1",
+   "HOTICH2014|Dieu70|Khoan1|Dieme",
+   "HOTICH2014|Dieu71|Khoan1|Diemđ",
+   "HOTICH2014|Dieu73|Khoan1|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "HOTICH2014|Dieu69|Khoan1|Diemd",
+   "HOTICH2014|Dieu69|Khoan3",
+   "HOTICH2014|Dieu69|Khoan1|Diemh",
+   "HOTICH2014|Dieu69|Khoan1|Diema",
+   "HOTICH2014|Dieu59|Khoan2"
+  ]
+ },
+ "EXT10057": {
+  "question": "Người thân thích của tôi không tự nguyện thực hiện nghĩa vụ cấp dưỡng, tôi có quyền yêu cầu tòa án can thiệp không?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu119|Khoan2|Diema"
+  ],
+  "as_of": "2026-06-30",
+  "base_top5": [
+   "HNGD2000|Dieu55|Khoan1",
+   "HNGDVBHN2025|Dieu119|Khoan2|Diema",
+   "HNGD2000|Dieu55|Khoan2",
+   "HNGD2014|Dieu119|Khoan2|Diema",
+   "HNGD2014|Dieu119|Khoan1"
+  ],
+  "tcr_top5": [
+   "HNGDVBHN2025|Dieu119|Khoan2|Diema",
+   "HNGD2014|Dieu119|Khoan2|Diema",
+   "HNGD2014|Dieu119|Khoan1",
+   "HNGDVBHN2025|Dieu119|Khoan1",
+   "HNGDVBHN2025|Dieu119|Khoan2|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "HNGDVBHN2025|Dieu119|Khoan1",
+   "HNGD2014|Dieu119|Khoan1",
+   "HNGDVBHN2025|Dieu119|Khoan2|Diema",
+   "HNGD2014|Dieu119|Khoan2|Diema",
+   "HNGDVBHN2025|Dieu119|Khoan2|Diemb"
+  ]
+ },
+ "EXT10059": {
+  "question": "Nếu vợ chồng đã chia tài sản chung trong thời kỳ hôn nhân, sau này họ muốn hợp nhất lại tài sản đó thì phải làm thế nào?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu41|Khoan1"
+  ],
+  "as_of": "2026-06-30",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu28|Khoan2",
+   "HNGD2014|Dieu40|Khoan1",
+   "HNGD2000|Dieu96|Khoan2",
+   "HNGDVBHN2025|Dieu40|Khoan1",
+   "HNGD2000|Dieu27|Khoan1"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu28|Khoan2",
+   "HNGD2014|Dieu40|Khoan1",
+   "HNGDVBHN2025|Dieu40|Khoan1",
+   "BLDS2015|Dieu655|Khoan1",
+   "HNGDVBHN2025|Dieu38|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "HNGD2014|Dieu41|Khoan1",
+   "HNGDVBHN2025|Dieu41|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu28|Khoan2",
+   "HNGD2014|Dieu38|Khoan1",
+   "HNGDVBHN2025|Dieu38|Khoan1"
+  ]
+ },
+ "EXT10066": {
+  "question": "Nếu Tòa án đã hủy quyết định áp dụng biện pháp khẩn cấp tạm thời, tôi phải làm gì để lấy lại tài sản của mình?",
+  "gold_ids": [
+   "THADSVBHN|Dieu132|Khoan1"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "THADSVBHN|Dieu132|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Dieme",
+   "THADS2008|Dieu132|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diema"
+  ],
+  "tcr_top5": [
+   "THADSVBHN|Dieu132|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Dieme",
+   "THADS2008|Dieu132|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diema"
+  ],
+  "rr_tcr_top5": [
+   "THADSVBHN|Dieu132|Khoan1",
+   "THADS2008|Dieu132|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan3"
+  ]
+ },
+ "EXT10070": {
+  "question": "Tại sao tôi phải cung cấp thông tin và giải trình về hành vi của mình khi bị tố cáo, dù tôi cho rằng mình không làm gì sai?",
+  "gold_ids": [
+   "THADSVBHN|Dieu156|Khoan2|Diema"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "THADSVBHN|Dieu156|Khoan2|Diema",
+   "THADS2008|Dieu156|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan2|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan2|Diemb"
+  ],
+  "tcr_top5": [
+   "THADSVBHN|Dieu156|Khoan2|Diema",
+   "THADS2008|Dieu156|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan2|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan2|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan2|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan2|Diemc",
+   "THADS2008|Dieu156|Khoan2|Diema",
+   "THADSVBHN|Dieu156|Khoan2|Diema"
+  ]
+ },
+ "EXT10074": {
+  "question": "Tại sao tôi phải trả chi phí định giá lại tài sản khi đã đóng đầy đủ các khoản chi phí khác trong quá trình thi hành án?",
+  "gold_ids": [
+   "THADSVBHN|Dieu73|Khoan1|Diemc"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "THADSVBHN|Dieu73|Khoan1|Diemc",
+   "THADS2008|Dieu73|Khoan1|Diemc",
+   "THADS2008|Dieu73|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu166|Khoan1",
+   "THADSVBHN|Dieu73|Khoan2|Diemb"
+  ],
+  "tcr_top5": [
+   "THADSVBHN|Dieu73|Khoan1|Diemc",
+   "THADS2008|Dieu73|Khoan1|Diemc",
+   "THADS2008|Dieu73|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu166|Khoan1",
+   "THADSVBHN|Dieu73|Khoan2|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "THADSVBHN|Dieu73|Khoan2|Diemb",
+   "THADSVBHN|Dieu73|Khoan3|Diema",
+   "THADS2008|Dieu73|Khoan2|Diema",
+   "THADS2008|Dieu73|Khoan3|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu166|Khoan2"
+  ]
+ },
+ "EXT10075": {
+  "question": "Trong quá trình kê biên đất đai, người dân được tạm giao quản lý mảnh đất đó cần biết những quyền và nghĩa vụ cụ thể của mình được ghi trong biên bản như thế nào?",
+  "gold_ids": [
+   "THADSVBHN|Dieu112|Khoan3|Diemd"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "THADSVBHN|Dieu112|Khoan3|Diemd",
+   "THADS2008|Dieu112|Khoan3|Diemd",
+   "THADSVBHN|Dieu112|Khoan3|Diema",
+   "THADSVBHN|Dieu112|Khoan3|Diemc",
+   "THADSVBHN|Dieu112|Khoan3|Diemb"
+  ],
+  "tcr_top5": [
+   "THADSVBHN|Dieu112|Khoan3|Diemd",
+   "THADS2008|Dieu112|Khoan3|Diemd",
+   "THADSVBHN|Dieu112|Khoan3|Diema",
+   "THADSVBHN|Dieu112|Khoan3|Diemc",
+   "THADSVBHN|Dieu112|Khoan3|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu112|Khoan3|Diemd",
+   "THADSVBHN|Dieu112|Khoan3|Diemd",
+   "THADS2008|Dieu112|Khoan3|Diema",
+   "THADSVBHN|Dieu112|Khoan3|Diema",
+   "THADS2008|Dieu112|Khoan3|Diemc"
+  ]
+ },
+ "EXT10079": {
+  "question": "Người dân hỏi: \"Cơ sở sản xuất của tôi đang bị thi hành án, liệu họ có quyền tịch thu số lương thực, thực phẩm và dụng cụ phục vụ bữa ăn cho công nhân không?\"",
+  "gold_ids": [
+   "THADS2008|Dieu87|Khoan3|Diema"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADSVBHN|Dieu87|Khoan3|Diema",
+   "THADS2008|Dieu87|Khoan3|Diema",
+   "THADS2008|Dieu87|Khoan2|Diema",
+   "THADSVBHN|Dieu87|Khoan2|Diema",
+   "THADSVBHN|Dieu121|Khoan3"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu87|Khoan3|Diema",
+   "THADS2008|Dieu87|Khoan2|Diema",
+   "THADS2008|Dieu68|Khoan1",
+   "THADS2008|Dieu115|Khoan1",
+   "THADS2008|Dieu78|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu87|Khoan3|Diema",
+   "THADS2008|Dieu71|Khoan4",
+   "THADS2008|Dieu97",
+   "THADS2008|Dieu87|Khoan3|Diemc",
+   "THADS2008|Dieu87|Khoan2|Diema"
+  ]
+ },
+ "EXT10081": {
+  "question": "Trong quá trình kê biên quyền sử dụng đất, sao tôi không thấy có biên bản ghi rõ vị trí, diện tích và ranh giới thửa đất như luật qui định?",
+  "gold_ids": [
+   "THADS2008|Dieu111|Khoan3"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADSVBHN|Dieu111|Khoan3",
+   "THADS2008|Dieu111|Khoan3",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan4",
+   "THADSVBHN|Dieu112|Khoan3|Diema",
+   "THADS2008|Dieu112|Khoan3|Diema"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu111|Khoan3",
+   "THADS2008|Dieu112|Khoan3|Diema",
+   "THADS2008|Dieu112|Khoan3|Diemb",
+   "THADS2008|Dieu94",
+   "THADS2008|Dieu112|Khoan3|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu111|Khoan3",
+   "THADS2008|Dieu112|Khoan3|Diema",
+   "THADS2008|Dieu112|Khoan3|Diemb",
+   "THADS2008|Dieu112|Khoan3|Diemd",
+   "THADS2008|Dieu112|Khoan3|Diemc"
+  ]
+ },
+ "EXT10082": {
+  "question": "Tôi phải bị thi hành án nhưng công ty nơi tôi góp vốn không chịu cung cấp thông tin về phần vốn của tôi, tôi phải làm sao?",
+  "gold_ids": [
+   "THADS2008|Dieu92|Khoan1"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADSVBHN|Dieu92|Khoan1",
+   "THADS2008|Dieu92|Khoan1",
+   "THADSVBHN|Dieu92|Khoan2",
+   "THADS2008|Dieu92|Khoan2",
+   "THADSVBHN|Dieu162|Khoan6"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu92|Khoan1",
+   "THADS2008|Dieu92|Khoan2",
+   "THADS2008|Dieu162|Khoan6",
+   "THADS2008|Dieu176|Khoan1",
+   "BLDS2005|Dieu730"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu92|Khoan1",
+   "THADS2008|Dieu92|Khoan2",
+   "THADS2008|Dieu162|Khoan6",
+   "THADS2008|Dieu176|Khoan1",
+   "THADS2008|Dieu177|Khoan1"
+  ]
+ },
+ "EXT10084": {
+  "question": "Doanh nghiệp của tôi chuyển đổi thành công ty cổ phần nhưng trước đó có khoản nợ cần thanh toán, giờ tôi phải làm gì?",
+  "gold_ids": [
+   "THADS2008|Dieu54|Khoan1|Diemđ"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADS2008|Dieu54|Khoan1|Diemđ",
+   "THADSVBHN|Dieu54|Khoan1|Diemđ",
+   "THADS2008|Dieu139",
+   "BLDS1995|Dieu129|Muc3",
+   "BLDS2015|Dieu512|Khoan2"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu54|Khoan1|Diemđ",
+   "THADS2008|Dieu139",
+   "BLDS2005|Dieu449|Khoan1",
+   "THADS2008|Dieu84|Khoan5",
+   "BLDS2005|Dieu103|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu54|Khoan1|Diemđ",
+   "THADS2008|Dieu139",
+   "BLDS2005|Dieu120|Khoan1",
+   "BLDS2005|Dieu338",
+   "THADS2008|Dieu84|Khoan5"
+  ]
+ },
+ "EXT10086": {
+  "question": "Tại sao tôi phải nộp giấy tờ về quyền sử dụng đất cho cơ quan thi hành án khi đất của tôi bị kê biên?",
+  "gold_ids": [
+   "THADS2008|Dieu111|Khoan1"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADSVBHN|Dieu111|Khoan1",
+   "THADS2008|Dieu111|Khoan1",
+   "THADSVBHN|Dieu111|Khoan2",
+   "THADS2008|Dieu111|Khoan2",
+   "THADSVBHN|Dieu110|Khoan2"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu111|Khoan1",
+   "THADS2008|Dieu111|Khoan2",
+   "THADS2008|Dieu110|Khoan2",
+   "THADS2008|Dieu110|Khoan1",
+   "THADS2008|Dieu95|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu111|Khoan1",
+   "THADS2008|Dieu111|Khoan2",
+   "THADS2008|Dieu95|Khoan2",
+   "THADS2008|Dieu110|Khoan2",
+   "THADS2008|Dieu110|Khoan1"
+  ]
+ },
+ "EXT10088": {
+  "question": "Trong quá trình thi hành án, tôi lo ngại bị đối tượng khác lấy trộm tài sản đảm bảo. Tôi có quyền yêu cầu chấp hành viên áp dụng biện pháp bảo vệ tài sản đó không?",
+  "gold_ids": [
+   "THADS2008|Dieu66|Khoan1"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADS2008|Dieu66|Khoan1",
+   "THADSVBHN|Dieu66|Khoan1",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu42|Khoan10",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu42|Khoan5|Diemb",
+   "THADS2008|Dieu114|Khoan3"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu66|Khoan1",
+   "THADS2008|Dieu114|Khoan3",
+   "THADS2008|Dieu90|Khoan1",
+   "THADS2008|Dieu20|Khoan5",
+   "THADS2008|Dieu31|Khoan3"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu66|Khoan1",
+   "THADS2008|Dieu31|Khoan3",
+   "THADS2008|Dieu45|Khoan2",
+   "THADS2008|Dieu114|Khoan3",
+   "THADS2008|Dieu90|Khoan1"
+  ]
+ },
+ "EXT10093": {
+  "question": "Người dân hỏi: \"Trong trường hợp tôi muốn thương lượng bồi thường mà tôi là cá nhân và tôi cư trú tại xã A, thì địa điểm thương lượng sẽ là trụ sở Ủy ban nhân dân cấp xã A đúng không?\"",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu46|Khoan4|Diema"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu46|Khoan4|Diema",
+   "TNBTCNN2017|Dieu46|Khoan4|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu17|Khoan2|Diema",
+   "TNBTCNN2017|Dieu53|Khoan1|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu179|Khoan2|Diema"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu46|Khoan4|Diema",
+   "TNBTCNN2017|Dieu46|Khoan4|Diemb",
+   "TNBTCNN2017|Dieu53|Khoan1|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu179|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu46|Khoan4|Diema",
+   "TNBTCNN2017|Dieu46|Khoan4|Diemb",
+   "TNBTCNN2017|Dieu33|Khoan4",
+   "TNBTCNN2017|Dieu53|Khoan1|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu172|Khoan2"
+  ]
+ },
+ "EXT10096": {
+  "question": "Trong trường hợp bị giữ trong trường hợp khẩn cấp, thiệt hại về tinh thần của tôi được bồi thường như thế nào?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu27|Khoan3|Diema"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu27|Khoan3|Diema",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemb",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemd",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemc",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemđ"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu27|Khoan3|Diema",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemb",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemd",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemc",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemđ"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu27|Khoan3|Diema",
+   "TNBTCNN2017|Dieu27|Khoan2",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemđ",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemb",
+   "TNBTCNN2017|Dieu27|Khoan4"
+  ]
+ },
+ "EXT10098": {
+  "question": "Trường hợp tôi đang mang thai và phải hoàn trả tiền do lỗi của mình trong công vụ, tôi có được hoãn việc hoàn trả không?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu68|Khoan3"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu68|Khoan3",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan3|Diema",
+   "TNBTCNN2017|Dieu65|Khoan2|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan2"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu68|Khoan3",
+   "TNBTCNN2017|Dieu65|Khoan2|Diemc",
+   "TNBTCNN2017|Dieu66|Khoan4",
+   "TNBTCNN2017|Dieu65|Khoan2|Diema",
+   "TNBTCNN2017|Dieu65|Khoan2|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu68|Khoan3",
+   "TNBTCNN2017|Dieu65|Khoan2|Diemc",
+   "TNBTCNN2017|Dieu65|Khoan2|Diemb",
+   "TNBTCNN2017|Dieu64|Khoan2",
+   "TNBTCNN2017|Dieu66|Khoan4"
+  ]
+ },
+ "EXT10099": {
+  "question": "Nếu bản án phúc thẩm bị hủy trong thủ tục giám đốc thẩm hoặc tái thẩm, tôi có quyền yêu cầu tòa án cấp phúc thẩm bồi thường thiệt hại không?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu37|Khoan3"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu36|Khoan2|Diema",
+   "TNBTCNN2017|Dieu36|Khoan2|Diemc",
+   "TNBTCNN2017|Dieu37|Khoan3",
+   "TNBTCNN2017|Dieu36|Khoan2|Diemb",
+   "TNBTCNN2017|Dieu37|Khoan4"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu36|Khoan2|Diema",
+   "TNBTCNN2017|Dieu36|Khoan2|Diemc",
+   "TNBTCNN2017|Dieu37|Khoan3",
+   "TNBTCNN2017|Dieu36|Khoan2|Diemb",
+   "TNBTCNN2017|Dieu37|Khoan4"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu37|Khoan3",
+   "TNBTCNN2017|Dieu36|Khoan2|Diemc",
+   "TNBTCNN2017|Dieu36|Khoan2|Diemb",
+   "TNBTCNN2017|Dieu37|Khoan2",
+   "TNBTCNN2017|Dieu37|Khoan4"
+  ]
+ },
+ "EXT10104": {
+  "question": "Trong trường hợp tôi không hiểu hoặc không nói được tiếng Việt, tôi có quyền yêu cầu Ủy ban nhân dân cấp xã bố trí người phiên dịch để hỗ trợ hòa giải không?",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu22|Khoan1|Diemđ"
+  ],
+  "as_of": "2026-07-02",
+  "base_top5": [
+   "HOAGIAI2026|Dieu22|Khoan1|Diemđ",
+   "HOAGIAI2026|Dieu13|Khoan6",
+   "THADSVBHN|Dieu8|Khoan1",
+   "HOAGIAI2026|Dieu4|Khoan7",
+   "THADS2008|Dieu8|Khoan1"
+  ],
+  "tcr_top5": [
+   "HOAGIAI2026|Dieu22|Khoan1|Diemđ",
+   "HOAGIAI2026|Dieu13|Khoan6",
+   "THADSVBHN|Dieu8|Khoan1",
+   "HOAGIAI2026|Dieu4|Khoan7",
+   "THADS2008|Dieu8|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "HOAGIAI2026|Dieu22|Khoan1|Diemđ",
+   "HOAGIAI2026|Dieu26|Khoan1",
+   "HOAGIAI2026|Dieu13|Khoan6",
+   "THADSVBHN|Dieu8|Khoan1",
+   "THADS2008|Dieu8|Khoan1"
+  ]
+ },
+ "EXT10105": {
+  "question": "Khi xảy ra mâu thuẫn với hàng xóm, tôi có quyền yêu cầu hòa giải viên tiến hành hòa giải trong bao lâu?",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu25|Khoan2"
+  ],
+  "as_of": "2026-07-02",
+  "base_top5": [
+   "HOAGIAI2026|Dieu12|Khoan9",
+   "HOAGIAI2026|Dieu22|Khoan1|Diemc",
+   "HOAGIAI2026|Dieu22|Khoan1|Dieme",
+   "HOAGIAI2026|Dieu25|Khoan2",
+   "HOAGIAI2026|Dieu24|Khoan1"
+  ],
+  "tcr_top5": [
+   "HOAGIAI2026|Dieu12|Khoan9",
+   "HOAGIAI2026|Dieu22|Khoan1|Diemc",
+   "HOAGIAI2026|Dieu22|Khoan1|Dieme",
+   "HOAGIAI2026|Dieu25|Khoan2",
+   "HOAGIAI2026|Dieu24|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "HOAGIAI2026|Dieu25|Khoan2",
+   "HOAGIAI2026|Dieu24|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu419|Khoan3|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu418|Khoan1|Diemb",
+   "HOAGIAI2026|Dieu28|Khoan2|Diemb"
+  ]
+ },
+ "EXT10111": {
+  "question": "Tài sản gửi của tôi có nguy cơ hư hỏng, nhưng công ty giữ tài sản không thông báo cho tôi biết và tự ý xử lý mà không hỏi ý kiến, họ có vi phạm không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu557|Khoan3"
+  ],
+  "as_of": "2018-01-01",
+  "base_top5": [
+   "BLDS2015|Dieu557|Khoan3",
+   "BLDS2015|Dieu555|Khoan1",
+   "BLDS1995|Dieu566|Muc3",
+   "BLDS2015|Dieu355|Khoan3",
+   "BLDS2005|Dieu560"
+  ],
+  "tcr_top5": [
+   "BLDS2015|Dieu557|Khoan3",
+   "BLDS2015|Dieu555|Khoan1",
+   "BLDS2015|Dieu355|Khoan3",
+   "BLDS2015|Dieu300|Khoan1",
+   "BLDS2015|Dieu496|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2015|Dieu555|Khoan1",
+   "BLDS2015|Dieu557|Khoan3",
+   "BLDS2015|Dieu355|Khoan3",
+   "BLDS2015|Dieu558|Khoan4",
+   "BLDS2015|Dieu300|Khoan1"
+  ]
+ },
+ "EXT10115": {
+  "question": "Nếu vợ tôi mất đi sau khi chúng tôi đã chia tài sản trong thời gian hôn nhân còn tồn tại, tôi có được quyền thừa kế phần tài sản của vợ không?",
+  "gold_ids": [
+   "BLDS2015|Dieu655|Khoan1"
+  ],
+  "as_of": "2018-01-01",
+  "base_top5": [
+   "BLDS2015|Dieu655|Khoan1",
+   "BLDS1995|Dieu683|Muc1",
+   "BLDS2005|Dieu680|Khoan1",
+   "BLDS1995|Dieu683|Muc3",
+   "HNGDVBHN2025|Dieu66|Khoan2"
+  ],
+  "tcr_top5": [
+   "BLDS2015|Dieu655|Khoan1",
+   "HNGD2014|Dieu66|Khoan2",
+   "BLDS2015|Dieu655|Khoan3",
+   "HNGD2014|Dieu40|Khoan1",
+   "HNGD2014|Dieu38|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2015|Dieu655|Khoan1",
+   "HNGD2014|Dieu66|Khoan2",
+   "BLDS2015|Dieu661",
+   "HNGD2014|Dieu40|Khoan1",
+   "HNGD2014|Dieu66|Khoan1"
+  ]
+ },
+ "EXT10118": {
+  "question": "Nếu tôi sáp nhập một cái kệ sách (động sản) vào ngôi nhà (bất động sản) của người khác mà không có sự đồng ý, tôi sẽ bị xử lý như thế nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu225|Khoan4"
+  ],
+  "as_of": "2018-01-01",
+  "base_top5": [
+   "BLDS2015|Dieu225|Khoan3|Diemb",
+   "BLDS2015|Dieu225|Khoan2|Diemc",
+   "BLDS2015|Dieu225|Khoan3|Diema",
+   "BLDS2015|Dieu225|Khoan2|Diemb",
+   "BLDS2015|Dieu225|Khoan4"
+  ],
+  "tcr_top5": [
+   "BLDS2015|Dieu225|Khoan3|Diemb",
+   "BLDS2015|Dieu225|Khoan2|Diemc",
+   "BLDS2015|Dieu225|Khoan3|Diema",
+   "BLDS2015|Dieu225|Khoan2|Diemb",
+   "BLDS2015|Dieu225|Khoan4"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2015|Dieu225|Khoan3|Diema",
+   "BLDS2015|Dieu225|Khoan3|Diemb",
+   "BLDS2015|Dieu225|Khoan4",
+   "BLDS2015|Dieu225|Khoan2|Diemc",
+   "BLDS2015|Dieu225|Khoan2|Diemb"
+  ]
+ },
+ "EXT10119": {
+  "question": "Nếu tôi là bên nhận bảo đảm và có nghĩa vụ tài chính đến hạn, tôi có quyền xử lý tài sản bảo đảm để thu hồi nợ dù các nghĩa vụ khác chưa đến hạn theo quy định này không?",
+  "gold_ids": [
+   "BLDS2015|Dieu296|Khoan3"
+  ],
+  "as_of": "2018-01-01",
+  "base_top5": [
+   "BLDS2015|Dieu296|Khoan3",
+   "BLDS2005|Dieu324|Khoan1",
+   "BLDS2015|Dieu307|Khoan3",
+   "BLDS2015|Dieu302",
+   "BLDS2015|Dieu450|Khoan2"
+  ],
+  "tcr_top5": [
+   "BLDS2015|Dieu296|Khoan3",
+   "BLDS2015|Dieu307|Khoan3",
+   "BLDS2015|Dieu302",
+   "BLDS2015|Dieu450|Khoan2",
+   "BLDS2015|Dieu305|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2015|Dieu296|Khoan3",
+   "BLDS2015|Dieu302",
+   "BLDS2015|Dieu300|Khoan1",
+   "BLDS2015|Dieu301",
+   "BLDS2015|Dieu307|Khoan3"
+  ]
+ },
+ "EXT10124": {
+  "question": "Nếu tôi có nhiều món nợ và dùng một tài sản làm tài sản bảo đảm cho cả những món nợ đó, thì thứ tự ưu tiên thanh toán khi bán tài sản đó sẽ dựa trên thứ tự tôi thiết lập bảo đảm cho từng món nợ, đúng không?",
+  "gold_ids": [
+   "BLDS2015|Dieu308|Khoan1|Diemc"
+  ],
+  "as_of": "2018-01-01",
+  "base_top5": [
+   "BLDS2015|Dieu308|Khoan1|Diemc",
+   "BLDS2005|Dieu325",
+   "BLDS2015|Dieu308|Khoan1|Diema",
+   "BLDS2015|Dieu308|Khoan1|Diemb",
+   "BLDS2005|Dieu338"
+  ],
+  "tcr_top5": [
+   "BLDS2015|Dieu308|Khoan1|Diemc",
+   "BLDS2015|Dieu308|Khoan1|Diema",
+   "BLDS2015|Dieu308|Khoan1|Diemb",
+   "BLDS2015|Dieu450|Khoan2",
+   "BLDS2015|Dieu308|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2015|Dieu308|Khoan1|Diemc",
+   "BLDS2015|Dieu308|Khoan1|Diema",
+   "BLDS2015|Dieu308|Khoan1|Diemb",
+   "BLDS2015|Dieu308|Khoan2",
+   "BLDS2015|Dieu296|Khoan1"
+  ]
+ },
+ "EXT10126": {
+  "question": "Nếu tôi bị bệnh tâm thần nhưng chưa mất năng lực hành vi dân sự, tôi có thể làm gì để được chỉ định người giám hộ?",
+  "gold_ids": [
+   "BLDS2015|Dieu23|Khoan1"
+  ],
+  "as_of": "2018-01-01",
+  "base_top5": [
+   "BLDS1995|Dieu71|Muc1",
+   "BLDS1995|Dieu71|Muc3",
+   "BLDS1995|Dieu71|Muc2",
+   "BLDS1995|Dieu71|Muc0",
+   "BLDS2015|Dieu23|Khoan1"
+  ],
+  "tcr_top5": [
+   "BLDS2015|Dieu23|Khoan1",
+   "BLDS2015|Dieu22|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu376|Khoan2",
+   "BLDS2015|Dieu53|Khoan2",
+   "BLDS2015|Dieu57|Khoan1|Diema"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2015|Dieu23|Khoan1",
+   "BLDS2015|Dieu22|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu378",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu377",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu376|Khoan2"
+  ]
+ },
+ "EXT10131": {
+  "question": "Nếu một hợp đồng phụ bị vô hiệu, hợp đồng chính có bị ảnh hưởng không? ",
+  "gold_ids": [
+   "BLDS2005|Dieu410|Khoan1"
+  ],
+  "as_of": "2012-08-07",
+  "base_top5": [
+   "BLDS2015|Dieu407|Khoan3",
+   "BLDS2015|Dieu407|Khoan2",
+   "BLDS2005|Dieu410|Khoan1",
+   "BLDS2015|Dieu402|Khoan4",
+   "BLDS2015|Dieu402|Khoan3"
+  ],
+  "tcr_top5": [
+   "BLDS2005|Dieu410|Khoan1",
+   "BLDS2005|Dieu408|Khoan1",
+   "BLDS2005|Dieu406",
+   "BLDS2005|Dieu135",
+   "BLDS2005|Dieu425|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2005|Dieu410|Khoan1",
+   "BLDS2005|Dieu406",
+   "BLDS2005|Dieu401|Khoan1",
+   "BLDS2005|Dieu411|Khoan1",
+   "BLDS2005|Dieu425|Khoan1"
+  ]
+ },
+ "EXT10132": {
+  "question": "Nếu tôi và công ty ký hợp đồng với thời hạn nửa tháng thì thời gian cụ thể là bao lâu? ",
+  "gold_ids": [
+   "BLDS2005|Dieu151|Khoan1"
+  ],
+  "as_of": "2012-08-07",
+  "base_top5": [
+   "BLDS2015|Dieu146|Khoan1|Diemd",
+   "BLDS2015|Dieu146|Khoan1|Diemb",
+   "BLDS2015|Dieu146|Khoan1|Diemc",
+   "BLDS2015|Dieu146|Khoan1|Diemđ",
+   "BLDS2015|Dieu146|Khoan1|Diemh"
+  ],
+  "tcr_top5": [
+   "BLDS2005|Dieu151|Khoan1",
+   "BLDS2005|Dieu492",
+   "BLDS2005|Dieu482|Khoan1",
+   "BLDS2005|Dieu149|Khoan1",
+   "BLDS2005|Dieu153|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2005|Dieu151|Khoan1",
+   "BLDS2005|Dieu492",
+   "BLDS2005|Dieu482|Khoan1",
+   "BLDS2005|Dieu149|Khoan1",
+   "BLDS2005|Dieu153|Khoan1"
+  ]
+ },
+ "EXT10135": {
+  "question": "Hợp đồng của tôi có một điều khoản không rõ ràng, tôi phải làm gì để giải thích điều khoản đó? ",
+  "gold_ids": [
+   "BLDS2005|Dieu409|Khoan1"
+  ],
+  "as_of": "2012-08-07",
+  "base_top5": [
+   "BLDS2015|Dieu405|Khoan2",
+   "BLDS1995|Dieu408|Muc1",
+   "BLDS2015|Dieu404|Khoan1",
+   "BLDS2005|Dieu409|Khoan1",
+   "BLDS1995|Dieu406|Muc2"
+  ],
+  "tcr_top5": [
+   "BLDS2005|Dieu409|Khoan1",
+   "BLDS2005|Dieu407|Khoan1",
+   "BLDS2005|Dieu408|Khoan1",
+   "BLDS2005|Dieu673",
+   "THADS2008|Dieu179|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2005|Dieu409|Khoan1",
+   "BLDS2005|Dieu407|Khoan1",
+   "BLDS2005|Dieu673",
+   "BLDS2005|Dieu408|Khoan1",
+   "BLDS2015|Dieu404|Khoan1"
+  ]
+ },
+ "EXT10136": {
+  "question": "Con trai 16 tuổi mượn tên bố mua nhà, bố có phải trả tiền nhà không?",
+  "gold_ids": [
+   "BLDS2005|Dieu145|Khoan1"
+  ],
+  "as_of": "2012-08-07",
+  "base_top5": [
+   "NCN2010|Dieu8|Khoan2|Diema",
+   "NCN2010|Dieu8|Khoan1",
+   "NCN2010|Dieu8|Khoan2|Diemb",
+   "HNGD2000|Dieu75|Khoan1",
+   "NCN2010|Dieu24|Khoan2"
+  ],
+  "tcr_top5": [
+   "NCN2010|Dieu8|Khoan2|Diema",
+   "NCN2010|Dieu8|Khoan1",
+   "NCN2010|Dieu8|Khoan2|Diemb",
+   "HNGD2000|Dieu75|Khoan1",
+   "NCN2010|Dieu24|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2005|Dieu453",
+   "BLDS2005|Dieu474|Khoan1",
+   "BLDS2005|Dieu452",
+   "NCN2010|Dieu8|Khoan1",
+   "HNGD2000|Dieu65|Khoan2"
+  ]
+ },
+ "EXT10138": {
+  "question": "Con trai 16 tuổi muốn đổi dân tộc trên giấy tờ tùy thân vì biết cha ruột của mình thuộc dân tộc khác, mẹ đồng ý. Cơ quan nhà nước có thẩm quyền sẽ xác định lại dân tộc cho em theo quy định tại khoản 2, điểm a Điều này.",
+  "gold_ids": [
+   "BLDS2005|Dieu28|Khoan1"
+  ],
+  "as_of": "2012-08-07",
+  "base_top5": [
+   "BLDS2005|Dieu28|Khoan1",
+   "BLDS1995|Dieu30|Muc2",
+   "BLDS2015|Dieu29|Khoan3|Diemb",
+   "BLDS2015|Dieu29|Khoan3|Diema",
+   "HOTICH2014|Dieu36|Khoan1"
+  ],
+  "tcr_top5": [
+   "BLDS2005|Dieu28|Khoan1",
+   "BLDS2005|Dieu27|Khoan1",
+   "HNGD2000|Dieu75|Khoan1",
+   "NCN2010|Dieu24|Khoan2",
+   "NCN2010|Dieu24|Khoan3"
+  ],
+  "rr_tcr_top5": [
+   "BLDS2005|Dieu28|Khoan1",
+   "NCN2010|Dieu24|Khoan2",
+   "HNGD2000|Dieu75|Khoan1",
+   "HNGD2000|Dieu75|Khoan2",
+   "BLDS2005|Dieu27|Khoan1"
+  ]
+ },
+ "EXT10141": {
+  "question": "Nếu vợ chồng đã chia tài sản chung trong thời kỳ hôn nhân, họ có thể làm thế nào để chấm dứt hiệu lực của việc chia tài sản đó?",
+  "gold_ids": [
+   "HNGD2014|Dieu41|Khoan1"
+  ],
+  "as_of": "2016-01-01",
+  "base_top5": [
+   "HNGD2014|Dieu41|Khoan1",
+   "HNGD2014|Dieu41|Khoan4",
+   "HNGDVBHN2025|Dieu41|Khoan1",
+   "HNGDVBHN2025|Dieu41|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu29|Khoan7"
+  ],
+  "tcr_top5": [
+   "HNGD2014|Dieu41|Khoan1",
+   "HNGD2014|Dieu41|Khoan4",
+   "HNGD2014|Dieu39|Khoan3",
+   "HNGD2014|Dieu39|Khoan2",
+   "HNGD2014|Dieu41|Khoan3"
+  ],
+  "rr_tcr_top5": [
+   "HNGD2014|Dieu41|Khoan1",
+   "HNGD2014|Dieu41|Khoan4",
+   "HNGD2014|Dieu38|Khoan1",
+   "HNGD2014|Dieu39|Khoan2",
+   "HNGD2014|Dieu39|Khoan1"
+  ]
+ },
+ "EXT10142": {
+  "question": "Nếu tôi đã kết hôn nhưng một trong hai bên chưa đủ 18 tuổi, hành vi của tôi có bị coi là kết hôn trái pháp luật không? ",
+  "gold_ids": [
+   "HNGD2014|Dieu3|Khoan6"
+  ],
+  "as_of": "2016-01-01",
+  "base_top5": [
+   "HNGD2000|Dieu8|Khoan4",
+   "HNGD2014|Dieu3|Khoan8",
+   "HNGD2014|Dieu3|Khoan6",
+   "HNGD2014|Dieu8|Khoan1|Diema",
+   "HNGD2014|Dieu8|Khoan1|Diemc"
+  ],
+  "tcr_top5": [
+   "HNGD2014|Dieu3|Khoan8",
+   "HNGD2014|Dieu3|Khoan6",
+   "HNGD2014|Dieu8|Khoan1|Diema",
+   "HNGD2014|Dieu8|Khoan1|Diemc",
+   "HNGD2014|Dieu8|Khoan1|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "HNGD2014|Dieu3|Khoan6",
+   "HNGD2014|Dieu11|Khoan2",
+   "HNGD2014|Dieu3|Khoan8",
+   "HNGD2014|Dieu8|Khoan1|Diemd",
+   "HNGD2014|Dieu11|Khoan3"
+  ]
+ },
+ "EXT10143": {
+  "question": "Nếu cả cha và mẹ đều bị tòa án hạn chế quyền đối với con chưa thành niên thì người giám hộ sẽ được giao trách nhiệm trông nom, chăm sóc, giáo dục con và quản lý tài sản riêng của con theo quy định của Bộ luật dân sự và Luật này.",
+  "gold_ids": [
+   "HNGD2014|Dieu87|Khoan2|Diema"
+  ],
+  "as_of": "2016-01-01",
+  "base_top5": [
+   "HNGD2000|Dieu43|Khoan2",
+   "HNGD2014|Dieu87|Khoan2|Diema",
+   "HNGD2014|Dieu87|Khoan1",
+   "HNGDVBHN2025|Dieu87|Khoan2|Diema",
+   "HNGD2014|Dieu87|Khoan2|Diemc"
+  ],
+  "tcr_top5": [
+   "HNGD2014|Dieu87|Khoan2|Diema",
+   "HNGD2014|Dieu87|Khoan1",
+   "HNGD2014|Dieu87|Khoan2|Diemc",
+   "HNGD2014|Dieu87|Khoan2|Diemb",
+   "HNGD2014|Dieu76|Khoan4"
+  ],
+  "rr_tcr_top5": [
+   "HNGD2014|Dieu87|Khoan1",
+   "HNGD2014|Dieu87|Khoan2|Diema",
+   "HNGD2014|Dieu87|Khoan2|Diemc",
+   "HNGD2014|Dieu87|Khoan2|Diemb",
+   "HNGD2014|Dieu76|Khoan4"
+  ]
+ },
+ "EXT10144": {
+  "question": "Nếu tôi là người nhờ mang thai hộ và đã nhận con, tôi có được hưởng chế độ thai sản không? ",
+  "gold_ids": [
+   "HNGD2014|Dieu98|Khoan2"
+  ],
+  "as_of": "2016-01-01",
+  "base_top5": [
+   "HNGD2014|Dieu97|Khoan3",
+   "HNGDVBHN2025|Dieu97|Khoan3",
+   "HNGD2014|Dieu98|Khoan2",
+   "HNGDVBHN2025|Dieu98|Khoan2",
+   "HNGD2014|Dieu95|Khoan3|Diemb"
+  ],
+  "tcr_top5": [
+   "HNGD2014|Dieu97|Khoan3",
+   "HNGD2014|Dieu98|Khoan2",
+   "HNGD2014|Dieu95|Khoan3|Diemb",
+   "HNGD2014|Dieu95|Khoan3|Diemc",
+   "HNGD2014|Dieu97|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "HNGD2014|Dieu98|Khoan2",
+   "HNGD2014|Dieu97|Khoan3",
+   "HNGD2014|Dieu98|Khoan3",
+   "HNGD2014|Dieu97|Khoan4",
+   "HNGD2014|Dieu96|Khoan1|Diemc"
+  ]
+ },
+ "EXT10145": {
+  "question": "Nếu tôi bị người yêu cũ đe dọa không cho tôi kết hôn với người khác, điều đó có phạm luật không? ",
+  "gold_ids": [
+   "HNGD2014|Dieu3|Khoan10"
+  ],
+  "as_of": "2016-01-01",
+  "base_top5": [
+   "HNGD2014|Dieu3|Khoan10",
+   "HNGD2014|Dieu3|Khoan9",
+   "HNGDVBHN2025|Dieu3|Khoan9",
+   "HNGDVBHN2025|Dieu3|Khoan10",
+   "HNGD2014|Dieu10|Khoan1"
+  ],
+  "tcr_top5": [
+   "HNGD2014|Dieu3|Khoan10",
+   "HNGD2014|Dieu3|Khoan9",
+   "HNGD2014|Dieu10|Khoan1",
+   "HNGD2014|Dieu10|Khoan2|Diema",
+   "HNGD2014|Dieu53|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "HNGD2014|Dieu3|Khoan10",
+   "HNGD2014|Dieu3|Khoan9",
+   "HNGD2014|Dieu10|Khoan1",
+   "HNGD2014|Dieu5|Khoan2|Diemc",
+   "HNGD2014|Dieu10|Khoan2|Diema"
+  ]
+ },
+ "EXT10150": {
+  "question": "Nếu tòa án nước ngoài hạn chế quyền tố tụng dân sự của công dân Việt Nam, thì Việt Nam có áp dụng nguyên tắc có đi có lại để hạn chế quyền tố tụng dân sự của công dân nước đó không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan3"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu466|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu470|Khoan2|Diemd",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu2|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diemd"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu466|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu470|Khoan2|Diemd",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu2|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu423|Khoan1|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu466|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu439|Khoan8",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diema"
+  ]
+ },
+ "EXT10155": {
+  "question": "Nếu tôi vắng mặt trong phiên tòa giám đốc thẩm nhưng đã gửi văn bản trình bày ý kiến, tòa án có công bố ý kiến của tôi không? (Điều 322 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu341|Khoan2"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu341|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu338|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu260|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu305|Khoan5",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu210|Khoan3"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu341|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu338|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu260|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu305|Khoan5",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu210|Khoan3"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu341|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu375|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu210|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu260|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu305|Khoan5"
+  ]
+ },
+ "EXT10157": {
+  "question": "Tổ chức quốc tế A có quyền miễn trừ pháp lý tại Việt Nam không nếu họ không tuyên bố từ bỏ quyền này?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu467|Khoan2"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu467|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu2|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan1",
+   "HOTICH2014|Dieu10",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu447|Khoan1"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu467|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu2|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan1",
+   "HOTICH2014|Dieu10",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu447|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu467|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu2|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu468"
+  ]
+ },
+ "EXT10159": {
+  "question": "Nếu tôi là nguyên đơn trong một vụ kiện quốc tế và đã nhận được phán quyết từ một trọng tài nước ngoài, tôi có thể công nhận và thi hành phán quyết đó tại Việt Nam không, dựa theo điều ước quốc tế mà Việt Nam và nước đó cùng là thành viên?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu424|Khoan1|Diema"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu424|Khoan1|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu431|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu451|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu439|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu424|Khoan1|Diemb"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu424|Khoan1|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu431|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu451|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu439|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu424|Khoan1|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu424|Khoan1|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu451|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu427|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu424|Khoan1|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu424|Khoan2"
+  ]
+ },
+ "EXT10160": {
+  "question": "Nếu tòa án nhận được quyết định ủy thác nhưng không thể thực hiện được việc ủy thác đó, tòa án phải thông báo bằng văn bản cho tòa án đã ra quyết định ủy thác và nêu rõ lý do. (Điều 304 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu105|Khoan3"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu105|Khoan3",
+   "THADS2008|Dieu57|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu105|Khoan5",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan8",
+   "THADSVBHN|Dieu57|Khoan3"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu105|Khoan3",
+   "THADS2008|Dieu57|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu105|Khoan5",
+   "THADS2008|Dieu57|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu477|Khoan4"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu105|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu364|Khoan2",
+   "THADS2008|Dieu57|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu477|Khoan6|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu105|Khoan5"
+  ]
+ },
+ "EXT10161": {
+  "question": "Trong vụ ly hôn này, tôi muốn tòa án tiến hành hòa giải để vợ chồng có thể đoàn tụ, căn cứ vào điểm nào của luật?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu397|Khoan2"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "HNGD2014|Dieu56|Khoan1",
+   "HNGDVBHN2025|Dieu56|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu396|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu397|Khoan2",
+   "HNGD2014|Dieu54"
+  ],
+  "tcr_top5": [
+   "HNGD2014|Dieu56|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu396|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu397|Khoan2",
+   "HNGD2014|Dieu54",
+   "HNGD2014|Dieu51|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu397|Khoan4|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu397|Khoan1",
+   "HNGD2014|Dieu56|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu397|Khoan4|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu397|Khoan2"
+  ]
+ },
+ "EXT10162": {
+  "question": "Nếu tôi muốn yêu cầu tòa tuyên bố một người thân mất năng lực hành vi dân sự, tôi cần nộp đơn tại tòa án nào? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diema"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu379",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu27|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu376|Khoan1"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu379",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu27|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu376|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemđ",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Dieml"
+  ]
+ },
+ "EXT10164": {
+  "question": "Nếu tôi nộp đơn kháng cáo quá hạn, tòa án sẽ tiến hành phiên họp như thế nào? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan2"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu4|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu274|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan1"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu274|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu296|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu274|Khoan2",
+   "THADS2008|Dieu64|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu275|Khoan1"
+  ]
+ },
+ "EXT10166": {
+  "question": "Nếu tôi muốn bổ sung nội dung mới trong kháng cáo nhưng nội dung đó vượt quá phạm vi kháng cáo ban đầu, Tòa án sẽ xử lý như thế nào? (Điều 308 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu298|Khoan3"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu298|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu244|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu302|Khoan2"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu298|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu244|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu302|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu298|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu244|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan4"
+  ]
+ },
+ "EXT10167": {
+  "question": "Nếu tôi muốn kháng cáo một quyết định của tòa án sơ thẩm, hội đồng phúc thẩm có bắt buộc phải mở phiên tòa và triệu tập tôi không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan1"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan5|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu375|Khoan3|Diemđ",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan5|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan5|Diemc"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan5|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu375|Khoan3|Diemđ",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan5|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan5|Diemc"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu294|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu299|Khoan1|Diemb"
+  ]
+ },
+ "EXT10168": {
+  "question": "Nếu tôi có một bất động sản ở nhiều tỉnh khác nhau và xảy ra tranh chấp, tôi có thể kiện tại tòa án của tỉnh nào? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemi"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemi",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu41|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan1|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu41|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemh"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemi",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu41|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan1|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu41|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemh"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemi",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan1|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemh",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu41|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemd"
+  ]
+ },
+ "EXT10169": {
+  "question": "Nếu tôi nhận được quyết định trả lại đơn khởi kiện, tôi có quyền khiếu nại trong thời hạn 10 ngày không? (Điều 288 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan5|Diema"
+  ],
+  "as_of": "2017-07-01",
+  "base_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan5|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu502",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu192|Khoan1|Diema",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemd"
+  ],
+  "tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan5|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu502",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu192|Khoan1|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu192|Khoan1|Diemg"
+  ],
+  "rr_tcr_top5": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan5|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan5|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu372|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu372|Khoan2"
+  ]
+ },
+ "EXT10172": {
+  "question": "Nếu tôi bị một người khác gây thiệt hại và chúng tôi đang thương lượng về bồi thường, tôi cần phải đảm bảo thương lượng bao gồm những nội dung gì? ",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diema"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "TNBTCNN2017|Dieu46|Khoan5|Diema",
+   "TNBTCNN2017|Dieu46|Khoan2|Diemc",
+   "TNBTCNN2017|Dieu46|Khoan5|Diemc",
+   "TNBTCNN2017|Dieu46|Khoan5|Diemb",
+   "TNBTCNN2017|Dieu46|Khoan3|Dieme"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu46|Khoan5|Diema",
+   "TNBTCNN2017|Dieu46|Khoan2|Diemc",
+   "TNBTCNN2017|Dieu46|Khoan5|Diemc",
+   "TNBTCNN2017|Dieu46|Khoan5|Diemb",
+   "TNBTCNN2017|Dieu46|Khoan3|Dieme"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu46|Khoan2|Diemc",
+   "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diemđ",
+   "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diemc",
+   "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diema",
+   "luat-so-15-2026-qh16-470450|Dieu46|Khoan4|Diemb"
+  ]
+ },
+ "EXT10175": {
+  "question": "Nếu tôi thay đổi quyết định kháng cáo trước khi phiên tòa phúc thẩm diễn ra, tòa án sẽ thông báo điều này cho viện kiểm sát như thế nào?",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu15|Khoan2"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu15|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan3",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu26|Khoan1"
+  ],
+  "tcr_top5": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu15|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan3",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu26|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu15|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan4",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan2",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu15|Khoan1",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu277|Khoan1"
+  ]
+ },
+ "EXT10176": {
+  "question": "Nếu Viện trưởng Viện kiểm sát kháng nghị một bản án, tại phiên tòa phúc thẩm Kiểm sát viên cần trình bày quan điểm như thế nào về việc giải quyết bản án bị kháng nghị?",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diemd"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diemd",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diema",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan3|Diemđ",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diemc",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diema"
+  ],
+  "tcr_top5": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diemd",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diema",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan3|Diemđ",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diemc",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diema"
+  ],
+  "rr_tcr_top5": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diemc",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diemd",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diema",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diema",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan3|Diemđ"
+  ]
+ },
+ "EXT10177": {
+  "question": "Nếu Viện kiểm sát kháng nghị một bản án, tại phiên tòa phúc thẩm Kiểm sát viên cần thực hiện những nội dung gì? Theo Điều này, Kiểm sát viên phải trình bày nội dung kháng nghị, xuất trình tài liệu, chứng cứ bổ sung (nếu có) và phân tích để làm rõ qua",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diema"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diema",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu341|Khoan1",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diemd",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diemb"
+  ],
+  "tcr_top5": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diema",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu341|Khoan1",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diemd",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu32|Khoan1|Diema",
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu33|Khoan1|Diema",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu302|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu279|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu375|Khoan1|Diemc"
+  ]
+ },
+ "EXT10180": {
+  "question": "Nếu tôi là người dân và phải hoàn trả khoản bảo đảm tài chính để thi hành án, tôi sẽ hỏi: \"Theo quy định, tôi cần phải hoàn trả số tiền này trong bao nhiêu ngày kể từ khi nhận được văn bản kiến nghị của Hội đồng xác định người có lỗi?\" ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemd"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemd",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diema",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu94|Khoan1"
+  ],
+  "tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemd",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diema",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu94|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diema",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu96|Khoan1|Diemd",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu95|Khoan1"
+  ]
+ },
+ "EXT10186": {
+  "question": "Nếu tôi muốn yêu cầu thẩm định giá tài sản nhưng không có khung giá do cơ quan nhà nước quy định, tôi có thể sử dụng giá thị trường phổ biến hoặc giá chuyển nhượng thực tế ở địa phương thay thế không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu62|Khoan2"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "BLDS2005|Dieu431|Khoan1",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu62|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu104|Khoan3|Diemc",
+   "BLDS1995|Dieu424|Muc1",
+   "BLDS2015|Dieu519|Khoan2"
+  ],
+  "tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu62|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu104|Khoan3|Diemc",
+   "BLDS2015|Dieu519|Khoan2",
+   "BLDS2015|Dieu433|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu104|Khoan5"
+  ],
+  "rr_tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu62|Khoan2",
+   "BLDS2015|Dieu306|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu104|Khoan3|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu104|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu61|Khoan4"
+  ]
+ },
+ "EXT10190": {
+  "question": "Nếu tôi là người dân và tài sản của tôi bị cơ quan thi hành án giữ lại nhưng tôi không đến nhận, tôi phải chịu chi phí bảo quản, xử lý, tiêu hủy tài sản đó không? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu82|Khoan6"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu81|Khoan10",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu82|Khoan6",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu83|Khoan1|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu39|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu80|Khoan2|Diemi"
+  ],
+  "tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu81|Khoan10",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu82|Khoan6",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu83|Khoan1|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu39|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu80|Khoan2|Diemi"
+  ],
+  "rr_tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu81|Khoan10",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu82|Khoan6",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu41|Khoan5",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu80|Khoan2|Diemo",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu39|Khoan2"
+  ]
+ },
+ "EXT10192": {
+  "question": "Nếu diện tích đất thực tế khác với diện tích ghi trên giấy chứng nhận nhưng không có tranh chấp, Chấp hành viên sẽ điều chỉnh giấy tờ cho phù hợp với thực tế theo quy định.",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diema"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diemd",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diema",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diemc",
+   "THADSVBHN|Dieu112|Khoan1"
+  ],
+  "tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diemd",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diema",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diemc",
+   "THADSVBHN|Dieu112|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diema",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diemd",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan2|Diemc",
+   "THADS2008|Dieu112|Khoan1"
+  ]
+ },
+ "EXT10198": {
+  "question": "Nếu tài sản bị thi hành án giảm giá trị, người dân phải thanh toán theo giá trong văn bản thẩm định giá của doanh nghiệp thẩm định giá do cơ quan thi hành án dân sự ký hợp đồng, trừ khi các bên thỏa thuận được giá cao hơn.",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu91|Khoan1|Diema"
+  ],
+  "as_of": "2026-02-15",
+  "base_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu91|Khoan1|Diema",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu91|Khoan1|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu60|Khoan1",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu93|Khoan2|Diemd",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu66|Khoan2"
+  ],
+  "tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu91|Khoan1|Diema",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu91|Khoan1|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu60|Khoan1",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu93|Khoan2|Diemd",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu66|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu91|Khoan1|Diema",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu62|Khoan1",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu91|Khoan1|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu60|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu60|Khoan1"
+  ]
+ },
+ "EXT10201": {
+  "question": "Tôi muốn chấm dứt việc giám hộ thì cần nộp những giấy tờ gì? Theo quy định, người yêu cầu cần nộp tờ khai đăng ký chấm dứt giám hộ theo mẫu quy định và giấy tờ làm căn cứ chấm dứt giám hộ theo quy định của Bộ luật dân sự cho cơ quan đăng ký hộ tịch.",
+  "gold_ids": [
+   "HOTICH2014|Dieu22|Khoan1"
+  ],
+  "as_of": "2017-01-01",
+  "base_top5": [
+   "HOTICH2014|Dieu22|Khoan1",
+   "HOTICH2014|Dieu20|Khoan1",
+   "HOTICH2014|Dieu22|Khoan2",
+   "HOTICH2014|Dieu21|Khoan1",
+   "HOTICH2014|Dieu40|Khoan1"
+  ],
+  "tcr_top5": [
+   "HOTICH2014|Dieu22|Khoan1",
+   "HOTICH2014|Dieu20|Khoan1",
+   "HOTICH2014|Dieu22|Khoan2",
+   "HOTICH2014|Dieu21|Khoan1",
+   "HOTICH2014|Dieu40|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "HOTICH2014|Dieu22|Khoan1",
+   "HOTICH2014|Dieu22|Khoan2",
+   "HOTICH2014|Dieu21|Khoan1",
+   "HOTICH2014|Dieu38|Khoan1",
+   "HOTICH2014|Dieu40|Khoan1"
+  ]
+ },
+ "EXT10203": {
+  "question": "Công chức làm công tác hộ tịch tại Phòng Tư pháp chỉ có trình độ đại học đa ngành có cần chuyển công tác không? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu72|Khoan3"
+  ],
+  "as_of": "2017-01-01",
+  "base_top5": [
+   "HOTICH2014|Dieu72|Khoan3",
+   "HOTICH2014|Dieu72|Khoan1",
+   "HOTICH2014|Dieu72|Khoan2|Diemb",
+   "HOTICH2014|Dieu72|Khoan4",
+   "HOTICH2014|Dieu73|Khoan2"
+  ],
+  "tcr_top5": [
+   "HOTICH2014|Dieu72|Khoan3",
+   "HOTICH2014|Dieu72|Khoan1",
+   "HOTICH2014|Dieu72|Khoan2|Diemb",
+   "HOTICH2014|Dieu72|Khoan4",
+   "HOTICH2014|Dieu73|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "HOTICH2014|Dieu72|Khoan3",
+   "HOTICH2014|Dieu72|Khoan2|Diema",
+   "HOTICH2014|Dieu72|Khoan2|Diemb",
+   "HOTICH2014|Dieu72|Khoan1",
+   "HOTICH2014|Dieu73|Khoan2"
+  ]
+ },
+ "EXT10206": {
+  "question": "Tôi cần trích lục hộ tịch để chứng minh thông tin đăng ký hộ tịch của tôi, tôi phải làm như thế nào? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu63"
+  ],
+  "as_of": "2017-01-01",
+  "base_top5": [
+   "HOTICH2014|Dieu9|Khoan2",
+   "HOTICH2014|Dieu4|Khoan9",
+   "HOTICH2014|Dieu9|Khoan1",
+   "HOTICH2014|Dieu62|Khoan1",
+   "HOTICH2014|Dieu63"
+  ],
+  "tcr_top5": [
+   "HOTICH2014|Dieu9|Khoan2",
+   "HOTICH2014|Dieu4|Khoan9",
+   "HOTICH2014|Dieu9|Khoan1",
+   "HOTICH2014|Dieu62|Khoan1",
+   "HOTICH2014|Dieu63"
+  ],
+  "rr_tcr_top5": [
+   "HOTICH2014|Dieu4|Khoan9",
+   "HOTICH2014|Dieu9|Khoan2",
+   "HOTICH2014|Dieu9|Khoan1",
+   "HOTICH2014|Dieu64|Khoan1",
+   "HOTICH2014|Dieu62|Khoan1"
+  ]
+ },
+ "EXT10211": {
+  "question": "Nếu tôi và vợ đã thỏa thuận về tài sản nhưng không tuân theo điều kiện có hiệu lực của giao dịch theo Bộ luật Dân sự, thì thỏa thuận đó sẽ bị tòa tuyên bố vô hiệu, đúng không?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu50|Khoan1|Diema"
+  ],
+  "as_of": "2026-06-30",
+  "base_top5": [
+   "HNGD2014|Dieu50|Khoan1|Diema",
+   "HNGDVBHN2025|Dieu50|Khoan1|Diema",
+   "HNGD2014|Dieu50|Khoan1|Diemb",
+   "HNGD2014|Dieu50|Khoan1|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu29|Khoan8"
+  ],
+  "tcr_top5": [
+   "HNGD2014|Dieu50|Khoan1|Diema",
+   "HNGDVBHN2025|Dieu50|Khoan1|Diema",
+   "HNGD2014|Dieu50|Khoan1|Diemb",
+   "HNGD2014|Dieu50|Khoan1|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu29|Khoan8"
+  ],
+  "rr_tcr_top5": [
+   "HNGDVBHN2025|Dieu50|Khoan1|Diema",
+   "HNGD2014|Dieu50|Khoan1|Diemc",
+   "HNGD2014|Dieu50|Khoan1|Diema",
+   "HNGD2014|Dieu50|Khoan1|Diemb",
+   "HNGDVBHN2025|Dieu50|Khoan1|Diemc"
+  ]
+ },
+ "EXT10219": {
+  "question": "Nếu tôi muốn gặp mặt con nuôi trước khi có thông báo chính thức từ Bộ Tư pháp được không? ",
+  "gold_ids": [
+   "NCN2010|Dieu36|Khoan3"
+  ],
+  "as_of": "2012-01-01",
+  "base_top5": [
+   "NCN2010|Dieu36|Khoan3",
+   "NCN2010|Dieu37|Khoan2",
+   "NCN2010|Dieu36|Khoan1",
+   "NCN2010|Dieu36|Khoan2",
+   "NCN2010|Dieu15|Khoan2|Diemd"
+  ],
+  "tcr_top5": [
+   "NCN2010|Dieu36|Khoan3",
+   "NCN2010|Dieu37|Khoan2",
+   "NCN2010|Dieu36|Khoan1",
+   "NCN2010|Dieu36|Khoan2",
+   "NCN2010|Dieu15|Khoan2|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "NCN2010|Dieu36|Khoan3",
+   "NCN2010|Dieu15|Khoan2|Diemd",
+   "NCN2010|Dieu36|Khoan1",
+   "NCN2010|Dieu37|Khoan2",
+   "NCN2010|Dieu36|Khoan2"
+  ]
+ },
+ "EXT10221": {
+  "question": "Nếu tài sản đấu giá không thành công và người được thi hành án đồng ý nhận tài sản, người phải thi hành án có thời hạn bao lâu để nộp đủ tiền và chi phí để lấy lại tài sản? Theo Điều này, nếu quá hạn sẽ xảy ra trường hợp nào? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu104|Khoan2"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu65|Khoan6",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu65|Khoan1",
+   "THADSVBHN|Dieu104|Khoan2",
+   "THADS2008|Dieu104",
+   "THADS2008|Dieu101|Khoan5"
+  ],
+  "tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu65|Khoan6",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu65|Khoan1",
+   "THADSVBHN|Dieu104|Khoan2",
+   "THADS2008|Dieu104",
+   "THADS2008|Dieu101|Khoan5"
+  ],
+  "rr_tcr_top5": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu65|Khoan6",
+   "THADSVBHN|Dieu104|Khoan2",
+   "THADS2008|Dieu101|Khoan5",
+   "THADSVBHN|Dieu101|Khoan5",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu65|Khoan1"
+  ]
+ },
+ "EXT10222": {
+  "question": "Nếu công ty không trả lương cho tôi trong thời gian chờ được bố trí công việc sau khi có bản án, tôi có quyền đòi công ty phải thanh toán lương không? (Điều 348 Bộ luật Tố tụng hình sự)",
+  "gold_ids": [
+   "THADSVBHN|Dieu121|Khoan3"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "THADS2008|Dieu121|Khoan3",
+   "THADSVBHN|Dieu121|Khoan3",
+   "THADSVBHN|Dieu121|Khoan2",
+   "THADS2008|Dieu121|Khoan2",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemc"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu121|Khoan3",
+   "THADSVBHN|Dieu121|Khoan3",
+   "THADSVBHN|Dieu121|Khoan2",
+   "THADS2008|Dieu121|Khoan2",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemc"
+  ],
+  "rr_tcr_top5": [
+   "THADSVBHN|Dieu121|Khoan3",
+   "THADS2008|Dieu121|Khoan3",
+   "THADS2008|Dieu121|Khoan2",
+   "THADSVBHN|Dieu121|Khoan2",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu29|Khoan1"
+  ]
+ },
+ "EXT10223": {
+  "question": "Nếu nhà nước yêu cầu chuyển giao quyền sở hữu trí tuệ cho một cơ quan khác vì mục đích quốc phòng, tôi có bị kê biên quyền sở hữu trí tuệ đó không? Theo quy định, trong thời gian chuyển giao bắt buộc, Chấp hành viên không được kê biên quyền sở hữu tr",
+  "gold_ids": [
+   "THADSVBHN|Dieu84|Khoan3"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "THADSVBHN|Dieu84|Khoan3",
+   "THADS2008|Dieu84|Khoan3",
+   "THADSVBHN|Dieu84|Khoan1",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu72|Khoan3",
+   "THADS2008|Dieu84|Khoan1"
+  ],
+  "tcr_top5": [
+   "THADSVBHN|Dieu84|Khoan3",
+   "THADS2008|Dieu84|Khoan3",
+   "THADSVBHN|Dieu84|Khoan1",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu72|Khoan3",
+   "THADS2008|Dieu84|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu84|Khoan3",
+   "THADSVBHN|Dieu84|Khoan3",
+   "THADS2008|Dieu84|Khoan1",
+   "THADSVBHN|Dieu84|Khoan1",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu72|Khoan3"
+  ]
+ },
+ "EXT10230": {
+  "question": "Nếu tôi đã nhận được một quyết định giải quyết khiếu nại, tôi có bắt buộc phải thực hiện theo quyết định đó không? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu144|Khoan2|Diemb"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu8|Khoan2",
+   "THADSVBHN|Dieu143|Khoan1|Diemc",
+   "THADSVBHN|Dieu144|Khoan1|Diemb",
+   "THADS2008|Dieu143|Khoan1|Diemc",
+   "THADS2008|Dieu144|Khoan1|Diemb"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu8|Khoan2",
+   "THADSVBHN|Dieu143|Khoan1|Diemc",
+   "THADSVBHN|Dieu144|Khoan1|Diemb",
+   "THADS2008|Dieu143|Khoan1|Diemc",
+   "THADS2008|Dieu144|Khoan1|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu145|Khoan1|Diemb",
+   "THADSVBHN|Dieu145|Khoan1|Diemb",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu507|Khoan1",
+   "THADS2008|Dieu144|Khoan1|Diemb",
+   "THADSVBHN|Dieu144|Khoan1|Diemb"
+  ]
+ },
+ "EXT10232": {
+  "question": "Nếu tôi khiếu nại về quyết định trái pháp luật của Thủ trưởng cơ quan thi hành án cấp quân khu, thì Thủ trưởng cơ quan quản lý thi hành án thuộc Bộ Quốc phòng sẽ giải quyết khiếu nại đó theo quy định pháp luật.",
+  "gold_ids": [
+   "THADSVBHN|Dieu142|Khoan6|Diema"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "THADSVBHN|Dieu142|Khoan6|Diema",
+   "THADS2008|Dieu142|Khoan6|Diema",
+   "THADSVBHN|Dieu142|Khoan6|Diemb",
+   "THADS2008|Dieu142|Khoan6|Diemb",
+   "THADSVBHN|Dieu142|Khoan5"
+  ],
+  "tcr_top5": [
+   "THADSVBHN|Dieu142|Khoan6|Diema",
+   "THADS2008|Dieu142|Khoan6|Diema",
+   "THADSVBHN|Dieu142|Khoan6|Diemb",
+   "THADS2008|Dieu142|Khoan6|Diemb",
+   "THADSVBHN|Dieu142|Khoan5"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu142|Khoan6|Diema",
+   "THADSVBHN|Dieu142|Khoan6|Diema",
+   "THADS2008|Dieu142|Khoan5",
+   "THADSVBHN|Dieu142|Khoan5",
+   "THADS2008|Dieu142|Khoan6|Diemb"
+  ]
+ },
+ "EXT10234": {
+  "question": "Câu hỏi: Luật số 81/2025/QH15 có hiệu lực từ ngày nào? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu182|Khoan2"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "HNGDVBHN2025|Dieu131|Khoan3",
+   "THADSVBHN|Dieu182|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu6",
+   "THADSVBHN|Dieu64|Khoan1",
+   "THADSVBHN|Dieu2|Khoan1|Diemb"
+  ],
+  "tcr_top5": [
+   "HNGDVBHN2025|Dieu131|Khoan3",
+   "THADSVBHN|Dieu182|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu6",
+   "THADSVBHN|Dieu64|Khoan1",
+   "THADSVBHN|Dieu2|Khoan1|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "THADSVBHN|Dieu182|Khoan2",
+   "HNGDVBHN2025|Dieu131|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu6",
+   "HNGDVBHN2025|Preamble",
+   "THADSVBHN|Dieu2|Khoan1|Diemb"
+  ]
+ },
+ "EXT10236": {
+  "question": "Tài sản gồm máy y tế và vật dụng chăm sóc người bệnh có phải bị thi hành án không? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu87|Khoan2|Diemc"
+  ],
+  "as_of": "2026-02-01",
+  "base_top5": [
+   "THADSVBHN|Dieu87|Khoan2|Diemc",
+   "THADS2008|Dieu87|Khoan2|Diemc",
+   "THADSVBHN|Dieu87|Khoan3|Diemb",
+   "THADS2008|Dieu87|Khoan3|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu60|Khoan4|Diemd"
+  ],
+  "tcr_top5": [
+   "THADSVBHN|Dieu87|Khoan2|Diemc",
+   "THADS2008|Dieu87|Khoan2|Diemc",
+   "THADSVBHN|Dieu87|Khoan3|Diemb",
+   "THADS2008|Dieu87|Khoan3|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu60|Khoan4|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu87|Khoan2|Diemc",
+   "THADSVBHN|Dieu87|Khoan2|Diemc",
+   "THADS2008|Dieu87|Khoan3|Diemb",
+   "THADSVBHN|Dieu87|Khoan3|Diemb",
+   "THADS2008|Dieu87|Khoan3|Diema"
+  ]
+ },
+ "EXT10239": {
+  "question": "Nếu tôi nhận được kiến nghị từ cơ quan thi hành án dân sự về việc xem xét lại bản án, tôi cần phải làm gì trong thời hạn 45 ngày? ",
+  "gold_ids": [
+   "THADS2008|Dieu179|Khoan3"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADS2008|Dieu179|Khoan3",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu487",
+   "THADSVBHN|Dieu31|Khoan5|Diemb",
+   "THADSVBHN|Dieu31|Khoan5|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu191|Khoan3|Diemd"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu179|Khoan3",
+   "THADS2008|Dieu53",
+   "THADS2008|Dieu63|Khoan2",
+   "THADS2008|Dieu161|Khoan1",
+   "THADS2008|Dieu49|Khoan3|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu179|Khoan3",
+   "THADS2008|Dieu161|Khoan1",
+   "THADS2008|Dieu48|Khoan4",
+   "THADS2008|Dieu49|Khoan3|Diemb",
+   "THADS2008|Dieu63|Khoan2"
+  ]
+ },
+ "EXT10240": {
+  "question": "Nếu tôi nhận được bản án từ cơ quan thi hành án dân sự cấp tỉnh ủy thác, tôi có thể nộp đơn trực tiếp tại cơ quan thi hành án cấp quân khu được không? ",
+  "gold_ids": [
+   "THADS2008|Dieu35|Khoan3|Diemđ"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADS2008|Dieu56|Khoan3",
+   "THADS2008|Dieu35|Khoan3|Diemđ",
+   "THADS2008|Dieu56|Khoan2",
+   "THADS2008|Dieu35|Khoan2|Dieme",
+   "THADS2008|Dieu56|Khoan1|Diemb"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu56|Khoan3",
+   "THADS2008|Dieu35|Khoan3|Diemđ",
+   "THADS2008|Dieu56|Khoan2",
+   "THADS2008|Dieu35|Khoan2|Dieme",
+   "THADS2008|Dieu56|Khoan1|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu56|Khoan3",
+   "THADS2008|Dieu56|Khoan2",
+   "THADS2008|Dieu35|Khoan3|Diemđ",
+   "THADS2008|Dieu56|Khoan1|Diemb",
+   "THADS2008|Dieu35|Khoan2|Dieme"
+  ]
+ },
+ "EXT10241": {
+  "question": "Nếu tôi có một tài sản chung với người khác và bị tòa án kê biên để thi hành án, phần tài sản của tôi sẽ được xử lý như thế nào? ",
+  "gold_ids": [
+   "THADS2008|Dieu74|Khoan2|Diema"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADSVBHN|Dieu74|Khoan2|Diema",
+   "THADS2008|Dieu74|Khoan2|Diema",
+   "THADS2008|Dieu113|Khoan1|Diemc",
+   "THADSVBHN|Dieu113|Khoan1|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu54|Khoan3"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu74|Khoan2|Diema",
+   "THADS2008|Dieu113|Khoan1|Diemc",
+   "THADS2008|Dieu74|Khoan2|Diemb",
+   "THADS2008|Dieu113|Khoan1|Diemb",
+   "THADS2008|Dieu90|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu74|Khoan2|Diema",
+   "THADS2008|Dieu113|Khoan1|Diemb",
+   "THADS2008|Dieu113|Khoan1|Diemc",
+   "THADS2008|Dieu113|Khoan1|Diema",
+   "THADS2008|Dieu74|Khoan2|Diemb"
+  ]
+ },
+ "EXT10242": {
+  "question": "Nếu tài sản bị kê biên không bán được và người được thi hành án cũng không nhận, tôi nên làm gì theo quy định pháp luật? ",
+  "gold_ids": [
+   "THADS2008|Dieu51|Khoan1|Diemc"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADSVBHN|Dieu113|Khoan1|Diemc",
+   "THADS2008|Dieu113|Khoan1|Diemc",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu54|Khoan4",
+   "THADS2008|Dieu51|Khoan1|Diemc",
+   "TNBTCNN2017|Dieu30|Khoan3"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu113|Khoan1|Diemc",
+   "THADS2008|Dieu51|Khoan1|Diemc",
+   "THADS2008|Dieu113|Khoan1|Diemb",
+   "THADS2008|Dieu112|Khoan2",
+   "THADS2008|Dieu91"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu112|Khoan2",
+   "THADS2008|Dieu51|Khoan1|Diemc",
+   "THADS2008|Dieu113|Khoan1|Diemb",
+   "THADS2008|Dieu113|Khoan1|Diemc",
+   "THADS2008|Dieu90|Khoan1"
+  ]
+ },
+ "EXT10245": {
+  "question": "Nếu tôi nhận được một quyết định cưỡng chế từ cơ quan thi hành án dân sự, tôi có bao lâu để khiếu nại? Thời hiệu khiếu nại đối với quyết định này là 30 ngày, kể từ ngày nhận được quyết định hoặc biết được hành vi đó.",
+  "gold_ids": [
+   "THADS2008|Dieu140|Khoan2|Diemc"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADS2008|Dieu140|Khoan2|Diemc",
+   "THADSVBHN|Dieu140|Khoan2|Diemd",
+   "THADS2008|Dieu140|Khoan2|Diemd",
+   "THADSVBHN|Dieu140|Khoan2|Diema",
+   "THADS2008|Dieu140|Khoan2|Diema"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu140|Khoan2|Diemc",
+   "THADS2008|Dieu140|Khoan2|Diemd",
+   "THADS2008|Dieu140|Khoan2|Diema",
+   "THADS2008|Dieu140|Khoan2|Diemb",
+   "THADS2008|Dieu146|Khoan3"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu140|Khoan2|Diemd",
+   "THADS2008|Dieu140|Khoan2|Diemc",
+   "THADS2008|Dieu140|Khoan2|Diema",
+   "THADS2008|Dieu140|Khoan2|Diemb",
+   "THADS2008|Dieu75"
+  ]
+ },
+ "EXT10250": {
+  "question": "Nếu tôi gửi đơn yêu cầu thi hành án qua bưu điện, ngày bắt đầu tính thời hạn yêu cầu thi hành án là ngày nào? ",
+  "gold_ids": [
+   "THADS2008|Dieu32|Khoan2"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADS2008|Dieu32|Khoan2",
+   "THADSVBHN|Dieu31|Khoan1",
+   "THADS2008|Dieu32|Khoan1|Diemb",
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu9|Khoan3",
+   "THADS2008|Dieu36|Khoan2"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu32|Khoan2",
+   "THADS2008|Dieu32|Khoan1|Diemb",
+   "THADS2008|Dieu36|Khoan2",
+   "THADS2008|Dieu30|Khoan1",
+   "THADS2008|Dieu53"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu32|Khoan2",
+   "THADS2008|Dieu36|Khoan2",
+   "THADS2008|Dieu45|Khoan1",
+   "THADS2008|Dieu51|Khoan2",
+   "THADS2008|Dieu48|Khoan3"
+  ]
+ },
+ "EXT10252": {
+  "question": "Nếu tôi là người dân và nhận được quyết định về buộc thực hiện trước một phần nghĩa vụ cấp dưỡng, tôi có quyền yêu cầu chấp hành viên phải áp dụng biện pháp cưỡng chế trong thời hạn 24 giờ không?",
+  "gold_ids": [
+   "THADS2008|Dieu130|Khoan1|Diemb"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADSVBHN|Dieu130|Khoan1|Diemb",
+   "THADS2008|Dieu130|Khoan1|Diemb",
+   "THADSVBHN|Dieu130|Khoan1|Diema",
+   "THADS2008|Dieu130|Khoan1|Diema",
+   "THADSVBHN|Dieu130|Khoan1|Diemđ"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu130|Khoan1|Diemb",
+   "THADS2008|Dieu130|Khoan1|Diema",
+   "THADS2008|Dieu130|Khoan1|Diemđ",
+   "THADS2008|Dieu130|Khoan1|Diemc",
+   "THADS2008|Dieu130|Khoan1|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu130|Khoan1|Diemb",
+   "THADS2008|Dieu130|Khoan1|Diema",
+   "THADS2008|Dieu130|Khoan1|Diemc",
+   "THADS2008|Dieu130|Khoan1|Diemđ",
+   "THADS2008|Dieu130|Khoan1|Diemd"
+  ]
+ },
+ "EXT10253": {
+  "question": "Ai có quyền xử phạt vi phạm hành chính trong quá trình thực hiện án dân sự liên quan đến vụ phá sản? ",
+  "gold_ids": [
+   "THADS2008|Dieu163|Khoan1|Diemb"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADS2008|Dieu163|Khoan1|Diemb",
+   "THADSVBHN|Dieu163|Khoan1|Diemc",
+   "THADS2008|Dieu163|Khoan1|Diemc",
+   "THADSVBHN|Dieu163|Khoan2",
+   "THADS2008|Dieu163|Khoan2"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu163|Khoan1|Diemb",
+   "THADS2008|Dieu163|Khoan1|Diemc",
+   "THADS2008|Dieu163|Khoan2",
+   "THADS2008|Dieu163|Khoan1|Diema",
+   "THADS2008|Dieu163|Khoan1|Diemd"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu163|Khoan1|Diemb",
+   "THADS2008|Dieu163|Khoan1|Diemd",
+   "THADS2008|Dieu163|Khoan1|Diemc",
+   "THADS2008|Dieu163|Khoan1|Diema",
+   "THADS2008|Dieu23|Khoan1|Dieme"
+  ]
+ },
+ "EXT10255": {
+  "question": "Nếu tôi bị tố cáo sai và điều đó đã làm hại danh dự và quyền lợi của tôi, tôi có quyền đòi hỏi gì? ",
+  "gold_ids": [
+   "THADS2008|Dieu156|Khoan1|Diemc"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADSVBHN|Dieu156|Khoan1|Diemc",
+   "THADS2008|Dieu156|Khoan1|Diemc",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan1|Diemc",
+   "THADSVBHN|Dieu156|Khoan1|Diemd",
+   "THADS2008|Dieu156|Khoan1|Diemd"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu156|Khoan1|Diemc",
+   "THADS2008|Dieu156|Khoan1|Diemd",
+   "THADS2008|Dieu143|Khoan1|Diemđ",
+   "THADS2008|Dieu156|Khoan1|Diemb",
+   "THADS2008|Dieu154"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu156|Khoan1|Diemd",
+   "THADS2008|Dieu156|Khoan1|Diemc",
+   "THADS2008|Dieu156|Khoan1|Diemb",
+   "THADS2008|Dieu156|Khoan1|Diema",
+   "THADS2008|Dieu143|Khoan1|Diemđ"
+  ]
+ },
+ "EXT10256": {
+  "question": "Nếu tôi nộp đơn yêu cầu thi hành án nhưng cơ quan nhận đơn không có thẩm quyền, thì sao? Cơ quan thi hành án sẽ từ chối nhận đơn theo quy định tại Điều này.",
+  "gold_ids": [
+   "THADS2008|Dieu34|Khoan1|Diemb"
+  ],
+  "as_of": "2010-07-01",
+  "base_top5": [
+   "THADS2008|Dieu34|Khoan1|Diemb",
+   "THADS2008|Dieu34|Khoan1|Diema",
+   "THADS2008|Dieu34|Khoan2",
+   "THADS2008|Dieu34|Khoan1|Diemc",
+   "THADSVBHN|Dieu31|Khoan5|Diemb"
+  ],
+  "tcr_top5": [
+   "THADS2008|Dieu34|Khoan1|Diemb",
+   "THADS2008|Dieu34|Khoan1|Diema",
+   "THADS2008|Dieu34|Khoan2",
+   "THADS2008|Dieu34|Khoan1|Diemc",
+   "THADS2008|Dieu33|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "THADS2008|Dieu34|Khoan1|Diemb",
+   "THADS2008|Dieu34|Khoan1|Diema",
+   "THADS2008|Dieu34|Khoan2",
+   "THADS2008|Dieu34|Khoan1|Diemc",
+   "THADS2008|Dieu33|Khoan1"
+  ]
+ },
+ "EXT10258": {
+  "question": "Nếu tôi đã kiện thành công và được một bản án chính thức công nhận, tại sao vẫn không được thụ lý hồ sơ bồi thường? ",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu43|Khoan2|Diemh"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu43|Khoan2|Diemh",
+   "TNBTCNN2017|Dieu43|Khoan2|Diemg",
+   "TNBTCNN2017|Dieu43|Khoan4",
+   "luat-so-15-2026-qh16-470450|Dieu43|Khoan2|Diemg",
+   "TNBTCNN2017|Dieu43|Khoan2|Dieme"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu43|Khoan2|Diemh",
+   "TNBTCNN2017|Dieu43|Khoan2|Diemg",
+   "TNBTCNN2017|Dieu43|Khoan4",
+   "TNBTCNN2017|Dieu43|Khoan2|Dieme",
+   "TNBTCNN2017|Dieu43|Khoan2|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu43|Khoan2|Diemh",
+   "TNBTCNN2017|Dieu43|Khoan2|Diemg",
+   "TNBTCNN2017|Dieu43|Khoan2|Diemb",
+   "TNBTCNN2017|Dieu43|Khoan2|Dieme",
+   "TNBTCNN2017|Dieu43|Khoan2|Diema"
+  ]
+ },
+ "EXT10261": {
+  "question": "Tại sao sau khi nhận giấy mời đến địa điểm thương lượng mà tôi không đến hai lần liên tiếp mà không có lý do chính đáng thì thủ trưởng cơ quan giải quyết bồi thường sẽ ra quyết định tạm đình chỉ giải quyết bồi thường?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu50|Khoan1|Diemb"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu50|Khoan1|Diemb",
+   "TNBTCNN2017|Dieu50|Khoan1|Diema",
+   "luat-so-15-2026-qh16-470450|Dieu47|Khoan1|Diemd",
+   "TNBTCNN2017|Dieu50|Khoan1|Diemc",
+   "TNBTCNN2017|Dieu50|Khoan3"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu50|Khoan1|Diemb",
+   "TNBTCNN2017|Dieu50|Khoan1|Diema",
+   "TNBTCNN2017|Dieu50|Khoan1|Diemc",
+   "TNBTCNN2017|Dieu50|Khoan3",
+   "TNBTCNN2017|Dieu50|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu50|Khoan1|Diemb",
+   "TNBTCNN2017|Dieu50|Khoan1|Diema",
+   "TNBTCNN2017|Dieu51|Khoan1|Diemc",
+   "TNBTCNN2017|Dieu50|Khoan1|Diemd",
+   "TNBTCNN2017|Dieu50|Khoan1|Diemc"
+  ]
+ },
+ "EXT10263": {
+  "question": "Nếu tòa án hủy bỏ bản án đã có hiệu lực pháp luật theo thủ tục đặc biệt, người dân có quyền yêu cầu cơ quan nào bồi thường? Theo khoản 5 và khoản 6 Điều 19 Luật Tố tụng hành chính.",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu37|Khoan3"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu37|Khoan5",
+   "TNBTCNN2017|Dieu37|Khoan6",
+   "TNBTCNN2017|Dieu37|Khoan4",
+   "TNBTCNN2017|Dieu37|Khoan3",
+   "TNBTCNN2017|Dieu37|Khoan2"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu37|Khoan5",
+   "TNBTCNN2017|Dieu37|Khoan6",
+   "TNBTCNN2017|Dieu37|Khoan4",
+   "TNBTCNN2017|Dieu37|Khoan3",
+   "TNBTCNN2017|Dieu37|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu37|Khoan5",
+   "TNBTCNN2017|Dieu37|Khoan6",
+   "TNBTCNN2017|Dieu37|Khoan3",
+   "TNBTCNN2017|Dieu37|Khoan2",
+   "TNBTCNN2017|Dieu73|Khoan2|Diemm"
+  ]
+ },
+ "EXT10264": {
+  "question": "Nếu tôi bị kết án và phải chấp hành 2 năm tù cho hưởng án treo, tôi sẽ được bồi thường thiệt hại về tinh thần như thế nào? Theo quy định, thiệt hại về tinh thần sẽ được tính là 3 ngày lương cơ sở cho mỗi ngày chấp hành hình phạt.",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu27|Khoan3|Diemd"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu27|Khoan3|Diemd",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemb",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemc",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemđ",
+   "TNBTCNN2017|Dieu27|Khoan4"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu27|Khoan3|Diemd",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemb",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemc",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemđ",
+   "TNBTCNN2017|Dieu27|Khoan4"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu27|Khoan3|Diemd",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemc",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemđ",
+   "TNBTCNN2017|Dieu27|Khoan3|Diemb",
+   "TNBTCNN2017|Dieu27|Khoan4"
+  ]
+ },
+ "EXT10267": {
+  "question": "Nếu tôi nộp đơn xin bồi thường thiệt hại nhưng thiệt hại đó không thuộc phạm vi trách nhiệm bồi thường của Nhà nước theo Luật này, cơ quan có thẩm quyền sẽ xử lý đơn của tôi như thế nào?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu43|Khoan2|Diemc"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu7|Khoan1|Diemb",
+   "TNBTCNN2017|Dieu55|Khoan2",
+   "BLDS2015|Dieu598",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu13|Khoan5",
+   "TNBTCNN2017|Dieu2"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu7|Khoan1|Diemb",
+   "TNBTCNN2017|Dieu55|Khoan2",
+   "BLDS2015|Dieu598",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu13|Khoan5",
+   "TNBTCNN2017|Dieu2"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu43|Khoan2|Diemc",
+   "TNBTCNN2017|Dieu3",
+   "TNBTCNN2017|Dieu69|Khoan1",
+   "TNBTCNN2017|Dieu55|Khoan2",
+   "TNBTCNN2017|Dieu76|Khoan1"
+  ]
+ },
+ "EXT10270": {
+  "question": "Nếu tôi bị tòa tuyên có tội nhưng sau đó tòa cấp trên hủy quyết định đó và tuyên tôi không có tội, tôi có quyền yêu cầu bồi thường từ tòa án cấp sơ thẩm không? (Điều 130 Bộ luật Tố tụng hình sự)",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu36|Khoan1|Dieme"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu36|Khoan1|Diemc",
+   "TNBTCNN2017|Dieu36|Khoan1|Dieme",
+   "TNBTCNN2017|Dieu36|Khoan1|Diema",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemd",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemđ"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu36|Khoan1|Diemc",
+   "TNBTCNN2017|Dieu36|Khoan1|Dieme",
+   "TNBTCNN2017|Dieu36|Khoan1|Diema",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemd",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemđ"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu36|Khoan1|Dieme",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemc",
+   "TNBTCNN2017|Dieu36|Khoan1|Diema",
+   "TNBTCNN2017|Dieu36|Khoan2|Diemc",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemd"
+  ]
+ },
+ "EXT10271": {
+  "question": "Nếu tòa án sơ thẩm đã trả hồ sơ để điều tra bổ sung nhưng sau đó bị can bị đình chỉ vụ án vì không có sự việc phạm tội, thì theo quy định pháp luật như thế nào? ",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu35|Khoan4"
+  ],
+  "as_of": "2019-07-01",
+  "base_top5": [
+   "TNBTCNN2017|Dieu35|Khoan4",
+   "TNBTCNN2017|Dieu35|Khoan5",
+   "TNBTCNN2017|Dieu34|Khoan3",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemđ",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemb"
+  ],
+  "tcr_top5": [
+   "TNBTCNN2017|Dieu35|Khoan4",
+   "TNBTCNN2017|Dieu35|Khoan5",
+   "TNBTCNN2017|Dieu34|Khoan3",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemđ",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "TNBTCNN2017|Dieu35|Khoan4",
+   "TNBTCNN2017|Dieu35|Khoan5",
+   "TNBTCNN2017|Dieu34|Khoan3",
+   "TNBTCNN2017|Dieu36|Khoan1|Diemđ",
+   "TNBTCNN2017|Dieu35|Khoan2"
+  ]
+ },
+ "EXT10274": {
+  "question": "Mình là con 17 tuổi, muốn bán căn hộ của mình mà không hỏi ý kiến bố mẹ được không? ",
+  "gold_ids": [
+   "HNGD2000|Dieu46|Khoan2"
+  ],
+  "as_of": "2009-05-26",
+  "base_top5": [
+   "HNGD2000|Dieu65|Khoan2",
+   "HNGD2014|Dieu76|Khoan1",
+   "HNGD2014|Dieu77|Khoan2",
+   "HNGDVBHN2025|Dieu76|Khoan1",
+   "HNGDVBHN2025|Dieu77|Khoan2"
+  ],
+  "tcr_top5": [
+   "HNGD2000|Dieu65|Khoan2",
+   "HNGD2000|Dieu45|Khoan1",
+   "BLDS2005|Dieu647|Khoan1",
+   "HNGD2000|Dieu83|Khoan2",
+   "HNGD2000|Dieu46|Khoan2"
+  ],
+  "rr_tcr_top5": [
+   "HNGD2000|Dieu65|Khoan2",
+   "HNGD2000|Dieu46|Khoan2",
+   "HNGD2000|Dieu83|Khoan2",
+   "HNGD2000|Dieu45|Khoan1",
+   "BLDS2005|Dieu647|Khoan1"
+  ]
+ },
+ "EXT10277": {
+  "question": "Nếu tôi được chỉ định làm hòa giải viên nhưng không tự nguyện, tôi có vi phạm pháp luật không? ",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu10|Khoan2"
+  ],
+  "as_of": "2026-07-02",
+  "base_top5": [
+   "HOAGIAI2026|Dieu10|Khoan2",
+   "HOAGIAI2026|Dieu10|Khoan1|Diema",
+   "HOAGIAI2026|Dieu10|Khoan1|Diemb",
+   "HOAGIAI2026|Dieu14|Khoan1|Diemc",
+   "HOAGIAI2026|Dieu9|Khoan1"
+  ],
+  "tcr_top5": [
+   "HOAGIAI2026|Dieu10|Khoan2",
+   "HOAGIAI2026|Dieu10|Khoan1|Diema",
+   "HOAGIAI2026|Dieu10|Khoan1|Diemb",
+   "HOAGIAI2026|Dieu14|Khoan1|Diemc",
+   "HOAGIAI2026|Dieu9|Khoan1"
+  ],
+  "rr_tcr_top5": [
+   "HOAGIAI2026|Dieu2|Khoan1",
+   "HOAGIAI2026|Dieu10|Khoan2",
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu417|Khoan4",
+   "HOAGIAI2026|Dieu3|Khoan1|Diemc",
+   "HOAGIAI2026|Dieu12|Khoan9"
+  ]
+ },
+ "EXT10280": {
+  "question": "Sổ hộ tịch giấy lập trước khi luật có hiệu lực có được sử dụng để chứng minh thông tin hộ tịch của cá nhân không?",
+  "gold_ids": [
+   "HOTICH2026|Dieu28|Khoan1"
+  ],
+  "as_of": "2026-07-02",
+  "base_top5": [
+   "HOTICH2026|Dieu28|Khoan1",
+   "HOTICH2014|Dieu75|Khoan1",
+   "HOTICH2014|Dieu75|Khoan2",
+   "HOTICH2026|Dieu28|Khoan2",
+   "HOTICH2026|Dieu4|Khoan2|Diema"
+  ],
+  "tcr_top5": [
+   "HOTICH2026|Dieu28|Khoan1",
+   "HOTICH2014|Dieu75|Khoan1",
+   "HOTICH2014|Dieu75|Khoan2",
+   "HOTICH2026|Dieu28|Khoan2",
+   "HOTICH2026|Dieu4|Khoan2|Diema"
+  ],
+  "rr_tcr_top5": [
+   "HOTICH2026|Dieu28|Khoan1",
+   "HOTICH2014|Dieu75|Khoan1",
+   "HOTICH2014|Dieu75|Khoan2",
+   "HOTICH2026|Dieu28|Khoan2",
+   "HOTICH2014|Dieu76|Khoan1"
+  ]
+ },
+ "EXT10281": {
+  "question": "Trẻ em sinh ra ở nước ngoài và trở về Việt Nam sống, làm thế nào để đăng ký khai sinh? (Điều 8, Khoản 1)",
+  "gold_ids": [
+   "HOTICH2026|Dieu15|Khoan1|Diemb"
+  ],
+  "as_of": "2026-07-02",
+  "base_top5": [
+   "HOTICH2014|Dieu35|Khoan2|Diema",
+   "HOTICH2014|Dieu35|Khoan2|Diemb",
+   "HOTICH2026|Dieu15|Khoan1|Diemb",
+   "HOTICH2014|Dieu35|Khoan1|Diemc",
+   "HOTICH2014|Dieu35|Khoan1|Diemb"
+  ],
+  "tcr_top5": [
+   "HOTICH2014|Dieu35|Khoan2|Diema",
+   "HOTICH2014|Dieu35|Khoan2|Diemb",
+   "HOTICH2026|Dieu15|Khoan1|Diemb",
+   "HOTICH2014|Dieu35|Khoan1|Diemc",
+   "HOTICH2014|Dieu35|Khoan1|Diemb"
+  ],
+  "rr_tcr_top5": [
+   "HOTICH2014|Dieu7|Khoan1|Diemd",
+   "HOTICH2026|Dieu15|Khoan3",
+   "HOTICH2026|Dieu15|Khoan1|Diemb",
+   "HOTICH2014|Dieu36|Khoan2",
+   "HOTICH2026|Dieu15|Khoan1|Diemc"
+  ]
+ }
+}

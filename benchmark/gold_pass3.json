@@ -1,0 +1,718 @@
+{
+ "meta": {
+  "judge": "qwen3:14b",
+  "sample_seed": 20261101,
+  "sample_n": 60,
+  "candidates_source": "rerank_result.json per_q rerank_top[:8]",
+  "applied": [
+   "TOP27031",
+   "TOP43156"
+  ]
+ },
+ "unverifiable_recheck": [
+  {
+   "qid": "TOP27031",
+   "judge": "qwen3:14b",
+   "candidates": [
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu23|Khoan1",
+    "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu23|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu106|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu97|Khoan2|Diemg",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu50|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu58|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu76|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu6|Khoan2"
+   ],
+   "verdict": {
+    "verdict": "yes",
+    "chunk": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu50|Khoan3",
+    "reason": "Điều 50 khoản 3 nêu rõ việc thu thập tài liệu, chứng cứ có liên quan đến vụ việc dân sự thực hiện theo quy định của Bộ luật này (BLTTDS), trực tiếp trả lời câu hỏi về cơ sở pháp lý chung cho việc thu thập chứng cứ vụ án dân sự."
+   },
+   "outcome": "regolded"
+  },
+  {
+   "qid": "TOP43156",
+   "judge": "qwen3:14b",
+   "candidates": [
+    "NCN2010|Dieu43|Khoan2|Diemc",
+    "NCN2010|Dieu28|Khoan2|Diemd",
+    "NCN2010|Dieu43|Khoan2|Diema",
+    "NCN2010|Dieu43|Khoan2|Diemh",
+    "NCN2010|Dieu43|Khoan2|Diemk",
+    "NCN2010|Dieu43|Khoan2|Diemg",
+    "NCN2010|Dieu43|Khoan2|Dieme",
+    "NCN2010|Dieu43|Khoan2|Diemd"
+   ],
+   "verdict": {
+    "verdict": "yes",
+    "chunk": "NCN2010|Dieu43|Khoan2|Diemc",
+    "reason": "Điều 43 Khoản 2 Điểm c của Luật Nuôi con nuôi 2010 quy định trực tiếp nghĩa vụ hỗ trợ tìm gia đình thay thế cho trẻ khuyết tật, nhiễm HIV/AIDS, phù hợp với câu hỏi."
+   },
+   "outcome": "regolded"
+  }
+ ],
+ "agreement_audit": {
+  "summary": {
+   "n": 60,
+   "n_parse_fail": 4,
+   "n_effective": 56,
+   "n_agree_gold": 31,
+   "n_agree_primary": 32,
+   "agreement_rate": 0.5536,
+   "primary_rate": 0.5714,
+   "seed": 20261101,
+   "judge": "qwen3:14b",
+   "protocol": "judge picks the legal basis among stored rerank_top-8; agreement = chosen chunk belongs to the adjudicated gold set"
+  },
+  "per_q": [
+   {
+    "qid": "CIV003",
+    "chosen": "HNGD2014|Dieu8|Khoan1|Diema",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HNGD2014|Dieu8|Khoan1|Diema",
+     "reason": "Điều 8 khoản 1 điểm a HNGD2014 quy định rõ tuổi kết hôn tối thiểu là nam từ đủ 20 tuổi, nữ từ đủ 18 tuổi, phù hợp với câu hỏi và thời điểm 2024-06-01 (luật hiện hành chưa có hiệu lực từ 2025)."
+    }
+   },
+   {
+    "qid": "CIV008",
+    "chosen": "HNGD2014|Dieu55",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HNGD2014|Dieu55",
+     "reason": "Điều 55 HNGD2014 quy định rõ trình tự công nhận thuận tình ly hôn khi vợ chồng cùng yêu cầu, phù hợp với thời điểm 2016."
+    }
+   },
+   {
+    "qid": "GEN11580",
+    "chosen": "BLDS2015|Dieu217|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu217|Khoan1",
+     "reason": "Điều 217 BLDS2015 quy định rõ quyền khai thác công dụng và hưởng hoa lợi, lợi tức của chủ sở hữu chung theo phần tương ứng với phần quyền sở hữu, phù hợp với câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN17239",
+    "chosen": "BLDS2015|Dieu438|Khoan1|Diemb",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu438|Khoan1|Diemb",
+     "reason": "Điều 438 BLDS2015 quy định quyền của người mua khi vật được giao không đạt mục đích sử dụng, bao gồm quyền hủy bỏ hợp đồng và yêu cầu bồi thường thiệt hại, phù hợp với tình huống tài sản không đạt chất lượng công bố."
+    }
+   },
+   {
+    "qid": "GEN19616",
+    "chosen": "BLDS2005|Dieu104|Khoan1",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2005|Dieu104|Khoan1",
+     "reason": "Điều 104 BLDS2005 quy định tổ chức xã hội được cơ quan nhà nước có thẩm quyền cho phép thành lập, công nhận điều lệ và là pháp nhân khi tham gia quan hệ dân sự, phù hợp với câu hỏi về quyền thành lập của tổ chức xã hội từ thiện."
+    }
+   },
+   {
+    "qid": "GEN25840",
+    "chosen": "BLDS2005|Dieu757|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2005|Dieu757|Khoan1",
+     "reason": "Điều 757 BLDS2005 quy định hợp đồng chuyển giao công nghệ phải được đăng ký tại cơ quan nhà nước có thẩm quyền khi pháp luật có quy định, phù hợp với câu hỏi về nơi đăng ký hợp đồng."
+    }
+   },
+   {
+    "qid": "GEN25918",
+    "chosen": "HNGD2014|Dieu50|Khoan1|Diema",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HNGD2014|Dieu50|Khoan1|Diema",
+     "reason": "Điều 50 Khoản 1 Điểm a HNGD2014 quy định rõ trường hợp thỏa thuận chế độ tài sản vợ chồng bị tuyên bố vô hiệu khi không tuân thủ điều kiện có hiệu lực của giao dịch theo Bộ luật Dân sự và các luật khác, phù hợp với câu hỏi và thời điểm as_of 2024-06-01 (trước khi HNGDVBHN2025 có hiệu lực)."
+    }
+   },
+   {
+    "qid": "GEN31043",
+    "chosen": "BLDS2015|Dieu30|Khoan3",
+    "agrees_gold": false,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "no",
+     "chunk": "BLDS2015|Dieu30|Khoan3",
+     "reason": "The child lived less than 24 hours, and there's no mention of parental request in the question."
+    }
+   },
+   {
+    "qid": "GEN33568",
+    "chosen": "BLDS2015|Dieu138|Khoan1",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu138|Khoan1",
+     "reason": "Điều 138 BLDS 2015 quy định chung về quyền ủy quyền trong giao dịch dân sự, bao gồm cả việc bán nhà."
+    }
+   },
+   {
+    "qid": "GEN37968",
+    "chosen": "HNGD2014|Dieu8|Khoan1|Diema",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "no",
+     "chunk": "HNGD2014|Dieu8|Khoan1|Diema",
+     "reason": "Điều 8 Luật Hôn nhân và Gia đình 2014 quy định nam phải đủ 20 tuổi, nữ đủ 18 tuổi mới được kết hôn. Nam 19 tuổi và nữ 17 tuổi không đáp ứng điều kiện về tuổi."
+    }
+   },
+   {
+    "qid": "GEN40699",
+    "chosen": "BLDS2005|Dieu107|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2005|Dieu107|Khoan1",
+     "reason": "Điều 107 BLDS 2005 quy định rõ chủ hộ có thể ủy quyền cho thành viên khác đã thành niên làm đại diện của hộ trong quan hệ dân sự, phù hợp với câu hỏi về việc ủy quyền trong hộ gia đình."
+    }
+   },
+   {
+    "qid": "GEN44390",
+    "chosen": "BLDS2015|Dieu577|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu577|Khoan1",
+     "reason": "Điều 577 BLDS2015 quy định rõ nghĩa vụ bồi thường thiệt hại khi người không có ủy quyền cố ý gây thiệt hại trong khi thực hiện công việc, phù hợp với nội dung câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN45293",
+    "chosen": "BLDS2015|Dieu442|Khoan2",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu442|Khoan2",
+     "reason": "Điều 442 khoản 2 BLDS2015 quy định rõ trường hợp thỏa thuận không rõ ràng thì chi phí vận chuyển được xác định theo chi phí công bố, quy định của cơ quan có thẩm quyền hoặc tiêu chuẩn ngành, giải thích cho việc người mua phải trả phí vận chuyển khi không có thỏa thuận rõ ràng."
+    }
+   },
+   {
+    "qid": "GEN45559",
+    "chosen": "BLDS2015|Dieu551|Khoan2",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu551|Khoan2",
+     "reason": "Điều 551 Khoản 2 BLDS2015 quy định rõ: Bên đặt gia công đơn phương chấm dứt hợp đồng phải trả tiền công tương ứng với công việc đã làm, trừ thỏa thuận khác - trực tiếp trả lời câu hỏi về quyền được trả tiền công khi đơn phương chấm dứt."
+    }
+   },
+   {
+    "qid": "GEN50764",
+    "chosen": "HNGD2014|Dieu73|Khoan4",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HNGD2014|Dieu73|Khoan4",
+     "reason": "Điều 73 Khoản 4 HNGD2014 quy định rõ trách nhiệm liên đới của cha mẹ đối với giao dịch liên quan đến tài sản của con chưa thành niên, phù hợp với câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN53978",
+    "chosen": "BLDS2015|Dieu623|Khoan2",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu623|Khoan2",
+     "reason": "Điều 623 Khoản 2 BLDS2015 quy định rõ thời hiệu 10 năm để người thừa kế yêu cầu xác nhận quyền thừa kế, phù hợp với câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN56666",
+    "chosen": "null",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "no",
+     "chunk": "null",
+     "reason": "Không có đoạn trích nào nêu rõ thủ tục chia tài sản chung theo yêu cầu của người dân. Các đoạn trích chỉ đề cập đến nguyên tắc chia tài sản (thanh toán chênh lệch, chia bằng hiện vật hoặc giá trị) hoặc điều kiện yêu cầu chia tài sản (ví dụ: khi có nghĩa vụ thanh toán không thực hiện được)."
+    }
+   },
+   {
+    "qid": "GEN57365",
+    "chosen": "HNGDVBHN2025|Dieu76|Khoan3",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HNGDVBHN2025|Dieu76|Khoan3",
+     "reason": "Điều 76 khoản 3 HNGDVBHN2025 quy định rõ cha mẹ không quản lý tài sản riêng của con khi con đang được người khác giám hộ, trực tiếp trả lời câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN64020",
+    "chosen": null,
+    "agrees_gold": null,
+    "matches_primary": null,
+    "verdict": null,
+    "parse_fail": true
+   },
+   {
+    "qid": "GEN69784",
+    "chosen": "BLDS2015|Dieu175|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu175|Khoan1",
+     "reason": "Điều 175 BLDS2015 quy định rõ ràng về cách xác định ranh giới (thỏa thuận, quyết định nhà nước, tập quán, ranh giới tồn tại 30 năm không tranh chấp) và cấm lấn chiếm, thay đổi mốc giới, phù hợp hoàn toàn với câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN70295",
+    "chosen": "BLDS2015|Dieu146|Khoan1|Diemd",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu146|Khoan1|Diemd",
+     "reason": "Điều 146 BLDS2015 quy định rõ 'nửa tháng là mười lăm ngày' trực tiếp trả lời câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN70985",
+    "chosen": "BLDS2015|Dieu455|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu455|Khoan1",
+     "reason": "Điều 455 Khoản 1 BLDS2015 định nghĩa rõ ràng về hợp đồng trao đổi tài sản, phù hợp với câu hỏi và là văn bản pháp lý hiện hành (thay thế BLDS2005/1995) tại thời điểm 2024-06-01."
+    }
+   },
+   {
+    "qid": "GEN71410",
+    "chosen": "BLDS2015|Dieu305|Khoan1",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu305|Khoan1",
+     "reason": "Điều 305, Khoản 1 BLDS2015 quy định rõ rằng bên nhận bảo đảm được quyền nhận tài sản bảo đảm thay cho việc thực hiện nghĩa vụ nếu có thỏa thuận khi xác lập giao dịch bảo đảm, trực tiếp trả lời câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN73628",
+    "chosen": "BLDS2005|Dieu105|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2005|Dieu105|Khoan1",
+     "reason": "Điều 105 BLDS2005 quy định rõ quỹ từ thiện hoạt động vì mục đích xã hội, nhân đạo không nhằm thu lợi nhuận, phù hợp với câu hỏi và thời điểm as_of."
+    }
+   },
+   {
+    "qid": "GEN75189",
+    "chosen": "null",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "no",
+     "chunk": "null",
+     "reason": "Không có đoạn trích nào nêu rõ hậu quả pháp lý hoặc biện pháp xử lý cụ thể khi tổ chức xã hội sử dụng sai mục đích tài sản nhà nước. Các đoạn trích chỉ quy định nghĩa vụ quản lý, sử dụng tài sản đúng mục đích nhưng không đề cập đến xử lý vi phạm."
+    }
+   },
+   {
+    "qid": "GEN79344",
+    "chosen": "BLDS2015|Dieu540|Khoan4",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu540|Khoan4",
+     "reason": "Điều 540, Khoản 4 BLDS2015 quy định rõ quyền yêu cầu bồi thường thiệt hại khi tài sản bị mất, hư hỏng trong quá trình vận chuyển, phù hợp trực tiếp với câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN81336",
+    "chosen": "NCN2010|Dieu24|Khoan4",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "NCN2010|Dieu24|Khoan4",
+     "reason": "Điều 24 Khoản 4 NCN2010 quy định rõ ràng rằng kể từ ngày giao nhận con nuôi, cha mẹ đẻ không còn quyền, nghĩa vụ chăm sóc, nuôi dưỡng, cấp dưỡng... đối với con đã cho làm con nuôi, trừ trường hợp có thỏa thuận khác. Đây là cơ sở pháp lý trực tiếp trả lời câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN82789",
+    "chosen": "BLDS2015|Dieu556|Khoan1",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu556|Khoan1",
+     "reason": "Điều 556 BLDS2015 quy định rõ quyền của bên gửi tài sản được yêu cầu lấy lại tài sản bất cứ lúc nào khi hợp đồng không xác định thời hạn, nhưng phải báo trước cho bên giữ một thời gian hợp lý, phù hợp với nội dung câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN83381",
+    "chosen": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan1",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu465|Khoan1",
+     "reason": "Điều 465 khoản 1 quy định người nước ngoài có quyền khởi kiện tại Tòa án Việt Nam khi quyền lợi bị xâm phạm, phù hợp với câu hỏi về thẩm quyền kiện tụng."
+    }
+   },
+   {
+    "qid": "GEN83997",
+    "chosen": "BLDS2005|Dieu120|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2005|Dieu120|Khoan1",
+     "reason": "Điều 120 BLDS2005 quy định rõ trình tự thanh toán nợ khi tổ hợp tác chấm dứt, phù hợp với thời điểm 2010."
+    }
+   },
+   {
+    "qid": "GEN85381",
+    "chosen": "BLDS2015|Dieu672|Khoan2",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu672|Khoan2",
+     "reason": "Điều 672 BLDS2015 quy định rõ trường hợp người có nhiều nơi cư trú thì pháp luật áp dụng là pháp luật của nước nơi người đó có quốc tịch và có mối liên hệ gắn bó nhất, phù hợp với câu hỏi về việc xác định pháp luật áp dụng khi cư trú ở nhiều nơi."
+    }
+   },
+   {
+    "qid": "GEN87544",
+    "chosen": "HNGD2014|Dieu17",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HNGD2014|Dieu17",
+     "reason": "Điều 17 HNGD2014 quy định rõ về bình đẳng quyền, nghĩa vụ giữa vợ chồng trong mọi mặt của gia đình và việc thực hiện quyền, nghĩa vụ công dân, phù hợp với câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN91745",
+    "chosen": "BLDS2015|Dieu34|Khoan2",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu34|Khoan2",
+     "reason": "Điều 34 Khoản 2 BLDS2015 quy định rõ quyền yêu cầu Tòa án bác bỏ thông tin xấu về cá nhân, đồng thời nêu người thân có quyền yêu cầu sau khi cá nhân chết."
+    }
+   },
+   {
+    "qid": "GEN95321",
+    "chosen": "BLDS2005|Dieu290|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2005|Dieu290|Khoan1",
+     "reason": "Điều 290 BLDS2005 quy định nghĩa vụ trả tiền phải được thực hiện đầy đủ, đúng thời hạn và phương thức đã thỏa thuận, bao gồm cả tiền lãi trên nợ gốc (trừ trường hợp có thỏa thuận khác), phù hợp với nội dung câu hỏi."
+    }
+   },
+   {
+    "qid": "GEN95535",
+    "chosen": "BLDS2005|Dieu274|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2005|Dieu274|Khoan1",
+     "reason": "Điều 274 BLDS2005 quy định rõ quyền sử dụng hạn chế bất động sản liền kề được xác lập theo thoả thuận hoặc theo quy định của pháp luật, phù hợp với câu hỏi tại thời điểm 2010."
+    }
+   },
+   {
+    "qid": "GEN95669",
+    "chosen": "BLDS2015|Dieu34|Khoan5",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu34|Khoan5",
+     "reason": "Điều 34 Khoản 5 BLDS 2015 quy định rõ quyền yêu cầu bồi thường thiệt hại khi thông tin gây ảnh hưởng xấu đến danh dự, nhân phẩm, uy tín, phù hợp với tình huống người bị nói xấu trên mạng xã hội."
+    }
+   },
+   {
+    "qid": "GEN99286",
+    "chosen": "BLDS2015|Dieu75|Khoan3",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "BLDS2015|Dieu75|Khoan3",
+     "reason": "Điều 75 BLDS2015 quy định cụ thể việc thành lập, hoạt động và chấm dứt pháp nhân thương mại theo Bộ luật Dân sự, Luật Doanh nghiệp và pháp luật liên quan, phù hợp với câu hỏi."
+    }
+   },
+   {
+    "qid": "NEW28139",
+    "chosen": "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diemd",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diemd",
+     "reason": "Điều 73 Khoản 1 Điểm d của Luật 15/2026/QH16 nêu rõ nhiệm vụ của Chính phủ về chỉ đạo thực hiện chuyển đổi số trong công tác bồi thường nhà nước, phù hợp với câu hỏi."
+    }
+   },
+   {
+    "qid": "NEW57186",
+    "chosen": "null",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "no",
+     "chunk": "null",
+     "reason": "Không có đoạn trích nào nêu rõ yêu cầu về 'kiến thức pháp luật' đối với người nhận nuôi. Các điều luật chỉ đề cập đến điều kiện chung, hồ sơ cần thiết, và quy trình thủ tục, nhưng không quy định cụ thể về yêu cầu kiến thức pháp lý."
+    }
+   },
+   {
+    "qid": "NEW57952",
+    "chosen": "HOTICH2014|Dieu62|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HOTICH2014|Dieu62|Khoan1",
+     "reason": "Điều 62 Khoản 1 quy định cụ thể số lượng bản chính trích lục hộ tịch được cấp (01 bản) và trừ trường hợp đăng ký khai sinh, đăng ký kết hôn, phù hợp với câu hỏi."
+    }
+   },
+   {
+    "qid": "NEW75514",
+    "chosen": "THADSVBHN|Dieu7|Khoan1|Dieml",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "THADSVBHN|Dieu7|Khoan1|Dieml",
+     "reason": "Điều 7 THADSVBHN quy định rõ quyền được khiếu nại, tố cáo về thi hành án của người được thi hành án, phù hợp với câu hỏi về quyền lên tiếng khi việc thi hành án ảnh hưởng đến vợ."
+    }
+   },
+   {
+    "qid": "NEW83864",
+    "chosen": "HOTICH2014|Dieu52|Khoan2",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HOTICH2014|Dieu52|Khoan2",
+     "reason": "Điều 52 Khoản 2 quy định rõ công chức hộ tịch ghi vào Sổ hộ tịch, ký cùng người khai tử và báo cáo cấp huyện cấp trích lục khi khai tử đúng, phù hợp với câu hỏi."
+    }
+   },
+   {
+    "qid": "NEW87268",
+    "chosen": "null",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "no",
+     "chunk": "null",
+     "reason": "Không có đoạn trích nào nêu rõ nơi nộp chứng cứ hoặc người nhận khi Viện kiểm sát yêu cầu. Các đoạn trích chỉ đề cập chung chung về nghĩa vụ cung cấp chứng cứ mà không hướng dẫn thủ tục cụ thể."
+    }
+   },
+   {
+    "qid": "NEW91442",
+    "chosen": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu69|Khoan2",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu69|Khoan2",
+     "reason": "Điều 69 Khoản 2 quy định năng lực hành vi tố tụng dân sự bao gồm khả năng tự thực hiện quyền, nghĩa vụ hoặc ủy quyền cho người đại diện, trực tiếp trả lời câu hỏi về việc cần ủy quyền khi không thể tự thực hiện."
+    }
+   },
+   {
+    "qid": "NEW95746",
+    "chosen": "HOTICH2026|Dieu17|Khoan1|Diemd",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HOTICH2026|Dieu17|Khoan1|Diemd",
+     "reason": "Điều 17 Khoản 1 Điểm d của Luật Hộ tịch 2026 quy định Ủy ban nhân dân cấp xã thực hiện đăng ký giám hộ cho trường hợp giữa người gốc Việt Nam chưa xác định được quốc tịch đang sinh sống tại Việt Nam với nhau, phù hợp với tình huống của người dùng."
+    }
+   },
+   {
+    "qid": "TOP10475",
+    "chosen": "HOTICH2026|Dieu25|Khoan3",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HOTICH2026|Dieu25|Khoan3",
+     "reason": "Điều 25 Khoản 3 HOTICH2026 quy định rõ quyền của cá nhân yêu cầu điều chỉnh thông tin hộ tịch khi phát hiện sai sót, phù hợp với tình huống của câu hỏi."
+    }
+   },
+   {
+    "qid": "TOP18069",
+    "chosen": "TNBTCNN2017|Dieu36|Khoan1|Diemđ",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "TNBTCNN2017|Dieu36|Khoan1|Diemđ",
+     "reason": "Điểm đ quy định trường hợp tòa án cấp sơ thẩm tuyên bị cáo có tội, bản án có hiệu lực pháp luật nhưng bị hủy bởi tòa án có thẩm quyền giám đốc thẩm/tái thẩm và đình chỉ vụ án do không có chứng cứ phạm tội thì tòa án cấp sơ thẩm là cơ quan giải quyết bồi thường, phù hợp với tình huống nêu trong câu hỏi."
+    }
+   },
+   {
+    "qid": "TOP23504",
+    "chosen": "THADS2008|Dieu172|Khoan4",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "THADS2008|Dieu172|Khoan4",
+     "reason": "Điều 172 Khoản 4 THADS2008 quy định rõ 'quyết định khen thưởng hoặc đề nghị cấp có thẩm quyền khen thưởng' tập thể, cá nhân có thành tích thi hành án dân sự, phù hợp với câu hỏi và thời điểm 2025-02-01 (trước khi Nghị định 152/2026 có hiệu lực)."
+    }
+   },
+   {
+    "qid": "TOP25047",
+    "chosen": "null",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "no",
+     "chunk": "null",
+     "reason": "Không có đoạn trích nào quy định thời hạn mà người yêu cầu có thể đưa ra yêu cầu tổ hòa giải can thiệp. Các đoạn trích liên quan đến thời hạn xử lý yêu cầu của tổ hòa giải (Điều 24, 25 HOAGIAI2026) hoặc thời hạn công nhận kết quả hòa giải (Điều 418 VBHN) nhưng không trả lời trực tiếp câu hỏi về thời hạn yêu cầu can thiệp."
+    }
+   },
+   {
+    "qid": "TOP28658",
+    "chosen": null,
+    "agrees_gold": null,
+    "matches_primary": null,
+    "verdict": null,
+    "parse_fail": true
+   },
+   {
+    "qid": "TOP33026",
+    "chosen": "THADSVBHN|Dieu140|Khoan2|Diemd",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "THADSVBHN|Dieu140|Khoan2|Diemd",
+     "reason": "Điều 140 khoản 2 điểm d quy định thời gian trở ngại khách quan hoặc sự kiện bất khả kháng không tính vào thời hạn khiếu nại, phù hợp với lý do sức khỏe của người khiếu nại."
+    }
+   },
+   {
+    "qid": "TOP33735",
+    "chosen": "HOAGIAI2026|Dieu24|Khoan2",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HOAGIAI2026|Dieu24|Khoan2",
+     "reason": "Điều 24 Khoản 2 HOAGIAI2026 quy định rõ Tổ trưởng tổ hòa giải không được phân công hòa giải viên nếu có căn cứ cho rằng hòa giải viên có quyền lợi, nghĩa vụ liên quan đến vụ việc hoặc lý do khác làm mất khách quan, công bằng."
+    }
+   },
+   {
+    "qid": "TOP35966",
+    "chosen": "HNGD2000|Dieu67|Khoan1",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HNGD2000|Dieu67|Khoan1",
+     "reason": "Điều 67 HNGD 2000 quy định rõ trách nhiệm của người nhận nuôi con nuôi trong việc chăm sóc, nuôi dưỡng, giáo dục phù hợp với đạo đức xã hội, phù hợp với câu hỏi về nghĩa vụ của người làm cha mẹ nuôi."
+    }
+   },
+   {
+    "qid": "TOP50371",
+    "chosen": "THADSVBHN|Dieu35|Khoan2|Diema",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "THADSVBHN|Dieu35|Khoan2|Diema",
+     "reason": "Điều 35 Khoản 2 Điểm a THADSVBHN quy định rõ cơ quan thi hành án cấp quân khu có thẩm quyền thi hành bản án, quyết định về phạt tiền, tịch thu tài sản của Tòa án quân sự quân khu và tương đương, phù hợp với câu hỏi."
+    }
+   },
+   {
+    "qid": "TOP55435",
+    "chosen": "HOTICH2026|Dieu4|Khoan2|Diemđ",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HOTICH2026|Dieu4|Khoan2|Diemđ",
+     "reason": "Điều 4 Khoản 2 Điểm đ Luật Hộ tịch 2026 quy định việc cập nhật vào sổ hộ tịch theo bản án, quyết định có hiệu lực pháp luật của Tòa án, bao gồm trường hợp công nhận việc kết hôn (phù hợp với tình huống người nước ngoài kết hôn và được tòa án công nhận)."
+    }
+   },
+   {
+    "qid": "TOP58739",
+    "chosen": "THADSVBHN|Dieu130|Khoan1|Diema",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "THADSVBHN|Dieu130|Khoan1|Diema",
+     "reason": "Điều 130 THADSVBHN quy định rõ Chấp hành viên phải áp dụng biện pháp cưỡng chế trong 24 giờ đối với quyết định về cấm hoặc buộc đương sự thực hiện hành vi nhất định, phù hợp với nội dung câu hỏi."
+    }
+   },
+   {
+    "qid": "TOP59991",
+    "chosen": "HNGD2000|Dieu46|Khoan1",
+    "agrees_gold": false,
+    "matches_primary": false,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "HNGD2000|Dieu46|Khoan1",
+     "reason": "Điều 46 HNGD2000 quy định cha mẹ quản lý tài sản con dưới 15 tuổi có quyền định đoạt tài sản vì lợi ích của con, đồng thời phải tính đến nguyện vọng của con từ 9 tuổi trở lên, phù hợp với câu hỏi."
+    }
+   },
+   {
+    "qid": "TOP62589",
+    "chosen": null,
+    "agrees_gold": null,
+    "matches_primary": null,
+    "verdict": null,
+    "parse_fail": true
+   },
+   {
+    "qid": "TOP81552",
+    "chosen": null,
+    "agrees_gold": null,
+    "matches_primary": null,
+    "verdict": null,
+    "parse_fail": true
+   },
+   {
+    "qid": "TOP97603",
+    "chosen": "NCN2010|Dieu22|Khoan1",
+    "agrees_gold": true,
+    "matches_primary": true,
+    "verdict": {
+     "verdict": "yes",
+     "chunk": "NCN2010|Dieu22|Khoan1",
+     "reason": "Điều 22, Khoản 1 quy định thời hạn 20 ngày để Ủy ban nhân dân cấp xã cấp giấy chứng nhận nuôi con nuôi sau khi có ý kiến đồng ý của các bên liên quan, phù hợp với câu hỏi về việc chưa cấp giấy sau 20 ngày."
+    }
+   }
+  ]
+ }
+}
