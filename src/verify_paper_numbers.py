@@ -406,9 +406,13 @@ def main():
     for lab in re.findall(r"\\label\{((?:fig|tab):[^}]+)\}", tex):
         if f"\\ref{{{lab}}}" not in tex:
             failures.append(f"label never referenced: {lab}")
-    for col in ("\\color", "colorlinks", "xcolor", "definecolor"):
-        if col in tex:
-            failures.append(f"colour command present: {col}")
+    # Colour policy (updated 2026-11-01 per owner directive): figures use
+    # the colourblind-safe Okabe-Ito palette via \definecolor; coloured
+    # hyperlinks stay forbidden (hidelinks required).
+    if "colorlinks" in tex:
+        failures.append("colored hyperlinks forbidden (use hidelinks)")
+    if "hidelinks" not in tex:
+        failures.append("hyperref must load with hidelinks")
 
     print(f"mode={mode} sep={sep} traceable-values={len(traceable)} failures={len(failures)}")
     if failures:

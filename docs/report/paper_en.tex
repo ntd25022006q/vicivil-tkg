@@ -1,9 +1,10 @@
 % !TeX program = tectonic
-%% ViCivil-TKG — research paper (English edition; conference style,
-%% two columns, grayscale-safe). Every number is derived from released
-%% artifacts and machine-checked by scripts/verify_paper_numbers.py
-%% (--mode=audit and --mode=cover must both pass).
-%% Compile: tectonic paper_final.tex
+%% ViCivil-TKG — research paper (English edition; conference style, two
+%% columns, full-colour figures in the Okabe-Ito colourblind-safe palette).
+%% Every number is derived from released artifacts and machine-checked by
+%% scripts/verify_paper_numbers.py (--mode=audit and --mode=cover must both
+%% pass). No version labels are displayed in the text.
+%% Compile: tectonic ViCivil-TKG_paper_en.tex
 \documentclass[10pt,a4paper,twocolumn]{article}
 \usepackage{fontspec}
 \setmainfont{Liberation Serif}
@@ -27,17 +28,34 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{url}
 
+% Okabe-Ito colourblind-safe scientific palette (standard for publication
+% figures): distinct hues that also survive grayscale printing.
+\definecolor{cblue}{RGB}{0,114,178}      % blue
+\definecolor{cverm}{RGB}{213,94,0}       % vermillion
+\definecolor{cgreen}{RGB}{0,158,115}     % bluish green
+\definecolor{corange}{RGB}{230,159,0}    % orange
+\definecolor{cpurple}{RGB}{204,121,167}  % reddish purple
+\definecolor{csky}{RGB}{86,180,233}      % sky blue
+% pre-mixed dark variants (xcolor !<pct>!black) kept out of the body so that
+% every colour literal in the text stays machine-traceable
+\definecolor{cskyD}{RGB}{47,99,128}      % csky!55!black
+\definecolor{cvermD}{RGB}{149,66,0}      % cverm!70!black
+\definecolor{corangeD}{RGB}{172,119,0}   % corange!75!black
+\definecolor{cpurpleD}{RGB}{122,73,100}  % cpurple!60!black
+\definecolor{cgreenD}{RGB}{0,87,63}      % cgreen!55!black
+\definecolor{cgreenE}{RGB}{0,79,58}      % cgreen!50!black
+
 \setlength{\parskip}{1.5pt}
 \setlength{\tabcolsep}{3.6pt}
 \renewcommand{\arraystretch}{1.06}
-\setlength{\emergencystretch}{1.2em}
+\raggedbottom   % never stretch inter-section glue to force equal columns
 
-% ---- grayscale defaults for pgfplots (no colour anywhere) ----
+% ---- pgfplots house style: coloured series, clean axes ----
 \pgfplotsset{
-  every axis/.append style={axis line style={black}, tick style={black,semithick}},
+  every axis/.append style={axis line style={black!70}, tick style={black,semithick}},
   every axis label/.append style={font=\small},
   tick label style={font=\footnotesize},
-  legend style={font=\footnotesize, draw=black!60, fill=white},
+  legend style={font=\footnotesize, draw=black!50, fill=white},
   yticklabel style={/pgf/number format/fixed},
 }
 
@@ -65,7 +83,7 @@ Multi-Round Gold-Answer Adjudication\par}
 {\small\noindent\textbf{Keywords:} legal question answering; Vietnamese datasets; temporal retrieval; gold-label adjudication; RAG.\par}
 \end{minipage}
 \end{center}
-\par\vspace{2pt}
+\vspace{9pt}
 }]
 
 \section{Introduction}
@@ -84,7 +102,7 @@ This paper presents ViCivil-TKG, a benchmark covering both aspects. The contribu
 
 \subsection{Corpus of legal documents}
 
-The corpus covers 20 Vietnamese civil-law documents from 1995--2026 (the Civil Codes of 1995/2005/2015, the 2004 Civil Procedure Code and its consolidated text, the Marriage and Family Laws of 2000/2014, the 2008 Civil Judgment Enforcement Law and its consolidation, the 2010 Adoption Law, the State Compensation Liability Law, implementing decrees, and newly enacted 2026 documents), segmented into \textbf{13{,}151 passages} along the article--clause--point structure. Every passage carries mandatory provenance: \code{source\_url}, \code{source\_type} (official / official-copy / semi-official / mirror), \code{fetched}, and the validity window \code{valid\_from}/\code{valid\_to} taken from a temporal graph of 37 documents with 24 succession--amendment edges. Two passages extracted from a corrupted \code{.doc} conversion were dropped and logged; passage counts were re-counted directly on the released copy during the release audit.
+The corpus covers 20 Vietnamese civil-law documents from 1995--2026 (the Civil Codes of 1995/2005/2015, the 2004 Civil Procedure Code and its consolidated text, the Marriage and Family Laws of 2000/2014, the 2008 Civil Judgment Enforcement Law and its consolidation, the 2010 Adoption Law, the State Compensation Liability Law, implementing decrees, and newly enacted 2026 documents), segmented into \textbf{13{,}151 passages} along the article--clause--point structure. Every passage carries mandatory provenance: \code{source\_url}, \code{source\_type} (official / official-copy / semi-official / mirror), \code{fetched}, and the validity window \code{valid\_from}/\code{valid\_to} taken from a temporal graph of 37 documents with 24 succession--amendment edges. Two passages extracted from a corrupted \code{.doc} conversion were dropped and logged; passage counts were re-counted directly on the released copy during the release-integrity audit.
 
 \subsection{Controlled question generation}
 
@@ -104,38 +122,65 @@ This is the central contribution. The four-stage chain (Figure~\ref{fig:pipeline
 \begin{figure*}[t]
 \centering
 \begin{tikzpicture}[
-  >=Stealth,
-  st/.style={draw=black, fill=black!6, rounded corners=1.6pt, align=center,
-             font=\fontsize{7.2}{8.9}\selectfont, inner sep=2.8pt,
-             text width=3.05cm, minimum height=25mm},
-  pub/.style={st, fill=black!24},
-  br/.style={draw=black, fill=black!12, rounded corners=1.6pt, align=center,
-             font=\fontsize{7.0}{8.6}\selectfont, inner sep=2.8pt,
-             text width=4.15cm, minimum height=17mm},
-  albl/.style={font=\scriptsize\itshape, align=center, inner sep=1.5pt}]
+  font=\footnotesize, >=Stealth,
+  node distance=4mm and 5mm,
+  stg/.style 2 args={draw=#1!72!black, fill=#1!10, line width=0.7pt,
+                     rounded corners=2.4pt, align=center, text width=2.72cm,
+                     inner sep=3.6pt, minimum height=17mm},
+  qbox/.style={draw=cverm!72!black, fill=cverm!9, line width=0.7pt,
+               rounded corners=2.4pt, align=center, text width=6.1cm,
+               inner sep=3.6pt},
+  gbox/.style={draw=cgreen!72!black, fill=cgreen!9, line width=0.7pt,
+               rounded corners=2.4pt, align=center, text width=6.4cm,
+               inner sep=3.6pt},
+  lbl/.style={font=\scriptsize\bfseries, align=center, fill=white,
+              inner sep=1.4pt, text=black!80}]
 
-\node[st] (s1) {\textbf{1 $\cdot$ Controlled generation}\\ qwen2.5:14b, batch-wise\\ from source passages;\\ vector dedup in batch\\[1.4pt] 281 core: 269 generated\\ + 12 hand-written\\ 242 round-1 $\cdot$ 154 round-2};
-\node[st, right=3.2mm of s1] (s2) {\textbf{2 $\cdot$ Two-tier audit}\\ 8B judge: usable?\\ yes\,/\,partial\,/\,no\\ 14B judge: evidence\\ quote required};
-\node[st, right=3.2mm of s2] (s3) {\textbf{3 $\cdot$ Re-anchoring}\\ regold proposal confirmed\\ in two independent rounds\\[1.4pt] 38 core re-anchored;\\ agreement 0.888};
-\node[st, right=3.2mm of s3] (s4) {\textbf{4 $\cdot$ Pass-3 sweep}\\ qwen3:14b over 99\\ weak-gold suspects\\[1.4pt] 66 gold-ok $\cdot$ 29 flag\\ 3 reanchor + 1 blocked\\ under 3 guardrails};
-\node[pub, right=3.2mm of s4] (s5) {\textbf{Published:}\\ \textbf{451 questions}\\[1.4pt] 229 verified\\ 22 regolded $\cdot$ 26 flagged\\ 4 author-verified\\ + 226 quarantined\\ + 60-question IAA kit};
+% ---- five coloured stages, left to right ----
+\node[stg={csky}{9}] (gen)
+  {{\small\bfseries\textcolor{cskyD}{1\ \ Validation}}\\[1.5pt]
+   \scriptsize controlled generation\\ \scriptsize qwen2.5:14b, \code{as\_of} inside the validity window, vector dedup\\[1pt]
+   \scriptsize 281 core = 269 generated + 12 hand-written\\ \scriptsize 242 round-1 $\cdot$ 154 round-2};
+\node[stg={cblue}{10}, right=of gen] (audit)
+  {{\small\bfseries\textcolor{cblue}{2\ \ Two-tier audit}}\\[1.5pt]
+   \scriptsize 8B judge (usable: yes/partial/no)\\ \scriptsize then 14B judge + evidence quote\\[1pt]
+   \scriptsize failures cannot enter the set};
+\node[stg={corange}{12}, right=of audit] (reanc)
+  {{\small\bfseries\textcolor{corangeD}{3\ \ Re-anchoring}}\\[1.5pt]
+   \scriptsize two independent rounds of a supervising judge; both must confirm\\[1pt]
+   \scriptsize 38 core golds moved\\ \scriptsize two-round agreement 0.888};
+\node[stg={cpurple!80!black}{10}, right=of reanc] (pass3)
+  {{\small\bfseries\textcolor{cpurpleD}{4\ \ Pass-3 sweep}}\\[1.5pt]
+   \scriptsize qwen3:14b over 99 weak-gold suspects, 3 guardrails on every application\\[1pt]
+   \scriptsize 66 gold-ok $\cdot$ 29 flag\\ \scriptsize 3 reanchor (+1 blocked)};
+\node[stg={cgreen}{12}, right=of pass3] (pub)
+  {{\small\bfseries\textcolor{cgreenD}{Published}}\\[1.5pt]
+   \scriptsize \textbf{451 questions}\\ \scriptsize 229 verified $\cdot$ 22 regolded\\ \scriptsize 4 author-verified $\cdot$ 26 flagged\\[1pt]
+   \scriptsize + 226 quarantined\\ \scriptsize + 60-question IAA kit};
 
-\node[br, below=6.5mm of s2.south] (b1) {\textbf{Public quarantine}\\ 226 questions (136 + 90:\\ 89 two-tier fails\\ + 1 near-duplicate,\\ cos 0.9931)\\[1.4pt] {\itshape published trail, never scored}};
-\node[br, below=6.5mm of s4.south] (b2) {\textbf{2 ``unverifiable'' questions}\\ separate recheck:\\ both re-anchored to\\ concrete passages};
+\draw[->, line width=0.8pt, black!75] (gen) -- (audit);
+\draw[->, line width=0.8pt, black!75] (audit) -- (reanc);
+\draw[->, line width=0.8pt, black!75] (reanc) -- (pass3);
+\draw[->, line width=0.8pt, black!75] (pass3) -- (pub);
 
-\draw[->] (s1) -- (s2);
-\draw[->] (s2) -- (s3);
-\draw[->] (s3) -- (s4);
-\draw[->] (s4) -- (s5);
-\draw[->] (s2) -- node[albl, right=2.5pt, pos=0.42] {fails both tiers} (b1);
-\draw[->] (s4) -- node[albl, right=2.5pt, pos=0.42] {2 ``unverifiable''} (b2);
-\draw[->, densely dashed] (b2.east) -| (s5.south);
+% ---- quarantine branch (below, between stages 1-2) ----
+\node[qbox, below=7.5mm of audit.south west, anchor=north west] (quar)
+  {{\small\bfseries\textcolor{cvermD}{Public quarantine --- 226 questions}}\\[1pt]
+   \scriptsize 136 round-1 + 90 round-2 = 89 two-tier failures + 1 near-duplicate (cosine 0.993); published verbatim with full rejection trails; \textbf{count in no metric}.};
+\draw[->, line width=0.8pt, cverm!80!black] (audit.south) -- node[lbl, right=1pt]{fails\\both tiers} (quar.north);
+
+% ---- guardrail branch (below, under stage 4) ----
+\node[gbox, below=7.5mm of pass3.south east, anchor=north east] (grd)
+  {{\small\bfseries\textcolor{cgreenE}{Guardrail recheck}}\\[1pt]
+   \scriptsize the last 2 ``unverifiable'' questions were rechecked separately and re-anchored to concrete passages; proposals outside the stored candidate list are blocked by a guardrail.};
+\draw[->, line width=0.8pt, cgreen!60!black] (pass3.south) -- node[lbl, left=1pt]{guardrail} (grd.north);
+
 \end{tikzpicture}
-\caption{The four-stage gold adjudication chain of ViCivil-TKG. Every branch leaves a public trail; quarantined questions never enter any metric.}
+\caption{The four-stage gold adjudication chain of ViCivil-TKG (drawn with TikZ). Every branch leaves a public trail; quarantined questions never enter any metric.}
 \label{fig:pipeline}
 \end{figure*}
 
-After the chain, \textbf{281/281 core questions carry a verified gold}. The final tier structure is 229 \code{verified}, 22 \code{regolded}, 4 \code{author-verified}, 26 \code{flagged} --- in the release audit (Section~\ref{sec:audit}) we found that the pass-3 reanchor of one question (TOP27031) had been recorded in the adjudication file but never persisted into the question file, so scoring used the stale gold (rank 31 instead of rank 1); the fix was applied with a log entry, the tier moved from \code{flagged} to \code{regolded}, and all metrics were recomputed. 26 questions carry the \code{flagged} tier and are excluded from all primary metrics, with reasons published.
+After the chain, \textbf{281/281 core questions carry a verified gold}. The final tier structure is 229 \code{verified}, 22 \code{regolded}, 4 \code{author-verified}, 26 \code{flagged} --- in the release-integrity audit (Section~\ref{sec:audit}) we found that the pass-3 reanchor of one question (TOP27031) had been recorded in the adjudication file but never persisted into the question file, so scoring used the stale gold (rank 31 instead of rank 1); the fix was applied with a log entry, the tier moved from \code{flagged} to \code{regolded}, and all metrics were recomputed. 26 questions carry the \code{flagged} tier and are excluded from all primary metrics, with reasons published.
 
 \subsection{Cross-cohort deduplication}
 
@@ -161,7 +206,7 @@ Table~\ref{tab:core-retrieval} reports the 281 core questions under the document
 
 \begin{table}[t]
 \centering\scriptsize
-\caption{Retrieval on the 281-question core (hybrid BM25 + dense + RRF fusion, temporal-consistency filter TCR; full-list MRR).}
+\caption{Retrieval on the 281-question core (hybrid BM25+dense+RRF, temporal-consistency filter TCR; full-list MRR).}
 \label{tab:core-retrieval}
 \setlength{\tabcolsep}{2.6pt}
 \begin{tabular}{lrrrrrr}
@@ -174,7 +219,7 @@ All & 281 & \textbf{0.541} & \textbf{0.740} & \textbf{0.811} & \textbf{0.879} & 
 \quad auth.-verified & 4 & 0.250 & 0.500 & 0.750 & 0.750 & 0.403 \\
 \quad flagged (out of metrics) & 26 & 0.423 & 0.577 & 0.692 & 0.731 & 0.538 \\
 \midrule
-Repro without TCR (MRR@10) & 281 & 0.399 & 0.651 & 0.733 & 0.811 & 0.540 \\
+Repro without TCR (MRR@10) & 281 & 0.399 & 0.651 & 0.733 & 0.815 & 0.540 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -182,38 +227,38 @@ Repro without TCR (MRR@10) & 281 & 0.399 & 0.651 & 0.733 & 0.811 & 0.540 \\
 \begin{figure*}[t]
 \centering
 \begin{tikzpicture}
-\begin{axis}[width=0.48\textwidth, height=5.4cm,
+\begin{axis}[width=0.48\textwidth, height=5.6cm,
   symbolic x coords={1,3,5,10}, xtick=data,
   ymin=0.3, ymax=1.0, ytick={0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0},
   ylabel={\hit{}@$k$ (core, 281 q)}, xlabel={$k$},
-  legend pos=south east, ymajorgrids, grid style={black!25}]
-\addplot[black, thick, mark=*, mark size=1.6pt] coordinates {(1,0.541) (3,0.740) (5,0.811) (10,0.879)};
+  legend pos=south east, ymajorgrids, grid style={black!22}]
+\addplot[cblue, very thick, mark=*, mark size=1.7pt] coordinates {(1,0.541) (3,0.740) (5,0.811) (10,0.879)};
 \addlegendentry{hybrid + TCR}
-\addplot[black, thick, densely dashed, mark=square*, mark size=1.5pt, mark options={fill=white}] coordinates {(1,0.399) (3,0.651) (5,0.733) (10,0.811)};
+\addplot[cverm, very thick, densely dashed, mark=square*, mark size=1.5pt, mark options={fill=white}] coordinates {(1,0.399) (3,0.651) (5,0.733) (10,0.815)};
 \addlegendentry{hybrid (no TCR)}
 \end{axis}
 \end{tikzpicture}\hfill
 \begin{tikzpicture}
-\begin{axis}[width=0.48\textwidth, height=5.4cm,
+\begin{axis}[width=0.48\textwidth, height=5.6cm,
   symbolic x coords={1,3,5,10}, xtick=data,
   ymin=0.3, ymax=1.0, ytick={0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0},
   ylabel={\hit{}@$k$ (round-2, 64 q)}, xlabel={$k$},
-  legend pos=south east, ymajorgrids, grid style={black!25}]
-\addplot[black, thick, mark=*, mark size=1.6pt] coordinates {(1,0.703) (3,0.813) (5,0.828) (10,0.906)};
+  legend pos=south east, ymajorgrids, grid style={black!22}]
+\addplot[cblue, very thick, mark=*, mark size=1.7pt] coordinates {(1,0.703) (3,0.813) (5,0.828) (10,0.906)};
 \addlegendentry{rerank + TCR}
-\addplot[black, thick, densely dashed, mark=square*, mark size=1.5pt, mark options={fill=white}] coordinates {(1,0.531) (3,0.750) (5,0.781) (10,0.875)};
+\addplot[corange, very thick, densely dashed, mark=square*, mark size=1.5pt, mark options={fill=white}] coordinates {(1,0.531) (3,0.750) (5,0.781) (10,0.875)};
 \addlegendentry{hybrid + TCR}
-\addplot[black!55, thick, densely dotted, mark=triangle*, mark size=1.9pt, mark options={fill=black!55}] coordinates {(1,0.359) (3,0.578) (5,0.703) (10,0.797)};
+\addplot[cgreen!80!black, very thick, densely dotted, mark=triangle*, mark size=1.9pt, mark options={fill=cgreen!80!black}] coordinates {(1,0.359) (3,0.578) (5,0.703) (10,0.797)};
 \addlegendentry{hybrid (no TCR)}
 \end{axis}
 \end{tikzpicture}
-\caption{Grayscale \hit{}@$k$ curves: (left) core set with and without temporal filtering; (right) the 1996--2015 cohort under three configurations. The same stored passage vectors and RRF fusion code produce every curve.}
+\caption{\hit{}@$k$ curves (pgfplots): (left) core set with and without temporal filtering; (right) the 1996--2015 cohort under three configurations. The same stored passage vectors and RRF fusion code produce every curve.}
 \label{fig:hitk}
 \end{figure*}
 
 \subsection{Effect of the gold adjudication chain}
 
-Table~\ref{tab:gold-effect} separates two quantities that were conflated in the original release. The \emph{application effect} is the difference between the golds in the question file before and after persisting the pass-3 reanchor of TOP27031 (bug B1, Section~\ref{sec:audit}): \hit{}@5 of the rerank list moves 0.794$\rightarrow$0.797, MRR 0.5957$\rightarrow$0.5964; \hit{}@1 of the hybrid list 0.406$\rightarrow$0.409. The \emph{sensitivity row} scores the same stored candidate lists against the 24 gold sets that were ``recorded but never applied'' (18 version-equivalent sets + 6 reanchor proposals, one of which a guardrail blocked): \hit{}@1 0.484 and MRR 0.621 on the rerank list. This row is published as a sensitivity analysis over gold-set width and is \emph{not} a headline metric --- every primary number in this paper is scored against applied golds.
+Table~\ref{tab:gold-effect} separates two quantities that were conflated in the initial release. The \emph{application effect} is the difference between the golds in the question file before and after persisting the pass-3 reanchor of TOP27031 (bug B1, Section~\ref{sec:audit}): \hit{}@5 of the rerank list moves 0.794$\rightarrow$0.797, MRR 0.5957$\rightarrow$0.5964; \hit{}@1 of the hybrid list 0.406$\rightarrow$0.409. The \emph{sensitivity row} scores the same stored candidate lists against the 24 gold sets that were ``recorded but never applied'' (18 version-equivalent sets + 6 reanchor proposals, one of which a guardrail blocked): \hit{}@1 0.484 and MRR 0.621 on the rerank list. This row is published as a sensitivity analysis over gold-set width and is \emph{not} a headline metric --- every primary number in this paper is scored against applied golds.
 
 \begin{table}[t]
 \centering\scriptsize
@@ -227,7 +272,7 @@ Table~\ref{tab:gold-effect} separates two quantities that were conflated in the 
 Gold set & \hit{}@1 & \hit{}@5 & MRR & \hit{}@1 & \hit{}@5 & MRR \\
 \midrule
 Applied: before persist & 0.448 & 0.794 & 0.596 & 0.406 & 0.737 & 0.548 \\
-Applied: after persist (patched) & 0.448 & \textbf{0.797} & \textbf{0.596} & \textbf{0.409} & \textbf{0.740} & \textbf{0.552} \\
+Applied: after persist & 0.448 & \textbf{0.797} & \textbf{0.596} & \textbf{0.409} & \textbf{0.740} & \textbf{0.552} \\
 \midrule
 24 recorded, never applied & 0.484 & 0.808 & 0.621 & 0.441 & 0.744 & 0.571 \\
 \bottomrule
@@ -236,7 +281,7 @@ Applied: after persist (patched) & 0.448 & \textbf{0.797} & \textbf{0.596} & \te
 
 \subsection{Cited generation on the core set}
 
-Table~\ref{tab:core-llm} and Figure~\ref{fig:llm} present the four conditions. Without context the model almost never names the correct article (cite\_acc 0.004) and abstains on 54.8\% of questions. Adding fused context lifts cite\_acc to 0.488; temporal filtering pushes it to \textbf{0.601} (+0.114 absolute, McNemar $p=5.8\times10^{-5}$; all comparisons against no-RAG reach $p<10^{-40}$). Rerank+TCR raises cite\_acc to 0.604 ($p=7.3\times10^{-4}$ vs.\ hybrid) and ctx\_hit5 to 0.850. The ctx\_hit5 values were recomputed in the release audit against the applied golds (they previously retained run-time values recorded before the regold chain --- bug B5) and cross-check exactly against the retrieval \hit{}@5 of each configuration (0.740 / 0.815 / 0.850) --- an independent consistency check between two pipelines. Abstention stays near 11\% whenever context is present. Disclosed weaknesses: one question (NEW90253) is excluded from the rerank+TCR condition because its candidate pool emptied after temporal filtering ($n{=}280$); stored answers are verbatim and occasionally contain CJK characters emitted by the 3B model (11/281 no-RAG, $\le$5/281 in the RAG branches) --- no post-hoc cleaning is applied.
+Table~\ref{tab:core-llm} and Figure~\ref{fig:llm} present the four conditions. Without context the model almost never names the correct article (cite\_acc 0.004) and abstains on 54.8\% of questions. Adding fused context lifts cite\_acc to 0.488; temporal filtering pushes it to \textbf{0.601} (+0.114 absolute, McNemar $p=5.8\times10^{-5}$; all comparisons against no-RAG reach $p<10^{-40}$). Rerank+TCR raises cite\_acc to 0.604 ($p=7.3\times10^{-4}$ vs.\ hybrid) and ctx\_hit5 to 0.850. The ctx\_hit5 values were recomputed in the integrity audit against the applied golds (they previously retained run-time values recorded before the regold chain --- bug B5) and cross-check exactly against the retrieval \hit{}@5 of each configuration (0.740 / 0.815 / 0.850) --- an independent consistency check between two pipelines. Abstention stays near 11\% whenever context is present. Disclosed weaknesses: one question (NEW90253) is excluded from the rerank+TCR condition because its candidate pool emptied after temporal filtering ($n{=}280$); stored answers are verbatim and occasionally contain CJK characters emitted by the 3B model (11/281 no-RAG, $\le$5/281 in the RAG branches) --- no post-hoc cleaning is applied.
 
 \begin{table}[t]
 \centering\footnotesize
@@ -258,26 +303,26 @@ RAG rerank + TCR & \textbf{0.604} & \textbf{0.490} & 0.111 & \textbf{0.850} & 28
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}
-\begin{axis}[width=\columnwidth, height=6.6cm,
+\begin{axis}[width=\columnwidth, height=6.8cm,
   ybar=1.2pt, bar width=6.8pt,
   symbolic x coords={No-RAG, Hybrid, +TCR, Rerank+TCR},
   xtick=data, x tick label style={rotate=18, anchor=east, font=\scriptsize},
   ymin=0, ymax=0.92, ytick={0,0.1,...,0.9},
   ylabel={cite\_acc / ctx\_hit5},
-  legend style={at={(0.5,1.16)}, anchor=south, legend columns=2,
+  legend style={at={(0.5,1.17)}, anchor=south, legend columns=2,
                 legend cell align=left, font=\scriptsize},
-  ymajorgrids, grid style={black!25}, enlarge x limits=0.18]
-\addplot[black, fill=black!72] coordinates {(No-RAG,0.004) (Hybrid,0.488) (+TCR,0.601) (Rerank+TCR,0.604)};
+  ymajorgrids, grid style={black!22}, enlarge x limits=0.18]
+\addplot[draw=cblue!75!black, fill=cblue!85] coordinates {(No-RAG,0.004) (Hybrid,0.488) (+TCR,0.601) (Rerank+TCR,0.604)};
 \addlegendentry{core: cite\_acc}
-\addplot[black!45, fill=black!16] coordinates {(No-RAG,0.000) (Hybrid,0.391) (+TCR,0.531) (Rerank+TCR,0.531)};
+\addplot[draw=corange!80!black, fill=corange!80] coordinates {(No-RAG,0.000) (Hybrid,0.391) (+TCR,0.531) (Rerank+TCR,0.531)};
 \addlegendentry{round-2: cite\_acc}
-\addplot[black, dashed, thick, sharp plot, mark=*, mark size=1.3pt] coordinates {(No-RAG,0.000) (Hybrid,0.740) (+TCR,0.815) (Rerank+TCR,0.850)};
+\addplot[cblue!55!black, dashed, very thick, sharp plot, mark=*, mark size=1.3pt] coordinates {(No-RAG,0.000) (Hybrid,0.740) (+TCR,0.815) (Rerank+TCR,0.850)};
 \addlegendentry{core: ctx\_hit5}
-\addplot[black!45, loosely dotted, very thick, sharp plot, mark=square*, mark size=1.2pt, mark options={fill=black!45}] coordinates {(No-RAG,0.000) (Hybrid,0.703) (+TCR,0.781) (Rerank+TCR,0.828)};
+\addplot[corange!70!black, loosely dotted, very thick, sharp plot, mark=square*, mark size=1.2pt, mark options={fill=corange!70!black}] coordinates {(No-RAG,0.000) (Hybrid,0.703) (+TCR,0.781) (Rerank+TCR,0.828)};
 \addlegendentry{round-2: ctx\_hit5}
 \end{axis}
 \end{tikzpicture}
-\caption{cite\_acc (bars) and ctx\_hit5 (lines) by condition on the core set (281 q) and the 1996--2015 cohort (64 q), grayscale. The bar--line gap of each shade shows that both cohorts still have headroom at the generation step.}
+\caption{cite\_acc (bars) and ctx\_hit5 (lines) by condition on the core set (281 q) and the 1996--2015 cohort (64 q). The bar--line gap of each colour shows that both cohorts still have headroom at the generation step.}
 \label{fig:llm}
 \end{figure}
 
@@ -326,9 +371,9 @@ Before freezing the release we ran an integrity audit over all published artifac
 
 \section{Conclusion}
 
-ViCivil-TKG demonstrates that two principles --- temporal-validity checking and multi-stage gold adjudication with public quarantine --- operate consistently on Vietnamese legal data and both yield measurable gains: TCR improves cite\_acc by +0.114 points ($p<10^{-4}$) and retrieval \hit{}@5 on every cohort; the adjudication chain eliminates the unverifiable-gold state entirely and makes gold-anchor quality measurable per stratum. The third methodological contribution is the reproduce-then-patch audit procedure with a full public log. The 451-question benchmark with 226 quarantined questions, full provenance, a human adjudication kit, and a GPU-free reproduction script is released for community scrutiny and extension; next steps in priority order: human adjudication on the stratified sample (kit available), unifying MRR semantics, extending to circular-level documents and adjacent legal domains, and benchmarking larger generators.
+ViCivil-TKG demonstrates that two principles --- temporal-validity checking and multi-stage gold adjudication with public quarantine --- operate consistently on Vietnamese legal data and both yield measurable gains: TCR improves cite\_acc by +0.114 points ($p<10^{-4}$) and retrieval \hit{}@5 on every cohort; the adjudication chain eliminates the unverifiable-gold state entirely and makes gold-anchor quality measurable per stratum. The third methodological contribution is the reproduce-then-patch audit procedure with a full public change log. The 451-question benchmark with 226 quarantined questions, full provenance, a human adjudication kit, and a GPU-free reproduction script is released for community scrutiny and extension; next steps in priority order: human adjudication on the stratified sample (kit available), unifying MRR semantics, extending to circular-level documents and adjacent legal domains, and benchmarking larger generators.
 
-\begin{thebibliography}{9}\footnotesize
+\begin{thebibliography}{9}\small
 
 \bibitem{robertson2009bm25} S. Robertson, H. Zaragoza, ``The Probabilistic Relevance Framework: BM25 and Beyond,'' \emph{Foundations and Trends in Information Retrieval}, 3(4), 2009.
 

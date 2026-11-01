@@ -82,11 +82,11 @@ d124d55388c325ca6561af0ba62da7b8281f4695155cd5b712604ff583d32045  ./docs/graph/l
 cd32314b1e76e7d879dc9f0534b62be714df03554486c7ca2381abfd0a92d2f4  ./docs/graph/vega-lite.min.js
 e432c751a6363f4a61da62920cc7d7ebd13cf09d82949f8f486248f8071dc3ce  ./docs/graph/vega.min.js
 5cde86bfaf05ddb75fbb6197b4dabbbe0abbbbeae902f3d10a40e2033fb5ead9  ./docs/report/ViCivil-TKG_paper.pdf
-38a3bd3ab02e31e4c07a72988102ede8d493b8bb8a6b922ab7049d08828c0423  ./docs/report/ViCivil-TKG_paper_en.pdf
+13311e34015418fca01364bbf7c4b9f7544b6044eb6cc61071eb072e216c73f6  ./docs/report/ViCivil-TKG_paper_en.pdf
 129d8fc29c733e0dee6efd426e7d20b8cf1a47c37dce315bd97724da0ddfd21b  ./docs/report/figures/fig_composition.png
 7f27370fcfb3e3204e94ad3018d373d3a17a6ed2ab565e8c75c8b229f43ab000  ./docs/report/figures/fig_llm_conditions.png
 5412738b2fb173e1c30ae860712a7e2872712a9ee5f29de3e2f2c5d6a82fc5eb  ./docs/report/paper.tex
-e58430bbc04f7e79eb38acd13876c3027ca78dfa0df2d66c119299715e31bd7d  ./docs/report/paper_en.tex
+69d79bb7fc853aca7776cac2a7372f29551b327a8a8b976639fe0fd01a78a236  ./docs/report/paper_en.tex
 04e13e7b3f8807a3e1aca1c3fff3e6fdc8b60a192e1df14d0ca2d7d3c926fcf6  ./index/kv_store_entity_chunks.json
 72240b062d1bbfac9a3c3a56493662eb370acab66494c09f437f321f6590a360  ./index/kv_store_relation_chunks.json
 61262df4e16a404e7ce8f7a4300310103d618e772ba4555ecdeae7f67280e1df  ./index/kv_store_text_chunks.json
@@ -179,7 +179,7 @@ fa8c65134ccc2cd80dcde28d54fd5ac5a51836da11772d4a725eacda5c85851d  ./src/law_tcr_
 08ef9c7b80859de8ecd51e2912b7108ea6d5743c67788a1d791fe2011150b42f  ./src/lawg6.py
 d0e6df9aa6eb56ac51066338fd3a0f2a47e4d50c4875e212efdcf5394e77ce74  ./src/lawreview.py
 1e78a9ea39bf2451f727158374115400afdf871dd204df0a1d07029f007c1b9c  ./src/lawsig.py
-32972db229155943ea9f67add44e861db322e68f34a122a9971189531680f768  ./src/verify_paper_numbers.py
+bca7ea48d8a8c63f8b319f8ba1b75b763e1c45e1d4fbe4fd0360338d288a9136  ./src/verify_paper_numbers.py
 9bc6660c0e24cc816a44b1bd39e421b0cadbb3df069a522662d1b5146ecd1a9c  ./src/weak_apply_v2.py
 30d8fbb266359d3ba64a74f7893cd418f36a835ba77e4586e90aa91845b6afcd  ./tools/README.md
 dc8ca471c93c739d33704141d9a9c6166f14e68a6e1ea3796217da79a6a09d7a  ./tools/lab-scripts/README.md
