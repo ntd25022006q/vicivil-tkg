@@ -19,7 +19,7 @@
 \usepackage{array}
 \usepackage{graphicx}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning}
+\usetikzlibrary{arrows.meta,positioning,shapes.multipart}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage{caption}
@@ -44,6 +44,14 @@
 \definecolor{cpurpleD}{RGB}{122,73,100}  % cpurple!60!black
 \definecolor{cgreenD}{RGB}{0,87,63}      % cgreen!55!black
 \definecolor{cgreenE}{RGB}{0,79,58}      % cgreen!50!black
+% header-band tones for the Figure-1 stage cards (base!85!black, pre-mixed so
+% that no unitless mix-percentage literal appears in the figure code)
+\definecolor{cblueH}{RGB}{0,97,151}      % cblue!85!black
+\definecolor{corangeH}{RGB}{196,135,0}   % corange!85!black
+\definecolor{cpurpleH}{RGB}{173,103,142} % cpurple!85!black
+\definecolor{cskyH}{RGB}{73,153,198}     % csky!85!black
+\definecolor{cgreenH}{RGB}{0,134,98}     % cgreen!85!black
+\definecolor{clbl}{RGB}{64,64,64}        % black!75 (arrow-label text)
 
 \setlength{\parskip}{1.5pt}
 \setlength{\tabcolsep}{3.6pt}
@@ -105,6 +113,7 @@ This paper presents ViCivil-TKG, a benchmark covering both aspects. The contribu
 The corpus covers 20 Vietnamese civil-law documents from 1995--2026 (the Civil Codes of 1995/2005/2015, the 2004 Civil Procedure Code and its consolidated text, the Marriage and Family Laws of 2000/2014, the 2008 Civil Judgment Enforcement Law and its consolidation, the 2010 Adoption Law, the State Compensation Liability Law, implementing decrees, and newly enacted 2026 documents), segmented into \textbf{13{,}151 passages} along the article--clause--point structure. Every passage carries mandatory provenance: \code{source\_url}, \code{source\_type} (official / official-copy / semi-official / mirror), \code{fetched}, and the validity window \code{valid\_from}/\code{valid\_to} taken from a temporal graph of 37 documents with 24 succession--amendment edges. Two passages extracted from a corrupted \code{.doc} conversion were dropped and logged; passage counts were re-counted directly on the released copy during the release-integrity audit.
 
 \subsection{Controlled question generation}
+\label{sec:gen}
 
 Questions are generated locally with \code{qwen2.5:14b}, batch-wise from source passages, under three constraints: (i) the \code{as\_of} date must lie inside the validity window of the source statute; (ii) the question must be answerable \emph{only} from the source passage and its directly related articles; (iii) within-batch deduplication uses question vectors (768-dim, \code{embeddinggemma:300m}). The core set contains 269 generated plus 12 hand-written questions (CIV001--CIV012, one of which probes the abstention behaviour when the governing statute is not yet in force). Two extension waves added 106 published questions (round~1, from 242 generated) and 154 questions generated from three 1996--2015-era documents (the 2004 Civil Procedure Code, Decree 158/2005 on civil status, and Decree 126/2014 implementing the Marriage and Family Law) with quotas 103/30/27. 28 of the 281 core questions originally carried an \code{as\_of} date before the effective date of their gold statute; all were moved into the correct validity phase with a full log (\code{as\_of\_fixes.json}). Extension-cohort questions derive \code{as\_of} from the graph at generation time (0 repairs).
 
@@ -122,61 +131,107 @@ This is the central contribution. The four-stage chain (Figure~\ref{fig:pipeline
 \begin{figure*}[t]
 \centering
 \begin{tikzpicture}[
-  font=\footnotesize, >=Stealth,
-  node distance=4mm and 5mm,
-  stg/.style 2 args={draw=#1!72!black, fill=#1!10, line width=0.7pt,
-                     rounded corners=2.4pt, align=center, text width=2.72cm,
-                     inner sep=3.6pt, minimum height=17mm},
-  qbox/.style={draw=cverm!72!black, fill=cverm!9, line width=0.7pt,
-               rounded corners=2.4pt, align=center, text width=6.1cm,
-               inner sep=3.6pt},
-  gbox/.style={draw=cgreen!72!black, fill=cgreen!9, line width=0.7pt,
-               rounded corners=2.4pt, align=center, text width=6.4cm,
-               inner sep=3.6pt},
-  lbl/.style={font=\scriptsize\bfseries, align=center, fill=white,
-              inner sep=1.4pt, text=black!80}]
+  font=\footnotesize, >={Stealth[length=2.7mm]},
+  card/.style={
+    rectangle split, rectangle split parts=2,
+    rectangle split part fill={#1, #1!6},
+    rectangle split draw splits=true,
+    draw=#1, line width=0.9pt, rounded corners=2.6pt,
+    align=center, text width=2.95cm, inner sep=3.4pt,
+    minimum height=27mm},
+  term/.style={
+    rectangle split, rectangle split parts=2,
+    rectangle split part fill={#1, #1!6},
+    rectangle split draw splits=true,
+    draw=#1, line width=0.9pt, rounded corners=2.6pt,
+    align=center, text width=1.88cm, inner sep=3.2pt,
+    minimum height=18mm},
+  qbox/.style={draw=cverm!78!black, fill=cverm!8, line width=0.8pt,
+               rounded corners=2.6pt, align=center, text width=5.3cm,
+               inner sep=4pt},
+  gbox/.style={draw=cgreen!72!black, fill=cgreen!8, line width=0.8pt,
+               rounded corners=2.6pt, align=center, text width=4.6cm,
+               inner sep=4pt},
+  arr/.style={->, line width=1.1pt, black!72},
+  lbl/.style={font=\tiny\bfseries, align=center, fill=white,
+              inner sep=1.6pt, text=clbl}]
 
-% ---- five coloured stages, left to right ----
-\node[stg={csky}{9}] (gen)
-  {{\small\bfseries\textcolor{cskyD}{1\ \ Validation}}\\[1.5pt]
-   \scriptsize controlled generation\\ \scriptsize qwen2.5:14b, \code{as\_of} inside the validity window, vector dedup\\[1pt]
-   \scriptsize 281 core = 269 generated + 12 hand-written\\ \scriptsize 242 round-1 $\cdot$ 154 round-2};
-\node[stg={cblue}{10}, right=of gen] (audit)
-  {{\small\bfseries\textcolor{cblue}{2\ \ Two-tier audit}}\\[1.5pt]
-   \scriptsize 8B judge (usable: yes/partial/no)\\ \scriptsize then 14B judge + evidence quote\\[1pt]
-   \scriptsize failures cannot enter the set};
-\node[stg={corange}{12}, right=of audit] (reanc)
-  {{\small\bfseries\textcolor{corangeD}{3\ \ Re-anchoring}}\\[1.5pt]
-   \scriptsize two independent rounds of a supervising judge; both must confirm\\[1pt]
-   \scriptsize 38 core golds moved\\ \scriptsize two-round agreement 0.888};
-\node[stg={cpurple!80!black}{10}, right=of reanc] (pass3)
-  {{\small\bfseries\textcolor{cpurpleD}{4\ \ Pass-3 sweep}}\\[1.5pt]
-   \scriptsize qwen3:14b over 99 weak-gold suspects, 3 guardrails on every application\\[1pt]
-   \scriptsize 66 gold-ok $\cdot$ 29 flag\\ \scriptsize 3 reanchor (+1 blocked)};
-\node[stg={cgreen}{12}, right=of pass3] (pub)
-  {{\small\bfseries\textcolor{cgreenD}{Published}}\\[1.5pt]
-   \scriptsize \textbf{451 questions}\\ \scriptsize 229 verified $\cdot$ 22 regolded\\ \scriptsize 4 author-verified $\cdot$ 26 flagged\\[1pt]
-   \scriptsize + 226 quarantined\\ \scriptsize + 60-question IAA kit};
+% ---- the four adjudication stages (numbered exactly as in Sec. 3.3) ----
+\node[card=cblueH] (s1)
+  {\textcolor{white}{\bfseries\footnotesize 1\ \ Two-tier audit}
+  \nodepart{two}
+  \scriptsize 8B judge (usable:\\
+  \scriptsize yes / partial / no);\\
+  \scriptsize then 14B judge +\\[2.5pt]
+  \scriptsize evidence-quote check.\\
+  \scriptsize Failures cannot enter\\
+  \scriptsize the published set};
 
-\draw[->, line width=0.8pt, black!75] (gen) -- (audit);
-\draw[->, line width=0.8pt, black!75] (audit) -- (reanc);
-\draw[->, line width=0.8pt, black!75] (reanc) -- (pass3);
-\draw[->, line width=0.8pt, black!75] (pass3) -- (pub);
+\node[card=corangeH, right=5mm of s1] (s2)
+  {\textcolor{white}{\bfseries\footnotesize 2\ \ Re-anchoring}
+  \nodepart{two}
+  \scriptsize two independent rounds\\
+  \scriptsize of a supervising judge;\\
+  \scriptsize both must confirm\\[2.5pt]
+  \scriptsize 38 core golds moved;\\
+  \scriptsize two-round agreement\\
+  \scriptsize 0.888};
 
-% ---- quarantine branch (below, between stages 1-2) ----
-\node[qbox, below=7.5mm of audit.south west, anchor=north west] (quar)
-  {{\small\bfseries\textcolor{cvermD}{Public quarantine --- 226 questions}}\\[1pt]
-   \scriptsize 136 round-1 + 90 round-2 = 89 two-tier failures + 1 near-duplicate (cosine 0.993); published verbatim with full rejection trails; \textbf{count in no metric}.};
-\draw[->, line width=0.8pt, cverm!80!black] (audit.south) -- node[lbl, right=1pt]{fails\\both tiers} (quar.north);
+\node[card=cpurpleH, right=5mm of s2] (s3)
+  {\textcolor{white}{\bfseries\footnotesize 3\ \ Pass-3 sweep}
+  \nodepart{two}
+  \scriptsize \code{qwen3:14b} over 99\\
+  \scriptsize weak-gold suspects;\\
+  \scriptsize 3 guardrails per item\\[2.5pt]
+  \scriptsize 66 gold-ok $\cdot$ 29 flag\\
+  \scriptsize 3 reanchor\\
+  \scriptsize (+1 blocked)};
 
-% ---- guardrail branch (below, under stage 4) ----
-\node[gbox, below=7.5mm of pass3.south east, anchor=north east] (grd)
-  {{\small\bfseries\textcolor{cgreenE}{Guardrail recheck}}\\[1pt]
-   \scriptsize the last 2 ``unverifiable'' questions were rechecked separately and re-anchored to concrete passages; proposals outside the stored candidate list are blocked by a guardrail.};
-\draw[->, line width=0.8pt, cgreen!60!black] (pass3.south) -- node[lbl, left=1pt]{guardrail} (grd.north);
+\node[card=cskyH, right=5mm of s3] (s4)
+  {\textcolor{white}{\bfseries\footnotesize 4\ \ Agreement audit}
+  \nodepart{two}
+  \scriptsize 60-question sample;\\
+  \scriptsize 8-candidate legal\\
+  \scriptsize basis choice\\[2.5pt]
+  \scriptsize agreement 0.571\\
+  \scriptsize (model-vs-model);\\
+  \scriptsize human IAA kit};
+
+% ---- output terminal ----
+\node[term=cgreenH, right=5mm of s4] (pub)
+  {\textcolor{white}{\bfseries\scriptsize Published}
+  \nodepart{two}
+  \scriptsize \textbf{451 questions}\\
+  \scriptsize + 226 quarantined\\
+  \scriptsize SHA-256 manifest\\
+  \scriptsize full public trail};
+
+\draw[arr] (s1) -- (s2);
+\draw[arr] (s2) -- (s3);
+\draw[arr] (s3) -- (s4);
+\draw[arr] (s4) -- (pub);
+
+% ---- quarantine branch: straight vertical arrow under stage 1 ----
+\node[qbox, below=8mm of s1.south west, anchor=north west] (quar)
+  {{\small\bfseries\textcolor{cvermD}{Public quarantine --- 226 questions}}\\[1.5pt]
+   \scriptsize 136 round-1 + 90 round-2 = 89 two-tier failures\\
+   \scriptsize + 1 near-duplicate (cosine 0.993); published verbatim\\
+   \scriptsize with full rejection trails; \textbf{count in no metric}.};
+\draw[->, line width=1.0pt, cverm!82!black]
+  (s1.south) -- node[lbl, right=2.5pt, pos=0.42]{fails\\both tiers} (quar.north);
+
+% ---- guardrail branch: straight vertical arrow under stage 3 ----
+\node[gbox, below=8mm of s3.south east, anchor=north east] (grd)
+  {{\small\bfseries\textcolor{cgreenE}{Guardrail recheck}}\\[1.5pt]
+   \scriptsize the last 2 ``unverifiable'' questions were rechecked\\
+   \scriptsize separately and re-anchored to concrete passages;\\
+   \scriptsize proposals outside the stored candidate list\\
+   \scriptsize are blocked by a guardrail.};
+\draw[->, line width=1.0pt, cgreen!70!black]
+  (s3.south) -- node[lbl, right=2.5pt, pos=0.40]{guardrail\\ok} (grd.north);
 
 \end{tikzpicture}
-\caption{The four-stage gold adjudication chain of ViCivil-TKG (drawn with TikZ). Every branch leaves a public trail; quarantined questions never enter any metric.}
+\caption{The four-stage gold adjudication chain. Controlled generation (Section~\ref{sec:gen}) feeds stage~1; every branch leaves a public trail, and quarantined questions never enter any metric.}
 \label{fig:pipeline}
 \end{figure*}
 
@@ -206,7 +261,7 @@ Table~\ref{tab:core-retrieval} reports the 281 core questions under the document
 
 \begin{table}[t]
 \centering\scriptsize
-\caption{Retrieval on the 281-question core (hybrid BM25+dense+RRF, temporal-consistency filter TCR; full-list MRR).}
+\caption{Retrieval on the 281-question core (hybrid BM25 + dense + RRF, temporal-consistency filter TCR; full-list MRR).}
 \label{tab:core-retrieval}
 \setlength{\tabcolsep}{2.6pt}
 \begin{tabular}{lrrrrrr}
@@ -252,7 +307,7 @@ Repro without TCR (MRR@10) & 281 & 0.399 & 0.651 & 0.733 & 0.815 & 0.540 \\
 \addlegendentry{hybrid (no TCR)}
 \end{axis}
 \end{tikzpicture}
-\caption{\hit{}@$k$ curves (pgfplots): (left) core set with and without temporal filtering; (right) the 1996--2015 cohort under three configurations. The same stored passage vectors and RRF fusion code produce every curve.}
+\caption{\hit{}@$k$ curves: (left) core set with and without temporal filtering; (right) the 1996--2015 cohort under three configurations. The same stored passage vectors and RRF fusion code produce every curve.}
 \label{fig:hitk}
 \end{figure*}
 
@@ -303,14 +358,15 @@ RAG rerank + TCR & \textbf{0.604} & \textbf{0.490} & 0.111 & \textbf{0.850} & 28
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}
-\begin{axis}[width=\columnwidth, height=6.8cm,
-  ybar=1.2pt, bar width=6.8pt,
+\begin{axis}[width=\columnwidth, height=6.4cm,
+  ybar=1.2pt, bar width=6.6pt,
   symbolic x coords={No-RAG, Hybrid, +TCR, Rerank+TCR},
-  xtick=data, x tick label style={rotate=18, anchor=east, font=\scriptsize},
-  ymin=0, ymax=0.92, ytick={0,0.1,...,0.9},
-  ylabel={cite\_acc / ctx\_hit5},
-  legend style={at={(0.5,1.17)}, anchor=south, legend columns=2,
-                legend cell align=left, font=\scriptsize},
+  xtick=data, x tick label style={font=\scriptsize},
+  ymin=0, ymax=0.95, ytick={0,0.2,...,0.9},
+  ylabel={\small cite\_acc / ctx\_hit5},
+  legend style={at={(0.5,-0.14)}, anchor=north, legend columns=2,
+                legend cell align=left, font=\scriptsize,
+                /tikz/every even column/.append style={column sep=0.4cm}},
   ymajorgrids, grid style={black!22}, enlarge x limits=0.18]
 \addplot[draw=cblue!75!black, fill=cblue!85] coordinates {(No-RAG,0.004) (Hybrid,0.488) (+TCR,0.601) (Rerank+TCR,0.604)};
 \addlegendentry{core: cite\_acc}
@@ -373,7 +429,7 @@ Before freezing the release we ran an integrity audit over all published artifac
 
 ViCivil-TKG demonstrates that two principles --- temporal-validity checking and multi-stage gold adjudication with public quarantine --- operate consistently on Vietnamese legal data and both yield measurable gains: TCR improves cite\_acc by +0.114 points ($p<10^{-4}$) and retrieval \hit{}@5 on every cohort; the adjudication chain eliminates the unverifiable-gold state entirely and makes gold-anchor quality measurable per stratum. The third methodological contribution is the reproduce-then-patch audit procedure with a full public change log. The 451-question benchmark with 226 quarantined questions, full provenance, a human adjudication kit, and a GPU-free reproduction script is released for community scrutiny and extension; next steps in priority order: human adjudication on the stratified sample (kit available), unifying MRR semantics, extending to circular-level documents and adjacent legal domains, and benchmarking larger generators.
 
-\begin{thebibliography}{9}\small
+\begin{thebibliography}{9}\small\sloppy\emergencystretch=1.5em
 
 \bibitem{robertson2009bm25} S. Robertson, H. Zaragoza, ``The Probabilistic Relevance Framework: BM25 and Beyond,'' \emph{Foundations and Trends in Information Retrieval}, 3(4), 2009.
 
