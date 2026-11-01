@@ -1,0 +1,5058 @@
+[
+ {
+  "qid": "EXT330006",
+  "as_of": "2018-01-01",
+  "question": "Tại sao tôi phải bảo quản vũ khí cẩn thận theo quy định của pháp luật?",
+  "gold_ids": [
+   "BLDS2015|Dieu601|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu nghĩa vụ bảo quản mà không giải thích lý do pháp lý"
+  }
+ },
+ {
+  "qid": "EXT330007",
+  "as_of": "2018-01-01",
+  "question": "Nếu phụ lục hợp đồng quy định trái với nội dung chính của hợp đồng thì làm thế nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu403|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu quy định về tính nhất quán giữa phụ lục và hợp đồng, nhưng không giải thích cách xử lý khi có mâu thuẫn."
+  }
+ },
+ {
+  "qid": "EXT330009",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi là người nước ngoài và muốn mua nhà tại Việt Nam, tôi cần phải tuân theo những quy định nào về năng lực hành vi dân sự?",
+  "gold_ids": [
+   "BLDS2015|Dieu674|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ nguyên tắc chung nhưng không quy định cụ thể các điều kiện, thủ tục hoặc hạn chế pháp lý liên quan đến việc mua nhà của người nước ngoài."
+  }
+ },
+ {
+  "qid": "EXT330010",
+  "as_of": "2018-01-01",
+  "question": "Nếu tòa án hủy quyết định tuyên bố tôi mất tích, tôi cần làm gì tiếp theo? Ủy ban nhân dân cấp xã nơi tôi cư trú sẽ ghi chú theo quy định của pháp luật về hộ tịch.",
+  "gold_ids": [
+   "BLDS2015|Dieu70|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ quy định việc gửi quyết định đến Ủy ban nhân dân cấp xã, nhưng không nêu rõ các bước tiếp theo cụ thể mà người được tuyên bố mất tích cần thực hiện."
+  }
+ },
+ {
+  "qid": "EXT330011",
+  "as_of": "2018-01-01",
+  "question": "Nếu nhà bên cạnh không chịu sửa chữa phần tường bị nứt gây ảnh hưởng đến nhà tôi, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu263|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định nghĩa vụ sửa chữa tài sản của chủ sở hữu, không đề cập đến trách nhiệm của bên thứ ba gây thiệt hại hoặc quyền yêu cầu khắc phục của người bị ảnh hưởng."
+  }
+ },
+ {
+  "qid": "EXT330012",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi tặng cho một mảnh đất cho người khác mà không đăng ký tại văn phòng đăng ký quyền sử dụng đất, hợp đồng tặng cho có hiệu lực từ khi nào? ",
+  "gold_ids": [
+   "BLDS2015|Dieu459|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ đất có phải đăng ký quyền sử dụng không, nên không đủ thông tin xác định thời điểm hiệu lực hợp đồng."
+  }
+ },
+ {
+  "qid": "EXT330014",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi là người đại diện và ký kết một hợp đồng vượt quá phạm vi được ủy quyền, hợp đồng đó có hiệu lực đối với tôi không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu143|Khoan1|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ nêu điều kiện ngoại lệ, không xác định rõ hiệu lực hợp đồng đối với người đại diện"
+  }
+ },
+ {
+  "qid": "EXT390002",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi ký một hợp đồng có điều kiện mà điều kiện đó không bao giờ xảy ra, thì hợp đồng của tôi có bị vô hiệu hay không?",
+  "gold_ids": [
+   "BLDS2015|Dieu402|Khoan6"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ định nghĩa hợp đồng có điều kiện nhưng không nêu rõ hậu quả pháp lý khi điều kiện không xảy ra."
+  }
+ },
+ {
+  "qid": "EXT330016",
+  "as_of": "2018-01-01",
+  "question": "Trong trường hợp tôi mua hàng từ một người bán ở nước ngoài và xảy ra tranh chấp, tôi nên áp dụng pháp luật của nước nào để giải quyết vụ việc? ",
+  "gold_ids": [
+   "BLDS2015|Dieu683|Khoan2|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định về pháp luật liên quan đến người bán, không đề cập đến quyền lợi của người mua hoặc các yếu tố khác như nơi ký kết hợp đồng"
+  }
+ },
+ {
+  "qid": "EXT330017",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi không thể thỏa thuận với các người thừa kế về mức thù lao của mình, tôi được hưởng bao nhiêu theo luật? ",
+  "gold_ids": [
+   "BLDS2015|Dieu618|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật không quy định cụ thể mức thù lao hợp lý là bao nhiêu, chỉ nêu nguyên tắc chung"
+  }
+ },
+ {
+  "qid": "EXT330019",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi phát hiện một hành vi vi phạm luật pháp cách đây 5 năm, tôi có thể báo cáo với cơ quan chức năng không?",
+  "gold_ids": [
+   "BLDS2015|Dieu149|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ thời hiệu cụ thể cho từng hành vi vi phạm"
+  }
+ },
+ {
+  "qid": "EXT330022",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi được thừa kế tài sản mà người khác đáng lẽ được nhận, tôi có phải hoàn trả phần tài sản đó không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu579|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ trường hợp thừa kế có phải là căn cứ pháp luật hay không"
+  }
+ },
+ {
+  "qid": "EXT330023",
+  "as_of": "2018-01-01",
+  "question": "Nếu cây cối trong vườn nhà tôi đổ xuống làm hư hỏng tường nhà hàng xóm, tôi có trách nhiệm bồi thường không?",
+  "gold_ids": [
+   "BLDS2015|Dieu177|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định trách nhiệm bồi thường nhưng không nêu rõ điều kiện cụ thể (ví dụ: lỗi của chủ sở hữu cây, tình trạng cây trước khi đổ)."
+  }
+ },
+ {
+  "qid": "EXT330024",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi và người đồng thừa kế muốn chia đôi một chiếc xe hơi, làm thế nào để tuân thủ luật pháp?",
+  "gold_ids": [
+   "BLDS2015|Dieu111|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ nêu nguyên tắc chia thành tiền nhưng không quy định cụ thể thủ tục thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330025",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đã để mất quyền yêu cầu Tòa án giải quyết một vụ việc dân sự do quá thời hạn quy định, tôi còn có thể làm gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu150|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ hậu quả của việc quá thời hạn nhưng không đề cập đến các biện pháp khắc phục hoặc ngoại lệ."
+  }
+ },
+ {
+  "qid": "EXT330027",
+  "as_of": "2018-01-01",
+  "question": "Em 16 tuổi, em có thể làm người đại diện ủy quyền cho bố mẹ trong giao dịch mua nhà không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu138|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật không nêu rõ giao dịch mua nhà có phải là trường hợp ngoại lệ hay không."
+  }
+ },
+ {
+  "qid": "EXT330030",
+  "as_of": "2018-01-01",
+  "question": "Nếu tài sản cầm cố được bán với giá cao hơn giá gốc, người dân có quyền nhận phần tiền chênh lệch còn lại sau khi đã thanh toán hết các khoản nợ theo Điều 308 Bộ luật này không?",
+  "gold_ids": [
+   "BLDS2015|Dieu307|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ xử lý số tiền chênh lệch sau khi thanh toán hết nợ"
+  }
+ },
+ {
+  "qid": "EXT330037",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi muốn đơn phương chấm dứt hợp đồng gia công mà không vi phạm pháp luật, tôi cần làm gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu551|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ quyền và điều kiện đơn phương chấm dứt hợp đồng, nhưng không quy định cụ thể thời gian hợp lý hoặc các trường hợp ngoại lệ khác."
+  }
+ },
+ {
+  "qid": "EXT330040",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đồng ý cho một người khác yêu cầu bồi thường thiệt hại về danh dự cho tôi, điều đó có hợp pháp không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu365|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Luật cấm chuyển giao quyền yêu cầu bồi thường thiệt hại về danh dự"
+  }
+ },
+ {
+  "qid": "EXT330043",
+  "as_of": "2018-01-01",
+  "question": "Tôi mua một chiếc xe máy nhưng chưa đi đăng ký biển số, như vậy có vi phạm pháp luật không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu106|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật không đề cập đến nghĩa vụ đăng ký biển số xe máy, chỉ nói về quyền sở hữu tài sản không đăng ký."
+  }
+ },
+ {
+  "qid": "EXT330044",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi là người được cấp dưỡng và bố mẹ tôi không trả tiền cấp dưỡng cho tôi, tôi có thể làm gì với tài sản của bố mẹ tôi? ",
+  "gold_ids": [
+   "BLDS2015|Dieu66|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ quy định Tòa án có thể sử dụng tài sản, nhưng không nêu rõ người được cấp dưỡng có thể tự thực hiện hành vi nào"
+  }
+ },
+ {
+  "qid": "EXT330046",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đã thực hiện một phần nghĩa vụ trả nợ cho người khác nhưng họ vẫn chưa khởi kiện, tôi có cần làm gì để bảo vệ quyền lợi của mình không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu157|Khoan1|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu hiệu lực pháp lý của việc thực hiện một phần nghĩa vụ (khởi kiện lại), nhưng không hướng dẫn cụ thể hành động bảo vệ quyền lợi khác (ví dụ: lưu giữ bằng chứng thanh toán, yêu cầu xác"
+  }
+ },
+ {
+  "qid": "EXT330047",
+  "as_of": "2018-01-01",
+  "question": "Nếu một hợp đồng ghi rõ thời điểm \"đầu năm\" là ngày 15 tháng 1, theo luật thì thời điểm này được tính là ngày nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu146|Khoan3|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định 'đầu năm' là ngày 1/1, không đề cập đến trường hợp hợp đồng ghi rõ 'đầu năm' là ngày 15/1"
+  }
+ },
+ {
+  "qid": "EXT330050",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi là người được bảo lãnh và không thể thực hiện nghĩa vụ của mình, bên bảo lãnh có nghĩa vụ thay tôi không?",
+  "gold_ids": [
+   "BLDS2015|Dieu335|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu điều kiện thỏa thuận giữa các bên, không khẳng định nghĩa vụ của bên bảo lãnh là bắt buộc trong mọi trường hợp."
+  }
+ },
+ {
+  "qid": "EXT330048",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi vay tiền với lãi suất 25%/năm, lãi suất excess sẽ được tính như thế nào? Căn cứ theo khoản quy định trên, lãi suất vượt quá 20%/năm sẽ không có hiệu lực.",
+  "gold_ids": [
+   "BLDS2015|Dieu468|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không quy định cách tính lãi suất vượt quá, chỉ nêu rõ phần vượt quá không có hiệu lực."
+  }
+ },
+ {
+  "qid": "EXT330051",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi thế chấp quyền sử dụng đất mà không phải là chủ sở hữu của tài sản gắn liền với đất đó, thì sau khi xử lý quyền sử dụng đất, tôi có quyền tiếp tục sử dụng đất trong phạm vi quyền và nghĩa vụ của mình theo quy định tại Điều này.",
+  "gold_ids": [
+   "BLDS2015|Dieu325|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Câu hỏi giả định người thế chấp không phải là chủ sở hữu tài sản gắn liền với đất, nhưng điều luật quy định chủ sở hữu tài sản gắn liền với đất mới được tiếp tục sử dụng đất, không đề cập đến quyền củ"
+  }
+ },
+ {
+  "qid": "EXT330053",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đang chăm sóc một người già nhưng phải đi công tác đột ngột, tôi phải làm gì theo luật?",
+  "gold_ids": [
+   "BLDS2015|Dieu575|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật đề cập đến việc thông báo khi không thể tiếp tục công việc, nhưng không nêu rõ quy định cụ thể về chăm sóc người già hoặc trách nhiệm pháp lý khi đi công tác đột ngột."
+  }
+ },
+ {
+  "qid": "EXT330054",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đã sửa chữa tài sản thuê khoán mà không có thỏa thuận với bên cho thuê, tôi có bị xử phạt không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu490|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu điều kiện sửa chữa tài sản thuê khoán cần có thỏa thuận, nhưng không quy định cụ thể hình thức xử phạt khi vi phạm."
+  }
+ },
+ {
+  "qid": "EXT330063",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi từ chối nhận di sản thừa kế, tôi có vẫn phải tuân theo Điều 621 của Bộ luật không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu644|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "DOAN LUAT chỉ đề cập đến khoản 1 Điều 621, không nêu rõ toàn bộ nội dung Điều 621 nên không đủ thông tin trả lời câu hỏi"
+  }
+ },
+ {
+  "qid": "EXT330064",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi muốn bán một mảnh đất nhưng luật yêu cầu phải công chứng, tôi cần làm gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu119|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu yêu cầu chung về công chứng nhưng không hướng dẫn cụ thể các bước thực hiện (ví dụ: tìm công chứng viên, chuẩn bị hồ sơ, lệ phí...)."
+  }
+ },
+ {
+  "qid": "EXT330065",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đã bảo đảm một tài sản cho ngân hàng nhưng bây giờ muốn bán tài sản đó, tôi cần làm gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu305|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chưa nêu rõ thủ tục cụ thể như thông báo cho ngân hàng, sự đồng ý của bên nhận bảo đảm hoặc các bước pháp lý cần thực hiện."
+  }
+ },
+ {
+  "qid": "EXT330069",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi có một hợp đồng kinh tế với một công ty nước ngoài, tôi nên áp dụng luật của nước nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu663|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật đề cập đến nguyên tắc áp dụng pháp luật nhưng không nêu cụ thể luật nào được áp dụng trong hợp đồng với công ty nước ngoài."
+  }
+ },
+ {
+  "qid": "EXT330071",
+  "as_of": "2012-08-07",
+  "question": "Tại sao người quản lý di sản có quyền bán tài sản của người chết mà không cần sự đồng ý của người thừa kế?",
+  "gold_ids": [
+   "BLDS2005|Dieu639|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "no",
+   "reason": "Luật quy định rõ việc bán tài sản phải có sự đồng ý bằng văn bản của người thừa kế"
+  }
+ },
+ {
+  "qid": "EXT330072",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi và một người khác đồng ý sử dụng lịch âm để tính thời hạn trong một hợp đồng, thì điều đó có hợp pháp không? ",
+  "gold_ids": [
+   "BLDS2005|Dieu150|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định mặc định dùng dương lịch, nhưng cho phép thỏa thuận khác nếu có."
+  }
+ },
+ {
+  "qid": "EXT330073",
+  "as_of": "2012-08-07",
+  "question": "Nếu một công ty đã ngừng hoạt động và không còn tồn tại, nhưng vẫn bị kiện trong một vụ việc dân sự, thì theo pháp luật công ty còn có năng lực pháp luật dân sự để tham gia vụ kiện không?",
+  "gold_ids": [
+   "BLDS2005|Dieu86|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "parse-fail",
+   "reason": "unparseable"
+  }
+ },
+ {
+  "qid": "EXT330075",
+  "as_of": "2012-08-07",
+  "question": "Nếu một người không thanh toán khoản nợ đúng hạn, họ phải làm gì theo luật? ",
+  "gold_ids": [
+   "BLDS2005|Dieu286|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ quy định nghĩa vụ thông báo, không nêu rõ các bước tiếp theo như xử lý nợ quá hạn hoặc biện pháp khắc phục."
+  }
+ },
+ {
+  "qid": "EXT330083",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi là người biểu diễn và không đồng ý, nhưng người khác vẫn ghi âm cuộc biểu diễn của tôi và đăng lên mạng, tôi có quyền gì? ",
+  "gold_ids": [
+   "BLDS2005|Dieu745|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ đề cập đến quyền bảo vệ hình tượng, nhưng không nêu rõ quyền ngăn cản ghi âm/không đồng ý"
+  }
+ },
+ {
+  "qid": "EXT390007",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi là bên nhận bảo lãnh và tôi có nợ với bên được bảo lãnh, tôi có thể yêu cầu bên bảo lãnh thanh toán không? ",
+  "gold_ids": [
+   "BLDS2005|Dieu366|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chưa nêu rõ nghĩa vụ có đến hạn hay không, cũng như không đề cập đến khả năng bù trừ trong trường hợp này."
+  }
+ },
+ {
+  "qid": "EXT330088",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi là người có hai quốc tịch và cư trú ở Việt Nam, trong trường hợp phát sinh quan hệ dân sự, tôi có thể áp dụng pháp luật nào? ",
+  "gold_ids": [
+   "BLDS2005|Dieu760|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "đoạn luật chỉ quy định cho người nước ngoài có nhiều quốc tịch, không đề cập đến người có quốc tịch Việt Nam"
+  }
+ },
+ {
+  "qid": "EXT330089",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi đã thuê dịch vụ vận chuyển và đã chuyển hàng lên phương tiện nhưng đến nay vẫn chưa nhận được hoá đơn, tôi có yêu cầu bên vận chuyển gửi hoá đơn và tính cước phí không? ",
+  "gold_ids": [
+   "BLDS2005|Dieu538|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không quy định về nghĩa vụ cấp hóa đơn"
+  }
+ },
+ {
+  "qid": "EXT330091",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi và các anh chị em không thể thống nhất được người quản lý di sản, thì theo luật chúng tôi phải làm gì? ",
+  "gold_ids": [
+   "BLDS2005|Dieu681|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Luật chỉ quy định việc thoả thuận nhưng không xử lý trường hợp không đạt được sự thống nhất."
+  }
+ },
+ {
+  "qid": "EXT330093",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi là người nước ngoài thường trú tại Việt Nam và muốn kết hôn với công dân Việt Nam, tôi cần phải làm gì? ",
+  "gold_ids": [
+   "HNGD2014|Dieu126|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu cụ thể thủ tục, hồ sơ cần thiết để thực hiện hôn nhân"
+  }
+ },
+ {
+  "qid": "EXT330095",
+  "as_of": "2016-01-01",
+  "question": "Nếu ông nội đã nghỉ hưu và không có thu nhập ổn định, tôi có nghĩa vụ cấp dưỡng cho ông nội không? ",
+  "gold_ids": [
+   "HNGD2014|Dieu113|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Luật quy định điều kiện cấp dưỡng nhưng không nêu rõ nghĩa vụ của cháu khi ông nội không có thu nhập ổn định mà không xét đến khả năng tài chính của cháu."
+  }
+ },
+ {
+  "qid": "EXT330096",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi và vợ ly hôn, ai sẽ được quyền nuôi con dưới 18 tuổi?",
+  "gold_ids": [
+   "HNGD2014|Dieu71|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chưa quy định cụ thể tiêu chí xác định người được quyền nuôi con"
+  }
+ },
+ {
+  "qid": "EXT330098",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi và vợ chồng tôi làm thủ tục ly hôn nhưng vẫn tiếp tục sống như vợ chồng và không có ý định chấm dứt hôn nhân, liệu có phạm luật không? ",
+  "gold_ids": [
+   "HNGD2014|Dieu3|Khoan15"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ định nghĩa 'ly hôn giả tạo' nhưng không nêu rõ hậu quả pháp lý cụ thể của hành vi này."
+  }
+ },
+ {
+  "qid": "EXT330099",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi đã kết hôn với một người không đủ tuổi kết hôn theo luật định, tôi có phạm luật không? ",
+  "gold_ids": [
+   "HNGD2014|Dieu3|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ điều kiện tuổi tác, nên không thể xác định hành vi có phạm luật hay không."
+  }
+ },
+ {
+  "qid": "EXT330101",
+  "as_of": "2016-01-01",
+  "question": "Nếu bố mẹ không quan tâm và chăm sóc tôi, tôi có quyền làm gì theo luật? ",
+  "gold_ids": [
+   "HNGD2014|Dieu103|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật nêu quyền được chăm sóc nhưng không quy định cụ thể hành động pháp lý khi bị bỏ rơi"
+  }
+ },
+ {
+  "qid": "EXT330103",
+  "as_of": "2016-01-01",
+  "question": "Nếu vợ chồng tôi không thể thỏa thuận về phân chia tài sản khi ly hôn thì tòa án sẽ giải quyết như thế nào theo Điều này?",
+  "gold_ids": [
+   "HNGD2014|Dieu59|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "đoạn luật chỉ nêu nguyên tắc chung, chưa quy định cụ thể cách thức phân chia tài sản"
+  }
+ },
+ {
+  "qid": "EXT330104",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi là người dân và muốn yêu cầu tòa án buộc một người không tự nguyện thực hiện nghĩa vụ cấp dưỡng, tôi cần làm gì? ",
+  "gold_ids": [
+   "HNGD2014|Dieu119|Khoan2|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ cá nhân tư nhân có quyền yêu cầu hay quy trình thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330106",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi thấy người trực tiếp nuôi con hiện tại đang làm hại đến con, tôi có quyền yêu cầu thay đổi người nuôi con không? Theo điểm a khoản 2 Điều này, cá nhân có quyền yêu cầu thay đổi người trực tiếp nuôi con khi có lợi ích cho con.",
+  "gold_ids": [
+   "HNGD2014|Dieu84|Khoan5|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ cá nhân có quyền yêu cầu thay đổi khi người nuôi hiện tại làm hại con, mà chỉ liệt kê các đối tượng có thể yêu cầu (người thân, cơ quan nhà nước) nếu có căn cứ theo điểm b khoản"
+  }
+ },
+ {
+  "qid": "EXT330108",
+  "as_of": "2016-01-01",
+  "question": "\"Cô lo lắng vì con trai không chịu học hành, luôn cãi lại. Cô phải làm gì theo luật?\" ",
+  "gold_ids": [
+   "HNGD2014|Dieu69|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật nêu trách nhiệm của cha mẹ nhưng không quy định cụ thể hành động khi con không học hành, cãi lại"
+  }
+ },
+ {
+  "qid": "EXT330111",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi là người thân thích cùng hàng của vợ chồng nào đó và họ nhờ tôi mang thai hộ, nhưng tôi chưa từng sinh con, thì theo luật tôi có được làm không? ",
+  "gold_ids": [
+   "HNGD2014|Dieu95|Khoan3|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "no",
+   "reason": "Luật yêu cầu người được nhờ phải đã từng sinh con, nhưng người hỏi chưa từng sinh con"
+  }
+ },
+ {
+  "qid": "EXT330112",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi mua một món đồ từ vợ hoặc chồng mà không biết tài sản đó không cần đăng ký quyền sở hữu, tôi có được bảo vệ không? ",
+  "gold_ids": [
+   "HNGD2014|Dieu32|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật đề cập đến bảo vệ người thứ ba ngay tình nhưng không nêu rõ cụ thể trường hợp mua từ vợ/chồng mà không biết tài sản không cần đăng ký."
+  }
+ },
+ {
+  "qid": "EXT330114",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn kiện một vụ việc liên quan đến việc bắt giữ tàu biển, tôi nên nộp đơn tại tòa án nào? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemy"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ đề cập đến Điều 421 nhưng không nêu nội dung cụ thể của điều luật này, nên không đủ thông tin để xác định chính xác tòa án có thẩm quyền."
+  }
+ },
+ {
+  "qid": "EXT330115",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi mua phần vốn góp trong một công ty từ một thành viên nhưng công ty không đồng ý, tôi nên làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu30|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ quy trình xử lý khi công ty từ chối chuyển nhượng hoặc quyền lợi của người mua"
+  }
+ },
+ {
+  "qid": "EXT330116",
+  "as_of": "2017-07-01",
+  "question": "Tôi không cư trú tại Việt Nam và yêu cầu tòa án không công nhận bản án từ nước ngoài, tôi cần ghi thông tin gì trong đơn yêu cầu? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu448|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định thông tin địa chỉ nhưng không nêu rõ yêu cầu khác như thông tin bản án nước ngoài hoặc lý do không công nhận."
+  }
+ },
+ {
+  "qid": "EXT330117",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi yêu cầu hủy bỏ quyết định biện pháp khẩn cấp tạm thời mà tòa đã ra, tòa phải xử lý như thế nào? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu138|Khoan1|Diemh"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ nêu trường hợp hủy bỏ khi người yêu cầu đề nghị, nhưng thiếu thông tin về các trường hợp khác và quy trình xử lý cụ thể."
+  }
+ },
+ {
+  "qid": "EXT330118",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi nhận được quyết định đưa vụ án ra xét xử nhưng thiếu ngày, giờ mở phiên tòa, tôi phải làm gì theo luật? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu318|Khoan2|Diemg"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không quy định hành động khi thiếu thông tin ngày giờ mở phiên tòa"
+  }
+ },
+ {
+  "qid": "EXT330119",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn khởi kiện một vụ việc dân sự, tôi cần phải ghi rõ tên và địa chỉ của Tòa án có thẩm quyền giải quyết trong đơn yêu cầu, đúng không? (Dựa trên điểm b) của Điều luật)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu362|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "parse-fail",
+   "reason": "unparseable"
+  }
+ },
+ {
+  "qid": "EXT330121",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn Tòa án xem xét, thẩm định một tài sản tại chỗ, tôi cần phải đóng tạm ứng chi phí bao nhiêu? Tòa án sẽ tạm tính số tiền cần thiết dựa trên quy định hiện hành.",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu155|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ số tiền cụ thể hoặc tiêu chí tính toán, chỉ đề cập đến việc 'tạm tính' dựa trên quy định hiện hành."
+  }
+ },
+ {
+  "qid": "EXT330122",
+  "as_of": "2017-07-01",
+  "question": "Nếu bị đơn không có mặt trong phiên tòa mà không có lý do chính đáng thì tòa án sẽ xử vắng mặt, theo quy định tại Điều này.",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu227|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "parse-fail",
+   "reason": "unparseable"
+  }
+ },
+ {
+  "qid": "EXT330123",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi có tranh chấp với công ty về điều kiện làm việc, tôi nên làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu32|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu cụ thể các bước giải quyết tranh chấp, thiếu thông tin hướng dẫn hành động thực tế"
+  }
+ },
+ {
+  "qid": "EXT390009",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi có một quyết định của tòa án về việc thay đổi hộ tịch, tôi cần làm gì để hoàn thành thủ tục? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu370|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định nghĩa vụ của Tòa án, không nêu rõ hành động cụ thể của người được thay đổi hộ tịch (ví dụ: nộp hồ sơ, liên hệ cơ quan nào)."
+  }
+ },
+ {
+  "qid": "EXT330124",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là đương sự ở nước ngoài và không nhận được thông báo thụ lý vụ án từ tòa án về thời gian, địa điểm của phiên họp hòa giải, tôi có quyền khiếu nại gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu476|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định nghĩa vụ gửi thông báo nhưng không nêu rõ quyền khiếu nại khi không nhận được thông báo."
+  }
+ },
+ {
+  "qid": "EXT330128",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi kháng cáo nhưng bị cáo không kháng cáo, tòa án có thể đình chỉ xét xử phúc thẩm không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu289|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ nội dung điểm a và b khoản 1 Điều 217, nên không thể xác định liệu việc bị cáo không kháng cáo có phải là căn cứ đình chỉ hay không."
+  }
+ },
+ {
+  "qid": "EXT330129",
+  "as_of": "2017-07-01",
+  "question": "Nếu phát hiện quyết định của Tòa án nhân dân tối cao có sai phạm nghiêm trọng, tôi nên làm gì the Ủy ban Thường vụ Quốc hội? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu358|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "đoạn luật nêu điều kiện để Hội đồng Thẩm phán xem xét lại, nhưng không quy định cụ thể hành động của cá nhân khi phát hiện sai phạm"
+  }
+ },
+ {
+  "qid": "EXT330132",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi phải tạm ứng chi phí ủy thác tư pháp ra nước ngoài để thu thập chứng cứ cho vụ kiện dân sự của mình, tôi cần phải nộp bao nhiêu tiền cho tòa án?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu151|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ số tiền cụ thể hoặc tiêu chí tính toán"
+  }
+ },
+ {
+  "qid": "EXT330134",
+  "as_of": "2017-07-01",
+  "question": "Nếu một nhân viên cảnh sát lập biên bản vi phạm giao thông tại chỗ mà không xuất trình thẻ công vụ, biên bản đó có được coi là chứng cứ không? (Theo Điều 47 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu95|Khoan9"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không đề cập đến việc xuất trình thẻ công vụ, nên không đủ thông tin trả lời cụ thể tình huống."
+  }
+ },
+ {
+  "qid": "EXT330135",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi không có con dấu của công ty, tôi có thể gửi đơn yêu cầu đến tòa án không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu362|Khoan2|Diemg"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ liệu việc thiếu con dấu có được chấp nhận hay không, chỉ đề cập đến quy định của Luật Doanh nghiệp"
+  }
+ },
+ {
+  "qid": "EXT330139",
+  "as_of": "2017-07-01",
+  "question": "Nếu vụ việc dân sự của tôi bị tạm đình chỉ, tôi có được hoàn trả tiền tạm ứng án phí đã nộp không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu144|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ việc hoàn trả tiền tạm ứng án phí mà chỉ đề cập đến 'xử lý' khi vụ việc tiếp tục, thiếu thông tin cụ thể về hoàn trả."
+  }
+ },
+ {
+  "qid": "EXT330140",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi nhận được một quyết định của tòa án nhưng thiếu tên và chức vụ của thẩm phán, tôi có thể làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu370|Khoan1|Diemk"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật quy định nội dung bắt buộc của quyết định nhưng không nêu rõ biện pháp khắc phục khi thiếu thông tin."
+  }
+ },
+ {
+  "qid": "EXT330141",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi đã nộp tiền tạm ứng án phí nhưng tòa án chưa xử lý, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu215|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ quyền của đương sự khi tòa án chưa xử lý"
+  }
+ },
+ {
+  "qid": "EXT330142",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là chủ tàu biển và tàu của tôi bị tòa án bắt giữ để bảo đảm việc giải quyết khiếu nại hàng hải, tôi có quyền gì theo luật? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu131|Khoan2|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ nêu điều kiện bắt giữ tàu, không đề cập quyền của chủ tàu khi tàu bị bắt giữ."
+  }
+ },
+ {
+  "qid": "EXT330143",
+  "as_of": "2017-07-01",
+  "question": "Nếu Tòa án không thông báo lại thời gian và địa điểm mở phiên tòa sau khi hoãn, tôi có quyền khiếu nại không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu233|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định nghĩa vụ thông báo khi không thể mở phiên tòa đúng thời gian, địa điểm đã ghi trong quyết định hoãn, nhưng không nêu rõ quyền khiếu nại khi Tòa án không thông báo lại sau khi ho"
+  }
+ },
+ {
+  "qid": "EXT330144",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi rút toàn bộ yêu cầu khởi kiện trong vụ án đang xét xử, tòa án sẽ xử lý như thế nào? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu217|Khoan2|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chưa nêu rõ toàn bộ quy trình xử lý khi nguyên đơn rút toàn bộ yêu cầu khởi kiện, chỉ đề cập đến việc đình chỉ vụ án mà không phân tích các bước cụ thể hoặc hậu quả pháp lý khác."
+  }
+ },
+ {
+  "qid": "EXT330146",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi thấy một kiểm sát viên tham gia vào một vụ án dân sự, tôi có thể kiện họ được không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu46|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ nêu danh sách người tham gia tố tụng, không quy định điều kiện kiện tụng hoặc hậu quả pháp lý khi kiểm sát viên tham gia vụ án dân sự."
+  }
+ },
+ {
+  "qid": "EXT330151",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn kháng cáo một quyết định tòa án, tôi cần phải viết gì trong phần lý do của đơn kháng cáo? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu272|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu yêu cầu chung về nội dung đơn kháng cáo nhưng không quy định cụ thể nội dung phải có trong phần lý do."
+  }
+ },
+ {
+  "qid": "EXT330152",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn kháng cáo một quyết định tòa án nhưng quên không ký tên vào đơn kháng cáo, đơn của tôi có hợp lệ không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu272|Khoan1|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Luật không quy định trường hợp thiếu chữ ký vẫn được coi là hợp lệ."
+  }
+ },
+ {
+  "qid": "EXT330153",
+  "as_of": "2017-07-01",
+  "question": "Nếu biên bản phiên tòa không ghi rõ quyết định của tòa án về việc chấp nhận yêu cầu của tôi, tôi có quyền khiếu nại theo Điều 227 của Bộ luật Tố tụng dân sự.",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu211|Khoan2|Dieme"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định nội dung biên bản, không nêu rõ quyền khiếu nại theo Điều 227"
+  }
+ },
+ {
+  "qid": "EXT330156",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi không nhận được văn bản tố tụng trực tiếp từ cơ quan tố tụng, tôi có phải ký nhận vào biên bản hoặc sổ giao nhận không? (Điều 209 Bộ luật Tố tụng hình sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu175|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định nghĩa vụ ký nhận nhưng không nêu rõ trường hợp không nhận được văn bản trực tiếp."
+  }
+ },
+ {
+  "qid": "EXT330157",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là nhân viên sân bay và phát hiện một chiếc máy bay chở khách vi phạm luật hàng không, tôi có quyền yêu cầu bắt giữ máy bay đó không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu31|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ quyền của nhân viên sân bay trong trường hợp này"
+  }
+ },
+ {
+  "qid": "EXT330158",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi kiến nghị xem xét lại một quyết định của Hội đồng Thẩm phán Tòa án nhân dân tối cao, tôi sẽ được thông báo kết quả trong bao lâu? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu359|Khoan3|Diemg"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định thời hạn gửi thông báo cho các cơ quan, nhưng không nêu rõ thời gian thông báo kết quả cho người kiến nghị"
+  }
+ },
+ {
+  "qid": "EXT330159",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi khiếu nại và không nhận được quyết định giải quyết bằng văn bản có ghi rõ căn cứ pháp luật, tôi có quyền làm gì?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu506|Khoan1|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật quy định nghĩa vụ của người giải quyết khiếu nại nhưng không nêu rõ quyền của người khiếu nại khi vi phạm quy định này"
+  }
+ },
+ {
+  "qid": "EXT330162",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi không đồng ý với quyết định của tòa án nước ngoài, tôi có quyền yêu cầu hội đồng xét đơn không công nhận quyết định đó không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu449|Khoan2|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu quyền của hội đồng nhưng không quy định cụ thể quyền của người yêu cầu."
+  }
+ },
+ {
+  "qid": "EXT330165",
+  "as_of": "2017-07-01",
+  "question": "Nếu biên bản phiên tòa không có chữ ký của tôi, tôi có quyền từ chối xác nhận biên bản đó không? (Điều 222 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu211|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định quyền xem và ký xác nhận, nhưng không nêu rõ quyền từ chối nếu thiếu chữ ký"
+  }
+ },
+ {
+  "qid": "EXT330167",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi kháng cáo quyết định của tòa án cấp sơ thẩm nhưng hội đồng phúc thẩm vẫn giữ nguyên quyết định đó, tôi có quyền làm gì theo luật? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu375|Khoan3|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ quyền khiếu nại tiếp hoặc biện pháp khác sau khi phúc thẩm giữ nguyên quyết định."
+  }
+ },
+ {
+  "qid": "EXT330168",
+  "as_of": "2017-07-01",
+  "question": "Tại sao phiên tòa phúc thẩm không báo cáo về sự có mặt của những người tham gia như quy định? (Điều 234 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu375|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật quy định nghĩa vụ báo cáo nhưng không giải thích lý do khi không thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330171",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi đã nộp tiền tạm ứng nhiều hơn chi phí thẩm định thực tế, tôi sẽ được hoàn lại bao nhiêu tiền? Theo quy định, Tòa án sẽ quyết định trả lại phần tiền tạm ứng còn thừa cho tôi.",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu158|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "luật quy định nguyên tắc hoàn trả nhưng không nêu rõ cách tính cụ thể"
+  }
+ },
+ {
+  "qid": "EXT330177",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi cần phải làm chứng trong một vụ án nhưng không thể đến tòa án được, tôi có thể cung cấp lời khai theo cách nào khác không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu97|Khoan2|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu chung khả năng lấy lời khai nhưng không quy định cụ thể hình thức thay thế khi không thể đến tòa (ví dụ: khai bằng văn bản, video call)."
+  }
+ },
+ {
+  "qid": "EXT330178",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi đã nộp đơn kháng cáo nhưng chưa nộp tiền tạm ứng án phí phúc thẩm, tôi có bị từ chối xử lý đơn kháng cáo không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu276|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu quy định thông báo nộp tiền, không nêu rõ hậu quả nếu không nộp"
+  }
+ },
+ {
+  "qid": "EXT330180",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi cung cấp địa chỉ mới cho tòa án nhưng tòa án vẫn không tống đạt được văn bản, tôi phải làm gì?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu477|Khoan6|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định trách nhiệm của tòa án khi không tống đạt được, không nêu rõ hành động cụ thể của người cung cấp địa chỉ mới."
+  }
+ },
+ {
+  "qid": "EXT330181",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi có một phán quyết từ một trọng tài nước ngoài, tôi có thể thực hiện nó tại Việt Nam như thế nào? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu427|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ nguyên tắc công nhận và thi hành nhưng không đề cập cụ thể thủ tục, điều kiện hoặc văn bản pháp lý liên quan."
+  }
+ },
+ {
+  "qid": "EXT330182",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi có một bản án từ một Tòa án nước ngoài, tôi cần phải nộp thêm giấy tờ gì để đảm bảo thủ tục pháp lý được thực hiện đúng quy định? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu434|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật đề cập đến giấy tờ theo điều ước quốc tế và văn bản xác nhận triệu tập, nhưng không nêu rõ các giấy tờ cụ thể như bản dịch công chứng, chứng nhận lãnh sự, hoặc quy trình đăng ký tại Tòa án V"
+  }
+ },
+ {
+  "qid": "EXT330191",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi phải trả chi phí giám định nhưng cho rằng số tiền đó không hợp lý, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu159|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ chi phí phải hợp lý nhưng không quy định cụ thể quyền khiếu nại hoặc thủ tục xử lý khi cho rằng chi phí không hợp lý."
+  }
+ },
+ {
+  "qid": "EXT330192",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là nguyên đơn trong một vụ án và cảm thấy thẩm phán được phân công giải quyết vụ án của tôi không khách quan, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu197|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định nguyên tắc phân công thẩm phán, không nêu rõ quyền của nguyên đơn khi nghi ngờ thẩm phán thiếu khách quan."
+  }
+ },
+ {
+  "qid": "EXT330194",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi đang ở nước ngoài và không thể có mặt tại tòa án Việt Nam, tòa sẽ xét xử vắng mặt tôi nếu đã gửi giấy triệu tập và tôi không có mặt, đúng không? (Điều 475 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu477|Khoan5|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chưa nêu rõ liệu giấy triệu tập đã được tống đạt theo quy định hay chưa, thiếu thông tin xác định điều kiện xét xử vắng mặt"
+  }
+ },
+ {
+  "qid": "EXT330195",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi không nhận được thông báo trực tiếp về một vụ việc pháp lý, tôi có quyền đòi hỏi việc niêm yết công khai văn bản tố tụng không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu179|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định điều kiện niêm yết nhưng không nêu rõ quyền yêu cầu niêm yết của người không nhận thông báo trực tiếp"
+  }
+ },
+ {
+  "qid": "EXT330197",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là người được thi hành phán quyết trọng tài và tòa án không xác định được địa điểm tài sản của người phải thi hành tại Việt Nam, tôi có thể làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu457|Khoan3|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu điều kiện đình chỉ thi hành, không hướng dẫn hành động cụ thể của người được thi hành phán quyết."
+  }
+ },
+ {
+  "qid": "EXT330198",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn kiện một vụ việc dân sự nhưng tòa án chậm giải quyết, tôi có quyền yêu cầu chánh án thực hiện nhiệm vụ gì theo luật định? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu47|Khoan1|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ nhiệm vụ cụ thể của chánh án khi tòa án chậm giải quyết vụ việc dân sự"
+  }
+ },
+ {
+  "qid": "EXT330205",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi cần lấy một số hồ sơ từ công ty nơi tôi làm việc làm chứng cứ cho vụ kiện đang diễn ra, tôi có quyền yêu cầu công ty cung cấp không? Theo Bộ luật Tố tụng dân sự, Tòa án có thể yêu cầu cơ quan, tổ chức, cá nhân cung cấp tài liệu liên quan đến ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu97|Khoan2|Diemg"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định quyền của Tòa án, không đề cập đến quyền của cá nhân yêu cầu công ty cung cấp hồ sơ"
+  }
+ },
+ {
+  "qid": "EXT330206",
+  "as_of": "2017-07-01",
+  "question": "Nếu Viện trưởng Viện kiểm sát nhân dân tối cao không tham dự phiên họp xét lại quyết định của Hội đồng Thẩm phán Tòa án nhân dân tối cao, thì Tòa án phải làm gì theo quy định pháp luật? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu359|Khoan6"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "no",
+   "reason": "Đoạn luật không đề cập hành động của Tòa án khi Viện trưởng không tham dự."
+  }
+ },
+ {
+  "qid": "EXT330208",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là người dân và đang mang thai hộ cho một cặp vợ chồng, tôi cần làm gì nếu họ từ chối nhận trách nhiệm tài chính trong quá trình mang thai? Tòa án nơi tôi cư trú có thẩm quyền giải quyết vấn đề này không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemq"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật xác định thẩm quyền tòa án nhưng không đề cập đến trách nhiệm tài chính của người được mang thai hộ"
+  }
+ },
+ {
+  "qid": "EXT330212",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn yêu cầu Tòa án Việt Nam không công nhận một bản án từ Tòa án nước ngoài, tôi cần làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu425|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu quyền yêu cầu nhưng không quy định cụ thể thủ tục, điều kiện thực hiện"
+  }
+ },
+ {
+  "qid": "EXT390013",
+  "as_of": "2017-07-01",
+  "question": "Nếu tòa án không gửi quyết định tạm đình chỉ giải quyết vụ án dân sự cho đương sự trong thời hạn 03 ngày làm việc, thì đương sự có quyền làm gì theo quy định pháp luật?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu214|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định nghĩa vụ của Tòa án mà không nêu rõ quyền của đương sự khi Tòa án vi phạm thời hạn gửi quyết định."
+  }
+ },
+ {
+  "qid": "EXT330219",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi bị một công an viên phạt tiền một cách trái pháp luật và gây thiệt hại cho tôi, tôi có quyền đòi bồi thường từ cơ quan quản lý công an viên đó không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu13|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định cơ quan trực tiếp quản lý phải bồi thường, nhưng không nêu rõ cơ quan quản lý công an viên cụ thể trong tình huống này."
+  }
+ },
+ {
+  "qid": "EXT330221",
+  "as_of": "2017-07-01",
+  "question": "Trong phiên tòa, tôi muốn hỏi bị cáo về những chi tiết liên quan đến thời điểm xảy ra vụ án, tôi có được phép không? (Điều 258 Bộ Luật Tố tụng hình sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu70|Khoan19"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật cho phép hỏi về vấn đề liên quan nhưng không nêu rõ thời điểm vụ án"
+  }
+ },
+ {
+  "qid": "EXT330222",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là nguyên đơn trong một vụ án và muốn kiến nghị Hội đồng Thẩm phán Tòa án nhân dân tối cao xem lại quyết định của tòa án, tôi cần làm gì theo đúng quy định pháp luật? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu359|Khoan3|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu quy trình xem xét kiến nghị của Hội đồng Thẩm phán, nhưng không quy định cụ thể nguyên đơn cần làm gì để đưa ra kiến nghị"
+  }
+ },
+ {
+  "qid": "EXT330223",
+  "as_of": "2017-07-01",
+  "question": "Nếu biên bản xem xét, thẩm định không có chữ ký của đại diện Ủy ban nhân dân cấp xã, tôi có thể khiếu nại được không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu101|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định yêu cầu chữ ký nhưng không nêu rõ hậu quả pháp lý khi thiếu chữ ký hoặc quyền khiếu nại cụ thể."
+  }
+ },
+ {
+  "qid": "EXT330224",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi có một phán quyết của trọng tài nước ngoài, tôi có cần phải kiện lại tại Việt Nam để phán quyết đó được công nhận và thi hành không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu424|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật khẳng định hiệu lực thi hành nhưng không nêu rõ quy trình kiện lại tại Việt Nam"
+  }
+ },
+ {
+  "qid": "EXT330229",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi nhận được quyết định giải quyết bồi thường nhưng không thấy thông tin về cơ quan quản lý nhà nước có thẩm quyền, tôi phải làm gì? (Điều 18, Khoản 2)",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu47|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "luat-so-15-2026-qh16-470450",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật yêu cầu gửi quyết định cho cơ quan có thẩm quyền nhưng không quy định hành động khi thiếu thông tin này."
+  }
+ },
+ {
+  "qid": "EXT330231",
+  "as_of": "2026-02-15",
+  "question": "Nếu chính phủ không thực hiện nhiệm vụ báo cáo Quốc hội về công tác bồi thường nhà nước hàng năm, thì theo quy định pháp luật, người dân có thể khiếu nại như thế nào?",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu73|Khoan1|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "luat-so-15-2026-qh16-470450",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu nhiệm vụ của chính phủ nhưng không quy định cụ thể hình thức khiếu nại của người dân khi chính phủ vi phạm."
+  }
+ },
+ {
+  "qid": "EXT330232",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi yêu cầu bồi thường và cơ quan quản lý người gây thiệt hại không đưa ra quyết định giải quyết trong 60 ngày, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu50|Khoan20|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "luat-so-15-2026-qh16-470450",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật quy định quyền khởi kiện khi cơ quan không ra quyết định sau 60 ngày kể từ ngày nhận quyết định tại Điều 47, nhưng không nêu rõ thời hạn 60 ngày để cơ quan giải quyết yêu cầu bồi thường ban "
+  }
+ },
+ {
+  "qid": "EXT330233",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi đang chờ kết quả của một vụ án khác liên quan đến yêu cầu bồi thường của mình, thu trưởng có quyền tạm đình chỉ quyết định bồi thường trong bao lâu? ",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu50|Khoan1|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "luat-so-15-2026-qh16-470450",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định thời hạn ra quyết định tạm đình chỉ (01 ngày làm việc), không nêu rõ thời gian tạm đình chỉ kéo dài bao lâu."
+  }
+ },
+ {
+  "qid": "EXT330235",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi bị một viên chức nhà nước gây thiệt hại, tôi có quyền đòi bồi thường từ ngân sách địa phương theo quy định nào?",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu60|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "luat-so-15-2026-qh16-470450",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ quy định cụ thể nào cho quyền đòi bồi thường từ ngân sách địa phương, chỉ đề cập đến nguồn kinh phí."
+  }
+ },
+ {
+  "qid": "EXT330237",
+  "as_of": "2026-02-15",
+  "question": "Nếu Viện kiểm sát yêu cầu Tòa án cung cấp hồ sơ nhưng Tòa không thực hiện, thì theo luật Tòa án sẽ bị xử lý như thế nào? (Điều 122)",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu36|Khoan3|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ nêu điều kiện để Viện kiểm sát yêu cầu lại, không quy định xử lý cụ thể đối với Tòa án vi phạm."
+  }
+ },
+ {
+  "qid": "EXT330238",
+  "as_of": "2026-02-15",
+  "question": "Em là người giám hộ của ông nội bị mất năng lực hành vi dân sự, giờ muốn khởi kiện vụ tranh chấp đất đai thì em phải làm như thế nào? ",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu28|Khoan4|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu nguyên tắc chung về vụ án dân sự, không quy định cụ thể thủ tục khởi kiện hoặc trách nhiệm của người giám hộ."
+  }
+ },
+ {
+  "qid": "EXT330240",
+  "as_of": "2026-02-15",
+  "question": "Nếu kiểm sát viên yêu cầu tòa án thực hiện một quyền không được quy định trong Điều 58, Điều 236, Điều 254, Điều 255 và Điều 258 của Bộ Luật Tố Tụng Dân Sự, thì người dân có quyền yêu cầu kiểm sát viên giải thích rõ cơ sở pháp lý của yêu cầu đó.",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu21|Khoan2|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không quy định cụ thể về quyền yêu cầu giải thích của người dân khi kiểm sát viên yêu cầu trái quy định"
+  }
+ },
+ {
+  "qid": "EXT330241",
+  "as_of": "2026-02-15",
+  "question": "Nếu Tòa án không gửi hồ sơ cho Viện kiểm sát trong thời hạn 15 ngày trước ngày mở phiên họp, thì Viện kiểm sát có trách nhiệm gì? ",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu4|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Luật không nêu rõ trách nhiệm của Viện kiểm sát trong trường hợp Tòa án vi phạm thời hạn gửi hồ sơ."
+  }
+ },
+ {
+  "qid": "EXT330242",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi đã gửi đơn khiếu nại lần thứ hai nhưng vẫn chưa được giải quyết và Viện kiểm sát yêu cầu cung cấp hồ sơ từ Tòa án, thì Viện kiểm sát sẽ hành động như thế nào theo Điều luật này?",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu36|Khoan3|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Điều luật chỉ quy định khi đã có quyết định giải quyết lần hai, nhưng tình huống trong câu hỏi chưa có quyết định này"
+  }
+ },
+ {
+  "qid": "EXT330247",
+  "as_of": "2026-02-15",
+  "question": "Tài sản của tôi bị kê biên nhưng đang nằm trong khu vực hành lang giao thông, liệu tài sản đó có bị xử lý theo quy định không? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu56|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu quy trình xử lý nhưng không khẳng định chắc chắn tài sản sẽ bị xử lý, phụ thuộc vào ý kiến cơ quan chức năng."
+  }
+ },
+ {
+  "qid": "EXT330250",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi bị mất giấy tờ khi nhận án phí tại tòa, tôi có quyền khiếu nại theo Điều 41 Nghị định này không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu73|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "DOAN LUAT đề cập đến quy định chung về khiếu nại nhưng không nêu rõ điều kiện cụ thể khi mất giấy tờ trong quá trình nộp án phí."
+  }
+ },
+ {
+  "qid": "EXT330252",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là người nhận được thông báo về việc thi hành án nhưng không thấy tên mình trong danh sách người được phép thông báo theo luật định, tôi có quyền khiếu nại không? (Điều này được quy định tại khoản 1 Điều này, điểm a) và b))",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu16|Khoan2|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Thiếu quy định pháp lý về quyền khiếu nại trong trường hợp này."
+  }
+ },
+ {
+  "qid": "EXT330253",
+  "as_of": "2026-02-15",
+  "question": "Tài sản của tôi đang bị tổ chức tín dụng thu giữ, giờ cơ quan thi hành án muốn thực hiện án nhưng không thể tiếp cận tài sản, tôi phải làm gì?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu42|Khoan5|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định nghĩa vụ của tổ chức tín dụng và cơ quan thi hành án, nhưng không nêu rõ hành động cụ thể của người bị thi hành án (người sở hữu tài sản) trong tình huống này."
+  }
+ },
+ {
+  "qid": "EXT330254",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi muốn ủy quyền cho người khác đại diện cho mình trong quá trình thi hành án dân sự, nhưng không lập thành văn bản, thì có được không? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu2|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "no",
+   "reason": "Luật quy định rõ việc ủy quyền phải có văn bản, không chấp nhận hình thức không lập văn bản"
+  }
+ },
+ {
+  "qid": "EXT330255",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là người dân và được yêu cầu hỗ trợ quá trình thi hành án, tôi sẽ nhận bồi dưỡng theo quy định đúng không? Theo đó, tôi sẽ được bồi dưỡng bao nhiêu một ngày? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu84|Khoan3|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không quy định về bồi dưỡng cho người dân thông thường, chỉ áp dụng cho các đối tượng cụ thể như chấp hành viên, công chức, kiểm sát viên..."
+  }
+ },
+ {
+  "qid": "EXT330256",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là người dân và muốn biết có được bồi dưỡng khi tham gia hỗ trợ thực hiện quyết định cưỡng chế thi hành án không, thì câu hỏi của tôi sẽ là: \"Tôi có được bồi dưỡng khi tham gia hỗ trợ cán bộ thi hành án trong việc cưỡng chế thi hành án không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu81|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Câu hỏi liên quan đến công dân tham gia hỗ trợ, không phải người trực tiếp thực hiện cưỡng chế."
+  }
+ },
+ {
+  "qid": "EXT330261",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là người dân và gặp phải tình huống là ngân sách nhà nước không chi trả đầy đủ kinh phí cho hoạt động thi hành án dân sự, tôi sẽ hỏi: \"Theo Điều 80 Nghị định, ngân sách nhà nước có trách nhiệm chi trả các khoản chi phí thi hành án, vậy tại sa",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu79|Khoan3|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "DOAN LUAT nêu rõ trách nhiệm chi trả của ngân sách nhưng không đề cập cụ thể xử lý khi ngân sách không đủ chi trả."
+  }
+ },
+ {
+  "qid": "EXT330263",
+  "as_of": "2026-02-15",
+  "question": "Nếu Ủy ban nhân dân cấp xã không thực hiện nhiệm vụ thi hành án dân sự, tôi có quyền khiếu nại đến cơ quan nào theo quy định tại Điều này?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu105|Khoan1|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Không có quy định cụ thể về cơ quan khiếu nại khi Ủy ban nhân dân cấp xã không thực hiện nhiệm vụ thi hành án dân sự."
+  }
+ },
+ {
+  "qid": "EXT330264",
+  "as_of": "2026-02-15",
+  "question": "Nếu một công ty không yêu cầu thi hành án trong vòng 1 năm kể từ khi bản án có hiệu lực, chủ sở hữu của công ty đó có trách nhiệm chỉ đạo yêu cầu thi hành án theo Luật Thi hành án dân sự.",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu9|Khoan8"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ áp dụng cho tài sản thuộc sở hữu nhà nước, không đề cập đến công ty tư nhân."
+  }
+ },
+ {
+  "qid": "EXT330265",
+  "as_of": "2026-02-15",
+  "question": "Nếu quyết định thi hành án không ghi rõ họ tên và chức vụ của người ra quyết định thì người dân phải làm gì? (Theo điểm a khoản này)",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu12|Khoan1|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu yêu cầu bắt buộc nhưng không quy định hành động cụ thể khi thiếu thông tin này"
+  }
+ },
+ {
+  "qid": "EXT330266",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là cơ quan thi hành án và năm nay kinh phí bảo đảm tài chính được cấp thấp hơn so với nhu cầu thực tế, tôi có thể sử dụng kinh phí từ nguồn nào để tiếp tục thực hiện nghĩa vụ thi hành án? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu93|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định lập dự toán bổ sung nhưng không nêu rõ nguồn kinh phí thay thế khác ngoài ngân sách nhà nước"
+  }
+ },
+ {
+  "qid": "EXT330267",
+  "as_of": "2026-02-15",
+  "question": "Tại sao cơ quan bảo quản vật chứng không bàn giao cho cơ quan thi hành án dân sự như quy định?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu38|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "luật quy định tiếp tục bảo quản đến khi cơ quan thi hành án hoàn thành nhiệm vụ, nhưng không nêu rõ lý do cụ thể khi không bàn giao"
+  }
+ },
+ {
+  "qid": "EXT330268",
+  "as_of": "2026-02-15",
+  "question": "Nếu văn bản cưỡng chế không ghi rõ thời gian và địa điểm tiến hành cưỡng chế, người dân có quyền yêu cầu cơ quan thi hành án cung cấp thông tin chính xác về thời gian và địa điểm này không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu46|Khoan2|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định văn bản phải ghi rõ thời gian, địa điểm nhưng không nêu rõ quyền yêu cầu cung cấp thông tin nếu thiếu"
+  }
+ },
+ {
+  "qid": "EXT330269",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi phải trả tiền cho việc may trang phục phục vụ công tác thi hành án dân sự, thì theo luật tôi có quyền được hoàn lại kinh phí này không? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu79|Khoan3|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ việc hoàn lại kinh phí, chỉ xác định đây là khoản chi phí được phép sử dụng."
+  }
+ },
+ {
+  "qid": "EXT330270",
+  "as_of": "2026-02-15",
+  "question": "Nếu tòa án áp dụng biện pháp cưỡng chế để thi hành án, tôi cần làm gì? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu42|Khoan7|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định nghĩa vụ của tòa án, không nêu rõ hành động cụ thể của người bị thi hành án"
+  }
+ },
+ {
+  "qid": "EXT330271",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi phát hiện ra một sai phạm trong việc thực hiện chế độ chính sách khi thi hành án trong Quân đội, tôi nên trình báo với cơ quan nào? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu98|Khoan2|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu cụ thể cơ quan nào chịu trách nhiệm xử lý vi phạm"
+  }
+ },
+ {
+  "qid": "EXT330273",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là thân nhân của một phạm nhân và muốn nộp tiền vào trại giam, tôi cần làm gì theo quy định pháp luật?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu108|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "đoạn luật chỉ nêu việc theo dõi tiền nộp, không quy định cụ thể thủ tục nộp tiền"
+  }
+ },
+ {
+  "qid": "EXT330275",
+  "as_of": "2026-02-15",
+  "question": "Nếu đã nhận được quyết định thi hành án nhưng đối phương không thực hiện, tôi nên làm gì theo luật? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu32|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu điều kiện chấm dứt thi hành án, không hướng dẫn cụ thể hành động khi đối phương không thực hiện."
+  }
+ },
+ {
+  "qid": "EXT330276",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi bị ốm nặng trong thời gian yêu cầu thi hành án, tôi có được hoãn thời hạn yêu cầu không? Theo Luật Thi hành án dân sự, sự kiện bất khả kháng bao gồm dịch bệnh.",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu3|Khoan1|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Luật không đề cập đến ốm nặng cá nhân, chỉ quy định dịch bệnh chung"
+  }
+ },
+ {
+  "qid": "EXT330277",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi muốn Kho bạc Nhà nước bảo quản tài sản theo quyết định của tòa án, tôi cần làm gì? Kho bạc Nhà nước bảo quản tài sản theo địa bàn nơi có trụ sở của cơ quan thi hành án dân sự (Điều 40 Luật Thi hành án dân sự).",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu24|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "DOAN LUAT không nêu rõ thủ tục cụ thể để yêu cầu Kho bạc Nhà nước bảo quản tài sản theo quyết định của tòa án"
+  }
+ },
+ {
+  "qid": "EXT330278",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi muốn thực hiện thủ tục thi hành án trên môi trường số, tôi cần làm gì? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu115|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chưa nêu rõ điều kiện cụ thể hoặc quy trình thực hiện thủ tục, chỉ đề cập chung về thời điểm và cơ quan công bố."
+  }
+ },
+ {
+  "qid": "EXT330279",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi không thấy thông báo tại các địa điểm như Ủy ban nhân dân cấp xã hoặc trụ sở khu phố, tôi có quyền khiếu nại không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu17|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định nơi niêm yết thông báo, không nêu rõ quyền khiếu nại khi không thấy thông báo."
+  }
+ },
+ {
+  "qid": "EXT330281",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi muốn yêu cầu thi hành án nhưng thiếu thông tin về ngày, tháng, năm sinh của các bên liên quan, tôi phải làm gì? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu9|Khoan2|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ cách xử lý khi thiếu thông tin bắt buộc như ngày sinh."
+  }
+ },
+ {
+  "qid": "EXT330282",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi phát hiện một tổ chức không thực hiện đúng quyết định thi hành án dân sự, tôi nên làm gì theo luật? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu104|Khoan6"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu chung việc 'kiến nghị' nhưng không quy định cụ thể thủ tục, cơ quan nào có thẩm quyền xử lý hoặc trách nhiệm của người phát hiện vi phạm."
+  }
+ },
+ {
+  "qid": "EXT330288",
+  "as_of": "2026-02-15",
+  "question": "Trong trường hợp tôi đã bị kết án nhưng hiện đang gặp khó khăn trong cuộc sống, tôi có thể làm đơn xin miễn hoặc giảm hình phạt không? Theo Điều luật trên, cơ quan chức năng có thể xem xét và đề nghị Tòa án miễn, giảm hình phạt cho những người đủ điề",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu99|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định cơ quan chức năng có thể đề nghị Tòa án, nhưng không nêu rõ cá nhân có thể tự làm đơn"
+  }
+ },
+ {
+  "qid": "EXT330289",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là người dân và phát hiện có người đang tẩu tán tài sản, tôi nên làm gì để cơ quan chức năng có thể can thiệp? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu106|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định trách nhiệm của cơ quan chức năng, không nêu rõ hành động cụ thể của người dân (ví dụ: báo cáo cơ quan có thẩm quyền)."
+  }
+ },
+ {
+  "qid": "EXT330290",
+  "as_of": "2026-02-15",
+  "question": "Nếu Hội đồng nhân dân không hỗ trợ kinh phí cho cơ quan thi hành án dân sự, tôi có thể kiện họ được không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan6"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu trách nhiệm của Hội đồng nhân dân nhưng không quy định cụ thể hậu quả pháp lý khi không thực hiện, nên không đủ để xác định được quyền kiện."
+  }
+ },
+ {
+  "qid": "EXT330294",
+  "as_of": "2016-12-31",
+  "question": "Trong trường hợp cha mẹ tôi không thỏa thuận được về quê quán để ghi trong giấy khai sinh, tôi nên làm gì? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu4|Khoan8"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu nguyên tắc nhưng không quy định cụ thể cách xử lý khi cha mẹ không thỏa thuận được"
+  }
+ },
+ {
+  "qid": "EXT330295",
+  "as_of": "2016-12-31",
+  "question": "Nếu tôi nộp thêm giấy tờ bổ sung sau khi sổ hộ tịch đã được khóa hàng năm thì cơ quan đăng ký hộ tịch sẽ xử lý như thế nào? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu58|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không quy định cụ thể việc xử lý giấy tờ bổ sung sau khi sổ hộ tịch đã được khóa hàng năm."
+  }
+ },
+ {
+  "qid": "EXT330296",
+  "as_of": "2016-12-31",
+  "question": "Nếu tôi không có giấy tờ hộ tịch, tôi có thể làm thủ tục đăng ký lại tại cấp xã không? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu73|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ điều kiện bắt buộc về giấy tờ hộ tịch để đăng ký lại"
+  }
+ },
+ {
+  "qid": "EXT330298",
+  "as_of": "2016-12-31",
+  "question": "Nếu tôi là công chức hộ tịch nhưng không biết đánh máy, có vi phạm quy định không? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu72|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định trình độ tin học chung nhưng không nêu rõ kỹ năng gõ máy là bắt buộc"
+  }
+ },
+ {
+  "qid": "EXT330299",
+  "as_of": "2016-12-31",
+  "question": "Người dân hỏi: \"Tôi đang sống ở nước ngoài và muốn xin cấp bản sao trích lục hộ tịch, tôi cần làm gì?\" ",
+  "gold_ids": [
+   "HOTICH2014|Dieu67|Khoan2|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật nêu nhiệm vụ cơ quan nhưng không quy định cụ thể thủ tục xin cấp bản sao"
+  }
+ },
+ {
+  "qid": "EXT330300",
+  "as_of": "2016-12-31",
+  "question": "Nếu tôi muốn làm thủ tục đăng ký hộ tịch mà không có sổ hộ tịch của gia đình, tôi phải làm gì? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu70|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ quy trình khi không có sổ hộ tịch"
+  }
+ },
+ {
+  "qid": "EXT390017",
+  "as_of": "2016-12-31",
+  "question": "Người dân hỏi: \"Tôi đã 16 tuổi và muốn cải chính thông tin hộ tịch, tôi cần làm thủ tục gì?\" ",
+  "gold_ids": [
+   "HOTICH2014|Dieu7|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ quy định thẩm quyền đăng ký, không nêu rõ thủ tục cụ thể cần thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330302",
+  "as_of": "2016-12-31",
+  "question": "Nếu tôi sử dụng giấy tờ giả để đăng ký kết hôn, tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu12|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ nêu cấm hành vi nhưng không quy định cụ thể hình thức xử lý"
+  }
+ },
+ {
+  "qid": "EXT330303",
+  "as_of": "2016-12-31",
+  "question": "Cơ quan hộ tịch từ chối cung cấp thông tin hộ tịch của tôi cho tôi, tôi phải làm gì? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu66|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật không quy định cụ thể hành động khi cơ quan hộ tịch từ chối cung cấp thông tin"
+  }
+ },
+ {
+  "qid": "EXT330305",
+  "as_of": "2016-12-31",
+  "question": "Nếu tôi không đăng ký khai sinh cho con đúng hạn sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu12|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu cụ thể hình thức xử lý vi phạm hành chính (ví dụ: phạt tiền, cảnh cáo) khi không đăng ký khai sinh đúng hạn, chỉ đề cập chung đến xử lý vi phạm hành chính hoặc truy cứu trách nhiệm"
+  }
+ },
+ {
+  "qid": "EXT330307",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi là con và muốn biết trách nhiệm của cha mẹ đối với con theo pháp luật, tôi có thể hỏi: \"Theo pháp luật, cha mẹ có những trách nhiệm gì đối với con cái?\"",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu68|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu cụ thể trách nhiệm của cha mẹ đối với con"
+  }
+ },
+ {
+  "qid": "EXT330311",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi muốn ly hôn và đòi phân chia tài sản chung với gia đình, tôi có được nhận phần tài sản riêng của mình không? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu61|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ đề cập đến phân chia phần tài sản chung trong khối tài sản gia đình, không nêu rõ việc bảo vệ tài sản riêng của cá nhân."
+  }
+ },
+ {
+  "qid": "EXT330312",
+  "as_of": "2026-06-30",
+  "question": "Nếu Hội Liên Hiệp Phụ Nữ yêu cầu thay đổi người trực tiếp nuôi con, tôi nên làm gì theo luật? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu84|Khoan5|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ quyền của Hội Liên Hiệp Phụ Nữ trong việc yêu cầu thay đổi người trực tiếp nuôi con, nhưng không hướng dẫn cụ thể hành động cần thực hiện khi có yêu cầu này."
+  }
+ },
+ {
+  "qid": "EXT330313",
+  "as_of": "2026-06-30",
+  "question": "Nếu bố mẹ đối xử không công bằng giữa các anh em trong gia đình, vi phạm quyền lợi của tôi, tôi có quyền làm gì theo luật? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu2|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "DOAN LUAT không nêu rõ hành động cụ thể khi bị phân biệt đối xử"
+  }
+ },
+ {
+  "qid": "EXT330314",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi phát hiện ra mẹ tôi đang lạm dụng quyền nuôi dưỡng con chưa thành niên, tôi có quyền yêu cầu Tòa án hạn chế quyền của mẹ tôi không?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu86|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Cá nhân không thuộc danh sách được nêu trong đoạn luật"
+  }
+ },
+ {
+  "qid": "EXT330315",
+  "as_of": "2026-06-30",
+  "question": "Khi ly hôn, tôi có quyền đòi phân chia đất nông nghiệp trồng cây lâu năm và đất ở không? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu62|Khoan2|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "parse-fail",
+   "reason": "unparseable"
+  }
+ },
+ {
+  "qid": "EXT330319",
+  "as_of": "2026-06-30",
+  "question": "Con tôi thường xuyên vi phạm quy định nội quy lớp học, tôi có trách nhiệm và nghĩa vụ gì trong việc này? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu72|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ đề cập chung đến trách nhiệm phối hợp với nhà trường, không nêu cụ thể khi con vi phạm nội quy lớp học."
+  }
+ },
+ {
+  "qid": "EXT330322",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi muốn làm mẹ đơn thân thông qua dịch vụ mang thai hộ vì mục đích nhân đạo, tôi cần đảm bảo điều gì? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu95|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chưa nêu cụ thể điều kiện cần đảm bảo, chỉ đề cập nguyên tắc chung"
+  }
+ },
+ {
+  "qid": "EXT330324",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi là người được cấp dưỡng và người phải cấp dưỡng từ chối thực hiện nghĩa vụ của họ, tôi có thể làm gì? (Điều 34)",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu107|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ biện pháp xử lý khi người phải cấp dưỡng từ chối thực hiện nghĩa vụ."
+  }
+ },
+ {
+  "qid": "EXT330326",
+  "as_of": "2026-06-30",
+  "question": "Nếu vợ chồng tôi ly hôn, tài sản chung sẽ được chia như thế nào dựa trên hoàn cảnh của mỗi người?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu59|Khoan2|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật nêu yếu tố 'hoàn cảnh' nhưng không quy định cụ thể cách tính toán hoặc tiêu chí đánh giá hoàn cảnh"
+  }
+ },
+ {
+  "qid": "EXT330328",
+  "as_of": "2012-01-01",
+  "question": "Nếu tôi là người Việt Nam mà muốn nhận nuôi một trẻ em, nhưng người nước ngoài thường trú ở nước ngoài đã đăng ký nhận nuôi trước tôi, tôi có quyền lựa chọn nhận nuôi trẻ em đó không? ",
+  "gold_ids": [
+   "NCN2010|Dieu5|Khoan1|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "NCN2010",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu quy định về thứ tự ưu tiên nhưng không xác định rõ liệu người Việt Nam có quyền ưu tiên hơn người nước ngoài hay không."
+  }
+ },
+ {
+  "qid": "EXT330329",
+  "as_of": "2012-01-01",
+  "question": "Người nước ngoài muốn nhận một trẻ em Việt Nam làm con nuôi cần phải chuẩn bị loại hồ sơ nào? Đơn xin nhận con nuôi là một trong những giấy tờ bắt buộc.",
+  "gold_ids": [
+   "NCN2010|Dieu31|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "NCN2010",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu một phần hồ sơ bắt buộc (đơn xin nhận con nuôi) nhưng không đầy đủ các giấy tờ khác cần thiết theo quy định."
+  }
+ },
+ {
+  "qid": "EXT390018",
+  "as_of": "2012-01-01",
+  "question": "Trẻ em muốn làm con nuôi nước ngoài cần làm gì và thời gian chờ quyết định là bao lâu? ",
+  "gold_ids": [
+   "NCN2010|Dieu37|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "NCN2010",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ quy định thời gian quyết định, không nêu rõ thủ tục cụ thể trẻ em cần thực hiện."
+  }
+ },
+ {
+  "qid": "EXT330330",
+  "as_of": "2012-01-01",
+  "question": "Tôi có thể đặt câu hỏi dựa trên điều luật đó như sau:",
+  "gold_ids": [
+   "NCN2010|Dieu28|Khoan2|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "NCN2010",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật thiếu thông tin về điều kiện khác như độ tuổi của trẻ em, quy trình nhận nuôi, hoặc các yêu cầu pháp lý bổ sung."
+  }
+ },
+ {
+  "qid": "EXT330331",
+  "as_of": "2012-01-01",
+  "question": "Nếu Hội Liên Hiệp Phụ Nữ yêu cầu chấm dứt việc nuôi con nuôi, tôi sẽ giải thích như sau mà không hỏi thêm lý do: \"Theo quy định, Hội Liên Hiệp Phụ Nữ có quyền yêu cầu chấm dứt việc nuôi con nuôi khi có căn cứ tại Điều 25 Luật Nuôi con nuôi.\"",
+  "gold_ids": [
+   "NCN2010|Dieu26|Khoan4|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "NCN2010",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ căn cứ là các khoản 2, 3, 4 Điều 25 nhưng câu hỏi không đề cập cụ thể các khoản này"
+  }
+ },
+ {
+  "qid": "EXT330333",
+  "as_of": "2012-01-01",
+  "question": "Nếu tôi là người Việt Nam định cư ở nước ngoài và muốn nhận một trẻ em Việt Nam làm con nuôi, tôi cần phải đáp ứng những điều kiện gì? ",
+  "gold_ids": [
+   "NCN2010|Dieu29|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "NCN2010",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chưa nêu cụ thể điều kiện trong Điều 14 hoặc pháp luật nước ngoài, cần thông tin bổ sung"
+  }
+ },
+ {
+  "qid": "EXT330334",
+  "as_of": "2012-01-01",
+  "question": "Nếu tôi muốn chấm dứt quan hệ nuôi dưỡng với con nuôi, tôi cần làm gì theo pháp luật? ",
+  "gold_ids": [
+   "NCN2010|Dieu27|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "NCN2010",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu hiệu lực pháp lý của quyết định chấm dứt nuôi con nuôi, nhưng không quy định cụ thể thủ tục yêu cầu Toà án chấm dứt quan hệ nuôi dưỡng."
+  }
+ },
+ {
+  "qid": "EXT330335",
+  "as_of": "2012-01-01",
+  "question": "Trẻ em bị bỏ rơi ở nhà ga, tôi có thể mang trẻ đến đâu để được chăm sóc và nuôi dưỡng hợp pháp? ",
+  "gold_ids": [
+   "NCN2010|Dieu3|Khoan10"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "NCN2010",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ loại cơ sở nhưng không chỉ định cụ thể nơi đưa trẻ đến hoặc thủ tục pháp lý cần thực hiện."
+  }
+ },
+ {
+  "qid": "EXT330336",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi muốn niêm yết một thông báo nhưng không có người chứng kiến ký tên vào biên bản, tôi có thể làm gì? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu42|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "luật không quy định phương thức thay thế khi không có người chứng kiến"
+  }
+ },
+ {
+  "qid": "EXT330339",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi nhận được quyết định của Tòa án tối cao chuyển cho cơ quan thi hành án tỉnh, tôi cần làm gì? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu35|Khoan1|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ xác định thẩm quyền của cơ quan thi hành án, không nêu rõ hành động cụ thể người nhận cần thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330341",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là phó thủ trưởng cơ quan thi hành án dân sự và không thực hiện nhiệm vụ được giao, tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu23|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu trách nhiệm nhưng không quy định cụ thể hình thức xử lý khi không thực hiện nhiệm vụ."
+  }
+ },
+ {
+  "qid": "EXT390019",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi muốn khiếu nại về một quyết định hành chính không công bằng, tôi có quyền yêu cầu cơ quan đó cung cấp thông tin liên quan đến quyết định đó không?",
+  "gold_ids": [
+   "THADSVBHN|Dieu145|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật quy định quyền của cơ quan giải quyết khiếu nại, không đề cập đến quyền của người khiếu nại yêu cầu cơ quan cung cấp thông tin"
+  }
+ },
+ {
+  "qid": "EXT330345",
+  "as_of": "2026-02-01",
+  "question": "Tài sản của tôi bị tạm giữ đã hơn 10 ngày mà chưa có quyết định trả lại hoặc áp dụng biện pháp cưỡng chế, tôi phải làm gì theo luật?",
+  "gold_ids": [
+   "THADSVBHN|Dieu68|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định thời hạn 10 ngày nhưng không nêu rõ hành động cụ thể khi quá thời hạn"
+  }
+ },
+ {
+  "qid": "EXT330346",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là cá nhân có quyền lợi liên quan đến một vụ án đang được thi hành, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu3|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ xác định đối tượng có quyền lợi, không nêu cụ thể quyền được行使"
+  }
+ },
+ {
+  "qid": "EXT330347",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là đương sự trong một vụ án và tài sản cần thi hành án thuộc về quân đội, tôi nên làm gì? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu56|Khoan1|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định việc ủy thác thi hành án, không nêu rõ hành động cụ thể của đương sự"
+  }
+ },
+ {
+  "qid": "EXT330349",
+  "as_of": "2026-02-01",
+  "question": "Nếu tài sản của tôi bị tòa án kê biên mà tôi không đồng ý, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu70|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ quyền của người bị kê biên tài sản khi không đồng ý, thiếu thông tin về thủ tục khiếu nại hoặc kháng cáo."
+  }
+ },
+ {
+  "qid": "EXT330350",
+  "as_of": "2026-02-01",
+  "question": "Tài sản của tôi bị hư hỏng khi giao nhận tại cơ quan thi hành án, tôi có quyền đòi bồi thường không? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu123|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không quy định cụ thể về quyền yêu cầu bồi thường thiệt hại, chỉ nêu quy trình xử lý khi có thay đổi hiện trạng tài sản."
+  }
+ },
+ {
+  "qid": "EXT330351",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi bị thu hồi quyết định thi hành án, làm sao biết được quyết định đó ban hành không đúng thẩm quyền? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu37|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ nêu điều kiện thu hồi quyết định, không hướng dẫn cách xác định quyết định ban hành không đúng thẩm quyền"
+  }
+ },
+ {
+  "qid": "EXT330352",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi có nhiều khoản nợ phải thi hành án, thì tiền sẽ được phân phối như thế nào? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu47|Khoan2|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ cách phân phối tiền giữa nhiều khoản nợ, chỉ đề cập đến việc thanh toán theo điểm a/b và trả tiền còn lại cho người phải thi hành án."
+  }
+ },
+ {
+  "qid": "EXT330356",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là nguyên đơn trong một vụ kiện thương mại và đã thắng kiện trước Trọng tài thương mại, tôi cần làm gì để cơ quan thi hành án dân sự cấp tỉnh thực hiện phán quyết đó?",
+  "gold_ids": [
+   "THADSVBHN|Dieu35|Khoan1|Diemg"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ xác nhận thẩm quyền thi hành, không nêu quy trình yêu cầu thi hành án"
+  }
+ },
+ {
+  "qid": "EXT330357",
+  "as_of": "2026-02-01",
+  "question": "Tại sao cơ quan thi hành án lại đến nhà tôi để cưỡng chế thi hành án lúc 11 giờ đêm?",
+  "gold_ids": [
+   "THADSVBHN|Dieu46|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định giờ cấm cưỡng chế nhưng không nêu rõ ngoại lệ cụ thể cho trường hợp 11 giờ đêm"
+  }
+ },
+ {
+  "qid": "EXT330361",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi không tự nguyện thi hành quyết định xử lý vụ việc cạnh tranh của Hội đồng xử lý vụ việc cạnh tranh trong 30 ngày kể từ ngày quyết định có hiệu lực, tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu3|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu điều kiện không khởi kiện, không quy định cụ thể hình thức xử lý tiếp theo"
+  }
+ },
+ {
+  "qid": "EXT330362",
+  "as_of": "2026-02-01",
+  "question": "Nếu tòa án ra quyết định đình chỉ thủ tục phá sản, tôi phải làm gì trong 5 ngày làm việc? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu137|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định nghĩa vụ của thẩm phán và cơ quan thi hành án, không nêu rõ nghĩa vụ cụ thể của người phải thi hành án (người được hỏi) trong 5 ngày làm việc."
+  }
+ },
+ {
+  "qid": "EXT330364",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi có một khoản tiền cần thi hành án nhưng bị giữ lại để thanh toán các khoản khác trước, tôi có quyền đòi bao nhiêu tiền? Theo quy định tại Điều 116 Luật Thi hành án dân sự.",
+  "gold_ids": [
+   "THADSVBHN|Dieu47|Khoan1|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định thứ tự thanh toán, không nêu rõ số tiền cụ thể người thi hành án được đòi hỏi."
+  }
+ },
+ {
+  "qid": "EXT330365",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi tố cáo mà cơ quan chức năng không giải quyết, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu158|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định hậu quả với người có thẩm quyền, không nêu rõ quyền của người tố cáo khi không được giải quyết"
+  }
+ },
+ {
+  "qid": "EXT330366",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi muốn biết thông tin về một tài sản đã đăng ký quyền sở hữu, tôi cần làm gì theo luật hiện hành? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu44|Khoan4|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "đoạn luật chỉ quy định trách nhiệm của chấp hành viên trong thi hành án, không nêu rõ thủ tục chung để công dân tra cứu thông tin tài sản"
+  }
+ },
+ {
+  "qid": "EXT330368",
+  "as_of": "2026-02-01",
+  "question": "Tại sao tôi lại không được tham gia phiên họp xét miễn, giảm nghĩa vụ thi hành án của mình?",
+  "gold_ids": [
+   "THADSVBHN|Dieu63|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Luật không quy định cụ thể về quyền tham gia của người bị thi hành án"
+  }
+ },
+ {
+  "qid": "EXT330369",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi viết đơn khiếu nại nhưng không lập thành hồ sơ, thì theo luật tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu149|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu yêu cầu lập hồ sơ nhưng không quy định xử lý cụ thể khi không lập hồ sơ"
+  }
+ },
+ {
+  "qid": "EXT330370",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là nạn nhân của một bản án phúc thẩm từ Tòa án nhân dân tối cao, tôi cần làm gì để đảm bảo cơ quan thi hành án dân sự cấp tỉnh thực hiện đúng quyết định đó?",
+  "gold_ids": [
+   "THADSVBHN|Dieu35|Khoan1|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định thẩm quyền thi hành, không nêu rõ hành động cụ thể mà nạn nhân cần thực hiện để đảm bảo thi hành án"
+  }
+ },
+ {
+  "qid": "EXT330374",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi bị tòa án triệu tập nhưng cố tình vắng mặt, cơ quan chức năng sẽ thực hiện cưỡng chế theo quy định tại khoản 1 Điều này.",
+  "gold_ids": [
+   "THADSVBHN|Dieu115|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật đề cập đến việc cưỡng chế khi vắng mặt cố ý, nhưng không nêu rõ nội dung cụ thể của khoản 1 Điều này."
+  }
+ },
+ {
+  "qid": "EXT330375",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là chủ sở hữu của một tài sản bị tịch thu, tôi có quyền tham gia vào Hội đồng tiêu hủy vật chứng, tài sản không? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu125|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "no",
+   "reason": "Đoạn luật không đề cập đến quyền tham gia của chủ sở hữu tài sản bị tịch thu"
+  }
+ },
+ {
+  "qid": "EXT330376",
+  "as_of": "2026-02-01",
+  "question": "Nếu tài sản của tôi có giá trị lớn hơn nhiều so với khoản nợ cần thanh toán, và tài sản đó có thể được khai thác để thi hành án, chấp hành viên có quyền cưỡng chế khai thác tài sản của tôi không? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu107|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu điều kiện tài sản có giá trị quá lớn và có thể khai thác, nhưng không quy định rõ việc cưỡng chế khai thác khi tài sản vượt xa khoản nợ."
+  }
+ },
+ {
+  "qid": "EXT330379",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là người dân và có khiếu nại về quyết định của Thủ trưởng cơ quan quản lý thi hành án thuộc Bộ Quốc phòng, tôi sẽ hỏi: \"Trong trường hợp tôi không đồng ý với quyết định của Thủ trưởng cơ quan quản lý thi hành án thuộc Bộ Quốc phòng, tôi có th",
+  "gold_ids": [
+   "THADSVBHN|Dieu142|Khoan7|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định quyền xem xét lại của Bộ trưởng nhưng không nêu rõ thủ tục khiếu nại cụ thể của người dân"
+  }
+ },
+ {
+  "qid": "EXT330382",
+  "as_of": "2010-07-01",
+  "question": "Nếu ngân hàng chậm trễ trong việc phong tỏa tài khoản theo quyết định của tòa án, người dân có quyền khiếu nại ngân hàng vi phạm điều nào?",
+  "gold_ids": [
+   "THADS2008|Dieu130|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "DOAN LUAT không nêu rõ quy định nào liên quan đến nghĩa vụ của ngân hàng"
+  }
+ },
+ {
+  "qid": "EXT330383",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi phát hiện ra cơ quan thi hành án dân sự không thực hiện đúng nhiệm vụ quản lý và chỉ đạo hoạt động của mình, tôi có quyền khiếu nại với ai? ",
+  "gold_ids": [
+   "THADS2008|Dieu23|Khoan1|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ cơ quan hoặc cá nhân cụ thể để khiếu nại khi vi phạm nhiệm vụ"
+  }
+ },
+ {
+  "qid": "EXT330384",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi đã nộp tiền tạm ứng án phí nhưng bản án không đòi hỏi tôi phải trả thêm tiền, tôi có được hoàn lại tiền đã nộp không? ",
+  "gold_ids": [
+   "THADS2008|Dieu126|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ điều kiện hoàn tiền khi bản án không yêu cầu trả thêm tiền, cần tham khảo các khoản 1-4 của điều luật"
+  }
+ },
+ {
+  "qid": "EXT330388",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi phải tham gia vào việc cưỡng chế thi hành án, tôi sẽ được bồi dưỡng như thế nào?",
+  "gold_ids": [
+   "THADS2008|Dieu73|Khoan7"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu chung về quy định mức bồi dưỡng nhưng không cụ thể hóa nội dung, điều kiện, hình thức thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330389",
+  "as_of": "2010-07-01",
+  "question": "Nếu tài sản cần thi hành án là máy lọc nước trong cơ sở sản xuất, liệu máy lọc nước có bị tịch thu không? ",
+  "gold_ids": [
+   "THADS2008|Dieu87|Khoan3|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ máy lọc nước có thuộc danh mục tài sản được bảo vệ hay không, thiếu thông tin xác định tính chất cụ thể của máy lọc nước trong tình huống này."
+  }
+ },
+ {
+  "qid": "EXT330390",
+  "as_of": "2010-07-01",
+  "question": "Nếu thủ trưởng cơ quan thi hành án dân sự không ra quyết định thi hành án, tôi có quyền kiện họ vì vi phạm pháp luật không?",
+  "gold_ids": [
+   "THADS2008|Dieu165|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ hậu quả pháp lý đối với thủ trưởng nhưng không quy định cụ thể quyền khởi kiện của cá nhân"
+  }
+ },
+ {
+  "qid": "EXT390021",
+  "as_of": "2010-07-01",
+  "question": "Nếu tài sản cần thi hành án nằm ở tỉnh khác, tôi có thể yêu cầu cơ quan thi hành án dân sự ủy thác cho tỉnh đó không? ",
+  "gold_ids": [
+   "THADS2008|Dieu57|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ tài sản ở tỉnh khác là lý do để ủy thác, chỉ đề cập đến xử lý tài sản và thu hồi quyết định thi hành án."
+  }
+ },
+ {
+  "qid": "EXT330393",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi sử dụng trái phép tài sản đã bị kê biên của người khác thì sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "THADS2008|Dieu162|Khoan7"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật nêu rõ hành vi và hậu quả chung nhưng không quy định cụ thể hình thức xử lý (phạt hành chính, bồi thường...)."
+  }
+ },
+ {
+  "qid": "EXT330398",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi không thể ký hợp đồng dịch vụ với chấp hành viên, tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "THADS2008|Dieu98|Khoan3|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ hậu quả pháp lý khi không ký hợp đồng, chỉ đề cập đến việc xác định giá."
+  }
+ },
+ {
+  "qid": "EXT330399",
+  "as_of": "2010-07-01",
+  "question": "Tại sao tài sản bị tạm giữ trong vụ án hình sự vẫn chưa được chuyển cho cơ quan thi hành án dân sự sau khi có bản án?",
+  "gold_ids": [
+   "THADS2008|Dieu122|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định thời điểm chuyển giao nhưng không nêu rõ lý do chậm trễ nếu không thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330401",
+  "as_of": "2010-07-01",
+  "question": "Nếu tòa ra quyết định đình chỉ thi hành án, tài sản bị kê biên sẽ được giải toả như thế nào? (Điều 50 Luật Thi hành án dân sự)",
+  "gold_ids": [
+   "THADS2008|Dieu105|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu điều kiện giải toả (có quyết định đình chỉ) nhưng không quy định cụ thể thủ tục, thời hạn hoặc trách nhiệm thực hiện."
+  }
+ },
+ {
+  "qid": "EXT330403",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi trình báo một sự việc nhưng không cung cấp đầy đủ thông tin, tôi có vi phạm pháp luật không? ",
+  "gold_ids": [
+   "THADS2008|Dieu143|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định nghĩa vụ cung cấp thông tin nhưng không nêu rõ hậu quả pháp lý khi không thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330406",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi là người dân và gặp phải tình huống pháp lý liên quan đến việc thi hành án dân sự trong quân đội, tôi sẽ hỏi: \"Trong trường hợp tôi cần ban hành văn bản quy phạm pháp luật về thi hành án dân sự trong quân đội, tôi cần làm gì?\" ",
+  "gold_ids": [
+   "THADS2008|Dieu168|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ quy trình cụ thể cá nhân cần thực hiện để ban hành văn bản, chỉ đề cập trách nhiệm của cơ quan nhà nước."
+  }
+ },
+ {
+  "qid": "EXT330410",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi có một bản án đã có hiệu lực pháp luật từ 1 tháng trước mà tòa án vẫn chưa chuyển giao cho cơ quan thi hành án dân sự, tôi phải làm gì theo quy định pháp luật?",
+  "gold_ids": [
+   "THADS2008|Dieu28|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định thời hạn chuyển giao nhưng không nêu rõ biện pháp xử lý khi tòa án vi phạm thời hạn."
+  }
+ },
+ {
+  "qid": "EXT330411",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi chỉ có thu nhập từ lương hưu và trợ cấp mất sức lao động, có bị coi là không tuân thủ pháp luật không? ",
+  "gold_ids": [
+   "THADS2008|Dieu78|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ nêu các loại thu nhập được tính vào thi hành án, không đề cập đến việc thu nhập này có vi phạm pháp luật hay không."
+  }
+ },
+ {
+  "qid": "EXT330413",
+  "as_of": "2010-07-01",
+  "question": "Cơ quan quân đội có trách nhiệm bảo đảm cơ sở vật chất cho hoạt động thi hành án, vậy nếu không thực hiện nhiệm vụ này sẽ bị xử lý như thế nào?",
+  "gold_ids": [
+   "THADS2008|Dieu168|Khoan2|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu trách nhiệm nhưng không quy định xử lý khi không thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330419",
+  "as_of": "2010-07-01",
+  "question": "Tại sao công an lại thực hiện cưỡng chế thi hành án vào lúc 11 giờ đêm?",
+  "gold_ids": [
+   "THADS2008|Dieu46|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "no",
+   "reason": "Luật cấm cưỡng chế từ 22h đến 6h, nhưng không giải thích lý do cụ thể cho hành động vi phạm"
+  }
+ },
+ {
+  "qid": "EXT330426",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi bị thiệt hại và muốn yêu cầu bồi thường, tôi cần nộp những tài liệu, chứng cứ gì vào hồ sơ?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu41|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu cụ thể loại tài liệu/chứng cứ cần nộp, chỉ đề cập chung chung"
+  }
+ },
+ {
+  "qid": "EXT330429",
+  "as_of": "2019-07-01",
+  "question": "Nếu công an làm mất đồ của tôi trong quá trình làm nhiệm vụ, tôi có quyền đòi bồi thường không? ",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu64|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định nghĩa vụ hoàn trả của người thi hành công vụ với ngân sách, không nêu rõ quyền yêu cầu bồi thường của người bị thiệt hại từ nhà nước."
+  }
+ },
+ {
+  "qid": "EXT330430",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi bị công an bồi thường thiệt hại do sai phạm trong quá trình điều tra, tôi cần làm gì để được xác định thiệt hại? Theo Luật này, Tòa án sẽ xác định hành vi trái pháp luật của người thi hành công vụ gây thiệt hại và xác định phạm vi trách nhiệm",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu55|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu vai trò của Tòa án, không hướng dẫn cụ thể hành động của người bị thiệt hại (ví dụ: nộp đơn, cung cấp bằng chứng)."
+  }
+ },
+ {
+  "qid": "EXT330433",
+  "as_of": "2019-07-01",
+  "question": "Nếu cơ quan chức năng không cử người giải quyết bồi thường trong thời hạn 02 ngày làm việc kể từ ngày thụ lý hồ sơ, tôi có quyền khiếu nại theo Điều nào?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu43|Khoan3|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không đề cập đến quyền khiếu nại hoặc điều luật liên quan đến việc không cử người giải quyết đúng hạn."
+  }
+ },
+ {
+  "qid": "EXT330434",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi muốn được hướng dẫn về quy trình bồi thường nhà nước, tôi nên liên hệ với cơ quan nào? ",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu73|Khoan3|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ nêu cơ quan có nhiệm vụ hướng dẫn, nhưng không cụ thể hóa cách thức liên hệ hoặc cơ quan trực tiếp tiếp nhận yêu cầu."
+  }
+ },
+ {
+  "qid": "EXT330435",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi không có bản sao văn bản làm căn cứ yêu cầu bồi thường thì tôi có thể nộp hồ sơ đề nghị cấp kinh phí bồi thường được không? ",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu62|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật yêu cầu bản sao văn bản làm căn cứ nhưng không nêu rõ ngoại lệ cụ thể trong khoản 3, nên không thể xác định rõ liệu việc thiếu bản sao có được chấp nhận hay không."
+  }
+ },
+ {
+  "qid": "EXT330443",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi bị người khác bôi nhọ danh dự nhưng không gây thiệt hại tài chính, tôi có quyền yêu cầu họ phải thực hiện các biện pháp để phục hồi danh dự của tôi theo quy định tại Mục 3 Chương này.",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu43|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ điều kiện phục hồi danh dự khi không có thiệt hại tài chính, chỉ đề cập đến việc không giải quyết bồi thường nếu chỉ yêu cầu phục hồi danh dự."
+  }
+ },
+ {
+  "qid": "EXT330445",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi được bồi thường trong quá trình tố tụng hình sự, cơ quan nào sẽ thực hiện chi trả tiền và phục hồi danh dự cho tôi?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu55|Khoan3|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu cụ thể cơ quan nào, chỉ yêu cầu bản án/Quyết định của Tòa án phải ghi rõ"
+  }
+ },
+ {
+  "qid": "EXT330446",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi là người dân và đang gặp phải tình huống pháp lý liên quan đến quyết định giảm thời hạn chấp hành hình phạt tù không được thực hiện, tôi sẽ hỏi: \"Tại sao quyết định giảm thời gian tù của tòa án dành cho tôi lại không được thực hiện?\"",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu20|Khoan3|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu hành vi bị cấm mà không giải thích lý do cụ thể dẫn đến việc không thực hiện quyết định giảm thời hạn tù."
+  }
+ },
+ {
+  "qid": "EXT330447",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi bị người khác làm thiệt hại và muốn đòi bồi thường, tôi cần làm gì theo luật? ",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu13|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu quyền được bảo vệ, không hướng dẫn cụ thể các bước thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330448",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi yêu cầu tòa án áp dụng biện pháp khẩn cấp tạm thời nhưng tòa áp dụng không đúng gây thiệt hại cho tôi, tôi có quyền đòi bồi thường không? ",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu32|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định trường hợp áp dụng đúng nhưng không đề cập đến trường hợp tòa án áp dụng sai, nên không đủ thông tin trả lời trực tiếp câu hỏi."
+  }
+ },
+ {
+  "qid": "EXT330449",
+  "as_of": "2019-07-01",
+  "question": "Nếu cơ quan giải quyết bồi thường đã tạm ứng kinh phí cho tôi, tôi phải làm gì để cơ quan tài chính bổ sung kinh phí trong thời hạn 07 ngày làm việc?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu44|Khoan3|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ người yêu cầu bồi thường phải thực hiện hành động nào để kích hoạt nghĩa vụ của cơ quan tài chính"
+  }
+ },
+ {
+  "qid": "EXT330451",
+  "as_of": "2019-07-01",
+  "question": "Tài khoản của tôi bị phong tỏa mà tôi không vi phạm bất kỳ quy định nào, tôi có quyền đòi bồi thường thiệt hại không?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu18|Khoan10"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật đề cập đến quyền bồi thường nhưng không nêu rõ điều kiện cụ thể để xác định việc phong tỏa tài khoản có vi phạm quy định hay không"
+  }
+ },
+ {
+  "qid": "EXT330453",
+  "as_of": "2009-05-26",
+  "question": "Khi ly hôn, tôi muốn chia quyền sử dụng đất nông nghiệp nhưng chồng tôi không đồng ý, tôi phải làm gì? Theo quy định tại Điều 94 của Luật đất đai, nếu không thỏa thuận được thì yêu cầu Tòa án giải quyết.",
+  "gold_ids": [
+   "HNGD2000|Dieu97|Khoan2|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2000",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "DOAN LUAT không đề cập Điều 94 mà chỉ trích dẫn Điều 95, thiếu thông tin cụ thể về quy định tại Điều 94"
+  }
+ },
+ {
+  "qid": "EXT330455",
+  "as_of": "2009-05-26",
+  "question": "Nếu tôi sống chung với con riêng của vợ/chồng nhưng không muốn chăm sóc, nuôi dưỡng chúng, tôi có vi phạm pháp luật không? ",
+  "gold_ids": [
+   "HNGD2000|Dieu38|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2000",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định nghĩa vụ nhưng không nêu rõ hậu quả pháp lý khi vi phạm"
+  }
+ },
+ {
+  "qid": "EXT330456",
+  "as_of": "2009-05-26",
+  "question": "Con có quyền yêu cầu bố mẹ chăm sóc và bảo vệ quyền lợi của con đúng pháp luật không ạ? (Theo Luật Hôn nhân và Gia đình)",
+  "gold_ids": [
+   "HNGD2000|Dieu34|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2000",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định nghĩa vụ của cha mẹ, không đề cập quyền của con yêu cầu cha mẹ thực hiện nghĩa vụ này"
+  }
+ },
+ {
+  "qid": "EXT330457",
+  "as_of": "2009-05-26",
+  "question": "Nếu tôi là người dân và gặp tình huống pháp lý liên quan đến việc chấm dứt việc nuôi con nuôi, tôi sẽ hỏi: \"Hội liên hiệp phụ nữ có quyền yêu cầu Tòa án chấm dứt việc nuôi con nuôi trong trường hợp nào?\"",
+  "gold_ids": [
+   "HNGD2000|Dieu77|Khoan3|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2000",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "DOAN LUAT không nêu cụ thể nội dung điểm 2 và 3 Điều 76"
+  }
+ },
+ {
+  "qid": "EXT330462",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi và hàng xóm cãi vã vì tranh chấp đất đai, có thể hòa giải ở cơ sở không? Theo Điều này, hòa giải không áp dụng trong trường hợp vi phạm pháp luật bị truy cứu trách nhiệm hình sự hoặc xử lý vi phạm hành chính.",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu3|Khoan1|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ tranh chấp đất đai có thuộc trường hợp được hòa giải hay không, thiếu thông tin cụ thể về tính chất tranh chấp."
+  }
+ },
+ {
+  "qid": "EXT330464",
+  "as_of": "2026-07-02",
+  "question": "Nếu hòa giải viên được chỉ định không được bầu lại trong thời hạn 3 năm, người dân có quyền làm gì? (Điều 10 Luật Hòa giải ở cơ sở)",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu11|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật không đề cập đến hành động cụ thể của người dân trong trường hợp này."
+  }
+ },
+ {
+  "qid": "EXT330465",
+  "as_of": "2026-07-02",
+  "question": "Câu hỏi: Tôi cần tham gia khóa học gì để hòa giải tranh chấp trong cộng đồng theo quy định pháp luật? ",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu13|Khoan8"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu cụ thể tên khóa học mà chỉ đề cập chung đến việc tham gia bồi dưỡng, tập huấn."
+  }
+ },
+ {
+  "qid": "EXT330467",
+  "as_of": "2026-07-02",
+  "question": "\"Nếu tôi thấy hàng xóm đánh đập vợ con mình, tôi có quyền can thiệp không?\" ",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu4|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "đoạn luật đề cập đến nghĩa vụ đạo đức nhưng không quy định cụ thể quyền can thiệp pháp lý"
+  }
+ },
+ {
+  "qid": "EXT330468",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi đồng ý tham gia hòa giải, tôi có bắt buộc phải chấp nhận mọi quyết định của hòa giải viên không? ",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu19|Khoan3|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "no",
+   "reason": "Thông tin trong DOAN LUAT chỉ liên quan đến quy trình mời người tham gia hòa giải, không nói đến tính bắt buộc của quyết định hòa giải"
+  }
+ },
+ {
+  "qid": "EXT330469",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi là hòa giải viên và muốn từ chức, tôi cần làm gì theo quy định pháp luật? ",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu14|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định việc từ chức của Tổ trưởng tổ hòa giải, không đề cập đến hòa giải viên thường trực"
+  }
+ },
+ {
+  "qid": "EXT330470",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi không tuân thủ theo luật cụ thể nào đó từ Điều 15 đến Điều 27 của Luật này, tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "HOTICH2026|Dieu29|Khoan4|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu cụ thể hình thức xử lý vi phạm, chỉ đề cập đến việc Chính phủ quy định chi tiết"
+  }
+ },
+ {
+  "qid": "EXT330472",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi là người thân của một người vừa mất mà không đăng ký khai tử trong thời hạn 15 ngày, tôi sẽ gặp phải trách nhiệm pháp lý gì? ",
+  "gold_ids": [
+   "HOTICH2026|Dieu20|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "đoạn luật nêu trách nhiệm đăng ký khai tử nhưng không quy định hậu quả pháp lý nếu vi phạm"
+  }
+ },
+ {
+  "qid": "EXT330473",
+  "as_of": "2026-07-02",
+  "question": "Tôi đã cư trú ở nước ngoài và muốn thay đổi thông tin hộ tịch, tôi cần làm gì? ",
+  "gold_ids": [
+   "HOTICH2026|Dieu19|Khoan3|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định điều kiện nhưng không nêu rõ thủ tục cụ thể cho người cư trú ở nước ngoài"
+  }
+ },
+ {
+  "qid": "EXT330474",
+  "as_of": "2026-07-02",
+  "question": "Việc kết nối dữ liệu hộ tịch với cơ quan khác bị gián đoạn khiến tôi không thể cập nhật thông tin hộ tịch kịp thời, tôi phải làm gì theo luật? ",
+  "gold_ids": [
+   "HOTICH2026|Dieu7|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định trách nhiệm của cơ quan nhà nước, không hướng dẫn cụ thể hành động của cá nhân khi kết nối dữ liệu bị gián đoạn."
+  }
+ },
+ {
+  "qid": "EXT330477",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi muốn xem thông tin hộ tịch của người khác, tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "HOTICH2026|Dieu26|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu yêu cầu bảo vệ dữ liệu cá nhân nhưng không quy định cụ thể xử lý vi phạm"
+  }
+ },
+ {
+  "qid": "EXT330478",
+  "as_of": "2026-07-02",
+  "question": "Cơ quan đăng ký hộ tịch không cập nhật tên tôi vào cơ sở dữ liệu hộ tịch, tôi phải làm gì? ",
+  "gold_ids": [
+   "HOTICH2026|Dieu25|Khoan1|Diemo"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu quy trình xử lý khi cơ quan đăng ký hộ tịch không cập nhật thông tin"
+  }
+ },
+ {
+  "qid": "EXT330479",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi là công dân Việt Nam và cần đăng ký giám hộ, tôi phải làm thủ tục ở đâu? ",
+  "gold_ids": [
+   "HOTICH2026|Dieu17|Khoan1|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ đề cập trường hợp giữa pháp nhân và công dân, không nêu rõ tất cả trường hợp công dân đăng ký giám hộ"
+  }
+ },
+ {
+  "qid": "EXT330481",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi không nhận được văn bản tố tụng từ bất kỳ cơ quan chính thức nào, tôi có thể làm gì theo quy định pháp luật? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu148|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu quy định về hành động khi không nhận được văn bản tố tụng."
+  }
+ },
+ {
+  "qid": "EXT330482",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn bổ sung tài liệu mới trong đơn kháng cáo, tôi cần làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu244|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu nguyên tắc chung về việc kèm theo tài liệu khi nộp đơn kháng cáo, nhưng không quy định cụ thể thủ tục bổ sung tài liệu mới sau khi đã nộp đơn."
+  }
+ },
+ {
+  "qid": "EXT330483",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi có một tài sản và muốn biết giá trị của nó để làm chứng cứ trong một vụ án, tôi cần làm gì theo luật? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu83|Khoan8"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định điều kiện để kết quả định giá được coi là chứng cứ nhưng không nêu cụ thể thủ tục thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330484",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn rút một phần yêu cầu khởi kiện trong vụ án đang diễn ra, tôi cần làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu59|Khoan1|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ nêu quyền rút yêu cầu nhưng không quy định thủ tục thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330489",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là người dân và cần sử dụng dịch vụ giám định pháp y, tôi có quyền yêu cầu tòa án cung cấp những tài liệu cần thiết cho việc giám định đúng không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu68|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định quyền của người giám định, không đề cập đến quyền của người dân"
+  }
+ },
+ {
+  "qid": "EXT330490",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là công dân nước ngoài và có tranh chấp dân sự với một công dân Việt Nam, tôi có được giải quyết bằng con đường ngoại giao không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu2|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu điều kiện chung (có quyền ưu đãi, miễn trừ) nhưng không xác định cụ thể công dân nước ngoài có đủ điều kiện hay không."
+  }
+ },
+ {
+  "qid": "EXT330491",
+  "as_of": "2012-07-01",
+  "question": "Bạn đã trình bày không rõ ràng về vụ việc của mình, vậy xin hãy giải thích rõ hơn về những điểm mâu thuẫn giữa lời khai của bạn và bị đơn.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu223|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu điều kiện hỏi nguyên đơn, không hướng dẫn cách giải thích mâu thuẫn"
+  }
+ },
+ {
+  "qid": "EXT330494",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn thay đổi người giám định trong phiên tòa sắp tới, tôi cần làm gì theo quy định của pháp luật? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu40|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu thẩm quyền của Chánh án, không quy định cụ thể thủ tục yêu cầu thay đổi người giám định"
+  }
+ },
+ {
+  "qid": "EXT330495",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đã gửi đơn khởi kiện nhưng quá thời hạn thông báo của tòa án mà chưa đến làm thủ tục thụ lý vụ án, đơn của tôi sẽ bị từ chối theo khoản này của Bộ luật Tố tụng dân sự.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu168|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định việc 'trả lại' đơn khởi kiện, không dùng từ 'từ chối', nhưng nội dung tương đồng với câu hỏi."
+  }
+ },
+ {
+  "qid": "EXT330496",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn yêu cầu tòa án tiến hành giám định chuyên môn trong vụ án của mình, tôi cần làm gì và cần cung cấp thông tin gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu90|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu điều kiện để tòa án ra quyết định giám định nhưng không quy định cụ thể thủ tục yêu cầu của đương sự hoặc thông tin cần cung cấp khi yêu cầu giám định."
+  }
+ },
+ {
+  "qid": "EXT390025",
+  "as_of": "2012-07-01",
+  "question": "Trong vụ án này, tôi muốn thay đổi yêu cầu độc lập của mình. Tôi muốn tăng số tiền bồi thường thiệt hại từ 50 triệu lên 70 triệu đồng. (Theo Điều 228 của Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu217|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật đề cập đến việc thay đổi yêu cầu độc lập nhưng không nêu rõ liệu việc tăng số tiền bồi thường có được phép hay không."
+  }
+ },
+ {
+  "qid": "EXT330497",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi bị phạt tiền trong phiên tòa vì vi phạm nội quy, mức phạt sẽ được quyết định như thế nào? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu387|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ nêu thẩm quyền quyết định của chủ toà nhưng không quy định cụ thể tiêu chí xác định mức phạt tiền"
+  }
+ },
+ {
+  "qid": "EXT330499",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi kháng cáo một quyết định nhưng chưa nhận được quyết định đưa vụ án ra xét xử phúc thẩm, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu258|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ quyền của người kháng cáo khi chưa nhận được quyết định đưa vụ án ra xét xử phúc thẩm."
+  }
+ },
+ {
+  "qid": "EXT330501",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi nộp tiền tạm ứng án phí nhưng tòa án không sử dụng số tiền đó để thi hành án, tôi có quyền đòi lại tiền đó không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu128|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Luật không quy định cụ thể về việc đòi lại tiền nếu không được sử dụng"
+  }
+ },
+ {
+  "qid": "EXT330502",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi thấy người giữ nhà đang bán đồ đạc trong nhà, tôi có thể yêu cầu tòa án kê biên tài sản không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu108|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chưa quy định rõ 'tẩu tán' bao gồm việc bán đồ đạc, cần thêm bằng chứng cụ thể từ người yêu cầu."
+  }
+ },
+ {
+  "qid": "EXT330503",
+  "as_of": "2012-07-01",
+  "question": "Tôi giao nộp chứng cứ cho tòa án mà không có biên bản ghi chép thì sao?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu84|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Luật quy định bắt buộc lập biên bản nhưng không nêu rõ hậu quả nếu không có biên bản"
+  }
+ },
+ {
+  "qid": "EXT330504",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là người dân và bị toà án từ chối triệu tập tham gia phiên tòa kháng cáo dù có liên quan, tôi có quyền yêu cầu toà án thực hiện việc triệu tập dựa theo Điều 289 của Bộ luật Tố tụng dân sự.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu264|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định đối tượng phải được triệu tập nhưng không nêu rõ quyền yêu cầu tòa án thực hiện việc triệu tập khi bị từ chối"
+  }
+ },
+ {
+  "qid": "EXT330506",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi nộp hồ sơ cho tòa án được 3 ngày mà chưa nhận được thông báo thụ lý, tôi phải làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu367|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định thời hạn của tòa án, không nêu rõ hành động của người nộp hồ sơ khi tòa án không thông báo đúng hạn."
+  }
+ },
+ {
+  "qid": "EXT330507",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi vắng mặt trong phiên tòa mà không báo trước, tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu213|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ nêu quy trình báo cáo vắng mặt, không quy định hậu quả pháp lý đối với người vắng mặt không báo trước."
+  }
+ },
+ {
+  "qid": "EXT330508",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi và vợ cãi nhau về giá trị của ngôi nhà chung và quyết định định giá lại, mỗi người sẽ phải trả bao nhiêu phí định giá?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu142|Khoan5"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định nguyên tắc phân chia chi phí nhưng không nêu rõ cách xác định giá trị tài sản hoặc quy trình định giá cụ thể."
+  }
+ },
+ {
+  "qid": "EXT330510",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi tham gia định giá tài sản nhưng Hội đồng định giá không thông báo trước về thời gian và địa điểm, tôi có quyền từ chối tham gia không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu92|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định quyền được thông báo và tham dự, nhưng không nêu rõ quyền từ chối nếu không được thông báo."
+  }
+ },
+ {
+  "qid": "EXT330514",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn yêu cầu tòa án hủy quyết định tuyên bố mất năng lực hành vi dân sự của người khác, tôi cần làm gì trong thời hạn chuẩn bị xét đơn? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu323|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ đề cập đến sự tồn tại của thời hạn chuẩn bị xét đơn nhưng không nêu cụ thể các bước thực hiện trong thời hạn này."
+  }
+ },
+ {
+  "qid": "EXT330518",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn kiện để hủy quyết định tuyên bố một người thân mất tích, tôi cần phải viết đơn yêu cầu gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu333|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu yêu cầu về nội dung đơn, không nêu rõ tên loại đơn cần viết"
+  }
+ },
+ {
+  "qid": "EXT390026",
+  "as_of": "2012-07-01",
+  "question": "Tôi cấp bản sao của bản án nhưng bị thu phí cao, tôi có quyền khiếu nại không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu127|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu quy trình khiếu nại phí lệ phí"
+  }
+ },
+ {
+  "qid": "EXT330521",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn yêu cầu tòa án quản lý tài sản của người được tuyên bố mất tích, tôi cần làm gì? Toà án sẽ ra quyết định như thế nào? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu332|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "DOAN LUAT nêu quy trình ra quyết định nhưng không đề cập cụ thể thủ tục yêu cầu hoặc căn cứ pháp lý chi tiết trong Bộ luật Dân sự"
+  }
+ },
+ {
+  "qid": "EXT330522",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi nhận được yêu cầu từ tòa án nước ngoài để thu thập chứng cứ cho một vụ án dân sự, tôi nên làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu415|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu nguyên tắc chung nhưng không quy định cụ thể thủ tục xử lý yêu cầu thu thập chứng cứ từ tòa án nước ngoài"
+  }
+ },
+ {
+  "qid": "EXT330525",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi được giấy triệu tập nhưng không thể đến phiên tòa được, tôi phải làm gì để không ảnh hưởng đến quyền lợi của mình? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu199|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ nêu hậu quả (hoãn phiên tòa) khi vắng mặt lần đầu có lý do, nhưng không hướng dẫn cụ thể cách thức thông báo hoặc cung cấp lý do cho tòa án."
+  }
+ },
+ {
+  "qid": "EXT330528",
+  "as_of": "2012-07-01",
+  "question": "Trong phiên tòa, tôi là luật sư và muốn đưa ra ý kiến về việc nghị án khi các thành viên Hội đồng xét xử biểu quyết. Theo Điều luật, tôi có quyền gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu236|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Luật không quy định quyền của luật sư trong quá trình nghị án, chỉ đề cập quyền của thành viên Hội đồng xét xử"
+  }
+ },
+ {
+  "qid": "EXT330531",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là nguyên đơn trong một vụ kiện dân sự và muốn Viện kiểm sát tham gia phiên tòa, tôi phải làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu21|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu điều kiện tham gia của Viện kiểm sát nhưng không quy định cụ thể hành động của nguyên đơn để yêu cầu Viện kiểm sát tham gia."
+  }
+ },
+ {
+  "qid": "EXT390027",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi có một công ty và xảy ra tranh chấp kinh doanh với một công ty khác, tôi cần làm gì theo luật? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu29|Khoan1|Diemm"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ xác định phạm vi tranh chấp, không nêu quy trình giải quyết tranh chấp theo luật."
+  }
+ },
+ {
+  "qid": "EXT330533",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi bị xử lý kỷ luật tại nơi làm việc vì một vi phạm, tôi có thể bị truy cứu trách nhiệm hình sự không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu389|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu cụ thể điều kiện vi phạm nào dẫn đến trách nhiệm hình sự"
+  }
+ },
+ {
+  "qid": "EXT330536",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn kiện một vụ việc dân sự, tôi có thể chọn tòa án nơi tôi cư trú để giải quyết vụ việc được không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu36|Khoan2|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "đoạn luật chỉ áp dụng cho các yêu cầu dân sự cụ thể tại Điều 26, không bao phủ toàn bộ vụ việc dân sự"
+  }
+ },
+ {
+  "qid": "EXT330539",
+  "as_of": "2012-02-06",
+  "question": "Sở Tư pháp không gửi Quyết định công nhận việc giám hộ cho Ủy ban nhân dân cấp xã, tôi phải làm gì?",
+  "gold_ids": [
+   "ND158_2005|Dieu54|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định nghĩa vụ gửi quyết định nhưng không nêu rõ biện pháp xử lý khi vi phạm"
+  }
+ },
+ {
+  "qid": "EXT330538",
+  "as_of": "2012-02-06",
+  "question": "Trẻ em sinh ra tại Việt Nam nhưng cha mẹ là công dân Việt Nam đang sống ở nước ngoài nên làm thủ tục khai sinh như thế nào?",
+  "gold_ids": [
+   "ND158_2005|Dieu96|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu trường hợp áp dụng quy định, nhưng không nêu cụ thể thủ tục khai sinh"
+  }
+ },
+ {
+  "qid": "EXT330540",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi muốn đăng ký kết hôn nhưng không có chứng minh thư, ủy ban nhân dân cấp xã có chấp nhận không? ",
+  "gold_ids": [
+   "ND158_2005|Dieu79|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ điều kiện bắt buộc về chứng minh thư, nhưng cũng không quy định cụ thể việc thiếu chứng minh thư có được chấp nhận hay không"
+  }
+ },
+ {
+  "qid": "EXT330542",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi muốn đăng ký kết hôn nhưng không biết thủ tục cụ thể, tôi nên làm gì theo quy định của pháp luật? ",
+  "gold_ids": [
+   "ND158_2005|Dieu77|Khoan1|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "DOAN LUAT chỉ đề cập đến nhiệm vụ tuyên truyền, chưa nêu rõ thủ tục đăng ký kết hôn cụ thể"
+  }
+ },
+ {
+  "qid": "EXT330543",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi muốn điều chỉnh thông tin trong sổ hộ tịch nhưng cán bộ tư pháp hộ tịch không ghi chú rõ nội dung điều chỉnh và đóng dấu vào phần đã điều chỉnh, tôi phải làm gì? ",
+  "gold_ids": [
+   "ND158_2005|Dieu39|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định nghĩa vụ của cán bộ nhưng không hướng dẫn cụ thể hành động của người dân khi cán bộ vi phạm."
+  }
+ },
+ {
+  "qid": "EXT330546",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi là chủ tịch UBND cấp huyện và quên gửi báo cáo số liệu thống kê hộ tịch 6 tháng đầu năm cho Sở Tư pháp trước ngày 31/7, tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "ND158_2005|Dieu73|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định thời hạn gửi báo cáo nhưng không nêu rõ xử lý khi vi phạm"
+  }
+ },
+ {
+  "qid": "EXT330548",
+  "as_of": "2012-02-06",
+  "question": "Nếu gia đình tôi không nhận được Giấy báo tử của người thân bị tử hình, tôi nên làm gì? ",
+  "gold_ids": [
+   "ND158_2005|Dieu22|Khoan2|Dieme"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ quy định thẩm quyền cấp, không hướng dẫn xử lý khi không nhận được giấy tờ"
+  }
+ },
+ {
+  "qid": "EXT330550",
+  "as_of": "2012-02-06",
+  "question": "Nếu UBND cấp huyện thay đổi thông tin hộ tịch, người dân cần làm gì để đảm bảo thông tin được cập nhật tại UBND cấp xã?",
+  "gold_ids": [
+   "ND158_2005|Dieu40|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ quy định trách nhiệm của UBND cấp huyện, không đề cập đến nghĩa vụ của người dân"
+  }
+ },
+ {
+  "qid": "EXT330552",
+  "as_of": "2012-02-06",
+  "question": "Tôi mất giấy khai sinh, tôi cần làm gì để lấy lại? Cơ quan Ngoại giao, lãnh sự Việt Nam có trách nhiệm lưu trữ sổ hộ tịch, bao gồm giấy khai sinh, do đó bạn có thể liên hệ với họ để giải quyết vấn đề.",
+  "gold_ids": [
+   "ND158_2005|Dieu80|Khoan1|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu trách nhiệm lưu trữ, không quy định cụ thể thủ tục lấy lại giấy khai sinh"
+  }
+ },
+ {
+  "qid": "EXT330553",
+  "as_of": "2012-02-06",
+  "question": "Tôi muốn làm giấy khai sinh cho con nhưng chỉ có bản sao từ sổ hộ tịch, tôi có thể sử dụng bản sao này để làm thủ tục không? ",
+  "gold_ids": [
+   "ND158_2005|Dieu60|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ xác định bản sao được cấp như thế nào, nhưng không nêu rõ liệu bản sao này có thể dùng để làm thủ tục khai sinh hay không."
+  }
+ },
+ {
+  "qid": "EXT330555",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi sinh ra với khuyết tật bẩm sinh về giới tính, tôi có thể yêu cầu xác định lại giới tính của mình không? ",
+  "gold_ids": [
+   "ND158_2005|Dieu36|Khoan4"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND158_2005",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật nêu điều kiện được xác định lại giới tính nhưng không quy định cụ thể quyền yêu cầu của cá nhân"
+  }
+ },
+ {
+  "qid": "EXT330558",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi đã được tòa án cấp bản án ly hôn cách đây 10 ngày và đã gửi hồ sơ cho Sở Tư pháp, tại sao Bộ Tư pháp vẫn chưa có phản hồi gì? Theo Điều 41 Nghị định này, Bộ Tư pháp phải xem xét và trả lời trong vòng 7 ngày làm việc.",
+  "gold_ids": [
+   "ND126_2014|Dieu45|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định thời hạn xử lý của Bộ Tư pháp sau khi nhận hồ sơ từ Sở Tư pháp, không nêu rõ thời gian Sở Tư pháp gửi hồ sơ đến Bộ Tư pháp"
+  }
+ },
+ {
+  "qid": "EXT330559",
+  "as_of": "2016-02-15",
+  "question": "Tôi nhận cha/mẹ/con ở nước ngoài xong, sao cơ quan đại diện chưa ghi vào sổ hộ tịch và trao quyết định công nhận cho tôi trong 5 ngày làm việc? (Theo quy định tại Mục 4 về công nhận việc nhận cha, mẹ, con)",
+  "gold_ids": [
+   "ND126_2014|Dieu35|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ hậu quả nếu cơ quan đại diện vi phạm thời hạn 5 ngày, cũng không giải thích lý do cụ thể khiến việc ghi sổ và trao quyết định bị chậm trễ."
+  }
+ },
+ {
+  "qid": "EXT330561",
+  "as_of": "2016-02-15",
+  "question": "Tôi cần phải biết thêm thông tin về tình huống cụ thể mà người dân đang gặp phải liên quan đến hồ sơ nhận cha mẹ con để trả lời chính xác. Vui lòng cung cấp chi tiết về vấn đề họ đang gặp phải.",
+  "gold_ids": [
+   "ND126_2014|Dieu40|Khoan1|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "no",
+   "reason": "Thiếu thông tin về các vấn đề thực tế liên quan đến việc nhận cha mẹ con."
+  }
+ },
+ {
+  "qid": "EXT330562",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi muốn mở một trung tâm nhưng không có tờ khai đăng ký hoạt động theo mẫu quy định, tôi sẽ gặp phải vấn đề gì? ",
+  "gold_ids": [
+   "ND126_2014|Dieu54|Khoan2|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ tờ khai là thành phần bắt buộc nhưng không quy định cụ thể hậu quả nếu thiếu, nên không đủ thông tin trả lời đầy đủ câu hỏi."
+  }
+ },
+ {
+  "qid": "EXT330563",
+  "as_of": "2016-02-15",
+  "question": "Giấy công nhận việc nhận làm con của nước ngoài đã hết hạn nhưng tôi vẫn sử dụng được không? ",
+  "gold_ids": [
+   "ND126_2014|Dieu40|Khoan1|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật không đề cập đến việc giấy tờ hết hạn có thể sử dụng hay không"
+  }
+ },
+ {
+  "qid": "EXT330564",
+  "as_of": "2016-02-15",
+  "question": "Nếu trung tâm từ chối không cho thanh tra viên vào thanh tra, thì trung tâm sẽ vi phạm điều gì? ",
+  "gold_ids": [
+   "ND126_2014|Dieu55|Khoan2|Diemg"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật không nêu rõ hậu quả pháp lý khi trung tâm từ chối thanh tra"
+  }
+ },
+ {
+  "qid": "EXT330565",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi kết hôn với người nước ngoài ở nước ngoài, điều kiện nào cần phải đảm bảo để hôn nhân của tôi được công nhận tại Việt Nam? ",
+  "gold_ids": [
+   "ND126_2014|Dieu36|Khoan1|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu điều kiện phù hợp với pháp luật nước ngoài nhưng không đề cập đến các điều kiện khác như thủ tục công nhận tại Việt Nam hoặc yêu cầu về giấy tờ."
+  }
+ },
+ {
+  "qid": "EXT330568",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi muốn giới thiệu một người bạn Việt Nam để kết hôn với một người nước ngoài, tôi cần làm gì? ",
+  "gold_ids": [
+   "ND126_2014|Dieu55|Khoan1|Diemg"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ nêu quyền của trung tâm, không hướng dẫn cụ thể các bước người dân cần thực hiện"
+  }
+ },
+ {
+  "qid": "EXT330569",
+  "as_of": "2016-02-15",
+  "question": "Tôi cần hộ chiếu để ghi việc ly hôn đã giải quyết ở nước ngoài vào sổ hộ tịch phải không?",
+  "gold_ids": [
+   "ND126_2014|Dieu44|Khoan1|Diemc"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "parse-fail",
+   "reason": "unparseable"
+  }
+ },
+ {
+  "qid": "EXT330570",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi muốn nhận một người con không phải là con ruột của mình, tôi cần làm thủ tục gì? ",
+  "gold_ids": [
+   "ND126_2014|Dieu63|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ thủ tục cụ thể để nhận con không phải con ruột"
+  }
+ },
+ {
+  "qid": "EXT330571",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi là người nước ngoài và muốn đăng ký kết hôn với một người nước ngoài khác tại Việt Nam nhưng cả hai đều không có đăng ký tạm trú, tôi có thể đăng ký kết hôn ở đâu? ",
+  "gold_ids": [
+   "ND126_2014|Dieu19|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định trường hợp có đăng ký tạm trú, nhưng không nêu rõ khi cả hai không có đăng ký tạm trú."
+  }
+ },
+ {
+  "qid": "EXT330572",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi muốn ủy quyền cho vợ mình nộp đơn ly hôn thay tôi, tôi cần làm gì?",
+  "gold_ids": [
+   "ND126_2014|Dieu44|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "ND126_2014",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "parse-fail",
+   "reason": "unparseable"
+  }
+ },
+ {
+  "qid": "EXT390035",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi là người đại diện và muốn thực hiện một giao dịch vượt quá phạm vi được pháp luật quy định, tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "BLDS2015|Dieu141|Khoan1|Diemd"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật nêu rõ giới hạn hành vi của người đại diện nhưng không quy định cụ thể hậu quả pháp lý khi vượt quá phạm vi này."
+  }
+ },
+ {
+  "qid": "EXT390036",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi mua một sản phẩm kém chất lượng và muốn đòi bồi thường, tôi cần chứng minh được điều gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu356|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLDS2015",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu cụ thể bằng chứng cần chứng minh (chất lượng sản phẩm, thiệt hại cụ thể...)."
+  }
+ },
+ {
+  "qid": "EXT390041",
+  "as_of": "2017-07-01",
+  "question": "Trong phiên tòa, tôi có quyền nhờ luật sư hỏi trước bị cáo không, dựa theo Điều 248 Bộ luật Tố tụng dân sự?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu249|Khoan1|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ quyền được hỏi trước bị cáo, chỉ đề cập thứ tự hỏi chung"
+  }
+ },
+ {
+  "qid": "EXT390040",
+  "as_of": "2017-07-01",
+  "question": "Nếu quyết định của tòa án không ghi rõ tên thẩm phán và kiểm sát viên, tôi có thể khiếu nại được không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu370|Khoan1|Diemđ"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định nội dung bắt buộc nhưng không nêu rõ hậu quả pháp lý khi thiếu thông tin này"
+  }
+ },
+ {
+  "qid": "EXT390044",
+  "as_of": "2017-07-01",
+  "question": "Nếu chủ tàu là người có nghĩa vụ về tài sản trong vụ án đang giải quyết và tàu của họ bị tòa án bắt giữ, thì chủ tàu có quyền gì theo luật? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu131|Khoan2|Diemb"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "no",
+   "reason": "Đoạn luật chỉ nêu điều kiện bắt giữ tàu, không quy định quyền của chủ tàu trong trường hợp này"
+  }
+ },
+ {
+  "qid": "EXT390042",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn kháng nghị một quyết định giải quyết việc dân sự của Tòa án, tôi có bao lâu để làm điều đó? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu372|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ quy định thời hạn kháng nghị của Viện kiểm sát, không đề cập đến thời hạn kháng nghị của cá nhân"
+  }
+ },
+ {
+  "qid": "EXT390046",
+  "as_of": "2026-02-15",
+  "question": "Tôi gặp khó khăn khi gửi hồ sơ thi hành án dân sự trực tuyến, tôi phải làm gì theo quy định pháp luật? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu20|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ cách xử lý khi gặp khó khăn kỹ thuật hoặc hướng dẫn cụ thể khi gửi hồ sơ trực tuyến gặp sự cố."
+  }
+ },
+ {
+  "qid": "EXT390050",
+  "as_of": "2026-06-30",
+  "question": "Nếu ông nội không có khả năng lao động và không có tài sản để tự nuôi mình, ông có quyền yêu cầu cháu là người thành niên phải cấp dưỡng không? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu113|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "no",
+   "audit14": "partial",
+   "reason": "Đoạn luật thiếu thông tin về việc ông nội có người khác cấp dưỡng hay không"
+  }
+ },
+ {
+  "qid": "EXT390051",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi muốn ly hôn với vợ/chồng là người nước ngoài, tôi cần làm thủ tục ở đâu? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu127|Khoan1"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chưa nêu rõ cơ quan cụ thể (như Tòa án nhân dân) hoặc thủ tục chi tiết."
+  }
+ },
+ {
+  "qid": "EXT390052",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi bán tài sản đã thế chấp để lấy tiền, tôi có cần ưu tiên trả nợ thế chấp trước không? ",
+  "gold_ids": [
+   "THADS2008|Dieu47|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "THADS2008",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật quy định ưu tiên thanh toán nợ thế chấp nhưng không nêu rõ nghĩa vụ chủ thể phải chủ động ưu tiên trả nợ trước các nghĩa vụ khác."
+  }
+ },
+ {
+  "qid": "EXT390053",
+  "as_of": "2009-05-26",
+  "question": "Nếu tôi kết hôn với người dưới 18 tuổi thì bị xử lý như thế nào? ",
+  "gold_ids": [
+   "HNGD2000|Dieu8|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "HNGD2000",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ điều kiện tuổi tối thiểu để kết hôn, nên không thể xác định cụ thể hình thức xử lý"
+  }
+ },
+ {
+  "qid": "EXT390054",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi có một bản án từ toà án nước ngoài, tôi có thể làm gì để yêu cầu công nhận và thi hành tại Việt Nam? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu362|Khoan3"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật chỉ nêu điều kiện không được công nhận, không hướng dẫn thủ tục yêu cầu công nhận và thi hành"
+  }
+ },
+ {
+  "qid": "EXT390063",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi và đối phương đã thỏa thuận và đồng ý rút đơn kiện, tôi có cần làm thủ tục gì thêm không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu5|Khoan2"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Đoạn luật không nêu rõ thủ tục cụ thể cần thực hiện khi rút đơn kiện, chỉ đề cập đến quyền tự nguyện của đương sự."
+  }
+ },
+ {
+  "qid": "EXT390065",
+  "as_of": "2012-07-01",
+  "question": "Nếu tòa án áp dụng sai biện pháp khẩn cấp tạm thời và gây thiệt hại cho tôi, tôi có quyền được bồi thường theo luật định không? (Điều 235 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu101|Khoan2|Diema"
+  ],
+  "hint": "extension3 scale-up cohort (weak gold, disclosed)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "flagged",
+  "rejection": {
+   "audit1": "partial",
+   "audit14": "partial",
+   "reason": "Luật chỉ quy định bồi thường trong trường hợp cụ thể (toà án tự áp dụng), chưa nêu rõ quyền bồi thường chung khi áp dụng sai."
+  }
+ }
+]

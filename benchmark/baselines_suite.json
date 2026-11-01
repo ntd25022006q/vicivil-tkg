@@ -1,0 +1,8285 @@
+{
+ "protocol": "strict gold-chunk-id matching; BM25(k1=1.2,b=0.75) + dense(768d) + RRF k=60; TCR = validity-window filter",
+ "embedder": "embeddinggemma:300m via ollama",
+ "cohorts": {
+  "core281": {
+   "n": 281,
+   "bm25": {
+    "hit_at_k": {
+     "1": 0.331,
+     "3": 0.5658,
+     "5": 0.6441,
+     "10": 0.7402
+    },
+    "mrr": 0.4718
+   },
+   "dense": {
+    "hit_at_k": {
+     "1": 0.3559,
+     "3": 0.5801,
+     "5": 0.6655,
+     "10": 0.7722
+    },
+    "mrr": 0.4946
+   },
+   "hybrid": {
+    "hit_at_k": {
+     "1": 0.3986,
+     "3": 0.6512,
+     "5": 0.7331,
+     "10": 0.8114
+    },
+    "mrr": 0.5456
+   },
+   "hybrid_tcr": {
+    "hit_at_k": {
+     "1": 0.5374,
+     "3": 0.7402,
+     "5": 0.8114,
+     "10": 0.879
+    },
+    "mrr": 0.6596
+   },
+   "wilcoxon": {
+    "hybrid_tcr_vs_hybrid": {
+     "stat": 0.0,
+     "p": 8.498353974250157e-23,
+     "n_pairs": 128
+    },
+    "dense_vs_bm25": {
+     "stat": 8936.5,
+     "p": 0.25743242874525574,
+     "n_pairs": 198
+    },
+    "hybrid_vs_dense": {
+     "stat": 5123.5,
+     "p": 0.00018220342345569364,
+     "n_pairs": 174
+    },
+    "hybrid_vs_bm25": {
+     "stat": 4212.5,
+     "p": 7.916479811960203e-08,
+     "n_pairs": 177
+    }
+   },
+   "tcr_stratified": {
+    "verified": {
+     "n": 229,
+     "hit_at_k": {
+      "1": 0.5808,
+      "3": 0.7598,
+      "5": 0.821,
+      "10": 0.8952
+     },
+     "mrr": 0.6909
+    },
+    "regolded": {
+     "n": 22,
+     "hit_at_k": {
+      "1": 0.2727,
+      "3": 0.7727,
+      "5": 0.8636,
+      "10": 0.9091
+     },
+     "mrr": 0.5323
+    }
+   }
+  },
+  "ext1": {
+   "n": 106,
+   "bm25": {
+    "hit_at_k": {
+     "1": 0.4623,
+     "3": 0.8113,
+     "5": 0.8774,
+     "10": 0.9245
+    },
+    "mrr": 0.6454
+   },
+   "dense": {
+    "hit_at_k": {
+     "1": 0.4528,
+     "3": 0.7358,
+     "5": 0.8396,
+     "10": 0.8962
+    },
+    "mrr": 0.6136
+   },
+   "hybrid": {
+    "hit_at_k": {
+     "1": 0.5094,
+     "3": 0.8113,
+     "5": 0.9057,
+     "10": 0.9434
+    },
+    "mrr": 0.6765
+   },
+   "hybrid_tcr": {
+    "hit_at_k": {
+     "1": 0.6604,
+     "3": 0.8774,
+     "5": 0.9245,
+     "10": 0.9623
+    },
+    "mrr": 0.7749
+   },
+   "wilcoxon": {
+    "hybrid_tcr_vs_hybrid": {
+     "stat": 0.0,
+     "p": 2.08538981592678e-06,
+     "n_pairs": 29
+    },
+    "dense_vs_bm25": {
+     "stat": 858.0,
+     "p": 0.4044261295439726,
+     "n_pairs": 62
+    },
+    "hybrid_vs_dense": {
+     "stat": 326.5,
+     "p": 0.007241063882895777,
+     "n_pairs": 48
+    },
+    "hybrid_vs_bm25": {
+     "stat": 459.5,
+     "p": 0.18451428478268816,
+     "n_pairs": 48
+    }
+   },
+   "tcr_stratified": {
+    "verified": {
+     "n": 101,
+     "hit_at_k": {
+      "1": 0.6832,
+      "3": 0.901,
+      "5": 0.9307,
+      "10": 0.9604
+     },
+     "mrr": 0.7946
+    },
+    "regolded": {
+     "n": 5,
+     "hit_at_k": {
+      "1": 0.2,
+      "3": 0.4,
+      "5": 0.8,
+      "10": 1.0
+     },
+     "mrr": 0.3767
+    }
+   }
+  },
+  "ext2": {
+   "n": 64,
+   "bm25": {
+    "hit_at_k": {
+     "1": 0.3438,
+     "3": 0.625,
+     "5": 0.6719,
+     "10": 0.7031
+    },
+    "mrr": 0.4945
+   },
+   "dense": {
+    "hit_at_k": {
+     "1": 0.3594,
+     "3": 0.6094,
+     "5": 0.7656,
+     "10": 0.7969
+    },
+    "mrr": 0.5187
+   },
+   "hybrid": {
+    "hit_at_k": {
+     "1": 0.3594,
+     "3": 0.5781,
+     "5": 0.6875,
+     "10": 0.7969
+    },
+    "mrr": 0.5166
+   },
+   "hybrid_tcr": {
+    "hit_at_k": {
+     "1": 0.5312,
+     "3": 0.75,
+     "5": 0.7812,
+     "10": 0.875
+    },
+    "mrr": 0.6484
+   },
+   "wilcoxon": {
+    "hybrid_tcr_vs_hybrid": {
+     "stat": 72.0,
+     "p": 3.984270452578579e-05,
+     "n_pairs": 36
+    },
+    "dense_vs_bm25": {
+     "stat": 429.0,
+     "p": 0.7783309427898112,
+     "n_pairs": 42
+    },
+    "hybrid_vs_dense": {
+     "stat": 346.5,
+     "p": 0.5436903241870943,
+     "n_pairs": 39
+    },
+    "hybrid_vs_bm25": {
+     "stat": 240.0,
+     "p": 0.21912111366832754,
+     "n_pairs": 35
+    }
+   },
+   "tcr_stratified": {
+    "verified": {
+     "n": 53,
+     "hit_at_k": {
+      "1": 0.6226,
+      "3": 0.8302,
+      "5": 0.8679,
+      "10": 0.9245
+     },
+     "mrr": 0.7348
+    },
+    "regolded": {
+     "n": 11,
+     "hit_at_k": {
+      "1": 0.0909,
+      "3": 0.3636,
+      "5": 0.3636,
+      "10": 0.6364
+     },
+     "mrr": 0.2326
+    }
+   }
+  },
+  "ext3": {
+   "n": 265,
+   "bm25": {
+    "hit_at_k": {
+     "1": 0.4528,
+     "3": 0.6642,
+     "5": 0.7434,
+     "10": 0.8226
+    },
+    "mrr": 0.5768
+   },
+   "dense": {
+    "hit_at_k": {
+     "1": 0.4717,
+     "3": 0.6981,
+     "5": 0.7925,
+     "10": 0.8415
+    },
+    "mrr": 0.6061
+   },
+   "hybrid": {
+    "hit_at_k": {
+     "1": 0.4943,
+     "3": 0.7321,
+     "5": 0.8189,
+     "10": 0.8755
+    },
+    "mrr": 0.6301
+   },
+   "hybrid_tcr": {
+    "hit_at_k": {
+     "1": 0.6151,
+     "3": 0.8075,
+     "5": 0.8566,
+     "10": 0.9057
+    },
+    "mrr": 0.724
+   },
+   "wilcoxon": {
+    "hybrid_tcr_vs_hybrid": {
+     "stat": 28.0,
+     "p": 5.696906002370601e-17,
+     "n_pairs": 95
+    },
+    "dense_vs_bm25": {
+     "stat": 5631.5,
+     "p": 0.1680896612850229,
+     "n_pairs": 160
+    },
+    "hybrid_vs_dense": {
+     "stat": 3679.0,
+     "p": 0.10652763148740078,
+     "n_pairs": 132
+    },
+    "hybrid_vs_bm25": {
+     "stat": 2764.0,
+     "p": 9.242586712930183e-05,
+     "n_pairs": 134
+    }
+   },
+   "tcr_stratified": {
+    "verified": {
+     "n": 254,
+     "hit_at_k": {
+      "1": 0.6339,
+      "3": 0.8268,
+      "5": 0.874,
+      "10": 0.9134
+     },
+     "mrr": 0.7415
+    },
+    "regolded": {
+     "n": 11,
+     "hit_at_k": {
+      "1": 0.1818,
+      "3": 0.3636,
+      "5": 0.4545,
+      "10": 0.7273
+     },
+     "mrr": 0.3193
+    }
+   }
+  },
+  "ALL": {
+   "n": 716,
+   "bm25": {
+    "hit_at_k": {
+     "1": 0.3966,
+     "3": 0.6439,
+     "5": 0.7179,
+     "10": 0.7947
+    },
+    "mrr": 0.5384
+   },
+   "dense": {
+    "hit_at_k": {
+     "1": 0.4134,
+     "3": 0.6494,
+     "5": 0.7472,
+     "10": 0.8184
+    },
+    "mrr": 0.5557
+   },
+   "hybrid": {
+    "hit_at_k": {
+     "1": 0.4469,
+     "3": 0.6983,
+     "5": 0.7863,
+     "10": 0.8534
+    },
+    "mrr": 0.5937
+   },
+   "hybrid_tcr": {
+    "hit_at_k": {
+     "1": 0.5838,
+     "3": 0.7863,
+     "5": 0.8422,
+     "10": 0.9008
+    },
+    "mrr": 0.6995
+   },
+   "wilcoxon": {
+    "hybrid_tcr_vs_hybrid": {
+     "stat": 675.0,
+     "p": 4.059723440976402e-46,
+     "n_pairs": 288
+    },
+    "dense_vs_bm25": {
+     "stat": 49651.0,
+     "p": 0.18245912346366688,
+     "n_pairs": 462
+    },
+    "hybrid_vs_dense": {
+     "stat": 28366.0,
+     "p": 4.353284642787311e-06,
+     "n_pairs": 393
+    },
+    "hybrid_vs_bm25": {
+     "stat": 23861.5,
+     "p": 2.7843759701499294e-11,
+     "n_pairs": 394
+    }
+   }
+  }
+ },
+ "per_q": {
+  "core281": [
+   {
+    "qid": "CIV001",
+    "as_of": "2024-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "CIV002",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 43,
+     "hybrid": 12,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "CIV003",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "CIV004",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "CIV005",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 113,
+     "hybrid": 207,
+     "hybrid_tcr": 125
+    }
+   },
+   {
+    "qid": "CIV006",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 8,
+     "dense": 4,
+     "hybrid": 4,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "CIV007",
+    "as_of": "2024-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 176,
+     "dense": 15,
+     "hybrid": 34,
+     "hybrid_tcr": 19
+    }
+   },
+   {
+    "qid": "CIV008",
+    "as_of": "2016-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 7,
+     "dense": 14,
+     "hybrid": 6,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "CIV009",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 7,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "CIV010",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 11,
+     "dense": 130,
+     "hybrid": 22,
+     "hybrid_tcr": 10
+    }
+   },
+   {
+    "qid": "CIV011",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 7,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "CIV012",
+    "as_of": "2000-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 3,
+     "dense": null,
+     "hybrid": 18,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "GEN70985",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 17,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN62121",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN45559",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 40,
+     "dense": 27,
+     "hybrid": 23,
+     "hybrid_tcr": 12
+    }
+   },
+   {
+    "qid": "GEN85381",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN28924",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 18,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN69550",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN67567",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 9,
+     "dense": 1,
+     "hybrid": 5,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "GEN53214",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 8,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN25779",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN89703",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN90443",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN14471",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 35,
+     "dense": 1,
+     "hybrid": 7,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "GEN51489",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN79344",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 8,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN53978",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN72269",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 24,
+     "dense": 20,
+     "hybrid": 13,
+     "hybrid_tcr": 9
+    }
+   },
+   {
+    "qid": "GEN13629",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN96905",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 10,
+     "dense": 17,
+     "hybrid": 5,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "GEN15475",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 125,
+     "hybrid": 224,
+     "hybrid_tcr": 133
+    }
+   },
+   {
+    "qid": "GEN49584",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN34985",
+    "as_of": "2024-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 20,
+     "dense": 1,
+     "hybrid": 6,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "GEN56131",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN91745",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN18358",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 8,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "GEN70295",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN82789",
+    "as_of": "2024-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 9,
+     "dense": 2,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN89661",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN90903",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN44743",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN79721",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN95535",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 7,
+     "dense": 3,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN73628",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN30174",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 40,
+     "dense": null,
+     "hybrid": 108,
+     "hybrid_tcr": 24
+    }
+   },
+   {
+    "qid": "GEN62886",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN71934",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 15,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN38275",
+    "as_of": "2010-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN13335",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 12,
+     "hybrid": 4,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN59266",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN66436",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 4,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN67544",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN95147",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 17,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN54013",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN57254",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 5,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN67362",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": null,
+     "hybrid": 12,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN10962",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN97280",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 5,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN83997",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN86204",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 29,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN34245",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN46743",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN18692",
+    "as_of": "2010-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 32,
+     "dense": 18,
+     "hybrid": 12,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "GEN87629",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 5,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN95321",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 6,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN52565",
+    "as_of": "2010-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": null,
+     "dense": null,
+     "hybrid": null,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "GEN48222",
+    "as_of": "2010-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 49,
+     "dense": 7,
+     "hybrid": 6,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN19616",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 14,
+     "hybrid": 7,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "GEN79204",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 2,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN28619",
+    "as_of": "2010-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 15,
+     "dense": 5,
+     "hybrid": 4,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN40699",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 60,
+     "dense": 1,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "GEN25840",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN86368",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 129,
+     "dense": 56,
+     "hybrid": 29,
+     "hybrid_tcr": 8
+    }
+   },
+   {
+    "qid": "GEN93786",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN29504",
+    "as_of": "2010-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 6,
+     "dense": 10,
+     "hybrid": 5,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN85482",
+    "as_of": "2010-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 4,
+     "dense": 7,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN64020",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 13,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "GEN59549",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN79482",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN90810",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 5,
+     "hybrid": 4,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN67578",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 12,
+     "dense": 45,
+     "hybrid": 8,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "GEN57365",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN27762",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 15,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN42951",
+    "as_of": "2024-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 23,
+     "dense": 150,
+     "hybrid": 34,
+     "hybrid_tcr": 21
+    }
+   },
+   {
+    "qid": "GEN33568",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 3,
+     "hybrid": 26,
+     "hybrid_tcr": 11
+    }
+   },
+   {
+    "qid": "GEN50764",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN42748",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN95410",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 6,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN56666",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 179,
+     "dense": 6,
+     "hybrid": 32,
+     "hybrid_tcr": 18
+    }
+   },
+   {
+    "qid": "GEN57395",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN35982",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 42,
+     "hybrid": 8,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "GEN82529",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 7,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN87544",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 21,
+     "dense": 33,
+     "hybrid": 12,
+     "hybrid_tcr": 7
+    }
+   },
+   {
+    "qid": "GEN37968",
+    "as_of": "2024-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 2,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN54339",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN52098",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN72530",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 8,
+     "dense": 13,
+     "hybrid": 10,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "GEN88877",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 15,
+     "dense": 16,
+     "hybrid": 7,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "GEN39029",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN53768",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN69613",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 8,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN63901",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN52760",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN99286",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN29347",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 146,
+     "dense": 196,
+     "hybrid": 117,
+     "hybrid_tcr": 37
+    }
+   },
+   {
+    "qid": "GEN83381",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": null,
+     "hybrid": null,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "GEN69784",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN31043",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN70440",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN26434",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 52,
+     "dense": 1,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN88524",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 11,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN78202",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN37861",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 184,
+     "dense": 3,
+     "hybrid": 13,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "GEN21948",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 5,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN97250",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN66553",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 140,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN56474",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 138,
+     "dense": 1,
+     "hybrid": 23,
+     "hybrid_tcr": 9
+    }
+   },
+   {
+    "qid": "GEN78263",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 39,
+     "dense": 3,
+     "hybrid": 18,
+     "hybrid_tcr": 7
+    }
+   },
+   {
+    "qid": "GEN76727",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN71410",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 11,
+     "hybrid": 4,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "GEN97275",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 5,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN71796",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 144,
+     "hybrid": 253,
+     "hybrid_tcr": 123
+    }
+   },
+   {
+    "qid": "GEN95669",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 147,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "GEN45337",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 13,
+     "hybrid": 5,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN25918",
+    "as_of": "2024-06-01",
+    "gold_tier": "author-verified",
+    "first": {
+     "bm25": 9,
+     "dense": 3,
+     "hybrid": 6,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "GEN48268",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN94813",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 105,
+     "dense": 15,
+     "hybrid": 18,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "GEN16359",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN85560",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN33898",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN52151",
+    "as_of": "2010-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 9,
+     "dense": 2,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN58372",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 22,
+     "dense": 34,
+     "hybrid": 9,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN77738",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 53,
+     "dense": 26,
+     "hybrid": 37,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "GEN71065",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 49,
+     "dense": 41,
+     "hybrid": 18,
+     "hybrid_tcr": 10
+    }
+   },
+   {
+    "qid": "GEN45293",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 7,
+     "dense": 11,
+     "hybrid": 6,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "GEN30064",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN20094",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 56,
+     "hybrid": 10,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "GEN61247",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN75189",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 65,
+     "dense": 10,
+     "hybrid": 17,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "GEN17239",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 149,
+     "dense": 4,
+     "hybrid": 21,
+     "hybrid_tcr": 11
+    }
+   },
+   {
+    "qid": "GEN71067",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 3,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "GEN91088",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 7,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN56252",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 17,
+     "hybrid": 9,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "GEN99167",
+    "as_of": "2010-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": null,
+     "dense": null,
+     "hybrid": null,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "GEN47787",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN84647",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 157,
+     "dense": 5,
+     "hybrid": 10,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "GEN60238",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 5,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN95837",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN52611",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 23,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN98662",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN51429",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 4,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN31914",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN81336",
+    "as_of": "2024-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 23,
+     "dense": 8,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN59944",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN95074",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN81461",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 8,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "GEN48308",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 10,
+     "dense": 21,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN56550",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 4,
+     "hybrid": 5,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "GEN91337",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 14,
+     "hybrid": 53,
+     "hybrid_tcr": 29
+    }
+   },
+   {
+    "qid": "GEN11904",
+    "as_of": "2010-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 69,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN90604",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN75894",
+    "as_of": "2024-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 121,
+     "dense": 6,
+     "hybrid": 20,
+     "hybrid_tcr": 9
+    }
+   },
+   {
+    "qid": "GEN46407",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 11,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN11923",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN44390",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN39298",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN55424",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": null,
+     "hybrid": null,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "GEN94343",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN53892",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN11580",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 22,
+     "dense": 6,
+     "hybrid": 10,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "GEN39897",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN93396",
+    "as_of": "2010-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": null,
+     "hybrid": null,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "GEN74272",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "GEN45218",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW69151",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW21840",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "NEW64501",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 24,
+     "hybrid": 66,
+     "hybrid_tcr": 59
+    }
+   },
+   {
+    "qid": "NEW14208",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW83864",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW90326",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 8,
+     "dense": 2,
+     "hybrid": 5,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "NEW57952",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW83995",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW28534",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 74,
+     "dense": null,
+     "hybrid": 152,
+     "hybrid_tcr": 63
+    }
+   },
+   {
+    "qid": "NEW87268",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 69,
+     "dense": null,
+     "hybrid": 131,
+     "hybrid_tcr": 58
+    }
+   },
+   {
+    "qid": "NEW53084",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 15,
+     "hybrid": 37,
+     "hybrid_tcr": 17
+    }
+   },
+   {
+    "qid": "NEW21414",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 58,
+     "dense": 5,
+     "hybrid": 10,
+     "hybrid_tcr": 7
+    }
+   },
+   {
+    "qid": "NEW91442",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW84407",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 43,
+     "hybrid": 10,
+     "hybrid_tcr": 10
+    }
+   },
+   {
+    "qid": "NEW45231",
+    "as_of": "2026-07-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 3,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "NEW98861",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "NEW17468",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 5,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "NEW70231",
+    "as_of": "2025-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW15696",
+    "as_of": "2025-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 10,
+     "dense": 10,
+     "hybrid": 11,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "NEW75514",
+    "as_of": "2025-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 68,
+     "dense": 1,
+     "hybrid": 5,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "NEW71666",
+    "as_of": "2025-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": null,
+     "hybrid": 31,
+     "hybrid_tcr": 15
+    }
+   },
+   {
+    "qid": "NEW20421",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": null,
+     "dense": 2,
+     "hybrid": 28,
+     "hybrid_tcr": 14
+    }
+   },
+   {
+    "qid": "NEW82981",
+    "as_of": "2024-06-01",
+    "gold_tier": "author-verified",
+    "first": {
+     "bm25": 7,
+     "dense": 5,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW93215",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW50275",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW46465",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW75006",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW38972",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW39093",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW61903",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 13,
+     "dense": 6,
+     "hybrid": 6,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "NEW28139",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW23120",
+    "as_of": "2025-09-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "NEW91253",
+    "as_of": "2025-09-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 126,
+     "dense": 58,
+     "hybrid": 39,
+     "hybrid_tcr": 26
+    }
+   },
+   {
+    "qid": "NEW22714",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW17446",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 38,
+     "dense": 85,
+     "hybrid": 46,
+     "hybrid_tcr": 44
+    }
+   },
+   {
+    "qid": "NEW35143",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW57186",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 63,
+     "dense": 4,
+     "hybrid": 18,
+     "hybrid_tcr": 17
+    }
+   },
+   {
+    "qid": "NEW59911",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "NEW26614",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 8,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW95746",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "NEW99436",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW75990",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW21932",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW96729",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW49913",
+    "as_of": "2001-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "NEW90253",
+    "as_of": "2001-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 39,
+     "dense": 39,
+     "hybrid": 37,
+     "hybrid_tcr": 8
+    }
+   },
+   {
+    "qid": "NEW53217",
+    "as_of": "2001-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 11,
+     "dense": 6,
+     "hybrid": 7,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "TOP25047",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 57,
+     "dense": 8,
+     "hybrid": 11,
+     "hybrid_tcr": 11
+    }
+   },
+   {
+    "qid": "TOP52869",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP33735",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP65619",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP28886",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 12,
+     "dense": 8,
+     "hybrid": 5,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "TOP14097",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP89133",
+    "as_of": "2024-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP42625",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 59,
+     "hybrid": 13,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "TOP61006",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 36,
+     "dense": 178,
+     "hybrid": 57,
+     "hybrid_tcr": 43
+    }
+   },
+   {
+    "qid": "TOP68536",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 3,
+     "hybrid": 43,
+     "hybrid_tcr": 18
+    }
+   },
+   {
+    "qid": "TOP95375",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP77430",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 10,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP89044",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 10,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "TOP89101",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 14,
+     "dense": 1,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "TOP26509",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP27031",
+    "as_of": "2026-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP92479",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP86087",
+    "as_of": "2026-07-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 1,
+     "dense": 13,
+     "hybrid": 5,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "TOP40623",
+    "as_of": "2025-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP50371",
+    "as_of": "2025-02-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 1,
+     "dense": 6,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "TOP23504",
+    "as_of": "2025-02-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 5,
+     "dense": 2,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP53044",
+    "as_of": "2025-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 12,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "TOP76535",
+    "as_of": "2025-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP67853",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP81485",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP25718",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP58739",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 6,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP33026",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 10,
+     "dense": 2,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP46606",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 7,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP18069",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "TOP15416",
+    "as_of": "2024-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 5,
+     "dense": 32,
+     "hybrid": 12,
+     "hybrid_tcr": 12
+    }
+   },
+   {
+    "qid": "TOP10527",
+    "as_of": "2024-06-01",
+    "gold_tier": "author-verified",
+    "first": {
+     "bm25": null,
+     "dense": 4,
+     "hybrid": 43,
+     "hybrid_tcr": 36
+    }
+   },
+   {
+    "qid": "TOP81552",
+    "as_of": "2026-07-01",
+    "gold_tier": "author-verified",
+    "first": {
+     "bm25": 3,
+     "dense": 8,
+     "hybrid": 4,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "TOP27902",
+    "as_of": "2026-07-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP25608",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP84201",
+    "as_of": "2025-09-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "TOP58788",
+    "as_of": "2025-09-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 9,
+     "dense": 6,
+     "hybrid": 7,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "TOP84342",
+    "as_of": "2025-09-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 18,
+     "dense": 4,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "TOP27523",
+    "as_of": "2025-09-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 6,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "TOP35966",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 189,
+     "dense": 132,
+     "hybrid": 119,
+     "hybrid_tcr": 78
+    }
+   },
+   {
+    "qid": "TOP55876",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP28658",
+    "as_of": "2024-06-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 41,
+     "dense": 3,
+     "hybrid": 5,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "TOP43156",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP97603",
+    "as_of": "2024-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP62589",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP69002",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP55435",
+    "as_of": "2026-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP10475",
+    "as_of": "2026-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 10,
+     "dense": 9,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "TOP19744",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 31,
+     "dense": 19,
+     "hybrid": 14,
+     "hybrid_tcr": 13
+    }
+   },
+   {
+    "qid": "TOP41254",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 44,
+     "dense": 13,
+     "hybrid": 23,
+     "hybrid_tcr": 23
+    }
+   },
+   {
+    "qid": "TOP45624",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP68085",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "TOP35023",
+    "as_of": "2026-07-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP36790",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP60751",
+    "as_of": "2026-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP91913",
+    "as_of": "2008-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP44737",
+    "as_of": "2008-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP59991",
+    "as_of": "2008-06-01",
+    "gold_tier": "flagged",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP89237",
+    "as_of": "2008-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "TOP25307",
+    "as_of": "2008-06-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 30,
+     "dense": 7,
+     "hybrid": 10,
+     "hybrid_tcr": 4
+    }
+   }
+  ],
+  "ext1": [
+   {
+    "qid": "EXT10014",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10017",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10020",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 21,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10021",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10025",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 27,
+     "dense": 43,
+     "hybrid": 12,
+     "hybrid_tcr": 9
+    }
+   },
+   {
+    "qid": "EXT10027",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 5,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10030",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10031",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10034",
+    "as_of": "2026-02-15",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 67,
+     "dense": 1,
+     "hybrid": 10,
+     "hybrid_tcr": 10
+    }
+   },
+   {
+    "qid": "EXT10035",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10036",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 17,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10038",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 5,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT10040",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 127,
+     "hybrid": 19,
+     "hybrid_tcr": 17
+    }
+   },
+   {
+    "qid": "EXT10045",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10046",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10048",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT10050",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10054",
+    "as_of": "2017-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10057",
+    "as_of": "2026-06-30",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10059",
+    "as_of": "2026-06-30",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 49,
+     "hybrid": 17,
+     "hybrid_tcr": 12
+    }
+   },
+   {
+    "qid": "EXT10066",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10070",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10074",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10075",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10079",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10081",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10082",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10084",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10086",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10088",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10093",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10096",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10098",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10099",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 10,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT10104",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10105",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 15,
+     "dense": 2,
+     "hybrid": 4,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT10111",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10115",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10118",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 3,
+     "hybrid": 5,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "EXT10119",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10124",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10126",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 4,
+     "hybrid": 4,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10131",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 4,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10132",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 10,
+     "dense": 9,
+     "hybrid": 9,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10135",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 5,
+     "hybrid": 4,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10136",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": null,
+     "hybrid": null,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "EXT10138",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10141",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10142",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 11,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10143",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10144",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 4,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10145",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10150",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10155",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10157",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10159",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10160",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10161",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 22,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT10162",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 8,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10164",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10166",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10167",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10168",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10169",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10172",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 7,
+     "dense": 8,
+     "hybrid": 6,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "EXT10175",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10176",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10177",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10180",
+    "as_of": "2026-02-15",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10186",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 16,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10190",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10192",
+    "as_of": "2026-02-15",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 3,
+     "dense": 2,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT10198",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10201",
+    "as_of": "2017-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10203",
+    "as_of": "2017-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10206",
+    "as_of": "2017-01-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 20,
+     "dense": 6,
+     "hybrid": 5,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "EXT10211",
+    "as_of": "2026-06-30",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10219",
+    "as_of": "2012-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10221",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 5,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT10222",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10223",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10230",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 162,
+     "dense": 47,
+     "hybrid": 59,
+     "hybrid_tcr": 49
+    }
+   },
+   {
+    "qid": "EXT10232",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10234",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10236",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10239",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10240",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 5,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10241",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10242",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 18,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10245",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10250",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10252",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10253",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10255",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10256",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10258",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10261",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10263",
+    "as_of": "2019-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 4,
+     "dense": 3,
+     "hybrid": 4,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT10264",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10267",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 19,
+     "dense": 1,
+     "hybrid": 6,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "EXT10270",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT10271",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10274",
+    "as_of": "2009-05-26",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 112,
+     "dense": 7,
+     "hybrid": 21,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "EXT10277",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10280",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT10281",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 3,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   }
+  ],
+  "ext2": [
+   {
+    "qid": "EXT20002",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20004",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 155,
+     "hybrid": 15,
+     "hybrid_tcr": 9
+    }
+   },
+   {
+    "qid": "EXT20005",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20008",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20009",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20010",
+    "as_of": "2012-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 56,
+     "dense": 2,
+     "hybrid": 17,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT20014",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20019",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 44,
+     "dense": 16,
+     "hybrid": 22,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "EXT20023",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 18,
+     "hybrid": 7,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT20025",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT20027",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20028",
+    "as_of": "2012-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 46,
+     "dense": 4,
+     "hybrid": 14,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "EXT20029",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": null,
+     "hybrid": null,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "EXT20033",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20039",
+    "as_of": "2012-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 27,
+     "dense": 5,
+     "hybrid": 17,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "EXT20041",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 3,
+     "hybrid": 4,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20043",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 16,
+     "dense": 7,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20045",
+    "as_of": "2012-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 194,
+     "dense": 1,
+     "hybrid": 12,
+     "hybrid_tcr": 8
+    }
+   },
+   {
+    "qid": "EXT20046",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 81,
+     "dense": 1,
+     "hybrid": 7,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20049",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 5,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20050",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT20051",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20054",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20057",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20060",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 61,
+     "dense": 66,
+     "hybrid": 36,
+     "hybrid_tcr": 11
+    }
+   },
+   {
+    "qid": "EXT20062",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20065",
+    "as_of": "2012-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 26,
+     "dense": 4,
+     "hybrid": 6,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT20066",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 5,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT20069",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20070",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 15,
+     "dense": 44,
+     "hybrid": 12,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT20073",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20074",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20075",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 56,
+     "dense": 31,
+     "hybrid": 10,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT20076",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20077",
+    "as_of": "2012-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 123,
+     "dense": 2,
+     "hybrid": 23,
+     "hybrid_tcr": 10
+    }
+   },
+   {
+    "qid": "EXT20078",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 14,
+     "hybrid": 5,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT20079",
+    "as_of": "2012-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": null,
+     "dense": 5,
+     "hybrid": 24,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "EXT20081",
+    "as_of": "2012-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": null,
+     "dense": 2,
+     "hybrid": 6,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT20087",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20089",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20090",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 5,
+     "hybrid": 4,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20091",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20093",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 18,
+     "dense": 9,
+     "hybrid": 5,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT20094",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 29,
+     "dense": 1,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT20095",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 106,
+     "hybrid": 19,
+     "hybrid_tcr": 18
+    }
+   },
+   {
+    "qid": "EXT20096",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20107",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 22,
+     "dense": 189,
+     "hybrid": 43,
+     "hybrid_tcr": 24
+    }
+   },
+   {
+    "qid": "EXT20113",
+    "as_of": "2012-02-06",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 5,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "EXT20118",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 11,
+     "hybrid": 5,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT20119",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20122",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20123",
+    "as_of": "2012-02-06",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "EXT20124",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 55,
+     "hybrid": 7,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT20126",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 48,
+     "hybrid": 9,
+     "hybrid_tcr": 7
+    }
+   },
+   {
+    "qid": "EXT20128",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20134",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20139",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT20141",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20142",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20144",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20148",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT20149",
+    "as_of": "2016-02-15",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 12,
+     "dense": 5,
+     "hybrid": 4,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20150",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT20153",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   }
+  ],
+  "ext3": [
+   {
+    "qid": "EXT330001",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 47,
+     "dense": 3,
+     "hybrid": 6,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT330003",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330005",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330008",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390001",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330013",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 16,
+     "dense": 1,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330015",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330018",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330020",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330021",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330026",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330028",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 88,
+     "dense": 52,
+     "hybrid": 40,
+     "hybrid_tcr": 21
+    }
+   },
+   {
+    "qid": "EXT330029",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 3,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330031",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330033",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 1,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330035",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390003",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330036",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390004",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330038",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330039",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 7,
+     "dense": 6,
+     "hybrid": 4,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT330041",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 7,
+     "dense": 2,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330042",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330049",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390005",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 25,
+     "dense": 4,
+     "hybrid": 7,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330052",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330055",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330056",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330057",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 21,
+     "dense": 14,
+     "hybrid": 6,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330058",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330059",
+    "as_of": "2018-01-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": null,
+     "dense": 5,
+     "hybrid": 18,
+     "hybrid_tcr": 9
+    }
+   },
+   {
+    "qid": "EXT330060",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 1,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330062",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390006",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330066",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330067",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 6,
+     "hybrid": 34,
+     "hybrid_tcr": 11
+    }
+   },
+   {
+    "qid": "EXT330068",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 32,
+     "dense": 117,
+     "hybrid": 30,
+     "hybrid_tcr": 15
+    }
+   },
+   {
+    "qid": "EXT330070",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 23,
+     "dense": 1,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330074",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 11,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330076",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 9,
+     "dense": 5,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330078",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330079",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330080",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 111,
+     "dense": 68,
+     "hybrid": 49,
+     "hybrid_tcr": 11
+    }
+   },
+   {
+    "qid": "EXT330082",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330084",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 49,
+     "hybrid": 109,
+     "hybrid_tcr": 26
+    }
+   },
+   {
+    "qid": "EXT330085",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 11,
+     "hybrid": 4,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330086",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330087",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 15,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330090",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330092",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330094",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 12,
+     "dense": 31,
+     "hybrid": 16,
+     "hybrid_tcr": 8
+    }
+   },
+   {
+    "qid": "EXT330097",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 38,
+     "dense": 3,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330100",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330105",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330107",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390008",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330109",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 5,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330110",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 3,
+     "hybrid": 4,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT330113",
+    "as_of": "2016-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": null,
+     "hybrid": null,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "EXT330125",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 13,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330126",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330130",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390010",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 5,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330131",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 12,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330133",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330137",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330138",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": null,
+     "hybrid": null,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "EXT330145",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330147",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330148",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330149",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330150",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330154",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330155",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330160",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330161",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330163",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 122,
+     "hybrid": 17,
+     "hybrid_tcr": 13
+    }
+   },
+   {
+    "qid": "EXT330164",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 14,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330169",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 19,
+     "hybrid": 5,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT330170",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330174",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 9,
+     "dense": 4,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT390011",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330175",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 8,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330179",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330183",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330184",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330185",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330186",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330187",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 173,
+     "hybrid": 24,
+     "hybrid_tcr": 21
+    }
+   },
+   {
+    "qid": "EXT330189",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330190",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330193",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330196",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330199",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330201",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 16,
+     "hybrid": 8,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT330202",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330203",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 9,
+     "dense": 20,
+     "hybrid": 6,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT390012",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330204",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 2,
+     "hybrid": 19,
+     "hybrid_tcr": 13
+    }
+   },
+   {
+    "qid": "EXT330207",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 84,
+     "hybrid": 26,
+     "hybrid_tcr": 18
+    }
+   },
+   {
+    "qid": "EXT330209",
+    "as_of": "2017-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 50,
+     "dense": 5,
+     "hybrid": 13,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "EXT330211",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 22,
+     "dense": 21,
+     "hybrid": 15,
+     "hybrid_tcr": 9
+    }
+   },
+   {
+    "qid": "EXT330213",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 61,
+     "dense": 13,
+     "hybrid": 8,
+     "hybrid_tcr": 7
+    }
+   },
+   {
+    "qid": "EXT330214",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330215",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 8,
+     "dense": 4,
+     "hybrid": 5,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT330217",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 2,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330218",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330220",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330226",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 4,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330227",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 19,
+     "dense": 78,
+     "hybrid": 26,
+     "hybrid_tcr": 26
+    }
+   },
+   {
+    "qid": "EXT330228",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 14,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330230",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 2,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330234",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330236",
+    "as_of": "2026-02-15",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 10,
+     "dense": 2,
+     "hybrid": 4,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT330239",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330243",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330244",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330245",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330246",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 192,
+     "hybrid": 18,
+     "hybrid_tcr": 18
+    }
+   },
+   {
+    "qid": "EXT330249",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330251",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390014",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330258",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330259",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330260",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330262",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390015",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330272",
+    "as_of": "2026-02-15",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT390016",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330280",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330283",
+    "as_of": "2026-02-15",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 156,
+     "dense": 5,
+     "hybrid": 21,
+     "hybrid_tcr": 21
+    }
+   },
+   {
+    "qid": "EXT330284",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 5,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330285",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 2,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330286",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330287",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330291",
+    "as_of": "2026-02-15",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 18,
+     "dense": 5,
+     "hybrid": 10,
+     "hybrid_tcr": 9
+    }
+   },
+   {
+    "qid": "EXT330292",
+    "as_of": "2016-12-31",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 8,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330293",
+    "as_of": "2016-12-31",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 10,
+     "hybrid": 5,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "EXT330301",
+    "as_of": "2016-12-31",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330306",
+    "as_of": "2016-12-31",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 32,
+     "dense": 2,
+     "hybrid": 5,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330309",
+    "as_of": "2026-06-30",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330310",
+    "as_of": "2026-06-30",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330316",
+    "as_of": "2026-06-30",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 15,
+     "dense": 3,
+     "hybrid": 6,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT330318",
+    "as_of": "2026-06-30",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330320",
+    "as_of": "2026-06-30",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 4,
+     "hybrid": 5,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "EXT330325",
+    "as_of": "2026-06-30",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330327",
+    "as_of": "2012-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 16,
+     "hybrid": 54,
+     "hybrid_tcr": 18
+    }
+   },
+   {
+    "qid": "EXT330332",
+    "as_of": "2012-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330337",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330338",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330343",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330344",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390020",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330348",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330353",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330354",
+    "as_of": "2026-02-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 24,
+     "dense": 5,
+     "hybrid": 10,
+     "hybrid_tcr": 10
+    }
+   },
+   {
+    "qid": "EXT330355",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330358",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 8,
+     "dense": 42,
+     "hybrid": 18,
+     "hybrid_tcr": 16
+    }
+   },
+   {
+    "qid": "EXT330359",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330360",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330363",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330367",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 23,
+     "dense": null,
+     "hybrid": 87,
+     "hybrid_tcr": 87
+    }
+   },
+   {
+    "qid": "EXT330371",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 7,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330372",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330373",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330377",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330378",
+    "as_of": "2026-02-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330380",
+    "as_of": "2026-02-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330381",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330385",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 2,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330386",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330391",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330392",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 14,
+     "dense": 2,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330394",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 13,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330395",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 21,
+     "dense": 7,
+     "hybrid": 6,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330396",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330397",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330400",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 34,
+     "hybrid": 11,
+     "hybrid_tcr": 7
+    }
+   },
+   {
+    "qid": "EXT330402",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 5,
+     "hybrid": 5,
+     "hybrid_tcr": 4
+    }
+   },
+   {
+    "qid": "EXT330404",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 17,
+     "dense": 13,
+     "hybrid": 12,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "EXT330405",
+    "as_of": "2010-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330407",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 7,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330408",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330409",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 7,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330412",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330414",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330415",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330416",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 6,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330417",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330418",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330420",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330421",
+    "as_of": "2010-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330422",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330423",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330424",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330425",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330427",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 176,
+     "dense": 34,
+     "hybrid": 47,
+     "hybrid_tcr": 30
+    }
+   },
+   {
+    "qid": "EXT330428",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330431",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 20,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330432",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330436",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 45,
+     "dense": 1,
+     "hybrid": 10,
+     "hybrid_tcr": 9
+    }
+   },
+   {
+    "qid": "EXT330437",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330438",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330439",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330440",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 12,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330441",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330442",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390022",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330450",
+    "as_of": "2019-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330452",
+    "as_of": "2009-05-26",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330459",
+    "as_of": "2009-05-26",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 6,
+     "dense": 63,
+     "hybrid": 24,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "EXT330460",
+    "as_of": "2009-05-26",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 16,
+     "hybrid": 6,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330461",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 5,
+     "hybrid": 3,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330463",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330466",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330471",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330475",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 122,
+     "dense": 145,
+     "hybrid": 113,
+     "hybrid_tcr": 86
+    }
+   },
+   {
+    "qid": "EXT330476",
+    "as_of": "2026-07-02",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 28,
+     "dense": 32,
+     "hybrid": 24,
+     "hybrid_tcr": 19
+    }
+   },
+   {
+    "qid": "EXT330485",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390023",
+    "as_of": "2012-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": null,
+     "dense": 5,
+     "hybrid": 34,
+     "hybrid_tcr": 17
+    }
+   },
+   {
+    "qid": "EXT390024",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 70,
+     "hybrid": 4,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330492",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 13,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330498",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 5,
+     "dense": 15,
+     "hybrid": 6,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330505",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 9,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330509",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": null,
+     "hybrid": null,
+     "hybrid_tcr": null
+    }
+   },
+   {
+    "qid": "EXT330513",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 24,
+     "dense": 73,
+     "hybrid": 15,
+     "hybrid_tcr": 11
+    }
+   },
+   {
+    "qid": "EXT330515",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 30,
+     "hybrid": 62,
+     "hybrid_tcr": 22
+    }
+   },
+   {
+    "qid": "EXT330519",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330520",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330523",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330524",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": null,
+     "dense": 10,
+     "hybrid": 45,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "EXT330526",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 21,
+     "dense": 1,
+     "hybrid": 6,
+     "hybrid_tcr": 6
+    }
+   },
+   {
+    "qid": "EXT330529",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330530",
+    "as_of": "2012-07-01",
+    "gold_tier": "regolded",
+    "first": {
+     "bm25": 51,
+     "dense": 1,
+     "hybrid": 5,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT330532",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 43,
+     "dense": 6,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330534",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330535",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390028",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330541",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330544",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 6,
+     "hybrid": 4,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330545",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 6,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330547",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 3,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330549",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 3,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330551",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330554",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 157,
+     "dense": 21,
+     "hybrid": 28,
+     "hybrid_tcr": 7
+    }
+   },
+   {
+    "qid": "EXT330556",
+    "as_of": "2012-02-06",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330557",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330560",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT330566",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 8,
+     "dense": 2,
+     "hybrid": 5,
+     "hybrid_tcr": 5
+    }
+   },
+   {
+    "qid": "EXT330567",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 8,
+     "hybrid": 3,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT330573",
+    "as_of": "2016-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390033",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390034",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 4,
+     "dense": 2,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390037",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390029",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 7,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390030",
+    "as_of": "2018-01-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 8,
+     "dense": 9,
+     "hybrid": 6,
+     "hybrid_tcr": 3
+    }
+   },
+   {
+    "qid": "EXT390031",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 2,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390032",
+    "as_of": "2012-08-07",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390038",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390043",
+    "as_of": "2017-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 4,
+     "hybrid": 2,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390047",
+    "as_of": "2026-02-15",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390056",
+    "as_of": "2009-05-26",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390058",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 3,
+     "dense": 3,
+     "hybrid": 3,
+     "hybrid_tcr": 1
+    }
+   },
+   {
+    "qid": "EXT390062",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 2,
+     "dense": 1,
+     "hybrid": 2,
+     "hybrid_tcr": 2
+    }
+   },
+   {
+    "qid": "EXT390064",
+    "as_of": "2012-07-01",
+    "gold_tier": "verified",
+    "first": {
+     "bm25": 1,
+     "dense": 1,
+     "hybrid": 1,
+     "hybrid_tcr": 1
+    }
+   }
+  ]
+ }
+}

@@ -34,11 +34,12 @@ every number is machine-checkable against `benchmark/` and re-verified by
 - **Temporal graph:** 37 law windows + 24 succession/amendment edges with
   dates; chunks inherit law validity; abstain probes retained
   (1990 empty-pool + missing-law cases).
-- **Benchmark:** **451 published questions** in three cohorts:
+- **Benchmark:** **716 published questions** in four cohorts:
   281 core (269 generated + 12 hand-written CIV001–CIV012), 106 round-1
   extension (101 verified + 5 regolded), 64 round-2 extension from the
-  1996–2015 statutes (53 verified + 11 regolded). **226 quarantined
-  questions** (136 + 90) are published verbatim with audit trails and count
+  1996–2015 statutes (53 verified + 11 regolded), and 265 round-3 scale-up
+  extension over 19 statutes (254 verified + 11 regolded). **542 quarantined
+  questions** (136 + 90 + 316) are published verbatim with audit trails and count
   in no metric. Core gold tiers after the full adjudication chain:
   **229 verified / 22 regolded / 4 author-verified / 26 pass3-flagged**
   (flagged disclosed with reasons, excluded from headline metrics), and
@@ -129,6 +130,12 @@ every number is machine-checkable against `benchmark/` and re-verified by
   LLM cite_acc 0.000 → 0.531 with TCR (McNemar p = 1.2e-10). Stratified
   tiers published; the regolded stratum (11 Qs) is the hardest slice of the
   whole benchmark (Hit@1 0.091).
+- **Round-3 scale-up extension (n=265, 19 statutes):** retrieval Hit@5 0.819 →
+  0.857 with TCR (Hit@1 0.494 → 0.615, p = 5.7e-17) → 0.909 with rerank+TCR
+  (Hit@1 0.668, p = 5.2e-03). Cited-generation eval not yet run for this cohort.
+- **All cohorts (n=716):** hybrid+TCR Hit@5 0.842, Hit@1 0.584, MRR 0.700
+  (p = 4.1e-46 vs no-TCR hybrid); full suite in
+  `benchmark/baselines_suite.json` (BM25 / dense / hybrid / TCR + Wilcoxon).
 
 ## Collection & preprocessing
 - **Sources:** signed Cong-bao PDFs + official government .doc + TVPL

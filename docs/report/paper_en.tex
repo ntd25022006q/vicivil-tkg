@@ -86,7 +86,7 @@ Multi-Round Gold-Answer Adjudication\par}
 \begin{center}
 \begin{minipage}{0.885\textwidth}
 {\small
-\noindent\textbf{Abstract.} We introduce \textbf{ViCivil-TKG}, a benchmark for Vietnamese civil-law question answering built around two under-addressed challenges: (i) \emph{temporal validity} --- the same question has different answers under different applicability windows of a statute; and (ii) \emph{gold-label reliability} --- most automatically generated questions carry unverified gold answers. The benchmark publishes \textbf{451 validated questions} (a 281-question core with 12 hand-written and 269 controlled-generated items; 106 round-1 extension items; 64 round-2 items from the 1996--2015 statute era) over a corpus of 20 legal documents with 13{,}151 passages, together with \textbf{226 publicly quarantined questions} that count in no metric. Every gold answer passes a four-stage adjudication chain: two-tier generation-time auditing, two-round re-anchoring with a larger judge, a pass-3 sweep over 99 weak-gold suspects with three guardrails, and an agreement audit on a fixed 60-question sample; afterwards no question remains unverifiable. On the core set, temporal-consistency retrieval (TCR) raises the citation accuracy of Qwen2.5-3B from 0.488 to 0.601 (McNemar $p=5.8\times10^{-5}$; 0.004 without context) and retrieval reaches \hit{}@5 0.811; on the 1996--2015 cohort TCR lifts \hit{}@5 from 0.703 to 0.781 and reranking raises \hit{}@1 to 0.703. Full adjudication trails, a logged data-integrity audit, and a GPU-free reproduction script are released.\par}
+\noindent\textbf{Abstract.} We introduce \textbf{ViCivil-TKG}, a benchmark for Vietnamese civil-law question answering built around two under-addressed challenges: (i) \emph{temporal validity} --- the same question has different answers under different applicability windows of a statute; and (ii) \emph{gold-label reliability} --- most automatically generated questions carry unverified gold answers. The benchmark publishes \textbf{716 validated questions} (a 281-question core with 12 hand-written and 269 controlled-generated items; 106 round-1 extension items; 64 round-2 items from the 1996--2015 statute era; 265 round-3 scale-up items) over a corpus of 20 legal documents with 13{,}151 passages, together with \textbf{542 publicly quarantined questions} that count in no metric. Every gold answer passes a four-stage adjudication chain: two-tier generation-time auditing, two-round re-anchoring with a larger judge, a pass-3 sweep over 99 weak-gold suspects with three guardrails, and an agreement audit on a fixed 60-question sample; afterwards no question remains unverifiable. On the core set, temporal-consistency retrieval (TCR) raises the citation accuracy of Qwen2.5-3B from 0.488 to 0.601 (McNemar $p=5.8\times10^{-5}$; 0.004 without context) and retrieval reaches \hit{}@5 0.811; on the 1996--2015 cohort TCR lifts \hit{}@5 from 0.703 to 0.781 and reranking raises \hit{}@1 to 0.703. Full adjudication trails, a logged data-integrity audit, and a GPU-free reproduction script are released.\par}
 \vspace{3pt}
 {\small\noindent\textbf{Keywords:} legal question answering; Vietnamese datasets; temporal retrieval; gold-label adjudication; RAG.\par}
 \end{minipage}
@@ -98,13 +98,39 @@ Multi-Round Gold-Answer Adjudication\par}
 
 Legal question-answering systems must be considerably more accurate than open-domain ones: citing the wrong article has real legal consequences. Building an evaluation suite for this domain runs into two obstacles. First, Vietnamese statutes have explicit \emph{effective dates}: the 2015 Civil Code replaced the 2005 Code, ministerial decrees are replaced on a rolling cycle, so the question ``how long is the limitation period for a claim to recover property?'' must be answered from the statute that was in force \emph{at the question's time point}, not from the newest one. Second, QA sets generated automatically with LLMs assume the gold answer is correct, whereas in practice gold anchoring --- pointing to the exact passage of law that grounds the answer --- is the largest source of error.
 
-This paper presents ViCivil-TKG, a benchmark covering both aspects. The contributions are: \textbf{(C1)} a benchmark of 451 published questions over a corpus of 20 statutes (13{,}151 passages), each question carrying an \code{as\_of} date and a gold anchor to an exact passage identifier, plus 226 publicly quarantined questions; \textbf{(C2)} a \emph{four-stage gold adjudication chain} with multiple independent judge models, guardrails on every application, full provenance, and public quarantine of rejected items; \textbf{(C3)} a temporal-consistency retrieval (TCR) protocol with paired statistical tests for both retrieval and generation; and \textbf{(C4)} a \emph{data-integrity audit} of the entire release in which every discrepancy found was fixed with a logged trail --- a practice we argue should be standard for benchmark datasets.
+This paper presents ViCivil-TKG, a benchmark covering both aspects. The contributions are: \textbf{(C1)} a benchmark of 716 published questions over a corpus of 20 statutes (13{,}151 passages), each question carrying an \code{as\_of} date and a gold anchor to an exact passage identifier, plus 542 publicly quarantined questions; \textbf{(C2)} a \emph{four-stage gold adjudication chain} with multiple independent judge models, guardrails on every application, full provenance, and public quarantine of rejected items; \textbf{(C3)} a temporal-consistency retrieval (TCR) protocol with paired statistical tests for both retrieval and generation; and \textbf{(C4)} a \emph{data-integrity audit} of the entire release in which every discrepancy found was fixed with a logged trail --- a practice we argue should be standard for benchmark datasets.
 
 \section{Related Work}
 
 \textbf{Retrieval and QA benchmarks.} BEIR~\cite{thakur2021beir} standardises zero-shot retrieval evaluation across domains; LexGLUE~\cite{chalkidis2022lexglue} aggregates English legal NLP tasks. Neither provides temporal-validity segmentation nor Vietnamese statutes, and their gold labels are expensively human-verified --- unlike our controlled generation with multi-round adjudication. SQuAD~2.0~\cite{rajpurkar2018squad} introduced unanswerable questions, close in spirit to the abstention behaviour we measure through the rate of ``insufficient information'' replies.
 
 \textbf{Dense retrieval and fusion.} BM25~\cite{robertson2009bm25} remains a strong retrieval backbone; DPR~\cite{karpukhin2020dpr} adds a semantic signal; Reciprocal Rank Fusion~\cite{cormack2009rrf} merges two rankings without training. We use exactly BM25 + dense + RRF in every experiment, and add the temporal-validity filter (TCR) built on the statute timeline graph. BGE-reranker~\cite{xiao2024cpack} serves as the reranking stage; RAG~\cite{lewis2020rag} and the Qwen family~\cite{yang2024qwen25} are the substrate for the cited-generation conditions.
+
+\textbf{Temporal and legal QA benchmarks.} Temporal QA over encyclopaedic sources is served by TempQuestions~\cite{jia2018tempquestions} (1{,}271 questions over Freebase), TimeQA~\cite{chen2021timeqa} (41.2k time-sensitive questions), SituatedQA~\cite{zhang2021situatedqa} (12.2k questions under temporal/geographic context shifts), and, at much larger scale, ComplexTempQA~\cite{gruber2025complextempqa}; Su et al.~\cite{su2024tkgqa} survey temporal KG-QA. In all of these, time is an attribute of the \emph{asked-about fact}; the answer source itself has no validity window. On the Vietnamese legal side, the Zalo legal-retrieval shared tasks~\cite{zalolegal2019} (3{,}196 questions over 61.4k articles in the 2022 edition), VLQA~\cite{vu2025vlqa} ($\sim$3.1k annotated questions), ViLegalExpert~\cite{vilegalexpert2026} (over 172k citizen--lawyer consultation pairs), and VLegal-Bench~\cite{vlegalbench2025} (10{,}450 expert-labelled samples) cover statutes well but carry no temporal anchoring, and French LLeQA~\cite{louis2024lleqa} (1{,}868 expert-annotated legal questions) neither. Table~\ref{tab:related} positions ViCivil-TKG: to the best of our knowledge it is the first benchmark that combines (i) a statutory domain, (ii) per-question \code{as\_of} anchoring scored against exact passage identifiers, and (iii) a multi-round gold adjudication trail with public quarantine.
+
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Positioning against temporal-QA and Vietnamese-legal benchmarks. ``Time anchoring'' means the question fixes the validity time point of the \emph{answer source}, not of the asked-about fact. Sizes are quoted from the respective papers.}
+\label{tab:related}
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{llllll}
+\toprule
+Benchmark & Domain & Lang. & Size & Time anchoring & Gold protocol \\
+\midrule
+TempQuestions \cite{jia2018tempquestions} & open KB (Freebase) & EN & 1{,}271 q & temporal fact constraints & crowdsourced \\
+TimeQA \cite{chen2021timeqa} & Wikipedia & EN & 41.2k q & time-sensitive facts & crowdsourced \\
+SituatedQA \cite{zhang2021situatedqa} & Wikipedia & EN & 12.2k q & context time/place shift & crowdsourced \\
+ComplexTempQA \cite{gruber2025complextempqa} & Wikipedia/Wikidata & EN & 100M pairs & time-scope metadata & auto + filters \\
+LLeQA \cite{louis2024lleqa} & statutory law & FR & 1{,}868 q & none & expert-annotated \\
+Zalo Legal retrieval \cite{zalolegal2019} & VN statutes (retrieval) & VN & 3{,}196 q / 61.4k articles & none & shared task \\
+VLQA \cite{vu2025vlqa} & VN law & VN & $\sim$3.1k q & none & human-verified \\
+ViLegalExpert \cite{vilegalexpert2026} & VN law (retrieval) & VN & 172k q & none & mined consultations \\
+VLegal-Bench \cite{vlegalbench2025} & VN law (multi-task) & VN & 10{,}450 items & none & expert cross-validation \\
+\midrule
+\textbf{ViCivil-TKG (ours)} & VN civil statutes & VN & \textbf{716 q (+542 quarantined)} & \textbf{per-question \code{as\_of} validity windows} & multi-round adjudicated + quarantine \\
+\bottomrule
+\end{tabular}
+\end{table*}
 
 \section{The ViCivil-TKG Dataset}
 
@@ -115,7 +141,7 @@ The corpus covers 20 Vietnamese civil-law documents from 1995--2026 (the Civil C
 \subsection{Controlled question generation}
 \label{sec:gen}
 
-Questions are generated locally with \code{qwen2.5:14b}, batch-wise from source passages, under three constraints: (i) the \code{as\_of} date must lie inside the validity window of the source statute; (ii) the question must be answerable \emph{only} from the source passage and its directly related articles; (iii) within-batch deduplication uses question vectors (768-dim, \code{embeddinggemma:300m}). The core set contains 269 generated plus 12 hand-written questions (CIV001--CIV012, one of which probes the abstention behaviour when the governing statute is not yet in force). Two extension waves added 106 published questions (round~1, from 242 generated) and 154 questions generated from three 1996--2015-era documents (the 2004 Civil Procedure Code, Decree 158/2005 on civil status, and Decree 126/2014 implementing the Marriage and Family Law) with quotas 103/30/27. 28 of the 281 core questions originally carried an \code{as\_of} date before the effective date of their gold statute; all were moved into the correct validity phase with a full log (\code{as\_of\_fixes.json}). Extension-cohort questions derive \code{as\_of} from the graph at generation time (0 repairs).
+Questions are generated locally with \code{qwen2.5:14b}, batch-wise from source passages, under three constraints: (i) the \code{as\_of} date must lie inside the validity window of the source statute; (ii) the question must be answerable \emph{only} from the source passage and its directly related articles; (iii) within-batch deduplication uses question vectors (768-dim, \code{embeddinggemma:300m}). The core set contains 269 generated plus 12 hand-written questions (CIV001--CIV012, one of which probes the abstention behaviour when the governing statute is not yet in force). Two extension waves added 106 published questions (round~1, from 242 generated) and 154 questions generated from three 1996--2015-era documents (the 2004 Civil Procedure Code, Decree 158/2005 on civil status, and Decree 126/2014 implementing the Marriage and Family Law) with quotas 103/30/27. A third scale-up wave (round~3) sampled 620 passages under per-law quotas (150 per statute), generated 590 valid questions, dropped 9 near-duplicates (token-set Jaccard $\ge$ 0.60 against all prior questions), and published 265 after the same two-tier audit and re-anchoring; 316 were quarantined. A release audit caught 28 question-ID collisions produced by parallel generation (two different questions sharing one ID, making their stored verdicts ambiguous); every affected pair was re-adjudicated from scratch under unique IDs and the repair log is released (\code{runs/extension3/qid\_repair\_log.json}). 28 of the 281 core questions originally carried an \code{as\_of} date before the effective date of their gold statute; all were moved into the correct validity phase with a full log (\code{as\_of\_fixes.json}). Extension-cohort questions derive \code{as\_of} from the graph at generation time (0 repairs).
 
 \subsection{The gold adjudication chain}
 
@@ -125,7 +151,7 @@ This is the central contribution. The four-stage chain (Figure~\ref{fig:pipeline
 \item \textbf{Two-tier audit at generation time.} Every generated question is scored immediately by an 8B judge (\code{usable: yes/partial/no}); items that fail ``yes'' are re-scored by a 14B judge with an evidence-quote requirement. Items failing both tiers are publicly quarantined.
 \item \textbf{Two-round re-anchoring.} For questions with suspect golds, the regold pipeline proposes a replacement passage and asks a supervising LLM to confirm it in \emph{two independent rounds}; only passages accepted by both rounds are applied. On the core set, 38 questions were re-anchored this way (two-round agreement 0.888).
 \item \textbf{Pass-3: a sweep over 99 weak-gold suspects.} The entire weak-gold group (never-verified, re-golded, multi-part, and hand-written items) is re-scored by a deeper judge (\code{qwen3:14b}) under the protocol ``current gold + 8 stored retrieval candidates'': verdicts are \emph{gold-ok} (66), \emph{reanchor} (3, plus 1 blocked by a guardrail because the proposal was not among the stored candidates), or \emph{flag} (29). Every application must pass three guardrails: the passage must exist in the corpus, must appear in the stored candidate list, and must be valid under the temporal window at \code{as\_of}. The final 2 ``unverifiable'' questions were rechecked separately and both were successfully re-anchored to concrete passages.
-\item \textbf{Independent agreement audit.} On a fixed 60-question sample (seed 20261101), an independent judge chooses the legal basis among 8 candidates: 56/60 parse successfully, and 32/56 pick the applied gold set (\textbf{0.571}), with 32/56 echoing the primary gold passage (\textbf{0.571}). We publish these numbers \emph{unfiltered} as a measure of how hard gold anchoring is in this domain, and stress that this is a model-vs-model check, not a substitute for human evaluation (Section~\ref{sec:limits}); the 60-question human adjudication kit with a Cohen/Fleiss $\kappa$ script is released under \code{docs/annotation/}.
+\item \textbf{Independent agreement audit.} On a fixed 60-question sample (seed 20261101), an independent judge chooses the legal basis among 8 candidates: 56/60 parse successfully, and 31/56 pick the applied gold set (\textbf{0.554}), with 32/56 echoing the primary gold passage (\textbf{0.571}). We publish these numbers \emph{unfiltered} as a measure of how hard gold anchoring is in this domain, and stress that this is a model-vs-model check, not a substitute for human evaluation (Section~\ref{sec:limits}); the 60-question human adjudication kit with a Cohen/Fleiss $\kappa$ script is released under \code{docs/annotation/} as three randomized per-annotator packets (fixed seeds; each packet exposes only its own judgment column, enforcing independent scoring), together with a clearly-labelled synthetic fixture on which the $\kappa$ implementation reproduces independent reference values exactly; the human run itself is the required next step (Section~\ref{sec:limits}).
 \end{enumerate}
 
 \begin{figure*}[t]
@@ -201,8 +227,8 @@ This is the central contribution. The four-stage chain (Figure~\ref{fig:pipeline
 \node[term=cgreenH, right=5mm of s4] (pub)
   {\textcolor{white}{\bfseries\scriptsize Published}
   \nodepart{two}
-  \scriptsize \textbf{451 questions}\\
-  \scriptsize + 226 quarantined\\
+  \scriptsize \textbf{716 questions}\\
+  \scriptsize + 542 quarantined\\
   \scriptsize SHA-256 manifest\\
   \scriptsize full public trail};
 
@@ -243,7 +269,7 @@ Round~2 adds the step that round~1 lacked: cosine similarity between every newly
 
 \subsection{Release structure}
 
-The benchmark releases \textbf{451 questions} over three cohorts (281 core, 106 round-1, 64 round-2) and \textbf{226 quarantined questions}, each with a complete per-question trail. The core set is split stratified dev/test 140/141. Every extension cohort publishes stratified metrics by gold tier; quarantined questions \emph{never} enter any metric. All artifacts carry SHA-256 hashes and passed a 12-point audit (manifest, JSON parse-all, matrix shape, gold chains, extraction coverage, secret scan, schema, duplicate accounting, validity-window sanity, kv references, odd-character gate, identifier set).
+The benchmark releases \textbf{716 questions} over four cohorts (281 core, 106 round-1, 64 round-2, 265 round-3) and \textbf{542 quarantined questions} (136 round-1 + 90 round-2 + 316 round-3), each with a complete per-question trail. The core set is split stratified dev/test 140/141. Every extension cohort publishes stratified metrics by gold tier; quarantined questions \emph{never} enter any metric. All artifacts carry SHA-256 hashes and passed a 12-point audit (manifest, JSON parse-all, matrix shape, gold chains, extraction coverage, secret scan, schema, duplicate accounting, validity-window sanity, kv references, odd-character gate, identifier set).
 
 \section{Experimental Setup}
 
@@ -311,6 +337,29 @@ Repro without TCR (MRR@10) & 281 & 0.399 & 0.651 & 0.733 & 0.815 & 0.540 \\
 \label{fig:hitk}
 \end{figure*}
 
+\subsection{Retrieval baselines on all cohorts}
+
+Table~\ref{tab:baselines} evaluates BM25-only, dense-only, and their RRF fusion under one harness (fresh recomputation against the released corpus snapshot) across every published cohort. Two facts emerge. First, neither single signal dominates: on the core set dense vs.\ BM25 is statistically indistinguishable (Wilcoxon $p=0.257$), while the fusion is not (hybrid vs.\ dense $p=1.8\times10^{-4}$, hybrid vs.\ BM25 $p=7.9\times10^{-8}$). Second, the temporal filter remains the largest single factor everywhere: hybrid+TCR vs.\ hybrid gives $p=8.5\times10^{-23}$ on the core and $p=4.1\times10^{-46}$ over all 716 published questions. The fresh recomputation reproduces the frozen protocol artifact on the core set to \hit{}@5 0.8114 exactly; full-list MRR differs only in the third decimal (0.660 vs.\ 0.662) because the frozen numbers fuse full-corpus rank lists while this table fuses per-signal top-200 candidate lists --- a per-question diff shows 277/281 questions at identical ranks and four questions shifted by one rank, and both snapshots are published rather than silently switched.
+
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Retrieval baselines under one fresh-recompute harness: strict gold-passage matching, MRR within the fused candidate window; BM25 ($k_1{=}1.2$, $b{=}0.75$), dense (768-dim stored passage vectors), RRF $k{=}60$ fusion, TCR = validity-window filter.}
+\label{tab:baselines}
+\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{l ccc ccc ccc ccc ccc}
+\toprule
+& \multicolumn{3}{c}{Core (281)} & \multicolumn{3}{c}{Round 1 (106)} & \multicolumn{3}{c}{Round 2 (64)} & \multicolumn{3}{c}{Round 3 (265)} & \multicolumn{3}{c}{All (716)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}\cmidrule(lr){11-13}\cmidrule(lr){14-16}
+System & \hit{}@1 & \hit{}@5 & MRR & \hit{}@1 & \hit{}@5 & MRR & \hit{}@1 & \hit{}@5 & MRR & \hit{}@1 & \hit{}@5 & MRR & \hit{}@1 & \hit{}@5 & MRR \\
+\midrule
+BM25 only & 0.331 & 0.644 & 0.472 & 0.462 & 0.877 & 0.645 & 0.344 & 0.672 & 0.495 & 0.453 & 0.743 & 0.577 & 0.397 & 0.718 & 0.538 \\
+Dense only & 0.356 & 0.666 & 0.495 & 0.453 & 0.840 & 0.614 & 0.359 & 0.766 & 0.519 & 0.472 & 0.793 & 0.606 & 0.413 & 0.747 & 0.556 \\
+Hybrid (RRF) & 0.399 & 0.733 & 0.546 & 0.509 & 0.906 & 0.677 & 0.359 & 0.688 & 0.517 & 0.494 & 0.819 & 0.630 & 0.447 & 0.786 & 0.594 \\
+Hybrid + TCR & \textbf{0.537} & \textbf{0.811} & \textbf{0.660} & \textbf{0.660} & \textbf{0.925} & \textbf{0.775} & \textbf{0.531} & \textbf{0.781} & \textbf{0.648} & \textbf{0.615} & \textbf{0.857} & \textbf{0.724} & \textbf{0.584} & \textbf{0.842} & \textbf{0.700} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
 \subsection{Effect of the gold adjudication chain}
 
 Table~\ref{tab:gold-effect} separates two quantities that were conflated in the initial release. The \emph{application effect} is the difference between the golds in the question file before and after persisting the pass-3 reanchor of TOP27031 (bug B1, Section~\ref{sec:audit}): \hit{}@5 of the rerank list moves 0.794$\rightarrow$0.797, MRR 0.5957$\rightarrow$0.5964; \hit{}@1 of the hybrid list 0.406$\rightarrow$0.409. The \emph{sensitivity row} scores the same stored candidate lists against the 24 gold sets that were ``recorded but never applied'' (18 version-equivalent sets + 6 reanchor proposals, one of which a guardrail blocked): \hit{}@1 0.484 and MRR 0.621 on the rerank list. This row is published as a sensitivity analysis over gold-set width and is \emph{not} a headline metric --- every primary number in this paper is scored against applied golds.
@@ -336,7 +385,7 @@ Applied: after persist & 0.448 & \textbf{0.797} & \textbf{0.596} & \textbf{0.409
 
 \subsection{Cited generation on the core set}
 
-Table~\ref{tab:core-llm} and Figure~\ref{fig:llm} present the four conditions. Without context the model almost never names the correct article (cite\_acc 0.004) and abstains on 54.8\% of questions. Adding fused context lifts cite\_acc to 0.488; temporal filtering pushes it to \textbf{0.601} (+0.114 absolute, McNemar $p=5.8\times10^{-5}$; all comparisons against no-RAG reach $p<10^{-40}$). Rerank+TCR raises cite\_acc to 0.604 ($p=7.3\times10^{-4}$ vs.\ hybrid) and ctx\_hit5 to 0.850. The ctx\_hit5 values were recomputed in the integrity audit against the applied golds (they previously retained run-time values recorded before the regold chain --- bug B5) and cross-check exactly against the retrieval \hit{}@5 of each configuration (0.740 / 0.815 / 0.850) --- an independent consistency check between two pipelines. Abstention stays near 11\% whenever context is present. Disclosed weaknesses: one question (NEW90253) is excluded from the rerank+TCR condition because its candidate pool emptied after temporal filtering ($n{=}280$); stored answers are verbatim and occasionally contain CJK characters emitted by the 3B model (11/281 no-RAG, $\le$5/281 in the RAG branches) --- no post-hoc cleaning is applied.
+Table~\ref{tab:core-llm} and Figure~\ref{fig:llm} present the four conditions. Without context the model almost never names the correct article (cite\_acc 0.004) and abstains on 54.8\% of questions. Adding fused context lifts cite\_acc to 0.488; temporal filtering pushes it to \textbf{0.601} (+0.114 absolute, McNemar $p=5.8\times10^{-5}$; all comparisons against no-RAG reach $p<10^{-40}$). Rerank+TCR raises cite\_acc to 0.604 ($p=7.3\times10^{-4}$ vs.\ hybrid) and ctx\_hit5 to 0.850. The ctx\_hit5 values were recomputed in the integrity audit against the applied golds from the stored top-5 context lists (they previously retained run-time values recorded before the regold chain --- bug B5); the recomputation (208/281 $=$ 0.740, 229/281 $=$ 0.815, 238/280 $=$ 0.850) is consistent with the retrieval \hit{}@5 of the matching configurations (hybrid exact at 0.7402; +TCR within one question of 0.8114, the stored run-time top-5 and the fresh full-list recompute disagreeing on a single question), and the original run-time values are retained under \code{ctx\_hit5\_runtime\_pre\_pass\_3} in the released artifact. Abstention stays near 11\% whenever context is present. Disclosed weaknesses: one question (NEW90253) is excluded from the rerank+TCR condition because its candidate pool emptied after temporal filtering ($n{=}280$); stored answers are verbatim and occasionally contain CJK characters emitted by the 3B model (11/281 no-RAG, $\le$5/281 in the RAG branches) --- no post-hoc cleaning is applied.
 
 \begin{table}[t]
 \centering\footnotesize
@@ -358,7 +407,7 @@ RAG rerank + TCR & \textbf{0.604} & \textbf{0.490} & 0.111 & \textbf{0.850} & 28
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}
-\begin{axis}[width=\columnwidth, height=6.4cm,
+\begin{axis}[width=\columnwidth, height=5.7cm,
   ybar=1.2pt, bar width=6.6pt,
   symbolic x coords={No-RAG, Hybrid, +TCR, Rerank+TCR},
   xtick=data, x tick label style={font=\scriptsize},
@@ -382,34 +431,35 @@ RAG rerank + TCR & \textbf{0.604} & \textbf{0.490} & 0.111 & \textbf{0.850} & 28
 \label{fig:llm}
 \end{figure}
 
-\subsection{Extension cohorts: round 1 and the 1996--2015 era}
+\subsection{Extension cohorts: rounds 1--3}
 
-Table~\ref{tab:ext} summarises both cohorts. On round~1 (106 questions), TCR raises \hit{}@1 from 0.547 to 0.689 and \hit{}@5 from 0.906 to 0.925 (Wilcoxon $p=2.1\times10^{-5}$); reranking alone is not significant ($p=0.42$), and rerank+TCR at 0.651 is not either ($p=0.71$ vs.\ TCR) --- published as-is. On round~2 --- rarer and older 1996--2015 statutes --- every metric drops visibly: TCR raises \hit{}@5 from 0.703 to 0.781 and MRR 0.517$\rightarrow$0.648 ($p=4.0\times10^{-5}$); rerank+TCR reaches \hit{}@1 \textbf{0.703} ($p=1.4\times10^{-3}$ vs.\ TCR). For generation, the same improvement chain appears (0.000$\rightarrow$0.531 cite\_acc; McNemar $p=1.2\times10^{-10}$), although the span\_F1 of rerank+TCR beats pure TCR without reaching significance (Wilcoxon $p=0.083$). The round-2 \code{regolded} stratum (11 questions) is the hardest slice of the entire benchmark (\hit{}@1 0.091, \hit{}@5 0.364) --- a direct consequence of anchoring golds on old statutes, labelled publicly so users can stratify.
+Table~\ref{tab:ext} summarises all three extension cohorts. On round~1 (106 questions), TCR raises \hit{}@1 from 0.547 to 0.689 and \hit{}@5 from 0.906 to 0.925 (Wilcoxon $p=2.1\times10^{-5}$); reranking alone is not significant ($p=0.42$), and rerank+TCR at 0.651 is not either ($p=0.71$ vs.\ TCR) --- published as-is. On round~2 --- rarer and older 1996--2015 statutes --- every metric drops visibly: TCR raises \hit{}@5 from 0.703 to 0.781 and MRR 0.517$\rightarrow$0.648 ($p=4.0\times10^{-5}$); rerank+TCR reaches \hit{}@1 \textbf{0.703} ($p=1.4\times10^{-3}$ vs.\ TCR). For generation, the same improvement chain appears (0.000$\rightarrow$0.531 cite\_acc; McNemar $p=1.2\times10^{-10}$), although the span\_F1 of rerank+TCR beats pure TCR without reaching significance (Wilcoxon $p=0.083$). The round-2 \code{regolded} stratum (11 questions) is the hardest slice of the entire benchmark (\hit{}@1 0.091, \hit{}@5 0.364) --- a direct consequence of anchoring golds on old statutes, labelled publicly so users can stratify. Round~3 (265 questions over 19 statutes, the scale-up cohort) behaves like a blend of both: TCR raises \hit{}@1 0.494$\rightarrow$0.615 and \hit{}@5 0.819$\rightarrow$0.857 ($p=5.7\times10^{-17}$), and rerank+TCR reaches \hit{}@1 \textbf{0.668} and \hit{}@5 \textbf{0.909} ($p=5.2\times10^{-3}$ vs.\ TCR, the first cohort where reranking adds a significant gain on top of TCR). Cited-generation evaluation for round~3 is not yet run and is left blank rather than interpolated.
 
 \begin{table}[t]
 \centering\small
 \caption{Extension cohorts: retrieval (MRR@30 in parentheses) and paired Wilcoxon statistics.}
 \label{tab:ext}
-\begin{tabular}{lccc}
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular}{lcccccc}
 \toprule
- & \multicolumn{2}{c}{Round 1 ($n{=}106$)} & Round 2 ($n{=}64$) \\
-\cmidrule(lr){2-3}\cmidrule(lr){4-4}
-Configuration & \hit{}@1 & \hit{}@5 & \hit{}@1 \\
+ & \multicolumn{2}{c}{Round 1 ($n{=}106$)} & \multicolumn{2}{c}{Round 2 ($n{=}64$)} & \multicolumn{2}{c}{Round 3 ($n{=}265$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Configuration & \hit{}@1 & \hit{}@5 & \hit{}@1 & \hit{}@5 & \hit{}@1 & \hit{}@5 \\
 \midrule
-Hybrid (base) & 0.547 (0.700) & 0.906 & 0.359 (0.517) \\
-Hybrid + TCR & \textbf{0.689} (0.790) & \textbf{0.925} & 0.531 (0.648) \\
-Rerank & 0.585 (0.726) & 0.906 & 0.516 (0.654) \\
-Rerank + TCR & 0.651 (0.779) & 0.943 & \textbf{0.703} (0.766) \\
+Hybrid (base) & 0.547 (0.700) & 0.906 & 0.359 (0.517) & 0.703 & 0.494 (0.629) & 0.819 \\
+Hybrid + TCR & \textbf{0.689} (0.790) & \textbf{0.925} & 0.531 (0.648) & 0.781 & 0.615 (0.724) & 0.857 \\
+Rerank & 0.585 (0.726) & 0.906 & 0.516 (0.654) & 0.797 & 0.555 (0.694) & 0.879 \\
+Rerank + TCR & 0.651 (0.779) & 0.943 & \textbf{0.703} (0.766) & \textbf{0.828} & \textbf{0.668} (0.775) & \textbf{0.909} \\
 \bottomrule
 \end{tabular}
 
 \vspace{3pt}
-{\footnotesize $p$ (TCR vs.\ base): $2.1\times10^{-5}$ (round 1), $4.0\times10^{-5}$ (round 2); $p$ (rerank+TCR vs.\ TCR): 0.71 (round 1, ns), $1.4\times10^{-3}$ (round 2). Round-2 \hit{}@5: 0.703 / 0.781 / 0.797 / 0.828 by row.}
+{\footnotesize $p$ (TCR vs.\ base): $2.1\times10^{-5}$ (round 1), $4.0\times10^{-5}$ (round 2), $5.7\times10^{-17}$ (round 3); $p$ (rerank+TCR vs.\ TCR): 0.71 (round 1, ns), $1.4\times10^{-3}$ (round 2), $5.2\times10^{-3}$ (round 3). Round-2 \hit{}@5: 0.703 / 0.781 / 0.797 / 0.828 by row; round-3 \hit{}@5: 0.819 / 0.857 / 0.879 / 0.909 by row.}
 \end{table}
 
 \subsection{Statistical summary}
 
-Every primary comparison carries a paired test: (i) retrieval, TCR vs.\ base: $p=2.1\times10^{-5}$ (round 1), $p=4.0\times10^{-5}$ (round 2); (ii) rerank+TCR vs.\ TCR: $p=1.4\times10^{-3}$ (round 2); (iii) generation, hybrid+TCR vs.\ hybrid: McNemar $p=5.8\times10^{-5}$ (core), $p=0.012$ (round 2); no-RAG vs.\ hybrid+TCR: $p<10^{-40}$ on both cohorts. Non-significant span\_F1 comparisons are reported as such rather than omitted.
+Every primary comparison carries a paired test: (i) retrieval, TCR vs.\ base: $p=2.1\times10^{-5}$ (round 1), $p=4.0\times10^{-5}$ (round 2), $p=5.7\times10^{-17}$ (round 3), $p=4.1\times10^{-46}$ (all 716); (ii) rerank+TCR vs.\ TCR: $p=1.4\times10^{-3}$ (round 2), $p=5.2\times10^{-3}$ (round 3); (iii) generation, hybrid+TCR vs.\ hybrid: McNemar $p=5.8\times10^{-5}$ (core), $p=0.012$ (round 2); no-RAG vs.\ hybrid+TCR: $p<10^{-40}$ on both cohorts. Non-significant span\_F1 comparisons are reported as such rather than omitted.
 
 \subsection{Data audit and reproduction}
 \label{sec:audit}
@@ -419,7 +469,7 @@ Before freezing the release we ran an integrity audit over all published artifac
 \section{Discussion and Limitations}
 \label{sec:limits}
 
-\textbf{Data limitations.} (1) Narrow domain: all questions belong to civil and civil-procedure law; 20 documents and 451 questions are small next to multi-domain benchmarks. (2) Non-uniform gold tiers: 26 core questions are flagged and excluded from primary metrics; the regolded stratum (22 questions) has systematically low \hit{}@1 --- users must stratify, as we do. (3) The independent judge agreement reaches only 0.571 on the 60-question sample; this is a model-vs-model check on an 8-candidate selection task --- a task with many defensible choices --- and \emph{does not replace} human evaluation; the 60-question human kit (with guidelines and Cohen/Fleiss $\kappa$) is released and is the required next step before claiming a human-validated benchmark. (4) Questions are LLM-generated and inherit the generator's biases; mitigated by vector deduplication, two-tier auditing, and public quarantine, but not eliminated. (5) Four round-2 \code{regolded} anchors (EXT20028, EXT20039, EXT20113, EXT20123 --- 4 of the 11) are temporally out of scope at the question's \code{as\_of}: three of them (EXT20028, EXT20039, EXT20113) point to consolidated texts whose validity window starts \emph{after} \code{as\_of}, while EXT20123 points to a BLDS~1995 passage whose validity window \emph{ended} on 2006-01-01, six years before its \code{as\_of}. Each anchor was accepted by the adjudication chain as the legal basis of the underlying question, but all four fall outside the validity windows at the stated dates, so TCR filtering penalises them by construction. We disclose them rather than silently re-anchoring a second time; under TCR they contribute to the low regolded-stratum numbers reported above.
+\textbf{Data limitations.} (1) Narrow domain: all questions belong to civil and civil-procedure law; 20 documents and 716 questions are small next to multi-domain benchmarks. (2) Non-uniform gold tiers: 26 core questions are flagged and excluded from primary metrics; the regolded stratum (22 questions) has systematically low \hit{}@1 --- users must stratify, as we do. (3) The independent judge agreement reaches only 0.571 on the 60-question sample; this is a model-vs-model check on an 8-candidate selection task --- a task with many defensible choices --- and \emph{does not replace} human evaluation; the 60-question human kit (with guidelines and Cohen/Fleiss $\kappa$) is released and is the required next step before claiming a human-validated benchmark. (4) Questions are LLM-generated and inherit the generator's biases; mitigated by vector deduplication, two-tier auditing, and public quarantine, but not eliminated. (5) Four round-2 \code{regolded} anchors (EXT20028, EXT20039, EXT20113, EXT20123 --- 4 of the 11) are temporally out of scope at the question's \code{as\_of}: three of them (EXT20028, EXT20039, EXT20113) point to consolidated texts whose validity window starts \emph{after} \code{as\_of}, while EXT20123 points to a BLDS~1995 passage whose validity window \emph{ended} on 2006-01-01, six years before its \code{as\_of}. Each anchor was accepted by the adjudication chain as the legal basis of the underlying question, but all four fall outside the validity windows at the stated dates, so TCR filtering penalises them by construction. We disclose them rather than silently re-anchoring a second time; under TCR they contribute to the low regolded-stratum numbers reported above.
 
 \textbf{Evaluation limitations.} The experiments use one 3B generator and one reranker; no larger LLM baseline or domain fine-tuning is included. TCR relies on a manually verified temporal graph; a wrong validity window propagates directly into the filter. Three MRR semantics (full-list / MRR@10 / MRR@30) are annotated separately but not yet unified --- normalising to full-list is the next technical task. cite\_acc measures naming the correct \emph{article numbers}, not quoting the correct \emph{passage}.
 
@@ -427,9 +477,9 @@ Before freezing the release we ran an integrity audit over all published artifac
 
 \section{Conclusion}
 
-ViCivil-TKG demonstrates that two principles --- temporal-validity checking and multi-stage gold adjudication with public quarantine --- operate consistently on Vietnamese legal data and both yield measurable gains: TCR improves cite\_acc by +0.114 points ($p<10^{-4}$) and retrieval \hit{}@5 on every cohort; the adjudication chain eliminates the unverifiable-gold state entirely and makes gold-anchor quality measurable per stratum. The third methodological contribution is the reproduce-then-patch audit procedure with a full public change log. The 451-question benchmark with 226 quarantined questions, full provenance, a human adjudication kit, and a GPU-free reproduction script is released for community scrutiny and extension; next steps in priority order: human adjudication on the stratified sample (kit available), unifying MRR semantics, extending to circular-level documents and adjacent legal domains, and benchmarking larger generators.
+ViCivil-TKG demonstrates that two principles --- temporal-validity checking and multi-stage gold adjudication with public quarantine --- operate consistently on Vietnamese legal data and both yield measurable gains: TCR improves cite\_acc by +0.114 points ($p<10^{-4}$) and retrieval \hit{}@5 on every cohort; the adjudication chain eliminates the unverifiable-gold state entirely and makes gold-anchor quality measurable per stratum. The third methodological contribution is the reproduce-then-patch audit procedure with a full public change log. The 716-question benchmark with 542 quarantined questions, full provenance, a human adjudication kit, and a GPU-free reproduction script is released for community scrutiny and extension; next steps in priority order: human adjudication on the stratified sample (kit available), unifying MRR semantics, extending to circular-level documents and adjacent legal domains, and benchmarking larger generators.
 
-\begin{thebibliography}{9}\small\sloppy\emergencystretch=1.5em
+\begin{thebibliography}{9}\scriptsize\linespread{0.96}\sloppy\emergencystretch=1.5em\setlength{\itemsep}{0.6pt}\setlength{\parskip}{0pt}
 
 \bibitem{robertson2009bm25} S. Robertson, H. Zaragoza, ``The Probabilistic Relevance Framework: BM25 and Beyond,'' \emph{Foundations and Trends in Information Retrieval}, 3(4), 2009.
 
@@ -448,6 +498,26 @@ ViCivil-TKG demonstrates that two principles --- temporal-validity checking and 
 \bibitem{xiao2024cpack} S. Xiao \emph{et al.}, ``C-Pack: Packaged Resources To Advance General Chinese Embedding,'' \emph{SIGIR}, 2024.
 
 \bibitem{yang2024qwen25} A. Yang \emph{et al.}, ``Qwen2.5 Technical Report,'' \emph{arXiv:2412.15115}, 2024.
+
+\bibitem{jia2018tempquestions} Z. Jia, A. Abujabal, R. Saha Roy, J. Str\"otgen, G. Weikum, ``TempQuestions: A Benchmark for Temporal Question Answering,'' \emph{Companion Proceedings of the Web Conference (WWW)}, 2018.
+
+\bibitem{chen2021timeqa} W. Chen, X. Wang, W. Y. Wang, ``A Dataset for Answering Time-Sensitive Questions,'' \emph{arXiv:2108.06314}, 2021.
+
+\bibitem{zhang2021situatedqa} X. Zhang, J. Choi, ``SituatedQA: Incorporating Extra-Linguistic Contexts into QA on Reading Comprehension,'' \emph{EMNLP}, 2021.
+
+\bibitem{gruber2025complextempqa} R. Gruber, A. Abdallah, M. F\"arber, A. Jatowt, ``ComplexTempQA: A 100M Dataset for Complex Temporal Question Answering,'' \emph{EMNLP}, 2025.
+
+\bibitem{su2024tkgqa} Y. Su, H. Li, et al., ``Temporal Knowledge Graph Question Answering: A Survey,'' \emph{arXiv:2406.14191}, 2024.
+
+\bibitem{louis2024lleqa} A. Louis et al., ``Interpretable Long-Form Legal Question Answering with Retrieval-Augmented Large Language Models,'' \emph{AAAI}, 2024.
+
+\bibitem{zalolegal2019} Zalo AI Challenge, ``Legal Text Retrieval'' shared tasks, 2019 and 2022; the 2022 edition publishes 3{,}196 questions over 61{,}425 legal articles.
+
+\bibitem{vu2025vlqa} VLQA contributors, ``VLQA: The First Comprehensive, Large, and High-Quality Vietnamese Dataset for Legal Question Answering,'' \emph{arXiv:2507.19995}, 2025.
+
+\bibitem{vilegalexpert2026} D.\ T. Nguyen, N.\ H. Nguyen, A.\ T.-H. Nguyen, D.\ H. Nguyen, K.\ V. Nguyen, N.\ L.-T. Nguyen, ``ViLegalExpert: A Large-Scale Benchmark for Vietnamese Legal Retrieval and Question Answering from Real-World Consultations,'' \emph{arXiv:2609.39189}, 2026.
+
+\bibitem{vlegalbench2025} N.\ T. Dong \emph{et al.}, ``VLegal-Bench: Cognitively Grounded Benchmark for Vietnamese Legal Reasoning of Large Language Models,'' \emph{arXiv:2512.14554}, 2025.
 
 \end{thebibliography}
 

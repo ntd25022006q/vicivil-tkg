@@ -15,7 +15,8 @@
     "span_f1": 0.325,
     "abstain_rate": 0.548,
     "ctx_hit5": 0.0,
-    "mean_ans_tokens": 78.2
+    "mean_ans_tokens": 78.2,
+    "ctx_hit5_runtime_pre_pass3": 0.0
    },
    "per_q": {
     "CIV010": {
@@ -1994,7 +1995,8 @@
     "span_f1": 0.4662,
     "abstain_rate": 0.1103,
     "ctx_hit5": 0.7402,
-    "mean_ans_tokens": 83.6
+    "mean_ans_tokens": 83.6,
+    "ctx_hit5_runtime_pre_pass3": 0.7295
    },
    "per_q": {
     "GEN11923": {
@@ -3973,7 +3975,8 @@
     "span_f1": 0.4896,
     "abstain_rate": 0.1068,
     "ctx_hit5": 0.8149,
-    "mean_ans_tokens": 81.4
+    "mean_ans_tokens": 81.4,
+    "ctx_hit5_runtime_pre_pass3": 0.8114
    },
    "per_q": {
     "GEN90903": {
@@ -5952,7 +5955,8 @@
     "span_f1": 0.4904,
     "abstain_rate": 0.1107,
     "ctx_hit5": 0.85,
-    "mean_ans_tokens": 83.7
+    "mean_ans_tokens": 83.7,
+    "ctx_hit5_runtime_pre_pass3": 0.8464
    },
    "per_q": {
     "CIV012": {
@@ -7919,5 +7923,5 @@
   }
  },
  "runtime_sec": 973.0,
- "rescore_note": "v1.0.1: cite_acc, span_f1 and ctx_hit5 recomputed from stored greedy answers/contexts against the APPLIED adjudicated golds (the v1.0.0 rescore kept run-time ctx_hit5, which predated the gold chain); abstain unchanged (answer-dependent)."
+ "rescore_note": "cite_acc and span_f1 recomputed from stored greedy answers after pass-3 gold updates; ctx_hit5 recomputed against APPLIED golds from benchmark/rag_inputs.json top-5 lists (integrity audit B5): rag_hybrid 208/281=0.7402, rag_hybrid_tcr 229/281=0.8149, rag_rerank_tcr 238/280=0.8500 (NEW90253 excluded, n=280); the original run-time values (recorded before the regold chain) are retained under ctx_hit5_runtime_pre_pass3; abstain unchanged (answer-dependent)."
 }
