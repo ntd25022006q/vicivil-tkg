@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+"""Regenerate the full-tree SHA256SUMS manifest (CI check twin of
+agent_workspace/regen_sums.py).
+
+Usage: python tools/law_manifest_full.py <tree_root> <out_file>
+Walks the whole tree (skipping the manifest itself, its provenance/ sibling
+and the output file), writes "<sha256>  ./<rel>" lines sorted by path --
+byte-identical to the release gate's regen_sums.py output.
+"""
+import hashlib
+import io
+import os
+import sys
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+
+root, out = sys.argv[1], sys.argv[2]
+skip = {os.path.abspath(out), os.path.abspath(os.path.join(root, "SHA256SUMS")),
+        os.path.abspath(os.path.join(root, "provenance", "SHA256SUMS"))}
+lines = []
+for dirpath, _dirs, files in os.walk(root):
+    for f in files:
+        p = os.path.join(dirpath, f)
+        if os.path.abspath(p) in skip:
+            continue
+        rel = "./" + os.path.relpath(p, root)
+        h = hashlib.sha256()
+        with open(p, "rb") as fh:
+            for chunk in iter(lambda: fh.read(1 << 20), b""):
+                h.update(chunk)
+        lines.append(f"{h.hexdigest()}  {rel}")
+lines.sort(key=lambda x: x.split("  ", 1)[1])
+io.open(out, "w", encoding="utf-8").write("\n".join(lines) + "\n")
+print(f"full-tree manifest: {len(lines)} entries")

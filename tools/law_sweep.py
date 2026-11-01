@@ -43,7 +43,18 @@ def check_tree(root, tag):
         if istext:
             s = io.open(p, encoding="utf-8", errors="replace").read()
             vendored = rel.endswith(".min.js") or rel.endswith("explorer.html")  # vendored third-party libraries ship verbatim; the release build inlines them into the viewer
-            verbatim_llm = rel == "benchmark/llm_rag_result.json"  # verbatim LLM answers; code-switching disclosed in README/report
+            # Verbatim LLM artifacts: stored judge verdicts and model answers are
+            # published unfiltered (no post-hoc cleaning; disclosed in README and
+            # DATASHEET), so CJK emitted by the judge/answer models is expected.
+            verbatim_llm = rel in {
+                "benchmark/llm_rag_result.json",
+                "benchmark/extension_llm_rag_result.json",
+                "benchmark/extension2_llm_rag_result.json",
+                "benchmark/extension_audit1.json",
+                "benchmark/extension2_audit1.json",
+                "benchmark/extension_flagged.json",
+                "benchmark/extension2_flagged.json",
+            }  # verbatim LLM answers/judge verdicts; code-switching disclosed
             inv = INVIS.findall(s)
             if inv:
                 issues.append(f"{tag} {rel}: {len(inv)} invisible/control chars")
@@ -128,3 +139,4 @@ if issues:
         print("ISSUE:", i)
     sys.exit(1)
 print(f"SWEEP CLEAN: {len(manifests)} tree(s), manifest matches disk, no secret/invisible/CJK, all JSON/JSONL/GEXF parse")
+

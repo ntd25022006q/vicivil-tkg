@@ -54,9 +54,9 @@ jobs:
       - name: Quet chat luong va kiem tra manifest
         run: |
           python tools/law_sweep.py .
-          python tools/law_manifest.py . SHA256SUMS.check gh
-          if ! diff -q SHA256SUMS SHA256SUMS.check; then
-            echo "::error::Manifest khong khop voi thu muc hien tai - chay: python tools/law_manifest.py . SHA256SUMS gh"
+          python tools/law_manifest_full.py . /tmp/SHA256SUMS.check
+          if ! diff -q SHA256SUMS /tmp/SHA256SUMS.check; then
+            echo "::error::Manifest khong khop voi thu muc hien tai - chay: python tools/law_manifest_full.py . SHA256SUMS (regenerate + push)"
             exit 1
           fi
           echo "Manifest khop."
