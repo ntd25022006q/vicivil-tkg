@@ -1,15 +1,15 @@
 {
- "note": "cham lai tu cac tep trong kho: BM25 (Python thuan) + dense (vector da luu) + RRF. Khong can GPU, khong can mo hinh, khong can mang.",
+ "note": "cham lai tu cac tep trong kho: BM25 (Python thuan) + dense (vector da luu) + RRF. Khong can GPU, khong can mo hinh, khong can mang. | v1.0.1: TOP27031 pass-3 reanchor persisted -> rank null->1; MRR is computed within the stored top-10 candidate window (MRR@10), as in the original script.",
  "engine": "numpy",
  "n_questions": 281,
  "n_questions_with_verified_gold": 241,
  "hit_at_k_all": {
-  "1": 0.395,
-  "3": 0.6477,
-  "5": 0.7295,
-  "10": 0.8114
+  "1": 0.3986,
+  "3": 0.6512,
+  "5": 0.7331,
+  "10": 0.8149
  },
- "mrr_all": 0.5364,
+ "mrr_all": 0.54,
  "hit_at_k_verified_only": {
   "1": 0.3693,
   "3": 0.6183,
@@ -6293,7 +6293,7 @@
   },
   {
    "qid": "TOP27031",
-   "rank": null,
+   "rank": 1,
    "top": [
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu50|Khoan3",
     "BLTTDS2004|Dieu276|Khoan1",

@@ -2866,15 +2866,18 @@
   "as_of": "2026-07-01",
   "question": "Việc thu thập chứng cứ vụ án dân sự thực hiện theo quy định nào?",
   "gold_ids": [
-   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu28|Khoan1"
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu50|Khoan3"
   ],
   "hint": "synthetic (weak gold)",
   "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
   "reviewed": "pending",
-  "gold_tier": "flagged",
+  "gold_tier": "regolded",
   "question_rescoped_from": "Trong vụ án dân sự, tòa án không thu thập chứng cứ một cách khách quan và công bằng, làm ảnh hưởng đến quyền lợi của tôi.",
-  "weak_review": "pass3-flagged",
-  "weak_review_reason": "judge parse-fail"
+  "weak_review": "pass3-reanchored",
+  "weak_review_reason": "pass-3 unverifiable recheck (qwen3:14b): Điều 50 khoản 3 nêu rõ việc thu thập tài liệu, chứng cứ có liên quan đến vụ việc dân sự thực hiện theo quy định của Bộ luật này (BLTTDS), trực tiếp trả lời câu hỏi về cơ sở pháp lý chung cho việc thu ",
+  "regolded_from": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu28|Khoan1"
+  ]
  },
  {
   "qid": "TOP92479",

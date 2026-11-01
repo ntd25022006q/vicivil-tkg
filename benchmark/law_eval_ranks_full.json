@@ -1,12 +1,12 @@
 {
  "n": 281,
  "hit": {
-  "1": 0.5374,
-  "3": 0.7367,
-  "5": 0.8078,
-  "10": 0.8754
+  "1": 0.5409,
+  "3": 0.7402,
+  "5": 0.8114,
+  "10": 0.879
  },
- "mrr": 0.6586,
+ "mrr": 0.662,
  "strat": {
   "verified": {
    "n": 229,
@@ -19,24 +19,24 @@
    "mrr": 0.693
   },
   "flagged": {
-   "n": 27,
+   "n": 26,
    "hit": {
-    "1": 0.4074,
-    "3": 0.5556,
-    "5": 0.6667,
-    "10": 0.7037
+    "1": 0.4231,
+    "3": 0.5769,
+    "5": 0.6923,
+    "10": 0.7308
    },
-   "mrr": 0.5196
+   "mrr": 0.5383
   },
   "regolded": {
-   "n": 21,
+   "n": 22,
    "hit": {
-    "1": 0.2381,
-    "3": 0.7619,
-    "5": 0.8571,
-    "10": 0.9048
+    "1": 0.2727,
+    "3": 0.7727,
+    "5": 0.8636,
+    "10": 0.9091
    },
-   "mrr": 0.5101
+   "mrr": 0.5323
   },
   "author-verified": {
    "n": 4,
@@ -3636,7 +3636,7 @@
   },
   {
    "qid": "TOP27031",
-   "rank": 31,
+   "rank": 1,
    "top": [
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu50|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu6|Khoan2",
@@ -4547,5 +4547,5 @@
    ]
   }
  ],
- "note": "rebuilt after pass-3 gold updates; hybrid+TCR protocol verified identical to the published ranking (verify mode, 0 mismatches) before rescoring"
+ "note": "hybrid+TCR over the 281-question core with the APPLIED adjudicated golds (v1.0.1: TOP27031 pass-3 reanchor persisted to the bench file; rank 31->1). Candidate lists unchanged - recomputed from the published per_q ranks whose protocol verification reported 0 mismatch."
 }

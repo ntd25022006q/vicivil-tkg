@@ -1,0 +1,186 @@
+[
+ {
+  "artifact": "law_bench_main.json",
+  "what": "TOP27031.gold_ids",
+  "old": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu28|Khoan1"
+  ],
+  "new": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu50|Khoan3"
+  ]
+ },
+ {
+  "artifact": "law_bench_main.json",
+  "what": "TOP27031.gold_tier",
+  "old": "flagged",
+  "new": "regolded"
+ },
+ {
+  "artifact": "law_bench_main.json",
+  "what": "tier counts",
+  "old": "229/27/21/4",
+  "new": "229/26/22/4"
+ },
+ {
+  "artifact": "law_eval_ranks_full.json",
+  "what": "TOP27031.rank",
+  "old": 31,
+  "new": 1
+ },
+ {
+  "artifact": "law_eval_ranks_full.json",
+  "what": "hit@1",
+  "old": 0.5374,
+  "new": 0.5409
+ },
+ {
+  "artifact": "law_eval_ranks_full.json",
+  "what": "hit@3",
+  "old": 0.7367,
+  "new": 0.7402
+ },
+ {
+  "artifact": "law_eval_ranks_full.json",
+  "what": "hit@5",
+  "old": 0.8078,
+  "new": 0.8114
+ },
+ {
+  "artifact": "law_eval_ranks_full.json",
+  "what": "hit@10",
+  "old": 0.8754,
+  "new": 0.879
+ },
+ {
+  "artifact": "law_eval_ranks_full.json",
+  "what": "mrr",
+  "old": 0.6586,
+  "new": 0.662
+ },
+ {
+  "artifact": "law_eval_ranks_full.json",
+  "what": "strat.flagged.n",
+  "old": 27,
+  "new": 26
+ },
+ {
+  "artifact": "law_eval_ranks_full.json",
+  "what": "strat.regolded.n",
+  "old": 21,
+  "new": 22
+ },
+ {
+  "artifact": "law_eval_repro.json",
+  "what": "TOP27031.rank",
+  "old": null,
+  "new": 1
+ },
+ {
+  "artifact": "law_eval_repro.json",
+  "what": "hit@1",
+  "old": 0.395,
+  "new": 0.3986
+ },
+ {
+  "artifact": "law_eval_repro.json",
+  "what": "hit@3",
+  "old": 0.6477,
+  "new": 0.6512
+ },
+ {
+  "artifact": "law_eval_repro.json",
+  "what": "hit@5",
+  "old": 0.7295,
+  "new": 0.7331
+ },
+ {
+  "artifact": "law_eval_repro.json",
+  "what": "hit@10",
+  "old": 0.8114,
+  "new": 0.8149
+ },
+ {
+  "artifact": "law_eval_repro.json",
+  "what": "mrr_all",
+  "old": 0.5364,
+  "new": 0.54
+ },
+ {
+  "artifact": "gold_adjudicated_metrics.json",
+  "what": "new_gold_adjudicated (rerank) hit@1",
+  "old": 0.484,
+  "new": 0.4484
+ },
+ {
+  "artifact": "gold_adjudicated_metrics.json",
+  "what": "new_gold_adjudicated (rerank) mrr",
+  "old": 0.6212,
+  "new": 0.5964
+ },
+ {
+  "artifact": "gold_pass3 agreement",
+  "what": "gold-set agreement (vs applied golds)",
+  "old": 0.5536,
+  "new": 0.5714
+ },
+ {
+  "artifact": "llm_rag_result.json",
+  "what": "norag.span_f1",
+  "old": 0.3244,
+  "new": 0.325
+ },
+ {
+  "artifact": "llm_rag_result.json",
+  "what": "rag_hybrid.span_f1",
+  "old": 0.465,
+  "new": 0.4662
+ },
+ {
+  "artifact": "llm_rag_result.json",
+  "what": "rag_hybrid.ctx_hit5",
+  "old": 0.7295,
+  "new": 0.7402
+ },
+ {
+  "artifact": "llm_rag_result.json",
+  "what": "rag_hybrid_tcr.span_f1",
+  "old": 0.4885,
+  "new": 0.4896
+ },
+ {
+  "artifact": "llm_rag_result.json",
+  "what": "rag_hybrid_tcr.ctx_hit5",
+  "old": 0.8114,
+  "new": 0.8149
+ },
+ {
+  "artifact": "llm_rag_result.json",
+  "what": "rag_rerank_tcr.cite_acc",
+  "old": 0.6,
+  "new": 0.6036
+ },
+ {
+  "artifact": "llm_rag_result.json",
+  "what": "rag_rerank_tcr.span_f1",
+  "old": 0.4897,
+  "new": 0.4904
+ },
+ {
+  "artifact": "llm_rag_result.json",
+  "what": "rag_rerank_tcr.ctx_hit5",
+  "old": 0.8464,
+  "new": 0.85
+ },
+ {
+  "artifact": "docs/annotation/review_sheet_60.csv",
+  "what": "rows missing as_of",
+  "old": 50,
+  "new": 0
+ },
+ {
+  "artifact": "docs/annotation/review_sheet_60.csv",
+  "what": "rows with gold != applied gold",
+  "old": 8,
+  "new": 7
+ }
+]

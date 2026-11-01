@@ -12,7 +12,7 @@
    "summary": {
     "n": 281,
     "cite_acc": 0.0036,
-    "span_f1": 0.3244,
+    "span_f1": 0.325,
     "abstain_rate": 0.548,
     "ctx_hit5": 0.0,
     "mean_ans_tokens": 78.2
@@ -378,7 +378,7 @@
     "TOP27031": {
      "answer": "Việc thu thập chứng cứ vụ án dân sự được thực hiện theo quy định tại Điều 91 Bộ luật tố tụng dân sự năm 2015.",
      "cite_ok": false,
-     "span_f1": 0.381,
+     "span_f1": 0.5532,
      "abstain": false,
      "ctx_hit5": false
     },
@@ -1991,9 +1991,9 @@
    "summary": {
     "n": 281,
     "cite_acc": 0.4875,
-    "span_f1": 0.465,
+    "span_f1": 0.4662,
     "abstain_rate": 0.1103,
-    "ctx_hit5": 0.7295,
+    "ctx_hit5": 0.7402,
     "mean_ans_tokens": 83.6
    },
    "per_q": {
@@ -2168,9 +2168,9 @@
     "TOP27031": {
      "answer": "Việc thu thập chứng cứ vụ án dân sự thực hiện theo quy định tại Chương VII của Bộ luật này.",
      "cite_ok": false,
-     "span_f1": 0.3793,
+     "span_f1": 0.7143,
      "abstain": false,
-     "ctx_hit5": false
+     "ctx_hit5": true
     },
     "GEN94343": {
      "answer": "Bên vận chuyển có quyền từ chối vận chuyển tài sản không đúng với loại tài sản đã thoả thuận trong hợp đồng và từ chối vận chuyển tài sản cấm giao dịch, tài sản có tính chất nguy hiểm, độc hại, nếu bên vận chuyển biết hoặc phải biết. Điều này được quy định tại các Điều 543 Mục 2, Điều 535 Khoản 2 BLDS2005, Điều 543 Mục 2 BLDS1995, Điều 535 Khoản 2 BLDS1995 và Điều 535 Khoản 4 BLDS2015.",
@@ -2527,7 +2527,7 @@
      "cite_ok": false,
      "span_f1": 0.6095,
      "abstain": false,
-     "ctx_hit5": false
+     "ctx_hit5": true
     },
     "GEN99286": {
      "answer": "Việc thành lập, hoạt động và chấm dứt pháp nhân thương mại thực hiện theo quy định của Bộ Luật Dân sự 2015 (BLDS2015) tại Điều 75 và Điều 76.",
@@ -3248,7 +3248,7 @@
      "cite_ok": false,
      "span_f1": 0.4364,
      "abstain": false,
-     "ctx_hit5": false
+     "ctx_hit5": true
     },
     "GEN20094": {
      "answer": "Không đủ thông tin. Theo các trích dẫn luật cung cấp, bên thuê đã đạt được mục đích thuê không phải là một nguyên nhân chính thức để chủ nhà đòi thêm tiền thuê. Điều này liên quan đến các quyền và nghĩa vụ cụ thể của bên thuê và bên cho thuê như đã được quy định trong các điều khoản của hợp đồng thuê nhà. Trong trường hợp này, bạn nên tham khảo ý kiến của một chuyên gia pháp lý để có hướng giải quyết phù hợp nhất dựa trên nội dung chi tiết của hợp đồng thuê nhà và các quy định cụ thể của pháp luật.",
@@ -3970,9 +3970,9 @@
    "summary": {
     "n": 281,
     "cite_acc": 0.6014,
-    "span_f1": 0.4885,
+    "span_f1": 0.4896,
     "abstain_rate": 0.1068,
-    "ctx_hit5": 0.8114,
+    "ctx_hit5": 0.8149,
     "mean_ans_tokens": 81.4
    },
    "per_q": {
@@ -4161,9 +4161,9 @@
     "TOP27031": {
      "answer": "Việc thu thập chứng cứ vụ án dân sự thực hiện theo quy định tại Chương VII của Bộ luật này.",
      "cite_ok": false,
-     "span_f1": 0.3793,
+     "span_f1": 0.7143,
      "abstain": false,
-     "ctx_hit5": false
+     "ctx_hit5": true
     },
     "GEN51489": {
      "answer": "Theo Điều 318, Khoản 1 và Khoản 2 của Bộ Luật Đất đai 2015 (BLDS2015), nếu bạn thế chấp toàn bộ hoặc một phần bất động sản có vật phụ, thì vật phụ của tài sản đó cũng sẽ thuộc tài sản thế chấp, trừ trường hợp có thỏa thuận khác. Do đó, nếu tài sản của bạn bao gồm cả vật phụ, vật phụ đó có thể bị thế chấp. Tuy nhiên, điều này phụ thuộc vào thỏa thuận giữa bên thế chấp và bên nhận thế chấp.",
@@ -5948,10 +5948,10 @@
   "rag_rerank_tcr": {
    "summary": {
     "n": 280,
-    "cite_acc": 0.6,
-    "span_f1": 0.4897,
+    "cite_acc": 0.6036,
+    "span_f1": 0.4904,
     "abstain_rate": 0.1107,
-    "ctx_hit5": 0.8464,
+    "ctx_hit5": 0.85,
     "mean_ans_tokens": 83.7
    },
    "per_q": {
@@ -7749,10 +7749,10 @@
     },
     "TOP27031": {
      "answer": "Việc thu thập chứng cứ vụ án dân sự thực hiện theo quy định tại Điều 50 của Bộ luật Tố tụng Dân sự (BLTTDS).",
-     "cite_ok": false,
-     "span_f1": 0.4194,
+     "cite_ok": true,
+     "span_f1": 0.6087,
      "abstain": false,
-     "ctx_hit5": false
+     "ctx_hit5": true
     },
     "GEN83997": {
      "answer": "Khi tổ hợp tác bị giải thể, khoản nợ của tổ hợp tác cần được xử lý theo các bước sau:\n\n1. Tổ hợp tác phải thanh toán các khoản nợ của tổ. Nếu tài sản của tổ hợp tác không đủ để trả nợ, các tổ viên sẽ phải sử dụng tài sản riêng của mình để thanh toán theo quy định tại Điều 117 của Bộ luật Dân sự 2005.\n\n2. Sau khi tất cả các khoản nợ đã được thanh toán, nếu tài sản của tổ hợp tác vẫn còn lại, nó sẽ được chia cho các tổ viên theo tỷ lệ tương ứng với phần đóng góp của mỗi người, trừ trường hợp có thoả thuận khác.\n\nTheo Điều 120 BLDS2005, khi tổ hợp tác chấm dứt, tổ hợp tác phải thanh toán các",
@@ -7919,5 +7919,5 @@
   }
  },
  "runtime_sec": 973.0,
- "rescore_note": "cite_acc and span_f1 recomputed from stored greedy answers after pass-3 gold updates; abstain and ctx_hit5 unchanged (answer/context dependent)"
+ "rescore_note": "v1.0.1: cite_acc, span_f1 and ctx_hit5 recomputed from stored greedy answers/contexts against the APPLIED adjudicated golds (the v1.0.0 rescore kept run-time ctx_hit5, which predated the gold chain); abstain unchanged (answer-dependent)."
 }

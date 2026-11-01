@@ -3,39 +3,42 @@
 #
 #   bash tools/reproduce.sh
 #
-# Yeu cau: Python 3.9+ va numpy (pip install -r requirements.txt)
+# Yeu cau: Python 3.9+ va numpy/scipy (pip install -r requirements.txt)
+# v1.0.1: sua loi buoc 7 (go rong bi goi voi chuoi rong); them buoc kiem
+# chung rescore; doi ten buoc cho dung thu tu.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 say() { printf '\n=== %s ===\n' "$1"; }
 PY="${PYTHON:-python3}"
 
-say "1/6 Cham lai ket qua truy hoi (BM25 + vector da luu + RRF)"
+say "1/7 Cham lai ket qua truy hoi (BM25 + vector da luu + RRF)"
 "$PY" src/law_eval_repro.py
 
-say "2/6 Tinh lai chi so sau khi xep lai (tu xep hang da luu, khong can GPU)"
+say "2/7 Tinh lai chi so sau khi xep lai (tu xep hang da luu, khong can GPU)"
 "$PY" src/law_rerank_verify.py
 
-say "3/6 Do chat luong du lieu chunk"
+say "3/7 Do chat luong du lieu chunk"
 "$PY" src/law_quality.py
 
-say "4/6 Xuat va kiem chung do thi tri thuc (RDF / JSON-LD)"
+say "4/7 Xuat va kiem chung do thi tri thuc (RDF / JSON-LD)"
 "$PY" src/law_rdf_export.py
 "$PY" src/law_rdf_verify.py
 
-say "5/6 Lap chi muc dieu khoan"
+say "5/7 Lap chi muc dieu khoan"
 "$PY" src/law_articles_index.py
 
-say "6/6 Kiem dinh thong ke cap doi (LLM RAG: McNemar + Wilcoxon)"
+say "6/7 Kiem dinh thong ke cap doi (LLM RAG: McNemar + Wilcoxon)"
 "$PY" src/law_rag_signif.py
 
-say "7/7 Cham lai cohort mo rong (round 1 + round 2, khong GPU)"
-"" src/law_extension_eval.py
-"" src/law_extension_eval.py benchmark/law_bench_extension2.json benchmark/extension2_question_vectors.json benchmark/extension2_eval_ranks.json
-"" src/law_ranks_full_rebuild.py verify
+say "7/7 Cham lai cohort mo rong + xac minh xep hang loi + rescore LLM"
+"$PY" src/law_extension_eval.py
+"$PY" src/law_extension_eval.py benchmark/law_bench_extension2.json benchmark/extension2_question_vectors.json benchmark/extension2_eval_ranks.json
+"$PY" src/law_ranks_full_rebuild.py verify
+"$PY" src/law_llm_rag_rescore.py --check
 
 say "Ket qua:"
 ls -l benchmark/law_eval_repro.json benchmark/rerank_verify.json \
+      benchmark/extension_eval_ranks.json benchmark/extension2_eval_ranks.json \
       provenance/chunk_quality.json provenance/rdf_verify.json \
-      docs/graph/law_graph.ttl docs/graph/law_graph.jsonld \
-      docs/graph/law_articles.json
+      docs/graph/law_graph.ttl docs/graph/law_graph.jsonld

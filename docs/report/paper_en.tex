@@ -1,0 +1,346 @@
+% !TeX program = tectonic
+%% ViCivil-TKG — research paper v1.1.0 (English edition; conference style,
+%% two columns, grayscale-safe). Every number is derived from released
+%% artifacts and machine-checked by scripts/verify_paper_numbers.py
+%% (--mode=audit and --mode=cover must both pass).
+%% Compile: tectonic paper_en.tex
+\documentclass[10pt,a4paper,twocolumn]{article}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+\setmonofont{Liberation Mono}[Scale=0.90]
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\usepackage[a4paper,left=1.7cm,right=1.7cm,top=2.0cm,bottom=2.0cm,columnsep=0.55cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,labelsep=period,skip=4pt}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+
+\setlength{\parskip}{1.5pt}
+\setlength{\tabcolsep}{3.6pt}
+\renewcommand{\arraystretch}{1.06}
+
+% ---- grayscale defaults for pgfplots (no colour anywhere) ----
+\pgfplotsset{
+  every axis/.append style={axis line style={black}, tick style={black,semithick}},
+  every axis label/.append style={font=\small},
+  tick label style={font=\footnotesize},
+  legend style={font=\footnotesize, draw=black!60, fill=white},
+  yticklabel style={/pgf/number format/fixed},
+}
+
+\newcommand{\hit}{\textsc{Hit}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\begin{document}
+
+\twocolumn[{%
+\begin{center}
+{\LARGE\bfseries ViCivil-TKG: A Temporally Anchored Benchmark for\\[3pt]
+Vietnamese Civil-Law Question Answering with\\[3pt]
+Multi-Round Gold-Answer Adjudication\par}
+\vspace{7pt}
+{\normalsize Nguyễn Tiến Đạt\par}
+\vspace{1pt}
+{\small Open project ViCivil-TKG --- \url{https://huggingface.co/datasets/datbazuka2502/vicivil-tkg} $\cdot$ \url{https://github.com/ntd25022006q/vicivil-tkg}\par}
+\end{center}
+\vspace{5pt}
+\begin{center}
+\begin{minipage}{0.885\textwidth}
+{\small
+\noindent\textbf{Abstract.} We introduce \textbf{ViCivil-TKG}, a benchmark for Vietnamese civil-law question answering built around two under-addressed challenges: (i) \emph{temporal validity} --- the same question has different answers under different applicability windows of a statute; and (ii) \emph{gold-label reliability} --- most automatically generated questions carry unverified gold answers. The benchmark publishes \textbf{451 validated questions} (a 281-question core with 12 hand-written and 269 controlled-generated items; 106 round-1 extension items; 64 round-2 items from the 1996--2015 statute era) over a corpus of 20 legal documents with 13{,}151 passages, together with \textbf{226 publicly quarantined questions} that count in no metric. Every gold answer passes a four-stage adjudication chain: two-tier generation-time auditing, two-round re-anchoring with a larger judge, a pass-3 sweep over 99 weak-gold suspects with three guardrails, and an agreement audit on a fixed 60-question sample; afterwards no question remains unverifiable. On the core set, temporal-consistency retrieval (TCR) raises the citation accuracy of Qwen2.5-3B from 0.488 to 0.601 (McNemar $p=5.8\times10^{-5}$; 0.004 without context) and retrieval reaches \hit{}@5 0.811; on the 1996--2015 cohort TCR lifts \hit{}@5 from 0.703 to 0.781 and reranking raises \hit{}@1 to 0.703. Full adjudication trails, a logged data-integrity audit (\texttt{v1.0.1}), and a GPU-free reproduction script are released. This document is the English edition (v1.1.0) of the reference paper; the measurements are unchanged from v1.0.1.\par}
+\vspace{3pt}
+{\small\noindent\textbf{Keywords:} legal question answering; Vietnamese datasets; temporal retrieval; gold-label adjudication; RAG.\par}
+\end{minipage}
+\end{center}
+\vspace{9pt}
+}]
+
+\section{Introduction}
+
+Legal question-answering systems must be considerably more accurate than open-domain ones: citing the wrong article has real legal consequences. Building an evaluation suite for this domain runs into two obstacles. First, Vietnamese statutes have explicit \emph{effective dates}: the 2015 Civil Code replaced the 2005 Code, ministerial decrees are replaced on a rolling cycle, so the question ``how long is the limitation period for a claim to recover property?'' must be answered from the statute that was in force \emph{at the question's time point}, not from the newest one. Second, QA sets generated automatically with LLMs assume the gold answer is correct, whereas in practice gold anchoring --- pointing to the exact passage of law that grounds the answer --- is the largest source of error.
+
+This paper presents ViCivil-TKG, a benchmark covering both aspects. The contributions are: \textbf{(C1)} a benchmark of 451 published questions over a corpus of 20 statutes (13{,}151 passages), each question carrying an \code{as\_of} date and a gold anchor to an exact passage identifier, plus 226 publicly quarantined questions; \textbf{(C2)} a \emph{four-stage gold adjudication chain} with multiple independent judge models, guardrails on every application, full provenance, and public quarantine of rejected items; \textbf{(C3)} a temporal-consistency retrieval (TCR) protocol with paired statistical tests for both retrieval and generation; and \textbf{(C4)} a \emph{data-integrity audit} of the entire release in which every discrepancy found was fixed with a logged trail (v1.0.1) --- a practice we argue should be standard for benchmark datasets.
+
+\section{Related Work}
+
+\textbf{Retrieval and QA benchmarks.} BEIR~\cite{thakur2021beir} standardises zero-shot retrieval evaluation across domains; LexGLUE~\cite{chalkidis2022lexglue} aggregates English legal NLP tasks. Neither provides temporal-validity segmentation nor Vietnamese statutes, and their gold labels are expensively human-verified --- unlike our controlled generation with multi-round adjudication. SQuAD~2.0~\cite{rajpurkar2018squad} introduced unanswerable questions, close in spirit to the abstention behaviour we measure through the rate of ``insufficient information'' replies.
+
+\textbf{Dense retrieval and fusion.} BM25~\cite{robertson2009bm25} remains a strong retrieval backbone; DPR~\cite{karpukhin2020dpr} adds a semantic signal; Reciprocal Rank Fusion~\cite{cormack2009rrf} merges two rankings without training. We use exactly BM25 + dense + RRF in every experiment, and add the temporal-validity filter (TCR) built on the statute timeline graph. BGE-reranker~\cite{xiao2024cpack} serves as the reranking stage; RAG~\cite{lewis2020rag} and the Qwen family~\cite{yang2024qwen25} are the substrate for the cited-generation conditions.
+
+\section{The ViCivil-TKG Dataset}
+
+\subsection{Corpus of legal documents}
+
+The corpus covers 20 Vietnamese civil-law documents from 1995--2026 (the Civil Codes of 1995/2005/2015, the 2004 Civil Procedure Code and its consolidated text, the Marriage and Family Laws of 2000/2014, the 2008 Civil Judgment Enforcement Law and its consolidation, the 2010 Adoption Law, the State Compensation Liability Law, implementing decrees, and newly enacted 2026 documents), segmented into \textbf{13{,}151 passages} along the article--clause--point structure. Every passage carries mandatory provenance: \code{source\_url}, \code{source\_type} (official / official-copy / semi-official / mirror), \code{fetched}, and the validity window \code{valid\_from}/\code{valid\_to} taken from a temporal graph of 37 documents with 24 succession--amendment edges. Two passages extracted from a corrupted \code{.doc} conversion were dropped and logged; passage counts were re-counted directly on the released copy during the v1.0.1 audit.
+
+\subsection{Controlled question generation}
+
+Questions are generated locally with \code{qwen2.5:14b}, batch-wise from source passages, under three constraints: (i) the \code{as\_of} date must lie inside the validity window of the source statute; (ii) the question must be answerable \emph{only} from the source passage and its directly related articles; (iii) within-batch deduplication uses question vectors (768-dim, \code{embeddinggemma:300m}). The core set contains 269 generated plus 12 hand-written questions (CIV001--CIV012, one of which probes the abstention behaviour when the governing statute is not yet in force). Two extension waves added 106 published questions (round~1, from 242 generated) and 154 questions generated from three 1996--2015-era documents (the 2004 Civil Procedure Code, Decree 158/2005 on civil status, and Decree 126/2014 implementing the Marriage and Family Law) with quotas 103/30/27. 28 of the 281 core questions originally carried an \code{as\_of} date before the effective date of their gold statute; all were moved into the correct validity phase with a full log (\code{as\_of\_fixes.json}). Extension-cohort questions derive \code{as\_of} from the graph at generation time (0 repairs).
+
+\subsection{The gold adjudication chain}
+
+This is the central contribution. The four-stage chain (Figure~\ref{fig:pipeline}) leaves its full trail in \code{benchmark/}:
+
+\begin{enumerate}
+\item \textbf{Two-tier audit at generation time.} Every generated question is scored immediately by an 8B judge (\code{usable: yes/partial/no}); items that fail ``yes'' are re-scored by a 14B judge with an evidence-quote requirement. Items failing both tiers are publicly quarantined.
+\item \textbf{Two-round re-anchoring.} For questions with suspect golds, the regold pipeline proposes a replacement passage and asks a supervising LLM to confirm it in \emph{two independent rounds}; only passages accepted by both rounds are applied. On the core set, 38 questions were re-anchored this way (two-round agreement 0.888).
+\item \textbf{Pass-3: a sweep over 99 weak-gold suspects.} The entire weak-gold group (never-verified, re-golded, multi-part, and hand-written items) is re-scored by a deeper judge (\code{qwen3:14b}) under the protocol ``current gold + 8 stored retrieval candidates'': verdicts are \emph{gold-ok} (66), \emph{reanchor} (3, plus 1 blocked by a guardrail because the proposal was not among the stored candidates), or \emph{flag} (29). Every application must pass three guardrails: the passage must exist in the corpus, must appear in the stored candidate list, and must be valid under the temporal window at \code{as\_of}. The final 2 ``unverifiable'' questions were rechecked separately and both were successfully re-anchored to concrete passages.
+\item \textbf{Independent agreement audit.} On a fixed 60-question sample (seed 20261101), an independent judge chooses the legal basis among 8 candidates: 56/60 parse successfully, and 32/56 pick the applied gold set (\textbf{0.571}), with 32/56 echoing the primary gold passage (\textbf{0.571}). We publish these numbers \emph{unfiltered} as a measure of how hard gold anchoring is in this domain, and stress that this is a model-vs-model check, not a substitute for human evaluation (Section~\ref{sec:limits}); the 60-question human adjudication kit with a Cohen/Fleiss $\kappa$ script is released under \code{docs/annotation/}.
+\end{enumerate}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  node distance=3.2mm, >=Stealth,
+  box/.style={draw=black, fill=black!7, rounded corners=1.2pt, align=center,
+              font=\footnotesize, inner sep=3.2pt, text width=4.5cm},
+  side/.style={box, fill=black!14, text width=2.6cm},
+  lbl/.style={font=\scriptsize, align=center}]
+
+\node[box] (gen) {\textbf{Controlled generation} (qwen2.5:14b)\\ 281 core (269 gen.\ + 12 hand) $\cdot$ 242 round-1 $\cdot$ 154 round-2};
+\node[side, right=of gen] (quar) {\textbf{Public quarantine}\\ 226 questions\\ (136 + 90; 89 two-tier fail + 1 near-duplicate cos 0.993)};
+\node[box, below=of gen] (two) {\textbf{Two-tier audit} at generation\\ 8B judge $\rightarrow$ 14B judge + evidence};
+\node[box, below=of two] (regold) {\textbf{Two-round re-anchoring}\\ 38 core questions (agreement 0.888)};
+\node[box, below=of regold] (pass3) {\textbf{Pass-3} (qwen3:14b) over 99 suspects\\ 66 gold-ok $\cdot$ 29 flag $\cdot$ 3 reanchor + 1 blocked};
+\node[side, right=of pass3] (unv) {2 ``unverifiable'' questions $\rightarrow$ separate recheck: both re-anchored\\ {\scriptsize(applied to the question files: v1.0.1)}};
+\node[box, below=of pass3, fill=black!18] (pub) {\textbf{Published: 451 questions}\\ 229 verified $\cdot$ 22 regolded $\cdot$ 26 flagged $\cdot$ 4 author-verified\\ + 226 quarantined + 60-question IAA kit};
+
+\draw[->] (gen) -- (two);
+\draw[->] (gen) -- node[lbl, above, sloped]{fails both tiers} (quar);
+\draw[->] (two) -- node[lbl, right]{passes} (regold);
+\draw[->] (regold) -- (pass3);
+\draw[->] (pass3) -- (pub);
+\draw[->] (pass3) -- node[lbl, above, sloped]{guardrail} (unv);
+\end{tikzpicture}
+\caption{The four-stage gold adjudication chain of ViCivil-TKG. Every branch leaves a public trail; quarantined questions never enter any metric.}
+\label{fig:pipeline}
+\end{figure}
+
+After the chain, \textbf{281/281 core questions carry a verified gold}. The final tier structure is 229 \code{verified}, 22 \code{regolded}, 4 \code{author-verified}, 26 \code{flagged} --- in the v1.0.1 audit (Section~\ref{sec:audit}) we found that the pass-3 reanchor of one question (TOP27031) had been recorded in the adjudication file but never persisted into the question file, so scoring used the stale gold (rank 31 instead of rank 1); the fix was applied with a log entry, the tier moved from \code{flagged} to \code{regolded}, and all metrics were recomputed. 26 questions carry the \code{flagged} tier and are excluded from all primary metrics, with reasons published.
+
+\subsection{Cross-cohort deduplication}
+
+Round~2 adds the step that round~1 lacked: cosine similarity between every newly generated question and all 387 already-published questions (threshold 0.95). One near-exact duplicate of a core question (cosine 0.9931) was quarantined; 0 questions matched the round-1 quarantine group. The comparison log is stored in \code{extension2\_dedup\_audit.json}. Hence the 154 round-2 generated questions yield 64 published + 90 quarantined (89 two-tier failures + 1 duplicate).
+
+\subsection{Release structure}
+
+The benchmark releases \textbf{451 questions} over three cohorts (281 core, 106 round-1, 64 round-2) and \textbf{226 quarantined questions}, each with a complete per-question trail. The core set is split stratified dev/test 140/141. Every extension cohort publishes stratified metrics by gold tier; quarantined questions \emph{never} enter any metric. All artifacts carry SHA-256 hashes and passed a 12-point audit (manifest, JSON parse-all, matrix shape, gold chains, extraction coverage, secret scan, schema, duplicate accounting, validity-window sanity, kv references, odd-character gate, identifier set).
+
+\section{Experimental Setup}
+
+\textbf{Retrieval.} Unified protocol: BM25 (pure Python, $k_1{=}1.2$, $b{=}0.75$) + 768-dim dense vectors (stored passage vectors, \code{embeddinggemma:300m}) fused by RRF $k{=}60$, drawing 200 candidates per branch. Scoring is strict gold-passage-identifier matching; we report \hit{}@\{1,3,5,10\} and MRR. \emph{MRR semantics:} the core TCR results use full-list MRR; the no-TCR repro is capped at the top-10 window (MRR@10) because of its re-scoring protocol; the gold-effect tables use MRR within the stored 30-candidate window (MRR@30) --- each is annotated separately to avoid cross-protocol comparisons. TCR (temporal-consistency retrieval) filters candidates by the validity window of their statute at the question's \code{as\_of}; statutes outside the graph pass through unchanged. For extension cohorts a BGE-reranker-v2-m3 stage over 30 candidates is applied before TCR. Statistical significance: paired Wilcoxon on the reciprocal rank of the first gold hit.
+
+\textbf{Cited generation.} Qwen2.5-3B-Instruct (greedy, max 180 new tokens, batch 6) runs under four conditions: \emph{norag} (no context), \emph{rag\_hybrid} (top-5 fused), \emph{rag\_hybrid\_tcr} (top-5 after TCR), \emph{rag\_rerank\_tcr} (top-5 after rerank + TCR). We measure \emph{cite\_acc} (the answer names the correct article numbers of the gold set), \emph{span\_F1} (token F1 against the gold text), \emph{abstain} (rate of ``insufficient information'' replies), and \emph{ctx\_hit5} (the gold set appears in the context). Significance: exact McNemar for cite\_acc, Wilcoxon for span\_F1.
+
+\textbf{Reproduction.} All retrieval metrics and the LLM rescore are computed from stored artifacts (vectors, rankings, answers) and re-runnable with \code{tools/reproduce.sh} without GPU or network.
+
+\section{Results}
+
+\subsection{Retrieval on the core set}
+
+Table~\ref{tab:core-retrieval} reports the 281 core questions under the documented hybrid+TCR protocol: \hit{}@5 \textbf{0.811} and MRR \textbf{0.662} overall; the \code{verified} stratum (229 questions) reaches \hit{}@5 0.821 and MRR 0.693. The three weaker strata are published verbatim: \code{flagged} (26 questions, \hit{}@5 0.692), \code{regolded} (22 questions, \hit{}@1 0.273 but \hit{}@5 0.864), and \code{author-verified} (4 questions). The ``low \hit{}@1, high \hit{}@5'' pattern of the regolded stratum shows that re-anchored passages often sit deep in the candidate list --- exactly the case that multi-round adjudication prevents from being scored as a miss. The no-TCR repro (same scoring code, no temporal filtering) reaches \hit{}@5 0.733 vs.\ 0.811: the gap is the contribution of temporal filtering, and the gain reproduces on both extension cohorts (Figure~\ref{fig:hitk}).
+
+\begin{table}[t]
+\centering\scriptsize
+\caption{Retrieval on the 281-question core (hybrid BM25+dense+RRF, temporal-consistency filter TCR; full-list MRR).}
+\label{tab:core-retrieval}
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Stratum & $n$ & \hit{}@1 & \hit{}@3 & \hit{}@5 & \hit{}@10 & MRR \\
+\midrule
+All & 281 & \textbf{0.541} & \textbf{0.740} & \textbf{0.811} & \textbf{0.879} & \textbf{0.662} \\
+\quad verified & 229 & 0.585 & 0.760 & 0.821 & 0.895 & 0.693 \\
+\quad regolded & 22 & 0.273 & 0.773 & 0.864 & 0.909 & 0.532 \\
+\quad auth.-verified & 4 & 0.250 & 0.500 & 0.750 & 0.750 & 0.403 \\
+\quad flagged (out of metrics) & 26 & 0.423 & 0.577 & 0.692 & 0.731 & 0.538 \\
+\midrule
+Repro without TCR (MRR@10) & 281 & 0.399 & 0.651 & 0.733 & 0.815 & 0.540 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.48\textwidth, height=5.4cm,
+  symbolic x coords={1,3,5,10}, xtick=data,
+  ymin=0.3, ymax=1.0, ytick={0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0},
+  ylabel={\hit{}@$k$ (core, 281 q)}, xlabel={$k$},
+  legend pos=south east, ymajorgrids, grid style={black!25}]
+\addplot[black, thick, mark=*, mark size=1.6pt] coordinates {(1,0.541) (3,0.740) (5,0.811) (10,0.879)};
+\addlegendentry{hybrid + TCR}
+\addplot[black, thick, densely dashed, mark=square*, mark size=1.5pt, mark options={fill=white}] coordinates {(1,0.399) (3,0.651) (5,0.733) (10,0.815)};
+\addlegendentry{hybrid (no TCR)}
+\end{axis}
+\end{tikzpicture}\hfill
+\begin{tikzpicture}
+\begin{axis}[width=0.48\textwidth, height=5.4cm,
+  symbolic x coords={1,3,5,10}, xtick=data,
+  ymin=0.3, ymax=1.0, ytick={0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0},
+  ylabel={\hit{}@$k$ (round-2, 64 q)}, xlabel={$k$},
+  legend pos=south east, ymajorgrids, grid style={black!25}]
+\addplot[black, thick, mark=*, mark size=1.6pt] coordinates {(1,0.703) (3,0.813) (5,0.828) (10,0.906)};
+\addlegendentry{rerank + TCR}
+\addplot[black, thick, densely dashed, mark=square*, mark size=1.5pt, mark options={fill=white}] coordinates {(1,0.531) (3,0.750) (5,0.781) (10,0.875)};
+\addlegendentry{hybrid + TCR}
+\addplot[black!55, thick, densely dotted, mark=triangle*, mark size=1.9pt, mark options={fill=black!55}] coordinates {(1,0.359) (3,0.578) (5,0.703) (10,0.797)};
+\addlegendentry{hybrid (no TCR)}
+\end{axis}
+\end{tikzpicture}
+\caption{Grayscale \hit{}@$k$ curves: (left) core set with and without temporal filtering; (right) the 1996--2015 cohort under three configurations. The same stored passage vectors and RRF fusion code produce every curve.}
+\label{fig:hitk}
+\end{figure*}
+
+\subsection{Effect of the gold adjudication chain}
+
+Table~\ref{tab:gold-effect} separates two quantities that were conflated in v1.0.0. The \emph{application effect} is the difference between the golds in the question file before and after persisting the pass-3 reanchor of TOP27031 (bug B1, Section~\ref{sec:audit}): \hit{}@5 of the rerank list moves 0.794$\rightarrow$0.797, MRR 0.5957$\rightarrow$0.5964; \hit{}@1 of the hybrid list 0.406$\rightarrow$0.409. The \emph{sensitivity row} scores the same stored candidate lists against the 24 gold sets that were ``recorded but never applied'' (18 version-equivalent sets + 6 reanchor proposals, one of which a guardrail blocked): \hit{}@1 0.484 and MRR 0.621 on the rerank list. This row is published as a sensitivity analysis over gold-set width and is \emph{not} a headline metric --- every primary number in this paper is scored against applied golds.
+
+\begin{table}[t]
+\centering\scriptsize
+\caption{Gold-set effect and sensitivity on the core set: same stored candidate lists (rerank / hybrid, 30 candidates, MRR@30), scored against different gold sets (281 questions).}
+\label{tab:gold-effect}
+\setlength{\tabcolsep}{2.4pt}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{Rerank list} & \multicolumn{3}{c}{Hybrid list} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Gold set & \hit{}@1 & \hit{}@5 & MRR & \hit{}@1 & \hit{}@5 & MRR \\
+\midrule
+Applied: before persist & 0.448 & 0.794 & 0.596 & 0.406 & 0.737 & 0.548 \\
+Applied: after persist (v1.0.1) & 0.448 & \textbf{0.797} & \textbf{0.596} & \textbf{0.409} & \textbf{0.740} & \textbf{0.552} \\
+\midrule
+24 recorded, never applied & 0.484 & 0.808 & 0.621 & 0.441 & 0.744 & 0.571 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Cited generation on the core set}
+
+Table~\ref{tab:core-llm} and Figure~\ref{fig:llm} present the four conditions. Without context the model almost never names the correct article (cite\_acc 0.004) and abstains on 54.8\% of questions. Adding fused context lifts cite\_acc to 0.488; temporal filtering pushes it to \textbf{0.601} (+0.114 absolute, McNemar $p=5.8\times10^{-5}$; all comparisons against no-RAG reach $p<10^{-40}$). Rerank+TCR raises cite\_acc to 0.604 ($p=7.3\times10^{-4}$ vs.\ hybrid) and ctx\_hit5 to 0.850. The ctx\_hit5 values were recomputed in v1.0.1 against the applied golds (they previously retained run-time values recorded before the regold chain --- bug B5) and cross-check exactly against the retrieval \hit{}@5 of each configuration (0.740 / 0.815 / 0.850) --- an independent consistency check between two pipelines. Abstention stays near 11\% whenever context is present. Disclosed weaknesses: one question (NEW90253) is excluded from the rerank+TCR condition because its candidate pool emptied after temporal filtering ($n{=}280$); stored answers are verbatim and occasionally contain CJK characters emitted by the 3B model (11/281 no-RAG, $\le$5/281 in the RAG branches) --- no post-hoc cleaning is applied.
+
+\begin{table}[t]
+\centering\footnotesize
+\caption{Cited generation on the core set (Qwen2.5-3B-Instruct, greedy, 180 tokens; ctx\_hit5 scored against applied golds).}
+\label{tab:core-llm}
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular}{lccccc}
+\toprule
+Condition & cite\_acc & span\_F1 & abstain & ctx\_hit5 & $n$ \\
+\midrule
+No-RAG & 0.004 & 0.325 & 0.548 & --- & 281 \\
+RAG hybrid & 0.488 & 0.466 & 0.110 & 0.740 & 281 \\
+RAG hybrid + TCR & \textbf{0.601} & 0.490 & 0.107 & 0.815 & 281 \\
+RAG rerank + TCR & \textbf{0.604} & \textbf{0.490} & 0.111 & \textbf{0.850} & 280 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=\columnwidth, height=6.6cm,
+  ybar=1.2pt, bar width=6.8pt,
+  symbolic x coords={No-RAG, Hybrid, +TCR, Rerank+TCR},
+  xtick=data, x tick label style={rotate=18, anchor=east, font=\scriptsize},
+  ymin=0, ymax=0.92, ytick={0,0.1,...,0.9},
+  ylabel={cite\_acc / ctx\_hit5},
+  legend style={at={(0.5,1.16)}, anchor=south, legend columns=2,
+                legend cell align=left, font=\scriptsize},
+  ymajorgrids, grid style={black!25}, enlarge x limits=0.18]
+\addplot[black, fill=black!72] coordinates {(No-RAG,0.004) (Hybrid,0.488) (+TCR,0.601) (Rerank+TCR,0.604)};
+\addlegendentry{core: cite\_acc}
+\addplot[black!45, fill=black!16] coordinates {(No-RAG,0.000) (Hybrid,0.391) (+TCR,0.531) (Rerank+TCR,0.531)};
+\addlegendentry{round-2: cite\_acc}
+\addplot[black, dashed, thick, sharp plot, mark=*, mark size=1.3pt] coordinates {(No-RAG,0.000) (Hybrid,0.740) (+TCR,0.815) (Rerank+TCR,0.850)};
+\addlegendentry{core: ctx\_hit5}
+\addplot[black!45, loosely dotted, very thick, sharp plot, mark=square*, mark size=1.2pt, mark options={fill=black!45}] coordinates {(No-RAG,0.000) (Hybrid,0.703) (+TCR,0.781) (Rerank+TCR,0.828)};
+\addlegendentry{round-2: ctx\_hit5}
+\end{axis}
+\end{tikzpicture}
+\caption{cite\_acc (bars) and ctx\_hit5 (lines) by condition on the core set (281 q) and the 1996--2015 cohort (64 q), grayscale. The bar--line gap of each shade shows that both cohorts still have headroom at the generation step.}
+\label{fig:llm}
+\end{figure}
+
+\subsection{Extension cohorts: round 1 and the 1996--2015 era}
+
+Table~\ref{tab:ext} summarises both cohorts. On round~1 (106 questions), TCR raises \hit{}@1 from 0.547 to 0.689 and \hit{}@5 from 0.906 to 0.925 (Wilcoxon $p=2.1\times10^{-5}$); reranking alone is not significant ($p=0.42$), and rerank+TCR at 0.651 is not either ($p=0.71$ vs.\ TCR) --- published as-is. On round~2 --- rarer and older 1996--2015 statutes --- every metric drops visibly: TCR raises \hit{}@5 from 0.703 to 0.781 and MRR 0.517$\rightarrow$0.648 ($p=4.0\times10^{-5}$); rerank+TCR reaches \hit{}@1 \textbf{0.703} ($p=1.4\times10^{-3}$ vs.\ TCR). For generation, the same improvement chain appears (0.000$\rightarrow$0.531 cite\_acc; McNemar $p=1.2\times10^{-10}$), although the span\_F1 of rerank+TCR beats pure TCR without reaching significance (Wilcoxon $p=0.083$). The round-2 \code{regolded} stratum (11 questions) is the hardest slice of the entire benchmark (\hit{}@1 0.091, \hit{}@5 0.364) --- a direct consequence of anchoring golds on old statutes, labelled publicly so users can stratify.
+
+\begin{table}[t]
+\centering\small
+\caption{Extension cohorts: retrieval (MRR@30 in parentheses) and paired Wilcoxon statistics.}
+\label{tab:ext}
+\begin{tabular}{lccc}
+\toprule
+ & \multicolumn{2}{c}{Round 1 ($n{=}106$)} & Round 2 ($n{=}64$) \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-4}
+Configuration & \hit{}@1 & \hit{}@5 & \hit{}@1 \\
+\midrule
+Hybrid (base) & 0.547 (0.700) & 0.906 & 0.359 (0.517) \\
+Hybrid + TCR & \textbf{0.689} (0.790) & \textbf{0.925} & 0.531 (0.648) \\
+Rerank & 0.585 (0.726) & 0.906 & 0.516 (0.654) \\
+Rerank + TCR & 0.651 (0.779) & 0.943 & \textbf{0.703} (0.766) \\
+\bottomrule
+\end{tabular}
+
+\vspace{3pt}
+{\footnotesize $p$ (TCR vs.\ base): $2.1\times10^{-5}$ (round 1), $4.0\times10^{-5}$ (round 2); $p$ (rerank+TCR vs.\ TCR): 0.71 (round 1, ns), $1.4\times10^{-3}$ (round 2). Round-2 \hit{}@5: 0.703 / 0.781 / 0.797 / 0.828 by row.}
+\end{table}
+
+\subsection{Statistical summary}
+
+Every primary comparison carries a paired test: (i) retrieval, TCR vs.\ base: $p=2.1\times10^{-5}$ (round 1), $p=4.0\times10^{-5}$ (round 2); (ii) rerank+TCR vs.\ TCR: $p=1.4\times10^{-3}$ (round 2); (iii) generation, hybrid+TCR vs.\ hybrid: McNemar $p=5.8\times10^{-5}$ (core), $p=0.012$ (round 2); no-RAG vs.\ hybrid+TCR: $p<10^{-40}$ on both cohorts. Non-significant span\_F1 comparisons are reported as such rather than omitted.
+
+\subsection{Data audit and reproduction (v1.0.1)}
+\label{sec:audit}
+
+Before freezing the release we ran an integrity audit over all published artifacts under a \emph{reproduce-then-patch} rule: every metric was recomputed independently from per-question artifacts, and a patch was applied only after the recomputation matched the published number to four decimal places. The audit confirmed EXT1/EXT2 exact matches, exact repro and gold-effect cells, and correct passage and cohort sizes by direct counting. Three real data defects were found and fixed with logs (\code{CHANGES.json}, 30 changes): (B1) the pass-3 reanchor of TOP27031 was never persisted into the question file (stale gold at rank 31, correct gold at rank 1) --- persisted, tier moved flagged$\rightarrow$regolded, all core metrics recomputed on applied golds; (B2) \code{gold\_adjudicated.json} mixed 24 recorded-but-never-applied gold sets into the applied map --- separated into \code{proposals\_not\_applied}; (B3) the human adjudication kit lacked \code{as\_of} in 50/60 rows and carried stale golds in 7/60 rows --- the kit was regenerated in sync with applied golds. Additionally ctx\_hit5 was recomputed (stale-value bug B5) and cross-checks exactly against per-configuration retrieval \hit{}@5. After the patch: core \hit{}@5 0.808$\rightarrow$0.811, MRR 0.659$\rightarrow$0.662, TCR cite\_acc unchanged at 0.601; EXT1/EXT2 unchanged. The full process, old$\rightarrow$new numbers, and the new SHA-256 hashes are published in \code{AUDIT\_2026-11-01.md} --- we argue audits of this kind should be mandatory for every public benchmark before submission.
+
+\section{Discussion and Limitations}
+\label{sec:limits}
+
+\textbf{Data limitations.} (1) Narrow domain: all questions belong to civil and civil-procedure law; 20 documents and 451 questions are small next to multi-domain benchmarks. (2) Non-uniform gold tiers: 26 core questions are flagged and excluded from primary metrics; the regolded stratum (22 questions) has systematically low \hit{}@1 --- users must stratify, as we do. (3) The independent judge agreement reaches only 0.571 on the 60-question sample; this is a model-vs-model check on an 8-candidate selection task --- a task with many defensible choices --- and \emph{does not replace} human evaluation; the 60-question human kit (with guidelines and Cohen/Fleiss $\kappa$) is released and is the required next step before claiming a human-validated benchmark. (4) Questions are LLM-generated and inherit the generator's biases; mitigated by vector deduplication, two-tier auditing, and public quarantine, but not eliminated. (5) Four round-2 \code{regolded} anchors (EXT20028, EXT20039, EXT20113, EXT20123 --- 4 of the 11) are temporally out of scope at the question's \code{as\_of}: three of them (EXT20028, EXT20039, EXT20113) point to consolidated texts whose validity window starts \emph{after} \code{as\_of}, while EXT20123 points to a BLDS~1995 passage whose validity window \emph{ended} on 2006-01-01, six years before its \code{as\_of}. Each anchor was accepted by the adjudication chain as the legal basis of the underlying question, but all four fall outside the validity windows at the stated dates, so TCR filtering penalises them by construction. We disclose them rather than silently re-anchoring a second time; under TCR they contribute to the low regolded-stratum numbers reported above.
+
+\textbf{Evaluation limitations.} The experiments use one 3B generator and one reranker; no larger LLM baseline or domain fine-tuning is included. TCR relies on a manually verified temporal graph; a wrong validity window propagates directly into the filter. Three MRR semantics (full-list / MRR@10 / MRR@30) are annotated separately but not yet unified --- normalising to full-list is the next technical task. cite\_acc measures naming the correct \emph{article numbers}, not quoting the correct \emph{passage}.
+
+\textbf{Ethics and intended use.} The corpus consists of public legal texts with per-passage provenance and source-type labels; no personal data is involved. The benchmark is intended for evaluating retrieval and QA systems on Vietnamese statutes; answers produced by models evaluated on it are not legal advice.
+
+\section{Conclusion}
+
+ViCivil-TKG demonstrates that two principles --- temporal-validity checking and multi-stage gold adjudication with public quarantine --- operate consistently on Vietnamese legal data and both yield measurable gains: TCR improves cite\_acc by +0.114 points ($p<10^{-4}$) and retrieval \hit{}@5 on every cohort; the adjudication chain eliminates the unverifiable-gold state entirely and makes gold-anchor quality measurable per stratum. The third methodological contribution is the reproduce-then-patch audit procedure with a full log (v1.0.1). The 451-question benchmark with 226 quarantined questions, full provenance, a human adjudication kit, and a GPU-free reproduction script is released for community scrutiny and extension; next steps in priority order: human adjudication on the stratified sample (kit available), unifying MRR semantics, extending to circular-level documents and adjacent legal domains, and benchmarking larger generators.
+
+\begin{thebibliography}{9}\small
+
+\bibitem{robertson2009bm25} S. Robertson, H. Zaragoza, ``The Probabilistic Relevance Framework: BM25 and Beyond,'' \emph{Foundations and Trends in Information Retrieval}, 3(4), 2009.
+
+\bibitem{cormack2009rrf} G. V. Cormack, C. L. A. Clarke, S. B\"uttcher, ``Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods,'' \emph{SIGIR}, 2009.
+
+\bibitem{karpukhin2020dpr} V. Karpukhin \emph{et al.}, ``Dense Passage Retrieval for Open-Domain Question Answering,'' \emph{EMNLP}, 2020.
+
+\bibitem{thakur2021beir} N. Thakur \emph{et al.}, ``BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models,'' \emph{NeurIPS Datasets and Benchmarks}, 2021.
+
+\bibitem{chalkidis2022lexglue} I. Chalkidis \emph{et al.}, ``LexGLUE: A Benchmark Dataset for Legal Language Understanding in English,'' \emph{ACL}, 2022.
+
+\bibitem{rajpurkar2018squad} P. Rajpurkar, R. Jia, P. Liang, ``Know What You Don't Know: Unanswerable Questions for SQuAD,'' \emph{ACL}, 2018.
+
+\bibitem{lewis2020rag} P. Lewis \emph{et al.}, ``Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,'' \emph{NeurIPS}, 2020.
+
+\bibitem{xiao2024cpack} S. Xiao \emph{et al.}, ``C-Pack: Packaged Resources To Advance General Chinese Embedding,'' \emph{SIGIR}, 2024.
+
+\bibitem{yang2024qwen25} A. Yang \emph{et al.}, ``Qwen2.5 Technical Report,'' \emph{arXiv:2412.15115}, 2024.
+
+\end{thebibliography}
+
+\end{document}
