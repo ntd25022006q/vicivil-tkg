@@ -97,11 +97,11 @@ d124d55388c325ca6561af0ba62da7b8281f4695155cd5b712604ff583d32045  ./docs/graph/l
 072c054f2a6310725e038c38a71e00052705e31835632462c9717a23a384e895  ./docs/graph/vega-embed.min.js
 cd32314b1e76e7d879dc9f0534b62be714df03554486c7ca2381abfd0a92d2f4  ./docs/graph/vega-lite.min.js
 e432c751a6363f4a61da62920cc7d7ebd13cf09d82949f8f486248f8071dc3ce  ./docs/graph/vega.min.js
-278060b1e211db9697ca72a5276efc2090ea8575e88c7e5fb94eb909205f8cc0  ./docs/report/ViCivil-TKG_paper.pdf
+1f468dc1acd8b358d48004d830e292b413e14137df7363e0ca9df78d3bba7c24  ./docs/report/ViCivil-TKG_paper.pdf
 5e404f71873f2f5c9b5bdc0a943e801a8c4337ee69179619cd2ab1082b721c36  ./docs/report/ViCivil-TKG_paper_en.pdf
 129d8fc29c733e0dee6efd426e7d20b8cf1a47c37dce315bd97724da0ddfd21b  ./docs/report/figures/fig_composition.png
 7f27370fcfb3e3204e94ad3018d373d3a17a6ed2ab565e8c75c8b229f43ab000  ./docs/report/figures/fig_llm_conditions.png
-8ca9065fa4cbe5e938ee4e6fb84e28eb80e633fba93c55147078b63ea2d52a01  ./docs/report/paper.tex
+13db4a10ba598c09fbfef409bb9e01f85d57ef11e04bb72d9df1094a959b13db  ./docs/report/paper.tex
 912ccbd4b95e3d54522a86470d91fc2ba1537f2f87ecb7e0ee9005d1bd2e5ded  ./docs/report/paper_en.tex
 04e13e7b3f8807a3e1aca1c3fff3e6fdc8b60a192e1df14d0ca2d7d3c926fcf6  ./index/kv_store_entity_chunks.json
 72240b062d1bbfac9a3c3a56493662eb370acab66494c09f437f321f6590a360  ./index/kv_store_relation_chunks.json
