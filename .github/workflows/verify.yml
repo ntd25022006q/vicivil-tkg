@@ -55,7 +55,13 @@ jobs:
         run: |
           python tools/law_sweep.py .
           python tools/law_manifest_full.py . /tmp/SHA256SUMS.check
-          if ! diff -q SHA256SUMS /tmp/SHA256SUMS.check; then
+          # README.md is INTENTIONALLY the GitHub edition here (the HF dataset
+          # card hash is what the server-side manifest records; the sweep's
+          # alias rule above already validated it) - so the README line is
+          # excluded from the byte-diff of the two manifests.
+          grep -v '  \./README\.md$' SHA256SUMS > /tmp/S1
+          grep -v '  \./README\.md$' /tmp/SHA256SUMS.check > /tmp/S2
+          if ! diff -q /tmp/S1 /tmp/S2; then
             echo "::error::Manifest khong khop voi thu muc hien tai - chay: python tools/law_manifest_full.py . SHA256SUMS (regenerate + push)"
             exit 1
           fi

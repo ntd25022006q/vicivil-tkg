@@ -1,4 +1,4 @@
-e4073c2115ee81fdc7f3b82d8d8275ace29351418049b9bd387ee1c988318fac  ./.github/workflows/verify.yml
+9b8115b90484322baf0097e53c559308f778075278c1b9df10b102e6ce23dd02  ./.github/workflows/verify.yml
 5d042e13953972e56d026f531719680c7fe022c27aa33f9fa5db076dd824e27b  ./AUDIT_2026-11-01.md
 16319378c7c876e241b50d695bf44ab1a3fd3f6217f58bb4c168d037b6e1edbf  ./CHANGES.json
 68087296b473c954353ea1bccf462c6fb0a668ce95198a16fbd83c34dbb9470c  ./CITATION.cff
@@ -204,7 +204,7 @@ cef4367389b7752f35b9ffcbd6cd3925e445d2a368d7d7c440a2d85dec145a4e  ./tools/lab-sc
 9f635eef66d2b7d46c3bab9594d501b3006a13831c5e5a9c90fbfb2a101495b9  ./tools/lab-scripts/lawreviewpkg.py
 8bfdb517f63c5d8ccfeedd3a6245cea45f11652f4cb7de40e122e363c1e99343  ./tools/law_extract_pilot.py
 3c66a8c7d1b9d08d5340947dfa434b0dec3b977131d231c2b5bf7a9064cfc028  ./tools/law_manifest.py
-902f014d2474d0edbd3b437d423c3ef6a33b222e2c8e479b3a506910d93280b4  ./tools/law_manifest_full.py
+c1de0ec772472d2c4b2468a107cb1884d87daf1daf383a706f2118397e2b3787  ./tools/law_manifest_full.py
 60f478150c4b06dd0fc812c4d5dd2b182e4b9acae6d0d210598e6ff98e34e374  ./tools/law_sweep.py
 cd37ac5056e8d6a8a318afb34d8a7ed2365a215d6059bb5a4a1176e0c4101ed2  ./tools/law_verify.py
 cef4367389b7752f35b9ffcbd6cd3925e445d2a368d7d7c440a2d85dec145a4e  ./tools/lawq_time_demo.py

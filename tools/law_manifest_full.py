@@ -19,7 +19,13 @@ skip = {os.path.abspath(out), os.path.abspath(os.path.join(root, "SHA256SUMS")),
         os.path.abspath(os.path.join(root, "provenance", "SHA256SUMS"))}
 lines = []
 for dirpath, _dirs, files in os.walk(root):
+    # skip VCS/cache dirs (same convention as tools/law_sweep.py): a git
+    # checkout carries .git/ and may carry __pycache__/.cache - none of them
+    # are release files, and the server-side regen_sums.py tree has no .git
+    _dirs[:] = [d for d in _dirs if d not in (".git", ".cache", "__pycache__")]
     for f in files:
+        if f.endswith(".pyc"):
+            continue
         p = os.path.join(dirpath, f)
         if os.path.abspath(p) in skip:
             continue
