@@ -1,6 +1,6 @@
 # DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG)
 
-Version 1.1.0 (2026-11-01). This datasheet documents the released artifacts;
+Release of 2026-11-01. This datasheet documents the released artifacts;
 every number is machine-checkable against `benchmark/` and re-verified by
 `src/verify_paper_numbers.py` and the paper's audit trail.
 
@@ -152,8 +152,8 @@ every number is machine-checkable against `benchmark/` and re-verified by
   (`law_bench_extension.json`, `extension_flagged.json`, ...).
 - Extension round 2: `law_bench_extension2.json` + `extension2_*` audit,
   dedup, vectors, ranks, rerank and LLM-QA artifacts.
-- Paper: `docs/report/ViCivil-TKG_paper_v1.1.0_en.pdf` (English edition,
-  IMRaD, LaTeX source `docs/report/paper_en.tex`); the Vietnamese v1.0.1
+- Paper: `docs/report/ViCivil-TKG_paper_en.pdf` (English edition,
+  IMRaD, LaTeX source `docs/report/paper_en.tex`); the Vietnamese
   edition remains archived in `docs/report/`.
 - `SHA256SUMS` regenerated over the full release tree; the integrity-audit
   record (`AUDIT_2026-11-01.md`, `CHANGES.json`) documents every v1.0.1
