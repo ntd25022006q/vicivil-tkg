@@ -78,7 +78,12 @@ def top_dense(qvec, vmat, vids, n=200):
     giong het nhau giua co numpy va khong co (thu tu cong don bien tang).
     """
     if np is not None and isinstance(vmat, np.ndarray):
-        sims = np.round(vmat @ qvec, 6)
+        # float64 + einsum(khong qua BLAS): cong don theo thu tu co dinh, nen
+        # ket qua giong het path python-thuan va GIONG NHAU tren moi may/BLAS
+        # (khong con phu thuoc backend - loi tam thoi cua @ trong truoc).
+        v64 = vmat.astype(np.float64)
+        q64 = np.asarray(qvec, dtype=np.float64)
+        sims = np.round(np.einsum("ij,j->i", v64, q64, optimize=False), 6)
         idx = np.argsort(-sims, kind="stable")[:n]
         return [vids[i] for i in idx]
     # Python thuan: vector 768 so, 11.267 hang
@@ -193,7 +198,10 @@ for qi, (qid, meta) in enumerate(gold.items()):
 
 out = {
     "note": "cham lai tu cac tep trong kho: BM25 (Python thuan) + dense (vector da luu) + RRF. "
-            "Khong can GPU, khong can mo hinh, khong can mang.",
+            "Khong can GPU, khong can mo hinh, khong can mang. | v1.0.1: TOP27031 pass-3 reanchor "
+            "persisted -> rank null->1; MRR is computed within the stored top-10 candidate window "
+            "(MRR@10), as in the original script. | dense ranking is BLAS-independent: float64 + "
+            "einsum (fixed accumulation order) + round-6, identical on every machine.",
     "engine": "numpy" if np is not None else "python-thuan",
     "n_questions": n,
     "n_questions_with_verified_gold": n_v,

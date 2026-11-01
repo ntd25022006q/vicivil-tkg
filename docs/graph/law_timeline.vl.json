@@ -87,9 +87,13 @@
         "Luật THADS (VBHN 2025)",
         "03/2022",
         "43/2024",
+        "Luật Nuôi con nuôi 2010",
         "Luật Hòa giải tại cơ sở 2026",
-        "59/2024",
-        "Luật Nuôi con nuôi 2010"
+        "Bo luat To tung dan su 2004",
+        "Nghi dinh 158/2005/NĐ-CP ve dang ky va quan ly ho tich",
+        "Nghi dinh 126/2014/NĐ-CP chi tiet mot so dieu va bien phap thi hanh Luat HNGD",
+        "Bo luat To tung dan su 2015",
+        "59/2024"
        ]
       },
       "axis": {
@@ -187,9 +191,13 @@
         "Luật THADS (VBHN 2025)",
         "03/2022",
         "43/2024",
+        "Luật Nuôi con nuôi 2010",
         "Luật Hòa giải tại cơ sở 2026",
-        "59/2024",
-        "Luật Nuôi con nuôi 2010"
+        "Bo luat To tung dan su 2004",
+        "Nghi dinh 158/2005/NĐ-CP ve dang ky va quan ly ho tich",
+        "Nghi dinh 126/2014/NĐ-CP chi tiet mot so dieu va bien phap thi hanh Luat HNGD",
+        "Bo luat To tung dan su 2015",
+        "59/2024"
        ]
       }
      },
@@ -265,14 +273,18 @@
         "Luật THADS (VBHN 2025)",
         "03/2022",
         "43/2024",
+        "Luật Nuôi con nuôi 2010",
         "Luật Hòa giải tại cơ sở 2026",
-        "59/2024",
-        "Luật Nuôi con nuôi 2010"
+        "Bo luat To tung dan su 2004",
+        "Nghi dinh 158/2005/NĐ-CP ve dang ky va quan ly ho tich",
+        "Nghi dinh 126/2014/NĐ-CP chi tiet mot so dieu va bien phap thi hanh Luat HNGD",
+        "Bo luat To tung dan su 2015",
+        "59/2024"
        ]
       }
      },
      "y2": {
-      "value": "Luật Nuôi con nuôi 2010"
+      "value": "59/2024"
      },
      "color": {
       "value": "#6fd3e0"
@@ -335,9 +347,13 @@
         "Luật THADS (VBHN 2025)",
         "03/2022",
         "43/2024",
+        "Luật Nuôi con nuôi 2010",
         "Luật Hòa giải tại cơ sở 2026",
-        "59/2024",
-        "Luật Nuôi con nuôi 2010"
+        "Bo luat To tung dan su 2004",
+        "Nghi dinh 158/2005/NĐ-CP ve dang ky va quan ly ho tich",
+        "Nghi dinh 126/2014/NĐ-CP chi tiet mot so dieu va bien phap thi hanh Luat HNGD",
+        "Bo luat To tung dan su 2015",
+        "59/2024"
        ]
       }
      },
@@ -484,7 +500,7 @@
      "sym": "52/2010/QH12",
      "s": "2011-01-01",
      "e": "2026-12-31",
-     "row": 32,
+     "row": 30,
      "chunks": 208,
      "cites": 27
     },
@@ -549,7 +565,7 @@
      "sym": "16/2026/QH16",
      "s": "2026-07-01",
      "e": "2026-12-31",
-     "row": 30,
+     "row": 31,
      "chunks": 175,
      "cites": 44
     },
@@ -692,7 +708,7 @@
      "sym": "Luật số 59/2024/QH15",
      "s": "2026-01-01",
      "e": "2026-12-31",
-     "row": 31,
+     "row": 36,
      "chunks": 0,
      "cites": 0
     },
@@ -797,6 +813,58 @@
      "s": "2026-03-01",
      "e": "2026-12-31",
      "row": 20,
+     "chunks": 0,
+     "cites": 0
+    },
+    {
+     "id": "BLTTDS2004",
+     "name": "Bo luat To tung dan su 2004",
+     "cat": "Khác",
+     "color": "#9aa0a6",
+     "status": "đã hết hiệu lực",
+     "sym": "24/2004/QH11",
+     "s": "2005-01-01",
+     "e": "2017-07-01T00:00:00",
+     "row": 32,
+     "chunks": 1308,
+     "cites": 0
+    },
+    {
+     "id": "ND158_2005",
+     "name": "Nghi dinh 158/2005/NĐ-CP ve dang ky va quan ly ho tich",
+     "cat": "Khác",
+     "color": "#9aa0a6",
+     "status": "đã hết hiệu lực",
+     "sym": "158/2005/NĐ-CP",
+     "s": "2006-04-01",
+     "e": "2016-01-01T00:00:00",
+     "row": 33,
+     "chunks": 314,
+     "cites": 0
+    },
+    {
+     "id": "ND126_2014",
+     "name": "Nghi dinh 126/2014/NĐ-CP chi tiet mot so dieu va bien phap thi hanh Luat HNGD",
+     "cat": "Khác",
+     "color": "#9aa0a6",
+     "status": "hieu_luc",
+     "sym": "126/2014/NĐ-CP",
+     "s": "2015-02-15",
+     "e": "2026-12-31",
+     "row": 34,
+     "chunks": 262,
+     "cites": 0
+    },
+    {
+     "id": "BLTTDS2015-EXT",
+     "name": "Bo luat To tung dan su 2015",
+     "cat": "Khác",
+     "color": "#9aa0a6",
+     "status": "external-ref",
+     "sym": "92/2015/QH13",
+     "s": "2017-07-01",
+     "e": "2026-12-31",
+     "row": 35,
      "chunks": 0,
      "cites": 0
     }
@@ -950,6 +1018,27 @@
      "at": "2026-03-01",
      "name": "142/2025",
      "name2": "BLTTHDS (VBHN 21/2025)"
+    },
+    {
+     "relvie": "thay thế",
+     "rel": "REPLACES",
+     "at": "2017-07-01",
+     "name": "Bo luat To tung dan su 2015",
+     "name2": "Bo luat To tung dan su 2004"
+    },
+    {
+     "relvie": "thay thế",
+     "rel": "REPLACES",
+     "at": "2016-01-01",
+     "name": "Luật Hộ tịch 2014",
+     "name2": "Nghi dinh 158/2005/NĐ-CP ve dang ky va quan ly ho tich"
+    },
+    {
+     "relvie": "GUIDES",
+     "rel": "GUIDES",
+     "at": "2015-02-15",
+     "name": "Nghi dinh 126/2014/NĐ-CP chi tiet mot so dieu va bien phap thi hanh Luat HNGD",
+     "name2": "Luật HN&GĐ 2014"
     }
    ]
   }

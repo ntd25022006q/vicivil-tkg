@@ -97,14 +97,22 @@ def check_tree(root, tag):
         issues.append(f"{tag}: SHA256SUMS not found at tree root")
         return None
     m = manifest(mp)
+    # The GitHub root README.md is the GitHub edition, published from the
+    # release tree's docs/README_GitHub.md (the HF dataset card stays at
+    # README.md on the server/HF side). Accept that alias instead of
+    # flagging an intentional, documented difference.
+    readme_alias = m.get("./docs/README_GitHub.md")
     for rel, h in m.items():
         p = os.path.join(root, rel)
         if not os.path.exists(p):
             issues.append(f"{tag} {rel}: manifest file missing on disk")
-        else:
-            d = hashlib.sha256(io.open(p, "rb").read()).hexdigest()
-            if d != h:
-                issues.append(f"{tag} {rel}: manifest hash mismatch on disk")
+            continue
+        d = hashlib.sha256(io.open(p, "rb").read()).hexdigest()
+        if d != h:
+            if rel == "./README.md" and readme_alias and d == readme_alias:
+                print(f"note: {tag} README.md = GitHub edition (matches docs/README_GitHub.md) - intentional")
+                continue
+            issues.append(f"{tag} {rel}: manifest hash mismatch on disk")
     return m
 
 if len(sys.argv) < 2:

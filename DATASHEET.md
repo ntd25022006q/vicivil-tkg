@@ -192,6 +192,22 @@ every number is machine-checkable against `benchmark/` and re-verified by
 
 ## Changelog
 
+- **2026-11-01 (deterministic reproduction + stale export refresh):**
+  `src/law_eval_repro.py` made BLAS-independent (float64 + einsum with fixed
+  accumulation order + round-6), so the GPU-free repro now yields byte-identical
+  output on every machine (verified by hash on two environments). The regenerated
+  `benchmark/law_eval_repro.json` moves the boundary question TOP15416 across the
+  rank-10 line: repro Hit@10 0.8149 -> 0.8114 (paper Table 1 and Figure 2 updated
+  accordingly); Hit@1/3/5 and MRR@10 are unchanged (0.3986 / 0.6512 / 0.7331 / 0.540).
+  The graph/quality exports (`docs/graph/law_graph.ttl|.jsonld`, `law_articles.json`,
+  `law_timeline.vl.json`, `explorer.html`, `provenance/chunk_quality.json`,
+  `provenance/rdf_verify.json`) were refreshed from the released corpus + temporal
+  graph (they pre-dated the round-2 corpus additions): the RDF exports now carry all
+  37 graph laws incl. BLTTHS 2004 / ND 158/2005 / ND 126/2014 (66,250 triples);
+  node/edge claims (37 nodes / 24 edges / 13,151 chunks) are unchanged. CI's
+  manifest check now regenerates the full-tree manifest via
+  `tools/law_manifest_full.py`; the quality sweep accepts the GitHub README
+  edition and disclosed verbatim-LLM artifacts.
 - **2026-11-01 (v1.1.0, paper + release hardening):** English conference-style
   paper (v1.1.0) replaces the Vietnamese v1.0.1 as the reference paper
   (measurements unchanged, decimal-point notation; new disclosure of the 4
