@@ -182,5 +182,33 @@
   "what": "rows with gold != applied gold",
   "old": 8,
   "new": 7
+ },
+ {
+  "date": "2026-11-02",
+  "artifact": "benchmark/law_bench_extension4.json",
+  "what": "round-4 scale-up cohort integrated into the release: 376 published (363 verified + 13 regolded), 487 quarantined, 75 embedding near-duplicates dropped pre-audit (public log), 938 generated, 863 audited = 376+487 exact, 376/376 unique qids, 0 as_of repairs",
+  "old": null,
+  "new": 376
+ },
+ {
+  "date": "2026-11-02",
+  "artifact": "benchmark/baselines_suite.json",
+  "what": "suite recomputed to cover the round-4 cohort and the pooled ALL row over all 1,092 published questions (ALL hybrid+TCR Hit@5 0.863, Hit@1 0.608, MRR 0.721, p = 2.6e-66)",
+  "old": 716,
+  "new": 1092
+ },
+ {
+  "date": "2026-11-02",
+  "artifact": "benchmark/extension3_llm_rag_result.json",
+  "what": "round-3 cited generation added under the identical Qwen2.5-3B-Instruct protocol (cite_acc 0.004/0.521/0.600/0.608; ctx_hit5 equals retrieval Hit@5 per configuration)",
+  "old": null,
+  "new": 265
+ },
+ {
+  "date": "2026-11-02",
+  "artifact": "docs/report/ViCivil-TKG_paper_en.tex",
+  "what": "paper updated to the 1,092-question release: new colour Figure 1 (pipeline) and 4-panel Figure 2, round-3/4 results, baselines suite table, extension table with round 4",
+  "old": 716,
+  "new": 1092
  }
 ]

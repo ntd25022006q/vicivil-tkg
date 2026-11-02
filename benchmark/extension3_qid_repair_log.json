@@ -1,0 +1,99 @@
+{
+ "collisions": [
+  "EXT330554",
+  "EXT330555",
+  "EXT330557",
+  "EXT330558",
+  "EXT330561"
+ ],
+ "renamed": [
+  {
+   "old": "EXT330554",
+   "new": "EXT390033",
+   "law_id": "BLDS2015",
+   "question": "Nếu tôi là người thứ ba giữ tài sản thế chấp và làm mất tài sản đó, tôi sẽ phải "
+  },
+  {
+   "old": "EXT330555",
+   "new": "EXT390034",
+   "law_id": "BLDS2015",
+   "question": "Nếu tôi gây thiệt hại cho người khác khi phòng vệ chính đáng, tôi có phải bồi th"
+  },
+  {
+   "old": "EXT330557",
+   "new": "EXT390035",
+   "law_id": "BLDS2015",
+   "question": "Nếu tôi là người đại diện và muốn thực hiện một giao dịch vượt quá phạm vi được "
+  },
+  {
+   "old": "EXT330558",
+   "new": "EXT390036",
+   "law_id": "BLDS2015",
+   "question": "Nếu tôi mua một sản phẩm kém chất lượng và muốn đòi bồi thường, tôi cần chứng mi"
+  },
+  {
+   "old": "EXT330561",
+   "new": "EXT390037",
+   "law_id": "BLDS2015",
+   "question": "Nếu tôi đã trả tiền mua hàng nhưng chưa nhận được hàng do giao hàng không đồng b"
+  }
+ ],
+ "cleared": [
+  {
+   "qid": "EXT330558",
+   "from": "A1"
+  },
+  {
+   "qid": "EXT330558",
+   "from": "A2"
+  },
+  {
+   "qid": "EXT330558",
+   "from": "V"
+  },
+  {
+   "qid": "EXT330554",
+   "from": "A1"
+  },
+  {
+   "qid": "EXT330554",
+   "from": "V"
+  },
+  {
+   "qid": "EXT330561",
+   "from": "A1"
+  },
+  {
+   "qid": "EXT330561",
+   "from": "A2"
+  },
+  {
+   "qid": "EXT330561",
+   "from": "R"
+  },
+  {
+   "qid": "EXT330561",
+   "from": "V"
+  },
+  {
+   "qid": "EXT330557",
+   "from": "A1"
+  },
+  {
+   "qid": "EXT330557",
+   "from": "V"
+  },
+  {
+   "qid": "EXT330555",
+   "from": "A1"
+  },
+  {
+   "qid": "EXT330555",
+   "from": "A2"
+  },
+  {
+   "qid": "EXT330555",
+   "from": "V"
+  }
+ ]
+}

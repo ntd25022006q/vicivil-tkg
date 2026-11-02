@@ -1,0 +1,30 @@
+{
+ "generated": "2026-11-01T22:36:22",
+ "purpose": "per-question rank diff: frozen full-list hybrid+TCR (law_eval_ranks_full.json) vs one-harness suite hybrid_tcr top-200 (baselines_suite.json), 281 core questions",
+ "n_common": 281,
+ "n_identical_rank": 277,
+ "n_shifted": 4,
+ "shifted": [
+  [
+   "GEN25779",
+   1,
+   2
+  ],
+  [
+   "GEN52098",
+   1,
+   2
+  ],
+  [
+   "TOP50371",
+   2,
+   3
+  ],
+  [
+   "TOP62589",
+   2,
+   1
+  ]
+ ],
+ "note": "regenerated deterministically to back the paper claim '277/281 identical, four shifted by one rank'"
+}

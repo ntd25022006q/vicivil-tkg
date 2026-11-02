@@ -30,6 +30,8 @@ configs:
   data_files: benchmark/law_bench_extension2.json
 - config_name: benchmark-extension3
   data_files: benchmark/law_bench_extension3.json
+- config_name: benchmark-extension4
+  data_files: benchmark/law_bench_extension4.json
 - config_name: index
   data_files:
   - index/vdb_chunks.json
@@ -52,8 +54,8 @@ configs:
 
 | | |
 |---|---|
-| Published questions | **716** = 281 core (12 hand-written + 269 generated) + 106 round-1 + 64 round-2 (1996–2015 era) + 265 round-3 scale-up |
-| Quarantined questions | **542** (136 + 90 + 316), published verbatim with trails, never scored |
+| Published questions | **1,092** = 281 core (12 hand-written + 269 generated) + 106 round-1 + 64 round-2 (1996–2015 era) + 265 round-3 + 376 round-4 scale-up |
+| Quarantined questions | **1,029** (136 + 90 + 316 + 487), published verbatim with trails, never scored |
 | Core gold tiers | 229 verified · 22 regolded · 4 author-verified · 26 flagged (excluded from headline metrics) · 0 unverifiable |
 | Corpus | 20 legal documents, **13,151** article/clause/point chunks, per-chunk provenance + validity windows |
 | Split | stratified dev/test 140/141 (core) |
@@ -70,9 +72,12 @@ All numbers are computed from released artifacts; the paper's every figure is ma
 | Core retrieval (281 q) | Hit@5 0.733 (MRR@10 0.540) | **Hit@5 0.811, MRR 0.662** | — |
 | Round-2 1996–2015 (64 q) | Hit@5 0.703 | Hit@5 0.781 (p = 4.0e-05) | **Hit@1 0.703, Hit@5 0.828** |
 | Round-3 scale-up (265 q) | Hit@5 0.819 | Hit@5 0.857, Hit@1 0.615 (p = 5.7e-17) | **Hit@1 0.668, Hit@5 0.909** (p = 5.2e-03) |
-| All 716 q | Hit@5 0.786 | **Hit@5 0.842, Hit@1 0.584** (p = 4.1e-46) | — |
+| Round-4 scale-up (376 q) | Hit@5 0.851 | Hit@5 0.902, Hit@1 0.654 (p = 6.3e-22) | **Hit@1 0.681, Hit@5 0.923** (p = 0.10, ns) |
+| All 1,092 q | Hit@5 0.809 | **Hit@5 0.863, Hit@1 0.608** (p = 2.6e-66) | — |
 | Core LLM cite_acc (Qwen2.5-3B) | 0.004 (no context) | hybrid 0.488 → **0.601** (McNemar p = 5.8e-05) | 0.604, ctx_hit5 0.850 |
 | Round-2 LLM cite_acc | 0.000 | **0.531** (p = 1.2e-10) | 0.531 (span_F1 0.497) |
+| Round-3 LLM cite_acc | 0.004 | **0.600** (p = 3.8e-03) | 0.608, ctx_hit5 0.909 |
+| Round-4 LLM cite_acc | 0.003 | **0.657** (p = 3.2e-10) | 0.644 (ns vs TCR), ctx_hit5 0.923 |
 
 Disclosed hard slice: the round-2 `regolded` stratum (11 q) reaches only Hit@1 0.091 — old-statute anchoring is genuinely hard, and 4 of those 11 anchors are temporally out of scope at their `as_of` (disclosed in the paper and datasheet).
 
@@ -103,7 +108,7 @@ bash tools/reproduce.sh
 
 ```
 data/civil_chunks.jsonl        13,151 chunks, provenance + validity windows
-benchmark/                     716 questions (4 cohorts) + 542 quarantined + full trails
+benchmark/                     1,092 questions (5 cohorts) + 1,029 quarantined + full trails
                                + baselines_suite.json (BM25/dense/hybrid/TCR per cohort + Wilcoxon)
 index/                         dense matrices + kv stores (768-d, embeddinggemma:300m)
 provenance/                    temporal graph (37 windows/24 edges), law sources, quality
@@ -129,7 +134,7 @@ controlled generation (qwen2.5:14b, as_of inside validity window, vector dedup)
           └─ independent agreement audit (60-q sample, seed 20261101): gold-set 0.554 / primary-echo 0.571
 ```
 
-Quarantined questions are **published, not hidden**: 136 round-1 + 90 round-2 (89 two-tier failures + 1 near-duplicate at cosine 0.9931) + 316 round-3, each with its rejection trail (`benchmark/extension2_flagged.json`, `benchmark/extension3_flagged.json` and friends). A release audit also caught 28 qid collisions from parallel generation in round 3 (two questions per ID, ambiguous verdicts); every affected pair was re-adjudicated from scratch under unique IDs — repair log in the release tree.
+Quarantined questions are **published, not hidden**: 136 round-1 + 90 round-2 (89 two-tier failures + 1 near-duplicate at cosine 0.9931) + 316 round-3 + 487 round-4, each with its rejection trail (`benchmark/extension2_flagged.json`, `benchmark/extension3_flagged.json`, `benchmark/extension4_flagged.json` and friends). A release audit also caught 28 qid collisions from parallel generation in round 3 (two questions per ID, ambiguous verdicts); every affected pair was re-adjudicated from scratch under unique IDs — repair log in the release tree. Round 4 was generated against the enlarged corpus with strict per-question unique IDs (376/376 unique, exact accounting 863 audited = 376 published + 487 quarantined, plus 75 embedding near-duplicates dropped before auditing with a public comparison log).
 
 ## Data integrity audit
 

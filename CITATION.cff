@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 title: "ViCivil-TKG: A Temporally Anchored Benchmark for Vietnamese Civil-Law Question Answering with Multi-Round Gold-Answer Adjudication"
-version: 1.1.0
-date-released: "2026-11-01"
+version: 1.2.0
+date-released: "2026-11-02"
 authors:
   - family-names: "Nguyễn"
     given-names: "Tiến Đạt"
@@ -23,15 +23,16 @@ keywords:
 abstract: "Article/clause/point-level knowledge graph of Vietnamese civil law
   (20 corpus laws, 13,151 chunks, entity and relation layers) with validity
   intervals, verified amendment and succession edges, and a stratified temporal
-  QA benchmark of 451 published questions in three audited cohorts: 281 core
-  (12 hand-authored, 269 generated), 106 extension round 1, and 64 extension
-  round 2 from the 1996-2015 statute era, plus a publicly quarantined pool of
-  226 rejected candidates. All gold labels carry multi-round adjudication
+  QA benchmark of 716 published questions in four audited cohorts: 281 core
+  (12 hand-authored, 269 generated), 106 extension round 1, 64 extension
+  round 2 from the 1996-2015 statute era, and 265 round-3 scale-up items,
+  plus a publicly quarantined pool of 542 rejected candidates. All gold labels
+  carry multi-round adjudication
   trails; no question remains in an unverifiable state. On the core set,
   temporal-consistency retrieval raises Qwen2.5-3B citation accuracy from
   0.488 to 0.601 (McNemar p = 5.8e-05) and retrieval Hit@5 to 0.811.
-  Reference paper: docs/report/ViCivil-TKG_paper_v1.1.0_en.pdf (English
-  edition; the Vietnamese v1.0.1 edition is archived)."
+  Reference paper: docs/report/ViCivil-TKG_paper_en.pdf (English
+  edition; the Vietnamese edition is archived)."
 preferred-citation:
   type: article
   title: "ViCivil-TKG: A Temporally Anchored Benchmark for Vietnamese Civil-Law Question Answering with Multi-Round Gold-Answer Adjudication"
@@ -39,5 +40,5 @@ preferred-citation:
     - family-names: "Nguyễn"
       given-names: "Tiến Đạt"
   year: 2026
-  notes: "Project paper v1.1.0 (English edition), docs/report/paper_en.tex"
+  notes: "Project paper (English edition), docs/report/paper_en.tex"
   url: "https://huggingface.co/datasets/datbazuka2502/vicivil-tkg"

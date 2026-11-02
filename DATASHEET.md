@@ -34,13 +34,14 @@ every number is machine-checkable against `benchmark/` and re-verified by
 - **Temporal graph:** 37 law windows + 24 succession/amendment edges with
   dates; chunks inherit law validity; abstain probes retained
   (1990 empty-pool + missing-law cases).
-- **Benchmark:** **716 published questions** in four cohorts:
+- **Benchmark:** **1,092 published questions** in five cohorts:
   281 core (269 generated + 12 hand-written CIV001–CIV012), 106 round-1
   extension (101 verified + 5 regolded), 64 round-2 extension from the
-  1996–2015 statutes (53 verified + 11 regolded), and 265 round-3 scale-up
-  extension over 19 statutes (254 verified + 11 regolded). **542 quarantined
-  questions** (136 + 90 + 316) are published verbatim with audit trails and count
-  in no metric. Core gold tiers after the full adjudication chain:
+  1996–2015 statutes (53 verified + 11 regolded), 265 round-3 scale-up
+  extension over 19 statutes (254 verified + 11 regolded), and 376 round-4
+  scale-up extension (363 verified + 13 regolded). **1,029 quarantined
+  questions** (136 + 90 + 316 + 487) are published verbatim with audit trails
+  and count in no metric. Core gold tiers after the full adjudication chain:
   **229 verified / 22 regolded / 4 author-verified / 26 pass3-flagged**
   (flagged disclosed with reasons, excluded from headline metrics), and
   **0 unverifiable** questions remain. Dev/test split 140/141 (stratified).
@@ -132,9 +133,22 @@ every number is machine-checkable against `benchmark/` and re-verified by
   whole benchmark (Hit@1 0.091).
 - **Round-3 scale-up extension (n=265, 19 statutes):** retrieval Hit@5 0.819 →
   0.857 with TCR (Hit@1 0.494 → 0.615, p = 5.7e-17) → 0.909 with rerank+TCR
-  (Hit@1 0.668, p = 5.2e-03). Cited-generation eval not yet run for this cohort.
-- **All cohorts (n=716):** hybrid+TCR Hit@5 0.842, Hit@1 0.584, MRR 0.700
-  (p = 4.1e-46 vs no-TCR hybrid); full suite in
+  (Hit@1 0.668, p = 5.2e-03). Cited generation (Qwen2.5-3B, same protocol):
+  cite_acc 0.004 → 0.521 (hybrid) → 0.600 with TCR (McNemar p = 3.8e-03) →
+  0.608 rerank+TCR (ns vs TCR, p = 0.89); ctx_hit5 equals retrieval Hit@5
+  exactly (0.819 / 0.857 / 0.909).
+- **Round-4 scale-up extension (n=376):** retrieval Hit@5 0.851 → 0.902 with
+  TCR (Hit@1 0.511 → 0.654, p = 6.3e-22) → 0.923 with rerank+TCR
+  (Hit@1 0.681; rerank+TCR vs TCR p = 0.10, ns, published as-is). All 13
+  regolded anchors lie inside their validity windows at `as_of` (0
+  out-of-window, vs 4 disclosed cases in round 2). Cited generation
+  (Qwen2.5-3B, same protocol): cite_acc 0.003 → 0.527 (hybrid) → 0.657 with
+  TCR (McNemar p = 3.2e-10) → 0.644 rerank+TCR (ns vs TCR, p = 0.64);
+  ctx_hit5 equals retrieval Hit@5 exactly (0.851 / 0.902 / 0.923). Accounting is exact:
+  938 generated = 75 near-duplicates dropped (public log) + 863 audited =
+  376 published + 487 quarantined; 376/376 unique qids; 0 `as_of` repairs.
+- **All cohorts (n=1,092):** hybrid+TCR Hit@5 0.863, Hit@1 0.608, MRR 0.721
+  (p = 2.6e-66 vs no-TCR hybrid); full suite in
   `benchmark/baselines_suite.json` (BM25 / dense / hybrid / TCR + Wilcoxon).
 
 ## Collection & preprocessing

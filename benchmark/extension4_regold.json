@@ -1,0 +1,507 @@
+{
+ "EXT440004": {
+  "regolded_to": "BLDS2015|Dieu23|Khoan1",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật nêu rõ Tòa án xác định quyền, nghĩa vụ của người giám hộ"
+ },
+ "EXT440043": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440046": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440071": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440077": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440081": {
+  "regolded_to": "BLDS2015|Dieu146|Khoan1|Diemc",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định rõ 1 tháng được tính là 30 ngày"
+ },
+ "EXT440086": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440089": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440113": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440126": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440128": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440145": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440157": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440163": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440169": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440183": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440197": {
+  "regolded_to": "HNGD2014|Dieu84|Khoan2|Diemb",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Cần chứng minh (a) Thỏa thuận giữa cha mẹ phù hợp lợi ích của con hoặc (b) Người trực tiếp nuôi không còn đủ điều kiện chăm sóc, nuôi dưỡng con."
+ },
+ "EXT440200": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440203": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440233": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440237": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440253": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440261": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440284": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440287": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440289": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440292": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440299": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440308": {
+  "regolded_to": "BLTTDS2004|Dieu58|Khoan2|Diemc",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Đương sự có quyền đề nghị tòa án xác minh, thu thập chứng cứ theo quy định."
+ },
+ "EXT440314": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440325": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440332": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440336": {
+  "regolded_to": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu320|Khoan1",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định nếu bị đơn vắng mặt không có lý do chính đáng thì thẩm phán vẫn tiến hành phiên tòa."
+ },
+ "EXT440347": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440342": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440345": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440346": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440355": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440364": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440373": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440378": {
+  "regolded_to": "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan2",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định rõ cơ quan quản lý thi hành án dân sự thuộc Bộ Tư pháp là cơ quan có trách nhiệm kiểm tra."
+ },
+ "EXT440396": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440395": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440397": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440404": {
+  "regolded_to": "THADSVBHN|Dieu140|Khoan1",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật cho phép khiếu nại quyết định trái pháp luật của cấp trên"
+ },
+ "EXT440405": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440416": {
+  "regolded_to": "THADSVBHN|Dieu140|Khoan1",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định rõ quyền khiếu nại khi hành vi thi hành án trái pháp luật."
+ },
+ "EXT440420": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440419": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440424": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440427": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440433": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440434": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440442": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440445": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440447": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440448": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440450": {
+  "regolded_to": "HOTICH2014|Dieu16|Khoan1",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định có thể nộp văn bản xác nhận của người làm chứng hoặc giấy cam đoan nếu không có giấy chứng sinh."
+ },
+ "EXT440457": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440458": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440472": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440506": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440513": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440518": {
+  "regolded_to": "BLDS2015|Dieu164|Khoan2",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật cho phép yêu cầu Tòa án hoặc cơ quan nhà nước buộc người xâm phạm trả lại tài sản và bồi thường thiệt hại."
+ },
+ "EXT440533": {
+  "regolded_to": "THADSVBHN|Dieu142|Khoan1",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật quy định thủ trưởng cơ quan thi hành án dân sự cấp huyện giải quyết khiếu nại, nên người dân có thể khiếu nại lên cấp này."
+ },
+ "EXT440539": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440549": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440553": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440560": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440558": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440561": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440567": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440582": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440590": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440594": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440612": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440616": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440618": {
+  "regolded_to": "THADS2008|Dieu6|Khoan2",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật cho phép yêu cầu cơ quan thi hành án dân sự thực hiện phần nghĩa vụ chưa được thi hành theo bản án, quyết định."
+ },
+ "EXT440627": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440629": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440630": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440634": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440638": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440642": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440644": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440646": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440648": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440649": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440663": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440665": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440668": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440671": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440676": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440685": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440700": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440705": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440739": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440748": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440751": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440755": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440759": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440761": {
+  "regolded_to": "BLTTDS2004|Dieu36|Khoan2|Diema",
+  "confirmed_by": "qwen3:14b",
+  "reason": "Luật cho phép người yêu cầu chọn tòa án nơi mình cư trú giải quyết vụ việc."
+ },
+ "EXT440770": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440792": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440807": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440808": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440824": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440836": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440844": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440851": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440848": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440850": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440871": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440875": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440882": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440893": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440913": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440918": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440917": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440920": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440924": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440926": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ },
+ "EXT440932": {
+  "regolded_to": null,
+  "reason": "no candidate confirmed"
+ }
+}

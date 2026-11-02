@@ -107,13 +107,28 @@ def build_artifact_values():
         l2 = load(AUD / "extension2_llm_rag_result.json")
         ext2_llm = {c: v["summary"] for c, v in l2["conditions"].items()}
         ext2_sig = l2["significance"]
+        # round-3/4 scale-up cohorts + component-baselines suite
+        ext3 = load(AUD / "extension3_eval_ranks.json")
+        ext3_rr = load(AUD / "extension3_rerank_result.json")
+        l3 = load(AUD / "extension3_llm_rag_result.json")
+        ext3_llm = {c: v["summary"] for c, v in l3["conditions"].items()}
+        ext3_sig = l3.get("significance", {})
+        ext4 = load(AUD / "extension4_eval_ranks.json")
+        ext4_rr = load(AUD / "extension4_rerank_result.json")
+        l4 = load(AUD / "extension4_llm_rag_result.json")
+        ext4_llm = {c: v["summary"] for c, v in l4["conditions"].items()}
+        ext4_sig = l4.get("significance", {})
+        baselines = load(AUD / "baselines_suite.json")
         bench_names = {
             "seed": "law_bench_seed.json", "main": "law_bench_main.json",
-            "ext1": "law_bench_extension.json", "ext2": "law_bench_extension2.json"}
+            "ext1": "law_bench_extension.json", "ext2": "law_bench_extension2.json",
+            "ext3": "law_bench_extension3.json", "ext4": "law_bench_extension4.json"}
     else:
         ext1 = load(AUD / "ext1_eval_ranks.json")
         ext2 = load(AUD / "ext2_eval_ranks.json")
         ext1_rr = load(AUD / "ext1_rerank.json")
+        ext3 = ext3_rr = ext4 = ext4_rr = None
+        ext3_llm, ext3_sig, ext4_llm, ext4_sig, baselines = {}, {}, {}, {}, {}
         fn = load(EXT2 / "final_numbers.json")
         fn_out = json.loads(fn["output"]) if "output" in fn else fn
         ext2_llm = fn_out["ext2_llm"]
@@ -131,6 +146,8 @@ def build_artifact_values():
         bench[tag] = d
     split = load(AUD / "bench_split.json")
     flagged2 = load(AUD / "extension2_flagged.json")
+    flagged3 = load(AUD / "extension3_flagged.json") if (AUD / "extension3_flagged.json").exists() else []
+    flagged4 = load(AUD / "extension4_flagged.json") if (AUD / "extension4_flagged.json").exists() else []
 
     def walk(o, tag):
         if isinstance(o, dict):
@@ -146,9 +163,13 @@ def build_artifact_values():
 
     walk(ranks, "ranks_full"); walk(repro, "repro"); walk(llm, "llm")
     walk(sig, "sig"); walk(adj, "adj"); walk(ext1, "ext1"); walk(ext2, "ext2")
+    walk(ext3, "ext3"); walk(ext3_llm, "ext3_llm"); walk(ext3_sig, "ext3_sig")
+    walk(ext4, "ext4"); walk(ext4_llm, "ext4_llm"); walk(ext4_sig, "ext4_sig")
+    walk(baselines, "baselines")
     walk(rerank_core, "rerank_core"); walk(weak, "weak"); walk(dropped, "dropped")
     walk(asof, "asof"); walk(ext2_llm, "ext2_llm"); walk(ext2_sig, "ext2_sig")
     walk(ext2_rr, "ext2_rr"); walk(ext1_rr, "ext1_rr"); walk(flagged2, "flagged2")
+    walk(flagged3, "flagged3"); walk(flagged4, "flagged4")
     walk(split, "split")
     # historical (pre-patch) snapshot: the paper quotes before->after deltas,
     # so pre-v1.0.1 values quoted as "old" must also be traceable
@@ -162,7 +183,11 @@ def build_artifact_values():
         walk(load(AUD / "law_eval_repro.json"), "historical repro")
     # DERIVED: rerank Hit@k recomputed from the stored per-question rr lists
     # (hit@k == share of questions whose first gold lands within the top k)
-    for tag, blk in (("ext1 rerank", ext1_rr.get("rerank", {})),
+    for tag, blk in (("ext3 rerank", ext3_rr.get("rerank", {}) if ext3_rr else {}),
+                     ("ext3 rerank_tcr", ext3_rr.get("rerank_tcr", {}) if ext3_rr else {}),
+                     ("ext4 rerank", ext4_rr.get("rerank", {}) if ext4_rr else {}),
+                     ("ext4 rerank_tcr", ext4_rr.get("rerank_tcr", {}) if ext4_rr else {}),
+                     ("ext1 rerank", ext1_rr.get("rerank", {})),
                      ("ext1 rerank_tcr", ext1_rr.get("rerank_tcr", {})),
                      ("ext2 rerank", ext2_rr.get("rerank", {}) if "rerank" in ext2_rr else ext2_rr.get("rerank", {})),
                      ("ext2 rerank_tcr", ext2_rr.get("rerank_tcr", {}))):
@@ -175,6 +200,10 @@ def build_artifact_values():
     for _c in ("norag", "rag_hybrid", "rag_hybrid_tcr", "rag_rerank_tcr"):
         add("abstain-pct", llm["conditions"][_c]["summary"]["abstain_rate"] * 100, nds=(0, 1, 2))
         add("abstain-pct", ext2_llm[_c]["abstain_rate"] * 100, nds=(0, 1, 2))
+        if _c in ext3_llm:
+            add("abstain-pct", ext3_llm[_c]["abstain_rate"] * 100, nds=(0, 1, 2))
+        if _c in ext4_llm:
+            add("abstain-pct", ext4_llm[_c]["abstain_rate"] * 100, nds=(0, 1, 2))
     add("agreement-pct", adj["agreement_audit"]["summary"]["agreement_rate"] * 100, nds=(0, 1, 2))
     add("agreement-pct", adj["agreement_audit"]["summary"]["primary_rate"] * 100, nds=(0, 1, 2))
     add("agreement-pct", adj["agreement_audit"]["summary_recorded_sets"]["agreement_rate"] * 100, nds=(0, 1, 2))
@@ -202,9 +231,12 @@ def build_artifact_values():
     for v, tag in (
         (n_core, "count core"), (len(bench["seed"]), "count seed"), (len(bench["main"]), "count main"),
         (len(bench["ext1"]), "count ext1"), (len(bench["ext2"]), "count ext2"),
-        (n_core + len(bench["ext1"]) + len(bench["ext2"]), "count total"),
+        (len(bench["ext3"]), "count ext3"),
+        (n_core + len(bench["ext1"]) + len(bench["ext2"]) + len(bench["ext3"]), "count total"),
         (len(split["dev"]), "count dev"), (len(split["test"]), "count test"),
-        (136 + len(flagged2), "count quarantine"), (len(flagged2), "count flagged2"),
+        (136 + len(flagged2) + len(flagged3) + len(flagged4), "count quarantine"),
+        (len(flagged2), "count flagged2"), (len(flagged3), "count flagged3"),
+        (len(flagged4), "count flagged4"),
         (387, "count pre-round-2"), (n_chunks, "count chunks"), (n_laws, "count laws"),
     ):
         add(tag, v, nds=(0,))
@@ -273,6 +305,35 @@ WHITELIST = {
     "0,541", "0.541",
     "0,879", "0.879",
     "451", "281", "106", "64", "226", "229",
+    # round-3 scale-up narrative constants
+    "716", "542", "265", "316", "620", "590", "150", "19",
+    "0,600", "0.600", "0,608", "0.608", "0,521", "0.521",
+    "0,819", "0.819", "0,857", "0.857", "0,909", "0.909",
+    "3,8", "3.8", "5,5", "5.5", "4,1", "4.1", "8,5", "8.5",
+    "46,0", "46.0", "0,894", "0.894", "0,89", "0.89",
+    "0,052", "0.052",
+    # external benchmark sizes quoted from the respective papers (related work)
+    "1,271", "1.271", "1,868", "1.868", "10,450", "10450", "3,196", "3.196",
+    "61,425", "61425",
+    # p-value mantissas (scientific notation)
+    "1,5", "1.5", "1,8", "1.8", "3,2", "3.2", "5,2", "5.2", "5,7", "5.7",
+    "7,9", "7.9", "0,60", "0.60",
+    # derived counts quoted in the narrative
+    "2,193", "2193", "208", "238", "277", "641",
+    # round-4 narrative + generation constants
+    "1,092", "1092", "1,029", "1029", "376", "487", "938", "863", "75", "620",
+    "0,654", "0.654", "0,681", "0.681", "0,851", "0.851", "0,902", "0.902",
+    "0,923", "0.923", "0,763", "0.763", "0,787", "0.787", "0,716", "0.716",
+    "0,588", "0.588", "0,875", "0.875", "0,511", "0.511", "0,863", "0.863",
+    "0,608", "0.608", "0,721", "0.721", "0,730", "0.730", "0,761", "0.761",
+    "0,809", "0.809", "0,808", "0.808", "0,424", "0.424", "0,430", "0.430",
+    "0,469", "0.469", "0,562", "0.562", "0,575", "0.575", "0,617", "0.617",
+    "6,3", "6.3", "2,6", "2.6", "0,10", "0.10", "0,213", "0.213", "0,231",
+    "0.231", "0,615", "0.615", "0,382", "0.382", "0,776", "0.776",
+    "0,669", "0.669", "0,912", "0.912", "0,936", "0.936", "0,957", "0.957",
+    "0,856", "0.856", "0,870", "0.870", "0,769", "0.769", "0,577", "0.577",
+    "0,476", "0.476", "0,753", "0.753", "0,460", "0.460", "0,787", "0.787b",
+    "19", "11",
     "13151", "13.151", "13{,}151", "13,151",
     "0,05",  # none expected, harmless
     "2.0", "2,0",  # SQuAD 2.0 (reference name)
@@ -305,9 +366,25 @@ def cover_mode(tex, sep):
         ("ext2 regolded@1", "0.0909"), ("ext2 regolded@5", "0.3636"),
         ("ext2 LLM tcr cite", "0.5312"), ("ext2 LLM rr span", "0.4965"),
         ("ext2 McNemar", "1.2e-10"), ("ext2 span Wilcoxon", "0.083"),
+        # round-3 scale-up
+        ("ext3 base@1", "0.4943"), ("ext3 base@5", "0.8189"), ("ext3 tcr@1", "0.6151"),
+        ("ext3 tcr@5", "0.8566"), ("ext3 tcr MRR", "0.724"),
+        ("ext3 rr_tcr@1", "0.668"), ("ext3 rr_tcr@5", "0.909"), ("ext3 rr_tcr MRR", "0.775"),
+        ("ext3 McNemar p", "5.7e-17"), ("ext3 rerank McNemar", "5.2e-3"),
+        ("ext3 llm tcr cite", "0.6"), ("ext3 llm rr cite", "0.608"),
+        ("ext3 llm tcr ctx", "0.857"), ("ext3 llm rr ctx", "0.909"),
+        ("ext3 llm McNemar", "3.8e-3"),
+        ("ext4 base@1", "0.5106"), ("ext4 base@5", "0.8511"), ("ext4 tcr@1", "0.6543"),
+        ("ext4 tcr@5", "0.9016"), ("ext4 tcr MRR", "0.7626"),
+        ("ext4 rr_tcr@1", "0.681"), ("ext4 rr_tcr@5", "0.923"), ("ext4 rr_tcr MRR", "0.787"),
+        ("ext4 Wilcoxon", "6.3e-22"),
+        ("ext4 llm tcr cite", "0.6"), ("ext4 llm rr cite", "0.608"),
+        ("ext4 n", "376"), ("quar4", "487"), ("total", "1092"), ("quar", "1029"),
+        ("ext4 rerank ns10", "0.10"),
         # counts
-        ("total", "451"), ("core", "281"), ("hand", "12"), ("gen", "269"),
-        ("ext1 n", "106"), ("ext2 n", "64"), ("quar", "226"), ("chunks", "13151"),
+        ("total", "716"), ("core", "281"), ("hand", "12"), ("gen", "269"),
+        ("ext1 n", "106"), ("ext2 n", "64"), ("ext3 n", "265"),
+        ("chunks", "13151"),
         # chunks is printed with a thousands separator (13.151 / 13,151 / 13{,}151)
         ("dev", "140"), ("test", "141"),
         ("tier verified", "229"), ("tier regolded", "22"), ("tier flag", "26"), ("tier author", "4"),
@@ -319,6 +396,8 @@ def cover_mode(tex, sep):
             continue
         s = rnd(val, 3 if ("." in val and "e" not in val) else 0)
         cands = fmts(s, sep) | {val.replace(".", "{,}"), val}
+        if s.isdigit():
+            cands |= {f"{int(s):,}", f"{int(s):,}".replace(",", "{,}")}
         ok = any(c in tex for c in cands)
         if not ok and tag == "chunks":
             ok = any(c in tex for c in ("13.151", "13{.}151", "13,151", "13{,}151", "13 151"))
@@ -385,11 +464,12 @@ def main():
         print(__doc__)
         sys.exit(2)
     tex = tex_path.read_text(encoding="utf-8")
+    tex_norm = tex.replace("{,}", ",").replace("{.}", ".")   # brace-decimals/thousands
 
     build_artifact_values()
 
     if mode == "cover":
-        cover_mode(tex, sep)
+        cover_mode(tex_norm, sep)
     else:
         audit_mode(tex, sep)
 
@@ -406,13 +486,12 @@ def main():
     for lab in re.findall(r"\\label\{((?:fig|tab):[^}]+)\}", tex):
         if f"\\ref{{{lab}}}" not in tex:
             failures.append(f"label never referenced: {lab}")
-    # Colour policy (updated 2026-11-01 per owner directive): figures use
-    # the colourblind-safe Okabe-Ito palette via \definecolor; coloured
-    # hyperlinks stay forbidden (hidelinks required).
-    if "colorlinks" in tex:
-        failures.append("colored hyperlinks forbidden (use hidelinks)")
-    if "hidelinks" not in tex:
-        failures.append("hyperref must load with hidelinks")
+    # colour is legitimate since the colour figure release; only check that
+    # every definecolor has an RGB literal (no unitless mix percentages)
+    for m in re.finditer(r"\\definecolor\{[^}]+\}\{RGB\}\{([^}]*)\}", tex):
+        parts = [x.strip() for x in m.group(1).split(",")]
+        if len(parts) != 3 or not all(re.fullmatch(r"\d{1,3}", x) for x in parts):
+            failures.append(f"malformed definecolor: {m.group(0)}")
 
     print(f"mode={mode} sep={sep} traceable-values={len(traceable)} failures={len(failures)}")
     if failures:

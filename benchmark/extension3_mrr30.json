@@ -1,0 +1,6 @@
+{
+ "note": "MRR@30 recomputed from stored per-question first-gold ranks (30-candidate window) of extension3_eval_ranks.json",
+ "n": 265,
+ "mrr30_base": 0.629257,
+ "mrr30_tcr": 0.723888
+}

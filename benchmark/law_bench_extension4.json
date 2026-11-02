@@ -1,0 +1,4151 @@
+[
+ {
+  "qid": "EXT440001",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi có cha và mẹ thuộc hai dân tộc khác nhau, tôi có quyền yêu cầu cơ quan nhà nước xác định lại dân tộc của mình theo dân tộc của cha hoặc mẹ không?",
+  "gold_ids": [
+   "BLDS2015|Dieu29|Khoan3|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440004",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi là người giám hộ của một người có khó khăn trong nhận thức và làm chủ hành vi, tôi có quyền gì theo quyết định của Tòa án?",
+  "gold_ids": [
+   "BLDS2015|Dieu23|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "regolded",
+  "regolded_from": "BLDS2015|Dieu58|Khoan2"
+ },
+ {
+  "qid": "EXT440006",
+  "as_of": "2018-01-01",
+  "question": "Tài sản tôi gửi bị bên vận chuyển giữ lại vì không có người nhận, tôi phải làm gì và ai phải chịu chi phí phát sinh?",
+  "gold_ids": [
+   "BLDS2015|Dieu538|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440008",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi cử người đại diện để ký kết hợp đồng, người đó có quyền thực hiện giao dịch dân sự thay mặt tôi không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu508|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440010",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi tìm thấy một con bò bị lạc và nuôi nó trong thời gian chờ chủ nhân đến nhận, con bò sinh một con bê, tôi có quyền được hưởng bao nhiêu phần trăm con bê đó không?",
+  "gold_ids": [
+   "BLDS2015|Dieu231|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440014",
+  "as_of": "2018-01-01",
+  "question": "Trong quá trình gia công, nếu bên đặt gia công chỉ dẫn làm giảm chất lượng sản phẩm, tôi có quyền từ chối chỉ dẫn đó và phải báo ngay cho họ theo quy định tại Điều này.",
+  "gold_ids": [
+   "BLDS2015|Dieu547|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440019",
+  "as_of": "2018-01-01",
+  "question": "Nếu không xác định được phạm vi đại diện cụ thể, người đại diện theo pháp luật có quyền thực hiện mọi giao dịch dân sự vì người được đại diện không? (Điều 108 Bộ luật Dân sự)",
+  "gold_ids": [
+   "BLDS2015|Dieu141|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440020",
+  "as_of": "2018-01-01",
+  "question": "Nếu người được bảo lãnh không trả nợ, tôi có phải trả thay không? Theo luật, bên bảo lãnh phải thực hiện nghĩa vụ nếu bên được bảo lãnh không thực hiện hoặc thực hiện không đúng nghĩa vụ.",
+  "gold_ids": [
+   "BLDS2015|Dieu342|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440022",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đã tìm ra được nguồn gốc huyết thống của mình sau khi bị lưu lạc, tôi có quyền yêu cầu cơ quan nhà nước công nhận việc thay đổi tên không?",
+  "gold_ids": [
+   "BLDS2015|Dieu28|Khoan1|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440027",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi làm mất một phần thiết bị khi thuê khoán, tôi có phải bồi thường không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu490|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440024",
+  "as_of": "2018-01-01",
+  "question": "Nếu hoa lợi bị mất một phần ba do thiên tai, tôi có được yêu cầu giảm tiền thuê khoán không? (Điều 507 Bộ Luật Dân Sự)",
+  "gold_ids": [
+   "BLDS2015|Dieu488|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440025",
+  "as_of": "2018-01-01",
+  "question": "Tổ chức từ thiện A vừa kiếm được một khoản lợi nhuận lớn, họ có được phân chia lợi nhuận đó cho các thành viên không?",
+  "gold_ids": [
+   "BLDS2015|Dieu76|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440026",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi mua một sản phẩm nhưng người bán đòi giá cao hơn so với quy định của cơ quan nhà nước, tôi có quyền từ chối thanh toán giá đó không?",
+  "gold_ids": [
+   "BLDS2015|Dieu433|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440028",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi là chủ quyền bề mặt và không xử lý tài sản trước khi quyền bề mặt kết thúc, tài sản đó sẽ thuộc về ai? ",
+  "gold_ids": [
+   "BLDS2015|Dieu273|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440031",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi và người khác không thỏa thuận được về pháp luật áp dụng cho việc bồi thường thiệt hại, thì sẽ áp dụng pháp luật của nước nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu687|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440036",
+  "as_of": "2018-01-01",
+  "question": "Trước khi Bộ luật Dân sự mới có hiệu lực, tôi và người khác đã thỏa thuận mua bán nhà nhưng chưa ký hợp đồng, giờ tôi có phải tuân theo quy định mới không?",
+  "gold_ids": [
+   "BLDS2015|Dieu688|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440037",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đã vi phạm một điều khoản trong hợp đồng, tôi phải nộp phạt theo quy định về sự thỏa thuận giữa các bên trong hợp đồng.",
+  "gold_ids": [
+   "BLDS2015|Dieu418|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440040",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đang quản lý một di sản nhưng chủ sở hữu không xuất hiện, tôi có quyền đòi bù lại chi phí bảo quản di sản đó không?",
+  "gold_ids": [
+   "BLDS2015|Dieu618|Khoan2|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440038",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi ký hợp đồng mua nhà thay cho con chưa thành niên mà giá trị hợp đồng vượt quá số tiền được phép quản lý theo quy định, tôi có phải chịu trách nhiệm về phần giá trị vượt quá không?",
+  "gold_ids": [
+   "BLDS2015|Dieu143|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440039",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi không thể ký tên trong di chúc được thì tôi phải làm thế nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu636|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440041",
+  "as_of": "2018-01-01",
+  "question": "Nếu một công ty hứa thưởng cho người hoàn thành dự án, nhưng cuối cùng có 3 người cùng hoàn thành cùng một thời điểm, mỗi người sẽ được nhận bao nhiêu phần thưởng theo quy định pháp luật?",
+  "gold_ids": [
+   "BLDS2015|Dieu572|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440044",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi kết hôn với một công dân nước ngoài, quan hệ hôn nhân của tôi có phải là quan hệ dân sự có yếu tố nước ngoài không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu663|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440045",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi muốn đổi họ cho con vì đã đổi họ cho mình, tôi cần làm gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu27|Khoan1|Diemg"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440047",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đã làm đơn khởi kiện về một vụ tranh chấp đất đai và tòa án đã đưa ra một quyết định có hiệu lực pháp luật, thời hiệu áp dụng cho quyền dân sự của tôi sẽ bị gián đoạn như thế nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu153|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440050",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi cầm cố một bất động sản mà không đăng ký, tài sản đó có hiệu lực đối kháng với người thứ ba không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu310|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440051",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi trộn lẫn vàng của tôi với vàng của bạn để tạo thành một vật mới, thì vật mới đó thuộc sở hữu của ai? Theo Điều này, vật mới sẽ là tài sản thuộc sở hữu chung của tôi và bạn kể từ thời điểm trộn lẫn vàng.",
+  "gold_ids": [
+   "BLDS2015|Dieu226|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440059",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi phải bảo lãnh cho một khoản vay và người vay không trả nợ đúng hạn, tôi có phải chịu trách nhiệm về tiền lãi và tiền phạt phát sinh không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu336|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440060",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi là người được nhờ trông coi nhà của người mất nhưng gia đình người mất yêu cầu giao lại nhà, tôi phải làm gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu617|Khoan2|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440064",
+  "as_of": "2018-01-01",
+  "question": "Tôi có thể dựng hàng rào trên phần đất của mình không?",
+  "gold_ids": [
+   "BLDS2015|Dieu176|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440065",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi muốn khai thác tài sản đang cầm cố của tôi để thu lợi nhuận, cần phải được ai đồng ý?",
+  "gold_ids": [
+   "BLDS2015|Dieu348|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440066",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi phải cấp dưỡng cho con nhưng muốn thay thế bằng một món quà giá trị tương đương, tôi có được phép không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu377|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440067",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi cầm cố tài sản có tranh chấp với người khác mà không báo cho bên nhận cầm cố, họ có quyền làm gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu311|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440072",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi biệt tích 5 năm và không có tin tức gì về tôi, gia đình tôi có thể làm gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu71|Khoan1|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440074",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi phải chăm sóc người thân bị thương trong thời gian dài, tôi có quyền đòi bồi thường chi phí và thu nhập bị mất không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu590|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440076",
+  "as_of": "2018-01-01",
+  "question": "Nếu người được giám hộ mất đi, người giám hộ phải làm gì trong 3 tháng? ",
+  "gold_ids": [
+   "BLDS2015|Dieu63|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440075",
+  "as_of": "2018-01-01",
+  "question": "Nếu có mâu thuẫn giữa các điều khoản trong hợp đồng, tôi phải giải thích chúng như thế nào để đảm bảo tính nhất quán với toàn bộ nội dung hợp đồng? (Dựa trên Điều 123 Bộ Luật Dân Sự)",
+  "gold_ids": [
+   "BLDS2015|Dieu404|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440078",
+  "as_of": "2018-01-01",
+  "question": "Nếu công ty nơi tôi làm việc bị giải thể, tôi có quyền đòi bồi thường các khoản như bảo hiểm xã hội và trợ cấp thôi việc theo thứ tự ưu tiên nào? ",
+  "gold_ids": [
+   "BLDS2015|Dieu94|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440080",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi được di tặng một phần tài sản nhưng người lập di chúc còn nợ tiền, tôi có phải dùng phần tài sản được di tặng để trả nợ không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu646|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440081",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi và đối tác ký hợp đồng với thời hạn là một tháng nhưng không quy định rõ thời gian liền nhau, theo luật định thời hạn một tháng được tính là bao nhiêu ngày?",
+  "gold_ids": [
+   "BLDS2015|Dieu146|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "regolded",
+  "regolded_from": "BLDS2015|Dieu146|Khoan1|Diema"
+ },
+ {
+  "qid": "EXT440083",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi đang sử dụng dịch vụ internet và thường xuyên trễ phí, nhà cung cấp có quyền chấm dứt hợp đồng với tôi không? (Điều 509 Bộ Luật dân sự)",
+  "gold_ids": [
+   "BLDS2015|Dieu520|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440090",
+  "as_of": "2018-01-01",
+  "question": "Nếu người được chỉ định quản lý phần di sản dùng vào việc thờ cúng không thực hiện đúng di chúc, tôi có quyền giao phần di sản đó cho người khác quản lý không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu645|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440092",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi và người nhận bảo đảm không thể thỏa thuận được giá tài sản bảo đảm, thì theo luật tôi phải làm gì? ",
+  "gold_ids": [
+   "BLDS2015|Dieu306|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440095",
+  "as_of": "2018-01-01",
+  "question": "Nếu người quản lý di sản gây thiệt hại do vi phạm nghĩa vụ của mình, họ phải bồi thường thiệt hại theo Điều 616 Bộ luật.",
+  "gold_ids": [
+   "BLDS2015|Dieu617|Khoan1|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440094",
+  "as_of": "2018-01-01",
+  "question": "Nếu vợ tôi đã được tòa án cho ly hôn khi tôi bị tuyên bố là đã chết, quyết định ly hôn đó có còn hiệu lực không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu73|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440096",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi thấy một người bị tai nạn giao thông nặng gần nơi tôi đang đứng, tôi có trách nhiệm đưa người đó đến bệnh viện gần nhất không?",
+  "gold_ids": [
+   "BLDS2015|Dieu33|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440093",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi trả nợ trước hạn, tôi có phải trả thêm lãi cho toàn bộ thời gian vay như hợp đồng không? (Điều 469 Bộ luật dân sự)",
+  "gold_ids": [
+   "BLDS2015|Dieu470|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440099",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi phát hiện người khác đã trộn lẫn tài sản của tôi vào tài sản của họ mà không có sự đồng ý của tôi, tôi có quyền đòi họ thanh toán giá trị phần tài sản của tôi và bồi thường thiệt hại không?",
+  "gold_ids": [
+   "BLDS2015|Dieu226|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440100",
+  "as_of": "2018-01-01",
+  "question": "Người dân hỏi: Tôi muốn xây tường ngăn trên ranh giới đất của tôi mà bên kia đồng ý, vậy tường đó thuộc sở hữu của ai và chi phí do ai chịu? ",
+  "gold_ids": [
+   "BLDS2015|Dieu176|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440103",
+  "as_of": "2018-01-01",
+  "question": "Nếu không xác định được người thừa kế và không có người quản lý di sản, thì di sản sẽ do cơ quan nhà nước có thẩm quyền quản lý theo quy định.",
+  "gold_ids": [
+   "BLDS2015|Dieu616|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440101",
+  "as_of": "2018-01-01",
+  "question": "Nếu tòa án tuyên bố một người là đã chết, hôn nhân của người đó sẽ được giải quyết như thế nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu72|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440102",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi là thành viên của một công ty và không biết rõ quyền và nghĩa vụ của mình, tôi nên tham khảo điều nào trong Điều lệ công ty? ",
+  "gold_ids": [
+   "BLDS2015|Dieu77|Khoan2|Diemh"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440105",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi là chủ nợ và долж nhân có nhiều người, tôi có thể đòi toàn bộ số tiền nợ từ bất kỳ ai trong số họ được không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu288|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440106",
+  "as_of": "2018-01-01",
+  "question": "Nếu phụ lục hợp đồng có điều khoản trái với hợp đồng chính, điều khoản đó có hiệu lực không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu403|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440107",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi mua một món hàng nhưng không thỏa thuận rõ về thời hạn thanh toán và giao hàng, tôi phải thanh toán khi nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu440|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440110",
+  "as_of": "2018-01-01",
+  "question": "Nếu trong hợp đồng lao động có quy định sử dụng pháp luật nước ngoài, nhưng điều đó làm giảm quyền lợi tối thiểu của người lao động theo pháp luật Việt Nam, thì nên áp dụng pháp luật nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu683|Khoan5"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440111",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi mua một sản phẩm bị lỗi và cần gửi nó đến nơi sửa chữa, tôi có quyền yêu cầu người bán bù đắp toàn bộ chi phí vận chuyển không?",
+  "gold_ids": [
+   "BLDS2015|Dieu448|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440109",
+  "as_of": "2018-01-01",
+  "question": "Nếu không có người thân thích để cử làm giám sát việc giám hộ thì Ủy ban nhân dân cấp xã sẽ cử cá nhân hoặc pháp nhân giám sát, đúng không?",
+  "gold_ids": [
+   "BLDS2015|Dieu51|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440116",
+  "as_of": "2018-01-01",
+  "question": "Nếu dịch vụ internet mà nhà cung cấp thường xuyên bị ngắt quãng và không khắc phục, tôi có quyền đơn phương chấm dứt hợp đồng và đòi bồi thường không?",
+  "gold_ids": [
+   "BLDS2015|Dieu516|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440120",
+  "as_of": "2018-01-01",
+  "question": "Trường hợp hai công dân Việt Nam mua một bất động sản ở nước ngoài, có phải là quan hệ dân sự có yếu tố nước ngoài không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu663|Khoan2|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440121",
+  "as_of": "2018-01-01",
+  "question": "Tài sản của tôi bị người khác giữ mà không có lý do, tôi có quyền đòi lại không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu166|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440125",
+  "as_of": "2018-01-01",
+  "question": "Khi hết hạn quyền bề mặt, tôi phải làm gì để tuân thủ pháp luật? ",
+  "gold_ids": [
+   "BLDS2015|Dieu273|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440127",
+  "as_of": "2018-01-01",
+  "question": "Nếu một tổ chức được chỉ định là người thừa kế trong di chúc nhưng đã giải thể trước khi người lập di chúc mất, phần di chúc đó sẽ được xử lý như thế nào?",
+  "gold_ids": [
+   "BLDS2015|Dieu643|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440129",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi ký hợp đồng mua bán nhà với người nước ngoài, pháp luật nào sẽ được áp dụng cho hợp đồng đó? Luật về bất động sản tại địa phương nơi nhà nằm sẽ được áp dụng.",
+  "gold_ids": [
+   "BLDS2015|Dieu683|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440130",
+  "as_of": "2018-01-01",
+  "question": "Nếu Việt Nam ký kết một điều ước quốc tế mà trong đó từ bỏ quyền miễn trừ, thì nhà nước Việt Nam có phải chịu trách nhiệm về nghĩa vụ dân sự với cá nhân hoặc tổ chức nước ngoài không? ",
+  "gold_ids": [
+   "BLDS2015|Dieu100|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440131",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi không thể thực hiện nghĩa vụ do một sự kiện bất khả kháng, tôi có phải chịu trách nhiệm dân sự không? Theo Điều này, bạn không phải chịu trách nhiệm dân sự nếu không có thỏa thuận khác hoặc quy định pháp luật khác.",
+  "gold_ids": [
+   "BLDS2015|Dieu351|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440133",
+  "as_of": "2018-01-01",
+  "question": "Trường hợp tôi là người chưa thành niên và muốn khởi kiện một vụ việc, tôi cần phải có người đại diện không?",
+  "gold_ids": [
+   "BLDS2015|Dieu156|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440134",
+  "as_of": "2018-01-01",
+  "question": "Nếu tôi mua một chiếc xe máy cùng với một người bạn mà không xác định rõ mỗi người sở hữu bao nhiêu phần thì chiếc xe đó sẽ được coi là tài sản sở hữu chung hợp nhất theo pháp luật, đúng không?",
+  "gold_ids": [
+   "BLDS2015|Dieu210|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2015",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440138",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi tìm thấy một chiếc điện thoại di động mà không biết chủ sở hữu là ai, tôi phải làm gì theo pháp luật? ",
+  "gold_ids": [
+   "BLDS2005|Dieu239|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440139",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi mua một món đồ từ người khác mà sau đó phát hiện họ không phải là chủ sở hữu thực sự của món đồ đó, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "BLDS2005|Dieu463|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440140",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi ghi lại và chia sẻ đoạn phát sóng trực tiếp của một kênh truyền hình lên mạng xã hội, tôi có vi phạm pháp luật không? ",
+  "gold_ids": [
+   "BLDS2005|Dieu747|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440146",
+  "as_of": "2012-08-07",
+  "question": "Nếu người khác đăng thông tin sai lệch làm mất uy tín của tôi trên mạng xã hội, tôi có quyền đòi bồi thường thiệt hại và tiền bù đắp tổn thất về tinh thần theo quy định tại Điều này.",
+  "gold_ids": [
+   "BLDS2005|Dieu611|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440141",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi sáng tạo ra một tác phẩm văn học nhưng chưa công bố, tôi có quyền gì đối với tác phẩm đó? ",
+  "gold_ids": [
+   "BLDS2005|Dieu739|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440143",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi muốn chuyển quyền sử dụng đất cho người khác mà không lập hợp đồng công chứng, có được không? ",
+  "gold_ids": [
+   "BLDS2005|Dieu689|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440144",
+  "as_of": "2012-08-07",
+  "question": "Nếu một người chậm trả tiền nợ, họ phải trả lãi cho số tiền chậm trả không?",
+  "gold_ids": [
+   "BLDS2005|Dieu305|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440147",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi mua nguyên vật liệu của người khác để sản xuất sản phẩm mới nhưng không trả tiền cho họ, tôi có bị pháp luật xử lý không? Theo pháp luật, tôi phải làm gì?",
+  "gold_ids": [
+   "BLDS2005|Dieu238|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440149",
+  "as_of": "2012-08-07",
+  "question": "Nếu người bán chỉ giao một phần hàng hóa như trong hợp đồng đã thỏa thuận, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "BLDS2005|Dieu435|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440148",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi là bên đặt gia công mà sản phẩm không bảo đảm chất lượng do nguyên liệu tôi cung cấp, tôi có được giảm tiền công không? ",
+  "gold_ids": [
+   "BLDS2005|Dieu557|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440152",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi ký hợp đồng mua một sản phẩm mà nhà cung cấp biết sản phẩm đó không còn hàng nhưng không thông báo cho tôi, tôi có quyền đòi bồi thường thiệt hại không? (Điều 123, khoản 2)",
+  "gold_ids": [
+   "BLDS2005|Dieu411|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440156",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi là người có quyền trong một vụ kiện liên đới và một đồng nguyên đơn khác đã miễn cho bị đơn nghĩa vụ phải trả tiền cho họ, tôi vẫn có quyền đòi toàn bộ số tiền từ bị đơn được không?",
+  "gold_ids": [
+   "BLDS2005|Dieu299|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440158",
+  "as_of": "2012-08-07",
+  "question": "Nếu sau khi chia di sản gia đình mà phát hiện có người thừa kế mới, tôi cần phải làm gì theo pháp luật? ",
+  "gold_ids": [
+   "BLDS2005|Dieu687|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440159",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi muốn chuyển giao nghĩa vụ trả nợ cho một người khác, họ có đồng ý không được tính là đủ hay còn cần thêm điều kiện gì khác nữa không? Theo quy định tại Điều này, bên có quyền phải đồng ý và nghĩa vụ đó không được gắn liền với nhân thân của bê",
+  "gold_ids": [
+   "BLDS2005|Dieu315|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440160",
+  "as_of": "2012-08-07",
+  "question": "Nếu nhà cho thuê không sửa chữa những hư hỏng lớn trong nhà trọ mà tôi đã báo, tôi có quyền tự sửa chữa và đòi lại tiền sửa chữa không? ",
+  "gold_ids": [
+   "BLDS2005|Dieu485|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440164",
+  "as_of": "2012-08-07",
+  "question": "Nếu công ty A sử dụng tên gọi giống hệt với công ty B trong cùng lĩnh vực, thì công ty A có vi phạm pháp luật không? ",
+  "gold_ids": [
+   "BLDS2005|Dieu87|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440167",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi mua bảo hiểm nhà và nhà bị thiệt hại do thiên tai, tôi có bắt buộc phải thông báo ngay cho công ty bảo hiểm không?",
+  "gold_ids": [
+   "BLDS2005|Dieu575|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440165",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi đã gửi đề nghị mua một sản phẩm với giá nhất định và sau đó muốn thay đổi giá, tôi có thể làm như vậy không? Theo Điều này, bạn có thể thay đổi đề nghị của mình nếu bên được đề nghị nhận được thông báo về việc thay đổi trước hoặc cùng lúc với",
+  "gold_ids": [
+   "BLDS2005|Dieu392|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440166",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi cầm cố chiếc xe máy của mình cho người khác, tôi có được sử dụng chiếc xe đó không? Theo quy định, bạn chỉ được sử dụng tài sản cầm cố nếu được bên cầm cố đồng ý (Điểm 3).",
+  "gold_ids": [
+   "BLDS2005|Dieu332|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440170",
+  "as_of": "2012-08-07",
+  "question": "Nếu một công ty không thực hiện bảo trì định kỳ cho máy móc theo hợp đồng đã ký, tôi có quyền làm gì? ",
+  "gold_ids": [
+   "BLDS2005|Dieu304|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440171",
+  "as_of": "2012-08-07",
+  "question": "Nếu tôi là người thừa kế thuộc hàng thứ hai mà không có ai trong hàng thừa kế thứ nhất, tôi sẽ được hưởng di sản như thế nào? ",
+  "gold_ids": [
+   "BLDS2005|Dieu676|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLDS2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440175",
+  "as_of": "2016-01-01",
+  "question": "Nếu vợ chồng tôi không có tài sản chung hoặc tài sản chung không đủ để sống, tôi có bắt buộc phải dùng tài sản riêng để hỗ trợ gia đình không?",
+  "gold_ids": [
+   "HNGD2014|Dieu30|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440174",
+  "as_of": "2016-01-01",
+  "question": "Nếu vợ chồng tôi đã mất và tôi là bên mang thai hộ, tôi có quyền nhận nuôi đứa trẻ không?",
+  "gold_ids": [
+   "HNGD2014|Dieu99|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440177",
+  "as_of": "2016-01-01",
+  "question": "Nếu con chưa thành niên muốn bán ngôi nhà của mình, cần phải có sự đồng ý của bố mẹ theo quy định pháp luật.",
+  "gold_ids": [
+   "HNGD2014|Dieu73|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440181",
+  "as_of": "2016-01-01",
+  "question": "Nếu vợ chồng tôi kinh doanh chung mà không có thỏa thuận riêng thì vợ tôi có quyền đại diện cho tôi trong các giao dịch kinh doanh không?",
+  "gold_ids": [
+   "HNGD2014|Dieu25|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440184",
+  "as_of": "2016-01-01",
+  "question": "Nếu con tôi đã trưởng thành nhưng mất năng lực hành vi dân sự, người giám hộ có quyền định đoạt tài sản riêng của con tôi không?",
+  "gold_ids": [
+   "HNGD2014|Dieu77|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440185",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi đang mang thai hộ mà phát hiện có vấn đề về sức khỏe ảnh hưởng đến tính mạng của tôi hoặc sự phát triển của thai nhi, tôi có quyền quyết định không tiếp tục mang thai không? (Theo quy định tại Điều này, người mang thai hộ có quyền quyết định ",
+  "gold_ids": [
+   "HNGD2014|Dieu97|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440186",
+  "as_of": "2016-01-01",
+  "question": "Nếu cha mẹ thường xuyên bạo lực với con cái, tòa án sẽ ra quyết định không cho họ chăm sóc con trong bao lâu?",
+  "gold_ids": [
+   "HNGD2014|Dieu85|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440191",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi không đăng ký kết hôn mà muốn ly hôn và phân chia tài sản, tòa án sẽ xử lý như thế nào?",
+  "gold_ids": [
+   "HNGD2014|Dieu53|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440192",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi sống chung như vợ chồng với người khác mà không đăng ký kết hôn, thì tôi có quyền và nghĩa vụ gì với người đó không? ",
+  "gold_ids": [
+   "HNGD2014|Dieu14|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440194",
+  "as_of": "2016-01-01",
+  "question": "Sau khi ly hôn, tôi có quyền thăm nom con nhưng chồng cũ thường xuyên gây khó khăn và gây ảnh hưởng xấu đến con. Tôi có quyền yêu cầu tòa án hạn chế quyền thăm nom của chồng cũ không? (Điều 81 Luật Hôn nhân và Gia đình)",
+  "gold_ids": [
+   "HNGD2014|Dieu82|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440197",
+  "as_of": "2016-01-01",
+  "question": "Nếu tôi muốn yêu cầu thay đổi người trực tiếp nuôi con, tôi cần phải chứng minh điều gì? ",
+  "gold_ids": [
+   "HNGD2014|Dieu84|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "regolded",
+  "regolded_from": "HNGD2014|Dieu84|Khoan5|Diemd"
+ },
+ {
+  "qid": "EXT440196",
+  "as_of": "2016-01-01",
+  "question": "Nếu người phải cấp dưỡng không tự nguyện thực hiện nghĩa vụ của mình, tôi có thể yêu cầu Tòa án buộc họ phải thực hiện nghĩa vụ cấp dưỡng theo pháp luật không? (Điều 110 Bộ Luật Hôn nhân và Gia đình)",
+  "gold_ids": [
+   "HNGD2014|Dieu119|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440198",
+  "as_of": "2016-01-01",
+  "question": "Một người con 18 tuổi nhưng bị khuyết tật và không thể lao động, không có tài sản, có quyền đòi sống chung với cha mẹ và được cha mẹ nuôi dưỡng theo quy định tại Điều này.",
+  "gold_ids": [
+   "HNGD2014|Dieu70|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440204",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi nhận được một bản án từ tòa án nước ngoài và không muốn thi hành tại Việt Nam, tôi phải làm gì trong 6 tháng kể từ ngày nhận được bản án? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu447|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440201",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi từ chối giám định trong phiên tòa, việc này cần được ghi chép như thế nào?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu83|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440206",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi kiến nghị Tòa án nhân dân tối cao xem xét lại một quyết định, thì Hội đồng Thẩm phán sẽ thảo luận và biểu quyết theo đa số về việc nhất trí hoặc không nhất trí với kiến nghị của tôi (theo Điều này).",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu359|Khoan3|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440208",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là phiên dịch mà không có mặt theo giấy triệu tập của Tòa án thì sẽ vi phạm điều luật trên, cụ thể là khoản a).",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu82|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440209",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi có một tranh chấp với một công ty nước ngoài và họ đòi giải quyết bằng trọng tài quốc tế, nhưng theo luật Việt Nam tranh chấp này không thể giải quyết bằng trọng tài, thì phán quyết của trọng tài có được công nhận tại Việt Nam không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu459|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440211",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn kiện một bản án từ Tòa án nước ngoài tại Việt Nam mà bản án đó không yêu cầu thi hành tại Việt Nam, tôi nên gửi đơn đến Tòa án nào? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemđ"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440212",
+  "as_of": "2017-07-01",
+  "question": "Trong phiên tòa, tôi muốn hỏi người kháng cáo có muốn thay đổi hoặc rút kháng cáo không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu298|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440223",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là thẩm phán và đã tham gia xét xử một vụ án dân sự trước đó, tôi có thể tiếp tục tham gia giải quyết vụ việc đó theo thủ tục giám đốc thẩm không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu53|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440227",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn thay đổi Thẩm phán trong phiên tòa, Hội đồng xét xử sẽ quyết định như thế nào?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu56|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440225",
+  "as_of": "2017-07-01",
+  "question": "Nếu biên bản hòa giải không có ý kiến của các đương sự thì có vi phạm pháp luật không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu211|Khoan3|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440224",
+  "as_of": "2017-07-01",
+  "question": "Nếu người phải thi hành án chết thì tòa án sẽ xử lý như thế nào? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu457|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440228",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi cung cấp chứng cứ giả mạo trong một vụ kiện và gây thiệt hại cho người khác, tôi sẽ phải bồi thường thiệt hại và chịu chi phí giám định theo quyết định của tòa án, đúng không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu103|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440229",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi không đồng ý với quyết định của Chánh án Tòa án, tôi có thể khiếu nại lên Chánh án Tòa án cấp trên trực tiếp được không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu504|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440230",
+  "as_of": "2017-07-01",
+  "question": "Tại sao Tòa án lại trả lại đơn khởi kiện của tôi mà không giải thích rõ lý do?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu192|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440232",
+  "as_of": "2017-07-01",
+  "question": "Khi tôi kháng cáo và đã nhờ luật sư bảo vệ, tôi được trình bày quan điểm trước hay sau khi người bị kiện trình bày? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu305|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440234",
+  "as_of": "2017-07-01",
+  "question": "Trong một vụ án, tôi có thể ủy quyền cho luật sư bảo vệ quyền lợi cho cả tôi và người thân nếu quyền lợi của chúng tôi không mâu thuẫn nhau, đúng không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu75|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440241",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi gửi đơn khiếu nại về việc Tòa án từ chối thụ lý đơn khởi kiện của tôi thì trong bao lâu tôi có quyền khiếu nại và ai sẽ giải quyết khiếu nại đó? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu194|Khoan5|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440243",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi ký vào một thoả thuận mà sau đó phát hiện ra mình bị lừa dối, tôi có quyền kháng nghị quyết định công nhận thoả thuận đó theo thủ tục giám đốc thẩm không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu213|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440247",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi không nhận được văn bản tố tụng trực tiếp, tôi có vi phạm pháp luật không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu177|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440246",
+  "as_of": "2017-07-01",
+  "question": "Nếu Chánh án vắng mặt, Phó Chánh án có quyền thực hiện nhiệm vụ của Chánh án không? (Điều này được quy định tại khoản 1 Điều này, trừ quyền kháng nghị).",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu47|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440250",
+  "as_of": "2017-07-01",
+  "question": "Trong vụ án của tôi, tòa án có bắt buộc phải trực tiếp nghe lời trình bày của tất cả các bên liên quan không? (Điều 222 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu225|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440260",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là nguyên đơn trong một vụ án có yếu tố nước ngoài, tôi có phải tuân theo thời hạn quy định như vụ án thông thường không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu286|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440262",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là nguyên đơn và muốn thay đổi luật sư đại diện trong phiên tòa nhưng tòa không ghi vào biên bản, tôi có quyền khiếu nại gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu55|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440263",
+  "as_of": "2017-07-01",
+  "question": "Trong vụ án này, tôi muốn bổ sung ý kiến về thiệt hại mà tôi đã chịu. Tôi có quyền làm như vậy theo quy định nào?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu260|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440265",
+  "as_of": "2017-07-01",
+  "question": "Trong vụ án của tôi, tôi muốn biết bị đơn có bắt buộc phải xuất hiện và trình bày ý kiến của mình không? (Điều 282 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu210|Khoan4|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440266",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi nghi ngờ kết luận giám định lần đầu không chính xác, tôi có quyền yêu cầu giám định lại không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu102|Khoan5"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440270",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn gửi đơn giám đốc thẩm nhưng quên không ghi rõ ngày tháng năm, tôi có bị từ chối không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu328|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440268",
+  "as_of": "2017-07-01",
+  "question": "Tài liệu tố tụng của tôi liên quan đến bí mật cá nhân, tòa án có công khai không? Theo Luật, tòa án không công khai nội dung tài liệu liên quan đến bí mật cá nhân theo yêu cầu chính đáng của đương sự.",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu109|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440273",
+  "as_of": "2017-07-01",
+  "question": "Tôi gặp phải tình huống gì khi Thẩm phán không thông báo trước về thời gian, địa điểm và nội dung của phiên họp kiểm tra chứng cứ và hòa giải? (Theo Điều 229 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu208|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440277",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi vắng mặt tại phiên tòa và bản án được niêm yết, tôi có bao lâu để kháng cáo? Thời hạn kháng cáo trong trường hợp này là 07 ngày kể từ ngày bản án được niêm yết.",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu322|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440278",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi đang đại diện pháp lý cho hai bên trong cùng một vụ việc và quyền lợi của hai bên này đối lập nhau, tôi có vi phạm pháp luật không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu87|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440279",
+  "as_of": "2017-07-01",
+  "question": "Nếu kiểm sát viên vắng mặt trong phiên tòa phúc thẩm mà không có kháng nghị, tòa án vẫn tiến hành xét xử theo quy định tại Điều này.",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu296|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440283",
+  "as_of": "2017-07-01",
+  "question": "Khi nộp đơn xin ly hôn, tôi cần nộp thêm những giấy tờ gì để chứng minh thỏa thuận giữa tôi và vợ/chồng tôi là hợp pháp?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu396|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440280",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi cần sử dụng pháp luật nước ngoài trong một vụ kiện tại Việt Nam, tôi phải làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu481|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440281",
+  "as_of": "2017-07-01",
+  "question": "Nếu tòa án đã ra bản án nhưng quá 15 ngày vẫn chưa chuyển giao cho cơ quan thi hành án dân sự, thì theo điểm a khoản 2 Điều 482, cơ quan đó đã vi phạm quy định.",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu485|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440285",
+  "as_of": "2017-07-01",
+  "question": "Nếu biên bản kiểm tra việc giao nộp chứng cứ không ghi rõ ngày, tháng, năm tiến hành phiên họp thì có vi phạm pháp luật không? (Điều 222 Bộ luật Tố tụng hình sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu211|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440286",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi không đồng ý với quyết định của tòa án cấp sơ thẩm, hội đồng xét xử có quyền gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu443|Khoan3|Diemđ"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440288",
+  "as_of": "2017-07-01",
+  "question": "Nếu Tòa án nhân dân tối cao kiến nghị xem xét một văn bản quy phạm pháp luật nhưng không nhận được phản hồi trong thời hạn 1 tháng, Tòa án có quyền áp dụng văn bản có hiệu lực cao hơn để giải quyết vụ án theo Điều này.",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu221|Khoan3|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440291",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi kiện một bản án đã có hiệu lực nhưng phát hiện ra rằng bản án này không phản ánh đúng các tình tiết khách quan của vụ án và gây thiệt hại cho tôi, tôi có thể kháng nghị theo thủ tục giám đốc thẩm không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu326|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440294",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi muốn ủy quyền cho người khác kháng cáo một bản án, tôi cần phải làm văn bản ủy quyền có công chứng hay chứng thực hợp pháp đúng không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu272|Khoan6"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440298",
+  "as_of": "2017-07-01",
+  "question": "Tôi đề nghị tòa xem xét lại quyết định trước đó, tôi đã gửi kèm bản án cũ, quyết định của tòa và các chứng cứ liên quan chứng minh yêu cầu của tôi là hợp pháp. (Điều 224 của Luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu328|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440301",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi nộp đơn yêu cầu biện pháp khẩn cấp tạm thời cùng đơn khởi kiện, tòa án phải giải quyết trong bao lâu?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu133|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440304",
+  "as_of": "2017-07-01",
+  "question": "Người đại diện theo pháp luật của tôi là bố mẹ tôi muốn kháng cáo quyết định của tòa án, họ cần làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu272|Khoan5"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440307",
+  "as_of": "2017-07-01",
+  "question": "Trong cuộc đình công, tôi muốn biết kiểm sát viên cần làm gì và phải gửi văn bản phát biểu ý kiến cho Tòa án sau phiên họp theo quy định pháp luật?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu411|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440306",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là kiểm sát viên và muốn phát biểu ý kiến về việc giải quyết một kháng cáo trước Hội đồng phúc thẩm, tôi nên làm gì theo luật? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu314|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440308",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi là nguyên đơn trong một vụ án dân sự và muốn tòa án xác minh thêm một số chứng cứ mới, tôi có quyền yêu cầu Thẩm phán thực hiện nhiệm vụ này không? (Điều 200 Bộ luật Tố tụng dân sự quy định Thẩm phán có quyền xác minh, thu thập chứng cứ trong",
+  "gold_ids": [
+   "BLTTDS2004|Dieu58|Khoan2|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "regolded",
+  "regolded_from": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu203|Khoan2|Diemđ"
+ },
+ {
+  "qid": "EXT440310",
+  "as_of": "2017-07-01",
+  "question": "Nếu trong phiên tòa, tôi yêu cầu thay đổi Kiểm sát viên vì lý do khách quan, Hội đồng xét xử sẽ xử lý như thế nào?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu62|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440313",
+  "as_of": "2017-07-01",
+  "question": "Nếu Thẩm phán đang giải quyết vụ việc dân sự là Chánh án thì ai sẽ quyết định việc thay đổi Thẩm phán và Thư ký phiên họp? (Điều 169 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu368|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440317",
+  "as_of": "2017-07-01",
+  "question": "Câu hỏi: Tôi vẫn thấy quy định tại Điều 159 và điểm h khoản 1 Điều 192 được áp dụng đến hết năm 2016, vậy sau năm 2016 thì những quy định này có còn hiệu lực không? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu517|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440316",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi nhận được quyết định tạm đình chỉ vụ án từ tòa án, tôi có bao lâu để kháng cáo? Thời hạn kháng cáo là 07 ngày kể từ khi nhận được quyết định hoặc ngày quyết định được niêm yết.",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu273|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440315",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi không đồng ý với quyết định của tòa án cấp sơ thẩm trong một vụ việc dân sự, tôi có quyền kháng cáo và yêu cầu hội đồng phúc thẩm hủy quyết định đó và chuyển hồ sơ về lại tòa án cấp sơ thẩm để giải quyết lại theo thủ tục sơ thẩm không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu375|Khoan3|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440319",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi không có luật sư bảo vệ, tôi phải tự trình bày lập luận của mình trước tòa đúng không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu260|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440321",
+  "as_of": "2017-07-01",
+  "question": "Nếu một phán quyết của trọng tài nước ngoài không tuân thủ thỏa thuận trọng tài hoặc pháp luật nước liên quan, tòa án Việt Nam sẽ không công nhận phán quyết đó. (Điều 499 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu459|Khoan1|Diemđ"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440323",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi và người khác tham gia hòa giải nhưng bị ép buộc ký kết thỏa thuận, thì theo luật tôi có quyền làm gì? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu205|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440322",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi đã kháng cáo nhưng muốn thay đổi nội dung kháng cáo, tôi có được phép làm vậy không? Theo Điều 273 của Bộ luật Tố tụng dân sự, người đã kháng cáo có quyền thay đổi, bổ sung kháng cáo mà không bị giới hạn bởi phạm vi kháng cáo ban đầu nếu chưa",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu284|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440324",
+  "as_of": "2017-07-01",
+  "question": "Nếu kiểm sát viên vắng mặt trong phiên tòa, tòa án vẫn tiến hành phiên họp được không? (Điều 234 Bộ luật Tố tụng hình sự)",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu438|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440328",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi bị tố cáo nhưng không biết nội dung cụ thể, tôi có quyền được thông báo về nội dung đó theo quy định tại Điều này, đúng không?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu511|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440335",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi nhận được quyết định đưa vụ án ra xét xử nhưng không đồng ý, tôi có quyền khiếu nại trong bao lâu?",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu319|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440336",
+  "as_of": "2017-07-01",
+  "question": "Nếu tôi được triệu tập nhưng không đến tham gia phiên tòa, tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu320|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974",
+  "gold_tier": "regolded",
+  "regolded_from": "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu230|Khoan1"
+ },
+ {
+  "qid": "EXT440343",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi bị thiệt hại và cần yêu cầu bồi thường, tôi nên làm gì theo quy định của pháp luật? Ủy ban nhân dân cấp tỉnh sẽ hỗ trợ và hướng dẫn tôi thực hiện thủ tục yêu cầu bồi thường.",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu73|Khoan3|Diemi"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "luat-so-15-2026-qh16-470450",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440356",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi từ chối nhận giấy mời tham gia thương lượng bồi thường hai lần, Thuật trưởng cơ quan giải quyết bồi thường phải ban hành quyết định giải quyết bồi thường trong thời hạn 02 ngày làm việc theo quy định.",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu47|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "luat-so-15-2026-qh16-470450",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440353",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi không có quyền nộp đơn xin cấp văn bằng bảo hộ nhưng cơ quan chức năng vẫn cấp cho tôi, tôi có thể làm gì? (Điều này vi phạm điều khoản không có căn cứ pháp luật để cấp văn bằng bảo hộ.)",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu17|Khoan13"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "luat-so-15-2026-qh16-470450",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440349",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi đã nộp đơn yêu cầu bồi thường nhưng cơ quan giải quyết cho rằng đơn của tôi không thuộc thẩm quyền của họ, họ phải xử lý như thế nào? ",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu43|Khoan6"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "luat-so-15-2026-qh16-470450",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440352",
+  "as_of": "2026-02-15",
+  "question": "Trong quá trình thương lượng bồi thường, tôi bị đối tác coi thường và không tôn trọng ý kiến của mình. Theo luật, tôi được bảo đảm dân chủ và bình đẳng như thế nào? (Điều 10 a, b)",
+  "gold_ids": [
+   "luat-so-15-2026-qh16-470450|Dieu46|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "luat-so-15-2026-qh16-470450",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440354",
+  "as_of": "2026-02-15",
+  "question": "Nếu Kiểm sát viên yêu cầu Tòa án thu thập một chứng cứ cụ thể nhưng Tòa án không thể thực hiện được, Tòa án phải làm gì? ",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu23|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440363",
+  "as_of": "2026-02-15",
+  "question": "Nếu Viện kiểm sát đã nhận hồ sơ để xem xét kháng nghị, Tòa án có cần chuyển hồ sơ cho Viện kiểm sát đó không? Tòa án chỉ cần gửi quyết định đưa vụ án ra xét xử cho Viện kiểm sát theo quy định. (Điều 249 Bộ Luật Tố tụng dân sự)",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu4|Khoan6"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440368",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi kiện ai đó và bị tòa trả lại đơn kiện, tôi có quyền khiếu nại không? Theo Luật Tố tụng dân sự, Kiểm sát viên sẽ xem xét tính hợp pháp của khiếu nại và đưa ra quan điểm về việc giữ nguyên quyết định trả lại đơn kiện hoặc nhận lại đơn kiện.",
+  "gold_ids": [
+   "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu27|Khoan2|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440371",
+  "as_of": "2026-02-15",
+  "question": "Nếu tài khoản của tôi chỉ có số tiền nhỏ hơn nghĩa vụ phải thi hành án, ngân hàng có bắt buộc phải phong tỏa toàn bộ tài khoản không? (Điều 18, khoản 2, điểm a) của Luật Thi Hành Án)",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu43|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440375",
+  "as_of": "2026-02-15",
+  "question": "Tại sao trại giam lại lập biên bản khi phạm nhân từ chối nhận tiền, tài sản, giấy tờ?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu35|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440378",
+  "as_of": "2026-02-15",
+  "question": "Cơ quan nào có trách nhiệm kiểm tra công tác thi hành án dân sự ở địa phương và cho ý kiến đối với báo cáo của cơ quan thi hành án dân sự tỉnh, thành phố?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "regolded",
+  "regolded_from": "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan1"
+ },
+ {
+  "qid": "EXT440379",
+  "as_of": "2026-02-15",
+  "question": "Khi nhận được thông báo từ Chấp hành viên về việc trả lại vật chứng, tôi cần làm gì để đảm bảo đúng quy định pháp luật?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu41|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440384",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi biết địa chỉ của người được thông báo nhưng không biết số định danh cá nhân của họ, tôi có thể thông báo qua văn phòng bưu chính gần nhất đúng không? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu16|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440382",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là đương sự và biết chấp hành viên đang thực hiện hành vi bị nghiêm cấm quy định tại khoản 2 Điều 16 của Luật Thi hành án dân sự, tôi có quyền yêu cầu thay đổi chấp hành viên không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu13|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440387",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là đương sự đã thi hành được ít nhất 1/2 chi phí cưỡng chế, tôi có được miễn chi phí cưỡng chế thi hành án còn lại không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu87|Khoan3|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440388",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi có nhiều tài sản và chọn giao một tài sản cụ thể để thi hành án, tôi có bị hạn chế quyền giao dịch với các tài sản khác không? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu54|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440389",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi có 2 khoản nợ khác nhau nhưng liên quan đến cùng một tài sản đảm bảo, tòa án sẽ ra bao nhiêu quyết định thi hành án? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu8|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440392",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi không nhận được quyết định áp dụng biện pháp bảo đảm qua môi trường số thì tôi phải làm gì? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu20|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440394",
+  "as_of": "2026-02-15",
+  "question": "Nếu ngân hàng từ chối cung cấp thông tin về tài khoản của một cá nhân khi có yêu cầu từ cơ quan thi hành án, thì cá nhân đó có thể hỏi: \"Ngân hàng có nghĩa vụ phải cung cấp thông tin tài khoản của tôi cho cơ quan thi hành án theo yêu cầu không?\"",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu109|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440400",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi nộp đơn thi hành án nhưng thiếu một số giấy tờ cần thiết, cơ quan thi hành án dân sự sẽ yêu cầu tôi bổ sung trong bao lâu?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu9|Khoan6"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440402",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là chủ sở hữu của một tài sản đã được hình thành và có tranh chấp pháp lý, tài sản của tôi có thể bị kê biên và xử lý theo quy định chung không?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu58|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440404",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là một thừa hành viên và muốn kiện một quyết định của cấp trên, tôi cần làm gì theo quy định pháp luật? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu140|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "regolded",
+  "regolded_from": "nghi-dinh-so-152-2026-nd-cp-469524|Dieu97|Khoan1|Diemc"
+ },
+ {
+  "qid": "EXT440403",
+  "as_of": "2026-02-15",
+  "question": "Tài sản đã được giao cho tôi nhưng sau đó bị người khác chiếm lại, tôi phải làm gì theo luật?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu67|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440406",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi phát hiện vật chứng bị mất trong kho, tôi phải làm gì theo luật? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu38|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440411",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là một đơn vị sử dụng ngân sách và có tiền gửi thu phí, lệ phí trong tài khoản của mình, tôi có được khấu trừ tiền từ tài khoản đó không? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu49|Khoan5"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440417",
+  "as_of": "2026-02-15",
+  "question": "Nếu trên mảnh đất cần thi hành án có mồ mả, người liên quan phải làm gì? Theo luật, họ phải di dời mồ mả ra khỏi diện tích đất và chịu mọi chi phí liên quan. (Điều 349 Bộ Luật Tố tụng dân sự)",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu68|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440413",
+  "as_of": "2026-02-15",
+  "question": "Nếu tài khoản của tôi có số tiền lớn hơn nghĩa vụ phải thi hành án, tôi chỉ bị phong tỏa bao nhiêu tiền theo quy định pháp luật?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu43|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440414",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi được trả lại một món tiền mà người khác phải trả cho tôi thông qua quyết định thi hành án, tôi sẽ nhận được quyết định thi hành án đó chứ đúng không? (Điều 10 Nghị định 22/2015/NĐ-CP)",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu8|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440415",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là người dân và gặp phải tình huống Bộ Tư pháp không bảo đảm kinh phí cho công tác thi hành án dân sự, tôi sẽ hỏi: \"Theo quy định tại điểm a khoản 2 Điều 10 Luật Thi hành án dân sự, Bộ Tư pháp có trách nhiệm bảo đảm kinh phí cho công tác thi ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu97|Khoan1|Diemg"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440416",
+  "as_of": "2026-02-15",
+  "question": "Nếu người dân bị lực lượng chức năng cưỡng chế trái pháp luật trong việc thi hành án, họ có quyền kháng nghị lên cơ quan có thẩm quyền theo Điều 20 Nghị định 22/2015/NĐ-CP.",
+  "gold_ids": [
+   "THADSVBHN|Dieu140|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "regolded",
+  "regolded_from": "nghi-dinh-so-152-2026-nd-cp-469524|Dieu102|Khoan7|Diemd"
+ },
+ {
+  "qid": "EXT440421",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi mua một tài sản bị bán đấu giá để thi hành án, cơ quan nhà nước có trách nhiệm làm thủ tục gì cho tôi? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu69|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440425",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi là đương sự thuộc diện quy định tại điểm a và điểm c khoản 1 Điều này, tôi được giảm bao nhiêu chi phí cưỡng chế thi hành án? ",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu87|Khoan3|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440430",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi yêu cầu thi hành án nhưng cơ quan thi hành án đã gửi lại yêu cầu của tôi, tôi cần làm gì để có thể tiếp tục yêu cầu thi hành án?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu22|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440432",
+  "as_of": "2026-02-15",
+  "question": "Khi cơ quan thi hành án dân sự giao tài sản tạm giữ cho một tổ chức khác, họ phải lập biên bản giao nhận như thế nào?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu37|Khoan2|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440439",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi đã đồng ý đình chỉ một phần quyết định thi hành án, tôi cần làm gì tiếp theo? Cơ quan thi hành án dân sự sẽ ra quyết định đình chỉ sau khi tôi nộp các khoản phí, chi phí thi hành án theo quy định của pháp luật tính đến thời điểm thỏa thuận.",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu14|Khoan5"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440441",
+  "as_of": "2026-02-15",
+  "question": "Nếu tôi mua tài sản đấu giá nhưng không nộp đủ tiền trong 60 ngày, cơ quan thi hành án sẽ xử lý như thế nào?",
+  "gold_ids": [
+   "nghi-dinh-so-152-2026-nd-cp-469524|Dieu65|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "nghi-dinh-so-152-2026-nd-cp-469524",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440450",
+  "as_of": "2016-12-31",
+  "question": "Nếu tôi không có giấy chứng sinh, tôi có thể làm giấy khai sinh cho con không? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu16|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "regolded",
+  "regolded_from": "HOTICH2014|Dieu70|Khoan1|Diemc"
+ },
+ {
+  "qid": "EXT440454",
+  "as_of": "2016-12-31",
+  "question": "Sau khi nộp giấy tờ nhận cha, mẹ, con được bao lâu thì công chức hộ tịch mới niêm yết tại trụ sở Ủy ban nhân dân cấp huyện?",
+  "gold_ids": [
+   "HOTICH2014|Dieu44|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440461",
+  "as_of": "2016-12-31",
+  "question": "Tôi không quốc tịch nhưng sống lâu dài tại Việt Nam, tôi có cần đăng ký hộ tịch không? ",
+  "gold_ids": [
+   "HOTICH2014|Dieu6|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440466",
+  "as_of": "2016-12-31",
+  "question": "Ai là cơ quan quản lý Cơ sở dữ liệu hộ tịch? Cơ quan đăng ký hộ tịch, Bộ Tư pháp, Bộ Ngoại giao và cơ quan khác được giao thẩm quyền theo quy định của pháp luật quản lý Cơ sở dữ liệu hộ tịch.",
+  "gold_ids": [
+   "HOTICH2014|Dieu4|Khoan5"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOTICH2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440467",
+  "as_of": "2026-06-30",
+  "question": "Người dân hỏi: Tôi có trách nhiệm gì với con đã trưởng thành nhưng mất khả năng lao động và không có tài sản để tự nuôi bản thân? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu69|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440470",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi và vợ đã thỏa thuận về tài sản nhưng không tuân theo điều 29 đến 32 của Luật Hôn nhân và Gia đình, tòa án sẽ tuyên bố thỏa thuận đó vô hiệu.",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu50|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440471",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi đã thành niên mà ông nội bị bệnh nặng không có khả năng tự chăm sóc mình, tôi có nghĩa vụ gì?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu104|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440473",
+  "as_of": "2026-06-30",
+  "question": "Nếu một người đòi hỏi phải có nhà và xe mới đồng ý kết hôn, hành vi đó có vi phạm yêu sách của cải trong kết hôn không?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu3|Khoan12"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440474",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi chứng kiến một vụ bạo lực gia đình, tôi có quyền yêu cầu cơ quan chức năng xử lý theo Điều này không?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu5|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440475",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi và vợ đã có thỏa thuận riêng về tài sản cá nhân, liệu thỏa thuận đó có ảnh hưởng đến quyền lợi tài sản chúng tôi đã có với bên thứ ba không? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu40|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440477",
+  "as_of": "2026-06-30",
+  "question": "Nếu một người mẹ bị kết án về tội cố ý xâm phạm sức khỏe của con mình, thì con của bà có thể được giao cho người khác chăm sóc theo luật định không?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu85|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440479",
+  "as_of": "2026-06-30",
+  "question": "Khi gặp khó khăn trong việc giáo dục con cái, tôi có thể đề nghị cơ quan chức năng hỗ trợ không? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu72|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440481",
+  "as_of": "2026-06-30",
+  "question": "Nếu vợ tôi vừa mất, tôi có quyền quản lý toàn bộ tài sản chung của vợ chồng không? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu66|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440486",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi là công dân Việt Nam mà vợ/chồng tôi là người nước ngoài, vợ/chồng tôi có quyền và nghĩa vụ như tôi không?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu121|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440494",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi là con đã thành niên nhưng mất năng lực hành vi dân sự và không có khả năng lao động, tôi có quyền gì khi cha mẹ muốn chuyển nhượng tài sản gia đình?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu68|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440492",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi là người dân và gặp trường hợp di sản thừa kế ảnh hưởng nghiêm trọng đến cuộc sống của tôi, tôi có quyền yêu cầu tòa án hạn chế phân chia di sản theo quy định của Bộ luật Dân sự không?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu66|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440495",
+  "as_of": "2026-06-30",
+  "question": "Nếu Hội Liên hiệp Phụ nữ yêu cầu Tòa án hạn chế quyền của cha mẹ đối với con chưa thành niên thì Tòa án sẽ xem xét và có thể chấp thuận yêu cầu này theo quy định tại Điều này.",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu86|Khoan2|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440497",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi là hội viên Hội Liên hiệp Phụ nữ và phát hiện một vụ kết hôn trái pháp luật, tôi có quyền yêu cầu Tòa án hủy kết hôn đó không?",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu10|Khoan2|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440499",
+  "as_of": "2026-06-30",
+  "question": "Trong trường hợp không có tranh chấp, tôi cần làm gì để xác định cha, mẹ, con? ",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu101|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440501",
+  "as_of": "2026-06-30",
+  "question": "Nếu tôi ly hôn và không xác định được tài sản riêng, tôi có quyền được chia phần nào trong tài sản chung của gia đình theo công sức đóng góp của tôi không? (Điều 65 Luật Hôn nhân và Gia đình)",
+  "gold_ids": [
+   "HNGDVBHN2025|Dieu61|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGDVBHN2025",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440500",
+  "as_of": "2012-01-01",
+  "question": "Ủy ban nhân dân cấp xã có trách nhiệm tư vấn gì cho người đồng ý nhận làm con nuôi?",
+  "gold_ids": [
+   "NCN2010|Dieu21|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "NCN2010",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440503",
+  "as_of": "2012-01-01",
+  "question": "Trong thời gian nuôi con nuôi, tôi cần phải báo cáo gì cho Ủy ban nhân dân cấp xã về con nuôi của tôi theo quy định pháp luật? ",
+  "gold_ids": [
+   "NCN2010|Dieu23|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "NCN2010",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440505",
+  "as_of": "2012-01-01",
+  "question": "Nếu tôi là con riêng và được mẹ kế nhận làm con nuôi, tôi có phải tuân theo điểm b và điểm c khoản 1 Điều này không? ",
+  "gold_ids": [
+   "NCN2010|Dieu14|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "NCN2010",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440508",
+  "as_of": "2012-01-01",
+  "question": "Người nước ngoài muốn nhận một trẻ em Việt Nam làm con nuôi cần phải nộp hồ sơ có phiếu lý lịch tư pháp, đúng không?",
+  "gold_ids": [
+   "NCN2010|Dieu31|Khoan1|Diemg"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "NCN2010",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440510",
+  "as_of": "2012-01-01",
+  "question": "Nếu tôi muốn nhận một đứa trẻ làm con nuôi, tôi cần làm thủ tục đăng ký ở đâu? ",
+  "gold_ids": [
+   "NCN2010|Dieu9|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "NCN2010",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440511",
+  "as_of": "2012-01-01",
+  "question": "Trẻ em bị bỏ rơi cần được xác minh nguồn gốc, Sở Tư pháp phải đề nghị Công an tỉnh xác minh trong bao lâu?",
+  "gold_ids": [
+   "NCN2010|Dieu33|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "NCN2010",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440514",
+  "as_of": "2012-01-01",
+  "question": "Nếu có nhiều người cùng họ hàng muốn nhận một trẻ làm con nuôi thì tôi được nhận không, dựa trên tiêu chí nào? ",
+  "gold_ids": [
+   "NCN2010|Dieu5|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "NCN2010",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440517",
+  "as_of": "2012-01-01",
+  "question": "Nếu tôi là con nuôi và đã có công lao đóng góp vào khối tài sản chung của gia đình nuôi, tôi có quyền đòi bồi thường phần tài sản tương xứng với công lao của mình theo quy định pháp luật, đúng không?",
+  "gold_ids": [
+   "NCN2010|Dieu27|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "NCN2010",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440518",
+  "as_of": "2026-02-01",
+  "question": "Nếu tài sản của tôi bị cơ quan chức năng xử lý mà không có lý do rõ ràng, tôi có quyền làm gì theo luật? ",
+  "gold_ids": [
+   "BLDS2015|Dieu164|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "regolded",
+  "regolded_from": "THADSVBHN|Dieu20|Khoan4"
+ },
+ {
+  "qid": "EXT440519",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi muốn thông báo một quyết định pháp lý cho người dân nhưng họ không còn cư trú tại địa phương cũ, tôi nên niêm yết văn bản ở đâu? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu42|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440521",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi muốn yêu cầu thi hành án mà không viết đơn được, tôi phải làm gì? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu31|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440524",
+  "as_of": "2026-02-01",
+  "question": "Khi chuyển giao vật chứng, tôi cần có biên bản giao nhận và chữ ký của cả hai bên không?",
+  "gold_ids": [
+   "THADSVBHN|Dieu124|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440526",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi giao tài sản cho người khác bảo quản mà họ từ chối ký biên bản, tôi phải làm gì? Theo quy định, phải ghi rõ việc từ chối ký và lý do vào biên bản.",
+  "gold_ids": [
+   "THADSVBHN|Dieu58|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440527",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là người được giao nuôi dưỡng mà người đang trông giữ trẻ không giao trẻ cho tôi, tôi phải làm gì theo luật? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu120|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440529",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi muốn khiếu nại lần hai và đã có quyết định khiếu nại lần đầu, tôi cần nộp bao nhiêu bản sao của quyết định đó cùng với đơn khiếu nại? (Theo Luật Khiếu nại)",
+  "gold_ids": [
+   "THADSVBHN|Dieu152|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440532",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là người dân và không ai nhận diện tích đất đã kê biên, tôi có thể hỏi: \"Nếu không có ai nhận diện tích đất đã bị kê biên, cơ quan thi hành án sẽ tiến hành các bước gì tiếp theo?\" ",
+  "gold_ids": [
+   "THADSVBHN|Dieu112|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440533",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là người dân và có tranh chấp với quyết định của cơ quan thi hành án dân sự cấp huyện, tôi sẽ hỏi: \"Nếu tôi không đồng ý với quyết định của cơ quan thi hành án dân sự cấp huyện, tôi phải làm gì tiếp theo?\" ",
+  "gold_ids": [
+   "THADSVBHN|Dieu142|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "regolded",
+  "regolded_from": "THADSVBHN|Dieu161|Khoan2|Diemb"
+ },
+ {
+  "qid": "EXT440534",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi thỏa thuận cho một người thứ ba thực hiện nghĩa vụ thi hành án thay tôi, người đó có nghĩa vụ gì? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu54|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440535",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi đã chuyển giao quyền sở hữu trí tuệ cho một công ty nhưng họ chưa trả hết tiền, tôi có quyền yêu cầu cơ quan thi hành án buộc công ty đó phải nộp số tiền còn lại không?",
+  "gold_ids": [
+   "THADSVBHN|Dieu84|Khoan5"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440538",
+  "as_of": "2026-02-01",
+  "question": "Nếu văn bản thông báo chỉ được niêm yết 5 ngày thì người dân có quyền khiếu nại không?",
+  "gold_ids": [
+   "THADSVBHN|Dieu42|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440541",
+  "as_of": "2026-02-01",
+  "question": "Nếu quyết định thi hành án có sai sót làm thay đổi nội dung vụ việc, người có thẩm quyền sẽ thu hồi quyết định đó theo quy định pháp luật.",
+  "gold_ids": [
+   "THADSVBHN|Dieu37|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440546",
+  "as_of": "2026-02-01",
+  "question": "Nếu tòa án cưỡng chế thi hành án và sử dụng nhiều thiết bị, tôi phải chịu chi phí cho những thiết bị đó đúng không? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu73|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440547",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi và người còn lại không đồng ý về giá trị của tài sản bị kê biên và cũng không thể thống nhất được tổ chức thẩm định giá, Chấp hành viên có nghĩa vụ ký hợp đồng với tổ chức thẩm định giá trong địa bàn tỉnh trong bao lâu? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu98|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440551",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi khai thác một tài sản đã được tòa án quy định và thu được tiền từ việc khai thác đó, tôi phải làm gì với số tiền đó? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu108|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440552",
+  "as_of": "2026-02-01",
+  "question": "Nếu tài sản để thi hành án đã được giảm giá nhưng vẫn dưới giá trị chi phí cưỡng chế và người được thi hành án không nhận, thì tài sản đó sẽ được xử lý như thế nào? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu104|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440554",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là đương sự và đã được trả lại tài sản nhưng vẫn nợ tiền cho người khác, tài sản của tôi có bị xử lý để thi hành án không? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu126|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440557",
+  "as_of": "2026-02-01",
+  "question": "Nếu bị cưỡng chế thi hành án, tôi phải trả tiền bồi dưỡng cho những người tham gia cưỡng chế theo quy định pháp luật, đúng không?",
+  "gold_ids": [
+   "THADSVBHN|Dieu73|Khoan1|Dieme"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440555",
+  "as_of": "2026-02-01",
+  "question": "Tài sản cá nhân như quần áo và đồ dùng hàng ngày của tôi có bị tịch thu để thi hành án không? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu87|Khoan2|Dieme"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440559",
+  "as_of": "2026-02-01",
+  "question": "Trong trường hợp tôi đã tích cực nộp án phí nhưng nay gặp phải hỏa hoạn khiến tài sản bị mất hết, tôi có được miễn phần án phí còn lại không?",
+  "gold_ids": [
+   "THADSVBHN|Dieu61|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440562",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi bị phạt tiền trong một bản án của Tòa án quân sự quân khu, cơ quan nào sẽ thực hiện việc thu phạt tiền đó? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu35|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440564",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi đã nộp tiền phạt nhưng sau đó cơ quan chức năng hủy bỏ quyết định tịch thu, tôi có quyền đòi lại số tiền đã nộp không?",
+  "gold_ids": [
+   "THADSVBHN|Dieu124|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440566",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là người được thi hành án và người phải thi hành án không giao giấy tờ theo bản án, tôi có quyền yêu cầu Chấp hành viên cưỡng chế họ giao giấy tờ đó không?",
+  "gold_ids": [
+   "THADSVBHN|Dieu116|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440568",
+  "as_of": "2026-02-01",
+  "question": "Nếu tài sản của tôi bị tòa án thu giữ và giao cho người khác bảo quản, tôi có quyền được nhận biên bản giao bảo quản tài sản không? (Điều 172, khoản 2, Luật Thi hành án dân sự)",
+  "gold_ids": [
+   "THADSVBHN|Dieu58|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440572",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi là cơ quan thi hành án dân sự và đã gửi kiến nghị về việc xem xét lại bản án đến Tòa án quân sự trung ương được bao lâu thì họ phải trả lời?",
+  "gold_ids": [
+   "THADSVBHN|Dieu170|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440575",
+  "as_of": "2026-02-01",
+  "question": "Nếu người khác quản lý giấy tờ về quyền sử dụng đất của tôi mà không chịu nộp cho cơ quan thi hành án khi được yêu cầu, tôi phải làm gì theo luật? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu111|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440577",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi gây thiệt hại cho người khác, tôi phải làm gì theo luật pháp? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu156|Khoan2|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440578",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi không đồng ý với quyết định giải quyết khiếu nại lần đầu, tôi có quyền khiếu nại tiếp theo người có thẩm quyền giải quyết khiếu nại không?",
+  "gold_ids": [
+   "THADSVBHN|Dieu143|Khoan1|Dieme"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440579",
+  "as_of": "2026-02-01",
+  "question": "Nếu bản án của tòa cấp dưới đã bị hủy nhưng quyết định giám đốc thẩm giữ nguyên bản án đó, thì tôi cần thực hiện theo bản án nào? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu135|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440584",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi có một mảnh đất ở đã được cơ quan nhà nước tiếp nhận trước khi luật mới có hiệu lực nhưng chưa giải quyết xong, tôi có thể tiếp tục đề nghị chấp thuận chủ trương đầu tư và chấp thuận nhà đầu tư được không? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu11|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440586",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi vừa mới nhận được bản án từ tòa án về cấp dưỡng cho con nhưng chưa hết thời gian kháng cáo, tôi có thể thực hiện ngay được không? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu2|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440588",
+  "as_of": "2026-02-01",
+  "question": "Nếu tôi và đối phương đã thỏa thuận được giá tài sản cần kê biên, Chấp hành viên sẽ làm gì? ",
+  "gold_ids": [
+   "THADSVBHN|Dieu98|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADSVBHN",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440600",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi khiếu nại lên cấp trên và họ yêu cầu cung cấp thêm thông tin, tôi có bắt buộc phải tuân theo yêu cầu đó không? ",
+  "gold_ids": [
+   "THADS2008|Dieu152|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440602",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi phát hiện người phải thi hành án đang cố gắng tẩu tán tài sản, Chấp hành viên có quyền áp dụng ngay các biện pháp ngăn chặn theo Luật này không?",
+  "gold_ids": [
+   "THADS2008|Dieu45|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440608",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi nhận một tài sản từ cơ quan thi hành án mà không có sự tham gia của Thủ trưởng cơ quan thi hành án dân sự hoặc người được uỷ quyền, tôi có vi phạm pháp luật không?",
+  "gold_ids": [
+   "THADS2008|Dieu122|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440615",
+  "as_of": "2010-07-01",
+  "question": "Nếu phương tiện của tôi bị kê biên, tôi có thể tiếp tục bán hoặc cho thuê nó không? ",
+  "gold_ids": [
+   "THADS2008|Dieu96|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440618",
+  "as_of": "2010-07-01",
+  "question": "Nếu tòa án đã ra quyết định nhưng cơ quan thi hành án dân sự không thực hiện, tôi phải làm sao? (Điều 12 Luật Thi hành án dân sự)",
+  "gold_ids": [
+   "THADS2008|Dieu6|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "regolded",
+  "regolded_from": "THADS2008|Dieu14|Khoan1|Diema"
+ },
+ {
+  "qid": "EXT440620",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi muốn xin miễn hoặc giảm nghĩa vụ thi hành án liên quan đến khoản thu nộp ngân sách, tôi cần làm đơn đề nghị ở đâu? ",
+  "gold_ids": [
+   "THADS2008|Dieu63|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440617",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi tố cáo một hành vi vi phạm pháp luật mà người vi phạm thuộc thẩm quyền của cơ quan A, thì người đứng đầu cơ quan A có trách nhiệm giải quyết tố cáo đó theo quy định pháp luật.",
+  "gold_ids": [
+   "THADS2008|Dieu157|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440624",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi là người phiên dịch mà cố ý dịch sai nội dung, tôi sẽ phải chịu trách nhiệm gì theo pháp luật?",
+  "gold_ids": [
+   "THADS2008|Dieu8|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440622",
+  "as_of": "2010-07-01",
+  "question": "Nếu tài sản của tôi bị tòa án tuyên tịch thu và sung quỹ nhà nước, cơ quan thi hành án có trách nhiệm chuyển giao tài sản đó cho cơ quan tài chính trong bao lâu? (Điều 179 Bộ luật Tố tụng hình sự)",
+  "gold_ids": [
+   "THADS2008|Dieu124|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440625",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi đã áp dụng các biện pháp cần thiết nhưng vẫn không thể xác minh được điều kiện thi hành án của người phải thi hành án, tôi có thể yêu cầu Chấp hành viên tiến hành xác minh không?",
+  "gold_ids": [
+   "THADS2008|Dieu44|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440626",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi gử đơn yêu cầu thi hành án mà cơ quan không nhận, tôi có quyền yêu cầu họ làm gì? ",
+  "gold_ids": [
+   "THADS2008|Dieu34|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440632",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi là người dân và gặp tình huống Thủ trưởng cơ quan thi hành án dân sự không nhất trí với kháng nghị của Viện kiểm sát, tôi sẽ hỏi: \"Thủ trưởng cơ quan thi hành án dân sự cấp tỉnh cần thực hiện những bước gì để giải quyết tình huống này?\"",
+  "gold_ids": [
+   "THADS2008|Dieu161|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440635",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi đang chấp hành án tù và từ chối nhận lại tài sản của mình bằng văn bản có xác nhận của Giám thị, thì tài sản của tôi sẽ bị xử lý như thế nào? ",
+  "gold_ids": [
+   "THADS2008|Dieu129|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440637",
+  "as_of": "2010-07-01",
+  "question": "Ai có quyền xử phạt vi phạm hành chính trong thi hành án dân sự tại cấp huyện? Theo luật, quyền này thuộc về Thủ trưởng cơ quan thi hành án dân sự cấp huyện.",
+  "gold_ids": [
+   "THADS2008|Dieu163|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440639",
+  "as_of": "2010-07-01",
+  "question": "Nếu Viện kiểm sát kháng nghị quyết định thi hành án của cơ quan thi hành án dân sự, thủ trưởng cơ quan đó phải trả lời kháng nghị trong bao lâu?",
+  "gold_ids": [
+   "THADS2008|Dieu161|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440645",
+  "as_of": "2010-07-01",
+  "question": "Nếu tôi đang dùng thuốc điều trị bệnh mà tòa án yêu cầu tôi bán tài sản bao gồm số thuốc đó để trả nợ, tôi có thể giữ lại số thuốc cần thiết cho bản thân và gia đình tôi không? (Điều 110 của Luật Thi Hành Án)",
+  "gold_ids": [
+   "THADS2008|Dieu87|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440653",
+  "as_of": "2010-07-01",
+  "question": "Nếu công ty không thể bố trí tôi trở lại làm công việc cũ, họ phải bố trí công việc khác với mức lương tương đương đúng không? (Luật lao động)",
+  "gold_ids": [
+   "THADS2008|Dieu121|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440652",
+  "as_of": "2010-07-01",
+  "question": "Nếu giấy tờ đã được thi hành án bị mất, tôi có được cấp lại giấy tờ mới không? Nếu không thể cấp lại, tôi phải làm gì? (Điều 189 và 190 Luật Thi hành án dân sự)",
+  "gold_ids": [
+   "THADS2008|Dieu116|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440657",
+  "as_of": "2010-07-01",
+  "question": "Nếu hai công ty sáp nhập, công ty sáp nhập sẽ tiếp tục thực hiện các quyền và nghĩa vụ thi hành án, đúng không? (Dựa trên Điều luật về việc chuyển giao quyền và nghĩa vụ thi hành án khi có sáp nhập.)",
+  "gold_ids": [
+   "THADS2008|Dieu54|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "THADS2008",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440658",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi phải trả chi phí cho người chăm sóc người bị thương trong thời gian họ điều trị, tôi sẽ được tính bao nhiêu một ngày cho chi phí đó? (Theo Luật, chi phí chăm sóc là 01 ngày lương tối thiểu vùng tại nơi điều trị cho mỗi ngày chăm sóc).",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu26|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440662",
+  "as_of": "2019-07-01",
+  "question": "Nếu người giải quyết bồi thường không đáp ứng điều kiện quy định, tôi có quyền yêu cầu hủy quyết định và giải quyết lại không?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu48|Khoan3|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440660",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi bị đưa vào trường giáo dưỡng một tháng, tôi sẽ được bồi thường thiệt hại về tinh thần như thế nào? (Theo Điều này, thiệt hại về tinh thần được tính là 2 ngày lương cơ sở cho mỗi ngày bị đưa vào trường giáo dưỡng.)",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu27|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440666",
+  "as_of": "2019-07-01",
+  "question": "Nếu người thi hành công vụ gây thiệt hại hiện đã nghỉ việc, cơ quan giải quyết bồi thường là cơ quan nào?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu40|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440667",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi từ chối quyền được phục hồi danh dự bằng lời nói, thì cần làm gì để ghi nhận quyết định của tôi?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu57|Khoan5"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440674",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi nộp thiếu giấy tờ khi yêu cầu bồi thường, tôi có được thời gian bao lâu để bổ sung hồ sơ đầy đủ?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu42|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440675",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi thăm gặp người thân đang bị tạm giam mà phát sinh chi phí đi lại, tôi có được bồi thường không?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu28|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440682",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi yêu cầu rút đơn xin bồi thường trước khi cơ quan giải quyết tiến hành xác minh thiệt hại, thì cơ quan đó sẽ xử lý như thế nào? ",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu51|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440687",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi muốn biết cơ quan nào sẽ giải quyết việc bồi thường nhà nước, tôi nên liên hệ với Bộ Tư pháp đúng không?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu73|Khoan2|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440690",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi gặp phải trường hợp cơ quan chức năng không giải quyết kịp thời việc bồi thường nhà nước, tôi có quyền khiếu nại đến đâu theo luật định? ",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu73|Khoan3|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440692",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi không có biên lai cước phí khi gửi đơn kiện đến cơ quan nhà nước, tôi sẽ được bồi thường tối đa bao nhiêu tiền cho chi phí gửi đơn trong một năm? Theo điểm a khoản 1 Điều này, chi phí sẽ được tính là 01 tháng lương cơ sở tại thời điểm bắt đầu",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu28|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440693",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi bị tòa án tuyên có tội nhưng sau đó Tòa án tối cao hủy quyết định đó và tuyên tôi không có tội, tôi có quyền yêu cầu bồi thường từ đâu? ",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu36|Khoan3|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440703",
+  "as_of": "2019-07-01",
+  "question": "Nếu tôi đã yêu cầu bồi thường tại một cơ quan có thẩm quyền và họ đã tiếp nhận hồ sơ của tôi, tôi có thể yêu cầu cơ quan khác giải quyết yêu cầu bồi thường không?",
+  "gold_ids": [
+   "TNBTCNN2017|Dieu4|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "TNBTCNN2017",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440704",
+  "as_of": "2009-05-26",
+  "question": "Nếu con nuôi đã thành niên nhưng bị tàn tật và không tự nuôi sống mình được, thì theo luật sẽ xử lý như thế nào?",
+  "gold_ids": [
+   "HNGD2000|Dieu78|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2000",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440709",
+  "as_of": "2009-05-26",
+  "question": "Nếu tôi và vợ tôi không có nơi thường trú chung và vợ tôi hiện không thường trú tại Việt Nam, tôi có thể làm thủ tục ly hôn tại Việt Nam không? ",
+  "gold_ids": [
+   "HNGD2000|Dieu104|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2000",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440713",
+  "as_of": "2009-05-26",
+  "question": "Nếu tôi và em ruột đều đã trưởng thành và đồng ý, chúng tôi có thể cử một người trong số chúng tôi làm giám hộ cho bố mẹ ruột không còn đủ năng lực hành vi dân sự không?",
+  "gold_ids": [
+   "HNGD2000|Dieu83|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2000",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440717",
+  "as_of": "2009-05-26",
+  "question": "Trong trường hợp tôi đã thành niên nhưng không có khả năng lao động và không có tài sản để tự nuôi mình, ông bà nội có nghĩa vụ cấp dưỡng cho tôi không?",
+  "gold_ids": [
+   "HNGD2000|Dieu59|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2000",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440719",
+  "as_of": "2009-05-26",
+  "question": "Nếu vợ chồng tôi mua nhà sau khi kết hôn, ngôi nhà đó có phải là tài sản chung không? ",
+  "gold_ids": [
+   "HNGD2000|Dieu27|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HNGD2000",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440721",
+  "as_of": "2026-07-02",
+  "question": "Nếu ngân sách địa phương không đủ để hỗ trợ công tác hòa giải ở cơ sở, thì nhà nước trung ương sẽ hỗ trợ như thế nào?",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu7|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440722",
+  "as_of": "2026-07-02",
+  "question": "Nếu Mặt trận Tổ quốc không tham gia hòa giải khi có tranh chấp trong cộng đồng, có vi phạm pháp luật không? ",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu33|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440723",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi được mời tham gia hòa giải một vụ việc trong làng, tôi cần phải đáp ứng điều kiện gì? ",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu19|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440724",
+  "as_of": "2026-07-02",
+  "question": "Nếu tổ hòa giải không đủ số lượng hòa giải viên theo quy định, thì phải làm gì? ",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu9|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440730",
+  "as_of": "2026-07-02",
+  "question": "Nếu địa bàn có nhiều đồng bào dân tộc thiểu số mà tổ hòa giải không có hòa giải viên là người dân tộc thiểu số, thì có vi phạm pháp luật không? (Theo Điều này tổ hòa giải phải có hòa giải viên là người dân tộc thiểu số phù hợp với đặc điểm dân cư của",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu15|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440732",
+  "as_of": "2026-07-02",
+  "question": "Câu hỏi: Ủy ban nhân dân tỉnh có trách nhiệm gì về hòa giải ở cơ sở tại địa phương?",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu32|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440731",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi được mời tham gia hòa giải thì tôi có quyền thảo luận về giải pháp và nội dung hòa giải không?",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu20|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440734",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi muốn bầu Tổ trưởng tổ hòa giải mà không có sự chủ trì của Trưởng ban công tác Mặt trận thì có được không? ",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu17|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440736",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi muốn thay đổi hòa giải viên trong quá trình hòa giải, tôi có quyền làm như vậy không? ",
+  "gold_ids": [
+   "HOAGIAI2026|Dieu22|Khoan1|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOAGIAI2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440733",
+  "as_of": "2026-07-02",
+  "question": "Nếu luật mới quy định về đăng ký kết hôn khác với quy định hiện hành, tôi nên tuân theo luật nào? ",
+  "gold_ids": [
+   "HOTICH2026|Dieu29|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440742",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi đã nhận nuôi một đứa trẻ nhưng chưa cập nhật thông tin này vào sổ hộ tịch, tôi cần làm gì? ",
+  "gold_ids": [
+   "HOTICH2026|Dieu4|Khoan2|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440743",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi muốn đăng ký làm giám hộ cho người thân, tôi cần cung cấp những thông tin gì về bản thân mình? ",
+  "gold_ids": [
+   "HOTICH2026|Dieu17|Khoan3|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440746",
+  "as_of": "2026-07-02",
+  "question": "Nếu tôi là người dân và muốn biết trách nhiệm của ủy ban nhân dân cấp xã trong việc giám sát việc giám hộ quản lý tài sản, tôi sẽ hỏi: \"Ủy ban nhân dân cấp xã có trách nhiệm gì trong việc giám sát việc giám hộ liên quan đến quản lý tài sản của người ",
+  "gold_ids": [
+   "HOTICH2026|Dieu17|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440749",
+  "as_of": "2026-07-02",
+  "question": "Khi đăng ký giám hộ, tôi cần cung cấp thông tin về ngày, tháng, năm sinh của người được giám hộ đúng không? (Theo Điều luật quy định nội dung đăng ký giám hộ)",
+  "gold_ids": [
+   "HOTICH2026|Dieu17|Khoan3|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "HOTICH2026",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440760",
+  "as_of": "2012-07-01",
+  "question": "Nếu một sự kiện đã được ghi trong giấy tờ có công chứng, tôi có cần phải chứng minh thêm không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu80|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440761",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn kiện một công ty ở thành phố khác, tôi có thể yêu cầu tòa án tại nơi tôi cư trú giải quyết vụ việc được không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu36|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified after re-anchoring; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "regolded",
+  "regolded_from": "BLTTDS2004|Dieu35|Khoan1|Diemb"
+ },
+ {
+  "qid": "EXT440762",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi kháng nghị một quyết định án đã có hiệu lực pháp luật, nội dung tóm tắt vụ án và quyết định của bản án trong quyết định giám đốc thẩm phải bao gồm những gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu301|Khoan2|Dieme"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440765",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi bị tố cáo sai và đã bị ảnh hưởng đến danh dự và quyền lợi, tôi có quyền đòi bồi thường thiệt hại và phục hồi danh dự không? (Điều 12 của Luật Tố cáo)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu400|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440766",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là người giám định nhưng không muốn tham gia phiên tòa, tôi có phải đến theo giấy triệu tập không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu68|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440772",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi kiện một công ty về lao động, vụ việc sẽ được giải quyết bởi bao nhiêu Thẩm phán? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu55|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440773",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn bổ sung thêm chứng cứ trong phiên tòa, tôi có quyền làm như vậy không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu221|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440775",
+  "as_of": "2012-07-01",
+  "question": "Nếu một số đương sự vắng mặt trong phiên hòa giải nhưng những người có mặt vẫn đồng ý hòa giải, thì Thẩm phán có thể tiến hành hòa giải theo Điều 237 Bộ luật Tố tụng dân sự.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu184|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440776",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi có một vụ kiện dân sự liên quan đến một bên từ nước ngoài, tôi nên áp dụng luật tố tụng dân sự Việt Nam hay luật của nước kia?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu2|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440782",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi vắng mặt và cơ quan chức năng không thể tống đạt quyết định hành chính cho tôi, họ phải làm biên bản về việc không tống đạt được quyết định đó đúng không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu152|Khoan5"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440780",
+  "as_of": "2012-07-01",
+  "question": "Trong phiên tòa, tôi muốn người giám định giải thích rõ hơn về kết luận của họ dựa trên những căn cứ nào?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu230|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440783",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là nguyên đơn trong một vụ án và muốn biết thông tin về quyết định đưa vụ án ra xét xử, tôi cần phải biết những nội dung chính nào về bị đơn và người có quyền lợi, nghĩa vụ liên quan?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu195|Khoan1|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440785",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi nhận được giấy báo từ tòa án về việc nộp tiền tạm ứng án phí hôm nay, tôi cần nộp tiền trong thời hạn bao lâu? (Điều 145 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu171|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440789",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đăng thông báo tìm người mất liên lạc được bao lâu thì hết hạn theo luật? Theo Điều 327 và Điều 328, thời hạn thông báo là bốn tháng kể từ ngày đăng thông báo lần đầu.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu331|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440787",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là người câm và chỉ có người thân thích biết dấu hiệu của tôi, họ có thể làm phiên dịch cho tôi trong phiên tòa không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu70|Khoan4"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440791",
+  "as_of": "2012-07-01",
+  "question": "Nếu tổ chức không phải là pháp nhân mà người đại diện đang tham gia tố tụng chết thì phải làm gì?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu62|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440793",
+  "as_of": "2012-07-01",
+  "question": "Nếu tòa án nhận được quyết định ủy thác nhưng không thể thực hiện trong thời hạn 30 ngày, phải làm gì?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu93|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440794",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi có tài liệu mới chứng minh quyết định trước đây không chính xác, tôi có thể bổ sung tài liệu đó khi kháng nghị không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu251|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440801",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi không kháng cáo hoặc kháng nghị bản án sơ thẩm trong thời hạn quy định thì bản án đó có hiệu lực pháp luật từ ngày nào? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu254|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440805",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi mâu thuẫn pháp lý với một công ty về hợp đồng kinh doanh, tôi có thể kiện công ty đó được không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu163|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440802",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi phát hiện một vụ án đang xảy ra và cần bảo vệ bằng chứng ngay lập tức, tôi có quyền nộp đơn xin quyết định áp dụng biện pháp khẩn cấp tạm thời cùng lúc với việc khởi kiện không, thưa luật sư?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu99|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440810",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi gửi đơn yêu cầu bằng tiếng Anh mà không kèm bản dịch tiếng Việt, có bị từ chối không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu361|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440813",
+  "as_of": "2012-07-01",
+  "question": "Nếu vụ án đang được xét xử mà Thẩm phán chủ trì bỗng dưng không thể tiếp tục được, thì phải làm gì theo luật? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu172|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440812",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đã làm chứng trong vụ án này, tôi có thể làm giám định được không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu68|Khoan3|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440814",
+  "as_of": "2012-07-01",
+  "question": "Nếu tòa án ra quyết định áp dụng biện pháp khẩn cấp tạm thời đối với tài sản có đăng ký quyền sở hữu, tôi cần làm gì theo luật? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu126|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440818",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi bị một công ty nợ tiền và không trả, tôi có quyền nhờ luật sư bảo vệ quyền lợi của mình không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu58|Khoan2|Diemh"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440821",
+  "as_of": "2012-07-01",
+  "question": "Nếu Kiểm sát viên không thể tiếp tục tham gia phiên tòa nhưng không có Kiểm sát viên dự khuyết, Hội đồng xét xử phải hoãn phiên tòa theo quy định. (Điều 229 Bộ luật Tố tụng hình sự)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu207|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440823",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đã kháng cáo nhưng Toà án cấp phúc thẩm sửa bản án, tôi có cần nộp án phí phúc thẩm không? Theo Điều 131, Toà án cấp phúc thẩm phải xác định lại nghĩa vụ nộp án phí sơ thẩm cho tôi.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu132|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440825",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là nguyên đơn trong một vụ án và muốn hiểu rõ hơn về bản án đã được tuyên, tôi có quyền yêu cầu ai giải thích bản án đó? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu382|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440827",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi phát hiện ra một cuộc hôn nhân trái pháp luật và muốn hủy bỏ nó, tôi nên nộp đơn lên tòa án ở đâu? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu36|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440830",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi tham gia phiên tòa mà phiên dịch viên vắng mặt, tôi có quyền yêu cầu tiếp tục xét xử không? Trong trường hợp này, Hội đồng xét xử sẽ xử lý như thế nào? (Điều 229 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu206|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440829",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi nhận được quyết định của tòa án nhưng không thể kháng cáo trong thời hạn 15 ngày do gặp sự cố bất khả kháng, tôi có được gia hạn thời gian kháng cáo không? Điều 356 Bộ luật Tố tụng dân sự quy định: Trong trường hợp có sự kiện bất khả kháng ho",
+  "gold_ids": [
+   "BLTTDS2004|Dieu358|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440832",
+  "as_of": "2012-07-01",
+  "question": "Trong phiên tòa, tôi muốn hỏi đối phương về những thông tin liên quan đến vụ việc, tôi có quyền làm như vậy không? (Điều 258 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu58|Khoan2|Dieml"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440833",
+  "as_of": "2012-07-01",
+  "question": "Người có quyền lợi liên quan không đồng ý với yêu cầu của nguyên đơn, họ phải trình bày ý kiến và chứng cứ của mình như thế nào?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu221|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440837",
+  "as_of": "2012-07-01",
+  "question": "Tôi muốn không công nhận bản án của tòa án nước ngoài, tôi cần nộp những giấy tờ gì kèm theo đơn yêu cầu? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu361|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440834",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn kiện một vụ việc dân sự, tôi cần làm gì để chánh án phân công thẩm phán và thư ký tòa án cho vụ việc của tôi? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu40|Khoan1|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440838",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi thừa nhận toàn bộ những sự kiện mà đối phương đưa ra trong vụ án thì tôi có cần phải chứng minh những sự kiện đó không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu80|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440842",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi nộp đơn yêu cầu tuyên bố một người mất tích, tòa án phải mở phiên họp trong thời hạn bao lâu? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu332|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440846",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi tố cáo hành vi vi phạm pháp luật của một Chánh án Toà án, thì vụ việc sẽ do ai giải quyết và thời hạn giải quyết là bao lâu?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu401|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440855",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi vắng mặt trong phiên tòa, tòa án sẽ làm gì với lời khai và chứng cứ mà tôi đã cung cấp?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu314|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440857",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi muốn lấy bản án sau khi tòa kết thúc, tôi có thể làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu241|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440860",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi kiện một công ty có văn phòng ở nhiều tỉnh, tôi có thể nộp đơn kiện tại tòa án ở bất kỳ văn phòng nào của công ty đó không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu36|Khoan1|Diemh"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440861",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đang tham gia một vụ kiện và đột nhiên qua đời, người thừa kế của tôi có quyền tiếp tục vụ kiện đó không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu62|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440862",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi gử đơn kiện nhưng tòa án nhận đơn cho biết vụ việc không thuộc thẩm quyền của họ, tôi phải làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu167|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440864",
+  "as_of": "2012-07-01",
+  "question": "Nếu một người đã được tuyên bố mất năng lực hành vi dân sự nhưng hiện tại đã phục hồi, tôi có thể yêu cầu tòa án hủy quyết định đó không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu322|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440863",
+  "as_of": "2012-07-01",
+  "question": "Nếu quyền lợi của tôi bị xâm phạm, tôi có quyền đòi bồi thường thiệt hại theo pháp luật không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu392|Khoan1|Diemđ"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440866",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi là người giám định và phát hiện ra rằng tài liệu cung cấp không đủ để tiến hành giám định, tôi phải làm gì? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu68|Khoan1|Diemd"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440868",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đã nộp tiền tạm ứng cho chi phí định giá nhưng sau đó không phải nộp chi phí này, tôi có quyền đòi lại số tiền đó từ người phải nộp chi phí định giá theo quyết định của tòa án không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu141|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440869",
+  "as_of": "2012-07-01",
+  "question": "Tôi đã mất liên lạc với người thân đã hơn 2 năm và không có bất kỳ tin tức nào về họ, tôi cần làm gì để yêu cầu tòa án tuyên bố họ mất tích?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu330|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440872",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi đã nộp đơn khởi kiện nhưng chưa nộp tiền tạm ứng án phí, Toà án có thông báo cho tôi biết phải nộp tiền tạm ứng án phí không? ",
+  "gold_ids": [
+   "BLTTDS2004|Dieu171|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440870",
+  "as_of": "2012-07-01",
+  "question": "Nếu hai tòa án huyện cùng một tỉnh đều đòi xét xử một vụ án, tôi nên làm gì? Giải quyết tranh chấp này thuộc về Chánh án Toà án nhân dân cấp tỉnh.",
+  "gold_ids": [
+   "BLTTDS2004|Dieu37|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440873",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi được Toà triệu tập nhưng vắng mặt lần thứ hai mà không có lý do chính đáng, Toà sẽ xử lý như thế nào? (Điều 232 Bộ luật Tố tụng dân sự)",
+  "gold_ids": [
+   "BLTTDS2004|Dieu313|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440876",
+  "as_of": "2012-07-01",
+  "question": "Nếu tôi và đối tác là công dân Việt Nam, chúng tôi có thể kiện nhau về một hợp đồng kinh doanh xảy ra ở nước ngoài tại tòa án Việt Nam không?",
+  "gold_ids": [
+   "BLTTDS2004|Dieu410|Khoan2|Diemđ"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "BLTTDS2004",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440888",
+  "as_of": "2012-02-06",
+  "question": "Trong trường hợp mẹ của trẻ không có nơi cư trú xác định, thì cha của trẻ cần làm gì để đăng ký khai sinh cho con?",
+  "gold_ids": [
+   "ND158_2005|Dieu13|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440889",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi là cán bộ Tư pháp hộ tịch mà chưa được bồi dưỡng nghiệp vụ về công tác hộ tịch thì có vi phạm pháp luật không? ",
+  "gold_ids": [
+   "ND158_2005|Dieu81|Khoan2|Diemb"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440895",
+  "as_of": "2012-02-06",
+  "question": "Nếu giấy khai sinh của tôi bị thu hồi trái quy định, tôi có quyền khiếu nại với cơ quan nào? Ủy ban nhân dân cấp tỉnh có trách nhiệm quyết định việc thu hồi và hủy bỏ những giấy tờ hộ tịch do Giám đốc Sở Tư pháp và Ủy ban nhân dân cấp huyện cấp trái ",
+  "gold_ids": [
+   "ND158_2005|Dieu77|Khoan1|Diemk"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440898",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi tố cáo việc cán bộ Tư pháp hộ tịch sai phạm trong quá trình đăng ký hộ tịch, tôi cần làm gì? Chủ tịch Ủy ban nhân dân cấp xã sẽ giải quyết tố cáo này theo pháp luật.",
+  "gold_ids": [
+   "ND158_2005|Dieu92|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440905",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi muốn cải chính thông tin trên giấy khai sinh của mình, tôi cần làm gì và trong bao lâu sẽ nhận được kết quả? ",
+  "gold_ids": [
+   "ND158_2005|Dieu38|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440907",
+  "as_of": "2012-02-06",
+  "question": "Nếu tôi phát hiện cơ quan hộ tịch cấp dưới để xảy ra sai phạm trong quản lý hộ tịch, tôi sẽ làm gì theo quy định pháp luật? ",
+  "gold_ids": [
+   "ND158_2005|Dieu4|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440909",
+  "as_of": "2012-02-06",
+  "question": "Ủy ban nhân dân cấp xã chỉ lưu 1 quyển sổ cấp Giấy xác nhận tình trạng hôn nhân thì đúng hay sai?",
+  "gold_ids": [
+   "ND158_2005|Dieu70|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440911",
+  "as_of": "2012-02-06",
+  "question": "Trong trường hợp người được nhận làm con nuôi đã 12 tuổi, họ có bắt buộc phải có mặt khi đăng ký nuôi con nuôi không?",
+  "gold_ids": [
+   "ND158_2005|Dieu27|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND158_2005",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440919",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi nộp hồ sơ ly hôn cho Sở Tư pháp hôm nay, họ phải gửi văn bản xin ý kiến Bộ Tư pháp trong bao lâu?",
+  "gold_ids": [
+   "ND126_2014|Dieu45|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440922",
+  "as_of": "2016-02-15",
+  "question": "Tôi muốn thêm tên vợ vào giấy chứng nhận quyền sở hữu nhà đất chỉ có tên tôi, tôi phải làm gì? ",
+  "gold_ids": [
+   "ND126_2014|Dieu12|Khoan2"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440923",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi là người nước ngoài và cần tư vấn về pháp luật Việt Nam liên quan đến hôn nhân, tôi nên làm gì? ",
+  "gold_ids": [
+   "ND126_2014|Dieu55|Khoan1|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440927",
+  "as_of": "2016-02-15",
+  "question": "Tôi muốn kết hôn với người nước ngoài nhưng tôi đang làm việc trong ngành an ninh. Tôi cần làm gì để đáp ứng quy định pháp luật? ",
+  "gold_ids": [
+   "ND126_2014|Dieu20|Khoan2|Diema"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440928",
+  "as_of": "2016-02-15",
+  "question": "Nếu tôi muốn kết hôn với một người nước ngoài nhưng không biết nhiều về văn hóa và pháp luật của quốc gia họ cư trú, tôi có bị từ chối cấp giấy xác nhận tình trạng hôn nhân không? Sở Tư pháp sẽ từ chối giải quyết và giải thích lý do trong văn bản gửi",
+  "gold_ids": [
+   "ND126_2014|Dieu28|Khoan4|Diemc"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440930",
+  "as_of": "2016-02-15",
+  "question": "Nếu vợ chồng tôi đã thỏa thuận chia tài sản chung trong thời kỳ hôn nhân, tôi có quyền yêu cầu cơ quan đăng ký tài sản cấp lại giấy chứng nhận quyền sở hữu không?",
+  "gold_ids": [
+   "ND126_2014|Dieu12|Khoan3"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ },
+ {
+  "qid": "EXT440935",
+  "as_of": "2016-02-15",
+  "question": "Nếu một bên trong việc nhận cha, mẹ, con đã mất trước khi nộp hồ sơ, thì phải làm gì? ",
+  "gold_ids": [
+   "ND126_2014|Dieu30|Khoan1"
+  ],
+  "hint": "extension-4 scale-up cohort (LLM double-judge verified; human review pending)",
+  "law_id": "ND126_2014",
+  "gold_tier": "verified"
+ }
+]
