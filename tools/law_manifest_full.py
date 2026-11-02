@@ -17,8 +17,14 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="repla
 root, out = sys.argv[1], sys.argv[2]
 skip = {os.path.abspath(out), os.path.abspath(os.path.join(root, "SHA256SUMS")),
         os.path.abspath(os.path.join(root, "provenance", "SHA256SUMS"))}
+# v1.2.0: provenance/repro_check/ holds ephemeral re-derivation outputs that
+# tools/reproduce.sh regenerates at check time - they are intentionally not
+# part of the frozen manifest.
+skip_dirs = {os.path.abspath(os.path.join(root, "provenance", "repro_check"))}
 lines = []
 for dirpath, _dirs, files in os.walk(root):
+    if os.path.abspath(dirpath) in skip_dirs:
+        continue
     # skip VCS/cache dirs (same convention as tools/law_sweep.py): a git
     # checkout carries .git/ and may carry __pycache__/.cache - none of them
     # are release files, and the server-side regen_sums.py tree has no .git
