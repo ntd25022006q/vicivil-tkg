@@ -1,6 +1,9 @@
 {
- "note": "MRR@30 recomputed from stored per-question first-gold ranks (30-candidate window) of extension3_eval_ranks.json",
+ "note": "MRR@30 recomputed from stored per-question first-gold ranks (30-candidate window): base/TCR from extension3_eval_ranks.json, rerank/rerank+TCR from extension3_rerank_result.json (first_rerank / first_rerank_tcr)",
  "n": 265,
  "mrr30_base": 0.629257,
- "mrr30_tcr": 0.723888
+ "mrr30_tcr": 0.723888,
+ "mrr30_rerank": 0.693939,
+ "mrr30_rerank_tcr": 0.774694,
+ "mrr30_rerank_n_hits": 251
 }

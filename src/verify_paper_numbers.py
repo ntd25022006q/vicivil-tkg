@@ -127,8 +127,25 @@ def build_artifact_values():
         ext1 = load(AUD / "ext1_eval_ranks.json")
         ext2 = load(AUD / "ext2_eval_ranks.json")
         ext1_rr = load(AUD / "ext1_rerank.json")
-        ext3 = ext3_rr = ext4 = ext4_rr = None
-        ext3_llm, ext3_sig, ext4_llm, ext4_sig, baselines = {}, {}, {}, {}, {}
+        # round-3/4 artifacts (pulled from the A30 release tree ghclone_final)
+        _p3 = AUD / "extension3_eval_ranks.json"
+        _p4 = AUD / "extension4_eval_ranks.json"
+        _l3 = AUD / "extension3_llm_rag_result.json"
+        _l4 = AUD / "extension4_llm_rag_result.json"
+        ext3 = load(_p3) if _p3.exists() else None
+        ext4 = load(_p4) if _p4.exists() else None
+        ext3_rr = load(AUD / "extension3_rerank_result.json") \
+            if (AUD / "extension3_rerank_result.json").exists() else None
+        ext4_rr = load(AUD / "extension4_rerank_result.json") \
+            if (AUD / "extension4_rerank_result.json").exists() else None
+        _d3 = load(_l3) if _l3.exists() else None
+        _d4 = load(_l4) if _l4.exists() else None
+        ext3_llm = {c: v["summary"] for c, v in _d3["conditions"].items()} if _d3 else {}
+        ext4_llm = {c: v["summary"] for c, v in _d4["conditions"].items()} if _d4 else {}
+        ext3_sig = _d3.get("significance", {}) if _d3 else {}
+        ext4_sig = _d4.get("significance", {}) if _d4 else {}
+        _bp_suite = AUD / "baselines_suite.json"
+        baselines = load(_bp_suite) if _bp_suite.exists() else {}
         fn = load(EXT2 / "final_numbers.json")
         fn_out = json.loads(fn["output"]) if "output" in fn else fn
         ext2_llm = fn_out["ext2_llm"]
@@ -137,10 +154,17 @@ def build_artifact_values():
         bench_names = {
             "seed": "bench_seed.json", "main": "bench_main.json",
             "ext1": "bench_ext1.json", "ext2": "bench_ext2.json"}
+        for _t, _bf in (("ext3", "law_bench_extension3.json"),
+                        ("ext4", "law_bench_extension4.json")):
+            if (AUD / _bf).exists():
+                bench_names[_t] = _bf
 
     bench = {}
     for tag, f in bench_names.items():
-        d = load(AUD / f)
+        _bp = AUD / f
+        if not _bp.exists():
+            continue
+        d = load(_bp)
         if isinstance(d, dict) and "questions" in d:   # some releases wrap the list
             d = d["questions"]
         bench[tag] = d
@@ -196,6 +220,8 @@ def build_artifact_values():
             continue
         for k in (1, 3, 5, 10):
             add(tag, sum(1 for x in rrs if x >= 1.0 / k - 1e-9) / len(rrs), nds=(3, 4))
+        if blk.get("mrr") is not None:
+            add(tag + " MRR", blk["mrr"], nds=(3, 4))
     # percent renderings of rate-type metrics (0.548 -> "54,8\%")
     for _c in ("norag", "rag_hybrid", "rag_hybrid_tcr", "rag_rerank_tcr"):
         add("abstain-pct", llm["conditions"][_c]["summary"]["abstain_rate"] * 100, nds=(0, 1, 2))
@@ -231,8 +257,9 @@ def build_artifact_values():
     for v, tag in (
         (n_core, "count core"), (len(bench["seed"]), "count seed"), (len(bench["main"]), "count main"),
         (len(bench["ext1"]), "count ext1"), (len(bench["ext2"]), "count ext2"),
-        (len(bench["ext3"]), "count ext3"),
-        (n_core + len(bench["ext1"]) + len(bench["ext2"]) + len(bench["ext3"]), "count total"),
+        (len(bench.get("ext3", [])), "count ext3"), (len(bench.get("ext4", [])), "count ext4"),
+        (n_core + len(bench["ext1"]) + len(bench["ext2"])
+         + len(bench.get("ext3", [])) + len(bench.get("ext4", [])), "count total"),
         (len(split["dev"]), "count dev"), (len(split["test"]), "count test"),
         (136 + len(flagged2) + len(flagged3) + len(flagged4), "count quarantine"),
         (len(flagged2), "count flagged2"), (len(flagged3), "count flagged3"),
