@@ -1,47 +1,8 @@
----
-language:
-- vi
-license: cc-by-4.0
-task_categories:
-- question-answering
-- text-retrieval
-pretty_name: ViCivil-TKG (Vietnamese Civil Law Temporal KG & QA Benchmark)
-size_categories:
-- 10K<n<100K
-tags:
-- vietnamese
-- legal
-- temporal-knowledge-graph
-- retrieval
-- benchmark
-- question-answering
-- as-of-qa
-- rag
-configs:
-- config_name: corpus
-  data_files: data/civil_chunks.jsonl
-- config_name: benchmark
-  data_files:
-  - benchmark/law_bench_main.json
-  - benchmark/law_bench_seed.json
-- config_name: benchmark-extension
-  data_files: benchmark/law_bench_extension.json
-- config_name: benchmark-extension2
-  data_files: benchmark/law_bench_extension2.json
-- config_name: benchmark-extension3
-  data_files: benchmark/law_bench_extension3.json
-- config_name: benchmark-extension4
-  data_files: benchmark/law_bench_extension4.json
-- config_name: index
-  data_files:
-  - index/vdb_chunks.json
-  - index/vdb_entities.json
-  - index/vdb_relationships.json
----
-
 # ViCivil-TKG - Vietnamese Civil Law Temporal KG & QA Benchmark
 
 [![verify](https://github.com/ntd25022006q/vicivil-tkg/actions/workflows/verify.yml/badge.svg)](https://github.com/ntd25022006q/vicivil-tkg/actions/workflows/verify.yml) ![license](https://img.shields.io/badge/license-CC--BY--4.0-blue) ![tasks](https://img.shields.io/badge/tasks-QA%20%2B%20retrieval-4c8) ![language](https://img.shields.io/badge/language-ti%E1%BA%BFng%20Vi%E1%BB%87t-red) ![repro](https://img.shields.io/badge/repro-GPU--free-success)
+
+> Dataset mirror: [huggingface.co/datasets/datbazuka2502/vicivil-tkg](https://huggingface.co/datasets/datbazuka2502/vicivil-tkg) · Paper: `docs/report/ViCivil-TKG_paper_en.pdf` (canonical EN edition + LaTeX source) and `docs/report/ViCivil-TKG_paper.pdf` (Vietnamese edition).
 
 **ViCivil-TKG** is an open benchmark and temporal knowledge graph for Vietnamese civil-law question answering, built around two challenges most legal QA sets ignore:
 
@@ -131,6 +92,7 @@ src/                           all scoring/eval/rescore scripts (paths resolved 
 tools/reproduce.sh             one-command, GPU-free verification of every metric
 AUDIT_2026-11-01.md            data-integrity audit: reproduce-then-patch, 30 logged changes
 SHA256SUMS                     hashes over the whole release tree
+.github/                       CI: paper-number verification + release audits on every push
 ```
 
 ## The gold adjudication chain

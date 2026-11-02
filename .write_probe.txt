@@ -1,3 +1,0 @@
-# Sync-infrastructure placeholder: this dotfile was created by a write-permission
-# probe during release synchronization. Deletion on the build host is blocked by
-# policy, so it ships as an empty placeholder and is excluded from review.
