@@ -54,6 +54,14 @@ def check_tree(root, tag):
                 "benchmark/extension2_audit1.json",
                 "benchmark/extension_flagged.json",
                 "benchmark/extension2_flagged.json",
+                "benchmark/extension3_llm_rag_result.json",
+                "benchmark/extension4_llm_rag_result.json",
+                "benchmark/extension3_audit1.json",
+                "benchmark/extension3_audit14.json",
+                "benchmark/extension4_audit1.json",
+                "benchmark/extension4_audit14.json",
+                "benchmark/extension3_flagged.json",
+                "benchmark/extension4_flagged.json",
             }  # verbatim LLM answers/judge verdicts; code-switching disclosed
             inv = INVIS.findall(s)
             if inv:
