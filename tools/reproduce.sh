@@ -35,6 +35,7 @@ say "7/7 Cham lai cohort mo rong + xac minh xep hang loi + rescore LLM"
 "$PY" src/law_extension_eval.py
 "$PY" src/law_extension_eval.py benchmark/law_bench_extension2.json benchmark/extension2_question_vectors.json benchmark/extension2_eval_ranks.json
 "$PY" src/law_extension_eval.py benchmark/law_bench_extension3.json benchmark/extension3_question_vectors.json benchmark/extension3_eval_ranks.json
+"$PY" src/law_extension_eval.py benchmark/law_bench_extension4.json benchmark/extension4_question_vectors.json benchmark/extension4_eval_ranks.json
 "$PY" src/law_ranks_full_rebuild.py verify
 "$PY" src/law_llm_rag_rescore.py --check
 
@@ -42,5 +43,6 @@ say "Ket qua:"
 ls -l benchmark/law_eval_repro.json benchmark/rerank_verify.json \
       benchmark/extension_eval_ranks.json benchmark/extension2_eval_ranks.json \
       benchmark/extension3_eval_ranks.json benchmark/extension3_rerank_result.json \
+      benchmark/extension4_eval_ranks.json benchmark/extension4_rerank_result.json \
       provenance/chunk_quality.json provenance/rdf_verify.json \
       docs/graph/law_graph.ttl docs/graph/law_graph.jsonld

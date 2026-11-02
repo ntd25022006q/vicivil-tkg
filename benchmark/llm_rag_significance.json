@@ -26,14 +26,13 @@
   "delta_cite_acc": 0.484,
   "delta_span_f1": 0.1412
  },
- "norag_vs_rag_hybrid_tcr": {
-  "n_common": 281,
-  "mcnemar_cite_b01": 168,
-  "mcnemar_cite_b10": 0,
-  "mcnemar_cite_p": 5.345529420184391e-51,
-  "wilcoxon_span_f1_p": 7.34478277819006e-35,
-  "delta_cite_acc": 0.5979,
-  "delta_span_f1": 0.1647
- },
- "note": "v1.0.1 rebuild: McNemar exact on cite_ok; Wilcoxon wilcox on span_f1; computed against the applied adjudicated golds."
+ "rag_hybrid_tcr_vs_rag_rerank_tcr": {
+  "n_common": 280,
+  "mcnemar_cite_b01": 36,
+  "mcnemar_cite_b10": 36,
+  "mcnemar_cite_p": 1.0,
+  "wilcoxon_span_f1_p": 0.5088702662381623,
+  "delta_cite_acc": 0.0,
+  "delta_span_f1": 0.0003
+ }
 }

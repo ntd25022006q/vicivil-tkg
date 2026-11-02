@@ -6,10 +6,10 @@
   "hit_at_k": {
    "1": 0.3594,
    "3": 0.5781,
-   "5": 0.7031,
+   "5": 0.6875,
    "10": 0.7969
   },
-  "mrr": 0.5171
+  "mrr": 0.5166
  },
  "tcr": {
   "hit_at_k": {
@@ -54,7 +54,7 @@
  },
  "wilcoxon_tcr_vs_base": {
   "stat": 72.0,
-  "p": 3.980979393164456e-05,
+  "p": 3.984270452578579e-05,
   "n_pairs": 36
  },
  "per_q": {
@@ -574,8 +574,8 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu459|Khoan2|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diemb",
     "BLTTDS2004|Dieu410|Khoan2|Diemd",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu469|Khoan1|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diemđ",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu469|Khoan1|Diema",
     "BLTTDS2004|Dieu410|Khoan2|Diemđ",
     "HNGD2014|Dieu128|Khoan1",
     "BLTTDS2004|Dieu411|Khoan2|Diema",
@@ -639,8 +639,8 @@
     "BLTTDS2004|Dieu411|Khoan2|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu469|Khoan1|Diemd",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu472|Khoan1|Diemb",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu469|Khoan1|Diema",
     "BLTTDS2004|Dieu410|Khoan2|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu469|Khoan1|Diema",
     "BLTTDS2004|Dieu410|Khoan2|Diemg",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu469|Khoan1|Diemb",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu439|Khoan5",
@@ -649,8 +649,8 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu440|Khoan2|Diemc",
     "BLTTDS2004|Dieu410|Khoan2|Diemc",
     "BLTTDS2004|Dieu410|Khoan2|Dieme",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu463|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu459|Khoan2|Diemb",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu463|Khoan2",
     "BLTTDS2004|Dieu411|Khoan2|Diemc"
    ],
    "tcr_top30": [
@@ -854,8 +854,8 @@
     "HNGD2014|Dieu126|Khoan2",
     "HNGDVBHN2025|Dieu126|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu469|Khoan1|Dieme",
-    "ND126_2014|Dieu49|Khoan1|Diemb",
     "ND126_2014|Dieu41",
+    "ND126_2014|Dieu49|Khoan1|Diemb",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu477|Khoan6|Diemc",
     "HNGDVBHN2025|Dieu130",
     "HNGD2000|Dieu102|Khoan3",
@@ -881,8 +881,8 @@
     "HNGD2000|Dieu100|Khoan1",
     "NCN2010|Dieu31|Khoan1|Diemh",
     "NCN2010|Dieu31|Khoan1|Diemc",
-    "HNGD2000|Dieu8|Khoan14|Diemc",
     "BLTTDS2004|Dieu405|Khoan2",
+    "HNGD2000|Dieu8|Khoan14|Diemc",
     "NCN2010|Dieu29|Khoan1",
     "HNGD2000|Dieu104|Khoan4",
     "NCN2010|Dieu3|Khoan5",
@@ -987,11 +987,11 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu226|Khoan2",
     "BLTTDS2004|Dieu240|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu221|Khoan1|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu56|Khoan1|Diemb",
     "BLTTDS2004|Dieu51|Khoan1",
     "BLTTDS2004|Dieu274",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu56|Khoan1|Diemb",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu47|Khoan1|Diemh",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu56|Khoan1|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu47|Khoan1|Diemh",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu56|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu368|Khoan2|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu307",
@@ -1441,8 +1441,8 @@
     "BLTTDS2004|Dieu251|Khoan2",
     "BLTTDS2004|Dieu246|Khoan2",
     "BLTTDS2004|Dieu132|Khoan3",
-    "BLTTDS2004|Dieu269|Khoan1|Diemb",
     "BLTTDS2004|Dieu17|Khoan1",
+    "BLTTDS2004|Dieu269|Khoan1|Diemb",
     "BLTTDS2004|Dieu247|Khoan2",
     "BLTTDS2004|Dieu168|Khoan2",
     "BLTTDS2004|Dieu254|Khoan1",
@@ -1561,7 +1561,7 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu491|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu254|Khoan1|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu256",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu249|Khoan1|Diemd"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu229|Khoan1"
    ],
    "tcr_top30": [
     "BLTTDS2004|Dieu216|Khoan2",
@@ -1768,8 +1768,8 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu445|Khoan1|Diemc",
     "THADS2008|Dieu48|Khoan1|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Diemn",
-    "BLTTDS2004|Dieu350|Khoan1|Diema",
     "nghi-dinh-so-152-2026-nd-cp-469524|Dieu26|Khoan1",
+    "BLTTDS2004|Dieu350|Khoan1|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan2|Dieme",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu445|Khoan1|Diemb"
    ],
@@ -1802,8 +1802,8 @@
     "BLTTDS2004|Dieu377|Khoan1",
     "BLTTDS2004|Dieu35|Khoan2|Diemđ",
     "THADS2008|Dieu7",
-    "THADS2008|Dieu116|Khoan1",
-    "THADS2008|Dieu52|Khoan3"
+    "THADS2008|Dieu52|Khoan3",
+    "BLTTDS2004|Dieu368|Khoan1|Diemd"
    ],
    "first_base": 36,
    "first_tcr": 11
@@ -1886,8 +1886,8 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu168|Khoan1",
     "BLTTDS2004|Dieu144|Khoan1",
     "BLTTDS2004|Dieu144|Khoan4",
-    "BLTTDS2004|Dieu144|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu168|Khoan3",
+    "BLTTDS2004|Dieu144|Khoan3",
     "BLDS2015|Dieu519|Khoan1",
     "BLDS2005|Dieu524|Khoan1",
     "BLDS2015|Dieu515|Khoan2",
@@ -1945,7 +1945,7 @@
     "BLDS2005|Dieu145|Khoan1",
     "BLTTDS2004|Dieu385|Khoan1|Dieme"
    ],
-   "first_base": 5,
+   "first_base": 6,
    "first_tcr": 3
   },
   "EXT20066": {
@@ -2319,8 +2319,8 @@
     "BLDS2015|Dieu142|Khoan1|Diema",
     "BLTTDS2004|Dieu243",
     "BLTTDS2004|Dieu74|Khoan1",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu271",
     "BLTTDS2004|Dieu73|Khoan2",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu271",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu86|Khoan1",
     "BLDS2015|Dieu143|Khoan2",
     "BLDS2015|Dieu142|Khoan2",
@@ -2494,8 +2494,8 @@
     "BLTTDS2004|Dieu174|Khoan2|Diemg",
     "BLTTDS2004|Dieu266|Khoan1",
     "BLTTDS2004|Dieu213|Khoan2",
-    "BLTTDS2004|Dieu356|Khoan2",
     "BLTTDS2004|Dieu207|Khoan2",
+    "BLTTDS2004|Dieu356|Khoan2",
     "BLTTDS2004|Dieu213|Khoan3",
     "BLTTDS2004|Dieu59|Khoan2",
     "BLTTDS2004|Dieu199|Khoan2",
@@ -2503,7 +2503,7 @@
     "BLTTDS2004|Dieu387|Khoan1",
     "BLTTDS2004|Dieu385|Khoan1|Diemc",
     "BLTTDS2004|Dieu389|Khoan1",
-    "BLTTDS2004|Dieu215"
+    "BLTTDS2004|Dieu70|Khoan2"
    ],
    "first_base": 23,
    "first_tcr": 10
@@ -2534,8 +2534,8 @@
     "BLTTDS2004|Dieu36|Khoan1|Diema",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu201|Khoan1|Diemc",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu73|Khoan1|Diemb",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemh",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu250|Khoan3",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diemh",
     "BLTTDS2004|Dieu223|Khoan3",
     "BLTTDS2004|Dieu193|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu40|Khoan1|Diema",
@@ -2732,14 +2732,14 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu39|Khoan3",
     "TNBTCNN2017|Dieu46|Khoan4|Diemb",
     "BLDS1995|Dieu402",
-    "BLTTDS2004|Dieu186|Khoan1|Diema",
     "BLTTDS2004|Dieu196",
+    "BLTTDS2004|Dieu186|Khoan1|Diema",
     "BLTTDS2004|Dieu186|Khoan1|Diemc",
     "BLTTDS2004|Dieu350|Khoan1|Diemb",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu476|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu70|Khoan3",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu490|Khoan2",
     "TNBTCNN2017|Dieu46|Khoan4|Diema",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu490|Khoan2",
     "BLTTDS2004|Dieu361|Khoan1|Diema",
     "BLTTDS2004|Dieu35|Khoan1|Diemb",
     "BLTTDS2004|Dieu180|Khoan1",
@@ -2758,8 +2758,8 @@
     "BLTTDS2004|Dieu183",
     "BLDS2005|Dieu403",
     "BLDS2005|Dieu284|Khoan1",
-    "BLTTDS2004|Dieu186|Khoan1|Diema",
     "BLTTDS2004|Dieu196",
+    "BLTTDS2004|Dieu186|Khoan1|Diema",
     "BLTTDS2004|Dieu186|Khoan1|Diemc",
     "BLTTDS2004|Dieu350|Khoan1|Diemb",
     "BLTTDS2004|Dieu361|Khoan1|Diema",
@@ -2811,8 +2811,8 @@
     "HNGDVBHN2025|Dieu56|Khoan2",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu387|Khoan1",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu394|Khoan1",
-    "BLTTDS2004|Dieu330|Khoan1",
     "BLTTDS2004|Dieu26|Khoan3",
+    "BLTTDS2004|Dieu330|Khoan1",
     "BLDS2015|Dieu70|Khoan4",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu399|Khoan3",
     "BLDS2015|Dieu68|Khoan2",
@@ -2830,8 +2830,8 @@
     "BLTTDS2004|Dieu325|Khoan2",
     "BLTTDS2004|Dieu334|Khoan3",
     "BLDS2005|Dieu80|Khoan1",
-    "BLTTDS2004|Dieu330|Khoan1",
     "BLTTDS2004|Dieu26|Khoan3",
+    "BLTTDS2004|Dieu330|Khoan1",
     "BLTTDS2004|Dieu338|Khoan1",
     "BLTTDS2004|Dieu320|Khoan3",
     "BLTTDS2004|Dieu334|Khoan1",
@@ -2917,8 +2917,8 @@
     "BLTTDS2004|Dieu66|Khoan8",
     "BLTTDS2004|Dieu198|Khoan1",
     "BLTTDS2004|Dieu235",
-    "BLTTDS2004|Dieu184|Khoan3",
     "THADS2008|Dieu30|Khoan2",
+    "BLTTDS2004|Dieu184|Khoan3",
     "BLTTDS2004|Dieu51|Khoan2",
     "BLTTDS2004|Dieu266|Khoan1",
     "BLTTDS2004|Dieu332|Khoan1",
@@ -2960,8 +2960,8 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu210|Khoan2|Diemd",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu6|Khoan1",
     "thong-tu-lien-tich-so-07-2026-ttlt-vksndtc-tandtc-469106|Dieu21|Khoan2|Diemc",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu24|Khoan2",
-    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu196|Khoan2|Diemg"
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu196|Khoan2|Diemg",
+    "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu24|Khoan2"
    ],
    "tcr_top30": [
     "BLTTDS2004|Dieu175|Khoan2",
@@ -3087,8 +3087,8 @@
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu42|Khoan2",
     "BLTTDS2004|Dieu411|Khoan1|Diemc",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu72|Khoan6",
-    "BLDS1995|Dieu377|Muc2",
     "BLTTDS2004|Dieu162|Khoan3",
+    "BLDS1995|Dieu377|Muc2",
     "BLDS2015|Dieu10|Khoan2",
     "BLDS1995|Dieu769|Muc2",
     "BLDS2005|Dieu422|Khoan1",
@@ -3443,15 +3443,15 @@
     "NCN2010|Dieu31|Khoan1|Diemb",
     "ND158_2005|Dieu49|Khoan3",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu433|Khoan2",
-    "HOTICH2026|Dieu15|Khoan1|Diemc",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu445|Khoan2",
+    "HOTICH2026|Dieu15|Khoan1|Diemc",
     "van-ban-hop-nhat-so-21-vbhn-vpqh-468974|Dieu452|Khoan2",
     "NCN2010|Dieu31|Khoan1|Dieme",
     "BLTTDS2004|Dieu350|Khoan3",
     "NCN2010|Dieu43|Khoan1|Diemd",
     "BLTTDS2004|Dieu361|Khoan3",
-    "NCN2010|Dieu31|Khoan1|Diemi",
-    "BLTTDS2004|Dieu364|Khoan2"
+    "BLTTDS2004|Dieu364|Khoan2",
+    "NCN2010|Dieu31|Khoan1|Diemi"
    ],
    "tcr_top30": [
     "ND158_2005|Dieu6|Khoan1",
@@ -3471,8 +3471,8 @@
     "BLTTDS2004|Dieu350|Khoan3",
     "NCN2010|Dieu43|Khoan1|Diemd",
     "BLTTDS2004|Dieu361|Khoan3",
-    "NCN2010|Dieu31|Khoan1|Diemi",
     "BLTTDS2004|Dieu364|Khoan2",
+    "NCN2010|Dieu31|Khoan1|Diemi",
     "ND158_2005|Dieu49|Khoan1",
     "ND158_2005|Dieu96|Khoan1|Diema",
     "ND158_2005|Dieu58|Khoan1",
@@ -3517,8 +3517,8 @@
     "HOTICH2014|Dieu69|Khoan1|Diema",
     "HOTICH2014|Dieu71|Khoan1|Diemb",
     "HOTICH2026|Dieu8|Khoan2|Diemc",
-    "HOTICH2014|Dieu73|Khoan1|Diemb",
     "ND158_2005|Dieu77|Khoan1|Diemg",
+    "HOTICH2014|Dieu73|Khoan1|Diemb",
     "ND158_2005|Dieu77|Khoan1|Diemđ",
     "ND158_2005|Dieu82|Khoan2",
     "ND158_2005|Dieu94|Khoan1"
@@ -3552,8 +3552,8 @@
     "ND158_2005|Dieu3",
     "ND158_2005|Dieu77|Khoan1|Diemk",
     "ND158_2005|Dieu79|Khoan1|Diemb",
-    "ND158_2005|Dieu78|Khoan1|Diemk",
-    "ND158_2005|Dieu85|Khoan1"
+    "ND158_2005|Dieu85|Khoan1",
+    "ND158_2005|Dieu78|Khoan1|Diemk"
    ],
    "first_base": 1,
    "first_tcr": 1
@@ -3729,8 +3729,8 @@
     "HOTICH2014|Dieu1|Khoan1",
     "ND158_2005|Dieu83|Khoan1|Dieme",
     "ND158_2005|Dieu46",
-    "HOTICH2014|Dieu75|Khoan2",
     "HOTICH2014|Dieu3|Khoan1|Diemd",
+    "HOTICH2014|Dieu75|Khoan2",
     "ND158_2005|Dieu68|Khoan1"
    ],
    "tcr_top30": [
@@ -3930,8 +3930,8 @@
     "ND126_2014|Dieu28|Khoan4|Diemc",
     "ND126_2014|Dieu19|Khoan2",
     "ND126_2014|Dieu23|Khoan4",
-    "HNGD2014|Dieu126|Khoan2",
     "ND126_2014|Dieu29|Khoan1",
+    "HNGD2014|Dieu126|Khoan2",
     "BLDS2005|Dieu39",
     "HNGDVBHN2025|Dieu126|Khoan2",
     "HOTICH2014|Dieu37|Khoan2",
@@ -3960,8 +3960,8 @@
     "ND126_2014|Dieu28|Khoan4|Diemc",
     "ND126_2014|Dieu19|Khoan2",
     "ND126_2014|Dieu23|Khoan4",
-    "HNGD2014|Dieu126|Khoan2",
     "ND126_2014|Dieu29|Khoan1",
+    "HNGD2014|Dieu126|Khoan2",
     "BLDS2005|Dieu39",
     "HOTICH2014|Dieu37|Khoan2",
     "ND126_2014|Dieu26|Khoan1|Diemb",
@@ -3997,8 +3997,8 @@
     "ND126_2014|Dieu47",
     "ND126_2014|Dieu44|Khoan1|Diemd",
     "ND126_2014|Dieu38|Khoan1|Diemd",
-    "HNGD2014|Dieu127|Khoan1",
     "ND126_2014|Dieu43|Khoan2",
+    "HNGD2014|Dieu127|Khoan1",
     "HNGDVBHN2025|Dieu127|Khoan1",
     "HNGD2014|Dieu127|Khoan2",
     "ND126_2014|Dieu46|Khoan1",
@@ -4029,8 +4029,8 @@
     "ND126_2014|Dieu47",
     "ND126_2014|Dieu44|Khoan1|Diemd",
     "ND126_2014|Dieu38|Khoan1|Diemd",
-    "HNGD2014|Dieu127|Khoan1",
     "ND126_2014|Dieu43|Khoan2",
+    "HNGD2014|Dieu127|Khoan1",
     "HNGD2014|Dieu127|Khoan2",
     "ND126_2014|Dieu46|Khoan1",
     "ND126_2014|Dieu45|Khoan3",
@@ -4351,8 +4351,8 @@
     "HOTICH2014|Dieu44|Khoan1",
     "ND158_2005|Dieu28|Khoan2",
     "ND158_2005|Dieu16|Khoan3",
-    "HOTICH2014|Dieu25|Khoan1",
     "ND158_2005|Dieu63|Khoan1",
+    "HOTICH2014|Dieu25|Khoan1",
     "HOTICH2014|Dieu36|Khoan1",
     "HNGD2000|Dieu63|Khoan2",
     "HOTICH2026|Dieu15|Khoan3",
@@ -4418,9 +4418,9 @@
     "HOTICH2026|Dieu16|Khoan1|Diema",
     "ND158_2005|Dieu8|Khoan1",
     "HNGD2000|Dieu11|Khoan1",
-    "ND158_2005|Dieu18|Khoan1",
     "HOTICH2014|Dieu38|Khoan4",
     "ND126_2014|Dieu31|Khoan1",
+    "ND158_2005|Dieu18|Khoan1",
     "HOTICH2014|Dieu37|Khoan1",
     "ND158_2005|Dieu58|Khoan1",
     "HNGD2000|Dieu14",
@@ -4431,7 +4431,7 @@
     "ND126_2014|Dieu26|Khoan1|Diema",
     "ND126_2014|Dieu26|Khoan2",
     "HOTICH2014|Dieu17|Khoan1",
-    "BLDS1995|Dieu57|Muc1"
+    "ND126_2014|Dieu42|Khoan3"
    ],
    "tcr_top30": [
     "ND126_2014|Dieu19|Khoan1",
@@ -4462,8 +4462,8 @@
     "ND126_2014|Dieu25|Khoan5",
     "ND126_2014|Dieu43|Khoan1|Diemd",
     "ND126_2014|Dieu20|Khoan1|Diemb",
-    "HOTICH2014|Dieu7|Khoan1|Diemd",
-    "ND126_2014|Dieu66"
+    "HNGD2014|Dieu9|Khoan2",
+    "HOTICH2014|Dieu7|Khoan1|Diemd"
    ],
    "first_base": 1,
    "first_tcr": 1
