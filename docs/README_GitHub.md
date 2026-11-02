@@ -1,38 +1,38 @@
-# ViCivil-TKG — Vietnamese Civil Law Temporal Knowledge Graph & QA Benchmark
+# ViCivil-TKG - Vietnamese Civil Law Temporal Knowledge Graph & QA Benchmark
 
 ![HF dataset](https://img.shields.io/badge/%F0%9F%A4%97%20dataset-vicivil--tkg-black) ![license](https://img.shields.io/badge/license-CC--BY--4.0-blue) ![tasks](https://img.shields.io/badge/tasks-QA%20%2B%20retrieval-4c8) ![language](https://img.shields.io/badge/language-ti%E1%BA%BFng%20Vi%E1%BB%87t-red) ![repro](https://img.shields.io/badge/repro-GPU--free-success)
 
 **ViCivil-TKG** is an open benchmark and temporal knowledge graph for Vietnamese civil-law question answering, built around two challenges most legal QA sets ignore:
 
-1. **Temporal validity (`as_of` QA).** The same question has different answers under different applicability windows of a statute. Every question carries an `as_of` date and is scored against the law that was in force *at that date* — the retrieval protocol (TCR) filters candidates by validity windows built from a manually verified 37-node / 24-edge statute timeline graph.
-2. **Gold-label reliability.** Automatically generated questions usually ship unverified gold answers. Here every gold passes a four-stage adjudication chain (two-tier generation audit → two-round re-anchoring → pass-3 sweep with guardrails → independent agreement audit) with full public trails, and rejected questions are **publicly quarantined** — they count in no metric.
+1. **Temporal validity (`as_of` QA).** The same question has different answers under different applicability windows of a statute. Every question carries an `as_of` date and is scored against the law that was in force *at that date* - the retrieval protocol (TCR) filters candidates by validity windows built from a manually verified 37-node / 24-edge statute timeline graph.
+2. **Gold-label reliability.** Automatically generated questions usually ship unverified gold answers. Here every gold passes a four-stage adjudication chain (two-tier generation audit → two-round re-anchoring → pass-3 sweep with guardrails → independent agreement audit) with full public trails, and rejected questions are **publicly quarantined** - they count in no metric.
 
 > Dataset mirror: [huggingface.co/datasets/datbazuka2502/vicivil-tkg](https://huggingface.co/datasets/datbazuka2502/vicivil-tkg) · Paper: `docs/report/` (English edition, LaTeX source + PDF).
 
 ## Key facts
 
 | | |
-|---|---|
+|-|-|
 | Published questions | **451** = 281 core (12 hand-written + 269 generated) + 106 round-1 + 64 round-2 (1996–2015 era) |
 | Quarantined questions | **226** (136 + 90), published verbatim with trails, never scored |
 | Core gold tiers | 229 verified · 22 regolded · 4 author-verified · 26 flagged (excluded from headline metrics) · 0 unverifiable |
 | Corpus | 20 legal documents, **13,151** article/clause/point chunks, per-chunk provenance + validity windows |
 | Split | stratified dev/test 140/141 (core) |
 | Baselines | BM25+dense+RRF retrieval, TCR temporal filtering, BGE-reranker-v2-m3, Qwen2.5-3B RAG (greedy) |
-| Reproduction | `bash tools/reproduce.sh` — **no GPU, no network** required |
+| Reproduction | `bash tools/reproduce.sh` - **no GPU, no network** required |
 
 ## Headline results
 
 All numbers are computed from released artifacts; the paper's every figure is machine-verified (`src/verify_paper_numbers.py`, also run by CI on every push).
 
 | Metric | No TCR | + TCR | + Rerank & TCR |
-|---|---|---|---|
-| Core retrieval (281 q) | Hit@5 0.733 (MRR@10 0.540) | **Hit@5 0.811, MRR 0.662** | — |
+|-|-|-|-|
+| Core retrieval (281 q) | Hit@5 0.733 (MRR@10 0.540) | **Hit@5 0.811, MRR 0.662** | - |
 | Round-2 1996–2015 (64 q) | Hit@5 0.703 | Hit@5 0.781 (p = 4.0e-05) | **Hit@1 0.703, Hit@5 0.828** |
 | Core LLM cite_acc (Qwen2.5-3B) | 0.004 (no context) | hybrid 0.488 → **0.601** (McNemar p = 5.8e-05) | 0.604, ctx_hit5 0.850 |
 | Round-2 LLM cite_acc | 0.000 | **0.531** (p = 1.2e-10) | 0.531 (span_F1 0.497) |
 
-Disclosed hard slice: the round-2 `regolded` stratum (11 q) reaches only Hit@1 0.091 — old-statute anchoring is genuinely hard, and 4 of those 11 anchors are temporally out of scope at their `as_of` (disclosed in the paper and datasheet).
+Disclosed hard slice: the round-2 `regolded` stratum (11 q) reaches only Hit@1 0.091 - old-statute anchoring is genuinely hard, and 4 of those 11 anchors are temporally out of scope at their `as_of` (disclosed in the paper and datasheet).
 
 ## Quickstart
 
@@ -92,12 +92,12 @@ Quarantined questions are **published, not hidden**: 136 round-1 + 90 round-2 (8
 
 ## Data integrity audit
 
-The release passed a reproduce-then-patch audit: every metric was recomputed independently from per-question artifacts and only matching values were patched forward. Three real defects were found and fixed with full logs (`AUDIT_2026-11-01.md`, `CHANGES.json` — 30 changes): an adjudicated re-anchor that never reached the question file (TOP27031: gold at rank 31 instead of rank 1), an adjudication map that mixed recorded-but-never-applied gold sets into the applied set, and a stale `ctx_hit5` in the LLM rescore. After the patch: core Hit@5 0.808→0.811, MRR 0.659→0.662; extension metrics unchanged. We argue this kind of audit should be standard for public benchmarks.
+The release passed a reproduce-then-patch audit: every metric was recomputed independently from per-question artifacts and only matching values were patched forward. Three real defects were found and fixed with full logs (`AUDIT_2026-11-01.md`, `CHANGES.json` - 30 changes): an adjudicated re-anchor that never reached the question file (TOP27031: gold at rank 31 instead of rank 1), an adjudication map that mixed recorded-but-never-applied gold sets into the applied set, and a stale `ctx_hit5` in the LLM rescore. After the patch: core Hit@5 0.808→0.811, MRR 0.659→0.662; extension metrics unchanged. We argue this kind of audit should be standard for public benchmarks.
 
 ## Known limitations (disclosed)
 
 - Narrow domain: civil + civil-procedure law, Vietnamese only.
-- 26 core questions are flagged and excluded from headline metrics; regolded strata are systematically harder — always read stratified numbers.
+- 26 core questions are flagged and excluded from headline metrics; regolded strata are systematically harder - always read stratified numbers.
 - The 60-question agreement audit is model-vs-model (0.571); the human IAA kit is released but expert review is still pending.
 - 4 of 11 round-2 regolded anchors are temporally out of scope at their `as_of` (adjudicated legal bases, wrong validity window; disclosed, not silently re-anchored).
 - Three MRR semantics (full-list / @10 / @30) are annotated per table; unification is planned.

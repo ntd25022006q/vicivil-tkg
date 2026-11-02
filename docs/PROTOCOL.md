@@ -1,4 +1,4 @@
-# PROTOCOL — Vận hành dataset ViCivil-TKG (chuẩn protocol)
+# PROTOCOL - Vận hành dataset ViCivil-TKG (chuẩn protocol)
 
 Mọi quy tắc dưới đây tồn tại vì vi phạm nó từng gây mất dữ liệu hoặc số sai.
 Đọc trước khi chạm vào `data/` hoặc chạy pipeline.
@@ -7,10 +7,10 @@ Mọi quy tắc dưới đây tồn tại vì vi phạm nó từng gây mất d�
 
 1. **Mọi con số truy được file gốc.** Số nào trong docs cũng phải có file đo
    tương ứng trong `data/` hoặc log chạy. Không số miệng, không làm tròn đẹp.
-2. **Không giấu số xấu.** Hố, miss, fail, giới hạn — công bố kèm nguyên nhân
+2. **Không giấu số xấu.** Hố, miss, fail, giới hạn - công bố kèm nguyên nhân
    đã đo. Gian lận chỉ số (bóp cách chấm cho đẹp) là cấm tuyệt đối.
 3. **Thay thế phải công bố + đo ảnh hưởng.** Model khác, proxy khác, thang đo
-   khác — ghi rõ thay gì, vì sao, lệch bao nhiêu.
+   khác - ghi rõ thay gì, vì sao, lệch bao nhiêu.
 4. **Lịch sử không viết lại.** Luật sửa đổi thì đóng/mở hiệu lực, không xóa
    cạnh cũ. Checkpoint ghi đè thì backup `.bak` trước.
 
@@ -27,7 +27,7 @@ Mọi quy tắc dưới đây tồn tại vì vi phạm nó từng gây mất d�
 ## 3. Audit gate (không đạt là dừng, không đẩy)
 
 | Gate | Ngưỡng | File kiểm |
-|---|---|---|
+|-|-|-|
 | Trùng chunk ID | = 0 | `law_audit.json` |
 | Chunk rỗng (<20 ký tự) | = 0 | idem |
 | Luật mồ côi temporal | = 0 | idem |
@@ -64,7 +64,7 @@ Mọi quy tắc dưới đây tồn tại vì vi phạm nó từng gây mất d�
 - vLLM treo (health trống >10 phút): kill đúng PID → reboot profile cũ →
   health 200 mới chạy tiếp. Client giữ ≤8 luồng + watchdog tự sát ầm ĩ
   (exit 42) thay vì chết ngầm.
-- Ổ đĩa >90%: dừng việc mới, báo cả lab (phần lớn là data người khác —
+- Ổ đĩa >90%: dừng việc mới, báo cả lab (phần lớn là data người khác -
   không tự ý xóa).
 
 ## 7. Xử lý sự cố đã gặp (casebook)
