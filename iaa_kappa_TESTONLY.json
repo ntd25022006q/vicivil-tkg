@@ -1,0 +1,60 @@
+{
+ "file": "docs/annotation/iaa_test_fixture_TESTONLY.csv",
+ "n_rows": 12,
+ "raters": {
+  "rater_A": 12,
+  "rater_B": 12,
+  "rater_C": 12
+ },
+ "kappa_rater_A_vs_rater_B": {
+  "kappa": 0.8737,
+  "po": 0.9167,
+  "n": 12
+ },
+ "kappa_rater_A_vs_rater_C": {
+  "kappa": 0.6211,
+  "po": 0.75,
+  "n": 12
+ },
+ "kappa_rater_B_vs_rater_C": {
+  "kappa": 0.4894,
+  "po": 0.6667,
+  "n": 12
+ },
+ "fleiss_kappa": 0.6612,
+ "n_disputed": 4,
+ "disputed": [
+  {
+   "qid": "TEST002",
+   "votes": {
+    "rater_A": "DUNG",
+    "rater_B": "DUNG",
+    "rater_C": "MOTPHAN"
+   }
+  },
+  {
+   "qid": "TEST005",
+   "votes": {
+    "rater_A": "SAI",
+    "rater_B": "SAI",
+    "rater_C": "MOTPHAN"
+   }
+  },
+  {
+   "qid": "TEST008",
+   "votes": {
+    "rater_A": "MOTPHAN",
+    "rater_B": "MOTPHAN",
+    "rater_C": "DUNG"
+   }
+  },
+  {
+   "qid": "TEST010",
+   "votes": {
+    "rater_A": "SAI",
+    "rater_B": "MOTPHAN",
+    "rater_C": "SAI"
+   }
+  }
+ ]
+}
