@@ -1,4 +1,4 @@
-# DATASHEET — Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG)
+# DATASHEET - Vietnamese Civil Law Temporal Knowledge Graph (ViCivil-TKG)
 
 Release of 2026-11-01. This datasheet documents the released artifacts;
 every number is machine-checkable against `benchmark/` and re-verified by
@@ -48,12 +48,12 @@ every number is machine-checkable against `benchmark/` and re-verified by
 
 ### Adjudication chain (all trails in `benchmark/`)
 1. Two-tier audit at generation time (8B judge → 14B deep re-audit with
-   evidence) — failures quarantined.
+   evidence) - failures quarantined.
 2. Two-round re-anchoring: a replacement chunk is accepted only when both
    judge rounds confirm (38 core golds re-anchored this way, two-round
    agreement 0.888).
 3. Pass-3 (qwen3:14b): 99 weak-gold suspects re-checked → verdicts 66 gold-ok
-   / 29 flagged / 3 re-anchored (plus 1 proposal rejected by a guardrail —
+   / 29 flagged / 3 re-anchored (plus 1 proposal rejected by a guardrail -
    not in the stored candidate pool), each application guarded by
    (chunk exists · appears in stored candidates · inside the as_of validity
    window). The last 2 previously-unverifiable questions were both
@@ -63,7 +63,7 @@ every number is machine-checkable against `benchmark/` and re-verified by
    steps, the final core tier structure is 229/22/4/26 as stated above.
 4. Independent agreement audit on a fixed 60-question sample (seed 20261101):
    gold-set agreement 0.571, primary-chunk agreement 0.571 (56/60 parse OK;
-   measured against the applied golds — 0.554 if the 24 recorded-but-
+   measured against the applied golds - 0.554 if the 24 recorded-but-
    never-applied gold sets are counted, see `gold_adjudicated.json`).
    This is a model-vs-model check and does NOT replace human review.
 5. Round-2 cohort added a cross-cohort near-duplicate scan (cos > 0.95 vs all
@@ -72,10 +72,10 @@ every number is machine-checkable against `benchmark/` and re-verified by
 
 ## Data fields (schema)
 
-`data/civil_chunks.jsonl` — one JSON object per line, 13,151 rows:
+`data/civil_chunks.jsonl` - one JSON object per line, 13,151 rows:
 
 | field | type | meaning |
-|---|---|---|
+|-|-|-|
 | `chunk_id` | str | hierarchical ID `Law\|Dieu[\|Khoan[\|Diem[\|Muc]]]` (unique key) |
 | `law_id` | str | corpus law identifier used by the temporal graph |
 | `dieu` / `khoan` / `diem` / `muc` | str | article/clause/point/item part numbers |
@@ -88,10 +88,10 @@ every number is machine-checkable against `benchmark/` and re-verified by
 | `valid_from` / `valid_to` | date | law validity `[from, to)` (present on every row) |
 | `header_footer_cleaned` | bool | decontamination flag (367 stripped rows) |
 
-`benchmark/law_bench_*.json` — question objects:
+`benchmark/law_bench_*.json` - question objects:
 
 | field | type | meaning |
-|---|---|---|
+|-|-|-|
 | `qid` | str | question id (CIV/GEN/NEW/TOP/EXT prefix by cohort) |
 | `question` | str | situational natural-language question |
 | `as_of` | date | the "what did law say then" date used for temporal filtering |
@@ -110,7 +110,7 @@ every number is machine-checkable against `benchmark/` and re-verified by
   pass3-flagged (26) 0.423/0.577/0.692/0.731 (excluded from headline
   averages).
 - **No-TCR hybrid repro** (`law_eval_repro.json`, no GPU, no network):
-  Hit@1 0.399 / Hit@5 0.733 / Hit@10 0.815 / MRR 0.540 (MRR@10 window) —
+  Hit@1 0.399 / Hit@5 0.733 / Hit@10 0.815 / MRR 0.540 (MRR@10 window) -
   the TCR gap is the temporal-filtering contribution.
 - **Gold-adjudication effect** (same stored 30-candidate rerank/hybrid
   lists, applied gold before vs after persisting the TOP27031 pass-3
@@ -183,8 +183,8 @@ every number is machine-checkable against `benchmark/` and re-verified by
 ## Known gaps (disclosed)
 - Single domain (civil + civil-procedure law), Vietnamese only.
 - 26 core questions pass3-flagged; the regolded strata are systematically
-  harder (low Hit@1, high Hit@5) — always read stratified numbers.
-- Independent judge agreement on the 60-question sample is 0.571 — gold
+  harder (low Hit@1, high Hit@5) - always read stratified numbers.
+- Independent judge agreement on the 60-question sample is 0.571 - gold
   anchoring in this domain is genuinely ambiguous; human expert review
   (60-item kit, `docs/annotation/`) is the top-priority next step.
 - The 1,884 released round-2 chunk rows are not yet mined for
@@ -242,7 +242,7 @@ every number is machine-checkable against `benchmark/` and re-verified by
   consolidation) and the round-2 stored-row count corrected to 1,884 released
   of 1,886 ingested; `src/law_llm_rag_rescore.py`
   replaced by the v1.0.1 F6 logic (recomputes ctx_hit5 from
-  `rag_inputs.json` — re-running the old chain step would have regressed the
+  `rag_inputs.json` - re-running the old chain step would have regressed the
   published 0.740/0.815/0.850); release verifiers now exit non-zero on
   failure (previously several printed "OK" unconditionally).
 - **2026-11-01 (v1.0.1 integrity audit):** persisted the TOP27031 pass-3
@@ -256,7 +256,7 @@ every number is machine-checkable against `benchmark/` and re-verified by
   the `CHANGES.json` B4 record states the review-sheet fix as "rows with
   gold != applied gold: old 8 -> new 7"; direct measurement gives a pre-fix
   count of **7** and a shipped kit with **0** such rows (the recorded "8"
-  and intermediate "7" are stale counts from during the fix — the shipped
+  and intermediate "7" are stale counts from during the fix - the shipped
   files are correct, only that log line is off).
 - **2026-10-31 (data update within v1.0.0):** corpus 11,267→13,151 chunks,
   17→20 laws (1996–2015 era statutes added); benchmark 281→451 published
