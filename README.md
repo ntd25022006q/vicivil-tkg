@@ -91,7 +91,7 @@ docs/report/                   paper (EN, canonical + VI archive), LaTeX sources
 src/                           all scoring/eval/rescore scripts (paths resolved at runtime)
 tools/reproduce.sh             one-command, GPU-free verification of every metric
 AUDIT_2026-11-01.md            data-integrity audit: reproduce-then-patch, 30 logged changes
-SHA256SUMS                     hashes over the whole release tree
+SHA256SUMS                     frozen manifest over the release tree (ephemeral provenance/repro_check/ outputs excluded)
 .github/                       CI: paper-number verification + release audits on every push
 ```
 
