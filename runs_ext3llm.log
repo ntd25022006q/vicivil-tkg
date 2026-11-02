@@ -1,35 +1,0 @@
-[    0.0s] load inputs...
-[    0.3s]   265 questions, 13151 chunks
-[    0.3s] load model on cuda...
-Loading weights:   0%|          | 0/434 [00:00<?, ?it/s]Loading weights:   1%|          | 4/434 [00:00<00:11, 39.07it/s]Loading weights:   8%|▊         | 33/434 [00:00<00:02, 183.82it/s]Loading weights:  15%|█▍        | 64/434 [00:00<00:01, 218.20it/s]Loading weights:  23%|██▎       | 99/434 [00:00<00:01, 253.51it/s]Loading weights:  29%|██▉       | 125/434 [00:00<00:01, 227.46it/s]Loading weights:  34%|███▍      | 148/434 [00:00<00:01, 220.18it/s]Loading weights:  40%|███▉      | 172/434 [00:00<00:01, 223.24it/s]Loading weights:  45%|████▌     | 196/434 [00:00<00:01, 223.98it/s]Loading weights:  51%|█████     | 220/434 [00:01<00:00, 221.46it/s]Loading weights:  56%|█████▋    | 245/434 [00:01<00:00, 228.34it/s]Loading weights:  62%|██████▏   | 269/434 [00:01<00:00, 230.84it/s]Loading weights:  68%|██████▊   | 293/434 [00:01<00:00, 219.62it/s]Loading weights:  73%|███████▎  | 317/434 [00:01<00:00, 218.13it/s]Loading weights:  78%|███████▊  | 339/434 [00:01<00:00, 213.44it/s]Loading weights:  83%|████████▎ | 362/434 [00:01<00:00, 218.06it/s]Loading weights:  88%|████████▊ | 384/434 [00:01<00:00, 197.11it/s]Loading weights:  93%|█████████▎| 405/434 [00:01<00:00, 193.81it/s]Loading weights:  98%|█████████▊| 425/434 [00:02<00:00, 177.88it/s]Loading weights: 100%|██████████| 434/434 [00:02<00:00, 211.09it/s]
-[    5.2s]   model ready
-[    5.2s] === condition norag
-[    5.3s]   265 prompts
-[   69.9s]   60/265 (65s)
-[  131.9s]   120/265 (127s)
-[  196.0s]   180/265 (191s)
-[  251.7s]   240/265 (246s)
-[  276.4s]   SUMMARY norag: {'n': 265, 'cite_acc': 0.0038, 'span_f1': 0.3384, 'abstain_rate': 0.4604, 'ctx_hit5': 0.0, 'mean_ans_tokens': 78.2}
-[  276.4s] === condition rag_hybrid
-[  276.4s]   265 prompts
-[  367.6s]   60/265 (91s)
-[  464.2s]   120/265 (188s)
-[  554.5s]   180/265 (278s)
-[  660.7s]   240/265 (384s)
-[  707.5s]   SUMMARY rag_hybrid: {'n': 265, 'cite_acc': 0.5208, 'span_f1': 0.4444, 'abstain_rate': 0.1962, 'ctx_hit5': 0.8189, 'mean_ans_tokens': 79.9}
-[  707.5s] === condition rag_hybrid_tcr
-[  707.5s]   265 prompts
-[  800.2s]   60/265 (93s)
-[  894.1s]   120/265 (187s)
-[  984.4s]   180/265 (277s)
-[ 1085.3s]   240/265 (378s)
-[ 1119.8s]   SUMMARY rag_hybrid_tcr: {'n': 265, 'cite_acc': 0.6, 'span_f1': 0.4752, 'abstain_rate': 0.1547, 'ctx_hit5': 0.8566, 'mean_ans_tokens': 75.6}
-[ 1119.9s] === condition rag_rerank_tcr
-[ 1119.9s]   265 prompts
-[ 1201.7s]   60/265 (82s)
-[ 1299.5s]   120/265 (180s)
-[ 1399.1s]   180/265 (279s)
-[ 1503.8s]   240/265 (384s)
-[ 1551.7s]   SUMMARY rag_rerank_tcr: {'n': 265, 'cite_acc': 0.6075, 'span_f1': 0.4701, 'abstain_rate': 0.1509, 'ctx_hit5': 0.9094, 'mean_ans_tokens': 77.4}
-[ 1551.7s] saved -> /home/devlab1/law_workspace/hf_release/benchmark/extension3_llm_rag_result.json
-[ 1551.7s] DONE
