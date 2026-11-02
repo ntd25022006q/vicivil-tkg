@@ -1,4 +1,4 @@
-c61f17a45be74585525747eee0711d6aefd30d3579ee8c50e390e467caa3b31c  ./.github/workflows/verify.yml
+f052733f3b445de40e02c659f960387653afb86125fc4862e300e8504d765cc1  ./.github/workflows/verify.yml
 5d042e13953972e56d026f531719680c7fe022c27aa33f9fa5db076dd824e27b  ./AUDIT_2026-11-01.md
 09e4d24c0bd1ad879de45dc648bee9428a2dc22cba9a0cb72fa3846d919eda03  ./CHANGES.json
 db72590c395735f9dffa0376d819a5f4670adf3bcf65bcc6bb6c5791e89d1acf  ./CITATION.cff
@@ -119,7 +119,6 @@ e432c751a6363f4a61da62920cc7d7ebd13cf09d82949f8f486248f8071dc3ce  ./docs/graph/v
 770f82f205c3614adcc862076b22a90c43e012ff7f02340969667a42c6701c24  ./docs/report/figures/fig_composition.png
 7f27370fcfb3e3204e94ad3018d373d3a17a6ed2ab565e8c75c8b229f43ab000  ./docs/report/figures/fig_llm_conditions.png
 62aababf051707ba7d079a089c0b99992f25f4b1185bcc01ff8aae1b54ad50a9  ./docs/report/paper.tex
-912ccbd4b95e3d54522a86470d91fc2ba1537f2f87ecb7e0ee9005d1bd2e5ded  ./docs/report/paper_en.tex
 04e13e7b3f8807a3e1aca1c3fff3e6fdc8b60a192e1df14d0ca2d7d3c926fcf6  ./index/kv_store_entity_chunks.json
 72240b062d1bbfac9a3c3a56493662eb370acab66494c09f437f321f6590a360  ./index/kv_store_relation_chunks.json
 61262df4e16a404e7ce8f7a4300310103d618e772ba4555ecdeae7f67280e1df  ./index/kv_store_text_chunks.json

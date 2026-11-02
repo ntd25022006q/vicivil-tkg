@@ -2,9 +2,8 @@ name: verify
 
 # Kiem tra du lieu va tai lap ket qua - chay tren moi lan push.
 # Khong dung GPU, khong dung secret, khong dung mo hinh: chi doc file trong kho.
-# v1.1.0: sua trigger push (ban cu bi loi "branches: ain]" - thieu moc mo -
-# nen push khong chay CI) + buoc kiem chung so lieu paper.
-# khong chay CI) + buoc kiem chung so lieu paper.
+# v1.2.0: audit/cover the canonical English paper (ViCivil-TKG_paper_en.tex);
+# the stale alias docs/report/paper_en.tex was removed from the release.
 on:
   push:
     branches: [main]
@@ -32,10 +31,8 @@ jobs:
 
       - name: Kiem chung so lieu paper voi benchmark/ (khong duoc lech)
         run: |
-          if [ -f docs/report/paper_en.tex ]; then
-            python src/verify_paper_numbers.py docs/report/paper_en.tex --mode=audit --sep=point
-            python src/verify_paper_numbers.py docs/report/paper_en.tex --mode=cover --sep=point
-          fi
+          python src/verify_paper_numbers.py docs/report/ViCivil-TKG_paper_en.tex --mode=audit --sep=point
+          python src/verify_paper_numbers.py docs/report/ViCivil-TKG_paper_en.tex --mode=cover --sep=point
 
       - name: Do chat luong du lieu chunk
         run: python src/law_quality.py
@@ -55,10 +52,6 @@ jobs:
         run: |
           python tools/law_sweep.py .
           python tools/law_manifest_full.py . /tmp/SHA256SUMS.check
-          # README.md is INTENTIONALLY the GitHub edition here (the HF dataset
-          # card hash is what the server-side manifest records; the sweep's
-          # alias rule above already validated it) - so the README line is
-          # excluded from the byte-diff of the two manifests.
           grep -v '  \./README\.md$' SHA256SUMS > /tmp/S1
           grep -v '  \./README\.md$' /tmp/SHA256SUMS.check > /tmp/S2
           if ! diff -q /tmp/S1 /tmp/S2; then
